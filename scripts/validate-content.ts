@@ -86,8 +86,17 @@ for (const cesta of vsechnySoubory(OBSAH)) {
   })
 }
 
+/**
+ * Sociální sítě odpovídají automatizovaným požadavkům 403 nebo 999 bez ohledu
+ * na to, jestli profil existuje. Kontrolovat je nemá smysl — jen by to
+ * spolehlivě shazovalo validaci.
+ */
+const NEOVEROVAT = ['instagram.com', 'x.com', 'twitter.com', 'facebook.com', 'linkedin.com']
+
 async function overOdkazy() {
-  const seznam = [...odkazyKOvereni]
+  const seznam = [...odkazyKOvereni].filter(
+    (odkaz) => !NEOVEROVAT.some((host) => new URL(odkaz).hostname.endsWith(host)),
+  )
   console.log(`Ověřuji ${seznam.length} odkazů …`)
   // Sekvenčně a s krátkým timeoutem — cílem není zátěžový test cizích serverů.
   for (const odkaz of seznam) {
