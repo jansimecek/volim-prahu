@@ -1,5 +1,14 @@
+# allowBuilds čte pnpm 11, onlyBuiltDependencies pnpm 10 a starší.
+# Uvedené jsou obě varianty, aby build prošel bez ohledu na verzi,
+# kterou zrovna použije Vercel nebo GitHub Actions.
 allowBuilds:
   esbuild: true
   sharp: true
   unrs-resolver: true
   '@tailwindcss/oxide': true
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - unrs-resolver
+  - '@tailwindcss/oxide'
