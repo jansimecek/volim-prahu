@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  kontrola:
+    name: Typy, lint, obsah, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Instalace závislostí
+        run: pnpm install --frozen-lockfile
+
+      - name: Kompilace obsahu (Zod schémata)
+        run: pnpm exec velite build
+
+      - name: Kontrola typů
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Kontrola obsahu
+        run: pnpm validate
+
+      - name: Testy
+        run: pnpm test
+
+      - name: Build
+        run: pnpm exec next build

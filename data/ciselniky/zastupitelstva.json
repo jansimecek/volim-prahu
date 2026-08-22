@@ -1,0 +1,1100 @@
+{
+  "sada": "kv2022",
+  "stazeno": "2026-08-22",
+  "zastupitelstva": [
+    {
+      "kod": "554782",
+      "nazev": "Praha hl.m.",
+      "slug": "magistrat",
+      "jeMagistrat": true,
+      "mandaty": 65,
+      "okrskyCelkem": 1123,
+      "pocetObyvatel": 1275406,
+      "rozsahyOkrsku": [
+        {
+          "od": 1001,
+          "do": 1021
+        },
+        {
+          "od": 2001,
+          "do": 2045
+        },
+        {
+          "od": 3001,
+          "do": 3052
+        },
+        {
+          "od": 4001,
+          "do": 4132
+        },
+        {
+          "od": 5001,
+          "do": 5081
+        },
+        {
+          "od": 6001,
+          "do": 6104
+        },
+        {
+          "od": 7001,
+          "do": 7036
+        },
+        {
+          "od": 8001,
+          "do": 8108
+        },
+        {
+          "od": 9001,
+          "do": 9042
+        },
+        {
+          "od": 10001,
+          "do": 10109
+        },
+        {
+          "od": 11001,
+          "do": 11062
+        },
+        {
+          "od": 12001,
+          "do": 12050
+        },
+        {
+          "od": 13001,
+          "do": 13058
+        },
+        {
+          "od": 14001,
+          "do": 14032
+        },
+        {
+          "od": 15001,
+          "do": 15023
+        },
+        {
+          "od": 16001,
+          "do": 16008
+        },
+        {
+          "od": 17001,
+          "do": 17018
+        },
+        {
+          "od": 18001,
+          "do": 18012
+        },
+        {
+          "od": 19001,
+          "do": 19006
+        },
+        {
+          "od": 20001,
+          "do": 20012
+        },
+        {
+          "od": 21001,
+          "do": 21008
+        },
+        {
+          "od": 22001,
+          "do": 22009
+        },
+        {
+          "od": 23001,
+          "do": 23002
+        },
+        {
+          "od": 24001,
+          "do": 24001
+        },
+        {
+          "od": 25001,
+          "do": 25001
+        },
+        {
+          "od": 26001,
+          "do": 26008
+        },
+        {
+          "od": 27001,
+          "do": 27002
+        },
+        {
+          "od": 28001,
+          "do": 28004
+        },
+        {
+          "od": 29001,
+          "do": 29002
+        },
+        {
+          "od": 30001,
+          "do": 30002
+        },
+        {
+          "od": 31001,
+          "do": 31002
+        },
+        {
+          "od": 32001,
+          "do": 32002
+        },
+        {
+          "od": 33001,
+          "do": 33001
+        },
+        {
+          "od": 34001,
+          "do": 34003
+        },
+        {
+          "od": 35001,
+          "do": 35001
+        },
+        {
+          "od": 36001,
+          "do": 36001
+        },
+        {
+          "od": 37001,
+          "do": 37006
+        },
+        {
+          "od": 38001,
+          "do": 38006
+        },
+        {
+          "od": 39001,
+          "do": 39001
+        },
+        {
+          "od": 40001,
+          "do": 40001
+        },
+        {
+          "od": 41001,
+          "do": 41001
+        },
+        {
+          "od": 42001,
+          "do": 42002
+        },
+        {
+          "od": 43001,
+          "do": 43001
+        },
+        {
+          "od": 44001,
+          "do": 44004
+        },
+        {
+          "od": 45001,
+          "do": 45001
+        },
+        {
+          "od": 46001,
+          "do": 46003
+        },
+        {
+          "od": 47001,
+          "do": 47001
+        },
+        {
+          "od": 48001,
+          "do": 48003
+        },
+        {
+          "od": 49001,
+          "do": 49005
+        },
+        {
+          "od": 50001,
+          "do": 50002
+        },
+        {
+          "od": 51001,
+          "do": 51001
+        },
+        {
+          "od": 52001,
+          "do": 52001
+        },
+        {
+          "od": 53001,
+          "do": 53003
+        },
+        {
+          "od": 54001,
+          "do": 54003
+        },
+        {
+          "od": 55001,
+          "do": 55003
+        },
+        {
+          "od": 56001,
+          "do": 56010
+        },
+        {
+          "od": 57001,
+          "do": 57005
+        }
+      ]
+    },
+    {
+      "kod": "500054",
+      "nazev": "Praha 1",
+      "slug": "praha-1",
+      "jeMagistrat": false,
+      "mandaty": 27,
+      "okrskyCelkem": 21,
+      "pocetObyvatel": 26617,
+      "rozsahyOkrsku": [
+        {
+          "od": 1001,
+          "do": 1021
+        }
+      ]
+    },
+    {
+      "kod": "500224",
+      "nazev": "Praha 10",
+      "slug": "praha-10",
+      "jeMagistrat": false,
+      "mandaty": 45,
+      "okrskyCelkem": 109,
+      "pocetObyvatel": 109144,
+      "rozsahyOkrsku": [
+        {
+          "od": 10001,
+          "do": 10109
+        }
+      ]
+    },
+    {
+      "kod": "547034",
+      "nazev": "Praha 11",
+      "slug": "praha-11",
+      "jeMagistrat": false,
+      "mandaty": 35,
+      "okrskyCelkem": 62,
+      "pocetObyvatel": 73166,
+      "rozsahyOkrsku": [
+        {
+          "od": 11001,
+          "do": 11062
+        }
+      ]
+    },
+    {
+      "kod": "547107",
+      "nazev": "Praha 12",
+      "slug": "praha-12",
+      "jeMagistrat": false,
+      "mandaty": 35,
+      "okrskyCelkem": 50,
+      "pocetObyvatel": 56605,
+      "rozsahyOkrsku": [
+        {
+          "od": 12001,
+          "do": 12050
+        }
+      ]
+    },
+    {
+      "kod": "539694",
+      "nazev": "Praha 13",
+      "slug": "praha-13",
+      "jeMagistrat": false,
+      "mandaty": 35,
+      "okrskyCelkem": 58,
+      "pocetObyvatel": 60653,
+      "rozsahyOkrsku": [
+        {
+          "od": 13001,
+          "do": 13058
+        }
+      ]
+    },
+    {
+      "kod": "547361",
+      "nazev": "Praha 14",
+      "slug": "praha-14",
+      "jeMagistrat": false,
+      "mandaty": 31,
+      "okrskyCelkem": 32,
+      "pocetObyvatel": 46178,
+      "rozsahyOkrsku": [
+        {
+          "od": 14001,
+          "do": 14032
+        }
+      ]
+    },
+    {
+      "kod": "547387",
+      "nazev": "Praha 15",
+      "slug": "praha-15",
+      "jeMagistrat": false,
+      "mandaty": 31,
+      "okrskyCelkem": 23,
+      "pocetObyvatel": 33722,
+      "rozsahyOkrsku": [
+        {
+          "od": 15001,
+          "do": 15023
+        }
+      ]
+    },
+    {
+      "kod": "539601",
+      "nazev": "Praha 16",
+      "slug": "praha-16",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 8,
+      "pocetObyvatel": 8325,
+      "rozsahyOkrsku": [
+        {
+          "od": 16001,
+          "do": 16008
+        }
+      ]
+    },
+    {
+      "kod": "547174",
+      "nazev": "Praha 17",
+      "slug": "praha-17",
+      "jeMagistrat": false,
+      "mandaty": 23,
+      "okrskyCelkem": 18,
+      "pocetObyvatel": 22946,
+      "rozsahyOkrsku": [
+        {
+          "od": 17001,
+          "do": 17018
+        }
+      ]
+    },
+    {
+      "kod": "547417",
+      "nazev": "Praha 18",
+      "slug": "praha-18",
+      "jeMagistrat": false,
+      "mandaty": 23,
+      "okrskyCelkem": 12,
+      "pocetObyvatel": 21230,
+      "rozsahyOkrsku": [
+        {
+          "od": 18001,
+          "do": 18012
+        }
+      ]
+    },
+    {
+      "kod": "547344",
+      "nazev": "Praha 19",
+      "slug": "praha-19",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 6,
+      "pocetObyvatel": 7095,
+      "rozsahyOkrsku": [
+        {
+          "od": 19001,
+          "do": 19006
+        }
+      ]
+    },
+    {
+      "kod": "500089",
+      "nazev": "Praha 2",
+      "slug": "praha-2",
+      "jeMagistrat": false,
+      "mandaty": 35,
+      "okrskyCelkem": 45,
+      "pocetObyvatel": 46101,
+      "rozsahyOkrsku": [
+        {
+          "od": 2001,
+          "do": 2045
+        }
+      ]
+    },
+    {
+      "kod": "538213",
+      "nazev": "Praha 20",
+      "slug": "praha-20",
+      "jeMagistrat": false,
+      "mandaty": 25,
+      "okrskyCelkem": 12,
+      "pocetObyvatel": 15486,
+      "rozsahyOkrsku": [
+        {
+          "od": 20001,
+          "do": 20012
+        }
+      ]
+    },
+    {
+      "kod": "538949",
+      "nazev": "Praha 21",
+      "slug": "praha-21",
+      "jeMagistrat": false,
+      "mandaty": 17,
+      "okrskyCelkem": 8,
+      "pocetObyvatel": 10490,
+      "rozsahyOkrsku": [
+        {
+          "od": 21001,
+          "do": 21008
+        }
+      ]
+    },
+    {
+      "kod": "538931",
+      "nazev": "Praha 22",
+      "slug": "praha-22",
+      "jeMagistrat": false,
+      "mandaty": 25,
+      "okrskyCelkem": 9,
+      "pocetObyvatel": 13088,
+      "rozsahyOkrsku": [
+        {
+          "od": 22001,
+          "do": 22009
+        }
+      ]
+    },
+    {
+      "kod": "500097",
+      "nazev": "Praha 3",
+      "slug": "praha-3",
+      "jeMagistrat": false,
+      "mandaty": 35,
+      "okrskyCelkem": 52,
+      "pocetObyvatel": 72809,
+      "rozsahyOkrsku": [
+        {
+          "od": 3001,
+          "do": 3052
+        }
+      ]
+    },
+    {
+      "kod": "500119",
+      "nazev": "Praha 4",
+      "slug": "praha-4",
+      "jeMagistrat": false,
+      "mandaty": 45,
+      "okrskyCelkem": 132,
+      "pocetObyvatel": 126070,
+      "rozsahyOkrsku": [
+        {
+          "od": 4001,
+          "do": 4132
+        }
+      ]
+    },
+    {
+      "kod": "500143",
+      "nazev": "Praha 5",
+      "slug": "praha-5",
+      "jeMagistrat": false,
+      "mandaty": 41,
+      "okrskyCelkem": 81,
+      "pocetObyvatel": 85687,
+      "rozsahyOkrsku": [
+        {
+          "od": 5001,
+          "do": 5081
+        }
+      ]
+    },
+    {
+      "kod": "500178",
+      "nazev": "Praha 6",
+      "slug": "praha-6",
+      "jeMagistrat": false,
+      "mandaty": 45,
+      "okrskyCelkem": 104,
+      "pocetObyvatel": 102100,
+      "rozsahyOkrsku": [
+        {
+          "od": 6001,
+          "do": 6104
+        }
+      ]
+    },
+    {
+      "kod": "500186",
+      "nazev": "Praha 7",
+      "slug": "praha-7",
+      "jeMagistrat": false,
+      "mandaty": 29,
+      "okrskyCelkem": 36,
+      "pocetObyvatel": 43916,
+      "rozsahyOkrsku": [
+        {
+          "od": 7001,
+          "do": 7036
+        }
+      ]
+    },
+    {
+      "kod": "500208",
+      "nazev": "Praha 8",
+      "slug": "praha-8",
+      "jeMagistrat": false,
+      "mandaty": 45,
+      "okrskyCelkem": 108,
+      "pocetObyvatel": 102847,
+      "rozsahyOkrsku": [
+        {
+          "od": 8001,
+          "do": 8108
+        }
+      ]
+    },
+    {
+      "kod": "500216",
+      "nazev": "Praha 9",
+      "slug": "praha-9",
+      "jeMagistrat": false,
+      "mandaty": 33,
+      "okrskyCelkem": 42,
+      "pocetObyvatel": 58910,
+      "rozsahyOkrsku": [
+        {
+          "od": 9001,
+          "do": 9042
+        }
+      ]
+    },
+    {
+      "kod": "538060",
+      "nazev": "Praha-Běchovice",
+      "slug": "praha-bechovice",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 2336,
+      "rozsahyOkrsku": [
+        {
+          "od": 23001,
+          "do": 23002
+        }
+      ]
+    },
+    {
+      "kod": "538078",
+      "nazev": "Praha-Benice",
+      "slug": "praha-benice",
+      "jeMagistrat": false,
+      "mandaty": 7,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 733,
+      "rozsahyOkrsku": [
+        {
+          "od": 24001,
+          "do": 24001
+        }
+      ]
+    },
+    {
+      "kod": "538124",
+      "nazev": "Praha-Březiněves",
+      "slug": "praha-brezineves",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 1806,
+      "rozsahyOkrsku": [
+        {
+          "od": 25001,
+          "do": 25001
+        }
+      ]
+    },
+    {
+      "kod": "547310",
+      "nazev": "Praha-Čakovice",
+      "slug": "praha-cakovice",
+      "jeMagistrat": false,
+      "mandaty": 21,
+      "okrskyCelkem": 8,
+      "pocetObyvatel": 11432,
+      "rozsahyOkrsku": [
+        {
+          "od": 26001,
+          "do": 26008
+        }
+      ]
+    },
+    {
+      "kod": "547298",
+      "nazev": "Praha-Ďáblice",
+      "slug": "praha-dablice",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 3595,
+      "rozsahyOkrsku": [
+        {
+          "od": 27001,
+          "do": 27002
+        }
+      ]
+    },
+    {
+      "kod": "547301",
+      "nazev": "Praha-Dolní Chabry",
+      "slug": "praha-dolni-chabry",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 4,
+      "pocetObyvatel": 4825,
+      "rozsahyOkrsku": [
+        {
+          "od": 28001,
+          "do": 28004
+        }
+      ]
+    },
+    {
+      "kod": "547379",
+      "nazev": "Praha-Dolní Měcholupy",
+      "slug": "praha-dolni-mecholupy",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 3612,
+      "rozsahyOkrsku": [
+        {
+          "od": 29001,
+          "do": 29002
+        }
+      ]
+    },
+    {
+      "kod": "538175",
+      "nazev": "Praha-Dolní Počernice",
+      "slug": "praha-dolni-pocernice",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 2769,
+      "rozsahyOkrsku": [
+        {
+          "od": 30001,
+          "do": 30002
+        }
+      ]
+    },
+    {
+      "kod": "538205",
+      "nazev": "Praha-Dubeč",
+      "slug": "praha-dubec",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 3965,
+      "rozsahyOkrsku": [
+        {
+          "od": 31001,
+          "do": 31002
+        }
+      ]
+    },
+    {
+      "kod": "538302",
+      "nazev": "Praha-Klánovice",
+      "slug": "praha-klanovice",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 3686,
+      "rozsahyOkrsku": [
+        {
+          "od": 32001,
+          "do": 32002
+        }
+      ]
+    },
+    {
+      "kod": "538353",
+      "nazev": "Praha-Koloděje",
+      "slug": "praha-kolodeje",
+      "jeMagistrat": false,
+      "mandaty": 7,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 1618,
+      "rozsahyOkrsku": [
+        {
+          "od": 33001,
+          "do": 33001
+        }
+      ]
+    },
+    {
+      "kod": "538361",
+      "nazev": "Praha-Kolovraty",
+      "slug": "praha-kolovraty",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 3871,
+      "rozsahyOkrsku": [
+        {
+          "od": 34001,
+          "do": 34003
+        }
+      ]
+    },
+    {
+      "kod": "538388",
+      "nazev": "Praha-Královice",
+      "slug": "praha-kralovice",
+      "jeMagistrat": false,
+      "mandaty": 5,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 425,
+      "rozsahyOkrsku": [
+        {
+          "od": 35001,
+          "do": 35001
+        }
+      ]
+    },
+    {
+      "kod": "538400",
+      "nazev": "Praha-Křeslice",
+      "slug": "praha-kreslice",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 1093,
+      "rozsahyOkrsku": [
+        {
+          "od": 36001,
+          "do": 36001
+        }
+      ]
+    },
+    {
+      "kod": "547042",
+      "nazev": "Praha-Kunratice",
+      "slug": "praha-kunratice",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 6,
+      "pocetObyvatel": 9404,
+      "rozsahyOkrsku": [
+        {
+          "od": 37001,
+          "do": 37006
+        }
+      ]
+    },
+    {
+      "kod": "547051",
+      "nazev": "Praha-Libuš",
+      "slug": "praha-libus",
+      "jeMagistrat": false,
+      "mandaty": 17,
+      "okrskyCelkem": 6,
+      "pocetObyvatel": 9900,
+      "rozsahyOkrsku": [
+        {
+          "od": 38001,
+          "do": 38006
+        }
+      ]
+    },
+    {
+      "kod": "539449",
+      "nazev": "Praha-Lipence",
+      "slug": "praha-lipence",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 2850,
+      "rozsahyOkrsku": [
+        {
+          "od": 39001,
+          "do": 39001
+        }
+      ]
+    },
+    {
+      "kod": "539465",
+      "nazev": "Praha-Lochkov",
+      "slug": "praha-lochkov",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 821,
+      "rozsahyOkrsku": [
+        {
+          "od": 40001,
+          "do": 40001
+        }
+      ]
+    },
+    {
+      "kod": "547140",
+      "nazev": "Praha-Lysolaje",
+      "slug": "praha-lysolaje",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 1372,
+      "rozsahyOkrsku": [
+        {
+          "od": 41001,
+          "do": 41001
+        }
+      ]
+    },
+    {
+      "kod": "547158",
+      "nazev": "Praha-Nebušice",
+      "slug": "praha-nebusice",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 2672,
+      "rozsahyOkrsku": [
+        {
+          "od": 42001,
+          "do": 42002
+        }
+      ]
+    },
+    {
+      "kod": "538531",
+      "nazev": "Praha-Nedvězí",
+      "slug": "praha-nedvezi",
+      "jeMagistrat": false,
+      "mandaty": 5,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 316,
+      "rozsahyOkrsku": [
+        {
+          "od": 43001,
+          "do": 43001
+        }
+      ]
+    },
+    {
+      "kod": "547395",
+      "nazev": "Praha-Petrovice",
+      "slug": "praha-petrovice",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 4,
+      "pocetObyvatel": 5878,
+      "rozsahyOkrsku": [
+        {
+          "od": 44001,
+          "do": 44004
+        }
+      ]
+    },
+    {
+      "kod": "539589",
+      "nazev": "Praha-Přední Kopanina",
+      "slug": "praha-predni-kopanina",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 589,
+      "rozsahyOkrsku": [
+        {
+          "od": 45001,
+          "do": 45001
+        }
+      ]
+    },
+    {
+      "kod": "539635",
+      "nazev": "Praha-Řeporyje",
+      "slug": "praha-reporyje",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 5381,
+      "rozsahyOkrsku": [
+        {
+          "od": 46001,
+          "do": 46003
+        }
+      ]
+    },
+    {
+      "kod": "538736",
+      "nazev": "Praha-Satalice",
+      "slug": "praha-satalice",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 2424,
+      "rozsahyOkrsku": [
+        {
+          "od": 47001,
+          "do": 47001
+        }
+      ]
+    },
+    {
+      "kod": "539678",
+      "nazev": "Praha-Slivenec",
+      "slug": "praha-slivenec",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 3735,
+      "rozsahyOkrsku": [
+        {
+          "od": 48001,
+          "do": 48003
+        }
+      ]
+    },
+    {
+      "kod": "547271",
+      "nazev": "Praha-Suchdol",
+      "slug": "praha-suchdol",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 5,
+      "pocetObyvatel": 6481,
+      "rozsahyOkrsku": [
+        {
+          "od": 49001,
+          "do": 49005
+        }
+      ]
+    },
+    {
+      "kod": "539724",
+      "nazev": "Praha-Šeberov",
+      "slug": "praha-seberov",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 2,
+      "pocetObyvatel": 3116,
+      "rozsahyOkrsku": [
+        {
+          "od": 50001,
+          "do": 50002
+        }
+      ]
+    },
+    {
+      "kod": "547409",
+      "nazev": "Praha-Štěrboholy",
+      "slug": "praha-sterboholy",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 2291,
+      "rozsahyOkrsku": [
+        {
+          "od": 51001,
+          "do": 51001
+        }
+      ]
+    },
+    {
+      "kod": "547328",
+      "nazev": "Praha-Troja",
+      "slug": "praha-troja",
+      "jeMagistrat": false,
+      "mandaty": 9,
+      "okrskyCelkem": 1,
+      "pocetObyvatel": 1410,
+      "rozsahyOkrsku": [
+        {
+          "od": 52001,
+          "do": 52001
+        }
+      ]
+    },
+    {
+      "kod": "539791",
+      "nazev": "Praha-Újezd",
+      "slug": "praha-ujezd",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 3529,
+      "rozsahyOkrsku": [
+        {
+          "od": 53001,
+          "do": 53003
+        }
+      ]
+    },
+    {
+      "kod": "547115",
+      "nazev": "Praha-Velká Chuchle",
+      "slug": "praha-velka-chuchle",
+      "jeMagistrat": false,
+      "mandaty": 11,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 2594,
+      "rozsahyOkrsku": [
+        {
+          "od": 54001,
+          "do": 54003
+        }
+      ]
+    },
+    {
+      "kod": "539007",
+      "nazev": "Praha-Vinoř",
+      "slug": "praha-vinor",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 3,
+      "pocetObyvatel": 4484,
+      "rozsahyOkrsku": [
+        {
+          "od": 55001,
+          "do": 55003
+        }
+      ]
+    },
+    {
+      "kod": "539864",
+      "nazev": "Praha-Zbraslav",
+      "slug": "praha-zbraslav",
+      "jeMagistrat": false,
+      "mandaty": 17,
+      "okrskyCelkem": 10,
+      "pocetObyvatel": 9760,
+      "rozsahyOkrsku": [
+        {
+          "od": 56001,
+          "do": 56010
+        }
+      ]
+    },
+    {
+      "kod": "539899",
+      "nazev": "Praha-Zličín",
+      "slug": "praha-zlicin",
+      "jeMagistrat": false,
+      "mandaty": 15,
+      "okrskyCelkem": 5,
+      "pocetObyvatel": 7448,
+      "rozsahyOkrsku": [
+        {
+          "od": 57001,
+          "do": 57005
+        }
+      ]
+    }
+  ]
+}

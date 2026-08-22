@@ -1,0 +1,26 @@
+# závislosti
+node_modules/
+.pnpm-store/
+
+# build
+.next/
+out/
+.velite/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# testy
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+coverage/
+
+# lokální
+.env*.local
+.DS_Store
+*.log
+
+# dočasné soubory importů (ZIPy z ČSÚ se necommitují, jen výstupní JSON)
+/tmp-import/

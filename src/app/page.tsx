@@ -1,0 +1,84 @@
+import Link from 'next/link'
+import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
+
+export default function Rozcestnik() {
+  return (
+    <div className="space-y-14">
+      <section>
+        <p className="popisek-uredni">Komunální a senátní volby · 9.–10. října 2026</p>
+        <h1 className="mt-3 max-w-3xl text-4xl md:text-5xl">
+          Co vaši kandidáti slibují — a co z toho jejich úroveň samosprávy vůbec může splnit
+        </h1>
+        <p className="mt-5 max-w-prose text-lg">
+          Praha má dvě úrovně samosprávy a hranice mezi nimi není intuitivní. Slib, který
+          zvládne magistrát, je pro městskou část často mimo pravomoc. Tenhle web u každého
+          slibu ukazuje, kdo o věci skutečně rozhoduje, jestli na ni jsou peníze a jestli se
+          stihne za čtyři roky.
+        </p>
+        <p className="mt-4">
+          <Link href="/jak-hodnotime" className="odkaz-akcent">
+            Jak hodnotíme proveditelnost
+          </Link>
+        </p>
+      </section>
+
+      <section aria-labelledby="kam-dal">
+        <h2 id="kam-dal" className="sr-only">
+          Kam dál
+        </h2>
+        <ul className="grid gap-px border border-inkoust bg-linka sm:grid-cols-3">
+          <Rozcestka
+            href="/praha"
+            popisek="Celá Praha"
+            nadpis="Magistrát"
+            popis={`${MAGISTRAT.mandaty} zastupitelů hlavního města. Doprava, územní plán, velké investice, městské byty.`}
+          />
+          <Rozcestka
+            href="/mestska-cast"
+            popisek="Moje čtvrť"
+            nadpis="Městské části"
+            popis={`${MESTSKE_CASTI.length} samostatných zastupitelstev. Školky, parky, parkovací zóny, místní stavby.`}
+          />
+          <Rozcestka
+            href="/kde-volim"
+            popisek="Praktické"
+            nadpis="Kde volím"
+            popis="Kdy jsou otevřené volební místnosti a proč u komunálních voleb neexistuje voličský průkaz."
+          />
+        </ul>
+      </section>
+
+      <section className="max-w-prose">
+        <h2 className="text-2xl">V jakém je to teď stavu</h2>
+        <p className="mt-3">
+          Kandidátní listiny pro rok 2026 zatím Český statistický úřad v otevřených datech
+          nezveřejnil. Jakmile je vydá, objeví se tady kandidátky pro magistrát i pro všech{' '}
+          {cislo(MESTSKE_CASTI.length)} městských částí. Do té doby najdete na webu popis
+          jednotlivých částí, metodiku hodnocení a praktické informace k volbám.
+        </p>
+      </section>
+    </div>
+  )
+}
+
+function Rozcestka({
+  href,
+  popisek,
+  nadpis,
+  popis,
+}: {
+  href: '/praha' | '/mestska-cast' | '/kde-volim'
+  popisek: string
+  nadpis: string
+  popis: string
+}) {
+  return (
+    <li className="bg-papir">
+      <Link href={href} className="block h-full p-5 no-underline hover:bg-papir-tmavsi">
+        <span className="popisek-uredni">{popisek}</span>
+        <span className="mt-2 block font-display text-2xl font-semibold">{nadpis}</span>
+        <span className="mt-2 block text-sm">{popis}</span>
+      </Link>
+    </li>
+  )
+}

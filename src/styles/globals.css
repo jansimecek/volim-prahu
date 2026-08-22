@@ -1,0 +1,209 @@
+@import 'tailwindcss';
+
+/**
+ * Design tokeny. Pět hodnot, víc ne — vizuální svět je úřední tiskopis,
+ * ne kampaň. Akcentní červená se používá výhradně na interaktivní prvky
+ * a rozhodovací momenty.
+ */
+@theme {
+  --color-papir: #ecede9;
+  --color-inkoust: #161c24; /* 14.57:1 na papíru */
+  --color-praha: #c8102e; /* 5.00:1 */
+
+  /*
+   * Šedá a okr jsou proti zadání ztmavené. Původní #8C9196 má na papíru
+   * kontrast 2.70:1 a #A8762C 3.37:1 — obojí pod hranicí 4.5:1, kterou WCAG
+   * 2.2 AA vyžaduje pro běžný text. Odstín zůstává, jen se posouvá světlost.
+   * Hlídá to test tests/kontrast.test.ts, aby se to nedalo omylem vrátit.
+   */
+  --color-seda-uredni: #666b70; /* 4.58:1 */
+  --color-okr: #8c6122; /* 4.64:1 */
+
+  /* Odvozené odstíny pro plochy — jen zesvětlení základní pětice, žádné nové barvy. */
+  --color-papir-tmavsi: #e2e3de;
+  --color-linka: #c9cbc5;
+
+  --font-display: var(--font-bricolage), 'Helvetica Neue', Arial, sans-serif;
+  --font-cteci: var(--font-source-serif), Georgia, 'Times New Roman', serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, 'SF Mono', monospace;
+
+  --text-drobne: 0.75rem;
+}
+
+:root {
+  /* Aliasy pod názvy ze zadání, aby se daly použít i mimo Tailwind utility. */
+  --papir: var(--color-papir);
+  --inkoust: var(--color-inkoust);
+  --seda-uredni: var(--color-seda-uredni);
+  --praha: var(--color-praha);
+  --okr: var(--color-okr);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-papir);
+    color: var(--color-inkoust);
+    font-family: var(--font-cteci);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  /* Viditelný focus je nepodkročitelný — WCAG 2.2 AA. */
+  :focus-visible {
+    outline: 2px solid var(--color-praha);
+    outline-offset: 3px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    text-decoration-color: var(--color-praha);
+  }
+
+  ::selection {
+    background: var(--color-praha);
+    color: var(--color-papir);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Popisek v duchu úředního formuláře — mono, verzálky, řídké prostrkání. */
+  .popisek-uredni {
+    font-family: var(--font-mono);
+    font-size: var(--text-drobne);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-seda-uredni);
+  }
+
+  .odkaz-akcent {
+    color: var(--color-praha);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  /*
+   * Čtyřdílné razítko hodnocení proveditelnosti — signature prvek.
+   * Barvy jsou odvozené z inkoustu, okru a pražské červené. Nikdy zelená:
+   * semafor implikuje verdikt pravda/lež, a ten tenhle web nevydává.
+   */
+  .razitko {
+    border: 1px solid var(--color-inkoust);
+    background: var(--color-papir);
+  }
+
+  .razitko-bunka {
+    border-top: 1px solid var(--color-linka);
+    border-left: 1px solid var(--color-linka);
+    padding: 0.625rem 0.75rem;
+  }
+
+  .razitko-hodnota {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+
+  /* Tón se nese značkou i barvou textu — nikdy jen barvou (WCAG 1.4.1). */
+  .razitko-prima {
+    color: var(--color-inkoust);
+  }
+  .razitko-stredni {
+    color: var(--color-okr);
+  }
+  .razitko-prekazka {
+    color: var(--color-praha);
+  }
+  .razitko-nezname {
+    color: var(--color-seda-uredni);
+  }
+
+  .znacka {
+    font-family: var(--font-mono);
+    flex: none;
+  }
+}
+
+@layer components {
+  /* Typografie delších textů — programy a zdůvodnění se čtou, nelistují. */
+  .proza h2 {
+    font-size: 1.5rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .proza h3 {
+    font-size: 1.15rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .proza p,
+  .proza ul,
+  .proza ol {
+    margin-block: 0.9rem;
+  }
+
+  .proza ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+  }
+
+  .proza ol {
+    list-style: decimal;
+    padding-left: 1.4rem;
+  }
+
+  .proza li {
+    margin-block: 0.3rem;
+  }
+
+  .proza a {
+    color: var(--color-praha);
+    text-decoration: underline;
+  }
+
+  .proza strong {
+    font-weight: 600;
+  }
+
+  .proza blockquote {
+    border-left: 2px solid var(--color-linka);
+    padding-left: 1rem;
+    color: var(--color-seda-uredni);
+  }
+}

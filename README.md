@@ -1,1 +1,82 @@
-# volim-prahu
+# Volím Prahu — volební průvodce 2026
+
+Web, kde pražský volič najde, kdo kandiduje do jeho zastupitelstva, co slibuje a
+**co z toho daná úroveň samosprávy vůbec může splnit**. Komunální a senátní volby
+9.–10. října 2026.
+
+Implementační zadání: [`docs/zadani.md`](docs/zadani.md).
+
+## Rychlý start
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spustí Next.
+
+## Příkazy
+
+| Příkaz | Co dělá |
+|---|---|
+| `pnpm dev` | Vývojový server (kompilace obsahu + Next) |
+| `pnpm dev:content` | Sleduje `content/` a překompilovává při změně |
+| `pnpm build` | Produkční build |
+| `pnpm typecheck` | `tsc --noEmit` |
+| `pnpm lint` | ESLint |
+| `pnpm test` | Vitest — ETL, slugy, kontrast palety |
+| `pnpm test:e2e` | Playwright — klíčové trasy na mobilu i desktopu |
+| `pnpm validate` | Kontrola obsahu (nedopsané pasáže, slovník verdiktu) |
+| `pnpm validate --strict --odkazy` | Přísná varianta před ostrým spuštěním |
+| `pnpm import:csu` | Import kandidátek a číselníků z ČSÚ |
+| `pnpm gen:mc` | Doplní chybějící skelety městských částí |
+
+## Jak je repo rozdělené
+
+- **`content/`** — všechno, co píše člověk (MDX + frontmatter). Tvar hlídají Zod
+  schémata v [`velite.config.ts`](velite.config.ts); nevalidní obsah shodí build.
+- **`data/`** — generováno skripty, **nikdy se needituje ručně**. Chyba
+  v generovaných datech se opravuje jako override v `content/opravy/`, ne
+  přepsáním JSONu — jinak ji smaže další import.
+- **`scripts/`** — ETL a generátory, spouští se ručně a výsledek se commituje.
+- **`src/`** — routy, komponenty, hodnotící logika.
+
+## Import dat z ČSÚ
+
+```bash
+pnpm import:csu
+```
+
+Sada `kv2026` na `volby.gov.cz/opendata` **zatím neexistuje** — skript to pozná,
+nic nepřepíše a řekne to. Kontrolovat denně; ČSÚ ji má vydat v řádu dnů po
+22. 8. 2026.
+
+Nácvik pipeline a archivní ročník proti reálným datům:
+
+```bash
+pnpm import:csu --rok 2022 --vystup data/vysledky-2022/kandidatky
+```
+
+Ověřeno: 58 zastupitelstev (magistrát + 57 MČ), 8 253 kandidátů.
+
+## Co build vynucuje sám
+
+Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
+
+- Hodnocení bez zdůvodnění delšího než 120 znaků nebo bez alespoň jednoho zdroje
+  se **nedá publikovat**.
+- Barvy použité na text musí splňovat WCAG 2.2 AA (`tests/kontrast.test.ts`).
+- V hodnoceních se nesmí objevit slovník verdiktu („lež", „podvod", …) —
+  web hodnotí proveditelnost, ne pravdivost (`pnpm validate`).
+
+## Stav
+
+Hotovo: skelet, datový model, import z ČSÚ, číselník 57 MČ, stránky všech
+městských částí, metodika, `/kde-volim` fáze 1, CI.
+
+Čeká se na: kandidátní listiny `kv2026` od ČSÚ, stanovisko ÚDHPSH k registraci
+třetí osoby, souhlas IPR Praha s ArcGIS endpointem.
+
+Doplnit ručně: provozovatel, financování a kontaktní e-mail v
+`content/stranky/o-projektu.mdx` a `content/stranky/ochrana-udaju.mdx`
+(vypíše `pnpm validate`).
