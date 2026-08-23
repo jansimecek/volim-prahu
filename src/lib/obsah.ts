@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { mestskeCasti, stranky } from '#content'
 import ciselnikJson from '#data/ciselniky/zastupitelstva.json'
 import type { Zastupitelstvo } from './typy'
@@ -40,9 +42,17 @@ export function strankaPodleSlugu(slug: string) {
   return stranka
 }
 
-/** Existují kandidátky pro dané zastupitelstvo? Zatím ne — ČSÚ je nezveřejnil. */
-export function maKandidatky(): boolean {
-  return false
+/**
+ * Volební strany kandidující do daného zastupitelstva. Dokud ČSÚ nezveřejní
+ * kandidátky, vrací prázdné pole — a stránky na to musí být připravené.
+ */
+export function subjekty(slugZastupitelstva: string): { slug: string; nazev: string }[] {
+  const cesta = join(process.cwd(), 'data/kandidatky', `${slugZastupitelstva}.json`)
+  if (!existsSync(cesta)) return []
+  const data = JSON.parse(readFileSync(cesta, 'utf8')) as {
+    strany: { slug: string; nazev: string }[]
+  }
+  return data.strany.map((s) => ({ slug: s.slug, nazev: s.nazev }))
 }
 
 const formatCisla = new Intl.NumberFormat('cs-CZ')

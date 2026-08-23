@@ -47,6 +47,7 @@ const NAVIGACE = [
   { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo o čem rozhoduje' },
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Jak hodnotíme' },
+  { href: '/hlasovani', popisek: 'Anketa' },
 ] as const
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

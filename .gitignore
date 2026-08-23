@@ -24,3 +24,6 @@ coverage/
 
 # dočasné soubory importů (ZIPy z ČSÚ se necommitují, jen výstupní JSON)
 /tmp-import/
+
+# lokální úložiště ankety při vývoji
+.data/
