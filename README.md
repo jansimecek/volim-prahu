@@ -59,6 +59,24 @@ pnpm import:csu --rok 2022 --vystup data/vysledky-2022/kandidatky
 
 Ověřeno: 58 zastupitelstev (magistrát + 57 MČ), 8 253 kandidátů.
 
+## Anketa čtenářů — co je potřeba dozapnout
+
+Anketa je hotová, ale bez úložiště v produkci úmyslně selže nahlas, aby se
+hlasy neztrácely do efemérních funkcí. Zbývá jedno nastavení ve Vercelu:
+
+1. Vercel → projekt `volim-prahu` → **Storage** → přidat Postgres z Marketplace
+   (Neon má bezplatný tarif, který na tenhle objem stačí).
+2. **Zvolit region v Evropské unii** (například Frankfurt). Zásady ochrany
+   osobních údajů tvrdí, že data leží v EU — s jiným regionem by ta věta
+   přestala platit.
+3. Integrace sama nastaví `POSTGRES_URL`. Aplikace si tabulky `hlasy`
+   a `odbery` vytvoří při prvním spuštění.
+
+Lokálně žádná databáze potřeba není — mimo produkci se zapisuje do `.data/`.
+
+Anketa se navíc čtenářům otevře až ve chvíli, kdy budou v `data/kandidatky`
+skutečné subjekty. Do té doby stránka vysvětluje, že není z čeho vybírat.
+
 ## Co build vynucuje sám
 
 Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
@@ -68,6 +86,9 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 - Barvy použité na text musí splňovat WCAG 2.2 AA (`tests/kontrast.test.ts`).
 - V hodnoceních se nesmí objevit slovník verdiktu („lež", „podvod", …) —
   web hodnotí proveditelnost, ne pravdivost (`pnpm validate`).
+- Výsledky ankety nelze vydat před zavřením volebních místností. Rozhoduje
+  o tom jediná funkce, kterou volá API i stránka, a test hlídá, že se okno
+  hlasování a okno výsledků nikdy nepřekryjí (`tests/hlasovani.test.ts`).
 
 ## Stav
 
