@@ -1,0 +1,229 @@
+# Kompetenční matice — kdo v Praze o čem rozhoduje.
+#
+# Tohle je opora osy „kompetence" v hodnocení proveditelnosti. Bez ní je
+# každé „mimo pravomoc" jen tvrzení; s ní je to citace.
+#
+# Úrovně: magistrat | mestska-cast | sdilene | mimo-samospravu
+# Každá agenda MUSÍ mít alespoň jednu oporu s odkazem — vynuceno schématem.
+
+agendy:
+  - id: obecne-zavazne-vyhlasky
+    nazev: Obecně závazné vyhlášky
+    uroven: magistrat
+    vysvetleni: >
+      Vyhlášky jsou závazná pravidla platná na území Prahy — od nočního klidu
+      přes zábor veřejného prostranství po systém odpadů. Vydávat je může
+      výhradně Zastupitelstvo hlavního města Prahy.
+    omyl: >
+      Zastupitelstvu městské části zákon vydávání vyhlášek výslovně odpírá.
+      Slib typu „zakážeme vyhláškou" je na úrovni městské části nesplnitelný
+      vlastními silami — část může nanejvýš přijetí vyhlášky u magistrátu prosazovat.
+    opora:
+      - text: § 44 odst. 1 zákona č. 131/2000 Sb., o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 89 odst. 3 — zastupitelstvu městské části vydávání vyhlášek nepřísluší
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: uzemni-plan
+    nazev: Územní plán
+    uroven: magistrat
+    vysvetleni: >
+      Územně plánovací dokumentaci pro celé území Prahy vydává Zastupitelstvo
+      hlavního města Prahy. Určuje, co se kde smí stavět.
+    omyl: >
+      Městská část se k návrhu vyjadřuje a její připomínky musí být projednány,
+      ale změnu územního plánu sama neschválí.
+    opora:
+      - text: § 59 odst. 2 písm. c) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 17 odst. 1 písm. g) — způsob projednání s městskými částmi určuje Statut
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: mhd
+    nazev: Metro, tramvaje a rozsah MHD
+    uroven: magistrat
+    vysvetleni: >
+      Rozsah dopravní obslužnosti schvaluje Zastupitelstvo hlavního města Prahy
+      v rámci programu rozvoje. Provoz zajišťuje Dopravní podnik hl. m. Prahy,
+      městská firma řízená magistrátem.
+    omyl: >
+      Nová tramvajová trať ani změna linkového vedení nejsou v rukou městské části,
+      i když vedou jejím územím.
+    opora:
+      - text: § 59 odst. 2 písm. j) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: mestska-policie
+    nazev: Městská policie
+    uroven: magistrat
+    vysvetleni: >
+      Zřídit nebo zrušit městskou policii může jen Zastupitelstvo hlavního města
+      Prahy. Praha má jednu městskou policii pro celé své území.
+    omyl: >
+      Městská část si nemůže zřídit vlastní obecní policii. Může se s magistrátem
+      domlouvat na počtu strážníků ve svém obvodu, ale nezřizuje je.
+    opora:
+      - text: § 59 odst. 2 písm. p) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: parkovaci-zony
+    nazev: Zóny placeného stání
+    uroven: magistrat
+    vysvetleni: >
+      Oblasti, kde se za parkování platí, vymezuje obec nařízením — v Praze tedy
+      nařízení hlavního města Prahy. Městská část se na přípravě podílí a zóny
+      provozuje, ale sama je nezavede ani nezruší.
+    omyl: >
+      Tohle je jeden z nejčastějších omylů: parkovací zóny se často berou jako
+      typicky „radniční" téma, ale právní nástroj drží magistrát.
+    opora:
+      - text: § 23 odst. 1 zákona č. 13/1997 Sb., o pozemních komunikacích
+        url: https://www.zakonyprolidi.cz/cs/1997-13
+
+  - id: rozpocet-prahy
+    nazev: Rozpočet hlavního města Prahy
+    uroven: magistrat
+    vysvetleni: >
+      Rozpočet, střednědobý výhled i závěrečný účet Prahy schvaluje Zastupitelstvo
+      hlavního města Prahy po projednání s městskými částmi.
+    opora:
+      - text: § 59 odst. 2 písm. e) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: dotace-mestskym-castem
+    nazev: Dotace městským částem
+    uroven: magistrat
+    vysvetleni: >
+      O tom, kolik peněz z rozpočtu Prahy dostane která městská část, rozhoduje
+      Zastupitelstvo hlavního města Prahy.
+    omyl: >
+      Velká část toho, co městská část slibuje postavit nebo opravit, závisí
+      na penězích, které si sama nepřidělí.
+    opora:
+      - text: § 59 odst. 3 písm. e) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: rozpocet-mc
+    nazev: Rozpočet městské části
+    uroven: mestska-cast
+    vysvetleni: >
+      Vlastní rozpočet schvaluje zastupitelstvo městské části a hospodaří podle něj.
+      Zdroje příjmů městských částí přitom určuje Statut hlavního města Prahy.
+    opora:
+      - text: § 18 odst. 1 písm. g) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 17 odst. 1 písm. e) — zdroje příjmů městských částí určuje Statut
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: strategie-mc
+    nazev: Strategie rozvoje městské části
+    uroven: mestska-cast
+    vysvetleni: >
+      Vlastní rozvojovou strategii si městská část schvaluje sama.
+    opora:
+      - text: § 18 odst. 1 písm. a) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: skoly-a-skolky
+    nazev: Základní školy a mateřské školy
+    uroven: mestska-cast
+    vysvetleni: >
+      Zřizovat a rušit základní školy a předškolní zařízení patří městské části.
+      Tady má radnice skutečně volné ruce — počet míst ve školkách je její agenda.
+    omyl: >
+      Střední školy naopak zřizuje kraj, kterým je v Praze magistrát.
+    opora:
+      - text: § 18 odst. 1 písm. b) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: verejna-zelen
+    nazev: Veřejná zeleň a parky
+    uroven: sdilene
+    vysvetleni: >
+      Údržbu veřejné zeleně si městská část zajišťuje vlastní organizací. Rozsah
+      ale závisí na tom, které pozemky jí Statut svěřil do správy — celoměstsky
+      významné plochy a lesoparky zůstávají magistrátu.
+    opora:
+      - text: § 18 odst. 1 písm. b) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 17 odst. 1 písm. h) — svěřený majetek určuje Statut
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: odpady
+    nazev: Svoz komunálního odpadu
+    uroven: sdilene
+    vysvetleni: >
+      Systém nakládání s komunálním odpadem stanoví Praha obecně závaznou
+      vyhláškou. Městská část k němu může zřídit vlastní organizaci a řeší
+      místní provoz, například stanoviště kontejnerů.
+    opora:
+      - text: § 18 odst. 1 písm. b) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 44 odst. 1 — systém stanoví vyhláška hlavního města Prahy
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: bytovy-fond
+    nazev: Obecní byty
+    uroven: sdilene
+    vysvetleni: >
+      Městská část spravuje bytový fond, který jí Statut svěřil, a rozhoduje
+      o jeho pronájmech v rozsahu, který jí Statut vymezí. Zbytek městských bytů
+      zůstává magistrátu.
+    omyl: >
+      Kolik bytů městská část skutečně ovládá, se liší část od části — je to
+      otázka Statutu, ne obecného pravidla. U slibů o bytech je proto vždy
+      potřeba ověřit konkrétní část.
+    opora:
+      - text: § 18 odst. 1 písm. b) a § 19 zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 18 odst. 3 písm. d) — rozhodování o pronájmu a převodu svěřuje Statut
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: stavebni-rizeni
+    nazev: Povolování staveb
+    uroven: mimo-samospravu
+    vysvetleni: >
+      O povolení konkrétní stavby rozhoduje stavební úřad ve správním řízení
+      podle stavebního zákona, ne zastupitelstvo. Městská část v takovém řízení
+      vystupuje jako účastník — může se vyjádřit a odvolat.
+    omyl: >
+      „Nedovolíme tu stavbu" je slib, který zastupitelstvo nemůže naplnit
+      hlasováním. Nástrojem je územní plán, vyjádření účastníka a případně soud.
+    opora:
+      - text: § 18 odst. 1 písm. h) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: verejne-zakazky-mc
+    nazev: Veřejné zakázky na území městské části
+    uroven: mestska-cast
+    vysvetleni: >
+      O zakázkách, jejichž plnění se vztahuje k území městské části, rozhoduje
+      městská část. Týká se to oprav, údržby i menších investic.
+    opora:
+      - text: § 18 odst. 1 písm. f) zákona o hlavním městě Praze
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: mistni-referendum
+    nazev: Místní referendum
+    uroven: sdilene
+    vysvetleni: >
+      Referendum na území jedné městské části vyhlašuje ta část. Referendum na
+      celém území Prahy vyhlašuje Zastupitelstvo hlavního města Prahy.
+    opora:
+      - text: § 18 odst. 1 písm. c) — referendum na území městské části
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 59 odst. 2 písm. m) — referendum na celém území Prahy
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+
+  - id: sverenymajetek
+    nazev: Nakládání se svěřeným majetkem
+    uroven: sdilene
+    vysvetleni: >
+      Městské části spravují majetek, který jim Praha svěřila Statutem. Jak
+      daleko jejich oprávnění sahá — třeba jestli mohou nemovitost prodat nebo
+      zastavit — určuje rovněž Statut, a u každé části jinak.
+    opora:
+      - text: § 19 zákona o hlavním městě Praze — svěření majetku do správy
+        url: https://www.zakonyprolidi.cz/cs/2000-131
+      - text: § 18 odst. 3 — rozsah rozhodování svěřuje Statut
+        url: https://www.zakonyprolidi.cz/cs/2000-131

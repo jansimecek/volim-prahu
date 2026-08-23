@@ -16,9 +16,9 @@ export default function StrankaSeznamu() {
         <h1 className="mt-2 text-4xl">Městské části</h1>
         <p className="mt-4">
           Praha má {MESTSKE_CASTI.length} městských částí a každá volí vlastní zastupitelstvo.
-          Rozhoduje o školkách, místních parcích, parkovacích zónách nebo pronájmech svých
-          budov — ne o metru, územním plánu nebo obecně závazných vyhláškách. Ty jsou na
-          magistrátu.
+          Rozhoduje o školkách, údržbě veřejné zeleně, zakázkách na svém území nebo o bytech,
+          které jí Praha svěřila — ne o metru, územním plánu, parkovacích zónách ani obecně
+          závazných vyhláškách. Ty jsou na magistrátu.
         </p>
       </header>
       <SeznamMestskychCasti casti={MESTSKE_CASTI} />

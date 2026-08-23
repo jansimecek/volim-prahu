@@ -132,6 +132,34 @@ const senat = defineCollection({
   }),
 })
 
+/**
+ * Kompetenční matice — opora osy „kompetence". Jeden soubor, protože jde
+ * o tabulku, kterou udržuje jeden člověk a musí jít přečíst celou najednou.
+ */
+const kompetence = defineCollection({
+  name: 'Kompetence',
+  pattern: 'kompetence.yaml',
+  single: true,
+  schema: s.object({
+    agendy: s
+      .array(
+        s.object({
+          id: s.string().min(1),
+          nazev: s.string().min(1),
+          uroven: s.enum(['magistrat', 'mestska-cast', 'sdilene', 'mimo-samospravu']),
+          vysvetleni: s.string().min(1),
+          /** Nejčastější omyl u téhle agendy. Nepovinný, ale je to jádro užitku. */
+          omyl: s.string().min(1).optional(),
+          /** Bez opory se agenda nesmí zobrazit — stejné pravidlo jako u hodnocení. */
+          opora: s
+            .array(s.object({ text: s.string().min(1), url: url }))
+            .min(1, 'Každá agenda musí mít alespoň jednu oporu s odkazem.'),
+        }),
+      )
+      .min(1),
+  }),
+})
+
 const rozhovory = defineCollection({
   name: 'Rozhovor',
   pattern: 'rozhovory/**/*.mdx',
@@ -157,5 +185,5 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory },
+  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence },
 })

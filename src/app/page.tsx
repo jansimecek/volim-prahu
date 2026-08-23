@@ -37,7 +37,7 @@ export default function Rozcestnik() {
             href="/mestska-cast"
             popisek="Moje čtvrť"
             nadpis="Městské části"
-            popis={`${MESTSKE_CASTI.length} samostatných zastupitelstev. Školky, parky, parkovací zóny, místní stavby.`}
+            popis={`${MESTSKE_CASTI.length} samostatných zastupitelstev. Školky, veřejná zeleň, místní zakázky, svěřené byty.`}
           />
           <Rozcestka
             href="/kde-volim"

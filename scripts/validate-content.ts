@@ -104,6 +104,9 @@ async function overOdkazy() {
       const odpoved = await fetch(odkaz, {
         method: 'GET',
         redirect: 'follow',
+        // Bez User-Agent vrací část právních serverů (zakonyprolidi.cz) 403,
+        // což by validaci shazovalo na odkazech, které fungují.
+        headers: { 'user-agent': 'Mozilla/5.0 (kontrola odkazu, volimprahu.cz)' },
         signal: AbortSignal.timeout(15_000),
       })
       if (!odpoved.ok) {

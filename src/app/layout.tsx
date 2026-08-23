@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 const NAVIGACE = [
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
+  { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo o čem rozhoduje' },
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Jak hodnotíme' },
 ] as const

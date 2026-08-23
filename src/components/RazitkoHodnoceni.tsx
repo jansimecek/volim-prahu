@@ -113,10 +113,13 @@ export function RazitkoHodnoceni({
             </div>
           )}
 
-          {/* Metodika musí být dosažitelná od každého hodnocení, ne jen z patičky. */}
-          <p className="mt-6 text-sm">
+          {/* Metodika i kompetenční opora musí být dosažitelné od každého hodnocení. */}
+          <p className="mt-6 flex flex-wrap gap-x-5 gap-y-1 text-sm">
             <Link href="/jak-hodnotime" className="odkaz-akcent">
               Jak k tomuhle závěru docházíme
+            </Link>
+            <Link href="/kdo-o-cem-rozhoduje" className="odkaz-akcent">
+              Kdo o čem v Praze rozhoduje
             </Link>
           </p>
         </div>

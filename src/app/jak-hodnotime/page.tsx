@@ -19,7 +19,7 @@ const UKAZKA: HodnoceniSlibu = {
     'Prodloužení tramvajové trati je investicí hlavního města: o síti městské hromadné dopravy rozhoduje magistrát a Dopravní podnik hl. m. Prahy, nikoli zastupitelstvo městské části. Městská část se k záměru vyjadřuje, ale nemůže ho sama zadat, financovat ani zahájit.',
   zdroje: [
     'https://www.zakonyprolidi.cz/cs/2000-131',
-    'https://www.praha.eu/jnp/cz/o_meste/vyhlasky_a_narizeni/index.html',
+    'https://sbirkapp.gov.cz',
   ],
 }
 
