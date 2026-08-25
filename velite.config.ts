@@ -159,9 +159,19 @@ const senat = defineCollection({
   pattern: 'senat/**/*.mdx',
   schema: s.object({
     cislo: s.number().int().positive(),
+    /** Oficiální název obvodu, tedy jeho sídlo — např. „Praha 5". */
     nazev: s.string().min(1),
     slug: s.slug('senat'),
-    mestskeCasti: s.array(s.string()).default([]),
+    /** Jméno stávajícího senátora se stejně jako u lídrů nesmí objevit bez zdroje. */
+    senator: s.string().min(1),
+    senatorZdroj: url,
+    /** Slugy městských částí, které do obvodu spadají celé. */
+    mestskeCasti: s.array(s.string().min(1)).default([]),
+    /** Městské části rozdělené mezi dva obvody — u nich nelze odpovědět paušálně. */
+    mestskeCastiCastecne: s
+      .array(s.object({ slug: s.string().min(1), popis: s.string().min(1) }))
+      .default([]),
+    zdroje: s.array(s.object({ text: s.string().min(1), url: url })).min(1),
     publikovano: s.boolean().default(false),
     content: s.mdx(),
   }),

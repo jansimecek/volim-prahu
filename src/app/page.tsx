@@ -26,7 +26,7 @@ export default function Rozcestnik() {
         <h2 id="kam-dal" className="sr-only">
           Kam dál
         </h2>
-        <ul className="grid gap-px border border-inkoust bg-linka sm:grid-cols-3">
+        <ul className="grid gap-px border border-inkoust bg-linka sm:grid-cols-2 lg:grid-cols-4">
           <Rozcestka
             href="/praha"
             popisek="Celá Praha"
@@ -38,6 +38,12 @@ export default function Rozcestnik() {
             popisek="Moje čtvrť"
             nadpis="Městské části"
             popis={`${MESTSKE_CASTI.length} samostatných zastupitelstev. Školky, veřejná zeleň, místní zakázky, svěřené byty.`}
+          />
+          <Rozcestka
+            href="/senat"
+            popisek="Souběžně"
+            nadpis="Senát"
+            popis="Volí se jen ve třech z deseti pražských obvodů. Většina Pražanů senátní lístek nedostane."
           />
           <Rozcestka
             href="/kde-volim"
@@ -67,7 +73,7 @@ function Rozcestka({
   nadpis,
   popis,
 }: {
-  href: '/praha' | '/mestska-cast' | '/kde-volim'
+  href: '/praha' | '/mestska-cast' | '/senat' | '/kde-volim'
   popisek: string
   nadpis: string
   popis: string

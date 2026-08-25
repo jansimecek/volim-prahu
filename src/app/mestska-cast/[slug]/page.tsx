@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI, SADA_CISELNIKU, cislo, mestskaCastPodleSlugu } from '@/lib/obsah'
+import { senatniStavMestskeCasti } from '@/lib/senat'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -26,6 +27,8 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   const zastupitelstvo = MESTSKE_CASTI.find((z) => z.slug === slug)
   if (!mc || !zastupitelstvo) notFound()
 
+  const senat = senatniStavMestskeCasti(slug)
+
   return (
     <div className="space-y-10">
       <header>
@@ -44,6 +47,40 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         <Udaj popisek="Obyvatel" hodnota={cislo(zastupitelstvo.pocetObyvatel)} />
         <Udaj popisek="Kód ČSÚ" hodnota={mc.kodZastupitelstva} />
       </dl>
+
+      {/* Jestli tady člověk dostane i senátní lístek, se jinde zjišťuje těžko. */}
+      <section className="max-w-prose border-l-2 border-praha pl-5">
+        <h2 className="popisek-uredni">Senátní volby 2026</h2>
+        {senat.stav === 'voli' && (
+          <p className="mt-1">
+            Kromě zastupitelstev tady volíte i senátora — spadáte do{' '}
+            <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
+              obvodu č. {senat.obvod.cislo} ({senat.obvod.nazev})
+            </Link>
+            .
+          </p>
+        )}
+        {senat.stav === 'castecne' && (
+          <p className="mt-1">
+            Tahle městská část je rozdělená mezi dva senátní obvody. Do{' '}
+            <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
+              obvodu č. {senat.obvod.cislo} ({senat.obvod.nazev})
+            </Link>
+            , kde se letos volí, patří {senat.popis}. Ve zbytku území se senátor letos
+            nevolí — rozhoduje adresa, ne příslušnost k městské části.
+          </p>
+        )}
+        {senat.stav === 'nevoli' && (
+          <p className="mt-1">
+            Senátora tady letos nevolíte. Senát se obměňuje po třetinách a{' '}
+            <Link href="/senat" className="odkaz-akcent">
+              obvod, do kterého tahle část patří
+            </Link>
+            , přijde na řadu až v dalších letech. Ve volební místnosti dostanete jen
+            lístky pro zastupitelstvo města a městské části.
+          </p>
+        )}
+      </section>
 
       <div className="proza max-w-prose">
         <MDXContent code={mc.content} />
