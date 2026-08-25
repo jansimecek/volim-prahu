@@ -58,6 +58,17 @@ export default function StrankaMagistratu() {
               kde hodnocení chybí a proč. Jméno lídra publikujeme jen tam, kde ho doloží
               zdroj.
             </p>
+
+            {/* Pojistka proti asymetrii podle metodiky — bez ní by hodnocení
+                vypadalo jako pozornost věnovaná jen některým subjektům. */}
+            <p className="mt-4 max-w-prose border-l-2 border-praha pl-5 text-sm">
+              <span className="popisek-uredni block">Proč má hodnocení jen část stran</span>
+              Hodnotíme sliby, které jsou dost konkrétní na ověření. K uvedenému datu
+              zveřejnila takový materiál jen menšina kandidujících subjektů — u ostatních
+              jsme program nedohledali, nebo obsahuje jen obecné priority bez čísel
+              a termínů. Není to hodnocení subjektů, ale jejich programů. Jakmile další
+              program vyjde, projde stejným rámcem.
+            </p>
             <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2">
               {kandidujici.map((strana) => (
                 <li key={strana.slug} className="bg-papir">

@@ -56,6 +56,14 @@ export default async function StrankaProgramu({ params }: Parametry) {
         </p>
       )}
 
+      <p className="max-w-prose border-l-2 border-praha pl-5 text-sm">
+        <span className="popisek-uredni block">Co tahle stránka není</span>
+        Není to hodnocení subjektu ani doporučení, koho volit. Posuzujeme jen
+        proveditelnost jednotlivých slibů proti tomu, o čem daná úroveň samosprávy
+        rozhoduje a kolik má peněz. O pravdivosti ani o tom, jestli jde o dobrý nápad,
+        neříkáme nic.
+      </p>
+
       {hodnocene.map((bod) => (
         <RazitkoHodnoceni
           key={bod.id}

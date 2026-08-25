@@ -107,7 +107,8 @@ export const POPIS_HISTORIE: Record<Historie, StavPopis> = {
   },
   'bez-historie': {
     zkratka: 'bez historie',
-    popis: 'Subjekt na této úrovni dosud nevládl, není s čím porovnat.',
+    popis:
+      'Doložený srovnatelný slib z minulého období nemáme — buď subjekt na této úrovni nevládl, nebo jsme podklad nedohledali. Není s čím porovnat.',
     ton: 'nezname',
   },
 }
