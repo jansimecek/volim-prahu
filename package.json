@@ -21,7 +21,8 @@
     "gen:mc": "tsx scripts/generate-mc-content.ts",
     "build:search": "tsx scripts/build-search-index.ts",
     "validate": "tsx scripts/validate-content.ts",
-    "content": "velite --strict"
+    "content": "velite --strict",
+    "gen:strany": "tsx scripts/generate-strany.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.0",

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { programy, strany } from '#content'
 import { MAGISTRAT, SADA_CISELNIKU, cislo } from '@/lib/obsah'
+import { POPIS_PROGRAMU, POPIS_ROLE, serazene } from '@/lib/strany'
 
 export const metadata: Metadata = {
   title: 'Magistrát',
@@ -10,9 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default function StrankaMagistratu() {
-  const kandidujici = strany
-    .filter((s) => s.uroven === 'magistrat')
-    .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'))
+  const kandidujici = serazene(strany.filter((s) => s.uroven === 'magistrat'))
 
   const pocetHodnoceni = (slug: string) =>
     programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')?.body.filter(
@@ -49,9 +48,15 @@ export default function StrankaMagistratu() {
           </p>
         ) : (
           <>
-            <p className="mt-3 max-w-prose text-sm text-seda-uredni">
-              Pořadí je abecední, ne podle preferencí. Čísla kandidátek doplníme, až je
-              vylosuje registrační úřad.
+            <p className="mt-3 max-w-prose">
+              Registrační úřad zaregistroval <strong>{kandidujici.length} kandidátních
+              listin</strong>. Pořadí je abecední, ne podle preferencí ani velikosti —
+              vylosovaná čísla doplníme, až budou známá.
+            </p>
+            <p className="mt-2 max-w-prose text-sm text-seda-uredni">
+              U každého subjektu uvádíme stav programu ke stejnému datu, ať je vidět,
+              kde hodnocení chybí a proč. Jméno lídra publikujeme jen tam, kde ho doloží
+              zdroj.
             </p>
             <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2">
               {kandidujici.map((strana) => (
@@ -61,15 +66,22 @@ export default function StrankaMagistratu() {
                     className="block h-full p-4 no-underline hover:bg-papir-tmavsi"
                   >
                     <span className="block font-display text-lg font-semibold">
-                      {strana.nazev}
+                      {strana.zkratka}
                     </span>
-                    {strana.lidr && (
-                      <span className="mt-1 block text-sm">Lídr: {strana.lidr}</span>
+                    {strana.lidr && strana.lidrRole ? (
+                      <span className="mt-1 block text-sm">
+                        {POPIS_ROLE[strana.lidrRole]}: {strana.lidr}
+                      </span>
+                    ) : (
+                      <span className="mt-1 block text-sm text-seda-uredni">
+                        lídr zatím nedoložen
+                      </span>
                     )}
                     <span className="popisek-uredni mt-2 block">
+                      {POPIS_PROGRAMU[strana.programStav]}
                       {pocetHodnoceni(strana.slug) > 0
-                        ? `${pocetHodnoceni(strana.slug)} hodnocených slibů`
-                        : 'hodnocení zatím nezveřejněno'}
+                        ? ` · ${pocetHodnoceni(strana.slug)} hodnocených slibů`
+                        : ''}
                     </span>
                   </Link>
                 </li>

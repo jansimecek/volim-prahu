@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { programy, strany } from '#content'
 import { MDXContent } from '@/components/mdx'
+import { POPIS_PROGRAMU, POPIS_ROLE } from '@/lib/strany'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -45,10 +46,16 @@ export default async function StrankaSubjektu({ params }: Parametry) {
       </header>
 
       <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka sm:grid-cols-3">
-        {strana.lidr && <Udaj popisek="Lídr kandidátky" hodnota={strana.lidr} />}
+        {strana.lidr && strana.lidrRole && (
+          <Udaj
+            popisek={POPIS_ROLE[strana.lidrRole]}
+            hodnota={strana.lidr}
+            odkaz={strana.lidrZdroj}
+          />
+        )}
         <Udaj
           popisek="Program"
-          hodnota={strana.programUrl ? 'zveřejněn' : 'zatím nedohledán'}
+          hodnota={POPIS_PROGRAMU[strana.programStav]}
           odkaz={strana.programUrl}
         />
         <Udaj
@@ -56,6 +63,15 @@ export default async function StrankaSubjektu({ params }: Parametry) {
           hodnota={pocetHodnocenych > 0 ? String(pocetHodnocenych) : '—'}
         />
       </dl>
+
+      {strana.lidr && strana.lidrRole === 'kandidat-na-primatora' && (
+        <p className="max-w-prose border-l-2 border-okr pl-4 text-sm">
+          <span className="popisek-uredni block">Pozor na rozdíl</span>
+          Zdroj u tohoto subjektu dokládá kandidáta na primátora, ne jedničku kandidátní
+          listiny. Nemusí jít o téhož člověka. Doplníme, až Český statistický úřad
+          zveřejní kandidátní listiny.
+        </p>
+      )}
 
       <div className="proza max-w-prose">
         <MDXContent code={strana.content} />
