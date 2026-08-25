@@ -27,7 +27,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Kompilace obsahu (Zod schémata)
-        run: pnpm exec velite build
+        run: pnpm exec velite build --strict
 
       - name: Kontrola typů
         run: pnpm typecheck

@@ -1,0 +1,306 @@
+# Rozpočtový rámec — opora osy „rozpočet" v hodnocení proveditelnosti.
+#
+# Smysl: když subjekt slíbí „postavíme za dvě miliardy", je to hodně, nebo málo?
+# Bez řádových čísel je odpověď dojem. Tady jsou čísla se zdrojem.
+#
+# stav: schvaleny | skutecnost | vyhled | navrh   — POZOR, tohle se plete nejčastěji
+# zdrojTyp: primarni | sekundarni
+
+uvodniVarovani: >
+  V Praze existují tři různá čísla, kterým se říká „rozpočet Prahy", a liší se
+  o desítky miliard. Kdo je zamění, dojde k nesmyslu. Rozdíl vysvětlujeme hned
+  v první sekci a v celém textu důsledně uvádíme, o který z nich jde.
+
+skupiny:
+  - id: tri-rozpocty
+    nadpis: Tři rozpočty, které se pletou
+    popis: >
+      Vlastní hlavní město, konsolidovaný celek a součet městských částí. Než
+      začnete porovnávat jakýkoli slib s „rozpočtem Prahy", je potřeba vědět,
+      o který z nich jde.
+  - id: investice
+    nadpis: Kolik zbývá na investice
+    popis: >
+      Běžné výdaje jsou provoz, který nejde vypnout. Rozhodovací prostor pro
+      nové stavby je v kapitálových výdajích — a ten je řádově menší, než
+      celkové číslo rozpočtu napovídá.
+  - id: mestske-casti
+    nadpis: Co má k dispozici městská část
+    popis: >
+      Rozpočty městských částí se liší v řádech a stojí především na penězích,
+      které jim přidělí magistrát. To je klíčové pro posouzení slibů na radnicích.
+  - id: dluh
+    nadpis: Dluh a jeho obsluha
+    popis: >
+      Praha je na poměry velkých měst zadlužená málo, což rozšiřuje prostor pro
+      investice financované úvěrem — pokud se pro ně zastupitelstvo rozhodne.
+  - id: vyhled
+    nadpis: Výhled na volební období
+    popis: >
+      Volební období 2026–2030 spadá do střednědobého výhledu schváleného
+      spolu s rozpočtem. Ukazuje, s čím město samo počítá.
+
+zdroje:
+  - id: Z1
+    nazev: Schválený rozpočet hl. m. Prahy na rok 2026 a střednědobý výhled do roku 2031
+    url: https://praha.eu/documents/d/praha/schvaleny-rozpocet-hlavniho-mesta-prahy-na-rok-2026-a-strednedoby-vyhled-rozpoctu-hlavniho-mesta-prahy-do-roku-2031
+  - id: Z2
+    nazev: Příloha č. 8 – Finanční vztahy k městským částem na rok 2026 (návrhová verze)
+    url: https://praha.eu/documents/d/praha/priloha-c-8-k-usneseni-fvz-2026
+  - id: Z3
+    nazev: Závěrečný účet hl. m. Prahy za rok 2025 – důvodová zpráva II
+    url: https://praha.eu/documents/d/praha/duvodova-zprava-ii-vlastni-hl-m-praha
+  - id: M2
+    nazev: MČ Praha 8 – důvodová zpráva k rozpočtu na rok 2026
+    url: https://www.praha8.cz/file/6TK/Rozpocet-2026-duvodova-zprava.pdf
+  - id: M3
+    nazev: MČ Praha 8 – příloha č. 2 usnesení ZMČ, rozpočet 2026
+    url: https://www.praha8.cz/file/CUK/Rozpocet-2026-priloha-c-2-usneseni.pdf
+  - id: M5
+    nazev: MČ Praha 7 – rozpočet na rok 2026
+    url: https://www.praha7.cz/rozpocet-26/
+  - id: M6
+    nazev: MČ Praha 13 – zastupitelstvo schválilo rozpočet na rok 2026
+    url: https://www.praha13.cz/zastupitelstvo-mestske-casti-praha-13-schvalilo-rozpocet-na-rok-2026/
+  - id: M7
+    nazev: MČ Praha 9 – návrh rozpočtu na rok 2026
+    url: https://www.praha9.cz/sites/default/files/downloads/2026/02/Navrh_rozpoctu_2026_vyhled_rozpoctu_MC_Praha_9.pdf
+  - id: M9
+    nazev: MČ Praha-Královice – rozpočet na rok 2026
+    url: https://www.mckralovice.cz/store/121-rozpocet-mc-praha-kralovice-na-rok-2026.pdf
+
+polozky:
+  - id: vlastni-hmp
+    skupina: tri-rozpocty
+    nazev: Rozpočet vlastního hlavního města
+    hodnota: příjmy 116,35 mld. · výdaje 119,05 mld. Kč
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Peníze, se kterými hospodaří magistrát. Schodek 2,70 mld. Kč se kryje
+      z prostředků minulých let, ne novým úvěrem. Tohle je číslo, proti kterému
+      se poměřují celoměstské sliby.
+    opora: [Z1]
+
+  - id: konsolidovany
+    skupina: tri-rozpocty
+    nazev: Konsolidovaný rozpočet Prahy jako celku
+    hodnota: příjmy 123,82 mld. · výdaje 132,23 mld. Kč
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Součet 58 dílčích rozpočtů — magistrátu a všech 57 městských částí, po
+      vyloučení vzájemných převodů. Schodek 8,41 mld. Kč. Tohle číslo se objevuje
+      v titulcích nejčastěji, ale magistrát z něj přímo nedisponuje celou částkou.
+    opora: [Z1]
+
+  - id: soucet-mc
+    skupina: tri-rozpocty
+    nazev: Součet rozpočtů všech 57 městských částí
+    hodnota: příjmy 19,24 mld. · výdaje 24,95 mld. Kč
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Všechny radnice dohromady hospodaří s pětinou toho co magistrát. Záporné
+      saldo 5,71 mld. Kč kryjí městské části z prostředků minulých let a z výnosů
+      vlastní hospodářské činnosti.
+    opora: [Z1]
+
+  - id: kapitalove-vydaje
+    skupina: investice
+    nazev: Kapitálové (investiční) výdaje magistrátu
+    hodnota: 23,03 mld. Kč z 119,05 mld.
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Necelá pětina rozpočtu. Zbylých 96,02 mld. Kč jsou běžné výdaje — provoz
+      dopravy, škol, sociálních služeb a úřadu. Když subjekt slíbí novou stavbu,
+      soutěží o podíl na těchto 23 miliardách se všemi ostatními investicemi
+      města, včetně metra D a čistírny odpadních vod.
+    poznamka: >
+      Vedení města představilo investice roku 2026 jako nejvyšší v historii.
+      Jde o nominální srovnání neočištěné o inflaci a formulaci z tiskové zprávy
+      k návrhu rozpočtu.
+    opora: [Z1]
+
+  - id: kapitalove-konsolidovane
+    skupina: investice
+    nazev: Kapitálové výdaje Prahy včetně městských částí
+    hodnota: 30,65 mld. Kč
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Konsolidovaně, tedy magistrát i všech 57 radnic. Samotné městské části
+      z toho mají 7,79 mld. Kč, tedy 31,22 % svých výdajů.
+    opora: [Z1]
+
+  - id: kapitola-doprava
+    skupina: investice
+    nazev: Nejvyšší kapitola rozpočtu — doprava
+    hodnota: 41,47 mld. Kč (34,8 % výdajů vlastního HMP)
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Z toho 31,05 mld. Kč běžné výdaje (především provoz MHD) a 10,42 mld. Kč
+      investice. Druhá největší kapitola je školství s 29,22 mld. Kč.
+    poznamka: >
+      Procentní podíly jsou odečtené z grafu v důvodové zprávě, v textu
+      dokumentu uvedené nejsou. Absolutní částky ano.
+    opora: [Z1]
+
+  - id: fvz-celkem
+    skupina: mestske-casti
+    nazev: Peníze, které magistrát přiděluje městským částem
+    hodnota: 10,53 mld. Kč
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Finanční vztahy k městským částem. Meziročně o 3,40 mld. Kč více, přičemž
+      89 % nárůstu tvoří posílení na nepedagogické pracovníky a ostatní neinvestiční
+      výdaje ve školství. O výši rozhoduje Zastupitelstvo hl. m. Prahy — radnice
+      si ji sama nepřidělí.
+    opora: [Z2, Z1]
+
+  - id: fvz-rozpeti
+    skupina: mestske-casti
+    nazev: Rozpětí mezi největší a nejmenší městskou částí
+    hodnota: 936,4 mil. Kč (Praha 4) až 2,3 mil. Kč (Praha-Nedvězí)
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Poměr 401 : 1. Rozdíl je z velké části dán počtem obyvatel — Praha 4 jich má
+      143 958, Nedvězí 391 — takže na hlavu je rozdíl mnohem menší. Přesto platí,
+      že slib srovnatelný v Praze 4 a v Nedvězí znamená úplně jinou zátěž.
+    opora: [Z2]
+
+  - id: zavislost-na-transferech
+    skupina: mestske-casti
+    nazev: Jak moc radnice závisí na penězích z magistrátu
+    hodnota: 53 % až 70 % příjmů
+    rok: 2026
+    stav: schvaleny
+    zdrojTyp: primarni
+    vysvetleni: >
+      Praha 13 má z magistrátu 70,4 % příjmů, Praha 9 57,3 %, Praha 8 57,1 %,
+      Královice 53 %. Městské části navíc nejsou samostatnými příjemci sdílených
+      daní — i zvýšení podílu obcí na daních jim přiteče až přes magistrát.
+    opora: [M2, M6, M7, M9]
+
+  - id: dluh-hmp
+    skupina: dluh
+    nazev: Dluh vlastního hlavního města
+    hodnota: 4,75 mld. Kč
+    rok: 2025
+    stav: skutecnost
+    zdrojTyp: primarni
+    vysvetleni: >
+      Stav k 31. 12. 2025, meziročně o 609 mil. Kč nižší. Tvoří ho výhradně čtyři
+      úvěry od Evropské investiční banky. V roce 2025 si Praha nepůjčila nic nového
+      a rozpočet na rok 2026 nepočítá s vydáním dluhopisů.
+    opora: [Z3, Z1]
+
+  - id: dluhova-sluzba
+    skupina: dluh
+    nazev: Co dluh ročně stojí
+    hodnota: 608,9 mil. Kč jistiny + 196,6 mil. Kč úroky
+    rok: 2025
+    stav: skutecnost
+    zdrojTyp: primarni
+    vysvetleni: >
+      Splátky jistin ve stejné výši (602,8 mil. Kč ročně) plánuje rozpočet i pro
+      roky 2026 až 2029. Proti rozpočtu 119 mld. Kč jde o zlomek — dluhová služba
+      není to, co by Praze svazovalo ruce.
+    opora: [Z3, Z1]
+
+  - id: vyhled-prijmy
+    skupina: vyhled
+    nazev: Očekávané příjmy ve volebním období
+    hodnota: 130,4 → 131,4 → 132,5 mld. Kč (2027–2029)
+    rok: 2026
+    stav: vyhled
+    zdrojTyp: primarni
+    vysvetleni: >
+      Střednědobý výhled schválený spolu s rozpočtem. Počítá s mírným růstem
+      a výslovně nepočítá se zapojením cizích zdrojů ani úspor z minulých let.
+    opora: [Z1]
+
+  - id: vyhled-investice
+    skupina: vyhled
+    nazev: Plánovaný pokles investic
+    hodnota: 28,97 → 28,52 → 27,51 mld. Kč (2027–2029)
+    rok: 2026
+    stav: vyhled
+    zdrojTyp: primarni
+    vysvetleni: >
+      Konsolidované kapitálové výdaje ve výhledu klesají. Nové velké investiční
+      sliby by tedy musely buď vytlačit něco jiného, nebo přinést nový zdroj
+      financování.
+    poznamka: >
+      Výhled od roku 2027 zahrnuje pouze výdaje kryté vlastními příjmy, ne
+      zapojení úspor. Pokles proto vypadá strmější, než jaký ve skutečnosti bude.
+    opora: [Z1]
+
+  - id: skutecnost-2025
+    skupina: vyhled
+    nazev: Jak dopadl poslední uzavřený rok
+    hodnota: přebytek 24,17 mld. Kč
+    rok: 2025
+    stav: skutecnost
+    zdrojTyp: primarni
+    vysvetleni: >
+      Praha jako celek měla příjmy 148,14 mld. a výdaje 123,97 mld. Kč. Vlastní
+      hlavní město skončilo v přebytku 22,49 mld. Kč, přestože schválený rozpočet
+      počítal se schodkem 2,56 mld. Přebytky se opakují — 22,96 mld. v roce 2024,
+      29,27 mld. v roce 2023. Rozpočtovaný schodek proto neznamená, že Praze
+      peníze chybí.
+    opora: [Z1, Z3]
+
+mestskeCastiPriklady:
+  - slug: praha-8
+    nazev: Praha 8
+    obyvatel: 118811
+    rozpocet: 1,50 mld. Kč (vyrovnaný)
+    zMagistratu: 854,8 mil. Kč (57,1 %)
+    investice: 237,7 mil. Kč (15,9 %)
+    stav: schvaleny
+    opora: [M2, M3]
+  - slug: praha-7
+    nazev: Praha 7
+    obyvatel: 51398
+    rozpocet: příjmy 567,2 / výdaje 820,4 mil. Kč
+    zMagistratu: 330,6 mil. Kč
+    investice: 224,4 mil. Kč (27,4 %)
+    stav: schvaleny
+    opora: [M5, Z2]
+  - slug: praha-13
+    nazev: Praha 13
+    obyvatel: 70391
+    rozpocet: 778,3 mil. Kč (vyrovnaný)
+    zMagistratu: 547,9 mil. Kč (70,4 %)
+    investice: neuvedeno
+    stav: schvaleny
+    opora: [M6, Z2]
+  - slug: praha-9
+    nazev: Praha 9
+    obyvatel: 72840
+    rozpocet: příjmy 725,7 / výdaje 953,0 mil. Kč
+    zMagistratu: 415,9 mil. Kč (57,3 %)
+    investice: 355,0 mil. Kč (37,2 %)
+    stav: navrh
+    opora: [M7, Z2]
+  - slug: praha-kralovice
+    nazev: Praha-Královice
+    obyvatel: 479
+    rozpocet: příjmy 5,8 / výdaje 22,6 mil. Kč
+    zMagistratu: 3,1 mil. Kč (53 %)
+    investice: 15,8 mil. Kč, z toho 14,4 mil. nová budova úřadu
+    stav: schvaleny
+    opora: [M9]

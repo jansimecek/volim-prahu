@@ -41,12 +41,14 @@ export const metadata: Metadata = {
   },
 }
 
+// Popisky jsou krátké schválně — v navigaci je sedm položek a na mobilu se zalamují.
 const NAVIGACE = [
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
-  { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo o čem rozhoduje' },
+  { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo rozhoduje' },
+  { href: '/rozpoctovy-ramec', popisek: 'Rozpočet' },
   { href: '/kde-volim', popisek: 'Kde volím' },
-  { href: '/jak-hodnotime', popisek: 'Jak hodnotíme' },
+  { href: '/jak-hodnotime', popisek: 'Metodika' },
   { href: '/hlasovani', popisek: 'Anketa' },
 ] as const
 

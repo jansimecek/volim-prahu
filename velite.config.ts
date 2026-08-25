@@ -160,6 +160,82 @@ const kompetence = defineCollection({
   }),
 })
 
+/**
+ * Rozpočtový rámec — opora osy „rozpočet". Schéma navíc kontroluje referenční
+ * integritu: každá položka musí odkazovat na existující skupinu a na existující
+ * zdroj. Překlep v identifikátoru shodí build, ne až čtenáře.
+ */
+const rozpocet = defineCollection({
+  name: 'Rozpocet',
+  pattern: 'rozpocet.yaml',
+  single: true,
+  schema: s
+    .object({
+      uvodniVarovani: s.string().min(1),
+      skupiny: s
+        .array(s.object({ id: s.string().min(1), nadpis: s.string().min(1), popis: s.string().min(1) }))
+        .min(1),
+      zdroje: s
+        .array(s.object({ id: s.string().min(1), nazev: s.string().min(1), url: url }))
+        .min(1),
+      polozky: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            skupina: s.string().min(1),
+            nazev: s.string().min(1),
+            hodnota: s.string().min(1),
+            rok: s.number().int(),
+            /** Záměna schváleného rozpočtu, návrhu a skutečnosti je tady nejčastější chyba. */
+            stav: s.enum(['schvaleny', 'navrh', 'skutecnost', 'vyhled']),
+            zdrojTyp: s.enum(['primarni', 'sekundarni']),
+            vysvetleni: s.string().min(1),
+            poznamka: s.string().min(1).optional(),
+            opora: s.array(s.string().min(1)).min(1, 'Každé číslo musí mít zdroj.'),
+          }),
+        )
+        .min(1),
+      mestskeCastiPriklady: s
+        .array(
+          s.object({
+            slug: s.string().min(1),
+            nazev: s.string().min(1),
+            obyvatel: s.number().int().positive(),
+            rozpocet: s.string().min(1),
+            zMagistratu: s.string().min(1),
+            investice: s.string().min(1),
+            stav: s.enum(['schvaleny', 'navrh']),
+            opora: s.array(s.string().min(1)).min(1),
+          }),
+        )
+        .default([]),
+    })
+    .superRefine((data, ctx) => {
+      const skupiny = new Set(data.skupiny.map((sk) => sk.id))
+      const zdroje = new Set(data.zdroje.map((z) => z.id))
+      for (const polozka of data.polozky) {
+        if (!skupiny.has(polozka.skupina)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Položka "${polozka.id}" odkazuje na neexistující skupinu "${polozka.skupina}".`,
+          })
+        }
+      }
+      const vsechnyOpory = [
+        ...data.polozky.flatMap((p) => p.opora.map((o) => [p.id, o] as const)),
+        ...data.mestskeCastiPriklady.flatMap((m) => m.opora.map((o) => [m.slug, o] as const)),
+      ]
+      for (const [kde, zdroj] of vsechnyOpory) {
+        if (!zdroje.has(zdroj)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `"${kde}" odkazuje na neexistující zdroj "${zdroj}".`,
+          })
+        }
+      }
+    }),
+})
+
 const rozhovory = defineCollection({
   name: 'Rozhovor',
   pattern: 'rozhovory/**/*.mdx',
@@ -185,5 +261,5 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence },
+  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet },
 })

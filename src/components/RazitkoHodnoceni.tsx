@@ -121,6 +121,9 @@ export function RazitkoHodnoceni({
             <Link href="/kdo-o-cem-rozhoduje" className="odkaz-akcent">
               Kdo o čem v Praze rozhoduje
             </Link>
+            <Link href="/rozpoctovy-ramec" className="odkaz-akcent">
+              Kolik má Praha peněz
+            </Link>
           </p>
         </div>
       </details>

@@ -7,9 +7,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "velite && next dev",
+    "dev": "velite --strict && next dev",
     "dev:content": "velite --watch",
-    "build": "velite && next build",
+    "build": "velite --strict && next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -20,7 +20,8 @@
     "import:hlidac": "tsx scripts/import-hlidac.ts",
     "gen:mc": "tsx scripts/generate-mc-content.ts",
     "build:search": "tsx scripts/build-search-index.ts",
-    "validate": "tsx scripts/validate-content.ts"
+    "validate": "tsx scripts/validate-content.ts",
+    "content": "velite --strict"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.0",
