@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { programy, strany } from '#content'
 import { MAGISTRAT, SADA_CISELNIKU, cislo } from '@/lib/obsah'
 
 export const metadata: Metadata = {
@@ -9,6 +10,15 @@ export const metadata: Metadata = {
 }
 
 export default function StrankaMagistratu() {
+  const kandidujici = strany
+    .filter((s) => s.uroven === 'magistrat')
+    .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'))
+
+  const pocetHodnoceni = (slug: string) =>
+    programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')?.body.filter(
+      (b) => b.hodnoceni,
+    ).length ?? 0
+
   return (
     <div className="space-y-10">
       <header className="max-w-prose">
@@ -28,14 +38,47 @@ export default function StrankaMagistratu() {
         <Udaj popisek="Kód ČSÚ" hodnota={MAGISTRAT.kod} />
       </dl>
 
-      <section className="max-w-prose">
+      <section>
         <h2 className="text-2xl">Kandidující subjekty</h2>
-        <p className="mt-3">
-          Kandidátní listiny pro rok 2026 zatím Český statistický úřad v otevřených datech
-          nezveřejnil. Jakmile je vydá, objeví se tady seznam volebních stran, jejich
-          programy a hodnocení proveditelnosti jednotlivých slibů.
-        </p>
-        <p className="mt-4">
+
+        {kandidujici.length === 0 ? (
+          <p className="mt-3 max-w-prose">
+            Kandidátní listiny pro rok 2026 zatím Český statistický úřad v otevřených datech
+            nezveřejnil. Jakmile je vydá, objeví se tady seznam volebních stran, jejich
+            programy a hodnocení proveditelnosti jednotlivých slibů.
+          </p>
+        ) : (
+          <>
+            <p className="mt-3 max-w-prose text-sm text-seda-uredni">
+              Pořadí je abecední, ne podle preferencí. Čísla kandidátek doplníme, až je
+              vylosuje registrační úřad.
+            </p>
+            <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2">
+              {kandidujici.map((strana) => (
+                <li key={strana.slug} className="bg-papir">
+                  <Link
+                    href={`/praha/strana/${strana.slug}`}
+                    className="block h-full p-4 no-underline hover:bg-papir-tmavsi"
+                  >
+                    <span className="block font-display text-lg font-semibold">
+                      {strana.nazev}
+                    </span>
+                    {strana.lidr && (
+                      <span className="mt-1 block text-sm">Lídr: {strana.lidr}</span>
+                    )}
+                    <span className="popisek-uredni mt-2 block">
+                      {pocetHodnoceni(strana.slug) > 0
+                        ? `${pocetHodnoceni(strana.slug)} hodnocených slibů`
+                        : 'hodnocení zatím nezveřejněno'}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        <p className="mt-5 max-w-prose">
           <Link href="/jak-hodnotime" className="odkaz-akcent">
             Jak hodnocení vzniká
           </Link>
