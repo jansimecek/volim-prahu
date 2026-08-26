@@ -101,6 +101,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </li>
               <li>
+                <Link href="/minule-obdobi" className="popisek-uredni no-underline">
+                  Co slíbila současná rada
+                </Link>
+              </li>
+              <li>
+                <Link href="/senat" className="popisek-uredni no-underline">
+                  Senát
+                </Link>
+              </li>
+              <li>
                 <Link href="/ochrana-udaju" className="popisek-uredni no-underline">
                   Ochrana údajů
                 </Link>

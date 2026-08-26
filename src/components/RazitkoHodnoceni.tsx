@@ -124,6 +124,9 @@ export function RazitkoHodnoceni({
             <Link href="/rozpoctovy-ramec" className="odkaz-akcent">
               Kolik má Praha peněz
             </Link>
+            <Link href="/minule-obdobi" className="odkaz-akcent">
+              Co slíbila současná rada
+            </Link>
           </p>
         </div>
       </details>

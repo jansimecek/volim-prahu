@@ -1,0 +1,148 @@
+# Programové prohlášení Rady hl. m. Prahy 2022–2026 a jeho ověřitelnost.
+#
+# Opora osy „historie" v hodnocení proveditelnosti: abychom mohli u nového
+# slibu říct, jestli ho subjekt v minulém období splnil, musí existovat
+# srovnatelný minulý slib — a ten musí jít ověřit.
+#
+# stav: splneno | castecne | nesplneno | bez-dokladu
+#
+# BEZ-DOKLADU NENÍ NESPLNĚNO. Je to přiznání, že jsme výsledek nedohledali.
+# Zaměnit to znamená obvinit konkrétní lidi z něčeho, co jsme neprokázali.
+
+dokument:
+  nazev: Programové prohlášení koalice SPOLU pro Prahu, Pirátské strany a hnutí Starostové a nezávislí
+  vydano: 2023-06
+  stran: 62
+  url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+mereni:
+  zavazkuCelkem: 576
+  vRealizaci: 183
+  pripravovane: 183
+  vyhled: 210
+  sJakymkoliCislem: 80
+  sLetopoctem: 28
+  sKonkretnimCilem: 9
+  metoda: >
+    Dokument člení závazky do odrážek pod třemi hlavičkami — V realizaci,
+    Připravované a Výhled. Odrážek je v textové vrstvě PDF celkem 714, z toho
+    138 jsou samotné hlavičky kategorií; zbývá 576 závazků. Kolik jich obsahuje
+    číslici a kolik letopočet, je strojový výsledek. Devět závazků s konkrétním
+    měřitelným cílem jsme z nich vybrali ručně — zbylá čísla odkazují na jiné
+    strategické dokumenty, na roky jejich platnosti nebo na paragrafy.
+
+zavazky:
+  - id: pr-petrzilkova
+    kategorie: v-realizaci
+    oblast: Doprava a parkování
+    zneni: Zprovozníme P+R Petržílkova (197 míst P+R a 182 rezidenti).
+    stav: splneno
+    vysledek: >
+      Parkovací dům v ulici Petržílkova v Nových Butovicích se veřejnosti otevřel
+      23. června 2023, tedy v témže měsíci, ve kterém rada programové prohlášení
+      vydala. Má 380 stání: 200 v systému P+R a 180 pro rezidenty — o tři více
+      P+R a o dvě méně rezidentských, než prohlášení uvádělo. Stavba stála
+      343 milionů korun.
+    zdroje:
+      - text: Praha dokončila stavbu moderního parkovacího domu v Nových Butovicích
+        url: https://praha.eu/w/praha_dokoncila_stavbu_moderniho_3600301
+
+  - id: pr-dedina-hostivar-opatov
+    kategorie: v-realizaci
+    oblast: Doprava a parkování
+    zneni: Vybudujeme parkovací dům Dědina (290 míst rezidenti), P+R Depo Hostivař (649 míst) a P+R Opatov (490 míst).
+    stav: bez-dokladu
+    vysledek: >
+      Doklad o dokončení ani o stavu rozestavěnosti jednotlivých tří staveb jsme
+      k srpnu 2026 nedohledali.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: pr-smichov
+    kategorie: v-realizaci
+    oblast: Doprava a parkování
+    zneni: Zahájíme stavbu P+R na Terminálu Smíchovské nádraží (1000 míst).
+    stav: bez-dokladu
+    vysledek: Doklad o zahájení stavby jsme k srpnu 2026 nedohledali.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: pr-zlicin-ppp
+    kategorie: v-realizaci
+    oblast: Doprava a parkování
+    zneni: Zahájíme stavbu P+R Zličín v rámci PPP projektu (až 1400 míst).
+    stav: bez-dokladu
+    vysledek: >
+      Doklad o zahájení stavby jsme nedohledali. Slovo „až" navíc znamená, že
+      splnitelný by byl i výsledek výrazně nižší než 1400 míst.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: pr-depo-zlicin
+    kategorie: pripravovane
+    oblast: Doprava a parkování
+    zneni: Prověříme možnost vybudování P+R DEPO Zličín (450 míst).
+    stav: bez-dokladu
+    vysledek: >
+      Závazkem je prověření, ne stavba. Doklad o tom, že prověření proběhlo,
+      jsme nedohledali — a u takto formulovaného slibu by ho bylo obtížné
+      dohledat i kdyby proběhl.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: stromy
+    kategorie: v-realizaci
+    oblast: Životní prostředí
+    zneni: Budeme pokračovat ve výsadbě dalších 500 000 stromů a pečovat o ty již vysazené.
+    stav: bez-dokladu
+    vysledek: >
+      Výsadba prokazatelně pokračuje — projekt Milion stromů měl podle města po
+      jarní výsadbě 2025 celkem 642 415 vysazených stromů a na podzim 2026 se
+      plánuje dalších 140 tisíc v Jinonicích a Vinoři. Ověřit ale závazek na
+      „dalších 500 000" nejde, protože jde o kumulativní číslo za celý projekt
+      běžící od roku 2019 a stav k červnu 2023, od kterého by se mělo počítat,
+      jsme nedohledali.
+    zdroje:
+      - text: Praha pokračuje s projektem Milion stromů, na podzim vysadí 140 tisíc dřevin
+        url: https://praha.eu/w/praha-pokracuje-s-projektem-milion-stromu-na-podzim-vysadi-140-tisic-drevin-v-jinonicich-a-vinori
+
+  - id: nabijeci-mista
+    kategorie: vyhled
+    oblast: Doprava a parkování
+    zneni: Zajistíme v následujících letech až 3000 nabíjecích míst pro elektromobily.
+    stav: bez-dokladu
+    vysledek: >
+      Závazek je zařazený do kategorie Výhled, tedy bez vazby na volební období,
+      a slovo „až" nestanoví spodní hranici. Doklad o dosaženém počtu jsme
+      nedohledali.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Moderní a udržitelné technologie
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: kultura-450
+    kategorie: v-realizaci
+    oblast: Kultura
+    zneni: Podpoříme živou kulturu. Posílíme objem finančních prostředků až na 450 mil. Kč.
+    stav: bez-dokladu
+    vysledek: >
+      Doklad o dosaženém objemu podpory živé kultury jsme nedohledali. Slovo
+      „až" i tady znamená, že splnitelný by byl i výsledek nižší.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Praha kulturní
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+
+  - id: pamatky-grant
+    kategorie: pripravovane
+    oblast: Kultura
+    zneni: Navýšíme finanční obnos v grantovém systému na podporu obnovy památek, který byl minulým vedením snížen z 60 mil. na 43 mil.
+    stav: bez-dokladu
+    vysledek: >
+      Doklad o navýšení grantového systému na obnovu památek jsme nedohledali.
+      Prohlášení navíc neuvádí cílovou částku, jen výchozí stav.
+    zdroje:
+      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Praha kulturní
+        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794

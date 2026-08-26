@@ -281,6 +281,65 @@ const rozpocet = defineCollection({
     }),
 })
 
+/**
+ * Plnění programového prohlášení rady 2022–2026 — opora osy „historie".
+ *
+ * Klíčový je stav `bez-dokladu`. Znamená „nedohledali jsme výsledek", ne
+ * „nesplnili". Zaměnit to znamená obvinit konkrétní lidi z něčeho, co jsme
+ * neprokázali, a schéma proto u každého závazku vyžaduje zdroj i popis výsledku.
+ */
+const plneni = defineCollection({
+  name: 'Plneni',
+  pattern: 'plneni-2022-2026.yaml',
+  single: true,
+  schema: s.object({
+    dokument: s.object({
+      nazev: s.string().min(1),
+      vydano: s.string().regex(/^\d{4}-\d{2}$/),
+      stran: s.number().int().positive(),
+      url: url,
+    }),
+    mereni: s.object({
+      zavazkuCelkem: s.number().int().positive(),
+      vRealizaci: s.number().int().nonnegative(),
+      pripravovane: s.number().int().nonnegative(),
+      vyhled: s.number().int().nonnegative(),
+      sJakymkoliCislem: s.number().int().nonnegative(),
+      sLetopoctem: s.number().int().nonnegative(),
+      sKonkretnimCilem: s.number().int().nonnegative(),
+      /** Metoda musí být popsaná, jinak je to jen číslo bez možnosti kontroly. */
+      metoda: s.string().min(120),
+    }),
+    zavazky: s
+      .array(
+        s.object({
+          id: s.string().min(1),
+          kategorie: s.enum(['v-realizaci', 'pripravovane', 'vyhled']),
+          oblast: s.string().min(1),
+          zneni: s.string().min(1),
+          stav: s.enum(['splneno', 'castecne', 'nesplneno', 'bez-dokladu']),
+          vysledek: s.string().min(1),
+          zdroje: s.array(s.object({ text: s.string().min(1), url: url })).min(1),
+        }),
+      )
+      .min(1),
+  }).superRefine((data, ctx) => {
+    const soucet = data.mereni.vRealizaci + data.mereni.pripravovane + data.mereni.vyhled
+    if (soucet !== data.mereni.zavazkuCelkem) {
+      ctx.addIssue({
+        code: 'custom',
+        message: `Součet kategorií (${soucet}) nesedí na celkový počet závazků (${data.mereni.zavazkuCelkem}).`,
+      })
+    }
+    if (data.zavazky.length !== data.mereni.sKonkretnimCilem) {
+      ctx.addIssue({
+        code: 'custom',
+        message: `Vypsáno ${data.zavazky.length} závazků, ale měření uvádí ${data.mereni.sKonkretnimCilem} s konkrétním cílem.`,
+      })
+    }
+  }),
+})
+
 const rozhovory = defineCollection({
   name: 'Rozhovor',
   pattern: 'rozhovory/**/*.mdx',
@@ -306,5 +365,5 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet },
+  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet, plneni },
 })
