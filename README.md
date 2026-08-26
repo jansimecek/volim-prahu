@@ -96,13 +96,13 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 městských částí, metodika, `/kde-volim` fáze 1, CI, anketa čtenářů,
 kompetenční matice (`/kdo-o-cem-rozhoduje`), rozpočtový rámec
 (`/rozpoctovy-ramec`), profily všech 24 kandidátek do ZHMP, prvních osm
-hodnocení proveditelnosti a senátní blok včetně odpovědi, ve kterých
-městských částech se senátor letos vůbec nevolí.
+hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých městských
+částech se senátor letos vůbec nevolí, a rozbor plnění programového prohlášení
+rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.
 
 **Čeká se na:** kandidátní listiny `kv2026` od ČSÚ (registrační úřad je už
 zveřejnil, otevřená data zatím ne), stanovisko ÚDHPSH k registraci třetí
 osoby, souhlas IPR Praha s ArcGIS endpointem, úložiště ankety ve Vercelu.
 
-**Další na řadě:** plnění programového prohlášení rady 2022–2026 (osa
-historie), fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
+**Další na řadě:** fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
 a nácvik volební noci proti kv2022 do 2. 10.
