@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI, SADA_CISELNIKU, cislo, mestskaCastPodleSlugu } from '@/lib/obsah'
+import { SeznamKandidatu } from '@/components/SeznamKandidatu'
+import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -28,6 +30,8 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   if (!mc || !zastupitelstvo) notFound()
 
   const senat = senatniStavMestskeCasti(slug)
+  const listina = kandidatka(slug)
+  const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
 
   return (
     <div className="space-y-10">
@@ -100,14 +104,58 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         </section>
       )}
 
-      <section className="max-w-prose border-t border-linka pt-6">
+      <section className="border-t border-linka pt-6">
         <h2 className="text-2xl">Kandidující subjekty</h2>
-        <p className="mt-3">
-          Kandidátní listiny pro volby 2026 zatím Český statistický úřad nezveřejnil.
-          Jakmile je vydá, objeví se tady seznam volebních stran i jednotlivých kandidátů.
-        </p>
-        <p className="popisek-uredni mt-4">
-          Údaje o mandátech a okrscích jsou ze sady {SADA_CISELNIKU} · zdroj:{' '}
+        {!listina || listina.strany.length === 0 ? (
+          <p className="mt-3 max-w-prose">
+            Pro tuhle městskou část nemáme kandidátní listiny k dispozici.
+          </p>
+        ) : (
+          <>
+            <p className="mt-3 max-w-prose">
+              O {cislo(mc.mandaty)} mandátů se uchází {listina.strany.length}{' '}
+              {listina.strany.length === 1 ? 'volební strana' : 'volebních stran'} s celkem{' '}
+              {cislo(kandidatuCelkem)} kandidáty.
+            </p>
+
+            <div className="mt-6 space-y-10">
+              {listina.strany.map((strana) => {
+                const jednicka = lidr(strana)
+                return (
+                  <article key={strana.kodStrany}>
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-inkoust pb-2">
+                      <h3 className="font-display text-lg font-semibold">{strana.nazev}</h3>
+                      <p className="popisek-uredni">
+                        {strana.vylosovano && strana.cislo !== null
+                          ? `č. ${strana.cislo} na lístku`
+                          : 'číslo zatím nevylosováno'}{' '}
+                        · {strana.kandidati.length} kandidátů
+                      </p>
+                    </div>
+                    {jednicka && (
+                      <p className="mt-2 text-sm">
+                        Lídr: {celeJmeno(jednicka)}
+                        {jednicka.povolani ? `, ${jednicka.povolani}` : ''}
+                      </p>
+                    )}
+                    <details className="mt-3">
+                      <summary className="cursor-pointer popisek-uredni">
+                        <span className="pl-1.5">Zobrazit celou kandidátku</span>
+                      </summary>
+                      <div className="mt-3">
+                        <SeznamKandidatu strana={strana} />
+                      </div>
+                    </details>
+                  </article>
+                )
+              })}
+            </div>
+          </>
+        )}
+
+        <p className="popisek-uredni mt-8">
+          Údaje o mandátech a okrscích jsou ze sady {SADA_CISELNIKU}, kandidátky ze sady{' '}
+          {listina?.sada ?? '—'} · zdroj:{' '}
           <a href="https://volby.gov.cz/opendata/opendata.htm" className="underline">
             otevřená data ČSÚ
           </a>

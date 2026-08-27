@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { programy, strany } from '#content'
 import { MDXContent } from '@/components/mdx'
-import { POPIS_PROGRAMU, POPIS_ROLE } from '@/lib/strany'
+import { SeznamKandidatu } from '@/components/SeznamKandidatu'
+import { celeJmeno, lidr, stranaPodleKodu } from '@/lib/kandidatky'
+import { POPIS_PROGRAMU } from '@/lib/strany'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -17,9 +19,10 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   const { slug } = await params
   const strana = magistratni().find((s) => s.slug === slug)
   if (!strana) return {}
+  const nazev = stranaPodleKodu('magistrat', strana.kodStrany)?.nazev ?? strana.zkratka
   return {
-    title: strana.nazev,
-    description: `${strana.nazev} ve volbách do Zastupitelstva hlavního města Prahy 2026 — lídr, program a hodnocení proveditelnosti slibů.`,
+    title: nazev,
+    description: `${nazev} ve volbách do Zastupitelstva hlavního města Prahy 2026 — lídr, kandidátní listina a hodnocení proveditelnosti slibů.`,
   }
 }
 
@@ -31,6 +34,9 @@ export default async function StrankaSubjektu({ params }: Parametry) {
   const program = programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')
   const pocetHodnocenych = program?.body.filter((b) => b.hodnoceni).length ?? 0
 
+  const naKandidatce = stranaPodleKodu('magistrat', strana.kodStrany)
+  const jednicka = lidr(naKandidatce)
+
   return (
     <div className="space-y-10">
       <header>
@@ -39,20 +45,24 @@ export default async function StrankaSubjektu({ params }: Parametry) {
             Magistrát
           </Link>
         </p>
-        <h1 className="mt-2 text-4xl">{strana.nazev}</h1>
-        {strana.zkratka !== strana.nazev && (
-          <p className="popisek-uredni mt-2">{strana.zkratka}</p>
-        )}
+        <h1 className="mt-2 text-4xl">{naKandidatce?.nazev ?? strana.zkratka}</h1>
+        <p className="popisek-uredni mt-2">{strana.zkratka}</p>
       </header>
 
       <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka sm:grid-cols-3">
-        {strana.lidr && strana.lidrRole && (
-          <Udaj
-            popisek={POPIS_ROLE[strana.lidrRole]}
-            hodnota={strana.lidr}
-            odkaz={strana.lidrZdroj}
-          />
-        )}
+        {jednicka && <Udaj popisek="Lídr kandidátky" hodnota={celeJmeno(jednicka)} />}
+        <Udaj
+          popisek="Kandidátů"
+          hodnota={naKandidatce ? String(naKandidatce.kandidati.length) : '—'}
+        />
+        <Udaj
+          popisek="Číslo na lístku"
+          hodnota={
+            naKandidatce?.vylosovano && naKandidatce.cislo !== null
+              ? String(naKandidatce.cislo)
+              : 'zatím nevylosováno'
+          }
+        />
         <Udaj
           popisek="Program"
           hodnota={POPIS_PROGRAMU[strana.programStav]}
@@ -63,15 +73,6 @@ export default async function StrankaSubjektu({ params }: Parametry) {
           hodnota={pocetHodnocenych > 0 ? String(pocetHodnocenych) : '—'}
         />
       </dl>
-
-      {strana.lidr && strana.lidrRole === 'kandidat-na-primatora' && (
-        <p className="max-w-prose border-l-2 border-okr pl-4 text-sm">
-          <span className="popisek-uredni block">Pozor na rozdíl</span>
-          Zdroj u tohoto subjektu dokládá kandidáta na primátora, ne jedničku kandidátní
-          listiny. Nemusí jít o téhož člověka. Doplníme, až Český statistický úřad
-          zveřejní kandidátní listiny.
-        </p>
-      )}
 
       <div className="proza max-w-prose">
         <MDXContent code={strana.content} />
@@ -96,6 +97,19 @@ export default async function StrankaSubjektu({ params }: Parametry) {
           </p>
         )}
       </section>
+
+      {naKandidatce && (
+        <section>
+          <h2 className="text-2xl">Kandidátní listina</h2>
+          <p className="mt-1 max-w-prose text-sm text-seda-uredni">
+            {naKandidatce.kandidati.length} kandidátů na 65 mandátů. Údaje jsou
+            z otevřených dat ČSÚ a neupravujeme je.
+          </p>
+          <div className="mt-5">
+            <SeznamKandidatu strana={naKandidatce} />
+          </div>
+        </section>
+      )}
 
       {strana.web && (
         <p className="text-sm">

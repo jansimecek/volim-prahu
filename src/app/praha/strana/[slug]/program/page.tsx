@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { programy, strany } from '#content'
 import { RazitkoHodnoceni } from '@/components/RazitkoHodnoceni'
+import { stranaPodleKodu } from '@/lib/kandidatky'
 import { MDXContent } from '@/components/mdx'
 import type { HodnoceniSlibu } from '@/lib/typy'
 
@@ -20,9 +21,10 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   const { slug } = await params
   const strana = magistratni().find((s) => s.slug === slug)
   if (!strana) return {}
+  const nazev = stranaPodleKodu('magistrat', strana.kodStrany)?.nazev ?? strana.zkratka
   return {
-    title: `Program — ${strana.nazev}`,
-    description: `Sliby ${strana.nazev} pro Prahu 2026 a hodnocení jejich proveditelnosti proti kompetenčnímu a rozpočtovému rámci.`,
+    title: `Program — ${nazev}`,
+    description: `Sliby ${nazev} pro Prahu 2026 a hodnocení jejich proveditelnosti proti kompetenčnímu a rozpočtovému rámci.`,
   }
 }
 
@@ -40,7 +42,7 @@ export default async function StrankaProgramu({ params }: Parametry) {
       <header>
         <p className="popisek-uredni">
           <Link href={`/praha/strana/${strana.slug}`} className="no-underline">
-            {strana.nazev}
+            {strana.zkratka}
           </Link>
         </p>
         <h1 className="mt-2 text-4xl">Program a jeho proveditelnost</h1>

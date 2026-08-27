@@ -9,11 +9,6 @@ export const POPIS_PROGRAMU: Record<Strana['programStav'], string> = {
   nedohledan: 'program nedohledán',
 }
 
-export const POPIS_ROLE: Record<NonNullable<Strana['lidrRole']>, string> = {
-  'lidr-kandidatky': 'Lídr kandidátky',
-  'kandidat-na-primatora': 'Kandidát na primátora',
-}
-
 /** Řadí abecedně podle registrovaného názvu, ne podle velikosti nebo preferencí. */
 export function serazene(strany: Strana[]): Strana[] {
   return [...strany].sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs'))

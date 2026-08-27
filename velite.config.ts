@@ -76,20 +76,16 @@ const strany = defineCollection({
   pattern: 'strany/**/*.mdx',
   schema: s
     .object({
-      /** Přesně tak, jak zní registrovaný název volební strany. */
-      nazev: s.string().min(1),
+      /**
+       * Kód volební strany z číselníku ČSÚ. Je to spojka mezi redakčním obsahem
+       * a kandidátkou — název ani lídr se v obsahu neuvádějí, berou se z dat,
+       * aby se nemohly rozejít.
+       */
+      kodStrany: s.string().regex(/^\d+$/),
       zkratka: s.string().min(1),
       slug: s.slug('strana'),
       /** `magistrat` nebo slug městské části. */
       uroven: s.string().min(1),
-      lidr: s.string().optional(),
-      /**
-       * Rozlišení, které nelze obejít: „jednička kandidátky" a „kandidát na
-       * primátora" nejsou totéž a u části subjektů máme doloženo jen to druhé.
-       */
-      lidrRole: s.enum(['lidr-kandidatky', 'kandidat-na-primatora']).optional(),
-      lidrZdroj: url.optional(),
-      lidrPopis: s.string().min(1).optional(),
       /** Stav programu k datu uvedenému v `programOvereno`. */
       programStav: s
         .enum(['zverejnen', 'jen-casti', 'jen-priority', 'avizovan', 'nedohledan'])
@@ -103,23 +99,10 @@ const strany = defineCollection({
       content: s.mdx(),
     })
     .superRefine((data, ctx) => {
-      // Jméno konkrétního člověka se nesmí objevit bez zdroje a bez role.
-      if (data.lidr && !data.lidrZdroj) {
-        ctx.addIssue({
-          code: 'custom',
-          message: `U subjektu "${data.nazev}" je uveden lídr bez zdroje (lidrZdroj).`,
-        })
-      }
-      if (data.lidr && !data.lidrRole) {
-        ctx.addIssue({
-          code: 'custom',
-          message: `U subjektu "${data.nazev}" chybí lidrRole — je to jednička kandidátky, nebo kandidát na primátora?`,
-        })
-      }
       if (data.programStav === 'zverejnen' && !data.programUrl) {
         ctx.addIssue({
           code: 'custom',
-          message: `Subjekt "${data.nazev}" má program označený jako zveřejněný, ale chybí odkaz.`,
+          message: `Subjekt "${data.slug}" má program označený jako zveřejněný, ale chybí odkaz.`,
         })
       }
     }),

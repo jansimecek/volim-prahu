@@ -1,0 +1,162 @@
+{
+  "zastupitelstvo": {
+    "kod": "539589",
+    "nazev": "Praha-Přední Kopanina",
+    "slug": "praha-predni-kopanina",
+    "mandaty": 9
+  },
+  "sada": "kv2026",
+  "stazeno": "2026-08-27",
+  "strany": [
+    {
+      "cislo": null,
+      "vylosovano": false,
+      "poradiVDatech": 501,
+      "kodStrany": "470",
+      "nazev": "ZA KOPANINU KRÁSNĚJŠÍ S PODPOROU STAN",
+      "zkratka": "STAN+NK",
+      "slug": "za-kopaninu-krasnejsi-s-podporou-stan",
+      "slozeni": [
+        "080",
+        "166"
+      ],
+      "kandidati": [
+        {
+          "id": "539589-501-1",
+          "slug": "kyzek-karel",
+          "jmeno": "Karel",
+          "prijmeni": "Kyzek",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 66,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "166",
+          "politickaPrislusnost": "166",
+          "poradi": 1,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-2",
+          "slug": "neubauer-frantisek",
+          "jmeno": "František",
+          "prijmeni": "Neubauer",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 54,
+          "povolani": "technolog výroby",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 2,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-3",
+          "slug": "salat-petr",
+          "jmeno": "Petr",
+          "prijmeni": "Salát",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "OSVČ",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "166",
+          "politickaPrislusnost": "166",
+          "poradi": 3,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-4",
+          "slug": "tichy-miroslav-2",
+          "jmeno": "Miroslav",
+          "prijmeni": "Tichý",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 39,
+          "povolani": "stavbyvedoucí",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "166",
+          "politickaPrislusnost": "166",
+          "poradi": 4,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-5",
+          "slug": "rehor-jan",
+          "jmeno": "Jan",
+          "prijmeni": "Řehoř",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "truhlář",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 5,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-6",
+          "slug": "rabinakova-dana",
+          "jmeno": "Dana",
+          "prijmeni": "Rabiňáková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 70,
+          "povolani": "psychoterapeutka",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 6,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-7",
+          "slug": "koucky-josef",
+          "jmeno": "Josef",
+          "prijmeni": "Koucký",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 70,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 7,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-8",
+          "slug": "hanus-jan",
+          "jmeno": "Jan",
+          "prijmeni": "Hanuš",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "stavební technik",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 8,
+          "zastupitelstvo": "praha-predni-kopanina"
+        },
+        {
+          "id": "539589-501-9",
+          "slug": "spackova-lucie",
+          "jmeno": "Lucie",
+          "prijmeni": "Špačková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 38,
+          "povolani": "kulturní manager",
+          "bydliste": "Praha-Přední Kopanina",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 9,
+          "zastupitelstvo": "praha-predni-kopanina"
+        }
+      ]
+    }
+  ]
+}

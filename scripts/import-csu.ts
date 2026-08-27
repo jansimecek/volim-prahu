@@ -17,6 +17,9 @@ import { KOD_MAGISTRAT, slugKandidata, slugZastupitelstva, slugify } from '../sr
 const KOREN = join(__dirname, '..')
 const OKRES_PRAHA = '1100'
 
+/** Hodnoty od této hranice výš jsou náhrada za dosud nevylosované pořadí. */
+const HRANICE_NAHRADNIHO_CISLA = 500
+
 type Argumenty = { rok: number; jenCiselnik: boolean; vystup: string }
 
 function nactiArgumenty(): Argumenty {
@@ -162,12 +165,21 @@ function sestavKandidatky(
     .filter((k) => podleKodu.has(k.KODZASTUP ?? ''))
     .sort(
       (a, b) =>
+        // magistrát první, pak městské části podle kódu
+        Number(b.KODZASTUP === KOD_MAGISTRAT) - Number(a.KODZASTUP === KOD_MAGISTRAT) ||
         (a.KODZASTUP ?? '').localeCompare(b.KODZASTUP ?? '') ||
         Number(a.POR_STR_HL) - Number(b.POR_STR_HL) ||
         Number(a.PORCISLO) - Number(b.PORCISLO),
     )
 
   const obsazeneSlugy = new Set<string>()
+  /**
+   * Tentýž člověk často kandiduje na magistrát i ve své městské části a má mít
+   * jeden profil. Ztotožňujeme ho ale jen tehdy, když se shoduje jméno, věk
+   * i obec bydliště — ČSÚ datum narození nezveřejňuje, takže shoda podle
+   * samotného jména by mohla slít dva různé lidi do jednoho.
+   */
+  const slugPodleIdentity = new Map<string, string>()
 
   for (const radek of serazeni) {
     const kodZastup = radek.KODZASTUP ?? ''
@@ -175,11 +187,20 @@ function sestavKandidatky(
     const cisloStrany = Number(radek.POR_STR_HL ?? 0)
     const strana = stranaPodleKlice.get(`${kodZastup}-${radek.POR_STR_HL}`)
 
-    let zaznamStrany = kandidatka.strany.find((s) => s.cislo === cisloStrany)
+    let zaznamStrany = kandidatka.strany.find((s) => s.poradiVDatech === cisloStrany)
     if (!zaznamStrany) {
-      const nazev = strana?.NAZEVCELK ?? `Volební strana č. ${cisloStrany}`
+      const nazev = strana?.NAZEVCELK ?? `Volební strana ${cisloStrany}`
       zaznamStrany = {
-        cislo: cisloStrany,
+        /**
+         * Vylosované číslo na hlasovacím lístku, nebo null.
+         * ČSÚ podle popisu datové věty dosazuje za nevylosované pořadí dočasnou
+         * náhradu; v datech kv2026 je to blok od 501 výš, přidělený abecedně
+         * v rámci zastupitelstva. Publikovat ho jako číslo kandidátky by na
+         * volebním průvodci byla hrubá chyba, proto se sem nedostane.
+         */
+        cislo: cisloStrany > 0 && cisloStrany < HRANICE_NAHRADNIHO_CISLA ? cisloStrany : null,
+        vylosovano: cisloStrany > 0 && cisloStrany < HRANICE_NAHRADNIHO_CISLA,
+        poradiVDatech: cisloStrany,
         kodStrany: radek.OSTRANA ?? '',
         nazev,
         zkratka: strana?.ZKRATKAO8 ?? '',
@@ -193,9 +214,21 @@ function sestavKandidatky(
     const poradi = Number(radek.PORCISLO ?? 0)
     const prijmeni = radek.PRIJMENI ?? ''
     const jmeno = radek.JMENO ?? ''
+    const identita = [
+      slugify(prijmeni),
+      slugify(jmeno),
+      radek.VEK ?? '',
+      slugify(radek.BYDLISTEN ?? ''),
+    ].join('|')
+    let slug = slugPodleIdentity.get(identita)
+    if (!slug) {
+      slug = slugKandidata(prijmeni, jmeno, obsazeneSlugy)
+      slugPodleIdentity.set(identita, slug)
+    }
+
     const kandidat: Kandidat = {
       id: `${kodZastup}-${cisloStrany}-${poradi}`,
-      slug: slugKandidata(prijmeni, jmeno, obsazeneSlugy),
+      slug,
       jmeno,
       prijmeni,
       titulPred: radek.TITULPRED ?? '',
@@ -213,7 +246,8 @@ function sestavKandidatky(
   }
 
   for (const kandidatka of vystup.values()) {
-    kandidatka.strany.sort((a, b) => a.cislo - b.cislo)
+    // Řadíme podle pořadí v datech; dokud není vylosováno, je to abecedně.
+    kandidatka.strany.sort((a, b) => a.poradiVDatech - b.poradiVDatech)
     for (const s of kandidatka.strany) s.kandidati.sort((a, b) => a.poradi - b.poradi)
   }
   return vystup
@@ -225,7 +259,9 @@ function prazdnaKandidatka(z: Zastupitelstvo) {
     sada: '',
     stazeno: '',
     strany: [] as {
-      cislo: number
+      cislo: number | null
+      vylosovano: boolean
+      poradiVDatech: number
       kodStrany: string
       nazev: string
       zkratka: string

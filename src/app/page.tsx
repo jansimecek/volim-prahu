@@ -1,7 +1,10 @@
 import Link from 'next/link'
+import { kandidatka } from '@/lib/kandidatky'
 import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
 
 export default function Rozcestnik() {
+  const magistratniListina = kandidatka('magistrat')
+
   return (
     <div className="space-y-14">
       <section>
@@ -57,10 +60,14 @@ export default function Rozcestnik() {
       <section className="max-w-prose">
         <h2 className="text-2xl">V jakém je to teď stavu</h2>
         <p className="mt-3">
-          Kandidátní listiny pro rok 2026 zatím Český statistický úřad v otevřených datech
-          nezveřejnil. Jakmile je vydá, objeví se tady kandidátky pro magistrát i pro všech{' '}
-          {cislo(MESTSKE_CASTI.length)} městských částí. Do té doby najdete na webu popis
-          jednotlivých částí, metodiku hodnocení a praktické informace k volbám.
+          Kandidátní listiny už Český statistický úřad zveřejnil. Na magistrát kandiduje{' '}
+          {magistratniListina?.strany.length ?? 0} volebních stran a napříč Prahou najdete
+          kandidátky pro všech {cislo(MESTSKE_CASTI.length)} městských částí.
+        </p>
+        <p className="mt-3">
+          Čísla na hlasovacím lístku zatím vylosovaná nebyla — jakmile budou, doplníme je.
+          Hodnocení proveditelnosti zveřejňujeme u těch subjektů, které zveřejnily dost
+          konkrétní program.
         </p>
       </section>
     </div>

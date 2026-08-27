@@ -1,0 +1,161 @@
+{
+  "zastupitelstvo": {
+    "kod": "539465",
+    "nazev": "Praha-Lochkov",
+    "slug": "praha-lochkov",
+    "mandaty": 9
+  },
+  "sada": "kv2026",
+  "stazeno": "2026-08-27",
+  "strany": [
+    {
+      "cislo": null,
+      "vylosovano": false,
+      "poradiVDatech": 501,
+      "kodStrany": "901",
+      "nazev": "\"Sdružení Lochkov 2026\"",
+      "zkratka": "SNK",
+      "slug": "sdruzeni-lochkov-2026",
+      "slozeni": [
+        "080"
+      ],
+      "kandidati": [
+        {
+          "id": "539465-501-1",
+          "slug": "rendl-jiri",
+          "jmeno": "Jiří",
+          "prijmeni": "Rendl",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 67,
+          "povolani": "konzultant",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 1,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-2",
+          "slug": "filipova-eva",
+          "jmeno": "Eva",
+          "prijmeni": "Filipová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 65,
+          "povolani": "zástupkyně starosty",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 2,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-3",
+          "slug": "dlouhy-miroslav",
+          "jmeno": "Miroslav",
+          "prijmeni": "Dlouhý",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 69,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 3,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-4",
+          "slug": "kosar-karel",
+          "jmeno": "Karel",
+          "prijmeni": "Košař",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 57,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 4,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-5",
+          "slug": "wais-frantisek",
+          "jmeno": "František",
+          "prijmeni": "Wais",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "řidič",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 5,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-6",
+          "slug": "filipova-jana",
+          "jmeno": "Jana",
+          "prijmeni": "Filipová",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 43,
+          "povolani": "manažerka",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 6,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-7",
+          "slug": "panek-karel",
+          "jmeno": "Karel",
+          "prijmeni": "Pánek",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 53,
+          "povolani": "technik",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 7,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-8",
+          "slug": "joudl-vaclav",
+          "jmeno": "Václav",
+          "prijmeni": "Joudl",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 46,
+          "povolani": "manažer",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 8,
+          "zastupitelstvo": "praha-lochkov"
+        },
+        {
+          "id": "539465-501-9",
+          "slug": "smutna-lucie",
+          "jmeno": "Lucie",
+          "prijmeni": "Smutná",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 47,
+          "povolani": "manažerka",
+          "bydliste": "Praha-Lochkov",
+          "navrhujiciStrana": "80",
+          "politickaPrislusnost": "99",
+          "poradi": 9,
+          "zastupitelstvo": "praha-lochkov"
+        }
+      ]
+    }
+  ]
+}

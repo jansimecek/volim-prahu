@@ -34,11 +34,15 @@ const ZAKAZANY_SLOVNIK = [
 ]
 
 /**
- * Slovník verdiktu se kontroluje jen tam, kde se hodnotí. Metodika o něm
- * naopak musí mluvit — vysvětluje, proč se takové výroky nevydávají.
+ * Slovník verdiktu se kontroluje jen tam, kde hodnotíme vlastními slovy.
+ *
+ * Metodika o něm mluvit musí — vysvětluje, proč takové výroky nevydáváme.
+ * A profily subjektů citují registrované názvy volebních stran, které si
+ * strany zvolily samy; jeden z pražských názvů je několikasetznakový text
+ * obsahující i slova z tohoto seznamu. Citovat ho doslova je povinnost,
+ * ne náš verdikt, takže se `content/strany/` nekontroluje.
  */
-const KONTROLOVAT_SLOVNIK = (soubor: string) =>
-  soubor.startsWith('content/programy/') || soubor.startsWith('content/strany/')
+const KONTROLOVAT_SLOVNIK = (soubor: string) => soubor.startsWith('content/programy/')
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 

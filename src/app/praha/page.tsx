@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { programy, strany } from '#content'
 import { MAGISTRAT, SADA_CISELNIKU, cislo } from '@/lib/obsah'
-import { POPIS_PROGRAMU, POPIS_ROLE, serazene } from '@/lib/strany'
+import { celeJmeno, kandidatka, lidr, stranaPodleKodu } from '@/lib/kandidatky'
+import { POPIS_PROGRAMU, serazene } from '@/lib/strany'
 
 export const metadata: Metadata = {
   title: 'Magistrát',
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 
 export default function StrankaMagistratu() {
   const kandidujici = serazene(strany.filter((s) => s.uroven === 'magistrat'))
+  const listina = kandidatka('magistrat')
+  const vylosovano = listina?.strany.some((s) => s.vylosovano) ?? false
 
   const pocetHodnoceni = (slug: string) =>
     programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')?.body.filter(
@@ -50,8 +53,14 @@ export default function StrankaMagistratu() {
           <>
             <p className="mt-3 max-w-prose">
               Registrační úřad zaregistroval <strong>{kandidujici.length} kandidátních
-              listin</strong>. Pořadí je abecední, ne podle preferencí ani velikosti —
-              vylosovaná čísla doplníme, až budou známá.
+              listin</strong> s celkem{' '}
+              {cislo(
+                listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0,
+              )}{' '}
+              kandidáty. Pořadí je abecední, ne podle preferencí ani velikosti —
+              {vylosovano
+                ? ' vylosovaná čísla najdete u jednotlivých subjektů.'
+                : ' čísla na hlasovacím lístku zatím vylosovaná nebyla a doplníme je, jakmile budou.'}
             </p>
             <p className="mt-2 max-w-prose text-sm text-seda-uredni">
               U každého subjektu uvádíme stav programu ke stejnému datu, ať je vidět,
@@ -79,17 +88,15 @@ export default function StrankaMagistratu() {
                     <span className="block font-display text-lg font-semibold">
                       {strana.zkratka}
                     </span>
-                    {strana.lidr && strana.lidrRole ? (
-                      <span className="mt-1 block text-sm">
-                        {POPIS_ROLE[strana.lidrRole]}: {strana.lidr}
-                      </span>
-                    ) : (
-                      <span className="mt-1 block text-sm text-seda-uredni">
-                        lídr zatím nedoložen
-                      </span>
-                    )}
+                    <span className="mt-1 block text-sm">
+                      {(() => {
+                        const j = lidr(stranaPodleKodu('magistrat', strana.kodStrany))
+                        return j ? `Lídr: ${celeJmeno(j)}` : 'lídr neuveden'
+                      })()}
+                    </span>
                     <span className="popisek-uredni mt-2 block">
-                      {POPIS_PROGRAMU[strana.programStav]}
+                      {stranaPodleKodu('magistrat', strana.kodStrany)?.kandidati.length ?? 0}{' '}
+                      kandidátů · {POPIS_PROGRAMU[strana.programStav]}
                       {pocetHodnoceni(strana.slug) > 0
                         ? ` · ${pocetHodnoceni(strana.slug)} hodnocených slibů`
                         : ''}
