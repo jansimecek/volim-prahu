@@ -7,7 +7,13 @@ import type { Zastupitelstvo } from '@/lib/typy'
 
 const normalizuj = (text: string) => bezDiakritiky(text).toLowerCase()
 
-export function SeznamMestskychCasti({ casti }: { casti: Zastupitelstvo[] }) {
+export function SeznamMestskychCasti({
+  casti,
+  pocetStran,
+}: {
+  casti: Zastupitelstvo[]
+  pocetStran: Record<string, number>
+}) {
   const [dotaz, setDotaz] = useState('')
 
   const nalezene = useMemo(() => {
@@ -49,8 +55,17 @@ export function SeznamMestskychCasti({ casti }: { casti: Zastupitelstvo[] }) {
                 href={`/mestska-cast/${mc.slug}`}
                 className="flex h-full items-baseline justify-between gap-3 p-3 no-underline hover:bg-papir-tmavsi"
               >
-                <span className="font-display font-medium">{mc.nazev}</span>
-                <span className="popisek-uredni whitespace-nowrap">{mc.mandaty} mandátů</span>
+                <span className="font-display font-medium">
+                  {mc.nazev}
+                  {pocetStran[mc.slug] === 1 && (
+                    <span className="popisek-uredni mt-0.5 block text-praha">
+                      jediná kandidátka
+                    </span>
+                  )}
+                </span>
+                <span className="popisek-uredni whitespace-nowrap">
+                  {pocetStran[mc.slug] ?? 0} stran · {mc.mandaty} mandátů
+                </span>
               </Link>
             </li>
           ))}

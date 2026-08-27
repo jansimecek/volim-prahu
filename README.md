@@ -100,9 +100,13 @@ hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých měst
 částech se senátor letos vůbec nevolí, a rozbor plnění programového prohlášení
 rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.
 
-**Čeká se na:** kandidátní listiny `kv2026` od ČSÚ (registrační úřad je už
-zveřejnil, otevřená data zatím ne), stanovisko ÚDHPSH k registraci třetí
-osoby, souhlas IPR Praha s ArcGIS endpointem, úložiště ankety ve Vercelu.
+Kandidátky ze sady `kv2026` jsou naimportované: 8 607 kandidatur, 7 861 osob,
+24 volebních stran na magistrát. Čísla na hlasovacím lístku zatím vylosovaná
+nebyla — ČSÚ za ně dosazuje náhradní hodnoty od 501 výš a import je do
+`cislo` nepustí.
 
-**Další na řadě:** fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
+**Čeká se na:** vylosování čísel kandidátek, stanovisko ÚDHPSH k registraci
+třetí osoby, souhlas IPR Praha s ArcGIS endpointem, úložiště ankety ve Vercelu.
+
+**Další na řadě:** syntéza mediálních výroků lídrů, fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
 a nácvik volební noci proti kv2022 do 2. 10.

@@ -118,6 +118,20 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
               {cislo(kandidatuCelkem)} kandidáty.
             </p>
 
+            {/* Fakt, který volič jinde nedostane a který mění smysl jeho hlasu. */}
+            {listina.strany.length === 1 && (
+              <p className="mt-4 max-w-prose border-l-2 border-praha pl-5">
+                <span className="popisek-uredni block">Jediná kandidátka</span>
+                V téhle městské části podala kandidátní listinu jen jedna volební strana.
+                Na {cislo(mc.mandaty)} mandátů má {cislo(kandidatuCelkem)}{' '}
+                {kandidatuCelkem === mc.mandaty
+                  ? 'kandidátů, tedy přesně tolik, kolik je míst v zastupitelstvu.'
+                  : 'kandidátů.'}{' '}
+                Vybírat mezi stranami tu tedy nelze; hlas rozhoduje o pořadí kandidátů
+                uvnitř jediné listiny a o tom, jestli volby vůbec budou platné.
+              </p>
+            )}
+
             <div className="mt-6 space-y-10">
               {listina.strany.map((strana) => {
                 const jednicka = lidr(strana)
