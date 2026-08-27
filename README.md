@@ -112,5 +112,10 @@ Doložené mediální výroky lídrů jsou v `content/vyroky-lidru.yaml` a zobra
 se na profilu kandidáta. Publikují se jen doslovné citace ověřené proti zdroji;
 u 14 z 24 lídrů se nic doložitelného nenašlo a je u nich napsáno proč.
 
-**Další na řadě:** fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
-a nácvik volební noci proti kv2022 do 2. 10.
+Fáze 2 `/kde-volim` běží: `pnpm import:desky` stahuje úřední desky 14 městských
+částí, které je publikují jako otevřená data, a hledá v nich oznámení o době
+a místě konání voleb. Adresy desek zbylých 43 částí jsou v
+`content/uredni-desky.yaml`. Spouštět opakovaně od poloviny září — lhůta
+pro vyvěšení je 24. 9. 2026.
+
+**Další na řadě:** nácvik volební noci proti kv2022 do 2. 10.
