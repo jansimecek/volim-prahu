@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "velite --strict && next dev",
     "dev:content": "velite --watch",
-    "build": "velite --strict && next build",
+    "build": "velite --strict && pnpm build:search && next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

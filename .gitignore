@@ -27,3 +27,6 @@ coverage/
 
 # lokální úložiště ankety při vývoji
 .data/
+
+# generovaný vyhledávací index
+public/hledani.json

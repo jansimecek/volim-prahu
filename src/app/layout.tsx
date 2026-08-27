@@ -50,6 +50,7 @@ const NAVIGACE = [
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
   { href: '/hlasovani', popisek: 'Anketa' },
+  { href: '/hledani', popisek: 'Hledat' },
 ] as const
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
