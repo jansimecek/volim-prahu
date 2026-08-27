@@ -108,5 +108,9 @@ nebyla — ČSÚ za ně dosazuje náhradní hodnoty od 501 výš a import je do
 **Čeká se na:** vylosování čísel kandidátek, stanovisko ÚDHPSH k registraci
 třetí osoby, souhlas IPR Praha s ArcGIS endpointem, úložiště ankety ve Vercelu.
 
-**Další na řadě:** syntéza mediálních výroků lídrů, fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
+Doložené mediální výroky lídrů jsou v `content/vyroky-lidru.yaml` a zobrazují
+se na profilu kandidáta. Publikují se jen doslovné citace ověřené proti zdroji;
+u 14 z 24 lídrů se nic doložitelného nenašlo a je u nich napsáno proč.
+
+**Další na řadě:** fáze 2 `/kde-volim` se sběrem z 57 úředních desek do 24. 9.
 a nácvik volební noci proti kv2022 do 2. 10.
