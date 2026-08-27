@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { UredniDesky } from '@/components/UredniDesky'
 import { MDXContent } from '@/components/mdx'
 import { strankaPodleSlugu } from '@/lib/obsah'
 
@@ -16,6 +17,14 @@ export default function Stranka() {
       <div className="proza max-w-prose">
         <MDXContent code={stranka.content} />
       </div>
+
+      <section className="border-t border-inkoust pt-8">
+        <h2 className="text-2xl">Oznámení z 57 úředních desek</h2>
+        <div className="mt-5">
+          <UredniDesky />
+        </div>
+      </section>
+
       <p className="popisek-uredni">Aktualizováno {stranka.aktualizovano}</p>
     </article>
   )

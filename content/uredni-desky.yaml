@@ -1,0 +1,244 @@
+# Úřední desky pražských městských částí.
+#
+# Zdroje adres: Národní katalog otevřených dat (data.gov.cz) pro strojově
+# čitelné výstupy podle otevřené formální normy, a ověřená rešerše pro zbytek.
+# Každou adresu ověřoval nezávislý agent proti obsahu stránky — nejnebezpečnější
+# chybou by byla deska sousední městské části.
+#
+# urlOtevrenaData je nepovinná; bez ní umíme nabídnout jen odkaz na desku.
+
+desky:
+  - slug: praha-1
+    nazev: "Praha 1"
+    urlDesky: "https://www.praha1.cz/uredni-deska/"
+    poznamka: "Datová sada úřední desky je v katalogu registrovaná, ale bez odkazu na soubor — strojově ji zatím číst nejde."
+  - slug: praha-11
+    nazev: "Praha 11"
+    urlDesky: "https://www.praha11.cz/urad-mc/uredni-deska/"
+    urlOtevrenaData: "https://www.praha11.cz/c80d495fc598e689132ba10d5835165e"
+  - slug: praha-12
+    nazev: "Praha 12"
+    urlDesky: "https://www.praha12.cz/uredni-deska/"
+    urlOtevrenaData: "https://www.praha12.cz/opendata-uredni-deska"
+  - slug: praha-13
+    nazev: "Praha 13"
+    urlDesky: "https://www.praha13.cz/uredni-deska/"
+    urlOtevrenaData: "https://eud.praha13.cz/pub/opendata/17000002/edeska1"
+  - slug: praha-15
+    nazev: "Praha 15"
+    urlDesky: "https://www.praha15.cz/uredni-deska/"
+    urlOtevrenaData: "https://www.praha15.cz/opendata-uredni-deska"
+  - slug: praha-16
+    nazev: "Praha 16"
+    urlDesky: "https://www.praha16.eu/uredni-deska/"
+    urlOtevrenaData: "https://www.praha16.eu/api/open-data/ofn6814716d17024"
+  - slug: praha-17
+    nazev: "Praha 17"
+    urlDesky: "https://edeska.repy.cz/"
+    urlOtevrenaData: "https://edeska.repy.cz/opendata"
+  - slug: praha-18
+    nazev: "Praha 18"
+    urlDesky: "https://www.letnany.cz/uredni-deska/"
+    urlOtevrenaData: "https://www.letnany.cz/opendata-uredni-deska"
+  - slug: praha-19
+    nazev: "Praha 19"
+    urlDesky: "https://kbely.imunis.cz/edeska/"
+    urlOtevrenaData: "https://kbely.imunis.cz/edeska/opendata"
+  - slug: praha-2
+    nazev: "Praha 2"
+    urlDesky: "https://edeska.praha2.cz/eDeska/eDeskaAktualni.jsp"
+    urlOtevrenaData: "https://edeska.praha2.cz/eDeska/opendata"
+  - slug: praha-20
+    nazev: "Praha 20"
+    urlDesky: "https://www.pocernice.cz/uredni-deska/"
+    urlOtevrenaData: "https://www.pocernice.cz/eDeska/opendata"
+  - slug: praha-3
+    nazev: "Praha 3"
+    urlDesky: "https://www.praha3.cz/eDeska/eDeskaAktualni.jsp"
+    urlOtevrenaData: "https://www.praha3.cz/eDeska/opendata"
+  - slug: praha-4
+    nazev: "Praha 4"
+    urlDesky: "https://cztedeskaext.praha4.cz/eDeska/eDeskaAktualni.jsp"
+    urlOtevrenaData: "https://cztedeskaext.praha4.cz/eDeska/opendata"
+  - slug: praha-9
+    nazev: "Praha 9"
+    urlDesky: "https://www.praha9.cz/urad-a-samosprava/uredni-deska"
+    urlOtevrenaData: "https://www.praha9.cz/eDeska/opendata"
+  - slug: praha-10
+    nazev: "Praha 10"
+    webMC: "https://praha10.cz/"
+    urlDesky: "https://edeska.praha10.cz/"
+    poznamka: "Seznam dokumentů se dotahuje skriptem, obsah desky jsme textově neověřili."
+  - slug: praha-14
+    nazev: "Praha 14"
+    webMC: "https://www.praha14.cz/"
+    urlDesky: "https://edeska.praha14.cz/eDeska/eDeskaAktualni.jsp"
+  - slug: praha-21
+    nazev: "Praha 21"
+    webMC: "https://www.praha21.cz/"
+    urlDesky: "https://www.praha21.cz/informace/uredni-deska"
+    poznamka: "Seznam dokumentů se pravděpodobně vykresluje skriptem, ověřeno jen že stránka patří Praze 21."
+  - slug: praha-22
+    nazev: "Praha 22"
+    webMC: "https://www.praha22.cz/"
+    urlDesky: "https://udeska.praha22.cz/praha22.cz/www/udeska/index.php"
+    poznamka: "Kořenová adresa jen přesměrovává; uvedená je cílová stránka se seznamem dokumentů."
+  - slug: praha-5
+    nazev: "Praha 5"
+    webMC: "https://www.praha5.cz/"
+    urlDesky: "https://www.praha5.cz/uredni-deska/"
+    poznamka: "Adresa je položka „Úřední deska“ v hlavní navigaci webu, seznam dokumentů se ale dotahuje skriptem. Před ostrým sběrem ověřit v prohlížeči."
+  - slug: praha-6
+    nazev: "Praha 6"
+    webMC: "https://www.praha6.cz/"
+    urlDesky: "https://www.praha6.cz/uredni-deska/uredni-deska-rozcestnik.html"
+  - slug: praha-7
+    nazev: "Praha 7"
+    webMC: "https://www.praha7.cz/"
+    urlDesky: "https://www.praha7.cz/uredni-deska/"
+  - slug: praha-8
+    nazev: "Praha 8"
+    webMC: "https://www.praha8.cz/"
+    urlDesky: "https://www.praha8.cz/deska"
+  - slug: praha-bechovice
+    nazev: "Praha-Běchovice"
+    webMC: "https://www.praha-bechovice.cz/"
+    urlDesky: "https://www.praha-bechovice.cz/urad/uredni-deska/"
+  - slug: praha-benice
+    nazev: "Praha-Benice"
+    webMC: "https://www.praha-benice.cz/"
+    urlDesky: "https://www.praha-benice.cz/urad-mc/uredni-deska/"
+  - slug: praha-brezineves
+    nazev: "Praha-Březiněves"
+    webMC: "https://www.brezineves.cz/"
+    urlDesky: "https://brezineves.cz/uredni_deska"
+  - slug: praha-cakovice
+    nazev: "Praha-Čakovice"
+    webMC: "https://www.cakovice.cz/"
+    urlDesky: "https://www.cakovice.cz/appo/urd/4"
+  - slug: praha-dablice
+    nazev: "Praha-Ďáblice"
+    webMC: "https://dablice.cz/"
+    urlDesky: "https://dablice.cz/uredni-deska"
+  - slug: praha-dolni-chabry
+    nazev: "Praha-Dolní Chabry"
+    webMC: "https://www.dchabry.cz/"
+    urlDesky: "https://www.dchabry.cz/uredni-deska"
+  - slug: praha-dolni-mecholupy
+    nazev: "Praha-Dolní Měcholupy"
+    webMC: "https://www.dolnimecholupy.cz/"
+    urlDesky: "https://www.dolnimecholupy.cz/urad-mestske-casti/uredni-deska-dokumenty/uredni-deska/"
+  - slug: praha-dolni-pocernice
+    nazev: "Praha-Dolní Počernice"
+    webMC: "https://praha-dolnipocernice.cz/"
+    urlDesky: "https://praha-dolnipocernice.cz/uredni-deska"
+  - slug: praha-dubec
+    nazev: "Praha-Dubeč"
+    webMC: "https://www.praha-dubec.cz/"
+    urlDesky: "https://www.praha-dubec.cz/uredni-deska/2"
+  - slug: praha-klanovice
+    nazev: "Praha-Klánovice"
+    webMC: "https://www.praha-klanovice.cz/"
+    urlDesky: "https://www.praha-klanovice.cz/urad-a-samosprava/uredni-deska/"
+  - slug: praha-kolodeje
+    nazev: "Praha-Koloděje"
+    webMC: "https://www.kolodeje.cz/"
+    urlDesky: "https://housing.espis.mepnet.cz/eDeskaKolodeje/"
+  - slug: praha-kolovraty
+    nazev: "Praha-Kolovraty"
+    webMC: "https://www.kolovraty.cz/"
+    urlDesky: "https://kolovraty.imunis.cz/edeska/"
+  - slug: praha-kralovice
+    nazev: "Praha-Královice"
+    webMC: "https://www.mckralovice.cz/"
+    urlDesky: "https://www.mckralovice.cz/uredni-deska/"
+  - slug: praha-kreslice
+    nazev: "Praha-Křeslice"
+    webMC: "https://www.kreslice.cz/"
+    urlDesky: "https://www.kreslice.cz/uredni-deska"
+  - slug: praha-kunratice
+    nazev: "Praha-Kunratice"
+    webMC: "https://www.praha-kunratice.cz/"
+    urlDesky: "https://www.praha-kunratice.cz/uredni-deska"
+  - slug: praha-libus
+    nazev: "Praha-Libuš"
+    webMC: "https://www.praha-libus.cz/"
+    urlDesky: "https://www.praha-libus.cz/urednideska"
+  - slug: praha-lipence
+    nazev: "Praha-Lipence"
+    webMC: "https://www.praha-lipence.cz/"
+    urlDesky: "https://www.praha-lipence.cz/urad-a-samosprava/uredni-deska/"
+  - slug: praha-lochkov
+    nazev: "Praha-Lochkov"
+    webMC: "https://www.praha-lochkov.cz/"
+    urlDesky: "https://www.praha-lochkov.cz/urad-a-samosprava/uredni-deska-1/"
+  - slug: praha-lysolaje
+    nazev: "Praha-Lysolaje"
+    webMC: "https://www.praha-lysolaje.cz/"
+    urlDesky: "https://www.praha-lysolaje.cz/uredni-deska"
+  - slug: praha-nebusice
+    nazev: "Praha-Nebušice"
+    webMC: "https://www.prahanebusice.cz/"
+    urlDesky: "https://www.prahanebusice.cz/urad-a-samosprava/uredni-deska-1/"
+  - slug: praha-nedvezi
+    nazev: "Praha-Nedvězí"
+    webMC: "https://www.mcnedvezi.cz/"
+    urlDesky: "https://www.mcnedvezi.cz/urad-2/uredni-deska/"
+  - slug: praha-petrovice
+    nazev: "Praha-Petrovice"
+    webMC: "https://www.prahapetrovice.cz/"
+    urlDesky: "https://www.prahapetrovice.cz/uredni-deska"
+  - slug: praha-predni-kopanina
+    nazev: "Praha-Přední Kopanina"
+    webMC: "https://prednikopanina.cz/"
+    urlDesky: "https://housing.espis.mepnet.cz/eDeskaPKopanina/"
+  - slug: praha-reporyje
+    nazev: "Praha-Řeporyje"
+    webMC: "https://www.prahareporyje.cz/"
+    urlDesky: "https://housing.espis.mepnet.cz/eDeskaReporyje/"
+  - slug: praha-satalice
+    nazev: "Praha-Satalice"
+    webMC: "https://www.satalice.cz/"
+    urlDesky: "https://satalice.imunis.cz/edeska"
+  - slug: praha-seberov
+    nazev: "Praha-Šeberov"
+    webMC: "https://www.seberov.cz/"
+    urlDesky: "https://www.seberov.cz/uredni-deska/"
+  - slug: praha-slivenec
+    nazev: "Praha-Slivenec"
+    webMC: "https://www.praha-slivenec.cz/"
+    urlDesky: "https://www.praha-slivenec.cz/uredni-deska/2"
+  - slug: praha-sterboholy
+    nazev: "Praha-Štěrboholy"
+    webMC: "https://www.sterboholy.cz/"
+    urlDesky: "https://www.sterboholy.cz/urad-mestske-casti/uredni-deska"
+    poznamka: "Adresu se nepodařilo načíst — ověřit ručně."
+  - slug: praha-suchdol
+    nazev: "Praha-Suchdol"
+    webMC: "https://praha-suchdol.cz/"
+    urlDesky: "https://praha-suchdol.cz/urad-a-samosprava/uredni-deska/"
+  - slug: praha-troja
+    nazev: "Praha-Troja"
+    webMC: "https://www.mctroja.cz/"
+    urlDesky: "https://www.mctroja.cz/uredni-deska.php"
+  - slug: praha-ujezd
+    nazev: "Praha-Újezd"
+    webMC: "https://praha-ujezd.cz/"
+    urlDesky: "https://praha-ujezd.cz/uredni-deska/"
+  - slug: praha-velka-chuchle
+    nazev: "Praha-Velká Chuchle"
+    webMC: "https://www.chuchle.cz/"
+    urlDesky: "https://housing.espis.mepnet.cz/eDeskaChuchle/"
+    urlOtevrenaData: "https://housing.espis.mepnet.cz/eDeskaChuchle/opendata"
+  - slug: praha-vinor
+    nazev: "Praha-Vinoř"
+    webMC: "https://www.praha-vinor.cz/"
+    urlDesky: "https://www.praha-vinor.cz/urad-mc/uredni-deska/"
+  - slug: praha-zbraslav
+    nazev: "Praha-Zbraslav"
+    webMC: "https://www.mc-zbraslav.cz/"
+    urlDesky: "https://www.mc-zbraslav.cz/uredni-deska/2"
+  - slug: praha-zlicin
+    nazev: "Praha-Zličín"
+    webMC: "https://www.mczlicin.cz/"
+    urlDesky: "https://mczlicin.galileo-smartcity.cz/"

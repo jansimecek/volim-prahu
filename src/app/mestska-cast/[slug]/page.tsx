@@ -5,6 +5,7 @@ import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI, SADA_CISELNIKU, cislo, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
+import { stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -30,6 +31,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   if (!mc || !zastupitelstvo) notFound()
 
   const senat = senatniStavMestskeCasti(slug)
+  const deska = stavMestskeCasti(slug)
   const listina = kandidatka(slug)
   const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
 
@@ -85,6 +87,44 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
           </p>
         )}
       </section>
+
+      {/* Kde přesně se v téhle části volí — závazné je oznámení na úřední desce. */}
+      {deska && (
+        <section className="max-w-prose border-l-2 border-praha pl-5">
+          <h2 className="popisek-uredni">Kde se tady volí</h2>
+          {deska.oznameni ? (
+            <p className="mt-1">
+              Oznámení o době a místě konání voleb je vyvěšené:{' '}
+              <a href={deska.oznameni.url} className="odkaz-akcent" rel="noopener">
+                {deska.oznameni.nazev}
+              </a>
+              {deska.oznameni.vyveseno && ` (vyvěšeno ${deska.oznameni.vyveseno})`}. Najdete
+              v něm adresu vaší volební místnosti.
+            </p>
+          ) : (
+            <p className="mt-1">
+              Oznámení o době a místě konání voleb tahle část zatím nevyvěsila. Vyvěsit ho
+              musí nejpozději 24. září 2026.{' '}
+              {deska.urlDesky ? (
+                <>
+                  Sledovat můžete{' '}
+                  <a href={deska.urlDesky} className="odkaz-akcent" rel="noopener">
+                    její úřední desku
+                  </a>
+                  .
+                </>
+              ) : (
+                'Adresu její úřední desky zatím nemáme.'
+              )}
+            </p>
+          )}
+          <p className="mt-2 text-sm">
+            <Link href="/kde-volim" className="odkaz-akcent">
+              Přehled za všech 57 městských částí
+            </Link>
+          </p>
+        </section>
+      )}
 
       <div className="proza max-w-prose">
         <MDXContent code={mc.content} />

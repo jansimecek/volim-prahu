@@ -1,0 +1,765 @@
+{
+  "zkontrolovano": "2026-08-27",
+  "stavy": [
+    {
+      "slug": "praha-1",
+      "nazev": "Praha 1",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha1.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-11",
+      "nazev": "Praha 11",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha11.cz/urad-mc/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Informace o počtu a sídle volebních okrsků",
+          "url": "https://www.praha11.cz/cs/uredni-deska.html-as4udetail-27696",
+          "vyveseno": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "slug": "praha-12",
+      "nazev": "Praha 12",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha12.cz/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Oznámení o svolání prvního zasedání  okrskových volebních  komisí",
+          "url": "https://www.praha12.cz/oznameni-o-svolani-prvniho-zasedani-okrskovych-volebnich-komisi/d-120432",
+          "vyveseno": "2026-08-27"
+        },
+        {
+          "nazev": "Oznámení o termínu losování pořadí zaregistrovaných volebních stran - MČ Praha 12, MČ Praha-Libuš",
+          "url": "https://www.praha12.cz/oznameni-o-terminu-losovani-poradi-zaregistrovanych-volebnich-stran-mc-praha-12-mc-praha-libus/d-120430",
+          "vyveseno": "2026-08-27"
+        },
+        {
+          "nazev": "Jmenování zapisovatelů okrskových volebních komisí",
+          "url": "https://www.praha12.cz/jmenovani-zapisovatelu-okrskovych-volebnich-komisi/d-120390",
+          "vyveseno": "2026-08-25"
+        },
+        {
+          "nazev": "Oznámení o počtu a sídlech volebních okrsků",
+          "url": "https://www.praha12.cz/oznameni-o-poctu-a-sidlech-volebnich-okrsku/d-120370",
+          "vyveseno": "2026-08-24"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany ODS",
+          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-ods/d-120335",
+          "vyveseno": "2026-08-21"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem Sdružení nezávislých kandidátů - Radnice pro lidi",
+          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-sdruzeni-nezavislych-kandidatu-radnice-pro-lidi/d-120365",
+          "vyveseno": "2026-08-21"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem  SOUSEDÉ LIBUŠE A PÍSNICE - STAN, TOP 09 A NEZÁVISLÍ",
+          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-sousede-libuse-a-pisnice-stan-top-09-a-nezavisli/d-120363",
+          "vyveseno": "2026-08-21"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem SPOLEČNĚ PRO LIBUŠ A PÍSNICI",
+          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-spolecne-pro-libus-a-pisnici/d-120361",
+          "vyveseno": "2026-08-21"
+        }
+      ]
+    },
+    {
+      "slug": "praha-13",
+      "nazev": "Praha 13",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha13.cz/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "oznámení o počtu a sídle volebních okrsků",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106257122",
+          "vyveseno": "2026-08-26"
+        },
+        {
+          "nazev": "oznámení o nevyhrazení plochy pro vylepení volebních plakátů",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106258213",
+          "vyveseno": "2026-08-26"
+        },
+        {
+          "nazev": "rozhodnutí o registraci volební strany Občanská demokratická strana",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106051265",
+          "vyveseno": "2026-08-19"
+        },
+        {
+          "nazev": "rozhodnutí o registraci volební strany TOP 09",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106050976",
+          "vyveseno": "2026-08-19"
+        },
+        {
+          "nazev": "rozhodnutí o registraci volební strany ANO 2011",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106050258",
+          "vyveseno": "2026-08-19"
+        },
+        {
+          "nazev": "rozhodnutí o registraci volební strany PŘÍVĚTIVÉ ŘEPORYJE",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106049528",
+          "vyveseno": "2026-08-19"
+        },
+        {
+          "nazev": "oznámení registračního úřadu ke komunálním volbám",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/105006818",
+          "vyveseno": "2026-07-09"
+        },
+        {
+          "nazev": "oznámení starosty - volební obvod, počet členů zastupitelstva, počet podpisů na peticích",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/105003395",
+          "vyveseno": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "slug": "praha-15",
+      "nazev": "Praha 15",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha15.cz/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Volby 2026 - informace o počtu a sídlech volebních okrsků",
+          "url": "https://www.praha15.cz/volby-2026-informace-o-poctu-a-sidlech-volebnich-okrsku/d-29462",
+          "vyveseno": "2026-08-24"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha-Štěrboholy - ODS",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-sterboholy-ods/d-29436",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - SPD, PRO a NK pro Prahu 15",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-spd-pro-a-nk-pro-prahu-15/d-29434",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - Piráti a Praha 15 sobě",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-pirati-a-praha-15-sobe/d-29432",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - Společně pro Prahu 15",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-spolecne-pro-prahu-15/d-29430",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - STAROSTOVÉ A NEZÁVISLÍ",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-starostove-a-nezavisli/d-29428",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - NEZÁVISLÍ",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-nezavisli/d-29426",
+          "vyveseno": "2026-08-18"
+        },
+        {
+          "nazev": "Rozhodnutí o registraci KL pro volby do Zastupitelstva MČ Praha 15 - KSČM",
+          "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-kscm/d-29424",
+          "vyveseno": "2026-08-18"
+        }
+      ]
+    },
+    {
+      "slug": "praha-16",
+      "nazev": "Praha 16",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha16.eu/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Vyhrazení ploch pro vylepení volebních plakátů",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/vyhrazeni-ploch-pro-vylepeni-volebnich-plakatu-3916.html",
+          "vyveseno": "2026-08-21"
+        },
+        {
+          "nazev": "Informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva hlavního města Prahy a do Zastupitelstva MČ Praha 16 (Radotín) v roce 2026",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/informace-o-poctu-a-sidle-volebnich-okrsku-pro-volby-do-zastupitelstva-hlavniho-mesta-prahy-a-do-zastupitelstva-mc-praha-16-radotin-v-roce-2026-3915.html",
+          "vyveseno": "2026-08-21"
+        },
+        {
+          "nazev": "VOLBY 2026 - informace o počtu volebních obvodů, počet členů zastupitelstva obce a potřebný počet podpisů na peticích pro volby do zastupitelstev obcí",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/volby-2026-informace-o-poctu-volebnich-obvodu-pocet-clenu-zastupitelstva-obce-a-potrebny-pocet-podpisu-na-peticich-pro-volby-do-zastupitelstev-obci-3870.html",
+          "vyveseno": "2026-07-14"
+        },
+        {
+          "nazev": "Volby 2026 - potřebný počet podpisů na peticích",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/volby-2026-potrebny-pocet-podpisu-na-peticich-3861.html",
+          "vyveseno": "2026-07-08"
+        },
+        {
+          "nazev": "Volby 2026 - registrační úřad - sdělení",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/volby-2026-registracni-urad-sdeleni-3860.html",
+          "vyveseno": "2026-07-08"
+        },
+        {
+          "nazev": "Zápis o výsledku voleb do zastupitelstva obce",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/zapis-o-vysledku-voleb-do-zastupitelstva-obce-3369.html",
+          "vyveseno": "2022-10-24"
+        },
+        {
+          "nazev": "Zápis o výsledku voleb do zastupitelstva obce",
+          "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/zapis-o-vysledku-voleb-do-zastupitelstva-obce-3368.html",
+          "vyveseno": "2018-10-07"
+        }
+      ]
+    },
+    {
+      "slug": "praha-17",
+      "nazev": "Praha 17",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://edeska.repy.cz/",
+      "dalsiVolebni": [
+        {
+          "nazev": "OZNÁMENÍ O SVOLÁNÍ PRVNÍHO ZASEDÁNÍ OKRSKOVÝCH VOLEBNÍCH KOMISÍ",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48676",
+          "vyveseno": "2026-08-19"
+        },
+        {
+          "nazev": "Informace o nevyhrazení plochy pro vylepení volebních plakátů",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48441",
+          "vyveseno": "2026-08-04"
+        },
+        {
+          "nazev": "Informace o určení počtu zvláštních prostor /zástěn/ ve volební místnosti",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48444",
+          "vyveseno": "2026-08-04"
+        },
+        {
+          "nazev": "Informace o počtu a sídlech volebních okrsků",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48447",
+          "vyveseno": "2026-08-04"
+        },
+        {
+          "nazev": "Informace o stanovení počtu členů okrskových volebních komisí",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48432",
+          "vyveseno": "2026-08-03"
+        },
+        {
+          "nazev": "Oznámení o určení registračního úřadu a počet volebních obvodů",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48125",
+          "vyveseno": "2026-07-13"
+        },
+        {
+          "nazev": "Oznámení o vytvoření volebního obvodu a o potřebném počtu podpisů na petici",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48137",
+          "vyveseno": "2026-07-13"
+        },
+        {
+          "nazev": "Oznámení o počtu členů Zastupitelstva městské části Praha 17 pro volební období 2026-2030",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=47341",
+          "vyveseno": "2026-05-15"
+        }
+      ]
+    },
+    {
+      "slug": "praha-18",
+      "nazev": "Praha 18",
+      "zdroj": "otevrena-data",
+      "stav": "zdroj-nedostupny",
+      "urlDesky": "https://www.letnany.cz/uredni-deska/",
+      "dalsiVolebni": [],
+      "poznamka": "HTTP 404"
+    },
+    {
+      "slug": "praha-19",
+      "nazev": "Praha 19",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://kbely.imunis.cz/edeska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Jmenování zapisovatele okrskových volebních komisí",
+          "url": "https://kbely.imunis.cz/edeska/detail?id=7456",
+          "vyveseno": ""
+        }
+      ]
+    },
+    {
+      "slug": "praha-2",
+      "nazev": "Praha 2",
+      "zdroj": "otevrena-data",
+      "stav": "zdroj-nedostupny",
+      "urlDesky": "https://edeska.praha2.cz/eDeska/eDeskaAktualni.jsp",
+      "dalsiVolebni": [],
+      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. Vada na straně úřadu."
+    },
+    {
+      "slug": "praha-20",
+      "nazev": "Praha 20",
+      "zdroj": "otevrena-data",
+      "stav": "oznameni-nalezeno",
+      "urlDesky": "https://www.pocernice.cz/uredni-deska/",
+      "dalsiVolebni": [
+        {
+          "nazev": "Volby do ZMČ Praha 20 - 2026 - počet zastupitelů",
+          "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225064",
+          "vyveseno": "2026-07-16"
+        },
+        {
+          "nazev": "Volby do ZMČ Praha 20 - 2026",
+          "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225065",
+          "vyveseno": "2026-07-16"
+        }
+      ],
+      "oznameni": {
+        "nazev": "Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do ZMČ",
+        "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225116",
+        "vyveseno": "2026-08-25"
+      }
+    },
+    {
+      "slug": "praha-3",
+      "nazev": "Praha 3",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha3.cz/eDeska/eDeskaAktualni.jsp",
+      "dalsiVolebni": [
+        {
+          "nazev": "Losování volebních čísel",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99196",
+          "vyveseno": "2026-08-27"
+        },
+        {
+          "nazev": "Volby 2026 - oznámení o volebních obvodech, počtu členů zastupitelstva a počtu podpisů na petici",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=98949",
+          "vyveseno": "2026-07-01"
+        },
+        {
+          "nazev": "Volby 2026 - stanovení minimálního počtu členů okrskové volební komise",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=98945",
+          "vyveseno": "2026-06-30"
+        },
+        {
+          "nazev": "Volby 2026 - oznámení o potřebném počtu podpisů na peticích",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=98946",
+          "vyveseno": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "slug": "praha-4",
+      "nazev": "Praha 4",
+      "zdroj": "otevrena-data",
+      "stav": "zdroj-nedostupny",
+      "urlDesky": "https://cztedeskaext.praha4.cz/eDeska/eDeskaAktualni.jsp",
+      "dalsiVolebni": [],
+      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. Vada na straně úřadu."
+    },
+    {
+      "slug": "praha-9",
+      "nazev": "Praha 9",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://www.praha9.cz/urad-a-samosprava/uredni-deska",
+      "dalsiVolebni": [
+        {
+          "nazev": "Volby 2026 - Jmenování zapisovatelů okrskových volebních komisí",
+          "url": "https://www.praha9.cz/volby-2026-jmenovani-zapisovatelu-okrskovych-volebnich-komisi-0",
+          "vyveseno": "2026-08-27"
+        },
+        {
+          "nazev": "Volby 2026 - Počet a sídla volebních okrsků",
+          "url": "https://www.praha9.cz/volby-2026-pocet-a-sidla-volebnich-okrsku",
+          "vyveseno": "2026-08-24"
+        },
+        {
+          "nazev": "VOLBY 2026 - stanovení minimálního počtu členů okrskových volebních komisí",
+          "url": "https://www.praha9.cz/volby-2026-stanoveni-minimalniho-poctu-clenu-okrskovych-volebnich-komisi",
+          "vyveseno": "2026-08-05"
+        },
+        {
+          "nazev": "VOLBY 2026 - Oznámení o zřízení zvláštního účtu - volby senát VO 24",
+          "url": "https://www.praha9.cz/volby-2026-oznameni-o-zrizeni-zvlastniho-uctu-volby-senat-vo-24",
+          "vyveseno": "2026-07-24"
+        },
+        {
+          "nazev": "VOLBY 2026 - oznámení, zveřejnění informací o podání kandidátních listin",
+          "url": "https://www.praha9.cz/volby-2026-oznameni-zverejneni-informaci-o-podani-kandidatnich-listin",
+          "vyveseno": "2026-06-19"
+        },
+        {
+          "nazev": "Volby 2026 - počty podpisů na peticích",
+          "url": "https://www.praha9.cz/volby-2026-pocty-podpisu-na-peticich",
+          "vyveseno": "2026-06-19"
+        },
+        {
+          "nazev": "VOLBY 2026 - stanovení počtu členů Zastupitelstva MČ Praha 9 pro volební období 2026-2030",
+          "url": "https://www.praha9.cz/volby-2026-stanoveni-poctu-clenu-zastupitelstva-mc-praha-9-pro-volebni-obdobi-2026-2030-0",
+          "vyveseno": "2026-06-15"
+        }
+      ]
+    },
+    {
+      "slug": "praha-10",
+      "nazev": "Praha 10",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://edeska.praha10.cz/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-14",
+      "nazev": "Praha 14",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://edeska.praha14.cz/eDeska/eDeskaAktualni.jsp",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-21",
+      "nazev": "Praha 21",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha21.cz/informace/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-22",
+      "nazev": "Praha 22",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://udeska.praha22.cz/praha22.cz/www/udeska/index.php",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-5",
+      "nazev": "Praha 5",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha5.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-6",
+      "nazev": "Praha 6",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha6.cz/uredni-deska/uredni-deska-rozcestnik.html",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-7",
+      "nazev": "Praha 7",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha7.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-8",
+      "nazev": "Praha 8",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha8.cz/deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-bechovice",
+      "nazev": "Praha-Běchovice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-bechovice.cz/urad/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-benice",
+      "nazev": "Praha-Benice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-benice.cz/urad-mc/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-brezineves",
+      "nazev": "Praha-Březiněves",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://brezineves.cz/uredni_deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-cakovice",
+      "nazev": "Praha-Čakovice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.cakovice.cz/appo/urd/4",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-dablice",
+      "nazev": "Praha-Ďáblice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://dablice.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-dolni-chabry",
+      "nazev": "Praha-Dolní Chabry",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.dchabry.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-dolni-mecholupy",
+      "nazev": "Praha-Dolní Měcholupy",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.dolnimecholupy.cz/urad-mestske-casti/uredni-deska-dokumenty/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-dolni-pocernice",
+      "nazev": "Praha-Dolní Počernice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://praha-dolnipocernice.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-dubec",
+      "nazev": "Praha-Dubeč",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-dubec.cz/uredni-deska/2",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-klanovice",
+      "nazev": "Praha-Klánovice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-klanovice.cz/urad-a-samosprava/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-kolodeje",
+      "nazev": "Praha-Koloděje",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://housing.espis.mepnet.cz/eDeskaKolodeje/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-kolovraty",
+      "nazev": "Praha-Kolovraty",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://kolovraty.imunis.cz/edeska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-kralovice",
+      "nazev": "Praha-Královice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.mckralovice.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-kreslice",
+      "nazev": "Praha-Křeslice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.kreslice.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-kunratice",
+      "nazev": "Praha-Kunratice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-kunratice.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-libus",
+      "nazev": "Praha-Libuš",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-libus.cz/urednideska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-lipence",
+      "nazev": "Praha-Lipence",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-lipence.cz/urad-a-samosprava/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-lochkov",
+      "nazev": "Praha-Lochkov",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-lochkov.cz/urad-a-samosprava/uredni-deska-1/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-lysolaje",
+      "nazev": "Praha-Lysolaje",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-lysolaje.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-nebusice",
+      "nazev": "Praha-Nebušice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.prahanebusice.cz/urad-a-samosprava/uredni-deska-1/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-nedvezi",
+      "nazev": "Praha-Nedvězí",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.mcnedvezi.cz/urad-2/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-petrovice",
+      "nazev": "Praha-Petrovice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.prahapetrovice.cz/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-predni-kopanina",
+      "nazev": "Praha-Přední Kopanina",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://housing.espis.mepnet.cz/eDeskaPKopanina/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-reporyje",
+      "nazev": "Praha-Řeporyje",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://housing.espis.mepnet.cz/eDeskaReporyje/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-satalice",
+      "nazev": "Praha-Satalice",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://satalice.imunis.cz/edeska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-seberov",
+      "nazev": "Praha-Šeberov",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.seberov.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-slivenec",
+      "nazev": "Praha-Slivenec",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-slivenec.cz/uredni-deska/2",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-sterboholy",
+      "nazev": "Praha-Štěrboholy",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.sterboholy.cz/urad-mestske-casti/uredni-deska",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-suchdol",
+      "nazev": "Praha-Suchdol",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://praha-suchdol.cz/urad-a-samosprava/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-troja",
+      "nazev": "Praha-Troja",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.mctroja.cz/uredni-deska.php",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-ujezd",
+      "nazev": "Praha-Újezd",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://praha-ujezd.cz/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-velka-chuchle",
+      "nazev": "Praha-Velká Chuchle",
+      "zdroj": "otevrena-data",
+      "stav": "ceka-se",
+      "urlDesky": "https://housing.espis.mepnet.cz/eDeskaChuchle/",
+      "dalsiVolebni": [
+        {
+          "nazev": "VOLBY DO ZASTUPITELSTEV OBCÍ",
+          "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33413",
+          "vyveseno": "2026-08-20"
+        },
+        {
+          "nazev": "Stanovení minimálního počtu členů okrskové volební komise",
+          "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33357",
+          "vyveseno": "2026-08-03"
+        },
+        {
+          "nazev": "Zveřejnění volebního obvodu a počtu členů zastupitelstva pro volby do ZMČ 2026-2030",
+          "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33313",
+          "vyveseno": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "slug": "praha-vinor",
+      "nazev": "Praha-Vinoř",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.praha-vinor.cz/urad-mc/uredni-deska/",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-zbraslav",
+      "nazev": "Praha-Zbraslav",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://www.mc-zbraslav.cz/uredni-deska/2",
+      "dalsiVolebni": []
+    },
+    {
+      "slug": "praha-zlicin",
+      "nazev": "Praha-Zličín",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
+      "urlDesky": "https://mczlicin.galileo-smartcity.cz/",
+      "dalsiVolebni": []
+    }
+  ]
+}

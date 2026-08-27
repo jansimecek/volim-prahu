@@ -22,7 +22,8 @@
     "build:search": "tsx scripts/build-search-index.ts",
     "validate": "tsx scripts/validate-content.ts",
     "content": "velite --strict",
-    "gen:strany": "tsx scripts/generate-strany.ts"
+    "gen:strany": "tsx scripts/generate-strany.ts",
+    "import:desky": "tsx scripts/import-uredni-desky.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.0",
