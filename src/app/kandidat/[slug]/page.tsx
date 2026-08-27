@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { VyrokyOsoby } from '@/components/VyrokyOsoby'
 import { celeJmeno, kandidaturyOsoby } from '@/lib/kandidatky'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -68,13 +69,15 @@ export default async function StrankaKandidata({ params }: Parametry) {
                 {strana.nazev} — {kandidat.poradi}. místo na kandidátce
               </p>
               <p className="popisek-uredni mt-1">
-                navrhující strana {kandidat.navrhujiciStrana || '—'} · příslušnost{' '}
-                {kandidat.politickaPrislusnost || 'BEZPP'}
+                navrhující strana {kandidat.navrhujiciStrana || 'neuvedeno'} · politická
+                příslušnost {kandidat.politickaPrislusnost || 'neuvedeno'}
               </p>
             </li>
           ))}
         </ul>
       </section>
+
+      <VyrokyOsoby osobaSlug={slug} />
 
       {/*
         Automatické párování podle jména se nikdy nezobrazuje jako fakt. Bez ručně

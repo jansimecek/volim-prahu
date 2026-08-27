@@ -30,7 +30,7 @@ export function SeznamKandidatu({ strana }: { strana: StranaNaKandidatce }) {
               <td className="py-2 pr-3 text-right font-mono">{k.vek}</td>
               <td className="py-2 pr-3">{k.povolani || '—'}</td>
               <td className="py-2 font-mono text-drobne">
-                {k.politickaPrislusnost || 'BEZPP'}
+                {k.politickaPrislusnost || 'neuvedeno'}
               </td>
             </tr>
           ))}

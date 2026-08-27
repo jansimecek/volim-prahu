@@ -149,6 +149,7 @@ function sestavKandidatky(
   zastupitelstva: Zastupitelstvo[],
   kandidati: Record<string, string>[],
   strany: Record<string, string>[],
+  politickeStrany: Map<string, string>,
 ) {
   const podleKodu = new Map(zastupitelstva.map((z) => [z.kod, z]))
   const stranaPodleKlice = new Map(
@@ -237,8 +238,10 @@ function sestavKandidatky(
       povolani: radek.POVOLANI ?? '',
       // Publikuje se jen v rozsahu, v jakém bydliště zveřejňuje ČSÚ (obec/MČ).
       bydliste: radek.BYDLISTEN ?? '',
-      navrhujiciStrana: radek.NSTRANA ?? '',
-      politickaPrislusnost: radek.PSTRANA ?? '',
+      // ČSÚ uvádí kódy politických stran; bez převodu by na profilu stálo
+      // „příslušnost 720“, což čtenáři nic neříká. Kód 999 = bez příslušnosti.
+      navrhujiciStrana: nazevPolitickeStrany(radek.NSTRANA, politickeStrany),
+      politickaPrislusnost: nazevPolitickeStrany(radek.PSTRANA, politickeStrany),
       poradi,
       zastupitelstvo: podleKodu.get(kodZastup)!.slug,
     }
@@ -251,6 +254,18 @@ function sestavKandidatky(
     for (const s of kandidatka.strany) s.kandidati.sort((a, b) => a.poradi - b.poradi)
   }
   return vystup
+}
+
+/**
+ * Číselník `cns` mapuje kód politické strany na její zkratku. Obsahuje ale jen
+ * strany, které navrhly kandidáty — kód politické příslušnosti v něm být nemusí.
+ * Nerozluštěný kód proto zahazujeme a stránka napíše „neuvedeno“: vymyslet si,
+ * že kód 99 znamená bez příslušnosti, by bylo tvrzení o politické příslušnosti
+ * tisíců lidí, které nemáme čím doložit.
+ */
+function nazevPolitickeStrany(kod: string | undefined, ciselnik: Map<string, string>): string {
+  if (!kod) return ''
+  return ciselnik.get(kod) ?? ''
 }
 
 function prazdnaKandidatka(z: Zastupitelstvo) {
@@ -323,10 +338,18 @@ async function main() {
 
   if (jenCiselnik) return
 
+  const politickeStrany = new Map(
+    csvZeZipu(zipCiselniky, 'cns.csv').map((r) => [
+      r.NSTRANA ?? '',
+      r.ZKRATKAN8 || r.ZKRATKAN30 || r.NAZEV_STRN || (r.NSTRANA ?? ''),
+    ]),
+  )
+
   const kandidatky = sestavKandidatky(
     zastupitelstva,
     csvZeZipu(zip, 'kvrk.csv'),
     csvZeZipu(zip, 'kvros.csv'),
+    politickeStrany,
   )
 
   let zmeneno = 0

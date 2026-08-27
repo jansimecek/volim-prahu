@@ -50,7 +50,13 @@ export default async function StrankaSubjektu({ params }: Parametry) {
       </header>
 
       <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka sm:grid-cols-3">
-        {jednicka && <Udaj popisek="Lídr kandidátky" hodnota={celeJmeno(jednicka)} />}
+        {jednicka && (
+          <Udaj
+            popisek="Lídr kandidátky"
+            hodnota={celeJmeno(jednicka)}
+            odkaz={`/kandidat/${jednicka.slug}`}
+          />
+        )}
         <Udaj
           popisek="Kandidátů"
           hodnota={naKandidatce ? String(naKandidatce.kandidati.length) : '—'}

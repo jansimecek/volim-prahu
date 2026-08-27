@@ -30,8 +30,8 @@
           "vek": 66,
           "povolani": "ekonomka",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 1,
           "zastupitelstvo": "praha-benice"
         },
@@ -45,8 +45,8 @@
           "vek": 56,
           "povolani": "manažer",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 2,
           "zastupitelstvo": "praha-benice"
         },
@@ -60,8 +60,8 @@
           "vek": 59,
           "povolani": "ekonomka",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 3,
           "zastupitelstvo": "praha-benice"
         },
@@ -75,8 +75,8 @@
           "vek": 55,
           "povolani": "technický pracovník",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 4,
           "zastupitelstvo": "praha-benice"
         },
@@ -90,8 +90,8 @@
           "vek": 39,
           "povolani": "manažer marketingu",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 5,
           "zastupitelstvo": "praha-benice"
         },
@@ -105,8 +105,8 @@
           "vek": 55,
           "povolani": "realitní makléř",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 6,
           "zastupitelstvo": "praha-benice"
         },
@@ -120,8 +120,8 @@
           "vek": 37,
           "povolani": "oční technik",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 7,
           "zastupitelstvo": "praha-benice"
         },
@@ -135,8 +135,8 @@
           "vek": 70,
           "povolani": "lékařka",
           "bydliste": "Praha-Benice",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 8,
           "zastupitelstvo": "praha-benice"
         }

@@ -1,0 +1,347 @@
+# Doložené veřejné výroky lídrů magistrátních kandidátek.
+#
+# Zásada: publikujeme jen to, co člověk prokazatelně řekl, a odkud to je.
+# Žádné charakteristiky vlastními slovy, nic ze soukromí, nic z celostátní
+# politiky bez vazby na Prahu. Každý výrok prošel nezávislým ověřením proti
+# zdroji; parafráze a výroky jen z titulků jsme vyřadili.
+
+overeno: 2026-08-27
+
+zdroje:
+  - id: echo-mhd
+    medium: "Echo24"
+    nazev: "Anketa Echa: zdraží po volbách MHD?"
+    datum: 2026-08-12
+    typ: redakcni
+    url: "https://www.echo24.cz/a/Hnw5f/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-zdrazi-po-volbach-mhd"
+  - id: echo-metro
+    medium: "Echo24 (EchoPrime)"
+    nazev: "Metro D má vozit cestující za šest let, opozice volá po auditu"
+    datum: 2026-08-26
+    typ: redakcni
+    url: "https://www.echoprime.cz/a/HMSTF/metro-d-ma-vozit-cestujici-za-sest-let-opozice-vola-po-auditu-a-vetsi-kontrole"
+  - id: e15-plan
+    medium: "e15"
+    nazev: "Pirátská kandidátka na primátorku ukázala plán pro Prahu"
+    datum: 2026-08-27
+    typ: redakcni
+    url: "https://www.e15.cz/domaci/politika/druhe-auto-za-trojnasobek-maximalni-dan-na-prazdne-domy-piratska-kandidatka-na-primatorku-ukazala-plan-pro-prahu-1435235"
+  - id: radio-praha
+    medium: "Český rozhlas – Rádio Praha"
+    nazev: "Byty mají být priorita, uvádí Nislerová"
+    datum: 2026-05-15
+    typ: redakcni
+    url: "https://praha.rozhlas.cz/chtela-bych-prijit-s-trochu-obmenenym-tymem-byty-maji-byt-priorita-uvadi-9616563"
+  - id: ctk-kose
+    medium: "České noviny (ČTK)"
+    nazev: "Analýza: lidé na Václavském náměstí vyhodí do košů asi tunu odpadků denně"
+    datum: 2026-08-14
+    typ: redakcni
+    url: "https://www.ceskenoviny.cz/zpravy/analyza-lide-na-vaclavskem-namesti-v-praze-vyhodi-do-kosu-asi-tunu-odpadku-denne/2862047"
+  - id: info-motor
+    medium: "INFO.CZ"
+    nazev: "Motoristé představili pražskou lídryni Kláru Sovovou"
+    datum: 2026-06-12
+    typ: redakcni
+    url: "https://www.info.cz/zpravodajstvi-a-komentare/motoriste-klara-sovova-praha-cyklopruhy-komunalni-volby"
+  - id: cnn-airbnb
+    medium: "CNN Prima NEWS"
+    nazev: "Anketa kandidátů na primátora o krátkodobých pronájmech"
+    datum: 2026-08-23
+    typ: redakcni
+    url: "https://cnn.iprima.cz/praha-vs-airbnb-nici-nam-centrum-shoduji-se-kandidati-na-primatora-ano-hovori-i-o-limitu-dnu-519615"
+  - id: pl-laska
+    medium: "ParlamentníListy.cz"
+    nazev: "Láska (SEN): Městské firmy musí znovu sloužit Pražanům"
+    datum: 2026-07-18
+    typ: tiskova-zprava
+    url: "https://www.parlamentnilisty.cz/politika/politici-volicum/Laska-SEN-Mestske-firmy-musi-znovu-slouzit-Prazanum-794256"
+  - id: ip-urban
+    medium: "iportaL24.cz"
+    nazev: "Rozhovor s Milanem Urbanem (SPD)"
+    datum: 2026-08-26
+    typ: redakcni
+    url: "https://iportal24.cz/rozhovory/milan-urban-spd-masinerie-v-praze-nehleda-reseni-ale-raduje-se-z-kazdeho-problemu-vsichni/"
+  - id: protext
+    medium: "Protext / ČTK"
+    nazev: "Představení koalice Spojená levice pro Prahu"
+    datum: 2026-08-20
+    typ: tiskova-zprava
+    url: "https://www.protext.cz/zpravy/show/58822"
+  - id: ip-levice
+    medium: "iportaL24.cz"
+    nazev: "Spojená levice pro Prahu cílí na 15 procent hlasů"
+    datum: 2026-08-20
+    typ: redakcni
+    url: "https://iportal24.cz/domaci/spojena-levice-pro-prahu-cili-na-15-procent-hlasu/"
+  - id: pp-spolu
+    medium: "Pražský patriot"
+    nazev: "ODS a TOP 09 zahájily v Praze předvolební kampaň"
+    datum: 2026-05-02
+    typ: redakcni
+    url: "https://www.prazskypatriot.cz/ods-a-top-09-zahajily-v-praze-predvolebni-kampan-pred-komunalnimi-volbami-co-vzkazali-starostove-kandidatovi-na-primatora/"
+  - id: ods-forum
+    medium: "FORUM 24, přetisk na ods.cz"
+    nazev: "Chci Prahu, která bude stavět a růst"
+    datum: 2026-08-18
+    typ: stranicky-web
+    url: "https://www.ods.cz/clanek/28703-kandidat-na-primatora-tomas-portlik-chci-prahu-ktera-bude-stavet-a-rust"
+  - id: rz-hlavacek
+    medium: "Radiožurnál (Český rozhlas)"
+    nazev: "Přesvědčujeme Pražany, aby se nebáli výstavby"
+    datum: 2026-02-17
+    typ: redakcni
+    url: "https://radiozurnal.rozhlas.cz/presvedcujeme-prazany-aby-se-nebali-vystavby-rika-namestek-hlavacek-k-9596551"
+
+osoby:
+  - osobaSlug: husbauer-jan
+    jmeno: "Jan Hušbauer"
+    subjekt: ano-2011
+    vyroky:
+      - tema: "Doprava a MHD"
+        citace: "Roční kupon pro Pražany zdražovat nebudeme."
+        kontext: "Odpověď v anketě mezi kandidáty na primátora na otázku, jestli po volbách zdraží městská hromadná doprava."
+        zdroj: echo-mhd
+      - tema: "Městské firmy"
+        citace: "Praha má na účtech přes 180 miliard a problém dopravního podniku není málo peněz od cestujících, ale hospodaření — nejdřív vnitřní úspory a kontrola zakázek, pak se teprve můžeme bavit o cenách jízdenek pro návštěvníky."
+        kontext: "V téže anketě vysvětluje, proč podle něj nemá být zdražení jízdného prvním krokem k řešení financí Dopravního podniku."
+        zdroj: echo-mhd
+      - tema: "Doprava a MHD"
+        citace: "Zvýhodněné jízdné seniorů a osob v nepříznivé sociální situaci jsou pro nás nedotknutelné."
+        kontext: "V téže anketě vymezuje, které slevy na jízdném by jeho hnutí neměnilo."
+        zdroj: echo-mhd
+      - tema: "Rozpočet a investice"
+        citace: "Co udělám: do sta dnů necháme udělat tvrdý audit harmonogramu a financování"
+        pokracovani: " s Dopravním podnikem, zveřejníme závazný investiční plán…"
+        kontext: "Reakce na aktuální termín zprovoznění metra D — popisuje, co by jako primátor udělal s řízením téhle investice."
+        zdroj: echo-metro
+      - tema: "Doprava a MHD"
+        citace: "Nebudu vám tady od stolu házet datum — přesně to dělali politici před námi"
+        pokracovani: " a výsledkem je, že termíny metra D nikdo nebere vážně."
+        kontext: "Odmítá slíbit konkrétní datum dokončení metra D."
+        zdroj: echo-metro
+  - osobaSlug: nislerova-tereza
+    jmeno: "Tereza Nislerová"
+    subjekt: ceska-piratska-strana
+    vyroky:
+      - tema: "Bydlení"
+        citace: "Chceme uvalit maximální pětinásobný koeficient daně z nemovitosti na celé prázdné nemovitosti."
+        kontext: "Při představení programu pro Prahu popisuje nástroj, kterým chce motivovat majitele prázdných domů k pronájmu."
+        zdroj: e15-plan
+      - tema: "Doprava a parkování"
+        citace: "Přišlo by mi fér, kdyby parkování na druhé auto na byt bylo zdražené klidně na trojnásobek, tedy na 3600 korun ročně."
+        kontext: "V rozhovoru o svém plánu pro Prahu vysvětluje navrhovanou změnu poplatků v zónách placeného stání."
+        zdroj: e15-plan
+      - tema: "Školství"
+        citace: "Soukromé školy samozřejmě mají své místo v systému, ale ať si pak platí pronájem a budují si své kapacity za soukromé peníze."
+        kontext: "V témže rozhovoru vysvětluje postoj k působení soukromých škol v budovách vlastněných městem."
+        zdroj: e15-plan
+      - tema: "Doprava a MHD"
+        citace: "Jako Piráti dlouhodobě říkáme, že se vůbec nebráníme diskuzi o ekonomických nákladech na provoz MHD, ale současně říkáme, že musíme pracovat také s politikou parkování…"
+        pokracovani: " protože jednostranná valorizace poplatků by mohla mít zásadní a negativní vliv na plynulost dopravy v Praze."
+        kontext: "Odpověď v anketě mezi kandidáty na primátora na otázku, jestli po volbách zdraží pražská MHD."
+        zdroj: echo-mhd
+      - tema: "Bydlení"
+        citace: "Praha má pouze 4 procenta bytového fondu jako svůj městský bytový fond, na rozdíl například od Vídně, kde to je 20 procent."
+        kontext: "V rozhovoru po vítězství v pirátských primárkách zdůvodňuje, proč považuje byty za prioritu."
+        zdroj: radio-praha
+        poznamka: "Podíl městských bytů je tvrzení kandidátky. STAN ve svém materiálu uvádí zhruba pět procent; nezávisle ověřený údaj k dispozici nemáme."
+      - tema: "Bydlení"
+        citace: "Mrzí mě, že se nepodařilo fakticky navyšovat počty městských bytů, například tu obecní výstavbu. Podařilo se rozjet Pražskou developerskou společnost, ale tím, jak jsou u nás nastavené stavební předpisy, tak to poměrně dlouho trvá…"
+        pokracovani: " než se opravdu ty nové městské byty dostanou na trh."
+        kontext: "V rozhovoru hodnotí osm let pirátského působení na magistrátu v oblasti městské bytové výstavby."
+        zdroj: radio-praha
+  - osobaSlug: komrskova-jana
+    jmeno: "Jana Komrsková"
+    subjekt: jsme-praha
+    poznamka: "U dvou dalších pasáží, které se nabízely, šlo ve zdroji o nepřímou řeč novináře, ne o přímý výrok. Nepublikujeme je."
+    vyroky:
+      - tema: "Odpady"
+        citace: "Problém přetékajících košů v centru města už nemůžeme dál zametat pod koberec, proto ho dnes máme doslova na dlažbě Mariánského náměstí,"
+        kontext: "Jako náměstkyně primátora pro životní prostředí komentovala veřejnou analýzu obsahu odpadkových košů z centra Prahy."
+        zdroj: ctk-kose
+  - osobaSlug: sovova-klara
+    jmeno: "Klára Sovová"
+    subjekt: motoriste-sobe
+    vyroky:
+      - tema: "Doprava a veřejný prostor"
+        citace: "Chceme více svobody pro lidi a rušit cyklopruhy."
+        kontext: "Při představení jako lídryně pražské kandidátky Motoristů shrnula, co chce hnutí v pražské dopravě prosazovat. Obsah nezávisle potvrzují Echo24, CNN Prima News, ČTK i Deník N k témuž datu."
+        zdroj: info-motor
+  - osobaSlug: scheinherr-adam
+    jmeno: "Adam Scheinherr"
+    subjekt: praha-sobe
+    vyroky:
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Airbnb problém je. V bytech se má bydlet, ne z nich dělat černé hotely. Praze ovšem chybí tisíce bytů, a to regulace Airbnb nevyřeší."
+        kontext: "Odpověď v předvolební anketě, ve které se kandidáti na primátora vyjadřovali k dopadu krátkodobých pronájmů na centrum města."
+        zdroj: cnn-airbnb
+  - osobaSlug: laska-vaclav
+    jmeno: "Václav Láska"
+    subjekt: sen-pro-prahu
+    vyroky:
+      - tema: "Městské firmy"
+        citace: "Chci vrátit do řízení městských firem odpovědnost, otevřenost a profesionální správu."
+        kontext: "Při představení kandidatury na primátora označil kontrolu městských firem za hlavní prioritu."
+        zdroj: pl-laska
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Vnímám ho jako jeden z problémů, který má poměrně rychlé řešení, kterým umožníme dostat minimálně 10 tisíc, pravděpodobně však mnohem více, bytů zpět na trh bydlení. Město by předně mělo vyžadovat dodržování zákona, když poskytování bytů zkolaudovaných k bydlení pro krátkodobé ubytování je jednání v rozporu se zákonem."
+        kontext: "Souvislá odpověď v předvolební anketě o krátkodobých pronájmech. Zájmeno „ho\" na začátku odkazuje na Airbnb."
+        zdroj: cnn-airbnb
+  - osobaSlug: urban-milan
+    jmeno: "Milan Urban"
+    subjekt: spd-pro-prahu
+    vyroky:
+      - tema: "Doprava a MHD"
+        citace: "Když Piráti říkají, »omezme cestování osobními vozy«. Dobře, ale pak zároveň tvrdí, že potřebujeme zdražit MHD. Vždyť to si protiřečí!"
+        kontext: "V předvolebním rozhovoru kritizoval současné vedení města za souběh omezování aut a zdražování jízdného."
+        zdroj: ip-urban
+      - tema: "Školství"
+        citace: "V Praze se pěkně dlouho nepostavila žádná nová škola."
+        kontext: "V rozhovoru vytkl městu, že nestaví nové školy; dál dodává, že by chtěl výstavbu urychlit."
+        zdroj: ip-urban
+      - tema: "Bydlení"
+        citace: "V rámci sociálního bydlení se tady vede diskuze – jestli má stavět město. Já říkám, že ne!"
+        pokracovani: " Protože cokoliv, co začne město, to vždycky špatně skončí."
+        kontext: "V rozhovoru vysvětluje, proč podle něj nemá sociální bydlení stavět město."
+        zdroj: ip-urban
+  - osobaSlug: vlcek-petr
+    jmeno: "Petr Vlček"
+    subjekt: spojena-levice-pro-prahu
+    vyroky:
+      - tema: "Bydlení"
+        citace: "Praha musí být městem pro lidi, kteří v ní žijí, ne pro spekulanty a developery. Chceme dostupné bydlení, levné služby a město, které bude hájit zájmy svých obyvatel."
+        kontext: "Při představení koalice Spojená levice pro Prahu shrnul hlavní směr uskupení."
+        zdroj: protext
+      - tema: "Bydlení a územní rozvoj"
+        citace: "Aby město bylo aktivním developerem, nejen regulátorem. Je třeba zahájit výkup pozemků, aby mohly sloužit pro výstavbu."
+        kontext: "Na tiskové konferenci popsal, jakou roli má podle něj město hrát ve výstavbě."
+        zdroj: ip-levice
+      - tema: "Bydlení"
+        citace: "Chceme navýšit počet městských bytů, které se budou nabízet těm, co je potřebují, nebo nemají na to, aby platili nájem."
+        kontext: "Na tiskové konferenci upřesnil záměr rozšířit obecní bytový fond."
+        zdroj: ip-levice
+      - tema: "Odměňování"
+        citace: "Zasazujeme se i o důstojné mzdy, aby zohlednily skutečné náklady na život v hlavním městě."
+        kontext: "Na tiskové konferenci mluvil o odměňování lidí pracujících pro hlavní město."
+        zdroj: ip-levice
+  - osobaSlug: portlik-tomas
+    jmeno: "Tomáš Portlík"
+    subjekt: spolu-pro-prahu
+    poznamka: "Dohledali jsme i dva jeho výroky z kampaně 2022, mimo jiné o tom, že rozpočet neunese městský okruh a metro D současně. Nepublikujeme je vedle aktuálních — jsou z jiné kampaně a čtenáře by mátly."
+    vyroky:
+      - tema: "Bydlení, investice a doprava"
+        citace: "Nejdu si pro řetěz, jdu si pro práci! Chci dát Praze tempo, aby se tu mohlo všechno pořádně rozjet – bytová výstavba, klíčové investice nebo třeba i auta uvízlá v kolonách kvůli chaotickým uzavírkám."
+        kontext: "Na zahájení předvolební kampaně koalice SPOLU pojmenoval své priority pro Prahu."
+        zdroj: pp-spolu
+      - tema: "Doprava a MHD"
+        citace: "Chtěli jsme ale mluvit o reformě zón placeného stání a zdražení jízdného v MHD"
+        pokracovani: " Zdeněk Hřib na to ale řekl, že pokud neuzavřeme centrum, on tyto kroky odmítá."
+        kontext: "V předvolebním rozhovoru uvedl, jaká dopravní témata chce otevřít."
+        zdroj: ods-forum
+      - tema: "Rozpočet a investice"
+        citace: "Zásadní je vnitřní okruh, vnější okruh, metro D"
+        pokracovani: " Chci si udělat představu o tom, kde bude možné spolupracovat se státem a co bude možné stavět a kde investovat."
+        kontext: "V předvolebním rozhovoru vyjmenoval investiční priority města."
+        zdroj: ods-forum
+      - tema: "Doprava a investice"
+        citace: "Praha se musí navíc soustředit na infrastrukturní stavby, které město akutně potřebuje"
+        pokracovani: " a budou stát nemalé peníze. Například na dokončení Městského okruhu."
+        kontext: "Zdůvodňoval, proč má mít infrastruktura přednost."
+        zdroj: ods-forum
+  - osobaSlug: hlavacek-petr
+    jmeno: "Petr Hlaváček"
+    subjekt: starostove-a-nezavisli
+    vyroky:
+      - tema: "Územní plán"
+        citace: "Zavádí výškovou regulaci a hodně dbá na soustřednost výstavby, hodně do brownfieldů."
+        kontext: "V rozhovoru popisoval, co přináší nový Metropolitní plán."
+        zdroj: rz-hlavacek
+      - tema: "Územní plán"
+        citace: "Především je to opravdu digitální plán, strukturovaný a připravený na to, že se do něj budou doplňovat podrobnější vrstvy."
+        kontext: "V rozhovoru vysvětloval povahu Metropolitního plánu."
+        zdroj: rz-hlavacek
+      - tema: "Bydlení"
+        citace: "My tam objektivně máme prostor pro nějakých 350 tisíc bytů, plus desetitisíce městské výstavby."
+        kontext: "V rozhovoru vyčíslil kapacitu pro bydlení, kterou podle něj Metropolitní plán otevírá."
+        zdroj: rz-hlavacek
+      - tema: "Bydlení"
+        citace: "Předpokládám, když bychom se dostali v příštích deseti letech na 10 tisíc bytů, že zhruba můžeme sanovat to, co se v Praze děje."
+        kontext: "V rozhovoru pojmenoval tempo výstavby, které by podle něj řešilo pražskou bytovou situaci."
+        zdroj: rz-hlavacek
+        poznamka: "Z citace nevyplývá, jestli jde o 10 tisíc bytů ročně, nebo celkem. Neupřesňujeme to za mluvčího."
+      - tema: "Bydlení a veřejný prostor"
+        citace: "Hodně přesvědčujeme aktéry jako městské části a veřejnost, že stavění má smysl."
+        pokracovani: " že zpracováváme podrobnější dokumentaci"
+        kontext: "Popisoval, jak město získává pro výstavbu městské části a veřejnost."
+        zdroj: rz-hlavacek
+  - osobaSlug: dubsky-jiri
+    jmeno: "Jiří Dubský"
+    subjekt: ano-lepsi-cesko-s-mimozemstany
+    poznamka: "Vyhledávání vrací jen zmínky o hnutí, ne o něm."
+    vyroky: []
+  - osobaSlug: nova-lia
+    jmeno: "Lia Nova"
+    subjekt: ceska-strana-asocialu
+    poznamka: "Článek o vstupu strany do voleb mluví jen o „třech mladých lidech\", jméno v něm není."
+    vyroky: []
+  - osobaSlug: janisova-hana
+    jmeno: "Hana Janišová"
+    subjekt: dsz-za-prava-zvirat
+    poznamka: "Nalezený rozhovor se týkal eurovoleb, ne pražské samosprávy."
+    vyroky: []
+  - osobaSlug: mejstrik-roman
+    jmeno: "Roman Mejstřík"
+    subjekt: gen-s-podporou-verejnosti
+    poznamka: "V článku o vstupu GEN do pražských voleb citován není; starší zmínky se týkají odchodu z ANO."
+    vyroky: []
+  - osobaSlug: opl-pavel
+    jmeno: "Pavel Opl"
+    subjekt: lepsi-zivot-pro-lidi
+    poznamka: "Jen agregátory kandidátů a materiály k eurovolbám 2024."
+    vyroky: []
+  - osobaSlug: cizinsky-pavel
+    jmeno: "Pavel Čižinský"
+    subjekt: levice
+    poznamka: "Zásahy se týkají buď jeho bratra Jana Čižinského, nebo jsou starší, nebo jde o celostátní témata."
+    vyroky: []
+  - osobaSlug: janku-tadeas
+    jmeno: "Tadeáš Janků"
+    subjekt: libertarianska-strana-voluntia
+    poznamka: "Jméno figuruje jen u sněmovních voleb 2025."
+    vyroky: []
+  - osobaSlug: benysek-jiri
+    jmeno: "Jiří Benýšek"
+    subjekt: nase-praha-snk-ed
+    poznamka: "Výsledky míří na jmenovce a obchodní rejstřík."
+    vyroky: []
+  - osobaSlug: vitek-jiri
+    jmeno: "Jiří Vítek"
+    subjekt: patrioti-pro-prahu
+    poznamka: "Jediný dohledaný výrok byl jen v titulku, v textu se doslova nevyskytuje. Nepublikujeme ho."
+    vyroky: []
+  - osobaSlug: motl-martin
+    jmeno: "Martin Motl"
+    subjekt: rezidenti-rebelove
+    poznamka: "Profil na webu subjektu obsahuje jen popis ve třetí osobě, bez přímé řeči."
+    vyroky: []
+  - osobaSlug: laube-bedrich
+    jmeno: "Bedřich Laube"
+    subjekt: svobodni
+    poznamka: "Stránky subjektu popisují jen jeho funkce, přímý výrok neobsahují."
+    vyroky: []
+  - osobaSlug: urza-martin
+    jmeno: "Urza"
+    subjekt: urza-cz
+    poznamka: "Nalezené rozhovory se týkají celostátní a evropské politiky. Subjekt deklaruje, že mandáty odmítne."
+    vyroky: []
+  - osobaSlug: stolba-hugo
+    jmeno: "Hugo Štolba"
+    subjekt: velky-krizek-sousede-pro-prahu
+    poznamka: "K osobě nevrací vyhledávání nic, jen jmenovce."
+    vyroky: []
+  - osobaSlug: cibulka-petr
+    jmeno: "Petr Cibulka"
+    subjekt: volte-pravy-blok
+    poznamka: "Mediální stopa je bohatá, ale výhradně k celostátním a evropským tématům."
+    vyroky: []

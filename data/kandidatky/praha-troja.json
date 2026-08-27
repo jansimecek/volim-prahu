@@ -30,8 +30,8 @@
           "vek": 62,
           "povolani": "geodet",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 1,
           "zastupitelstvo": "praha-troja"
         },
@@ -45,8 +45,8 @@
           "vek": 53,
           "povolani": "architekt",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 2,
           "zastupitelstvo": "praha-troja"
         },
@@ -60,8 +60,8 @@
           "vek": 54,
           "povolani": "kancléřka státní instituce",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 3,
           "zastupitelstvo": "praha-troja"
         },
@@ -75,8 +75,8 @@
           "vek": 54,
           "povolani": "advokát",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 4,
           "zastupitelstvo": "praha-troja"
         },
@@ -90,8 +90,8 @@
           "vek": 45,
           "povolani": "marketingový manažer",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 5,
           "zastupitelstvo": "praha-troja"
         },
@@ -105,8 +105,8 @@
           "vek": 44,
           "povolani": "datový analytik",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 6,
           "zastupitelstvo": "praha-troja"
         },
@@ -120,8 +120,8 @@
           "vek": 37,
           "povolani": "auditor",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 7,
           "zastupitelstvo": "praha-troja"
         },
@@ -135,8 +135,8 @@
           "vek": 61,
           "povolani": "asistentka",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 8,
           "zastupitelstvo": "praha-troja"
         },
@@ -150,8 +150,8 @@
           "vek": 20,
           "povolani": "student",
           "bydliste": "Praha-Troja",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 9,
           "zastupitelstvo": "praha-troja"
         }

@@ -31,8 +31,8 @@
           "vek": 66,
           "povolani": "důchodce",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "166",
-          "politickaPrislusnost": "166",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
           "poradi": 1,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -46,8 +46,8 @@
           "vek": 54,
           "povolani": "technolog výroby",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 2,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -61,8 +61,8 @@
           "vek": 56,
           "povolani": "OSVČ",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "166",
-          "politickaPrislusnost": "166",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
           "poradi": 3,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -76,8 +76,8 @@
           "vek": 39,
           "povolani": "stavbyvedoucí",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "166",
-          "politickaPrislusnost": "166",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
           "poradi": 4,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -91,8 +91,8 @@
           "vek": 56,
           "povolani": "truhlář",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 5,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -106,8 +106,8 @@
           "vek": 70,
           "povolani": "psychoterapeutka",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 6,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -121,8 +121,8 @@
           "vek": 70,
           "povolani": "důchodce",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 7,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -136,8 +136,8 @@
           "vek": 52,
           "povolani": "stavební technik",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 8,
           "zastupitelstvo": "praha-predni-kopanina"
         },
@@ -151,8 +151,8 @@
           "vek": 38,
           "povolani": "kulturní manager",
           "bydliste": "Praha-Přední Kopanina",
-          "navrhujiciStrana": "80",
-          "politickaPrislusnost": "99",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
           "poradi": 9,
           "zastupitelstvo": "praha-predni-kopanina"
         }

@@ -323,6 +323,77 @@ const plneni = defineCollection({
   }),
 })
 
+/**
+ * Doložené veřejné výroky lídrů. Nejcitlivější obsah na webu — přisoudit
+ * člověku výrok, který neřekl, je horší než cokoli jiného, co tu můžeme
+ * pokazit. Schéma proto vyžaduje u každého výroku existující zdroj a hlídá,
+ * že jsou uvedené všechny osoby, i ty bez jediného doloženého výroku.
+ */
+const vyroky = defineCollection({
+  name: 'Vyroky',
+  pattern: 'vyroky-lidru.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      zdroje: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            medium: s.string().min(1),
+            nazev: s.string().min(1),
+            datum: s.isodate(),
+            /** Tisková zpráva ani stranický web nejsou novinářský text a web to říká. */
+            typ: s.enum(['redakcni', 'tiskova-zprava', 'stranicky-web']),
+            url: url,
+          }),
+        )
+        .min(1),
+      osoby: s
+        .array(
+          s.object({
+            osobaSlug: s.string().min(1),
+            jmeno: s.string().min(1),
+            subjekt: s.string().min(1),
+            poznamka: s.string().min(1).optional(),
+            vyroky: s
+              .array(
+                s.object({
+                  tema: s.string().min(1),
+                  citace: s.string().min(1),
+                  /** Co ve zdroji následuje, když je citace zkrácená. */
+                  pokracovani: s.string().min(1).optional(),
+                  kontext: s.string().min(1),
+                  zdroj: s.string().min(1),
+                  poznamka: s.string().min(1).optional(),
+                }),
+              )
+              .default([]),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const zdroje = new Set(data.zdroje.map((z) => z.id))
+      for (const osoba of data.osoby) {
+        for (const v of osoba.vyroky) {
+          if (!zdroje.has(v.zdroj)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Výrok osoby "${osoba.osobaSlug}" odkazuje na neexistující zdroj "${v.zdroj}".`,
+            })
+          }
+        }
+        if (osoba.vyroky.length === 0 && !osoba.poznamka) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Osoba "${osoba.osobaSlug}" nemá výrok ani vysvětlení proč. Mlčení musí být vysvětlené.`,
+          })
+        }
+      }
+    }),
+})
+
 const rozhovory = defineCollection({
   name: 'Rozhovor',
   pattern: 'rozhovory/**/*.mdx',
@@ -348,5 +419,5 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet, plneni },
+  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet, plneni, vyroky },
 })
