@@ -30,3 +30,6 @@ coverage/
 
 # generovaný vyhledávací index
 public/hledani.json
+
+# snapshoty výsledků vznikají za běhu
+data/snapshots/

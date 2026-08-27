@@ -118,4 +118,33 @@ a místě konání voleb. Adresy desek zbylých 43 částí jsou v
 `content/uredni-desky.yaml`. Spouštět opakovaně od poloviny září — lhůta
 pro vyvěšení je 24. 9. 2026.
 
-**Další na řadě:** nácvik volební noci proti kv2022 do 2. 10.
+## Volební noc
+
+Pipeline je hotová a **nacvičená proti reálným datům roku 2022**:
+
+```bash
+pnpm nacvik
+```
+
+Skript projde celou cestu — stažení z ČSÚ, parsování, uložení snapshotu,
+načtení zpět, chování při výpadku — a ověří známé výsledky roku 2022
+(SPOLU 24,72 % a 19 mandátů, účast 43,91 %, součet mandátů 65 v každém
+z 58 zastupitelstev). Nekončí nulou, když cokoli nesedí.
+
+Jak to funguje:
+
+- Jeden požadavek na ČSÚ vrací celou Prahu, tedy všech 58 zastupitelstev.
+- Stahuje výhradně cron přes `/api/volebni-noc`, nikdy požadavek uživatele.
+- Když stahování selže, poslední dobrý snapshot se **nepřepisuje** a stránka
+  ukáže starší data s viditelným časem. Nad 10 minut na to upozorní červeně.
+- `/vysledky` čte jen snapshot, s `revalidate = 30`.
+
+**Před volbami je potřeba:**
+
+1. Upgradovat na Vercel Pro — Hobby umožňuje cron jen jednou denně.
+   V `vercel.json` pak změnit `schedule` na `* * * * *` na dobu sčítání.
+2. Přidat Blob store ve Vercelu (nastaví `BLOB_READ_WRITE_TOKEN`). Bez něj
+   se snapshot ukládá na disk, což na efemérních funkcích nepřežije.
+3. Nastavit `CRON_SECRET`, aby endpoint nešlo spouštět zvenčí.
+
+**Další na řadě:** archivní režim po sečtení výsledků.

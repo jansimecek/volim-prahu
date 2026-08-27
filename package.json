@@ -23,9 +23,11 @@
     "validate": "tsx scripts/validate-content.ts",
     "content": "velite --strict",
     "gen:strany": "tsx scripts/generate-strany.ts",
-    "import:desky": "tsx scripts/import-uredni-desky.ts"
+    "import:desky": "tsx scripts/import-uredni-desky.ts",
+    "nacvik": "tsx scripts/nacvik-volebni-noc.ts"
   },
   "dependencies": {
+    "@vercel/blob": "^2.8.0",
     "fast-xml-parser": "^5.11.0",
     "fflate": "^0.8.3",
     "minisearch": "^7.2.0",

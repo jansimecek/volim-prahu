@@ -41,5 +41,11 @@ jobs:
       - name: Testy
         run: pnpm test
 
+      - name: Nácvik volební noci proti datům 2022
+        # Ověřuje celou výsledkovou pipeline proti reálným datům ČSÚ.
+        # Nesmí shodit build, když je ČSÚ nedostupné — proto continue-on-error.
+        continue-on-error: true
+        run: pnpm nacvik
+
       - name: Build
         run: pnpm exec next build

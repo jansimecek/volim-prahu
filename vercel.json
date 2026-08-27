@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "pnpm build"
+  "buildCommand": "pnpm build",
+  "crons": [
+    {
+      "path": "/api/volebni-noc",
+      "schedule": "0 4 * * *"
+    }
+  ]
 }
