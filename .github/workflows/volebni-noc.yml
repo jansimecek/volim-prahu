@@ -1,0 +1,39 @@
+name: Volební noc
+
+# Vercel Hobby umožňuje cron jen jednou denně, což ve volební noci nestačí.
+# Tenhle workflow volá stejný endpoint v potřebné kadenci a je zdarma.
+# Časy jsou v UTC, tedy o dvě hodiny méně než pražský čas.
+on:
+  schedule:
+    # sobota 10. 10. od 14:00 do půlnoci pražského času, každé dvě minuty
+    - cron: '*/2 12-23 10 10 *'
+    # doběh přes noc na neděli, každých pět minut
+    - cron: '*/5 0-6 11 10 *'
+  workflow_dispatch:
+
+concurrency:
+  group: volebni-noc
+  cancel-in-progress: false
+
+jobs:
+  odber:
+    name: Stáhnout výsledky z ČSÚ
+    runs-on: ubuntu-latest
+    steps:
+      - name: Zavolat endpoint
+        env:
+          URL: ${{ secrets.VOLEBNI_NOC_URL }}
+          TAJEMSTVI: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$URL" ] || [ -z "$TAJEMSTVI" ]; then
+            echo "Chybí VOLEBNI_NOC_URL nebo CRON_SECRET v Secrets repozitáře."
+            exit 1
+          fi
+          kod=$(curl -s -o /tmp/odpoved.json -w "%{http_code}" \
+            -H "Authorization: Bearer $TAJEMSTVI" --max-time 90 "$URL")
+          echo "HTTP $kod"
+          cat /tmp/odpoved.json
+          echo
+          # Neúspěch nesmí shodit workflow — poslední dobrý snapshot zůstává
+          # a další běh to zkusí znovu. Selhání jen zvýrazníme v logu.
+          [ "$kod" = "200" ] || echo "::warning::Odběr neuspěl, zkusí se znovu při dalším běhu."

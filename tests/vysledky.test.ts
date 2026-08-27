@@ -1,8 +1,14 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { celkovyPostup, parsujVysledky, urlVysledku } from '../src/lib/vysledky'
-import { PRAH_ZASTARALOSTI_MINUT, stariMinut } from '../src/lib/snapshot'
+import {
+  celkovyPostup,
+  formatujCasCSU,
+  overUplnost,
+  parsujVysledky,
+  urlVysledku,
+} from '../src/lib/vysledky'
+import { PRAH_ZASTARALOSTI_MINUT, stariMinut } from '../src/lib/cerstvost'
 
 /**
  * Parser výsledků běží ve volební noci bez dozoru, takže má vlastní test
@@ -67,6 +73,48 @@ describe('parsování výsledků z ČSÚ', () => {
         slugy,
       ),
     ).toThrow(/žádné zastupitelstvo/)
+  })
+})
+
+describe('kontrola úplnosti odpovědi', () => {
+  const snapshot = parsujVysledky(xml, slugy, 'kv2022')
+
+  it('odmítne neúplnou odpověď, i když se naparsovala', () => {
+    expect(() => overUplnost(snapshot)).toThrow(/2 zastupitelstev místo 58/)
+  })
+
+  it('odmítne odpověď bez magistrátu', () => {
+    const bezMagistratu = {
+      ...snapshot,
+      zastupitelstva: Array.from({ length: 58 }, (_, i) => ({
+        ...snapshot.zastupitelstva[1]!,
+        kod: `9999${i}`,
+      })),
+    }
+    expect(() => overUplnost(bezMagistratu)).toThrow(/chybí magistrát/)
+  })
+
+  it('úplnou odpověď propustí', () => {
+    const uplny = {
+      ...snapshot,
+      zastupitelstva: Array.from({ length: 58 }, (_, i) =>
+        i === 0 ? snapshot.zastupitelstva[0]! : { ...snapshot.zastupitelstva[1]!, kod: `9999${i}` },
+      ),
+    }
+    expect(() => overUplnost(uplny)).not.toThrow()
+  })
+})
+
+describe('čas generování od ČSÚ', () => {
+  it('nepřepočítává se přes Date, takže nezávisí na časové zóně serveru', () => {
+    // ČSÚ posílá pražský místní čas bez offsetu. Přes new Date() by se
+    // na serveru v UTC posunul o dvě hodiny do budoucnosti.
+    expect(formatujCasCSU('2026-10-10T20:15:03')).toBe('10. 10. 2026 20:15')
+  })
+
+  it('nesmyslnou hodnotu nahradí pomlčkou', () => {
+    expect(formatujCasCSU('nesmysl')).toBe('—')
+    expect(formatujCasCSU(undefined)).toBe('—')
   })
 })
 

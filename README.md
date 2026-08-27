@@ -141,10 +141,21 @@ Jak to funguje:
 
 **Před volbami je potřeba:**
 
-1. Upgradovat na Vercel Pro — Hobby umožňuje cron jen jednou denně.
-   V `vercel.json` pak změnit `schedule` na `* * * * *` na dobu sčítání.
-2. Přidat Blob store ve Vercelu (nastaví `BLOB_READ_WRITE_TOKEN`). Bez něj
+1. Přidat Blob store ve Vercelu (nastaví `BLOB_READ_WRITE_TOKEN`). Bez něj
    se snapshot ukládá na disk, což na efemérních funkcích nepřežije.
-3. Nastavit `CRON_SECRET`, aby endpoint nešlo spouštět zvenčí.
+2. Nastavit `CRON_SECRET`. Bez něj endpoint v produkci vrací 503 — je
+   fail-closed schválně, aby chybějící nastavení nešlo přehlédnout.
+3. Do Secrets repozitáře doplnit `CRON_SECRET` a `VOLEBNI_NOC_URL`
+   (`https://…/api/volebni-noc`).
+
+Sčítání spouští **GitHub Actions** (`.github/workflows/volebni-noc.yml`),
+ne Vercel Cron — Hobby umožňuje cron jen jednou denně, což ve volební noci
+znamená, že by neproběhl ani jednou. Workflow volá stejný endpoint každé
+dvě minuty v sobotu večer a každých pět minut přes noc. Zdarma a bez závislosti
+na tarifu. Denní cron ve `vercel.json` zůstává jako doběh.
+
+Nácvik nikdy nepíše do ostrého snapshotu — má vlastní cíl a nad produkčním
+úložištěm odmítne běžet, aby výsledky roku 2022 nemohl vydat za průběžný
+stav voleb 2026.
 
 **Další na řadě:** archivní režim po sečtení výsledků.

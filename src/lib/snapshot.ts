@@ -2,6 +2,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import type { Snapshot } from './vysledky'
 
+export { PRAH_ZASTARALOSTI_MINUT, stariMinut } from './cerstvost'
+
 /**
  * Úložiště snapshotů výsledků.
  *
@@ -11,19 +13,31 @@ import type { Snapshot } from './vysledky'
  * bez uvedení, jak jsou stará.
  */
 
-const NAZEV_BLOBU = 'vysledky/posledni.json'
-const CESTA_LOKALNE = join(process.cwd(), 'data/snapshots/posledni.json')
+/**
+ * Cíl snapshotu. Nácvik smí psát jedině do `nacvik`, aby nemohl výsledky
+ * roku 2022 vydat za průběžný stav voleb 2026.
+ */
+export type Cil = 'ostry' | 'nacvik'
+
+const NAZVY: Record<Cil, string> = {
+  ostry: 'vysledky/posledni.json',
+  nacvik: 'vysledky/nacvik.json',
+}
+const SOUBORY: Record<Cil, string> = {
+  ostry: join(process.cwd(), 'data/snapshots/posledni.json'),
+  nacvik: join(process.cwd(), 'data/snapshots/nacvik.json'),
+}
 
 function maBlob(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN)
 }
 
-export async function ulozSnapshot(snapshot: Snapshot): Promise<void> {
+export async function ulozSnapshot(snapshot: Snapshot, cil: Cil = 'ostry'): Promise<void> {
   const telo = JSON.stringify(snapshot)
 
   if (maBlob()) {
     const { put } = await import('@vercel/blob')
-    await put(NAZEV_BLOBU, telo, {
+    await put(NAZVY[cil], telo, {
       access: 'public',
       contentType: 'application/json',
       addRandomSuffix: false,
@@ -33,38 +47,43 @@ export async function ulozSnapshot(snapshot: Snapshot): Promise<void> {
     return
   }
 
-  mkdirSync(join(CESTA_LOKALNE, '..'), { recursive: true })
-  writeFileSync(CESTA_LOKALNE, telo + '\n')
+  mkdirSync(join(SOUBORY[cil], '..'), { recursive: true })
+  writeFileSync(SOUBORY[cil], telo + '\n')
 }
 
-export async function nactiSnapshot(): Promise<Snapshot | null> {
+/** Levný strážce tvaru — poškozený snapshot nesmí shodit celou routu. */
+function jeSnapshot(data: unknown): data is Snapshot {
+  if (!data || typeof data !== 'object') return false
+  const s = data as Partial<Snapshot>
+  return Array.isArray(s.zastupitelstva) && s.zastupitelstva.length > 0 && typeof s.stazeno === 'string'
+}
+
+/**
+ * Vrací null JEN když snapshot ještě neexistuje. Výpadek úložiště naopak
+ * vyhodí chybu — Next si pak podrží poslední úspěšně vyrenderovanou stránku
+ * místo aby zacachoval hlášku „zatím nemáme data“ uprostřed sčítání.
+ */
+export async function nactiSnapshot(cil: Cil = 'ostry'): Promise<Snapshot | null> {
   if (maBlob()) {
+    const { head } = await import('@vercel/blob')
+    let url: string
     try {
-      const { head } = await import('@vercel/blob')
-      const info = await head(NAZEV_BLOBU)
-      const odpoved = await fetch(info.url, { cache: 'no-store' })
-      if (!odpoved.ok) return null
-      return (await odpoved.json()) as Snapshot
-    } catch {
-      // Snapshot ještě neexistuje nebo je Blob nedostupný — stránka to zvládne.
-      return null
+      url = (await head(NAZVY[cil])).url
+    } catch (chyba) {
+      // Blob ještě nevznikl — legitimní stav před prvním během cronu.
+      if (chyba instanceof Error && /not found|404/i.test(chyba.message)) return null
+      throw chyba
     }
+    const odpoved = await fetch(url, { cache: 'no-store' })
+    if (!odpoved.ok) throw new Error(`Snapshot se nepodařilo načíst: HTTP ${odpoved.status}`)
+    const data: unknown = await odpoved.json()
+    if (!jeSnapshot(data)) throw new Error('Uložený snapshot má neplatný tvar.')
+    return data
   }
 
-  if (!existsSync(CESTA_LOKALNE)) return null
-  try {
-    return JSON.parse(readFileSync(CESTA_LOKALNE, 'utf8')) as Snapshot
-  } catch {
-    return null
-  }
+  if (!existsSync(SOUBORY[cil])) return null
+  const data: unknown = JSON.parse(readFileSync(SOUBORY[cil], 'utf8'))
+  if (!jeSnapshot(data)) throw new Error('Uložený snapshot má neplatný tvar.')
+  return data
 }
 
-/** Jak je snapshot starý v minutách. Používá se k označení zastaralých dat. */
-export function stariMinut(snapshot: Snapshot, ted: Date = new Date()): number {
-  const stazeno = new Date(snapshot.stazeno).getTime()
-  if (!Number.isFinite(stazeno)) return Number.POSITIVE_INFINITY
-  return Math.max(0, Math.round((ted.getTime() - stazeno) / 60_000))
-}
-
-/** Nad tímhle stářím stránka viditelně upozorní, že data nejsou čerstvá. */
-export const PRAH_ZASTARALOSTI_MINUT = 10

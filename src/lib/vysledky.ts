@@ -13,6 +13,10 @@ export const DATUM_VOLEB = '20261009'
 export const SADA = 'kv2026'
 export const NUTS_PRAHA = 'CZ0100'
 
+/** Magistrát a 57 městských částí. Míň jich v odpovědi být nesmí. */
+export const POCET_ZASTUPITELSTEV = 58
+export const KOD_MAGISTRATU = '554782'
+
 export function urlVysledku(sada = SADA, datum = DATUM_VOLEB, nuts = NUTS_PRAHA): string {
   return `https://volby.gov.cz/pls/${sada}/vysledky_obce_okres?datumvoleb=${datum}&nuts=${nuts}`
 }
@@ -135,6 +139,24 @@ export function parsujVysledky(
   }
 }
 
+/**
+ * Neúplná odpověď se naparsuje bez chyby — useknuté XML, výpadek na straně ČSÚ
+ * i ořez na proxy vypadají jako platná data, jen s méně obcemi. Kdyby prošla,
+ * přepsala by poslední dobrý snapshot a stránka by ukázala třeba 19 městských
+ * částí místo 57. Kontrola sedí na síťové cestě, ne v parseru, aby šel parser
+ * testovat i nad malým vzorkem.
+ */
+export function overUplnost(snapshot: Snapshot): void {
+  if (snapshot.zastupitelstva.length !== POCET_ZASTUPITELSTEV) {
+    throw new Error(
+      `Odpověď ČSÚ obsahuje ${snapshot.zastupitelstva.length} zastupitelstev místo ${POCET_ZASTUPITELSTEV}.`,
+    )
+  }
+  if (!snapshot.zastupitelstva.some((z) => z.kod === KOD_MAGISTRATU)) {
+    throw new Error(`V odpovědi ČSÚ chybí magistrát (kód ${KOD_MAGISTRATU}).`)
+  }
+}
+
 /** Stáhne a naparsuje výsledky. Volá jen cron, nikdy stránka. */
 export async function stahniVysledky(
   slugPodleKodu: Map<string, string>,
@@ -147,7 +169,23 @@ export async function stahniVysledky(
     cache: 'no-store',
   })
   if (!odpoved.ok) throw new Error(`ČSÚ vrátil HTTP ${odpoved.status}`)
-  return parsujVysledky(await odpoved.text(), slugPodleKodu, sada)
+  const snapshot = parsujVysledky(await odpoved.text(), slugPodleKodu, sada)
+  overUplnost(snapshot)
+  return snapshot
+}
+
+/**
+ * ČSÚ posílá čas generování jako pražský místní čas BEZ offsetu
+ * („2026-10-10T20:15:03“). JavaScript takový řetězec čte jako lokální čas
+ * prostředí — a na Vercelu je prostředí v UTC, takže by se čtenáři ukázal
+ * čas o dvě hodiny v budoucnosti. Neposíláme ho proto přes Date vůbec
+ * a jen přeskládáme jeho části.
+ */
+export function formatujCasCSU(hodnota: string | undefined): string {
+  const shoda = (hodnota ?? '').match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/)
+  if (!shoda) return '—'
+  const [, rok, mesic, den, hodina, minuta] = shoda
+  return `${Number(den)}. ${Number(mesic)}. ${rok} ${hodina}:${minuta}`
 }
 
 /** Kolik procent okrsků je sečteno napříč celou Prahou. */
@@ -156,7 +194,7 @@ export function celkovyPostup(snapshot: Snapshot): {
   celkem: number
   procenta: number
 } {
-  const magistrat = snapshot.zastupitelstva.find((z) => z.kod === '554782')
+  const magistrat = snapshot.zastupitelstva.find((z) => z.kod === KOD_MAGISTRATU)
   const zpracovano = magistrat?.okrskyZpracovano ?? 0
   const celkem = magistrat?.okrskyCelkem ?? 0
   return {

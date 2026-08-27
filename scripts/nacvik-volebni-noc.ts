@@ -40,6 +40,20 @@ function kontrola(popis: string, podminka: boolean, detail = ''): void {
 async function main() {
   console.log('Nácvik volební noci proti datům kv2022\n')
 
+  /*
+   * Nácvik pracuje s výsledky roku 2022. Kdyby je zapsal do ostrého snapshotu,
+   * web by je ukázal jako průběžný stav voleb 2026 — a nic by na tom nebylo
+   * vidět, protože stáří snapshotu by bylo nula. Píšeme proto vždy do cíle
+   * `nacvik` a nad produkčním úložištěm odmítáme běžet úplně.
+   */
+  if (process.env.BLOB_READ_WRITE_TOKEN && !process.env.NACVIK_POVOL_BLOB) {
+    console.error(
+      'V prostředí je BLOB_READ_WRITE_TOKEN. Nácvik by mohl zasáhnout ostré úložiště.\n' +
+        'Spusť ho bez tokenu, nebo vědomě přes NACVIK_POVOL_BLOB=1.',
+    )
+    process.exit(1)
+  }
+
   const ciselnik = JSON.parse(
     readFileSync(join(KOREN, 'data/ciselniky/zastupitelstva.json'), 'utf8'),
   ) as { zastupitelstva: { kod: string; slug: string }[] }
@@ -115,8 +129,8 @@ async function main() {
   kontrola(`postup sčítání ${postup.procenta} %`, postup.procenta === 100)
 
   console.log('\n4. Uložení a načtení snapshotu')
-  await ulozSnapshot(snapshot)
-  const nactene = await nactiSnapshot()
+  await ulozSnapshot(snapshot, 'nacvik')
+  const nactene = await nactiSnapshot('nacvik')
   kontrola('snapshot se načetl zpět', nactene !== null)
   kontrola(
     'načtený snapshot má stejná data',
@@ -131,7 +145,7 @@ async function main() {
     (e: Error) => e.message,
   )
   kontrola('neplatný dotaz na ČSÚ selže a nepřepíše snapshot', rozbite !== 'neselhalo', rozbite)
-  const poVypadku = await nactiSnapshot()
+  const poVypadku = await nactiSnapshot('nacvik')
   kontrola('po neúspěchu zůstal poslední dobrý snapshot', poVypadku?.generovano === snapshot.generovano)
 
   console.log(

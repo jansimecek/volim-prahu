@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { PRAH_ZASTARALOSTI_MINUT, stariMinut } from '@/lib/snapshot'
-import { celkovyPostup, type Snapshot } from '@/lib/vysledky'
+import { StariSnapshotu } from '@/components/StariSnapshotu'
+import { celkovyPostup, formatujCasCSU, KOD_MAGISTRATU, type Snapshot } from '@/lib/vysledky'
 
 const cas = new Intl.DateTimeFormat('cs-CZ', {
   dateStyle: 'short',
@@ -15,34 +15,31 @@ const procenta = new Intl.NumberFormat('cs-CZ', {
 })
 const procentaKratce = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 1 })
 
+/** Neplatný čas nesmí shodit celou routu — v Server Componentě by to byla 500. */
+function bezpecnyCas(hodnota: string | undefined): string {
+  if (!hodnota) return '—'
+  const datum = new Date(hodnota)
+  return Number.isFinite(datum.getTime()) ? cas.format(datum) : '—'
+}
+
 export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
   const postup = celkovyPostup(snapshot)
-  const stari = stariMinut(snapshot)
-  const zastarale = stari > PRAH_ZASTARALOSTI_MINUT
-  const magistrat = snapshot.zastupitelstva.find((z) => z.kod === '554782')
+  const magistrat = snapshot.zastupitelstva.find((z) => z.kod === KOD_MAGISTRATU)
   const casti = snapshot.zastupitelstva
-    .filter((z) => z.kod !== '554782')
+    .filter((z) => z.kod !== KOD_MAGISTRATU)
     .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'))
 
   return (
     <div className="space-y-10">
       {/* Stáří dat je první věc na stránce. Neoznačená stará data jsou horší než žádná. */}
-      <section
-        className={`max-w-prose border-l-2 pl-5 ${zastarale ? 'border-praha' : 'border-linka'}`}
-      >
+      <section className="max-w-prose border-l-2 border-linka pl-5">
         <p className="popisek-uredni">Stav dat</p>
         <p className="mt-1">
-          Naposledy staženo {cas.format(new Date(snapshot.stazeno))}
-          {stari > 0 && ` (před ${stari} min)`}. Zdroj vygeneroval data{' '}
-          {snapshot.generovano ? cas.format(new Date(snapshot.generovano)) : '—'}.
+          Naposledy staženo{' '}
+          <time dateTime={snapshot.stazeno}>{bezpecnyCas(snapshot.stazeno)}</time>. Zdroj
+          vygeneroval data {formatujCasCSU(snapshot.generovano)}.
+          <StariSnapshotu stazeno={snapshot.stazeno} />
         </p>
-        {zastarale && (
-          <p className="mt-2 text-praha">
-            Data jsou starší než {PRAH_ZASTARALOSTI_MINUT} minut. Buď se sčítání
-            nehýbe, nebo se nám nedaří stahovat z ČSÚ — ukazujeme poslední údaje,
-            které máme.
-          </p>
-        )}
         <p className="popisek-uredni mt-3">
           Sečteno {cislo.format(postup.zpracovano)} z {cislo.format(postup.celkem)} okrsků ·{' '}
           {procentaKratce.format(postup.procenta)} %
@@ -94,7 +91,9 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
         <h2 className="text-2xl">Městské části</h2>
         <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2 lg:grid-cols-3">
           {casti.map((z) => {
-            const vitez = z.strany[0]
+            // Dokud není sečteno nic, nemá „vedoucí strana“ smysl — první
+            // v pořadí by byla jen ta s nejnižším číslem na lístku.
+            const vitez = z.okrskyZpracovano > 0 && z.strany[0]?.hlasy ? z.strany[0] : undefined
             return (
               <li key={z.kod} className="bg-papir p-3">
                 <Link href={`/mestska-cast/${z.slug}`} className="no-underline">
