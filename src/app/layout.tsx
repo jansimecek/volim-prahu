@@ -42,15 +42,19 @@ export const metadata: Metadata = {
   },
 }
 
-// Popisky jsou krátké schválně — v navigaci je sedm položek a na mobilu se zalamují.
+/**
+ * Navigace drží jen to, co hledá volič. Referenční podklady — kompetenční
+ * matice, rozpočtový rámec a plnění minulého prohlášení — jsou odkazované
+ * z metodiky, z každého hodnocení a z patičky, protože se čtou k něčemu,
+ * ne samy o sobě.
+ */
 const NAVIGACE = [
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
-  { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo rozhoduje' },
-  { href: '/rozpoctovy-ramec', popisek: 'Rozpočet' },
+  { href: '/senat', popisek: 'Senát' },
+  { href: '/temata', popisek: 'Témata' },
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
-  { href: '/hlasovani', popisek: 'Anketa' },
   { href: '/hledani', popisek: 'Hledat' },
 ] as const
 
@@ -110,8 +114,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </li>
               <li>
-                <Link href="/senat" className="popisek-uredni no-underline">
-                  Senát
+                <Link href="/kdo-o-cem-rozhoduje" className="popisek-uredni no-underline">
+                  Kdo o čem rozhoduje
+                </Link>
+              </li>
+              <li>
+                <Link href="/rozpoctovy-ramec" className="popisek-uredni no-underline">
+                  Kolik má Praha peněz
+                </Link>
+              </li>
+              <li>
+                <Link href="/hlasovani" className="popisek-uredni no-underline">
+                  Anketa
                 </Link>
               </li>
               <li>

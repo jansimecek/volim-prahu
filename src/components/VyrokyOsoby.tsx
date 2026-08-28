@@ -6,7 +6,7 @@ const POPIS_TYPU: Record<string, string> = {
   'stranicky-web': 'text na webu strany, ne nezávislé médium',
 }
 
-const formatDatumu = new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'long' })
+import { datumCesky } from '@/lib/cestina'
 
 export function VyrokyOsoby({ osobaSlug }: { osobaSlug: string }) {
   const osoba = vyroky.osoby.find((o) => o.osobaSlug === osobaSlug)
@@ -65,7 +65,7 @@ export function VyrokyOsoby({ osobaSlug }: { osobaSlug: string }) {
                   <a href={zdroj.url} className="underline" rel="noopener nofollow">
                     {zdroj.medium}
                   </a>
-                  , {formatDatumu.format(new Date(zdroj.datum))}
+                  , {datumCesky(zdroj.datum)}
                   {POPIS_TYPU[zdroj.typ] ? ` · ${POPIS_TYPU[zdroj.typ]}` : ''}
                 </p>
               )}

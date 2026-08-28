@@ -12,6 +12,7 @@ const TRASY = [
   { cesta: '/mestska-cast/praha-7', nazev: 'městská část' },
   { cesta: '/kandidat/portlik-tomas', nazev: 'profil kandidáta' },
   { cesta: '/praha/strana/spojena-levice-pro-prahu/program', nazev: 'program s hodnocením' },
+  { cesta: '/temata', nazev: 'srovnání témat' },
   { cesta: '/kdo-o-cem-rozhoduje', nazev: 'kompetenční matice' },
   { cesta: '/rozpoctovy-ramec', nazev: 'rozpočtový rámec' },
   { cesta: '/senat', nazev: 'senát' },
