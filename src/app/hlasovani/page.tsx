@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { HlasovaciFormular } from '@/components/HlasovaciFormular'
 import { hlasovaniOtevrene } from '@/lib/hlasovani'
 import { MESTSKE_CASTI, subjekty } from '@/lib/obsah'
+import { ulozisteNastaveno } from '@/lib/uloziste'
 
 export const metadata: Metadata = {
   title: 'Anketa',
@@ -15,7 +16,10 @@ export const revalidate = 300
 
 export default function StrankaAnkety() {
   const kandidujici = subjekty('magistrat')
-  const otevrene = hlasovaniOtevrene()
+  // Formulář se nesmí ukázat, když není kam ukládat — čtenář by vyplnil hlas
+  // a dostal chybu. Radši rovnou řekneme, že anketa ještě neběží.
+  const otevrene = hlasovaniOtevrene() && ulozisteNastaveno()
+  const chybiUloziste = hlasovaniOtevrene() && !ulozisteNastaveno()
 
   return (
     <div className="space-y-10">
@@ -62,7 +66,16 @@ export default function StrankaAnkety() {
         </p>
       </section>
 
-      {!otevrene ? (
+      {chybiUloziste ? (
+        <section className="max-w-prose border border-okr px-4 py-4 text-okr">
+          <h2 className="font-display font-semibold">Anketa se ještě nespustila</h2>
+          <p className="mt-2">
+            Kandidátky už známe, ale anketa zatím nemá kam ukládat hlasy. Nechceme
+            nabízet formulář, který by hlas nepřijal — spustíme ji, jakmile bude
+            úložiště připravené.
+          </p>
+        </section>
+      ) : !otevrene ? (
         <p className="border border-inkoust px-4 py-3">
           Anketa je uzavřená. Výsledky najdete na stránce{' '}
           <Link href="/hlasovani/vysledky" className="odkaz-akcent">

@@ -111,6 +111,16 @@ function souborUloziste(): Uloziste {
   }
 }
 
+/**
+ * Je kam ukládat? Stránka se na to musí umět zeptat dřív, než nabídne
+ * formulář — jinak by čtenář vyplnil hlas a dostal chybu.
+ */
+export function ulozisteNastaveno(): boolean {
+  if (process.env.POSTGRES_URL || process.env.DATABASE_URL) return true
+  // Mimo produkci stačí soubor.
+  return process.env.NODE_ENV !== 'production'
+}
+
 export class UlozisteNenastaveno extends Error {
   constructor() {
     super('Úložiště ankety není nastavené: chybí POSTGRES_URL.')

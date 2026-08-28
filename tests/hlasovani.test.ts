@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   KONEC_VOLEB,
   hlasovaniOtevrene,
@@ -76,5 +76,30 @@ describe('validace vstupu', () => {
   it('odběr přijímá jen e-mail a nic víc', () => {
     const vysledek = schemaOdberu.parse({ email: 'a@b.cz', mestskaCast: 'praha-7' })
     expect(vysledek).toEqual({ email: 'a@b.cz' })
+  })
+})
+
+describe('formulář se nenabízí bez úložiště', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs()
+  })
+
+  it('v produkci bez POSTGRES_URL není kam ukládat', async () => {
+    const { ulozisteNastaveno } = await import('../src/lib/uloziste')
+    vi.stubEnv('NODE_ENV', 'production')
+    vi.stubEnv('POSTGRES_URL', '')
+    vi.stubEnv('DATABASE_URL', '')
+    expect(ulozisteNastaveno()).toBe(false)
+
+    vi.stubEnv('POSTGRES_URL', 'postgres://localhost/test')
+    expect(ulozisteNastaveno()).toBe(true)
+  })
+
+  it('mimo produkci stačí soubor', async () => {
+    const { ulozisteNastaveno } = await import('../src/lib/uloziste')
+    vi.stubEnv('NODE_ENV', 'development')
+    vi.stubEnv('POSTGRES_URL', '')
+    vi.stubEnv('DATABASE_URL', '')
+    expect(ulozisteNastaveno()).toBe(true)
   })
 })
