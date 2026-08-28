@@ -69,9 +69,9 @@ export default function StrankaSenatu() {
           ))}
         </ul>
         <p className="mt-4 max-w-prose text-sm text-seda-uredni">
-          Uvedení senátoři jsou ti stávající, kterým mandát těmito volbami končí. Zda
-          ho budou obhajovat, jsme z veřejných zdrojů Senátu nezjistili — kandidátní
-          listiny pro senátní volby zatím nejsou v otevřených datech.
+          Uvedení senátoři jsou ti stávající, kterým mandát těmito volbami končí.
+          Jestli ho obhajují, poznáte na stránce obvodu — odvozujeme to z kandidátní
+          listiny ČSÚ, ne z jejich vyjádření.
         </p>
       </section>
 

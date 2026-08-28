@@ -29,6 +29,9 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 | `pnpm validate` | Kontrola obsahu (nedopsané pasáže, slovník verdiktu) |
 | `pnpm validate --strict --odkazy` | Přísná varianta před ostrým spuštěním |
 | `pnpm import:csu` | Import kandidátek a číselníků z ČSÚ |
+| `pnpm import:senat` | Import senátních kandidátů (sada se2026) |
+| `pnpm import:desky` | Sběr oznámení z úředních desek městských částí |
+| `pnpm nacvik` | Nácvik volební noci proti datům 2022 |
 | `pnpm gen:mc` | Doplní chybějící skelety městských částí |
 
 ## Jak je repo rozdělené

@@ -56,3 +56,32 @@ describe('senátní obvody proti číselníku ČSÚ', () => {
     expect(senat.map((o) => o.cislo).sort((a, b) => a - b)).toEqual([21, 24, 27])
   })
 })
+
+describe('kandidáti do Senátu', () => {
+  it('všichni kandidáti patří do některého z letošních obvodů', async () => {
+    const { readFileSync, existsSync } = await import('node:fs')
+    const cesta = join(KOREN, 'data/senat/kandidati.json')
+    if (!existsSync(cesta)) return
+    const data = JSON.parse(readFileSync(cesta, 'utf8')) as {
+      kandidati: { obvod: number; cislo: number; slug: string }[]
+    }
+    const letosni = new Set(senat.map((o) => o.cislo))
+    for (const k of data.kandidati) {
+      expect(letosni.has(k.obvod), `kandidát v obvodu ${k.obvod}, kde se letos nevolí`).toBe(true)
+    }
+  })
+
+  it('čísla kandidátů jsou v každém obvodu jedinečná a souvislá', async () => {
+    const { readFileSync, existsSync } = await import('node:fs')
+    const cesta = join(KOREN, 'data/senat/kandidati.json')
+    if (!existsSync(cesta)) return
+    const data = JSON.parse(readFileSync(cesta, 'utf8')) as {
+      kandidati: { obvod: number; cislo: number }[]
+    }
+    for (const obvod of senat.map((o) => o.cislo)) {
+      const cisla = data.kandidati.filter((k) => k.obvod === obvod).map((k) => k.cislo).sort((a, b) => a - b)
+      expect(new Set(cisla).size).toBe(cisla.length)
+      expect(cisla).toEqual(Array.from({ length: cisla.length }, (_, i) => i + 1))
+    }
+  })
+})

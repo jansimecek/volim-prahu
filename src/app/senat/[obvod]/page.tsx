@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
+import { celeJmenoSenat, kandidatiObvodu, obhajuje, sadaSenat } from '@/lib/senatKandidati'
 
 type Parametry = { params: Promise<{ obvod: string }> }
 
@@ -27,6 +28,8 @@ export default async function StrankaObvodu({ params }: Parametry) {
   if (!obvod) notFound()
 
   const nazevMC = (s: string) => MESTSKE_CASTI.find((mc) => mc.slug === s)?.nazev ?? s
+  const kandidati = kandidatiObvodu(obvod.cislo)
+  const senatorObhajuje = obhajuje(obvod.cislo, obvod.senator)
 
   return (
     <div className="space-y-10">
@@ -51,8 +54,10 @@ export default async function StrankaObvodu({ params }: Parametry) {
           </dd>
         </div>
         <div className="bg-papir p-3">
-          <dt className="popisek-uredni">Městských částí celých</dt>
-          <dd className="mt-1 font-mono text-lg">{obvod.mestskeCasti.length}</dd>
+          <dt className="popisek-uredni">Kandidátů</dt>
+          <dd className="mt-1 font-mono text-lg">
+            {kandidati.length > 0 ? kandidati.length : '—'}
+          </dd>
         </div>
         <div className="bg-papir p-3">
           <dt className="popisek-uredni">Volí se</dt>
@@ -63,6 +68,54 @@ export default async function StrankaObvodu({ params }: Parametry) {
       <div className="proza max-w-prose">
         <MDXContent code={obvod.content} />
       </div>
+
+      {senatorObhajuje !== null && (
+        <p className="max-w-prose border-l-2 border-praha pl-5">
+          <span className="popisek-uredni block">Obhajuje stávající senátor?</span>
+          {senatorObhajuje
+            ? `${obvod.senator} je na kandidátní listině a mandát obhajuje.`
+            : `${obvod.senator} mezi zaregistrovanými kandidáty není, mandát tedy neobhajuje.`}{' '}
+          Odvozeno z kandidátní listiny ČSÚ, ne z vyjádření dotčené osoby.
+        </p>
+      )}
+
+      {kandidati.length > 0 && (
+        <section>
+          <h2 className="text-2xl">Kandidáti</h2>
+          <p className="mt-1 max-w-prose text-sm text-seda-uredni">
+            Pořadí je podle vylosovaných čísel na hlasovacím lístku. Zvolen je ten, kdo
+            v prvním kole získá nadpoloviční většinu; jinak se koná druhé kolo mezi
+            dvěma nejúspěšnějšími.
+          </p>
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-inkoust">
+                  <th className="popisek-uredni py-2 pr-3 text-right">#</th>
+                  <th className="popisek-uredni py-2 pr-3">Jméno</th>
+                  <th className="popisek-uredni py-2 pr-3 text-right">Věk</th>
+                  <th className="popisek-uredni py-2 pr-3">Navrhla</th>
+                  <th className="popisek-uredni py-2">Povolání</th>
+                </tr>
+              </thead>
+              <tbody>
+                {kandidati.map((k) => (
+                  <tr key={k.cislo} className="border-b border-linka align-top">
+                    <td className="py-2 pr-3 text-right font-mono">{k.cislo}</td>
+                    <td className="py-2 pr-3">{celeJmenoSenat(k)}</td>
+                    <td className="py-2 pr-3 text-right font-mono">{k.vek}</td>
+                    <td className="py-2 pr-3">{k.volebniStrana || '—'}</td>
+                    <td className="py-2">{k.povolani || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="popisek-uredni mt-3">
+            Zdroj: otevřená data ČSÚ, sada {sadaSenat()}
+          </p>
+        </section>
+      )}
 
       <section>
         <h2 className="text-2xl">Které městské části sem patří</h2>
