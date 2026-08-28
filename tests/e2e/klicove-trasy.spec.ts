@@ -16,13 +16,21 @@ test('seznam městských částí filtruje bez ohledu na diakritiku', async ({ p
 test('stránka městské části ukazuje údaje z číselníku ČSÚ', async ({ page }) => {
   await page.goto('/mestska-cast/praha-7')
   await expect(page.getByRole('heading', { level: 1, name: 'Praha 7' })).toBeVisible()
-  await expect(page.getByText('Mandátů')).toBeVisible()
-  await expect(page.getByText('29', { exact: true })).toBeVisible()
+  // Počet mandátů je v definičním seznamu; samotné „29" je na stránce
+  // i mezi kandidáty, proto se ptáme na dvojici popisek–hodnota.
+  const mandaty = page.locator('dt', { hasText: 'Mandátů' }).locator('xpath=following-sibling::dd[1]')
+  await expect(mandaty).toHaveText('29')
+})
+
+test('stránka městské části vypisuje kandidující subjekty', async ({ page }) => {
+  await page.goto('/mestska-cast/praha-7')
+  await expect(page.getByRole('heading', { name: 'Kandidující subjekty' })).toBeVisible()
+  await expect(page.getByText(/uchází se .* volebních stran|volebních stran s celkem/)).toBeVisible()
 })
 
 test('metodika je dosažitelná z hlavní navigace', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Jak hodnotíme').click()
+  await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Metodika').click()
   await expect(page).toHaveURL(/\/jak-hodnotime$/)
   await expect(page.getByRole('heading', { name: 'Přehled stavů' })).toBeVisible()
 })

@@ -45,7 +45,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
         <div className="bg-papir p-3">
           <dt className="popisek-uredni">Stávající senátor</dt>
           <dd className="mt-1 font-mono">
-            <a href={obvod.senatorZdroj} className="odkaz-akcent" rel="noopener">
+            <a href={obvod.senatorZdroj} className="odkaz-akcent inline-block py-1" rel="noopener">
               {obvod.senator}
             </a>
           </dd>
@@ -98,10 +98,10 @@ export default async function StrankaObvodu({ params }: Parametry) {
 
       <footer className="border-t border-linka pt-6">
         <h2 className="popisek-uredni">Zdroje</h2>
-        <ul className="mt-2 space-y-1 text-sm">
+        <ul className="mt-2 text-sm">
           {obvod.zdroje.map((z) => (
             <li key={z.url}>
-              <a href={z.url} className="odkaz-akcent" rel="noopener">
+              <a href={z.url} className="odkaz-akcent inline-block py-1" rel="noopener">
                 {z.text}
               </a>
             </li>

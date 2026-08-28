@@ -86,6 +86,14 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 - Barvy použité na text musí splňovat WCAG 2.2 AA (`tests/kontrast.test.ts`).
 - V hodnoceních se nesmí objevit slovník verdiktu („lež", „podvod", …) —
   web hodnotí proveditelnost, ne pravdivost (`pnpm validate`).
+- Předvolební průzkumy se nezobrazují, dokud není potvrzený právní základ
+  moratoria. Návrh je fail-closed: `src/lib/moratorium.ts` má `MORATORIUM_OD`
+  i `PRAVNI_OPORA` na `null`, a dokud tam obojí nebude, `BlokPruzkumu` nepustí
+  ven nic. Zákon č. 491/2001 Sb. byl letos novelizován zákonem č. 70/2026 Sb.
+  a přesné znění lhůty se nepodařilo z veřejných zdrojů ověřit.
+- Přístupnost hlídá axe se sadou pravidel WCAG 2.2 AA nad dvanácti trasami
+  (`tests/e2e/pristupnost.spec.ts`). Lighthouse staví své skóre přístupnosti
+  na témže nástroji.
 - Výsledky ankety nelze vydat před zavřením volebních místností. Rozhoduje
   o tom jediná funkce, kterou volá API i stránka, a test hlídá, že se okno
   hlasování a okno výsledků nikdy nepřekryjí (`tests/hlasovani.test.ts`).
@@ -158,4 +166,9 @@ Nácvik nikdy nepíše do ostrého snapshotu — má vlastní cíl a nad produk�
 úložištěm odmítne běžet, aby výsledky roku 2022 nemohl vydat za průběžný
 stav voleb 2026.
 
-**Další na řadě:** archivní režim po sečtení výsledků.
+Web se sám přepíná mezi režimy podle času (`src/lib/rezim.ts`): před volbami,
+volební dny, sčítání a od 13. 10. **archiv**. V archivním režimu je nad obsahem
+pruh, který říká, že volby proběhly a nic z webu už není návod, jak volit.
+
+**Zbývá:** nastavení, která potřebují účet — Blob store, `CRON_SECRET`,
+secrets v repozitáři, Postgres pro anketu. A ověřit znění moratoria.

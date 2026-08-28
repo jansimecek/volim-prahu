@@ -41,13 +41,17 @@ export function RozpoctovyRamec() {
                     </p>
                   )}
 
-                  <ul className="mt-3 space-y-0.5">
+                  <ul className="mt-3">
                     {polozka.opora.map((id) => {
                       const zdroj = zdrojPodleId.get(id)
                       if (!zdroj) return null
                       return (
                         <li key={id} className="text-sm">
-                          <a href={zdroj.url} className="odkaz-akcent" rel="noopener">
+                          <a
+                            href={zdroj.url}
+                            className="odkaz-akcent inline-block py-1"
+                            rel="noopener"
+                          >
                             {zdroj.nazev}
                           </a>
                         </li>

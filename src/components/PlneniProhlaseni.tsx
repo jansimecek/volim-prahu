@@ -47,7 +47,7 @@ export function PlneniProhlaseni() {
           <p className="mt-1 text-sm">{mereni.metoda}</p>
           <p className="mt-2 text-sm">
             Zdroj:{' '}
-            <a href={dokument.url} className="odkaz-akcent" rel="noopener">
+            <a href={dokument.url} className="odkaz-akcent inline-block py-1" rel="noopener">
               {dokument.nazev}
             </a>{' '}
             ({dokument.stran} stran)
@@ -85,10 +85,10 @@ export function PlneniProhlaseni() {
 
                 <p className="mt-3 max-w-prose text-sm">{zavazek.vysledek}</p>
 
-                <ul className="mt-2 space-y-0.5">
+                <ul className="mt-2">
                   {zavazek.zdroje.map((z) => (
                     <li key={z.url} className="text-sm">
-                      <a href={z.url} className="odkaz-akcent" rel="noopener">
+                      <a href={z.url} className="odkaz-akcent inline-block py-1" rel="noopener">
                         {z.text}
                       </a>
                     </li>

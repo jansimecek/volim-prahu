@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import Link from 'next/link'
+import { PruhRezimu } from '@/components/PruhRezimu'
 import '../styles/globals.css'
 
 /**
@@ -78,6 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
         </header>
+
+        <PruhRezimu />
 
         <main id="obsah" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
           {children}

@@ -40,11 +40,17 @@ export function RazitkoHodnoceni({
   hodnoceni,
   slib,
   citaceZdroje,
+  urovenNadpisu = 2,
 }: {
   hodnoceni: HodnoceniSlibu
   slib: string
   citaceZdroje: string
+  /** Úroveň nadpisu slibu — razítko se používá v různě zanořených kontextech. */
+  urovenNadpisu?: 2 | 3
 }) {
+  // Slib je nadpisem svého bloku; bez toho by nadpisy na stránce přeskakovaly.
+  const NadpisSlibu = urovenNadpisu === 2 ? 'h2' : 'h3'
+  const NadpisPodrobnosti = urovenNadpisu === 2 ? 'h3' : 'h4'
   const zaver = POPIS_ZAVER[hodnoceni.zaver]
   const bunky = [
     { popisek: 'KOMPETENCE', ...POPIS_KOMPETENCE[hodnoceni.kompetence] },
@@ -56,7 +62,7 @@ export function RazitkoHodnoceni({
   return (
     <article className="razitko my-8">
       <div className="border-b border-inkoust px-4 py-3">
-        <p className="font-display text-lg font-semibold">{slib}</p>
+        <NadpisSlibu className="font-display text-lg font-semibold">{slib}</NadpisSlibu>
         <p className={`mt-2 razitko-hodnota ${TON_TRIDA[zaver.ton]}`}>
           <span className="znacka" aria-hidden="true">
             {ZNACKA[zaver.ton]}
@@ -81,7 +87,7 @@ export function RazitkoHodnoceni({
         <div className="border-t border-linka px-4 py-4">
           <p className="max-w-prose">{hodnoceni.zduvodneni}</p>
 
-          <h3 className="popisek-uredni mt-5">Zdroje</h3>
+          <NadpisPodrobnosti className="popisek-uredni mt-5">Zdroje</NadpisPodrobnosti>
           <ul className="mt-1 list-disc space-y-1 pl-5 text-sm break-words">
             {hodnoceni.zdroje.map((zdroj) => (
               <li key={zdroj}>
@@ -92,7 +98,7 @@ export function RazitkoHodnoceni({
             ))}
           </ul>
 
-          <h3 className="popisek-uredni mt-5">Citovaný slib</h3>
+          <NadpisPodrobnosti className="popisek-uredni mt-5">Citovaný slib</NadpisPodrobnosti>
           <p className="mt-1 text-sm break-words">
             <a href={citaceZdroje} className="odkaz-akcent" rel="noopener nofollow">
               {citaceZdroje}
@@ -101,7 +107,9 @@ export function RazitkoHodnoceni({
 
           {hodnoceni.reakce_subjektu && (
             <div className="mt-5 border-l-2 border-praha pl-4">
-              <h3 className="popisek-uredni">Reakce subjektu ({hodnoceni.reakce_subjektu.datum})</h3>
+              <NadpisPodrobnosti className="popisek-uredni">
+                Reakce subjektu ({hodnoceni.reakce_subjektu.datum})
+              </NadpisPodrobnosti>
               <p className="mt-1 max-w-prose text-sm">{hodnoceni.reakce_subjektu.text}</p>
               {hodnoceni.reakce_subjektu.odkaz && (
                 <p className="mt-1 text-sm">

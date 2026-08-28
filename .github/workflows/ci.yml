@@ -49,3 +49,11 @@ jobs:
 
       - name: Build
         run: pnpm exec next build
+
+      - name: Instalace prohlížeče pro e2e
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: E2E a audit přístupnosti
+        # Audit přístupnosti běží přes axe se sadou pravidel WCAG 2.2 AA —
+        # zadání ji žádá bez výjimek, takže je vynucená, ne kontrolovaná ručně.
+        run: pnpm test:e2e

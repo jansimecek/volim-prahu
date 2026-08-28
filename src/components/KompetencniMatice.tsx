@@ -54,10 +54,14 @@ export function KompetencniMatice() {
                     </p>
                   )}
 
-                  <ul className="mt-3 space-y-0.5">
+                  <ul className="mt-3">
                     {agenda.opora.map((o) => (
                       <li key={o.text} className="text-sm">
-                        <a href={o.url} className="odkaz-akcent" rel="noopener">
+                        <a
+                          href={o.url}
+                          className="odkaz-akcent inline-block py-1"
+                          rel="noopener"
+                        >
                           {o.text}
                         </a>
                       </li>

@@ -49,6 +49,7 @@ export default function StrankaMetodiky() {
           hodnoceni={UKAZKA}
           slib="Prodloužíme tramvajovou trať k sídlišti"
           citaceZdroje="https://volimprahu.cz/jak-hodnotime"
+          urovenNadpisu={3}
         />
       </section>
 
