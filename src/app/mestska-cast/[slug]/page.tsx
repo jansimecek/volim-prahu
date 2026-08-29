@@ -4,11 +4,11 @@ import { notFound } from 'next/navigation'
 import { Drobecky } from '@/components/Drobecky'
 import { MDXContent } from '@/components/mdx'
 import { RazenySeznam } from '@/components/RazenySeznam'
-import { sPoctem } from '@/lib/cestina'
+import { datumCesky, sPoctem } from '@/lib/cestina'
 import { MESTSKE_CASTI, SADA_CISELNIKU, cislo, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
-import { stavMestskeCasti } from '@/lib/desky'
+import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -103,17 +103,17 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
               <a href={deska.oznameni.url} className="odkaz-akcent" rel="noopener">
                 {deska.oznameni.nazev}
               </a>
-              {deska.oznameni.vyveseno && ` (vyvěšeno ${deska.oznameni.vyveseno})`}. Najdete
+              {deska.oznameni.vyveseno && ` (vyvěšeno ${datumCesky(deska.oznameni.vyveseno)})`}. Najdete
               v něm adresu vaší volební místnosti.
             </p>
           ) : (
             <p className="mt-1">
               Oznámení o době a místě konání voleb tahle část zatím nevyvěsila. Vyvěsit ho
               musí nejpozději 24. září 2026.{' '}
-              {deska.urlDesky ? (
+              {odkazNaDesku(deska) ? (
                 <>
                   Sledovat můžete{' '}
-                  <a href={deska.urlDesky} className="odkaz-akcent" rel="noopener">
+                  <a href={odkazNaDesku(deska)} className="odkaz-akcent" rel="noopener">
                     její úřední desku
                   </a>
                   .

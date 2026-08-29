@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { LHUTA_OZNAMENI, souhrnDesek, type StavDesky } from '@/lib/desky'
+import { LHUTA_OZNAMENI, souhrnDesek, type StavDesky, odkazNaDesku } from '@/lib/desky'
 import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
+import { datumCesky } from '@/lib/cestina'
 
 const POPIS_STAVU: Record<StavDesky['stav'], { text: string; trida: string; znacka: string }> = {
   'oznameni-nalezeno': { text: 'oznámení vyvěšeno', trida: 'razitko-prima', znacka: '●' },
@@ -73,16 +74,22 @@ export function UredniDesky() {
                         </a>
                         {s.oznameni.vyveseno && (
                           <span className="popisek-uredni ml-2">
-                            vyvěšeno {s.oznameni.vyveseno}
+                            vyvěšeno {datumCesky(s.oznameni.vyveseno)}
                           </span>
                         )}
                       </>
-                    ) : s.urlDesky ? (
-                      <a href={s.urlDesky} className="odkaz-akcent" rel="noopener">
+                    ) : odkazNaDesku(s) ? (
+                      <a href={odkazNaDesku(s)} className="odkaz-akcent" rel="noopener">
                         úřední deska
                       </a>
                     ) : (
                       <span className="text-seda-uredni">adresu desky nemáme</span>
+                    )}
+                    {/* Vysvětlení, proč se u téhle části nedá číst strojově
+                        nebo proč adresa zlobí. Bez něj vypadá prázdný řádek
+                        jako naše nedbalost, ne jako stav na straně úřadu. */}
+                    {s.poznamka && (
+                      <span className="mt-1 block text-drobne text-seda-uredni">{s.poznamka}</span>
                     )}
                   </td>
                 </tr>

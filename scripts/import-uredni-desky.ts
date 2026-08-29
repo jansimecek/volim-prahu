@@ -12,6 +12,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { jeOdkazMrtvy, popisChybyOdkazu } from '../src/lib/odkazy'
 import { bezDiakritiky } from '../src/lib/slug'
 
 const KOREN = join(__dirname, '..')
@@ -33,6 +34,8 @@ type Deska = {
   webMC?: string
   urlDesky?: string
   urlOtevrenaData?: string
+  /** Redakční vysvětlení, proč u téhle části něco nejde. Dostane se na web. */
+  poznamka?: string
 }
 
 type Polozka = { nazev: string; url: string; vyveseno: string }
@@ -43,6 +46,12 @@ type Stav = {
   zdroj: 'otevrena-data' | 'jen-odkaz'
   stav: 'oznameni-nalezeno' | 'ceka-se' | 'bez-otevrenych-dat' | 'zdroj-nedostupny'
   urlDesky?: string
+  /**
+   * Odpovídá adresa desky? Je to jediný odkaz, po kterém volič klikne, aby
+   * zjistil, kde se u něj volí — poslat ho na 404 je horší než neposlat ho
+   * nikam. Když je `false`, stránka odkaz nenabídne.
+   */
+  deskaDostupna?: boolean
   oznameni?: Polozka
   dalsiVolebni: Polozka[]
   poznamka?: string
@@ -70,6 +79,7 @@ function nactiDesky(): Deska[] {
       if (klic === 'webMC') akt.webMC = hodnota || undefined
       if (klic === 'urlDesky') akt.urlDesky = hodnota || undefined
       if (klic === 'urlOtevrenaData') akt.urlOtevrenaData = hodnota || undefined
+      if (klic === 'poznamka') akt.poznamka = hodnota || undefined
     }
   }
   if (akt) desky.push(akt)
@@ -90,6 +100,9 @@ async function zkontrolujDesku(deska: Deska): Promise<Stav> {
     stav: 'bez-otevrenych-dat',
     urlDesky: deska.urlDesky,
     dalsiVolebni: [],
+    // Redakční poznámka z YAMLu je výchozí; běhové chyby ji přepíšou,
+    // protože o aktuálním stavu vypovídají líp.
+    poznamka: deska.poznamka,
   }
 
   if (!deska.urlOtevrenaData) return zaklad
@@ -121,22 +134,44 @@ async function zkontrolujDesku(deska: Deska): Promise<Stav> {
       dalsiVolebni: volebni.filter((p) => p !== oznameni).slice(0, 8),
     }
   } catch (chyba) {
-    return { ...zaklad, stav: 'zdroj-nedostupny', poznamka: popisChyby(chyba) }
+    return { ...zaklad, stav: 'zdroj-nedostupny', poznamka: popisChybyOdkazu(chyba).popis }
   }
 }
 
 /**
- * Rozlišujeme výpadek od vady konfigurace. Část úřadů neposílá mezilehlý
- * certifikát — prohlížeč i curl si ho dotáhnou přes AIA, Node ne. Ověřování
- * kvůli tomu nevypínáme; radši to popíšeme přesně, ať je co nahlásit úřadu.
+ * Odpovídá lidská adresa desky?
+ *
+ * Kontroluje se zvlášť od otevřených dat, protože se rozcházejí: městská
+ * část může mít funkční strojový výstup a přitom přestěhovanou stránku,
+ * nebo naopak. Opakuje se jednou — jeden výpadek uprostřed pětapadesáti
+ * sekvenčních požadavků nesmí vypadat jako zrušená stránka.
  */
-function popisChyby(chyba: unknown): string {
-  const zprava = chyba instanceof Error ? (chyba.cause as Error | undefined)?.message ?? chyba.message : String(chyba)
-  if (/unable to verify the first certificate|self-signed certificate/i.test(zprava)) {
-    return 'Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. Vada na straně úřadu.'
+async function overDesku(
+  url: string | undefined,
+): Promise<{ dostupna?: boolean; poznamka?: string }> {
+  if (!url) return {}
+  for (const pokus of [1, 2]) {
+    try {
+      const odpoved = await fetch(url, {
+        method: 'GET',
+        redirect: 'follow',
+        headers: { 'user-agent': 'Mozilla/5.0 (kontrola odkazu, volimprahu.cz)' },
+        signal: AbortSignal.timeout(20_000),
+      })
+      if (odpoved.ok) return { dostupna: true }
+      if (pokus === 2 || odpoved.status < 500) {
+        return { dostupna: false, poznamka: `Adresa desky vrací HTTP ${odpoved.status}.` }
+      }
+    } catch (chyba) {
+      const { druh, popis } = popisChybyOdkazu(chyba)
+      // Neúplný řetěz certifikátů vidí jen strojový klient. Odkaz zůstává
+      // pro čtenáře použitelný, jen si o tom poznamenáme, co je špatně.
+      if (!jeOdkazMrtvy(druh)) return { dostupna: true, poznamka: popis }
+      if (pokus === 2) return { dostupna: false, poznamka: popis }
+    }
+    await new Promise((hotovo) => setTimeout(hotovo, 3_000))
   }
-  if (/timed out|aborted/i.test(zprava)) return 'Server neodpověděl včas.'
-  return zprava
+  return { dostupna: false }
 }
 
 async function main() {
@@ -146,7 +181,19 @@ async function main() {
   const stavy: Stav[] = []
   // Sekvenčně — cílem není zátěžový test cizích serverů.
   for (const deska of desky) {
-    stavy.push(await zkontrolujDesku(deska))
+    const stav = await zkontrolujDesku(deska)
+    const deska2 = await overDesku(stav.urlDesky)
+    stavy.push({
+      ...stav,
+      deskaDostupna: deska2.dostupna,
+      poznamka: stav.poznamka ?? deska2.poznamka,
+    })
+  }
+
+  const mrtve = stavy.filter((s) => s.deskaDostupna === false)
+  if (mrtve.length > 0) {
+    console.log(`\nAdresa desky neodpovídá u ${mrtve.length} částí — opravit v content/uredni-desky.yaml:`)
+    for (const s of mrtve) console.log(`  ${s.nazev}: ${s.urlDesky}`)
   }
 
   const souhrn = stavy.reduce<Record<string, number>>((acc, s) => {

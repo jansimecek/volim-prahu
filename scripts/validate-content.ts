@@ -11,6 +11,7 @@
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, relative } from 'node:path'
+import { jeOdkazMrtvy, popisChybyOdkazu } from '../src/lib/odkazy'
 
 const KOREN = join(__dirname, '..')
 const OBSAH = join(KOREN, 'content')
@@ -102,6 +103,9 @@ for (const cesta of vsechnySoubory(OBSAH)) {
  */
 const NEOVEROVAT = ['instagram.com', 'x.com', 'twitter.com', 'facebook.com', 'linkedin.com']
 
+/** Stavy, které mohou být přechodné a stojí za druhý pokus. */
+const PRECHODNE_STAVY = new Set([408, 425, 429, 500, 502, 503, 504])
+
 async function overOdkazy() {
   // `new URL` na neplatné adrese vyhodí výjimku. Bez ošetření by překlep
   // ve zdroji shodil celý běh dřív, než se vypíšou už posbírané nálezy —
@@ -118,8 +122,31 @@ async function overOdkazy() {
     if (!NEOVEROVAT.some((host) => hostitel.endsWith(host))) seznam.push(odkaz)
   }
   console.log(`Ověřuji ${seznam.length} odkazů …`)
-  // Sekvenčně a s krátkým timeoutem — cílem není zátěžový test cizích serverů.
+
   for (const odkaz of seznam) {
+    const vysledek = await zkusOdkaz(odkaz)
+    if (vysledek) nalezy.push(vysledek)
+  }
+}
+
+const cekej = (ms: number) => new Promise((hotovo) => setTimeout(hotovo, ms))
+
+/**
+ * Jeden odkaz, s jedním opakováním.
+ *
+ * Opakování tu není pro pohodlí. Bez něj hlásila validace jako mrtvé
+ * i adresy, které odpovídají do jedné sekundy — úřední desky Prahy 2,
+ * Prahy 4, Dubče a Křeslic propadly na jednom běhu a na dalším prošly.
+ * Jeden výpadek sítě uprostřed stošedesáti sekvenčních požadavků tak
+ * vypadal stejně jako zrušená stránka, což je nejhorší možná záměna:
+ * skutečné mrtvé odkazy se ztratí v šumu falešných.
+ *
+ * Opakuje se jen to, co může být přechodné — chyba spojení, vypršení
+ * časového limitu a odpovědi 429 a 503. Čtyřsetčtyřka je odpověď serveru,
+ * ne náhoda, a opakovat ji nemá smysl.
+ */
+async function zkusOdkaz(odkaz: string): Promise<Nalez | null> {
+  for (const pokus of [1, 2]) {
     try {
       const odpoved = await fetch(odkaz, {
         method: 'GET',
@@ -127,25 +154,40 @@ async function overOdkazy() {
         // Bez User-Agent vrací část právních serverů (zakonyprolidi.cz) 403,
         // což by validaci shazovalo na odkazech, které fungují.
         headers: { 'user-agent': 'Mozilla/5.0 (kontrola odkazu, volimprahu.cz)' },
-        signal: AbortSignal.timeout(15_000),
+        signal: AbortSignal.timeout(20_000),
       })
-      if (!odpoved.ok) {
-        nalezy.push({
-          soubor: '(odkazy)',
-          radek: 0,
-          zprava: `Nefunkční odkaz (${odpoved.status}): ${odkaz}`,
-          tvrde: true,
-        })
+      if (odpoved.ok) return null
+      if (pokus === 1 && PRECHODNE_STAVY.has(odpoved.status)) {
+        await cekej(3_000)
+        continue
       }
-    } catch {
-      nalezy.push({
+      return {
         soubor: '(odkazy)',
         radek: 0,
-        zprava: `Odkaz nedostupný: ${odkaz}`,
+        zprava: `Nefunkční odkaz (${odpoved.status}): ${odkaz}`,
+        tvrde: true,
+      }
+    } catch (chyba) {
+      const { druh, popis } = popisChybyOdkazu(chyba)
+      // Neúplný řetěz certifikátů je vada serveru, kterou vidí jen strojový
+      // klient — v prohlížeči odkaz funguje. Hlásit ho jako mrtvý by zahltilo
+      // report a skutečné mrtvé odkazy by se v tom šumu ztratily.
+      if (!jeOdkazMrtvy(druh)) {
+        return { soubor: '(odkazy)', radek: 0, zprava: `${popis} ${odkaz}`, tvrde: false }
+      }
+      if (pokus === 1) {
+        await cekej(3_000)
+        continue
+      }
+      return {
+        soubor: '(odkazy)',
+        radek: 0,
+        zprava: `Odkaz nedostupný ani na druhý pokus (${popis}): ${odkaz}`,
         tvrde: strict,
-      })
+      }
     }
   }
+  return null
 }
 
 /**

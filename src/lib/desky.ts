@@ -9,6 +9,8 @@ export type StavDesky = {
   zdroj: 'otevrena-data' | 'jen-odkaz'
   stav: 'oznameni-nalezeno' | 'ceka-se' | 'bez-otevrenych-dat' | 'zdroj-nedostupny'
   urlDesky?: string
+  /** Odpovídá adresa desky? Když ne, odkaz se čtenáři nenabízí. */
+  deskaDostupna?: boolean
   oznameni?: PolozkaDesky
   dalsiVolebni: PolozkaDesky[]
   poznamka?: string
@@ -30,4 +32,13 @@ export function souhrnDesek(): SouhrnDesek | null {
 
 export function stavMestskeCasti(slug: string): StavDesky | undefined {
   return souhrnDesek()?.stavy.find((s) => s.slug === slug)
+}
+
+/**
+ * Adresa desky, na kterou se dá čtenáře poslat. Neověřenou pustíme (stará
+ * data ještě příznak nemají), prokazatelně mrtvou ne — odkaz na 404 je
+ * horší než přiznané „adresu nemáme".
+ */
+export function odkazNaDesku(stav: StavDesky | undefined): string | undefined {
+  return stav?.deskaDostupna === false ? undefined : stav?.urlDesky
 }

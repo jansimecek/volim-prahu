@@ -14,7 +14,7 @@ desky:
     poznamka: "Datová sada úřední desky je v katalogu registrovaná, ale bez odkazu na soubor — strojově ji zatím číst nejde."
   - slug: praha-11
     nazev: "Praha 11"
-    urlDesky: "https://www.praha11.cz/urad-mc/uredni-deska/"
+    urlDesky: "https://www.praha11.cz/cs/uredni-deska.html"
     urlOtevrenaData: "https://www.praha11.cz/c80d495fc598e689132ba10d5835165e"
   - slug: praha-12
     nazev: "Praha 12"
@@ -30,7 +30,7 @@ desky:
     urlOtevrenaData: "https://www.praha15.cz/opendata-uredni-deska"
   - slug: praha-16
     nazev: "Praha 16"
-    urlDesky: "https://www.praha16.eu/uredni-deska/"
+    urlDesky: "https://www.praha16.eu/radnice/urad/uredni-deska-1/"
     urlOtevrenaData: "https://www.praha16.eu/api/open-data/ofn6814716d17024"
   - slug: praha-17
     nazev: "Praha 17"
@@ -39,7 +39,7 @@ desky:
   - slug: praha-18
     nazev: "Praha 18"
     urlDesky: "https://www.letnany.cz/uredni-deska/"
-    urlOtevrenaData: "https://www.letnany.cz/opendata-uredni-deska"
+    poznamka: "Datová sada je v Národním katalogu otevřených dat registrovaná, ale adresa distribuce vrací 404 — strojově ji zatím číst nejde."
   - slug: praha-19
     nazev: "Praha 19"
     urlDesky: "https://kbely.imunis.cz/edeska/"
@@ -211,8 +211,7 @@ desky:
   - slug: praha-sterboholy
     nazev: "Praha-Štěrboholy"
     webMC: "https://www.sterboholy.cz/"
-    urlDesky: "https://www.sterboholy.cz/urad-mestske-casti/uredni-deska"
-    poznamka: "Adresu se nepodařilo načíst — ověřit ručně."
+    urlDesky: "https://www.sterboholy.cz/n/uredni-deska"
   - slug: praha-suchdol
     nazev: "Praha-Suchdol"
     webMC: "https://praha-suchdol.cz/"

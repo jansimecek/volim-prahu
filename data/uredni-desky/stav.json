@@ -1,5 +1,5 @@
 {
-  "zkontrolovano": "2026-08-27",
+  "zkontrolovano": "2026-08-29",
   "stavy": [
     {
       "slug": "praha-1",
@@ -7,21 +7,24 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha1.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "poznamka": "Datová sada úřední desky je v katalogu registrovaná, ale bez odkazu na soubor — strojově ji zatím číst nejde.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-11",
       "nazev": "Praha 11",
       "zdroj": "otevrena-data",
       "stav": "ceka-se",
-      "urlDesky": "https://www.praha11.cz/urad-mc/uredni-deska/",
+      "urlDesky": "https://www.praha11.cz/cs/uredni-deska.html",
       "dalsiVolebni": [
         {
           "nazev": "Informace o počtu a sídle volebních okrsků",
           "url": "https://www.praha11.cz/cs/uredni-deska.html-as4udetail-27696",
           "vyveseno": "2026-07-09"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-12",
@@ -70,7 +73,8 @@
           "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-spolecne-pro-libus-a-pisnici/d-120361",
           "vyveseno": "2026-08-21"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-13",
@@ -119,7 +123,8 @@
           "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/105003395",
           "vyveseno": "2026-07-09"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-15",
@@ -168,14 +173,15 @@
           "url": "https://www.praha15.cz/rozhodnuti-o-registraci-kl-pro-volby-do-zastupitelstva-mc-praha-15-kscm/d-29424",
           "vyveseno": "2026-08-18"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-16",
       "nazev": "Praha 16",
       "zdroj": "otevrena-data",
       "stav": "ceka-se",
-      "urlDesky": "https://www.praha16.eu/uredni-deska/",
+      "urlDesky": "https://www.praha16.eu/radnice/urad/uredni-deska-1/",
       "dalsiVolebni": [
         {
           "nazev": "Vyhrazení ploch pro vylepení volebních plakátů",
@@ -212,7 +218,8 @@
           "url": "https://www.praha16.eu/radnice/urad/uredni-deska-1/zapis-o-vysledku-voleb-do-zastupitelstva-obce-3368.html",
           "vyveseno": "2018-10-07"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-17",
@@ -261,16 +268,18 @@
           "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=47341",
           "vyveseno": "2026-05-15"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-18",
       "nazev": "Praha 18",
-      "zdroj": "otevrena-data",
-      "stav": "zdroj-nedostupny",
+      "zdroj": "jen-odkaz",
+      "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.letnany.cz/uredni-deska/",
       "dalsiVolebni": [],
-      "poznamka": "HTTP 404"
+      "poznamka": "Datová sada je v Národním katalogu otevřených dat registrovaná, ale adresa distribuce vrací 404 — strojově ji zatím číst nejde.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-19",
@@ -284,7 +293,8 @@
           "url": "https://kbely.imunis.cz/edeska/detail?id=7456",
           "vyveseno": ""
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-2",
@@ -293,7 +303,8 @@
       "stav": "zdroj-nedostupny",
       "urlDesky": "https://edeska.praha2.cz/eDeska/eDeskaAktualni.jsp",
       "dalsiVolebni": [],
-      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. Vada na straně úřadu."
+      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. V prohlížeči stránka funguje; vada je na straně úřadu.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-20",
@@ -317,7 +328,8 @@
         "nazev": "Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do ZMČ",
         "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225116",
         "vyveseno": "2026-08-25"
-      }
+      },
+      "deskaDostupna": true
     },
     {
       "slug": "praha-3",
@@ -346,7 +358,8 @@
           "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=98946",
           "vyveseno": "2026-06-30"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-4",
@@ -355,7 +368,8 @@
       "stav": "zdroj-nedostupny",
       "urlDesky": "https://cztedeskaext.praha4.cz/eDeska/eDeskaAktualni.jsp",
       "dalsiVolebni": [],
-      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. Vada na straně úřadu."
+      "poznamka": "Server neposílá mezilehlý certifikát, takže se řetěz nedá ověřit. V prohlížeči stránka funguje; vada je na straně úřadu.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-9",
@@ -399,7 +413,8 @@
           "url": "https://www.praha9.cz/volby-2026-stanoveni-poctu-clenu-zastupitelstva-mc-praha-9-pro-volebni-obdobi-2026-2030-0",
           "vyveseno": "2026-06-15"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-10",
@@ -407,7 +422,9 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://edeska.praha10.cz/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "poznamka": "Seznam dokumentů se dotahuje skriptem, obsah desky jsme textově neověřili.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-14",
@@ -415,7 +432,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://edeska.praha14.cz/eDeska/eDeskaAktualni.jsp",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-21",
@@ -423,7 +441,9 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha21.cz/informace/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "poznamka": "Seznam dokumentů se pravděpodobně vykresluje skriptem, ověřeno jen že stránka patří Praze 21.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-22",
@@ -431,7 +451,9 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://udeska.praha22.cz/praha22.cz/www/udeska/index.php",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "poznamka": "Kořenová adresa jen přesměrovává; uvedená je cílová stránka se seznamem dokumentů.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-5",
@@ -439,7 +461,9 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha5.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "poznamka": "Adresa je položka „Úřední deska“ v hlavní navigaci webu, seznam dokumentů se ale dotahuje skriptem. Před ostrým sběrem ověřit v prohlížeči.",
+      "deskaDostupna": true
     },
     {
       "slug": "praha-6",
@@ -447,7 +471,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha6.cz/uredni-deska/uredni-deska-rozcestnik.html",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-7",
@@ -455,7 +480,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha7.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-8",
@@ -463,7 +489,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha8.cz/deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-bechovice",
@@ -471,7 +498,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-bechovice.cz/urad/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-benice",
@@ -479,7 +507,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-benice.cz/urad-mc/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-brezineves",
@@ -487,7 +516,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://brezineves.cz/uredni_deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-cakovice",
@@ -495,7 +525,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.cakovice.cz/appo/urd/4",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-dablice",
@@ -503,7 +534,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://dablice.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-dolni-chabry",
@@ -511,7 +543,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.dchabry.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-dolni-mecholupy",
@@ -519,7 +552,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.dolnimecholupy.cz/urad-mestske-casti/uredni-deska-dokumenty/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-dolni-pocernice",
@@ -527,7 +561,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://praha-dolnipocernice.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-dubec",
@@ -535,7 +570,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-dubec.cz/uredni-deska/2",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-klanovice",
@@ -543,7 +579,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-klanovice.cz/urad-a-samosprava/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-kolodeje",
@@ -551,7 +588,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://housing.espis.mepnet.cz/eDeskaKolodeje/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-kolovraty",
@@ -559,7 +597,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://kolovraty.imunis.cz/edeska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-kralovice",
@@ -567,7 +606,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.mckralovice.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-kreslice",
@@ -575,7 +615,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.kreslice.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-kunratice",
@@ -583,7 +624,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-kunratice.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-libus",
@@ -591,7 +633,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-libus.cz/urednideska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-lipence",
@@ -599,7 +642,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-lipence.cz/urad-a-samosprava/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-lochkov",
@@ -607,7 +651,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-lochkov.cz/urad-a-samosprava/uredni-deska-1/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-lysolaje",
@@ -615,7 +660,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-lysolaje.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-nebusice",
@@ -623,7 +669,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.prahanebusice.cz/urad-a-samosprava/uredni-deska-1/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-nedvezi",
@@ -631,7 +678,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.mcnedvezi.cz/urad-2/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-petrovice",
@@ -639,7 +687,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.prahapetrovice.cz/uredni-deska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-predni-kopanina",
@@ -647,7 +696,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://housing.espis.mepnet.cz/eDeskaPKopanina/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-reporyje",
@@ -655,7 +705,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://housing.espis.mepnet.cz/eDeskaReporyje/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-satalice",
@@ -663,7 +714,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://satalice.imunis.cz/edeska",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-seberov",
@@ -671,7 +723,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.seberov.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-slivenec",
@@ -679,15 +732,17 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-slivenec.cz/uredni-deska/2",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-sterboholy",
       "nazev": "Praha-Štěrboholy",
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
-      "urlDesky": "https://www.sterboholy.cz/urad-mestske-casti/uredni-deska",
-      "dalsiVolebni": []
+      "urlDesky": "https://www.sterboholy.cz/n/uredni-deska",
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-suchdol",
@@ -695,7 +750,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://praha-suchdol.cz/urad-a-samosprava/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-troja",
@@ -703,7 +759,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.mctroja.cz/uredni-deska.php",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-ujezd",
@@ -711,7 +768,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://praha-ujezd.cz/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-velka-chuchle",
@@ -735,7 +793,8 @@
           "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33313",
           "vyveseno": "2026-07-09"
         }
-      ]
+      ],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-vinor",
@@ -743,7 +802,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.praha-vinor.cz/urad-mc/uredni-deska/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-zbraslav",
@@ -751,7 +811,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://www.mc-zbraslav.cz/uredni-deska/2",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     },
     {
       "slug": "praha-zlicin",
@@ -759,7 +820,8 @@
       "zdroj": "jen-odkaz",
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://mczlicin.galileo-smartcity.cz/",
-      "dalsiVolebni": []
+      "dalsiVolebni": [],
+      "deskaDostupna": true
     }
   ]
 }
