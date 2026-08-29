@@ -1,7 +1,7 @@
-import { kZobrazeni } from '@/lib/zpravicky'
+import { kZobrazeni } from '@/lib/aktuality'
 
 /**
- * RSS kanál zpráviček.
+ * RSS kanál aktualit.
  *
  * Odběratelem volebního průvodce jsou hlavně novináři a spolky, kteří web
  * nebudou obcházet ručně. Do každé položky proto jde i řádek se zdrojem —
@@ -23,12 +23,12 @@ function xml(text: string): string {
 }
 
 export async function GET(): Promise<Response> {
-  const zpravicky = (await kZobrazeni()).slice(0, 50)
-  const aktualizovano = zpravicky[0]?.vydano
+  const aktuality = (await kZobrazeni()).slice(0, 50)
+  const aktualizovano = aktuality[0]?.vydano
 
-  const polozky = zpravicky
+  const polozky = aktuality
     .map((z) => {
-      const odkaz = `${ZAKLAD}/zpravicky/${z.slug}`
+      const odkaz = `${ZAKLAD}/aktualne/${z.slug}`
       const zdroje = z.zdroje.map((s) => `${s.text}: ${s.url}`).join(' | ')
       // Provozní poznámka o webu zdroj nemá a mít nemusí — zdrojem jsme my.
       // Ve čtečce ale stojí vytržená z kontextu rubriky, takže se musí
@@ -49,9 +49,9 @@ export async function GET(): Promise<Response> {
   const telo = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Volím Prahu — zprávičky</title>
-    <link>${ZAKLAD}/zpravicky</link>
-    <atom:link href="${ZAKLAD}/zpravicky/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Volím Prahu — aktuality</title>
+    <link>${ZAKLAD}/aktualne</link>
+    <atom:link href="${ZAKLAD}/aktualne/feed.xml" rel="self" type="application/rss+xml" />
     <description>Krátké zápisy o průběhu pražských komunálních a senátních voleb 2026. Zprávy o volbách mají uvedený zdroj, poznámky o samotném webu jsou označené.</description>
     <language>cs</language>${aktualizovano ? `\n    <lastBuildDate>${new Date(aktualizovano).toUTCString()}</lastBuildDate>` : ''}
 ${polozky}

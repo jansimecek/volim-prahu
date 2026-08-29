@@ -38,7 +38,7 @@ const ZAKAZANY_SLOVNIK = [
  * Slovník verdiktu se kontroluje jen tam, kde hodnotíme vlastními slovy.
  *
  * Kontrolují se kolekce, kde redakce píše vlastními slovy o subjektech:
- * hodnocení programů a zprávičky. Při přidání další takové rubriky se sem
+ * hodnocení programů a aktuality. Při přidání další takové rubriky se sem
  * musí dopsat, jinak v ní pravidlo mlčky přestane platit.
  *
  * Metodika o slovníku mluvit musí — vysvětluje, proč takové výroky
@@ -48,7 +48,7 @@ const ZAKAZANY_SLOVNIK = [
  * ne náš verdikt, takže se `content/strany/` nekontroluje.
  */
 const KONTROLOVAT_SLOVNIK = (soubor: string) =>
-  soubor.startsWith('content/programy/') || soubor.startsWith('content/zpravicky/')
+  soubor.startsWith('content/programy/') || soubor.startsWith('content/aktualne/')
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 

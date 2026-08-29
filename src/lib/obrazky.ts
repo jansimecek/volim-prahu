@@ -2,7 +2,7 @@
  * Rozměry obrázku z hlavičky souboru.
  *
  * Bez knihovny schválně: kvůli jedinému skriptu se do projektu netahá další
- * závislost. Rozměry jsou ve schématu zprávičky povinné — bez nich si
+ * závislost. Rozměry jsou ve schématu aktuality povinné — bez nich si
  * prohlížeč nerezervuje místo a stránka při načtení podskočí.
  *
  * Formáty jsou ty, které dávají na webu smysl. Na cokoli jiného vrací null
@@ -86,7 +86,7 @@ export function rozmery(data: Buffer): Rozmery | null {
   }
 
   // SVG: rozměry z kořenového elementu. Bez nich by skript nahrál soubor,
-  // ke kterému schéma zprávičky vyžaduje rozměry, a redaktor by je neměl
+  // ke kterému schéma aktuality vyžaduje rozměry, a redaktor by je neměl
   // odkud vzít.
   const zacatekSvg = data.subarray(0, 2048).toString('utf8')
   if (zacatekSvg.includes('<svg')) {

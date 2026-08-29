@@ -4,7 +4,7 @@ import { rozmery } from '../src/lib/obrazky'
 /**
  * Rozměry se čtou ručně z hlavičky, takže se posun o jeden bajt nikde
  * neprojeví chybou — jen tichým nesmyslným číslem, které skončí ve
- * frontmatteru zprávičky a rozhodí rozvržení stránky. Proto tenhle test.
+ * frontmatteru aktuality a rozhodí rozvržení stránky. Proto tenhle test.
  */
 
 function png(sirka: number, vyska: number): Buffer {

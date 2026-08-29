@@ -1,10 +1,10 @@
 /**
- * Nahrání obrázku ke zprávičce do Vercel Blobu.
+ * Nahrání obrázku ke aktualitě do Vercel Blobu.
  *
  *   pnpm obrazek foto.jpg
  *   pnpm obrazek foto.jpg --nazev volebni-listek-2026
  *
- * Vypíše hotový blok `obrazek:` do frontmatteru zprávičky, včetně rozměrů —
+ * Vypíše hotový blok `obrazek:` do frontmatteru aktuality, včetně rozměrů —
  * ty jsou ve schématu povinné, aby stránka při načtení nepodskočila.
  * Alternativní text a zdroj skript nevymýšlí: doplňuje se ručně, protože
  * obrázek bez popisu je pro část čtenářů prázdné místo a fotka bez uvedeného
@@ -67,7 +67,7 @@ async function main() {
     return
   }
 
-  // Bez rozměrů se do Blobu nenahrává: schéma zprávičky je u obrázku z Blobu
+  // Bez rozměrů se do Blobu nenahrává: schéma aktuality je u obrázku z Blobu
   // vyžaduje a redaktor by je neměl odkud vzít. U lokálního souboru je doplní
   // Velite sám, tam to vadí míň.
   if (!mira) {
@@ -84,7 +84,7 @@ async function main() {
   }
   if (velikost > 1_000_000) {
     console.error(
-      `Varování: soubor má ${(velikost / 1_048_576).toFixed(1)} MB. Obrázky ke zprávičkám ` +
+      `Varování: soubor má ${(velikost / 1_048_576).toFixed(1)} MB. Obrázky ke aktualitám ` +
         'zmenšujte na šířku kolem 1600 px — web je servíruje tak, jak je nahrajete.',
     )
   }
@@ -97,11 +97,11 @@ async function main() {
 
   if (token) {
     const { put } = await import('@vercel/blob')
-    const vysledek = await put(`zpravicky/${nazev}${pripona}`, data, {
+    const vysledek = await put(`aktualne/${nazev}${pripona}`, data, {
       access: 'public',
       contentType: typ,
       // Náhodná přípona schválně: kdyby se přepsal obrázek, na který už někdo
-      // odkazuje ze staré zprávičky, změnil by se význam staré stránky.
+      // odkazuje ze staré aktuality, změnil by se význam staré stránky.
       addRandomSuffix: true,
       cacheControlMaxAge: 31_536_000,
     })
@@ -115,7 +115,7 @@ async function main() {
     )
   }
 
-  console.log('Vložte do frontmatteru zprávičky a doplňte alt, popisek a zdroj:\n')
+  console.log('Vložte do frontmatteru aktuality a doplňte alt, popisek a zdroj:\n')
   console.log('obrazek:')
   if (adresa) {
     console.log(`  url: ${adresa}`)

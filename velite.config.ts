@@ -535,20 +535,20 @@ const pruzkumy = defineCollection({
 })
 
 /**
- * Zprávičky — krátké zápisy o průběhu voleb.
+ * Aktuálně — krátké zápisy o průběhu voleb.
  *
- * Formát je záměrně sevřený: nadpis, pár vět, zdroj. Zprávička není článek
+ * Formát je záměrně sevřený: nadpis, pár vět, zdroj. Aktualita není článek
  * a nemá být komentářem. Platí tu stejné pravidlo jako všude jinde na webu:
  * tvrzení o volbách musí mít dohledatelný zdroj. Výjimku mají jen provozní
  * poznámky o samotném webu, kde jsme zdrojem my.
  */
-const zpravicky = defineCollection({
-  name: 'Zpravicka',
-  pattern: 'zpravicky/**/*.mdx',
+const aktuality = defineCollection({
+  name: 'Aktualita',
+  pattern: 'aktualne/**/*.mdx',
   schema: s
     .object({
       nadpis: s.string().min(1).max(120),
-      slug: s.slug('zpravicka'),
+      slug: s.slug('aktualita'),
       /**
        * Plný časový údaj VČETNĚ posunu (2026-10-09T18:30:00+02:00). Bez posunu
        * by se čas na serveru v UTC posunul o dvě hodiny — přesně na tuhle
@@ -564,12 +564,12 @@ const zpravicky = defineCollection({
       typ: s.enum(['zprava', 'provozni']).default('zprava'),
       /**
        * Volitelné zařazení do okruhu ze srovnání témat. Enum, ne volný
-       * řetězec: překlep by zprávičku tiše odznačil — build by prošel,
+       * řetězec: překlep by aktualitu tiše odznačil — build by prošel,
        * autor by si myslel, že ji zařadil, a čtenář by žádné zařazení neviděl.
        */
       okruh: s.enum(ID_OKRUHU).optional(),
       /**
-       * Obsahuje zprávička výsledky předvolebního průzkumu? Rozhoduje to
+       * Obsahuje aktualita výsledky předvolebního průzkumu? Rozhoduje to
        * o zobrazení v zakázané lhůtě — bez příznaku by rubrika byla dírou
        * v moratoriu, protože schéma jinak jen vyžaduje zdroj.
        */
@@ -616,7 +616,7 @@ const zpravicky = defineCollection({
         if (vPraze !== zapsany) {
           ctx.addIssue({
             code: 'custom',
-            message: `Zprávička "${data.slug}" má čas ${zapsany}, ale s uvedeným posunem to je v Praze ${vPraze}. Zkontrolujte posun — letní čas končí 25. 10. 2026.`,
+            message: `Aktualita "${data.slug}" má čas ${zapsany}, ale s uvedeným posunem to je v Praze ${vPraze}. Zkontrolujte posun — letní čas končí 25. 10. 2026.`,
           })
         }
       }
@@ -644,7 +644,7 @@ const zpravicky = defineCollection({
         }
       }
     })
-    .transform((data) => ({ ...data, url: `/zpravicky/${data.slug}` })),
+    .transform((data) => ({ ...data, url: `/aktualne/${data.slug}` })),
 })
 
 export default defineConfig({
@@ -668,6 +668,6 @@ export default defineConfig({
     plneni,
     vyroky,
     pruzkumy,
-    zpravicky,
+    aktuality,
   },
 })

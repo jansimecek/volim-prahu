@@ -101,26 +101,26 @@ test('řazení podle průzkumu se nenabízí a je vysvětlené proč', async ({ 
   await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
 })
 
-test('zprávičky mají permalink, čas a zdroj', async ({ page }) => {
-  await page.goto('/zpravicky')
-  await expect(page.getByRole('heading', { level: 1, name: 'Zprávičky' })).toBeVisible()
+test('aktuality mají permalink, čas a zdroj', async ({ page }) => {
+  await page.goto('/aktualne')
+  await expect(page.getByRole('heading', { level: 1, name: 'Aktuálně' })).toBeVisible()
 
   const prvni = page.locator('article').first()
   await expect(prvni.locator('time')).toHaveAttribute('datetime', /^\d{4}-\d{2}-\d{2}T/)
 
-  await page.goto('/zpravicky/moratorium-na-pruzkumy-2026')
+  await page.goto('/aktualne/moratorium-na-pruzkumy-2026')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Moratorium')
   await expect(page.getByRole('link', { name: /Ministerstvo vnitra/ })).toBeVisible()
 })
 
-test('kanál RSS zpráviček je platné XML s položkami', async ({ request }) => {
-  const odpoved = await request.get('/zpravicky/feed.xml')
+test('kanál RSS aktualit je platné XML s položkami', async ({ request }) => {
+  const odpoved = await request.get('/aktualne/feed.xml')
   expect(odpoved.status()).toBe(200)
   expect(odpoved.headers()['content-type']).toContain('application/rss+xml')
 
   const telo = await odpoved.text()
   expect(telo).toContain('<rss version="2.0"')
-  expect(telo).toContain('/zpravicky/moratorium-na-pruzkumy-2026')
+  expect(telo).toContain('/aktualne/moratorium-na-pruzkumy-2026')
   // Zdroj patří i do feedu — čte se vytržený z kontextu stránky.
   expect(telo).toContain('Zdroj:')
 })
@@ -141,4 +141,37 @@ test('404 mluví česky a nabídne cestu dál', async ({ page }) => {
   expect(odpoved?.status()).toBe(404)
   await expect(page.getByRole('heading', { level: 1 })).toContainText('nemáme')
   await expect(page.getByRole('link', { name: 'Vyhledávání' })).toBeVisible()
+})
+
+test('staré adresy zpráviček vedou na Aktuálně, ne na 404', async ({ page }) => {
+  // Rubrika se přejmenovala až po nasazení; jedna stará adresa je v RSS
+  // kanálu, který si mohl někdo přidat do čtečky.
+  await page.goto('/zpravicky')
+  await expect(page).toHaveURL(/\/aktualne$/)
+
+  await page.goto('/zpravicky/moratorium-na-pruzkumy-2026')
+  await expect(page).toHaveURL(/\/aktualne\/moratorium-na-pruzkumy-2026$/)
+})
+
+test('starý kanál RSS přesměrovává na nový', async ({ request }) => {
+  const odpoved = await request.get('/zpravicky/feed.xml')
+  expect(odpoved.status()).toBe(200)
+  expect(odpoved.url()).toContain('/aktualne/feed.xml')
+})
+
+test('infografika plnění vede na konkrétní závazek a stav nese i text', async ({ page }) => {
+  await page.goto('/minule-obdobi')
+  await expect(page.getByRole('heading', { name: 'Přehled na jeden pohled' })).toBeVisible()
+
+  // Barva nesmí být jediný nosič stavu — u každé dlaždice musí být i slovo.
+  const dlazdice = page.locator('a[href="#pr-smichov"]').first()
+  await expect(dlazdice).toContainText('Doloženo jako nesplněné')
+
+  await dlazdice.click()
+  await expect(page).toHaveURL(/#pr-smichov$/)
+  const zavazek = page.locator('#pr-smichov')
+  await expect(zavazek).toBeVisible()
+  await expect(zavazek).toContainText('Doloženo jako nesplněné')
+  // Tvrzení o nesplnění musí u sebe mít zdroj, na který se dá kliknout.
+  await expect(zavazek.getByRole('link')).not.toHaveCount(0)
 })

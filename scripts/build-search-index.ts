@@ -110,21 +110,21 @@ for (const s of stranky) {
 }
 
 /**
- * Zprávičky. Koncepty do indexu nepatří, stejně jako se nezobrazují na webu.
+ * Aktuálně. Koncepty do indexu nepatří, stejně jako se nezobrazují na webu.
  *
- * Zprávičky s výsledky průzkumu se nezařazují vůbec — index je statický
+ * Aktuálně s výsledky průzkumu se nezařazují vůbec — index je statický
  * soubor generovaný při buildu, takže by v něm po začátku moratoria zůstal
  * nadpis s procenty viset, dokud by se web znovu nenasadil.
  */
-const zpravicky = JSON.parse(readFileSync(join(KOREN, '.velite/zpravicky.json'), 'utf8')) as {
+const aktuality = JSON.parse(readFileSync(join(KOREN, '.velite/aktuality.json'), 'utf8')) as {
   slug: string
   nadpis: string
   shrnuti: string
   koncept: boolean
   obsahujePruzkum: boolean
 }[]
-for (const z of zpravicky.filter((x) => !x.koncept && !x.obsahujePruzkum)) {
-  zaznamy.push([z.nadpis, z.shrnuti, `/zpravicky/${z.slug}`, 'z'])
+for (const z of aktuality.filter((x) => !x.koncept && !x.obsahujePruzkum)) {
+  zaznamy.push([z.nadpis, z.shrnuti, `/aktualne/${z.slug}`, 'z'])
 }
 
 mkdirSync(join(KOREN, 'public'), { recursive: true })

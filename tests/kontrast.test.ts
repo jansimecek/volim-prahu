@@ -37,7 +37,8 @@ describe('kontrast palety', () => {
     ['tmavší papír (hover dlaždic)', token('papir-tmavsi')],
   ] as const
 
-  const textoveTokeny = ['inkoust', 'seda-uredni', 'praha', 'okr']
+  // `splneno` nese barevné odlišení splněného závazku na /minule-obdobi.
+  const textoveTokeny = ['inkoust', 'seda-uredni', 'praha', 'okr', 'splneno']
 
   for (const [nazevPodkladu, podklad] of podklady) {
     it.each(textoveTokeny)(
@@ -59,6 +60,13 @@ describe('kontrast palety', () => {
 
   it('dekorativní linka zůstává pod hranicí pro text, aby jí nikdo neobarvil písmo', () => {
     expect(kontrast(token('linka'), papir)).toBeLessThan(4.5)
+  })
+
+  it('barvy stavů plnění se navzájem liší, ne jen odstínem od podkladu', () => {
+    // Kdyby dvě barvy stavu splynuly, čtenář by rozdíl poznal jen ze značky.
+    // Ta tam je, ale barva má pomáhat, ne mást.
+    const stavy = ['splneno', 'praha', 'okr', 'seda-uredni'].map(token)
+    expect(new Set(stavy).size).toBe(stavy.length)
   })
 
   it('silná linka je opravdu tmavší než dekorativní', () => {

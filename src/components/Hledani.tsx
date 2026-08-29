@@ -14,7 +14,7 @@ const POPIS_TYPU: Record<Zaznam[3], string> = {
   s: 'volební strana',
   m: 'městská část',
   p: 'stránka',
-  z: 'zprávička',
+  z: 'aktualita',
 }
 
 /** Index se hledá bez ohledu na diakritiku — „novak" musí najít Nováka. */

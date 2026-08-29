@@ -1,28 +1,22 @@
 import { plneni } from '#content'
+import { POPIS_KATEGORIE, POPIS_STAVU, type StavPlneni } from '@/lib/plneni'
 
-type Stav = (typeof plneni.zavazky)[number]['stav']
-
-const POPIS_STAVU: Record<Stav, { nazev: string; trida: string; znacka: string }> = {
-  splneno: { nazev: 'Doloženo jako splněné', trida: 'razitko-prima', znacka: '●' },
-  castecne: { nazev: 'Doloženo částečně', trida: 'razitko-stredni', znacka: '◐' },
-  nesplneno: { nazev: 'Doloženo jako nesplněné', trida: 'razitko-prekazka', znacka: '○' },
-  'bez-dokladu': { nazev: 'Výsledek nedohledán', trida: 'razitko-nezname', znacka: '–' },
-}
-
-const POPIS_KATEGORIE: Record<string, string> = {
-  'v-realizaci': 'V realizaci',
-  pripravovane: 'Připravované',
-  vyhled: 'Výhled',
-}
+/** Pořadí sekcí odpovídá infografice, aby proklik ze shrnutí nepřeskakoval. */
+const PORADI_KATEGORII = Object.keys(POPIS_KATEGORIE) as (keyof typeof POPIS_KATEGORIE)[]
 
 export function PlneniProhlaseni() {
   const { mereni, zavazky, dokument } = plneni
   const podil = (n: number) => Math.round((n / mereni.zavazkuCelkem) * 100)
+  const serazene = [...zavazky].sort(
+    (a, b) =>
+      PORADI_KATEGORII.indexOf(a.kategorie as keyof typeof POPIS_KATEGORIE) -
+      PORADI_KATEGORII.indexOf(b.kategorie as keyof typeof POPIS_KATEGORIE),
+  )
 
   return (
     <div className="space-y-12">
       <section>
-        <h2 className="text-2xl">Kolik z prohlášení jde ověřit</h2>
+        <h2 className="text-2xl">Jak jsme k číslům došli</h2>
         <dl className="mt-5 grid grid-cols-2 gap-px border border-inkoust bg-linka-silna sm:grid-cols-4">
           <Udaj popisek="Závazků celkem" hodnota={String(mereni.zavazkuCelkem)} />
           <Udaj
@@ -56,20 +50,28 @@ export function PlneniProhlaseni() {
       </section>
 
       <section>
-        <h2 className="text-2xl">Devět měřitelných závazků</h2>
+        <h2 id="zavazky" className="text-2xl">
+          Devět měřitelných závazků
+        </h2>
         <p className="mt-1 max-w-prose text-sm text-seda-uredni">
           Zbylých {mereni.zavazkuCelkem - mereni.sKonkretnimCilem} závazků neuvádí
           číslo ani termín, takže se u nich nedá objektivně určit, zda byly splněny.
+          Výsledky jsme naposledy ověřovali 29. srpna 2026.
         </p>
 
         <div className="mt-6 border-t border-inkoust">
-          {zavazky.map((zavazek) => {
-            const stav = POPIS_STAVU[zavazek.stav]
+          {serazene.map((zavazek) => {
+            const stav = POPIS_STAVU[zavazek.stav as StavPlneni]
             return (
-              <article key={zavazek.id} id={zavazek.id} className="border-b border-linka-silna py-5 scroll-mt-20">
+              <article
+                key={zavazek.id}
+                id={zavazek.id}
+                /* Barevný pruh drží stav vidět i po prokliku z infografiky. */
+                className={`scroll-mt-20 border-b border-l-4 border-b-linka-silna py-5 pl-4 ${stav.pruh}`}
+              >
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                   <p className="popisek-uredni">
-                    {zavazek.oblast} · {POPIS_KATEGORIE[zavazek.kategorie]}
+                    {zavazek.oblast} · {POPIS_KATEGORIE[zavazek.kategorie as keyof typeof POPIS_KATEGORIE]}
                   </p>
                   <p className={`razitko-hodnota ${stav.trida}`}>
                     <span className="znacka" aria-hidden="true">

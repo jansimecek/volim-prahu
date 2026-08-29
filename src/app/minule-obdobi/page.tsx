@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { InfografikaPlneni } from '@/components/InfografikaPlneni'
 import { PlneniProhlaseni } from '@/components/PlneniProhlaseni'
 import { Obsah } from '@/components/Obsah'
 import { MDXContent } from '@/components/mdx'
@@ -18,7 +19,15 @@ export default function StrankaMinulehoObdobi() {
         <h1 className="mt-2 text-4xl">{stranka.title}</h1>
       </header>
 
-      <Obsah polozky={nadpisyStranky(stranka.surovy)} />
+      <Obsah
+        polozky={[
+          { id: 'prehled', text: 'Přehled na jeden pohled' },
+          ...nadpisyStranky(stranka.surovy),
+          { id: 'zavazky', text: 'Devět měřitelných závazků' },
+        ]}
+      />
+
+      <InfografikaPlneni />
 
       <div className="proza max-w-prose">
         <MDXContent code={stranka.content} />

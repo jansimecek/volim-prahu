@@ -1,7 +1,7 @@
-import { rozmeryObrazku, type ObrazekZpravicky as Data } from '@/lib/zpravicky'
+import { rozmeryObrazku, type ObrazekAktuality as Data } from '@/lib/aktuality'
 
 /**
- * Obrázek u zprávičky.
+ * Obrázek u aktuality.
  *
  * Záměrně obyčejný <img>, ne next/image: obrázky sem chodí hotové z Vercel
  * Blobu nebo z repozitáře, optimalizátor by je jen přeposílal za peníze.
@@ -11,7 +11,7 @@ import { rozmeryObrazku, type ObrazekZpravicky as Data } from '@/lib/zpravicky'
  * Popis původu se zobrazuje vždycky. Fotka je cizí práce a web, který
  * u každého čísla uvádí zdroj, ho nemůže u fotky vynechat.
  */
-export function ObrazekZpravicky({ obrazek }: { obrazek: Data }) {
+export function ObrazekAktuality({ obrazek }: { obrazek: Data }) {
   const rozmery = rozmeryObrazku(obrazek)
   if (!rozmery) return null
 

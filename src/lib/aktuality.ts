@@ -1,23 +1,25 @@
-import { zpravicky as vse } from '#content'
+import { aktuality as vse } from '#content'
 import { smiZobrazitPruzkumZaBehu } from './zaBehu'
 
 /**
- * Zprávičky — krátké zápisy o průběhu voleb.
+ * Aktuálně — krátké zápisy o průběhu voleb.
+ *
+ * Rubrika se jmenuje „Aktuálně", jednotlivá položka je „aktualita".
  *
  * Rubrika existuje proto, že spousta věcí kolem voleb je zajímavá, ale
  * nevydá na stránku: losování čísel, termín vyvěšení oznámení, zveřejněný
- * program. Zprávička je má kam zapsat, aniž by se z nich staly články.
+ * program. Aktualita je má kam zapsat, aniž by se z nich staly články.
  *
  * Platí tu stejné pravidlo jako všude jinde: tvrzení o volbách má zdroj.
  * Vynucuje to schéma ve velite.config.ts, ne dobrá vůle.
  */
 
-export type Zpravicka = (typeof vse)[number]
+export type Aktualita = (typeof vse)[number]
 
 const jeVyvoj = process.env.NODE_ENV !== 'production'
 
 /** Nejnovější napřed. Řadí se řetězcově — ISO 8601 s posunem je porovnatelný. */
-function odNejnovejsi(a: Zpravicka, b: Zpravicka): number {
+function odNejnovejsi(a: Aktualita, b: Aktualita): number {
   return Date.parse(b.vydano) - Date.parse(a.vydano) || a.slug.localeCompare(b.slug, 'cs')
 }
 
@@ -25,50 +27,50 @@ function odNejnovejsi(a: Zpravicka, b: Zpravicka): number {
  * Koncepty se v produkci nezobrazují nikde — ani ve výpisu, ani na vlastní
  * adrese, ani ve feedu. Ve vývoji ano, aby šly psát a číst.
  *
- * Zprávičky s budoucím časem vydání se nezobrazí, dokud ten čas nenastane.
- * Bez toho by šlo zprávičku připravit dopředu, ale nasazení by ji hned
+ * Aktualita s budoucím časem vydání se nezobrazí, dokud ten čas nenastane.
+ * Bez toho by šlo aktualitu připravit dopředu, ale nasazení by ji hned
  * vydalo — a datum nad ní by tvrdilo něco jiného, než co platí.
  */
-export function publikovane(ted: Date = new Date()): Zpravicka[] {
+export function publikovane(ted: Date = new Date()): Aktualita[] {
   return vse
     .filter((z) => (jeVyvoj || !z.koncept) && Date.parse(z.vydano) <= ted.getTime())
     .sort(odNejnovejsi)
 }
 
-/** Nese zprávička čísla z předvolebního průzkumu? */
-export function jeSPruzkumem(z: Zpravicka): boolean {
+/** Nese aktualita čísla z předvolebního průzkumu? */
+export function jeSPruzkumem(z: Aktualita): boolean {
   return z.obsahujePruzkum
 }
 
 /**
- * Zprávičky určené k zobrazení.
+ * Aktuality určené k zobrazení.
  *
  * Rubrika je druhé místo, kudy by se výsledky průzkumu mohly dostat ven —
- * schéma u ní jinak vyžaduje jen zdroj. Zprávičky označené příznakem
+ * schéma u ní jinak vyžaduje jen zdroj. Aktuality označené příznakem
  * `obsahujePruzkum` proto procházejí stejnou branou jako kolekce průzkumů,
  * a stejně jako tam se moratorium vyhodnocuje až při vyřizování požadavku.
  *
- * Dokud žádná taková zprávička neexistuje, brána se nezapíná a stránky
+ * Dokud žádná taková aktualita neexistuje, brána se nezapíná a stránky
  * zůstávají statické.
  */
-export async function kZobrazeni(): Promise<Zpravicka[]> {
+export async function kZobrazeni(): Promise<Aktualita[]> {
   const seznam = publikovane()
   const smi = await smiZobrazitPruzkumZaBehu(seznam.some(jeSPruzkumem))
   return smi ? seznam : seznam.filter((z) => !jeSPruzkumem(z))
 }
 
-export async function zpravickaPodleSlugu(slug: string): Promise<Zpravicka | undefined> {
+export async function aktualitaPodleSlugu(slug: string): Promise<Aktualita | undefined> {
   return (await kZobrazeni()).find((z) => z.slug === slug)
 }
 
-/** Poslední zprávičky pro titulní stranu. */
-export async function nejnovejsi(pocet: number): Promise<Zpravicka[]> {
+/** Poslední aktuality pro titulní stranu. */
+export async function nejnovejsi(pocet: number): Promise<Aktualita[]> {
   return (await kZobrazeni()).slice(0, pocet)
 }
 
 /**
  * Čas se formátuje výslovně v pražské zóně. Server na Vercelu běží v UTC
- * a bez `timeZone` by tam každá zprávička vyšla o dvě hodiny dřív —
+ * a bez `timeZone` by tam každá aktualita vyšla o dvě hodiny dřív —
  * na téhle chybě už se projekt jednou chytil u dat ČSÚ.
  */
 const formatCasu = new Intl.DateTimeFormat('cs-CZ', {
@@ -100,23 +102,23 @@ export function hodinaCesky(vydano: string): string {
   return formatHodiny.format(new Date(vydano))
 }
 
-/** Skupiny po dnech pro výpis — proud zpráviček se čte po dnech, ne po kusech. */
-export function poDnech(seznam: Zpravicka[]): { den: string; zpravicky: Zpravicka[] }[] {
-  const skupiny: { den: string; zpravicky: Zpravicka[] }[] = []
+/** Skupiny po dnech pro výpis — proud aktualit se čte po dnech, ne po kusech. */
+export function poDnech(seznam: Aktualita[]): { den: string; aktuality: Aktualita[] }[] {
+  const skupiny: { den: string; aktuality: Aktualita[] }[] = []
   for (const z of seznam) {
     const den = denCesky(z.vydano)
     const posledni = skupiny.at(-1)
-    if (posledni?.den === den) posledni.zpravicky.push(z)
-    else skupiny.push({ den, zpravicky: [z] })
+    if (posledni?.den === den) posledni.aktuality.push(z)
+    else skupiny.push({ den, aktuality: [z] })
   }
   return skupiny
 }
 
-export type ObrazekZpravicky = NonNullable<Zpravicka['obrazek']>
+export type ObrazekAktuality = NonNullable<Aktualita['obrazek']>
 
 /** Sjednocuje obrázek z repozitáře a obrázek z Vercel Blobu na jeden tvar. */
 export function rozmeryObrazku(
-  obrazek: ObrazekZpravicky,
+  obrazek: ObrazekAktuality,
 ): { src: string; sirka: number; vyska: number } | null {
   if (obrazek.soubor) {
     return {
@@ -132,19 +134,19 @@ export function rozmeryObrazku(
   return null
 }
 
-/** Kolik zpráviček se vejde na jednu stránku výpisu. */
+/** Kolik aktualit se vejde na jednu stránku výpisu. */
 export const NA_STRANU = 30
 
 export type Strankovani = {
   cislo: number
   celkem: number
-  zpravicky: Zpravicka[]
+  aktuality: Aktualita[]
 }
 
 /**
  * Stránkování je záměrně klasické, adresovatelné a funguje bez JavaScriptu.
  * Nekonečné rolování by znemožnilo dostat se do patičky a při návratu
- * z jedné zprávičky by čtenáře vrátilo na začátek.
+ * z jedné aktuality by čtenáře vrátilo na začátek.
  */
 export async function stranka(cislo: number): Promise<Strankovani> {
   const vse = await kZobrazeni()
@@ -153,6 +155,6 @@ export async function stranka(cislo: number): Promise<Strankovani> {
   return {
     cislo: bezpecne,
     celkem,
-    zpravicky: vse.slice((bezpecne - 1) * NA_STRANU, bezpecne * NA_STRANU),
+    aktuality: vse.slice((bezpecne - 1) * NA_STRANU, bezpecne * NA_STRANU),
   }
 }

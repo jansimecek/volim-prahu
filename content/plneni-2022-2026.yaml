@@ -35,114 +35,249 @@ zavazky:
   - id: pr-petrzilkova
     kategorie: v-realizaci
     oblast: Doprava a parkování
-    zneni: Zprovozníme P+R Petržílkova (197 míst P+R a 182 rezidenti).
+    zneni: >-
+      Zprovozníme P+R Petržílkova (197 míst P+R a 182 rezidenti).
     stav: splneno
-    vysledek: >
-      Parkovací dům v ulici Petržílkova v Nových Butovicích se veřejnosti otevřel
-      23. června 2023, tedy v témže měsíci, ve kterém rada programové prohlášení
-      vydala. Má 380 stání: 200 v systému P+R a 180 pro rezidenty — o tři více
-      P+R a o dvě méně rezidentských, než prohlášení uvádělo. Stavba stála
-      343 milionů korun.
+    vysledek: >-
+      Parkovací dům v ulici Petržílkova v Nových Butovicích se veřejnosti otevřel 23. června 2023,
+      tedy v témže měsíci, ve kterém rada programové prohlášení vydala. Má 380 stání: 200 v
+      systému P+R a 180 pro rezidenty — o tři více P+R a o dvě méně rezidentských, než prohlášení
+      uvádělo. Stavba stála 343 milionů korun.
     zdroje:
-      - text: Praha dokončila stavbu moderního parkovacího domu v Nových Butovicích
+      - text: >-
+          Praha dokončila stavbu moderního parkovacího domu v Nových Butovicích (tisková zpráva hl. m.
+          Prahy, 2023)
         url: https://praha.eu/w/praha_dokoncila_stavbu_moderniho_3600301
-
   - id: pr-dedina-hostivar-opatov
     kategorie: v-realizaci
     oblast: Doprava a parkování
-    zneni: Vybudujeme parkovací dům Dědina (290 míst rezidenti), P+R Depo Hostivař (649 míst) a P+R Opatov (490 míst).
-    stav: bez-dokladu
-    vysledek: >
-      Doklad o dokončení ani o stavu rozestavěnosti jednotlivých tří staveb jsme
-      k srpnu 2026 nedohledali.
+    zneni: >-
+      Vybudujeme parkovací dům Dědina (290 míst rezidenti), P+R Depo Hostivař (649 míst) a P+R
+      Opatov (490 míst).
+    stav: castecne
+    vysledek: >-
+      Ze tří slíbených staveb nebyla k 29. srpnu 2026 v provozu ani jedna, dvě jsou ale těsně před
+      otevřením. Parkovací dům Dědina je dostavěný, den otevřených dveří je ohlášený na 8. září
+      2026 a kapacita je 274 míst, tedy o 16 méně, než prohlášení uvádělo. P+R Opatov se staví od
+      27. května 2025 za 803,2 milionu korun s DPH, má mít 495 míst — o pět víc, než bylo slíbeno
+      — a kolaudace byla podle městské části plánovaná na září 2026. P+R Depo Hostivař se nezačal
+      stavět: stavební povolení je z 23. března 2026 a město na stavbu vypsalo zakázku, u které k
+      srpnu 2026 nemáme doklad o uzavřené smlouvě se zhotovitelem.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Rezervace míst v parkovacím domě na Dědině jsou bez omezení — kapacita 274 míst, den
+          otevřených dveří 8. 9. 2026 (dopravni6.cz, 27. 8. 2026)
+        url: https://www.dopravni6.cz/2026/08/27/rezervace-mist-v-parkovacim-dome-na-dedine-jsou-bez-omezeni/
+      - text: >-
+          Stavba P+R Opatov zahájena — 495 míst, 803,2 mil. Kč s DPH (MČ Praha 11, 29. 5. 2025)
+        url: https://www.praha11.cz/cs/media/tiskove-zpravy/stavba-p-r-opatov-zahajena.html
+      - text: >-
+          Praha 11 získá pro své obyvatele místa v novém P+R Opatov — kolaudace plánovaná na září 2026
+          (MČ Praha 11, 23. 6. 2026)
+        url: https://www.praha11.cz/cs/media/tiskove-zpravy/praha-11-ziska-pro-sve-obyvatele-mista-v-novem-p-r-opatov-otevira-tim-cestu-k-reseni-parkovaci-kriz.html
+      - text: >-
+          Depo Hostivař — nový parkovací dům: 649 míst, stavební povolení 23. 3. 2026, fáze přípravy
+          (MČ Praha 10)
+        url: https://strategieprodesitku.cz/p10-projekty/depo-hostivar-novy-parkovaci-dum/
   - id: pr-smichov
     kategorie: v-realizaci
     oblast: Doprava a parkování
-    zneni: Zahájíme stavbu P+R na Terminálu Smíchovské nádraží (1000 míst).
-    stav: bez-dokladu
-    vysledek: Doklad o zahájení stavby jsme k srpnu 2026 nedohledali.
+    zneni: >-
+      Zahájíme stavbu P+R na Terminálu Smíchovské nádraží (1000 míst).
+    stav: nesplneno
+    vysledek: >-
+      Stavba do konce volebního období nezačala, protože město nemá zhotovitele. Zakázku na
+      stavební práce vypsalo 3. června 2025; k 5. srpnu 2026 je ve Věstníku stále ve stavu „tendr
+      zahájen“, bez vybraného dodavatele, a v registru smluv k ní žádná smlouva o dílo není. Že
+      řízení dál běží, dokládá i smlouva o právní pomoci ve správním řízení před ÚOHS za 1 185 800
+      Kč, podepsaná 10. srpna 2026. Rozestavěné jsou zatím jen navazující části v režii Správy
+      železnic, na které město přispívá — základové konstrukce pod budoucím autobusovým terminálem
+      za 163,5 milionu korun. Samotný objekt P+R mezi ně nepatří.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Veřejná zakázka „Stavba č. 44544 Terminál Smíchovské nádraží; stavební práce“ — vypsána 3.
+          6. 2025, stav „tendr zahájen“ (Hlídač státu, data z Věstníku)
+        url: https://www.hlidacstatu.cz/verejnezakazky/zakazka/e699cb6bd8e24c98ab53e46ce44fba00
+      - text: >-
+          Smlouva o poskytnutí právní pomoci: Terminál Smíchovské nádraží, správní řízení ÚOHS, 1 185
+          800 Kč, 10. 8. 2026 (registr smluv)
+        url: https://smlouvy.gov.cz/smlouva/39063086
+      - text: >-
+          Smlouva o spolupráci: základové konstrukce pod průběžnou komunikací, 163 460 289 Kč, 9. 9.
+          2025 (registr smluv)
+        url: https://smlouvy.gov.cz/smlouva/34769645
+      - text: >-
+          Terminál Smíchov — popis projektu včetně P+R až pro 1 000 stání (IPR Praha)
+        url: https://iprpraha.cz/project/24
   - id: pr-zlicin-ppp
     kategorie: v-realizaci
     oblast: Doprava a parkování
-    zneni: Zahájíme stavbu P+R Zličín v rámci PPP projektu (až 1400 míst).
-    stav: bez-dokladu
-    vysledek: >
-      Doklad o zahájení stavby jsme nedohledali. Slovo „až" navíc znamená, že
-      splnitelný by byl i výsledek výrazně nižší než 1400 míst.
+    zneni: >-
+      Zahájíme stavbu P+R Zličín v rámci PPP projektu (až 1400 míst).
+    stav: nesplneno
+    vysledek: >-
+      PPP projekt se společností CGI Metropole, který měl přinést 1 400 míst pro Prahu, zůstal u
+      nezávazné dohody z října 2022 a v pozdějších materiálech města se v tomto rozsahu už
+      neobjevuje. Město místo něj staví P+R Depo Zličín jako vlastní investici v běžné veřejné
+      zakázce: smlouvu se zhotovitelem za 749,6 milionu korun s DPH podepsalo 13. srpna 2026,
+      kapacita je 596 míst a stavba měla začít v září 2026. Závazek tedy nebyl naplněn ani formou,
+      ani rozsahem, ani zahájením stavby ve volebním období. Že se totéž místo objevuje i o řádek
+      níž jako splněné, není rozpor: tam byl závazkem jen prověřit možnost stavby, tady ji zahájit
+      v PPP režimu pro 1 400 aut.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Dohoda „Rozšíření Metropole Zličín“ — vybudování P+R parkoviště Zličín, 6. 10. 2022 (registr
+          smluv)
+        url: https://smlouvy.gov.cz/smlouva/21973601
+      - text: >-
+          Hlavní město pokračuje v přípravách na stavbu parkovacího domu u stanice metra Zličín — PPP
+          s CGI Metropole, 1 400 míst pro Prahu (tisková zpráva hl. m. Prahy, 19. 9. 2022)
+        url: https://www.praha.eu/web/praha/w/hlavni_mesto_pokracuje_v_pripravach_na_3475513
+      - text: >-
+          Smlouva o dílo: P+R DEPO Zličín, stavební práce, 749 592 746 Kč s DPH, 13. 8. 2026 (registr
+          smluv)
+        url: https://smlouvy.gov.cz/smlouva/39115882
+      - text: >-
+          Praha během dvou let postaví na Zličíně P+R parkoviště pro skoro 600 vozidel (Pražský
+          patriot, 23. 6. 2026)
+        url: https://www.prazskypatriot.cz/praha-behem-dvou-let-postavi-na-zlicine-pr-parkoviste-pro-skoro-600-vozidel/
   - id: pr-depo-zlicin
     kategorie: pripravovane
     oblast: Doprava a parkování
-    zneni: Prověříme možnost vybudování P+R DEPO Zličín (450 míst).
-    stav: bez-dokladu
-    vysledek: >
-      Závazkem je prověření, ne stavba. Doklad o tom, že prověření proběhlo,
-      jsme nedohledali — a u takto formulovaného slibu by ho bylo obtížné
-      dohledat i kdyby proběhl.
+    zneni: >-
+      Prověříme možnost vybudování P+R DEPO Zličín (450 míst).
+    stav: splneno
+    vysledek: >-
+      Závazkem bylo prověření, a to proběhlo — projekt navíc postoupil mnohem dál. Zastupitelstvo
+      schválilo vypsání zakázky 11. září 2025, zakázka na stavební práce byla uveřejněna ve
+      Věstníku 19. února 2026, oznámení o výběru dodavatele je z 24. června 2026 a smlouva o dílo
+      se podepsala 13. srpna 2026. Parkovací dům má mít 462 krytých stání a pomocnou plochu pro
+      dalších 134 aut, tedy víc než prověřovaných 450. Prověření tímto závazek splňuje bez ohledu
+      na to, že samotná stavba k srpnu 2026 ještě nezačala.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Parkování
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Věstník veřejných zakázek: Stavba č. 43776 P+R DEPO Zličín, stavební práce, uveřejněno 19.
+          2. 2026
+        url: https://vvz.nipez.cz/formulare-zakazky/Z2026-010040
+      - text: >-
+          Detail zakázky P+R DEPO Zličín včetně oznámení o výběru dodavatele z 24. 6. 2026 (Hlídač
+          státu)
+        url: https://www.hlidacstatu.cz/verejnezakazky/zakazka/c0d610b541cc44778777665832cb46d2
+      - text: >-
+          Informace pro občany o výstavbě parkovacího domu P+R na Zličíně — 462 a 134 míst, platné
+          stavební povolení (MČ Praha-Zličín)
+        url: https://www.mczlicin.cz/assets/File.ashx?id_org=80135&id_dokumenty=8596
+      - text: >-
+          Smlouva o dílo: P+R DEPO Zličín, stavební práce, 749 592 746 Kč s DPH, 13. 8. 2026 (registr
+          smluv)
+        url: https://smlouvy.gov.cz/smlouva/39115882
   - id: stromy
     kategorie: v-realizaci
     oblast: Životní prostředí
-    zneni: Budeme pokračovat ve výsadbě dalších 500 000 stromů a pečovat o ty již vysazené.
-    stav: bez-dokladu
-    vysledek: >
-      Výsadba prokazatelně pokračuje — projekt Milion stromů měl podle města po
-      jarní výsadbě 2025 celkem 642 415 vysazených stromů a na podzim 2026 se
-      plánuje dalších 140 tisíc v Jinonicích a Vinoři. Ověřit ale závazek na
-      „dalších 500 000" nejde, protože jde o kumulativní číslo za celý projekt
-      běžící od roku 2019 a stav k červnu 2023, od kterého by se mělo počítat,
-      jsme nedohledali.
+    zneni: >-
+      Budeme pokračovat ve výsadbě dalších 500 000 stromů a pečovat o ty již vysazené.
+    stav: castecne
+    vysledek: >-
+      Web projektu Milion stromů sám cíl dělí po volebních obdobích a pro roky 2022–2026 uvádí 500
+      000 stromů, takže „dalších 500 000“ jde měřit přírůstkem. Po vydání prohlášení přibylo 31
+      009 stromů v roce 2023, 71 502 v roce 2024 a 229 900 v roce 2025 — dohromady 332 411, tedy
+      zhruba dvě třetiny slíbeného počtu. Celkem má projekt od roku 2019 vysazeno 867 501 stromů.
+      Na rok 2026 je plánováno 101 000 stromů na jaře a 105 800 na podzim, ale realizaci jarní
+      výsadby 2026 jsme k srpnu 2026 nedoložili — počítadlo projektu stále ukazuje stav ke konci
+      roku 2025. Závazek péče o už vysazené stromy jsme samostatně neověřovali.
     zdroje:
-      - text: Praha pokračuje s projektem Milion stromů, na podzim vysadí 140 tisíc dřevin
+      - text: >-
+          Zastromuj Prahu — počítadlo a rozpis výsadeb po letech, členění cíle po volebních obdobích
+          (oficiální web projektu)
+        url: https://zastromujprahu.cz/
+      - text: >-
+          Praha pokračuje s projektem Milion stromů — 642 415 stromů včetně jara 2025 (tisková zpráva
+          hl. m. Prahy, 20. 6. 2025)
         url: https://praha.eu/w/praha-pokracuje-s-projektem-milion-stromu-na-podzim-vysadi-140-tisic-drevin-v-jinonicich-a-vinori
-
+      - text: >-
+          Praha se blíží milionu nově vysazených stromů — 867 501 stromů od roku 2019, údaje odboru
+          ochrany prostředí MHMP (19. 1. 2026)
+        url: https://www.nasepraha.cz/praha-se-blizi-milionu-nove-vysazenych-stromu-loni-jich-pribylo-temer-230-tisic/
   - id: nabijeci-mista
     kategorie: vyhled
     oblast: Doprava a parkování
-    zneni: Zajistíme v následujících letech až 3000 nabíjecích míst pro elektromobily.
-    stav: bez-dokladu
-    vysledek: >
-      Závazek je zařazený do kategorie Výhled, tedy bez vazby na volební období,
-      a slovo „až" nestanoví spodní hranici. Doklad o dosaženém počtu jsme
-      nedohledali.
+    zneni: >-
+      Zajistíme v následujících letech až 3000 nabíjecích míst pro elektromobily.
+    stav: castecne
+    vysledek: >-
+      Ke konci listopadu 2025 bylo v Praze podle dat Centra dopravního výzkumu 791 veřejných
+      dobíjecích stanic s 1 352 dobíjecími body, tedy zhruba 45 % cílového počtu; v březnu 2025 to
+      bylo 1 215 bodů. Rada 12. ledna 2026 schválila smlouvy na 1 500 nových veřejných stanic za
+      492,8 milionu korun s DPH s instalací v letech 2026 a 2027 a v březnu 2026 přidala 100
+      milionů na zhruba 150 lamp připravených na dobíjení. Kolik z nich bylo do srpna 2026
+      skutečně v provozu, jsme nedohledali. Závazek je zařazený do kategorie Výhled bez termínu a
+      slovo „až“ nestanoví spodní hranici, takže z dosažených 45 % neplyne, že by byl nesplněný.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Moderní a udržitelné technologie
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Technologie hlavního města Prahy spouští 50 nových dobíjecích stanic — 708 stanic a 1 215
+          dobíjecích bodů v Praze (tisková zpráva hl. m. Prahy, 19. 3. 2025)
+        url: https://praha.eu/w/technologie-hlavniho-mesta-prahy-spousti-50-novych-dobijecich-stanic-pro-elektromobily-v-prazskych-rezidencnich-oblastech
+      - text: >-
+          Praha plánuje instalovat 1 500 nabíječek pro elektromobily za 493 mil. Kč — obsahuje údaj
+          CDV o 1 352 dobíjecích bodech ke konci listopadu 2025 (oEnergetice.cz, 12. 1. 2026)
+        url: https://oenergetice.cz/elektromobilita/praha-planuje-instalovat-1500-nabijecek-pro-elektromobily-za-493-mil-kc
+      - text: >-
+          Praha podpoří v rámci obnovy veřejného osvětlení další rozvoj nabíjecí infrastruktury
+          částkou 100 milionů korun (tisková zpráva hl. m. Prahy, 24. 3. 2026)
+        url: https://praha.eu/w/praha-podpori-v-ramci-obnovy-verejneho-osvetleni-dalsi-rozvoj-nabijeci-infrastruktury-pro-elektromobily-castkou-100-milionu-korun
   - id: kultura-450
     kategorie: v-realizaci
     oblast: Kultura
-    zneni: Podpoříme živou kulturu. Posílíme objem finančních prostředků až na 450 mil. Kč.
-    stav: bez-dokladu
-    vysledek: >
-      Doklad o dosaženém objemu podpory živé kultury jsme nedohledali. Slovo
-      „až" i tady znamená, že splnitelný by byl i výsledek nižší.
+    zneni: >-
+      Podpoříme živou kulturu. Posílíme objem finančních prostředků až na 450 mil. Kč.
+    stav: castecne
+    vysledek: >-
+      Objem programových dotací v oblasti kultury a umění během období rostl, hranice 450 milionů
+      ale dosaženo nebylo. V roce 2024 město rozdělilo 400 milionů, v roce 2025 celkem 408 milionů
+      a v roce 2026, posledním roce období, 420,2 milionu korun — tedy zhruba 93 % avizované
+      částky. Čísla se týkají programových grantových dotací na živou kulturu, ne celého rozpočtu
+      odboru kultury. Slovo „až“ ve znění závazku navíc spodní hranici nestanoví.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Praha kulturní
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
-
+      - text: >-
+          Praha poskytne v roce 2026 přes 420 milionů korun na dotace v oblasti kultury a umění
+          (tisková zpráva hl. m. Prahy, 2. 2. 2026)
+        url: https://praha.eu/w/praha-poskytne-v-roce-2026-pres-420-milionu-korun-na-dotace-v-oblasti-kultury-a-umeni
+      - text: >-
+          Praha v letošním roce poskytne 408 milionů korun na dotace v oblasti kultury a umění
+          (tisková zpráva hl. m. Prahy, 3. 2. 2025)
+        url: https://praha.eu/w/praha-v-letosnim-roce-poskytne-408-milionu-korun-na-dotace-v-oblasti-kultury-a-umeni
+      - text: >-
+          Praha rozdělí 400 milionů korun na dotace v oblasti kultury a umění pro rok 2024 (tisková
+          zpráva hl. m. Prahy)
+        url: https://praha.eu/w/praha_rozdeli_400_milionu_korun_na_3688354
+      - text: >-
+          Programové dotace v oblasti kultury a umění pro rok 2026 (odbor kultury MHMP)
+        url: https://praha.eu/web/kultura/programove-dotace-2026
   - id: pamatky-grant
     kategorie: pripravovane
     oblast: Kultura
-    zneni: Navýšíme finanční obnos v grantovém systému na podporu obnovy památek, který byl minulým vedením snížen z 60 mil. na 43 mil.
-    stav: bez-dokladu
-    vysledek: >
-      Doklad o navýšení grantového systému na obnovu památek jsme nedohledali.
-      Prohlášení navíc neuvádí cílovou částku, jen výchozí stav.
+    zneni: >-
+      Navýšíme finanční obnos v grantovém systému na podporu obnovy památek, který byl minulým
+      vedením snížen z 60 mil. na 43 mil.
+    stav: castecne
+    vysledek: >-
+      Navýšení proběhlo, k původním 60 milionům se ale program nevrátil. Výchozí stav potvrzuje
+      program na rok 2023, vyhlášený ještě minulým vedením, s předpokládaným objemem 43,4 milionu
+      korun. Pro rok 2026 činil schválený rozpočet programu 47 875 800 Kč a celý se rozdělil: ze
+      145 žádostí bylo podpořeno 83 a pět dalších neuspělo právě proto, že alokace došla. Program
+      na rok 2027 počítá s 47,8 milionu a výslovně vychází z rozpočtu předchozího roku. Nárůst
+      proti výchozímu stavu je tedy asi 4,5 milionu korun, zhruba deset procent. Alokace pro roky
+      2024 a 2025 jsme nedoložili.
     zdroje:
-      - text: Programové prohlášení Rady hl. m. Prahy, kapitola Praha kulturní
-        url: https://praha.eu/documents/d/praha/programove_prohlaseni_2023_3600794
+      - text: >-
+          Usnesení Rady HMP č. 1491 z 13. 6. 2022 — program pro vlastníky památkově významných objektů
+          na rok 2023, předpokládaný objem 43,4 mil. Kč
+        url: https://praha.eu/documents/d/pamatky/usneseni_rhmp_c_1491_3449085
+      - text: >-
+          Usnesení Zastupitelstva HMP č. 34/9 z 28. 5. 2026 — dotace vlastníkům památkově významných
+          objektů pro rok 2026, rozpočet 47 875 800 Kč
+        url: https://praha.eu/documents/d/pamatky/usneseni-zastupitelstva-hmp-c-34_9
+      - text: >-
+          Program pro vlastníky památkově významných objektů pro rok 2027 — předpokládaný objem 47,8
+          mil. Kč (příloha usnesení Rady HMP č. 1449 z 22. 6. 2026)
+        url: https://praha.eu/documents/d/pamatky/usneseni-rhmp-c-1449-program-priloha-c-1

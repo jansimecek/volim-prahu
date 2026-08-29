@@ -54,7 +54,7 @@ const NAVIGACE: readonly { href: Route; popisek: string }[] = [
   { href: '/mestska-cast', popisek: 'Městské části' },
   { href: '/senat', popisek: 'Senát' },
   { href: '/temata', popisek: 'Témata' },
-  { href: '/zpravicky', popisek: 'Zprávičky' },
+  { href: '/aktualne', popisek: 'Aktuálně' },
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
   { href: '/hledani', popisek: 'Hledat' },

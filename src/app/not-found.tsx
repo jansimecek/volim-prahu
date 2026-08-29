@@ -42,8 +42,8 @@ export default function Nenalezeno() {
           — 57 samostatných zastupitelstev.
         </li>
         <li>
-          <Link href="/zpravicky" className="odkaz-akcent">
-            Zprávičky
+          <Link href="/aktualne" className="odkaz-akcent">
+            Aktuálně
           </Link>{' '}
           — co je kolem voleb nového.
         </li>

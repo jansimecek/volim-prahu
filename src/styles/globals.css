@@ -41,6 +41,21 @@
   --color-linka: #b3b6ae; /* 1.75:1 — dekorace */
   --color-linka-silna: #7c807a; /* 3.42:1 na papíru, 3.11:1 na tmavším */
 
+  /*
+   * Zelená existuje jen pro jednu věc: doložené splnění závazku z programového
+   * prohlášení. Není to porušení pravidla „nikdy semafor" — to platí pro
+   * razítko proveditelnosti, kde hodnotíme, co JDE splnit, a kde by zelená
+   * a červená znamenaly verdikt pravda/lež. Tady se popisuje zjištěný stav
+   * v minulosti: závazek buď doloženě splněný byl, nebo nebyl. To je fakt,
+   * ne verdikt, a barva ho smí nést.
+   *
+   * Pozor na jednu věc: pražská červená a okr mají pro deuteranopii odstup
+   * ΔE jen 3.3, tedy prakticky splývají. Barva proto NIKDY nesmí stát sama —
+   * u každého stavu jde značka (● ◐ ○ –) i slovní popis. Bez nich by část
+   * čtenářů rozdíl mezi „nesplněno" a „částečně" nepoznala.
+   */
+  --color-splneno: #1f6b45; /* 5.50:1 na papíru, 5.01:1 na tmavším */
+
   --font-display: var(--font-bricolage), 'Helvetica Neue', Arial, sans-serif;
   --font-cteci: var(--font-source-serif), Georgia, 'Times New Roman', serif;
   --font-mono: var(--font-plex-mono), ui-monospace, 'SF Mono', monospace;
@@ -224,6 +239,38 @@
   .znacka {
     font-family: var(--font-mono);
     flex: none;
+  }
+
+  /*
+   * Stavy plnění závazku. Oddělené od tříd razítka schválně: razítko hodnotí
+   * proveditelnost slibu do budoucna a zelenou nepoužívá, tohle popisuje
+   * doložený výsledek v minulosti.
+   */
+  .plneni-splneno {
+    color: var(--color-splneno);
+  }
+  .plneni-castecne {
+    color: var(--color-okr);
+  }
+  .plneni-nesplneno {
+    color: var(--color-praha);
+  }
+  .plneni-bez-dokladu {
+    color: var(--color-seda-uredni);
+  }
+
+  /* Barevný pruh u buňky v infografice. Nese tutéž informaci jako značka. */
+  .plneni-pruh-splneno {
+    border-color: var(--color-splneno);
+  }
+  .plneni-pruh-castecne {
+    border-color: var(--color-okr);
+  }
+  .plneni-pruh-nesplneno {
+    border-color: var(--color-praha);
+  }
+  .plneni-pruh-bez-dokladu {
+    border-color: var(--color-seda-uredni);
   }
 }
 

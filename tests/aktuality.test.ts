@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { zpravicky as vse } from '#content'
+import { aktuality as vse } from '#content'
 import {
   NA_STRANU,
   denCesky,
@@ -8,25 +8,25 @@ import {
   publikovane,
   rozmeryObrazku,
   stranka,
-} from '../src/lib/zpravicky'
+} from '../src/lib/aktuality'
 
 /**
  * Stránkování a seskupení po dnech se v produkci poprvé spustí až u třicáté
- * zprávičky, respektive v den voleb. Do té doby je ten kód nespuštěný —
+ * aktuality, respektive v den voleb. Do té doby je ten kód nespuštěný —
  * proto se testuje tady, ne až na webu.
  */
 
 const kus = (slug: string, vydano: string, koncept = false) =>
   ({ slug, vydano, koncept, nadpis: slug, shrnuti: slug }) as never
 
-describe('výběr zpráviček', () => {
-  it('zprávička s budoucím časem se nezveřejní dřív, než ten čas nastane', () => {
+describe('výběr aktualit', () => {
+  it('aktualita s budoucím časem se nezveřejní dřív, než ten čas nastane', () => {
     const budouci = vse.filter((z) => Date.parse(z.vydano) > Date.now())
     const ted = publikovane()
     for (const z of budouci) expect(ted.map((x) => x.slug)).not.toContain(z.slug)
   })
 
-  it('vydané zprávičky jdou od nejnovější', () => {
+  it('vydané aktuality jdou od nejnovější', () => {
     const casy = publikovane().map((z) => Date.parse(z.vydano))
     expect(casy).toEqual([...casy].sort((a, b) => b - a))
   })
@@ -52,8 +52,8 @@ describe('stránkování', () => {
   })
 
   it('na jedné straně nikdy není víc položek, než dovoluje NA_STRANU', async () => {
-    const { zpravicky } = await stranka(1)
-    expect(zpravicky.length).toBeLessThanOrEqual(NA_STRANU)
+    const { aktuality } = await stranka(1)
+    expect(aktuality.length).toBeLessThanOrEqual(NA_STRANU)
   })
 })
 
@@ -64,7 +64,7 @@ describe('seskupení po dnech', () => {
       kus('b', '2026-10-09T08:30:00+02:00'),
       kus('c', '2026-10-08T23:00:00+02:00'),
     ])
-    expect(skupiny.map((s) => s.zpravicky.map((z) => z.slug))).toEqual([['a', 'b'], ['c']])
+    expect(skupiny.map((s) => s.aktuality.map((z) => z.slug))).toEqual([['a', 'b'], ['c']])
   })
 
   it('den se počítá v pražském čase, ne v UTC', () => {
@@ -84,7 +84,7 @@ describe('seskupení po dnech', () => {
   })
 })
 
-describe('rozměry obrázku zprávičky', () => {
+describe('rozměry obrázku aktuality', () => {
   it('sjednotí lokální soubor a adresu v Blobu na jeden tvar', () => {
     expect(
       rozmeryObrazku({

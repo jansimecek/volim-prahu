@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { programy } from '#content'
 import { DlazdiceStrany } from '@/components/DlazdiceStrany'
 import { RazenySeznam } from '@/components/RazenySeznam'
-import { Zpravicka } from '@/components/Zpravicka'
+import { Aktualita } from '@/components/Aktualita'
 import { sPoctem } from '@/lib/cestina'
 import { kandidatka } from '@/lib/kandidatky'
 import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
 import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
 import { vypisStran } from '@/lib/vypisStran'
-import { nejnovejsi } from '@/lib/zpravicky'
+import { nejnovejsi } from '@/lib/aktuality'
 
 export const metadata: Metadata = {
   description:
@@ -21,7 +21,7 @@ export default async function Rozcestnik() {
   const { polozky, pruzkum } = await vypisStran('magistrat')
   const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
   const hodnoceno = programy.reduce((n, p) => n + p.body.filter((b) => b.hodnoceni).length, 0)
-  const zpravicky = await nejnovejsi(3)
+  const aktuality = await nejnovejsi(3)
 
   return (
     <div className="space-y-16">
@@ -87,21 +87,21 @@ export default async function Rozcestnik() {
         </section>
       )}
 
-      {zpravicky.length > 0 && (
-        <section aria-labelledby="zpravicky">
+      {aktuality.length > 0 && (
+        <section aria-labelledby="aktuality">
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-            <h2 id="zpravicky" className="text-2xl">
+            <h2 id="aktuality" className="text-2xl">
               Co je nového
             </h2>
             <p>
-              <Link href="/zpravicky" className="odkaz-navigace">
-                Všechny zprávičky
+              <Link href="/aktualne" className="odkaz-navigace">
+                Všechny aktuality
               </Link>
             </p>
           </div>
           <div className="mt-2 border-t border-inkoust">
-            {zpravicky.map((z) => (
-              <Zpravicka key={z.slug} zpravicka={z} />
+            {aktuality.map((z) => (
+              <Aktualita key={z.slug} aktualita={z} />
             ))}
           </div>
         </section>
