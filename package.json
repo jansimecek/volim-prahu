@@ -29,6 +29,7 @@
     "obrazek": "tsx scripts/nahraj-obrazek.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "@vercel/blob": "^2.8.0",
     "fast-xml-parser": "^5.11.0",
     "fflate": "^0.8.3",
