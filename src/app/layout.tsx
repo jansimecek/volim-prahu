@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Route } from 'next'
 import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import Link from 'next/link'
+import { HlavniNavigace } from '@/components/HlavniNavigace'
 import { PruhRezimu } from '@/components/PruhRezimu'
 import '../styles/globals.css'
 
@@ -48,15 +49,24 @@ export const metadata: Metadata = {
  * z metodiky, z každého hodnocení a z patičky, protože se čtou k něčemu,
  * ne samy o sobě.
  */
-const NAVIGACE = [
+const NAVIGACE: readonly { href: Route; popisek: string }[] = [
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
   { href: '/senat', popisek: 'Senát' },
   { href: '/temata', popisek: 'Témata' },
+  { href: '/zpravicky', popisek: 'Zprávičky' },
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
   { href: '/hledani', popisek: 'Hledat' },
-] as const
+]
+
+/**
+ * Fáze voleb i moratorium na průzkumy se odvozují od času. Kdyby se stránky
+ * zabetonovaly do buildu, přepnul by se web do archivního režimu až při
+ * příštím nasazení — tedy nejspíš nikdy. Patnáct minut je dost jemné na
+ * volební víkend a dost hrubé, aby to nic nestálo.
+ */
+export const revalidate = 900
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -74,13 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="font-display text-lg font-semibold no-underline">
               Volím&nbsp;Prahu
             </Link>
-            <nav aria-label="Hlavní navigace" className="flex flex-wrap gap-x-5 gap-y-1">
-              {NAVIGACE.map((polozka) => (
-                <Link key={polozka.href} href={polozka.href} className="popisek-uredni no-underline hover:text-inkoust">
-                  {polozka.popisek}
-                </Link>
-              ))}
-            </nav>
+            <HlavniNavigace polozky={NAVIGACE} />
           </div>
         </header>
 
@@ -99,37 +103,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
             <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
               <li>
-                <Link href="/o-projektu" className="popisek-uredni no-underline">
+                <Link href="/o-projektu" className="odkaz-navigace">
                   O projektu
                 </Link>
               </li>
               <li>
-                <Link href="/jak-hodnotime" className="popisek-uredni no-underline">
+                <Link href="/jak-hodnotime" className="odkaz-navigace">
                   Metodika
                 </Link>
               </li>
               <li>
-                <Link href="/minule-obdobi" className="popisek-uredni no-underline">
+                <Link href="/minule-obdobi" className="odkaz-navigace">
                   Co slíbila současná rada
                 </Link>
               </li>
               <li>
-                <Link href="/kdo-o-cem-rozhoduje" className="popisek-uredni no-underline">
+                <Link href="/kdo-o-cem-rozhoduje" className="odkaz-navigace">
                   Kdo o čem rozhoduje
                 </Link>
               </li>
               <li>
-                <Link href="/rozpoctovy-ramec" className="popisek-uredni no-underline">
+                <Link href="/rozpoctovy-ramec" className="odkaz-navigace">
                   Kolik má Praha peněz
                 </Link>
               </li>
               <li>
-                <Link href="/hlasovani" className="popisek-uredni no-underline">
+                <Link href="/hlasovani" className="odkaz-navigace">
                   Anketa
                 </Link>
               </li>
               <li>
-                <Link href="/ochrana-udaju" className="popisek-uredni no-underline">
+                <Link href="/ochrana-udaju" className="odkaz-navigace">
                   Ochrana údajů
                 </Link>
               </li>

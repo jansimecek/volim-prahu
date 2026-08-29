@@ -84,7 +84,7 @@ export function RazitkoHodnoceni({
         <summary className="cursor-pointer px-4 py-3 popisek-uredni hover:text-inkoust">
           <span className="pl-1.5">Zdůvodnění a zdroje</span>
         </summary>
-        <div className="border-t border-linka px-4 py-4">
+        <div className="border-t border-linka-silna px-4 py-4">
           <p className="max-w-prose">{hodnoceni.zduvodneni}</p>
 
           <NadpisPodrobnosti className="popisek-uredni mt-5">Zdroje</NadpisPodrobnosti>

@@ -1,0 +1,31 @@
+# Předvolební průzkumy volebních preferencí.
+#
+# Zapisují se sem jen průzkumy, u kterých máme dohledatelný termín sběru dat,
+# velikost vzorku, metodu a odkaz. Zveřejnění navíc prochází přes moratorium
+# (src/lib/moratorium.ts) — ani validní průzkum se nesmí ukázat v zakázané
+# lhůtě před volbami.
+#
+# Slug v `subjekt` musí odpovídat souboru v content/strany/. Kontroluje to
+# `pnpm validate`, aby překlep neshodil řazení až u čtenáře.
+
+overeno: 2026-08-29
+
+# Zobrazuje se čtenáři pod výpisem subjektů, takže platí stejné pravidlo jako
+# jinde: co tvrdí, musí jít ověřit. Schéma proto vyžaduje zdroje.
+poznamka:
+  text: >-
+    Zatím tu není žádný průzkum, a řazení podle průzkumu se proto vůbec
+    nenabízí. Zveřejňujeme jen průzkumy, u kterých je dohledatelný termín
+    sběru dat, velikost a typ vzorku, metoda a zadavatel — bez toho je číslo
+    neověřitelné. K 29. srpnu 2026 jsme dohledali jediný zveřejněný průzkum
+    preferencí pro pražské zastupitelstvo (Phoenix Research, zveřejněný
+    4. května 2026) a tyhle údaje u něj publikované nejsou; posuďte ho sami
+    z odkazu níže. Ostatní modely agentur z roku 2026 jsou sněmovní, tedy
+    celostátní, a o pražském zastupitelstvu nevypovídají. Pozor také na
+    záměnu ročníků: vyhledávače vracejí pražské průzkumy z roku 2022, jako
+    by byly aktuální.
+  zdroje:
+    - text: Průzkum z Prahy (Phoenix Research), ParlamentníListy.cz, 4. 5. 2026
+      url: https://www.parlamentnilisty.cz/arena/monitor/Pruzkum-z-Prahy-Velky-navrat-STAN-i-prekvapeni-z-Prisahy-790823
+
+pruzkumy: []

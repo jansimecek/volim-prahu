@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { LHUTA_OZNAMENI, souhrnDesek, type StavDesky } from '@/lib/desky'
+import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
 
 const POPIS_STAVU: Record<StavDesky['stav'], { text: string; trida: string; znacka: string }> = {
   'oznameni-nalezeno': { text: 'oznámení vyvěšeno', trida: 'razitko-prima', znacka: '●' },
@@ -39,7 +40,7 @@ export function UredniDesky() {
         </p>
       </section>
 
-      <div className="overflow-x-auto">
+      <PosuvnaTabulka popisek="Úřední desky městských částí">
         <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
           <thead>
             <tr className="border-b border-inkoust">
@@ -52,7 +53,7 @@ export function UredniDesky() {
             {souhrn.stavy.map((s) => {
               const stav = POPIS_STAVU[s.stav]
               return (
-                <tr key={s.slug} className="border-b border-linka align-top">
+                <tr key={s.slug} className="border-b border-linka-silna align-top">
                   <td className="py-2 pr-3">
                     <Link href={`/mestska-cast/${s.slug}`} className="odkaz-akcent">
                       {s.nazev}
@@ -89,7 +90,7 @@ export function UredniDesky() {
             })}
           </tbody>
         </table>
-      </div>
+      </PosuvnaTabulka>
 
       <p className="max-w-prose text-sm text-seda-uredni">
         Sbíráme jen odkazy na dokumenty zveřejněné úřady, samotné oznámení nepřebíráme.

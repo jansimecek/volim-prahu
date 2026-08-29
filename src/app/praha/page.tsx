@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { programy, strany } from '#content'
+import { DlazdiceStrany } from '@/components/DlazdiceStrany'
+import { RazenySeznam } from '@/components/RazenySeznam'
+import { sPoctem } from '@/lib/cestina'
 import { MAGISTRAT, SADA_CISELNIKU, cislo } from '@/lib/obsah'
-import { celeJmeno, kandidatka, lidr, stranaPodleKodu } from '@/lib/kandidatky'
-import { POPIS_PROGRAMU, serazene } from '@/lib/strany'
+import { kandidatka } from '@/lib/kandidatky'
+import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
+import { vypisStran } from '@/lib/vypisStran'
 
 export const metadata: Metadata = {
   title: 'Magistrát',
@@ -11,15 +14,10 @@ export const metadata: Metadata = {
     'Volby do Zastupitelstva hlavního města Prahy 2026: 65 mandátů, kandidující subjekty a hodnocení proveditelnosti jejich programů.',
 }
 
-export default function StrankaMagistratu() {
-  const kandidujici = serazene(strany.filter((s) => s.uroven === 'magistrat'))
+export default async function StrankaMagistratu() {
+  const { polozky, pruzkum } = await vypisStran('magistrat')
   const listina = kandidatka('magistrat')
   const vylosovano = listina?.strany.some((s) => s.vylosovano) ?? false
-
-  const pocetHodnoceni = (slug: string) =>
-    programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')?.body.filter(
-      (b) => b.hodnoceni,
-    ).length ?? 0
 
   return (
     <div className="space-y-10">
@@ -33,7 +31,7 @@ export default function StrankaMagistratu() {
         </p>
       </header>
 
-      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka sm:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka-silna sm:grid-cols-4">
         <Udaj popisek="Mandátů" hodnota={cislo(MAGISTRAT.mandaty)} />
         <Udaj popisek="Volebních okrsků" hodnota={cislo(MAGISTRAT.okrskyCelkem)} />
         <Udaj popisek="Obyvatel" hodnota={cislo(MAGISTRAT.pocetObyvatel)} />
@@ -43,7 +41,7 @@ export default function StrankaMagistratu() {
       <section>
         <h2 className="text-2xl">Kandidující subjekty</h2>
 
-        {kandidujici.length === 0 ? (
+        {polozky.length === 0 ? (
           <p className="mt-3 max-w-prose">
             Kandidátní listiny pro rok 2026 zatím Český statistický úřad v otevřených datech
             nezveřejnil. Jakmile je vydá, objeví se tady seznam volebních stran, jejich
@@ -52,12 +50,15 @@ export default function StrankaMagistratu() {
         ) : (
           <>
             <p className="mt-3 max-w-prose">
-              Registrační úřad zaregistroval <strong>{kandidujici.length} kandidátních
-              listin</strong> s celkem{' '}
+              Registrační úřad zaregistroval{' '}
+              <strong>
+                {sPoctem(polozky.length, 'kandidátní listinu', 'kandidátní listiny', 'kandidátních listin')}
+              </strong>{' '}
+              s celkem{' '}
               {cislo(
                 listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0,
               )}{' '}
-              kandidáty. Pořadí je abecední, ne podle preferencí ani velikosti —
+              kandidáty. Výchozí pořadí je abecední, ne podle preferencí ani velikosti —
               {vylosovano
                 ? ' vylosovaná čísla najdete u jednotlivých subjektů.'
                 : ' čísla na hlasovacím lístku zatím vylosovaná nebyla a doplníme je, jakmile budou.'}
@@ -78,39 +79,28 @@ export default function StrankaMagistratu() {
               a termínů. Není to hodnocení subjektů, ale jejich programů. Jakmile další
               program vyjde, projde stejným rámcem.
             </p>
-            <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2">
-              {kandidujici.map((strana) => (
-                <li key={strana.slug} className="bg-papir">
-                  <Link
-                    href={`/praha/strana/${strana.slug}`}
-                    className="block h-full p-4 no-underline hover:bg-papir-tmavsi"
-                  >
-                    <span className="block font-display text-lg font-semibold">
-                      {strana.zkratka}
-                    </span>
-                    <span className="mt-1 block text-sm">
-                      {(() => {
-                        const j = lidr(stranaPodleKodu('magistrat', strana.kodStrany))
-                        return j ? `Lídr: ${celeJmeno(j)}` : 'lídr neuveden'
-                      })()}
-                    </span>
-                    <span className="popisek-uredni mt-2 block">
-                      {stranaPodleKodu('magistrat', strana.kodStrany)?.kandidati.length ?? 0}{' '}
-                      kandidátů · {POPIS_PROGRAMU[strana.programStav]}
-                      {pocetHodnoceni(strana.slug) > 0
-                        ? ` · ${pocetHodnoceni(strana.slug)} hodnocených slibů`
-                        : ''}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <RazenySeznam
+              polozky={polozky.map((strana) => ({
+                slug: strana.slug,
+                nazev: strana.zkratka,
+                cislo: strana.cislo,
+                procenta: strana.procenta,
+                obsah: <DlazdiceStrany strana={strana} />,
+              }))}
+              tridaSeznamu="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2"
+              popisSeznamu="Kandidující volební strany"
+              jednotka={['volební strana', 'volební strany', 'volebních stran']}
+              pruzkumPuvod={pruzkum ? puvodPruzkumu(pruzkum) : undefined}
+              pruzkumOdkaz={pruzkum?.url}
+              duvodBezPruzkumu={duvodBezPruzkumu('magistrat')}
+            zdrojeDuvodu={zdrojePoznamky()}
+            />
           </>
         )}
 
         <p className="mt-5 max-w-prose">
           <Link href="/jak-hodnotime" className="odkaz-akcent">
-            Jak hodnocení vzniká
+            Jak hodnotíme proveditelnost
           </Link>
         </p>
         <p className="popisek-uredni mt-6">

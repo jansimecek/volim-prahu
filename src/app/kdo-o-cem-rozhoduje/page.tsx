@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { kompetence } from '#content'
 import { KompetencniMatice } from '@/components/KompetencniMatice'
+import { Obsah } from '@/components/Obsah'
 import { MDXContent } from '@/components/mdx'
+import { nadpisyStranky } from '@/lib/nadpisy'
+import { datumCesky } from '@/lib/cestina'
 import { strankaPodleSlugu } from '@/lib/obsah'
 
 const stranka = strankaPodleSlugu('kdo-o-cem-rozhoduje')
@@ -16,6 +19,8 @@ export default function StrankaKompetenci() {
         <h1 className="mt-2 text-4xl">{stranka.title}</h1>
       </header>
 
+      <Obsah polozky={nadpisyStranky(stranka.surovy)} />
+
       <div className="proza max-w-prose">
         <MDXContent code={stranka.content} />
       </div>
@@ -24,7 +29,7 @@ export default function StrankaKompetenci() {
 
       <footer className="border-t border-linka pt-6">
         <p className="popisek-uredni">
-          {kompetence.agendy.length} agend · aktualizováno {stranka.aktualizovano} · odkazy vedou
+          {kompetence.agendy.length} agend · aktualizováno {datumCesky(stranka.aktualizovano)} · odkazy vedou
           na úplné znění předpisu
         </p>
       </footer>

@@ -1,4 +1,5 @@
 import { rozpocet } from '#content'
+import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
 
 const STAV_POPIS: Record<string, string> = {
   schvaleny: 'schválený rozpočet',
@@ -23,7 +24,7 @@ export function RozpoctovyRamec() {
 
             <div className="mt-5 border-t border-inkoust">
               {polozky.map((polozka) => (
-                <article key={polozka.id} id={polozka.id} className="border-b border-linka py-5 scroll-mt-20">
+                <article key={polozka.id} id={polozka.id} className="border-b border-linka-silna py-5 scroll-mt-20">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                     <h3 className="font-display text-lg font-semibold">{polozka.nazev}</h3>
                     <p className="popisek-uredni">
@@ -72,7 +73,7 @@ export function RozpoctovyRamec() {
           jednotlivých radnicích liší.
         </p>
 
-        <div className="mt-5 overflow-x-auto">
+        <PosuvnaTabulka popisek="Rozpočty vybraných městských částí" trida="mt-5">
           <table className="w-full min-w-[42rem] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-inkoust">
@@ -85,7 +86,7 @@ export function RozpoctovyRamec() {
             </thead>
             <tbody>
               {rozpocet.mestskeCastiPriklady.map((mc) => (
-                <tr key={mc.slug} className="border-b border-linka align-top">
+                <tr key={mc.slug} className="border-b border-linka-silna align-top">
                   <td className="py-2">
                     <a href={`/mestska-cast/${mc.slug}`} className="odkaz-akcent">
                       {mc.nazev}
@@ -104,7 +105,7 @@ export function RozpoctovyRamec() {
               ))}
             </tbody>
           </table>
-        </div>
+        </PosuvnaTabulka>
       </section>
     </div>
   )

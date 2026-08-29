@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Drobecky } from '@/components/Drobecky'
 import { notFound } from 'next/navigation'
 import { programy, strany } from '#content'
 import { RazitkoHodnoceni } from '@/components/RazitkoHodnoceni'
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   if (!strana) return {}
   const nazev = stranaPodleKodu('magistrat', strana.kodStrany)?.nazev ?? strana.zkratka
   return {
-    title: `Program — ${nazev}`,
+    title: `Program: ${nazev}`,
     description: `Sliby ${nazev} pro Prahu 2026 a hodnocení jejich proveditelnosti proti kompetenčnímu a rozpočtovému rámci.`,
   }
 }
@@ -34,18 +34,24 @@ export default async function StrankaProgramu({ params }: Parametry) {
   const program = programy.find((p) => p.subjekt === slug && p.uroven === 'magistrat')
   if (!strana || !program) notFound()
 
+  const nazevStrany = stranaPodleKodu('magistrat', strana.kodStrany)?.nazev ?? strana.zkratka
   const hodnocene = program.body.filter((b) => b.hodnoceni)
   const nehodnocene = program.body.filter((b) => !b.hodnoceni)
 
   return (
     <div className="space-y-10">
       <header>
-        <p className="popisek-uredni">
-          <Link href={`/praha/strana/${strana.slug}`} className="no-underline">
-            {strana.zkratka}
-          </Link>
-        </p>
-        <h1 className="mt-2 text-4xl">Program a jeho proveditelnost</h1>
+        <Drobecky
+          cesta={[
+            { popisek: 'Úvod', href: '/' },
+            { popisek: 'Magistrát', href: '/praha' },
+            { popisek: strana.zkratka, href: `/praha/strana/${strana.slug}` },
+            { popisek: 'Program' },
+          ]}
+        />
+        <h1 className="mt-3 text-4xl">
+          Program {nazevStrany}: co je proveditelné
+        </h1>
       </header>
 
       <div className="proza max-w-prose">
@@ -84,7 +90,7 @@ export default async function StrankaProgramu({ params }: Parametry) {
           </p>
           <ul className="mt-4 space-y-2">
             {nehodnocene.map((bod) => (
-              <li key={bod.id} className="border-l-2 border-linka pl-4">
+              <li key={bod.id} className="border-l-2 border-linka-silna pl-4">
                 {bod.slib}
               </li>
             ))}

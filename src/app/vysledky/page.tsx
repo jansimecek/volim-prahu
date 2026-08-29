@@ -33,7 +33,7 @@ export default async function StrankaVysledku() {
         <VysledkyPrehled snapshot={snapshot} />
       ) : (
         <section className="max-w-prose space-y-4">
-          <p className="border-l-2 border-linka pl-5">
+          <p className="border-l-2 border-linka-silna pl-5">
             {scitaniZacalo
               ? 'Sčítání už probíhá, ale výsledky se nám právě nedaří načíst. Zkuste to za chvíli znovu — do té doby jsou spolehlivým zdrojem oficiální stránky ČSÚ.'
               : 'Zatím nemáme žádná data. Sčítání začíná po uzavření volebních místností v sobotu 10. října ve 14:00 a výsledky se tady začnou objevovat průběžně.'}

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+  MORATORIUM_DO,
   MORATORIUM_OD,
   PRAVNI_OPORA,
   duvodSkryti,
@@ -13,26 +14,55 @@ import {
  * zatímco skrytý legální obsah je jen nepříjemnost.
  */
 describe('moratorium na předvolební průzkumy', () => {
-  it('bez potvrzeného právního základu se průzkumy nezobrazují nikdy', () => {
-    if (MORATORIUM_OD && PRAVNI_OPORA) return // až bude ověřeno, platí testy níže
-    for (const den of ['2026-06-01', '2026-10-01', '2026-10-08', '2026-10-09']) {
-      expect(smiZobrazitPruzkum(new Date(`${den}T12:00:00+02:00`))).toBe(false)
+  it('má vyplněnou právní oporu i datum, jinak zůstává fail-closed', () => {
+    // Datum bez citace ustanovení je jen číslo, které nikdo neumí ověřit.
+    expect(Boolean(MORATORIUM_OD) === Boolean(PRAVNI_OPORA)).toBe(true)
+    if (PRAVNI_OPORA) {
+      // Po volební reformě 2025/2026 už moratorium není ve volebním zákoně.
+      // Kdyby se opora vrátila na § 30 odst. 3 zákona 491/2001 Sb., je to chyba.
+      expect(PRAVNI_OPORA).toContain('234/2025')
+      expect(PRAVNI_OPORA).not.toContain('491/2001')
     }
-    expect(stavMoratoria(new Date('2026-09-01T12:00:00+02:00'))).toBe('neoveerno')
   })
 
-  it('datum se nesmí použít bez uvedené právní opory', () => {
-    // Obojí musí být vyplněné zároveň, jinak zůstává fail-closed.
-    expect(Boolean(MORATORIUM_OD) === Boolean(PRAVNI_OPORA) || !smiZobrazitPruzkum()).toBe(true)
+  it('lhůta začíná třetí den přede dnem voleb a končí ukončením hlasování', () => {
+    if (!MORATORIUM_OD || !PRAVNI_OPORA) return
+    // Den voleb je pátek 9. 10. 2026 → třetí den přede dnem voleb je úterý 6. 10.
+    expect(MORATORIUM_OD.toISOString()).toBe(new Date('2026-10-06T00:00:00+02:00').toISOString())
+    expect(MORATORIUM_DO.toISOString()).toBe(new Date('2026-10-10T14:00:00+02:00').toISOString())
   })
 
-  it('po uzavření volebních místností se obsah smí zobrazit, jakmile je ověřeno', () => {
-    const poVolbach = new Date('2026-10-10T14:00:01+02:00')
-    expect(stavMoratoria(poVolbach)).toBe(MORATORIUM_OD && PRAVNI_OPORA ? 'po-volbach' : 'neoveerno')
+  it('hranice lhůty jsou uzavřené na začátku a otevřené na konci', () => {
+    if (!MORATORIUM_OD || !PRAVNI_OPORA) return
+    const tesnePred = new Date('2026-10-05T23:59:59+02:00')
+    const prvniOkamzik = new Date('2026-10-06T00:00:00+02:00')
+    const konec = new Date('2026-10-10T14:00:00+02:00')
+
+    expect(smiZobrazitPruzkum(tesnePred)).toBe(true)
+    expect(smiZobrazitPruzkum(prvniOkamzik)).toBe(false)
+    expect(smiZobrazitPruzkum(new Date('2026-10-09T18:00:00+02:00'))).toBe(false)
+    // Přesně ve 14:00 hlasování končí, takže zákaz už neplatí.
+    expect(smiZobrazitPruzkum(konec)).toBe(true)
   })
 
-  it('důvod skrytí je vždy vysvětlený, nikdy prázdný', () => {
-    expect(duvodSkryti(new Date('2026-10-08T12:00:00+02:00')).length).toBeGreaterThan(40)
+  it.each([
+    ['2026-09-01T12:00:00+02:00', 'pred-moratoriem'],
+    ['2026-10-06T00:00:01+02:00', 'behem-moratoria'],
+    ['2026-10-10T14:00:01+02:00', 'po-volbach'],
+  ])('stav v %s je %s', (kdy, ocekavany) => {
+    if (!MORATORIUM_OD || !PRAVNI_OPORA) return
+    expect(stavMoratoria(new Date(kdy))).toBe(ocekavany)
+  })
+
+  it('důvod skrytí cituje ustanovení, ne jen obecnou větu o zákonu', () => {
+    const duvod = duvodSkryti(new Date('2026-10-08T12:00:00+02:00'))
+    expect(duvod.length).toBeGreaterThan(40)
+    if (PRAVNI_OPORA) expect(duvod).toContain(PRAVNI_OPORA)
+  })
+
+  it('mimo lhůtu se nic neskrývá, takže není co vysvětlovat', () => {
+    if (!MORATORIUM_OD || !PRAVNI_OPORA) return
+    expect(duvodSkryti(new Date('2026-09-01T12:00:00+02:00'))).toBe('')
   })
 })
 

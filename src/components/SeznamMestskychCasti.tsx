@@ -48,7 +48,7 @@ export function SeznamMestskychCasti({
       {nalezene.length === 0 ? (
         <p className="mt-6">Nic takového v Praze není. Zkuste jiný název.</p>
       ) : (
-        <ul className="mt-4 grid gap-px border border-inkoust bg-linka sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-4 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           {nalezene.map((mc) => (
             <li key={mc.slug} className="bg-papir">
               <Link

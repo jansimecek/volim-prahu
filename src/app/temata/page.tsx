@@ -40,7 +40,7 @@ export default function StrankaTemat() {
         <ul className="flex flex-wrap gap-x-5 gap-y-1">
           {OKRUHY.map((o) => (
             <li key={o.id}>
-              <a href={`#${o.id}`} className="popisek-uredni no-underline hover:text-inkoust">
+              <a href={`#${o.id}`} className="odkaz-navigace">
                 {o.nazev}
               </a>
             </li>
@@ -73,7 +73,7 @@ export default function StrankaTemat() {
                 {vyrokyOk.map((v, i) => {
                   const zdroj = zdrojPodleId.get(v.zdroj)
                   return (
-                    <article key={`${v.osobaSlug}-${i}`} className="border-b border-linka py-5">
+                    <article key={`${v.osobaSlug}-${i}`} className="border-b border-linka-silna py-5">
                       <p className="font-display font-semibold">
                         {v.jmeno}
                         <Link
@@ -116,7 +116,7 @@ export default function StrankaTemat() {
                 <h3 className="popisek-uredni">Hodnocené sliby z programů</h3>
                 <ul className="mt-2 space-y-2">
                   {sliby.map((s, i) => (
-                    <li key={i} className="max-w-prose border-l-2 border-linka pl-4 text-sm">
+                    <li key={i} className="max-w-prose border-l-2 border-linka-silna pl-4 text-sm">
                       <Link href={`/praha/strana/${s.subjekt}/program`} className="odkaz-akcent">
                         {s.zkratkaStrany}
                       </Link>

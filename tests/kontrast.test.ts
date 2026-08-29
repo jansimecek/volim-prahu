@@ -27,19 +27,42 @@ function kontrast(a: string, b: string): number {
   return (svetlejsi + 0.05) / (tmavsi + 0.05)
 }
 
-describe('kontrast palety na podkladu papíru', () => {
+describe('kontrast palety', () => {
   const papir = token('papir')
+  // Dlaždice se při najetí myší přebarvují na tenhle podklad. Kontrast se
+  // nesmí posuzovat jen proti výchozímu papíru — text zůstává stejný,
+  // plocha pod ním ne, a AA hranice platí v obou stavech.
+  const podklady = [
+    ['papír', papir],
+    ['tmavší papír (hover dlaždic)', token('papir-tmavsi')],
+  ] as const
 
-  it.each(['inkoust', 'seda-uredni', 'praha', 'okr'])(
-    '%s splňuje WCAG 2.2 AA pro běžný text (4.5:1)',
-    (nazev) => {
-      expect(kontrast(token(nazev), papir)).toBeGreaterThanOrEqual(4.5)
+  const textoveTokeny = ['inkoust', 'seda-uredni', 'praha', 'okr']
+
+  for (const [nazevPodkladu, podklad] of podklady) {
+    it.each(textoveTokeny)(
+      `%s splňuje WCAG 2.2 AA pro běžný text (4.5:1) na podkladu ${nazevPodkladu}`,
+      (nazev) => {
+        expect(kontrast(token(nazev), podklad)).toBeGreaterThanOrEqual(4.5)
+      },
+    )
+  }
+
+  it.each(podklady.map(([n, h]) => [n, h] as const))(
+    'silná linka splňuje netextovou hranici 3:1 na podkladu %s',
+    (_nazev, podklad) => {
+      // Oddělovače buněk v mřížkách, řádky tabulek a pole razítka nesou
+      // informaci o struktuře — WCAG 2.2 (1.4.11) na ni chce 3:1.
+      expect(kontrast(token('linka-silna'), podklad)).toBeGreaterThanOrEqual(3)
     },
   )
 
-  it('linka a tmavší papír zůstávají jen dekorativní plochy, ne text', () => {
-    // Kdyby někdo těmito tokeny obarvil text, kontrast by neprošel — proto
-    // je test drží explicitně pod hranicí a připomíná, k čemu slouží.
+  it('dekorativní linka zůstává pod hranicí pro text, aby jí nikdo neobarvil písmo', () => {
     expect(kontrast(token('linka'), papir)).toBeLessThan(4.5)
+  })
+
+  it('silná linka je opravdu tmavší než dekorativní', () => {
+    // Kdyby se hodnoty prohodily, obě role by dělaly opak toho, k čemu jsou.
+    expect(svetlost(token('linka-silna'))).toBeLessThan(svetlost(token('linka')))
   })
 })

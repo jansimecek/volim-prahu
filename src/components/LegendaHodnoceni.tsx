@@ -17,7 +17,7 @@ export function LegendaHodnoceni() {
       {OSY.map((osa) => (
         <section key={osa.klic}>
           <h3 className="popisek-uredni">{osa.popisek}</h3>
-          <dl className="mt-2 divide-y divide-linka border-t border-b border-linka">
+          <dl className="mt-2 divide-y divide-linka-silna border-t border-b border-linka-silna">
             {Object.entries(osa.popisy).map(([klic, stav]) => (
               <div key={klic} className="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-4">
                 <dt className={`razitko-hodnota ${TON_TRIDA[stav.ton]}`}>

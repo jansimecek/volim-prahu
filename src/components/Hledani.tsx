@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useMemo, useRef, useState } from 'react'
 import { bezDiakritiky } from '@/lib/slug'
 
-type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p']
+type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z']
 type Dokument = { id: number; nazev: string; popis: string; url: string; typ: Zaznam[3] }
 
 const POPIS_TYPU: Record<Zaznam[3], string> = {
@@ -14,6 +14,7 @@ const POPIS_TYPU: Record<Zaznam[3], string> = {
   s: 'volební strana',
   m: 'městská část',
   p: 'stránka',
+  z: 'zprávička',
 }
 
 /** Index se hledá bez ohledu na diakritiku — „novak" musí najít Nováka. */
@@ -93,7 +94,7 @@ export function Hledani() {
       </p>
 
       {vysledky.length > 0 && (
-        <ul className="mt-4 divide-y divide-linka border-t border-b border-linka">
+        <ul className="mt-4 divide-y divide-linka-silna border-t border-b border-linka-silna">
           {vysledky.map((v) => (
             <li key={v.id} className="py-3">
               {/* URL pochází z generovaného indexu, typované routy ho staticky neznají. */}

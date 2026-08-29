@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Drobecky } from '@/components/Drobecky'
 import { notFound } from 'next/navigation'
 import { programy, strany } from '#content'
 import { MDXContent } from '@/components/mdx'
@@ -40,16 +41,18 @@ export default async function StrankaSubjektu({ params }: Parametry) {
   return (
     <div className="space-y-10">
       <header>
-        <p className="popisek-uredni">
-          <Link href="/praha" className="no-underline">
-            Magistrát
-          </Link>
-        </p>
-        <h1 className="mt-2 text-4xl">{naKandidatce?.nazev ?? strana.zkratka}</h1>
+        <Drobecky
+          cesta={[
+            { popisek: 'Úvod', href: '/' },
+            { popisek: 'Magistrát', href: '/praha' },
+            { popisek: strana.zkratka },
+          ]}
+        />
+        <h1 className="mt-3 text-4xl">{naKandidatce?.nazev ?? strana.zkratka}</h1>
         <p className="popisek-uredni mt-2">{strana.zkratka}</p>
       </header>
 
-      <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka sm:grid-cols-3">
+      <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
         {jednicka && (
           <Udaj
             popisek="Lídr kandidátky"
@@ -85,7 +88,7 @@ export default async function StrankaSubjektu({ params }: Parametry) {
       </div>
 
       <section className="max-w-prose border-t border-linka pt-6">
-        <h2 className="text-2xl">Program a jeho proveditelnost</h2>
+        <h2 className="text-2xl">Co strana slibuje</h2>
         {pocetHodnocenych > 0 ? (
           <p className="mt-3">
             <Link href={`/praha/strana/${strana.slug}/program`} className="odkaz-akcent">

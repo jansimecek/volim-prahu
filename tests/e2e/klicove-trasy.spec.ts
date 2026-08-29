@@ -45,3 +45,100 @@ test('každá stránka má funkční přeskočení na obsah', async ({ page }) =
   await page.keyboard.press('Tab')
   await expect(page.getByRole('link', { name: 'Přeskočit na obsah' })).toBeFocused()
 })
+
+test('navigace ukazuje, na které stránce čtenář je', async ({ page }) => {
+  await page.goto('/praha')
+  const navigace = page.getByRole('navigation', { name: 'Hlavní navigace' })
+  await expect(navigace.getByRole('link', { name: 'Magistrát' })).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
+  // Stav „jsem tady" musí platit i o úroveň hlouběji, jinak se čtenář
+  // na profilu strany ztratí ze sekce.
+  await page.goto('/praha/strana/ano-2011')
+  await expect(navigace.getByRole('link', { name: 'Magistrát' })).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
+  await expect(navigace.getByRole('link', { name: 'Senát' })).not.toHaveAttribute(
+    'aria-current',
+    'page',
+  )
+})
+
+test('hluboká stránka nabízí cestu zpět přes drobečky', async ({ page }) => {
+  await page.goto('/praha/strana/ceska-piratska-strana/program')
+  const drobecky = page.getByRole('navigation', { name: 'Drobečková navigace' })
+  await expect(drobecky).toBeVisible()
+  await drobecky.getByRole('link', { name: 'Magistrát' }).click()
+  await expect(page).toHaveURL(/\/praha$/)
+})
+
+test('výpis stran jde přeřadit podle vylosovaného čísla', async ({ page }) => {
+  // Praha 22 je jediná část, kde už jsou vylosovaná všechna čísla.
+  await page.goto('/mestska-cast/praha-22')
+  const seznam = page.getByRole('list', { name: 'Kandidující volební strany' })
+
+  const abecedne = await seznam.getByRole('heading', { level: 3 }).allInnerTexts()
+  expect(abecedne.length).toBeGreaterThan(2)
+
+  // Přepínač je skutečný radio input schovaný pod štítkem — přístupné jméno
+  // musí sedět, ale kliká se na štítek, stejně jako to udělá čtenář.
+  await expect(page.getByRole('radio', { name: 'Podle čísla na lístku' })).toHaveCount(1)
+  await page.getByText('Podle čísla na lístku').click()
+  await expect(page.getByRole('radio', { name: 'Podle čísla na lístku' })).toBeChecked()
+  const podleCisla = await seznam.getByRole('heading', { level: 3 }).allInnerTexts()
+
+  expect(podleCisla).toHaveLength(abecedne.length)
+  expect(podleCisla).not.toEqual(abecedne)
+  // Nikdo se přeřazením nesmí ztratit.
+  expect([...podleCisla].sort()).toEqual([...abecedne].sort())
+})
+
+test('řazení podle průzkumu se nenabízí a je vysvětlené proč', async ({ page }) => {
+  await page.goto('/praha')
+  await expect(page.getByRole('radio', { name: 'Podle posledního průzkumu' })).toHaveCount(0)
+  await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
+})
+
+test('zprávičky mají permalink, čas a zdroj', async ({ page }) => {
+  await page.goto('/zpravicky')
+  await expect(page.getByRole('heading', { level: 1, name: 'Zprávičky' })).toBeVisible()
+
+  const prvni = page.locator('article').first()
+  await expect(prvni.locator('time')).toHaveAttribute('datetime', /^\d{4}-\d{2}-\d{2}T/)
+
+  await page.goto('/zpravicky/moratorium-na-pruzkumy-2026')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Moratorium')
+  await expect(page.getByRole('link', { name: /Ministerstvo vnitra/ })).toBeVisible()
+})
+
+test('kanál RSS zpráviček je platné XML s položkami', async ({ request }) => {
+  const odpoved = await request.get('/zpravicky/feed.xml')
+  expect(odpoved.status()).toBe(200)
+  expect(odpoved.headers()['content-type']).toContain('application/rss+xml')
+
+  const telo = await odpoved.text()
+  expect(telo).toContain('<rss version="2.0"')
+  expect(telo).toContain('/zpravicky/moratorium-na-pruzkumy-2026')
+  // Zdroj patří i do feedu — čte se vytržený z kontextu stránky.
+  expect(telo).toContain('Zdroj:')
+})
+
+test('dlouhá referenční stránka má obsah s funkčními kotvami', async ({ page }) => {
+  await page.goto('/ochrana-udaju')
+  const obsah = page.getByRole('navigation', { name: 'Obsah stránky' })
+  await expect(obsah).toBeVisible()
+
+  const prvni = obsah.getByRole('link').first()
+  const cil = await prvni.getAttribute('href')
+  await prvni.click()
+  await expect(page.locator(cil!)).toBeVisible()
+})
+
+test('404 mluví česky a nabídne cestu dál', async ({ page }) => {
+  const odpoved = await page.goto('/tahle-stranka-neexistuje')
+  expect(odpoved?.status()).toBe(404)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('nemáme')
+  await expect(page.getByRole('link', { name: 'Vyhledávání' })).toBeVisible()
+})

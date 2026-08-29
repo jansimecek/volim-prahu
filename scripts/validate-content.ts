@@ -9,7 +9,7 @@
  * pasáže, slovník verdiktu tam, kde má být slovník proveditelnosti,
  * a nefunkční odkazy ve zdrojích hodnocení.
  */
-import { readFileSync, readdirSync, statSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, relative } from 'node:path'
 
 const KOREN = join(__dirname, '..')
@@ -36,13 +36,18 @@ const ZAKAZANY_SLOVNIK = [
 /**
  * Slovník verdiktu se kontroluje jen tam, kde hodnotíme vlastními slovy.
  *
- * Metodika o něm mluvit musí — vysvětluje, proč takové výroky nevydáváme.
- * A profily subjektů citují registrované názvy volebních stran, které si
- * strany zvolily samy; jeden z pražských názvů je několikasetznakový text
- * obsahující i slova z tohoto seznamu. Citovat ho doslova je povinnost,
+ * Kontrolují se kolekce, kde redakce píše vlastními slovy o subjektech:
+ * hodnocení programů a zprávičky. Při přidání další takové rubriky se sem
+ * musí dopsat, jinak v ní pravidlo mlčky přestane platit.
+ *
+ * Metodika o slovníku mluvit musí — vysvětluje, proč takové výroky
+ * nevydáváme. A profily subjektů citují registrované názvy volebních stran,
+ * které si strany zvolily samy; jeden z pražských názvů je několikasetznakový
+ * text obsahující i slova z tohoto seznamu. Citovat ho doslova je povinnost,
  * ne náš verdikt, takže se `content/strany/` nekontroluje.
  */
-const KONTROLOVAT_SLOVNIK = (soubor: string) => soubor.startsWith('content/programy/')
+const KONTROLOVAT_SLOVNIK = (soubor: string) =>
+  soubor.startsWith('content/programy/') || soubor.startsWith('content/zpravicky/')
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 
@@ -98,9 +103,20 @@ for (const cesta of vsechnySoubory(OBSAH)) {
 const NEOVEROVAT = ['instagram.com', 'x.com', 'twitter.com', 'facebook.com', 'linkedin.com']
 
 async function overOdkazy() {
-  const seznam = [...odkazyKOvereni].filter(
-    (odkaz) => !NEOVEROVAT.some((host) => new URL(odkaz).hostname.endsWith(host)),
-  )
+  // `new URL` na neplatné adrese vyhodí výjimku. Bez ošetření by překlep
+  // ve zdroji shodil celý běh dřív, než se vypíšou už posbírané nálezy —
+  // redakce by místo reportu dostala stack trace.
+  const seznam: string[] = []
+  for (const odkaz of odkazyKOvereni) {
+    let hostitel: string
+    try {
+      hostitel = new URL(odkaz).hostname
+    } catch {
+      nalezy.push({ soubor: '(odkazy)', radek: 0, zprava: `Neplatná adresa: ${odkaz}`, tvrde: true })
+      continue
+    }
+    if (!NEOVEROVAT.some((host) => hostitel.endsWith(host))) seznam.push(odkaz)
+  }
   console.log(`Ověřuji ${seznam.length} odkazů …`)
   // Sekvenčně a s krátkým timeoutem — cílem není zátěžový test cizích serverů.
   for (const odkaz of seznam) {
@@ -132,7 +148,57 @@ async function overOdkazy() {
   }
 }
 
+/**
+ * Referenční integrita mezi kolekcemi. Velite kontroluje každý soubor zvlášť,
+ * takže překlep ve slugu subjektu uvnitř průzkumu by prošel a projevil by se
+ * až tím, že by se strana v seřazeném výpisu tiše propadla na konec.
+ */
+function overKrizoveOdkazy() {
+  const velite = join(KOREN, '.velite')
+  // Chybějící .velite není „nic ke kontrole", ale neproběhlá kontrola.
+  // Tiché přeskočení by znamenalo, že po čerstvém klonu validace ohlásí
+  // „Obsah je v pořádku" i s překlepem ve slugu subjektu.
+  if (!existsSync(join(velite, 'pruzkumy.json')) || !existsSync(join(velite, 'strany.json'))) {
+    nalezy.push({
+      soubor: '(křížové odkazy)',
+      radek: 0,
+      zprava: 'Kontrola křížových odkazů neproběhla — chybí adresář .velite. Spusťte nejdřív `pnpm content`.',
+      tvrde: true,
+    })
+    return
+  }
+
+  const strany = JSON.parse(readFileSync(join(velite, 'strany.json'), 'utf8')) as {
+    slug: string
+    uroven: string
+  }[]
+  const pruzkumy = JSON.parse(readFileSync(join(velite, 'pruzkumy.json'), 'utf8')) as {
+    pruzkumy: {
+      id: string
+      uroven: string
+      vysledky: { subjekt: string }[]
+    }[]
+  }
+
+  for (const pruzkum of pruzkumy.pruzkumy) {
+    for (const vysledek of pruzkum.vysledky) {
+      const existuje = strany.some(
+        (s) => s.slug === vysledek.subjekt && s.uroven === pruzkum.uroven,
+      )
+      if (!existuje) {
+        nalezy.push({
+          soubor: 'content/pruzkumy.yaml',
+          radek: 0,
+          zprava: `Průzkum "${pruzkum.id}" uvádí subjekt "${vysledek.subjekt}", který na úrovni "${pruzkum.uroven}" v content/strany neexistuje.`,
+          tvrde: true,
+        })
+      }
+    }
+  }
+}
+
 async function main() {
+  overKrizoveOdkazy()
   if (kontrolovatOdkazy) await overOdkazy()
 
   if (nalezy.length === 0) {
@@ -154,4 +220,7 @@ async function main() {
   if (tvrde.length > 0) process.exitCode = 1
 }
 
-main()
+main().catch((chyba: unknown) => {
+  console.error(chyba)
+  process.exitCode = 1
+})

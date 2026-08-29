@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Drobecky } from '@/components/Drobecky'
 import { MDXContent } from '@/components/mdx'
+import { RazenySeznam } from '@/components/RazenySeznam'
+import { sPoctem } from '@/lib/cestina'
 import { MESTSKE_CASTI, SADA_CISELNIKU, cislo, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
@@ -38,16 +41,18 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   return (
     <div className="space-y-10">
       <header>
-        <p className="popisek-uredni">
-          <Link href="/mestska-cast" className="no-underline">
-            Městské části
-          </Link>
-        </p>
-        <h1 className="mt-2 text-4xl">{mc.nazev}</h1>
+        <Drobecky
+          cesta={[
+            { popisek: 'Úvod', href: '/' },
+            { popisek: 'Městské části', href: '/mestska-cast' },
+            { popisek: mc.nazev },
+          ]}
+        />
+        <h1 className="mt-3 text-4xl">{mc.nazev}</h1>
       </header>
 
       {/* Údaje z číselníku ČSÚ — needitovatelné ručně, proto vizuálně odděleno od textu. */}
-      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka sm:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka-silna sm:grid-cols-4">
         <Udaj popisek="Mandátů" hodnota={cislo(mc.mandaty)} />
         <Udaj popisek="Volebních okrsků" hodnota={cislo(mc.okrsky)} />
         <Udaj popisek="Obyvatel" hodnota={cislo(zastupitelstvo.pocetObyvatel)} />
@@ -56,9 +61,9 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
 
       {/* Jestli tady člověk dostane i senátní lístek, se jinde zjišťuje těžko. */}
       <section className="max-w-prose border-l-2 border-praha pl-5">
-        <h2 className="popisek-uredni">Senátní volby 2026</h2>
+        <h2 className="text-2xl">Senátní volby 2026</h2>
         {senat.stav === 'voli' && (
-          <p className="mt-1">
+          <p className="mt-2">
             Kromě zastupitelstev tady volíte i senátora — spadáte do{' '}
             <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
               obvodu č. {senat.obvod.cislo} ({senat.obvod.nazev})
@@ -91,7 +96,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
       {/* Kde přesně se v téhle části volí — závazné je oznámení na úřední desce. */}
       {deska && (
         <section className="max-w-prose border-l-2 border-praha pl-5">
-          <h2 className="popisek-uredni">Kde se tady volí</h2>
+          <h2 className="text-2xl">Kde se tady volí</h2>
           {deska.oznameni ? (
             <p className="mt-1">
               Oznámení o době a místě konání voleb je vyvěšené:{' '}
@@ -135,7 +140,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
           <h2 className="text-2xl">Místní témata</h2>
           <ul className="mt-4 space-y-4">
             {mc.temata.map((tema) => (
-              <li key={tema.nadpis} className="max-w-prose border-l-2 border-linka pl-4">
+              <li key={tema.nadpis} className="max-w-prose border-l-2 border-linka-silna pl-4">
                 <h3 className="font-display font-semibold">{tema.nadpis}</h3>
                 <p className="mt-1">{tema.text}</p>
               </li>
@@ -155,13 +160,16 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
             <p className="mt-3 max-w-prose">
               O {cislo(mc.mandaty)} mandátů se uchází {listina.strany.length}{' '}
               {listina.strany.length === 1 ? 'volební strana' : 'volebních stran'} s celkem{' '}
-              {cislo(kandidatuCelkem)} kandidáty.
+              {cislo(kandidatuCelkem)} kandidáty.{' '}
+              {listina.strany.some((s) => s.vylosovano)
+                ? 'Výchozí pořadí je abecední podle názvu; přepnout jde na pořadí podle vylosovaných čísel.'
+                : 'Pořadí je abecední podle názvu, ne podle preferencí — čísla na hlasovacím lístku tady zatím vylosovaná nebyla.'}
             </p>
 
             {/* Fakt, který volič jinde nedostane a který mění smysl jeho hlasu. */}
             {listina.strany.length === 1 && (
               <p className="mt-4 max-w-prose border-l-2 border-praha pl-5">
-                <span className="popisek-uredni block">Jediná kandidátka</span>
+                <span className="popisek-uredni block">Jediná volební strana</span>
                 V téhle městské části podala kandidátní listinu jen jedna volební strana.
                 Na {cislo(mc.mandaty)} mandátů má {cislo(kandidatuCelkem)}{' '}
                 {kandidatuCelkem === mc.mandaty
@@ -172,38 +180,56 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
               </p>
             )}
 
-            <div className="mt-6 space-y-10">
-              {listina.strany.map((strana) => {
+            <RazenySeznam
+              polozky={listina.strany.map((strana) => {
                 const jednicka = lidr(strana)
-                return (
-                  <article key={strana.kodStrany}>
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-inkoust pb-2">
-                      <h3 className="font-display text-lg font-semibold">{strana.nazev}</h3>
-                      <p className="popisek-uredni">
-                        {strana.vylosovano && strana.cislo !== null
-                          ? `č. ${strana.cislo} na lístku`
-                          : 'číslo zatím nevylosováno'}{' '}
-                        · {strana.kandidati.length} kandidátů
-                      </p>
-                    </div>
-                    {jednicka && (
-                      <p className="mt-2 text-sm">
-                        Lídr: {celeJmeno(jednicka)}
-                        {jednicka.povolani ? `, ${jednicka.povolani}` : ''}
-                      </p>
-                    )}
-                    <details className="mt-3">
-                      <summary className="cursor-pointer popisek-uredni">
-                        <span className="pl-1.5">Zobrazit celou kandidátku</span>
-                      </summary>
-                      <div className="mt-3">
-                        <SeznamKandidatu strana={strana} />
-                      </div>
-                    </details>
-                  </article>
-                )
+                return {
+                  slug: strana.slug,
+                  nazev: strana.nazev,
+                  cislo: strana.vylosovano ? strana.cislo : null,
+                  // Průzkumy preferencí se v městských částech nedělají.
+                  procenta: null,
+                  obsah: (
+                    <li>
+                      <article>
+                        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-inkoust pb-2">
+                          <h3 className="font-display text-lg font-semibold">{strana.nazev}</h3>
+                          <p className="popisek-uredni">
+                            {strana.vylosovano && strana.cislo !== null
+                              ? `č. ${strana.cislo} na lístku`
+                              : 'číslo zatím nevylosováno'}{' '}
+                            ·{' '}
+                            {sPoctem(
+                              strana.kandidati.length,
+                              'kandidát',
+                              'kandidáti',
+                              'kandidátů',
+                            )}
+                          </p>
+                        </div>
+                        {jednicka && (
+                          <p className="mt-2 text-sm">
+                            Lídr: {celeJmeno(jednicka)}
+                            {jednicka.povolani ? `, ${jednicka.povolani}` : ''}
+                          </p>
+                        )}
+                        <details className="mt-3">
+                          <summary className="cursor-pointer popisek-uredni">
+                            <span className="pl-1.5">Zobrazit celou kandidátku</span>
+                          </summary>
+                          <div className="mt-3">
+                            <SeznamKandidatu strana={strana} />
+                          </div>
+                        </details>
+                      </article>
+                    </li>
+                  ),
+                }
               })}
-            </div>
+              tridaSeznamu="mt-6 space-y-10"
+              popisSeznamu="Kandidující volební strany"
+              jednotka={['volební strana', 'volební strany', 'volebních stran']}
+            />
           </>
         )}
 

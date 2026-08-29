@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Drobecky } from '@/components/Drobecky'
 import { notFound } from 'next/navigation'
 import { VyrokyOsoby } from '@/components/VyrokyOsoby'
 import { celeJmeno, kandidaturyOsoby } from '@/lib/kandidatky'
@@ -32,15 +33,31 @@ export default async function StrankaKandidata({ params }: Parametry) {
   if (kandidatury.length === 0) notFound()
 
   const osoba = kandidatury[0]!.kandidat
+  // Kandidát může kandidovat na víc úrovních; drobečky vedou přes tu první.
+  const prvniZastupitelstvo = kandidatury[0]!.zastupitelstvo
 
   return (
     <div className="space-y-10">
       <header>
-        <p className="popisek-uredni">Kandidát</p>
-        <h1 className="mt-2 text-4xl">{celeJmeno(osoba)}</h1>
+        <Drobecky
+          cesta={[
+            { popisek: 'Úvod', href: '/' },
+            ...(prvniZastupitelstvo.slug === 'magistrat'
+              ? ([{ popisek: 'Magistrát', href: '/praha' }] as const)
+              : ([
+                  { popisek: 'Městské části', href: '/mestska-cast' },
+                  {
+                    popisek: prvniZastupitelstvo.nazev,
+                    href: `/mestska-cast/${prvniZastupitelstvo.slug}`,
+                  },
+                ] as const)),
+            { popisek: celeJmeno(osoba) },
+          ]}
+        />
+        <h1 className="mt-3 text-4xl">{celeJmeno(osoba)}</h1>
       </header>
 
-      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka sm:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-px border border-inkoust bg-linka-silna sm:grid-cols-4">
         <Udaj popisek="Věk" hodnota={String(osoba.vek)} />
         <Udaj popisek="Povolání" hodnota={osoba.povolani || '—'} />
         <Udaj popisek="Bydliště" hodnota={osoba.bydliste || '—'} />
@@ -53,7 +70,7 @@ export default async function StrankaKandidata({ params }: Parametry) {
         </h2>
         <ul className="mt-4 space-y-4">
           {kandidatury.map(({ kandidat, strana, zastupitelstvo }) => (
-            <li key={kandidat.id} className="border-l-2 border-linka pl-4">
+            <li key={kandidat.id} className="border-l-2 border-linka-silna pl-4">
               <p className="font-display font-semibold">
                 {zastupitelstvo.slug === 'magistrat' ? (
                   <Link href="/praha" className="no-underline">

@@ -15,7 +15,7 @@ const KOREN = join(__dirname, '..')
  * Poziční pole místo objektů — u osmi tisíc položek ušetří názvy klíčů
  * zhruba polovinu velikosti souboru: [nazev, popis, url, typ].
  */
-type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p']
+type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z']
 
 const zaznamy: Zaznam[] = []
 
@@ -107,6 +107,24 @@ const stranky = JSON.parse(readFileSync(join(KOREN, '.velite/stranky.json'), 'ut
 }[]
 for (const s of stranky) {
   zaznamy.push([s.title, s.popis, `/${s.slug}`, 'p'])
+}
+
+/**
+ * Zprávičky. Koncepty do indexu nepatří, stejně jako se nezobrazují na webu.
+ *
+ * Zprávičky s výsledky průzkumu se nezařazují vůbec — index je statický
+ * soubor generovaný při buildu, takže by v něm po začátku moratoria zůstal
+ * nadpis s procenty viset, dokud by se web znovu nenasadil.
+ */
+const zpravicky = JSON.parse(readFileSync(join(KOREN, '.velite/zpravicky.json'), 'utf8')) as {
+  slug: string
+  nadpis: string
+  shrnuti: string
+  koncept: boolean
+  obsahujePruzkum: boolean
+}[]
+for (const z of zpravicky.filter((x) => !x.koncept && !x.obsahujePruzkum)) {
+  zaznamy.push([z.nadpis, z.shrnuti, `/zpravicky/${z.slug}`, 'z'])
 }
 
 mkdirSync(join(KOREN, 'public'), { recursive: true })

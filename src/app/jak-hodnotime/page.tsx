@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { LegendaHodnoceni } from '@/components/LegendaHodnoceni'
 import { RazitkoHodnoceni } from '@/components/RazitkoHodnoceni'
+import { Obsah } from '@/components/Obsah'
 import { MDXContent } from '@/components/mdx'
+import { nadpisyStranky } from '@/lib/nadpisy'
+import { datumCesky } from '@/lib/cestina'
 import { strankaPodleSlugu } from '@/lib/obsah'
 import type { HodnoceniSlibu } from '@/lib/typy'
 
@@ -35,11 +38,21 @@ export default function StrankaMetodiky() {
         <h1 className="mt-2 text-4xl">{stranka.title}</h1>
       </header>
 
+      {/* Obsah musí pokrýt i sekce, které nejsou v MDX — jinak by tvrdil,
+          že stránka končí dřív, než končí. */}
+      <Obsah
+        polozky={[
+          ...nadpisyStranky(stranka.surovy),
+          { id: 'ukazka-hodnoceni', text: 'Jak hodnocení vypadá' },
+          { id: 'prehled-stavu', text: 'Přehled stavů' },
+        ]}
+      />
+
       <div className="proza max-w-prose">
         <MDXContent code={stranka.content} />
       </div>
 
-      <section>
+      <section id="ukazka-hodnoceni" className="scroll-mt-20">
         <h2 className="text-2xl">Jak hodnocení vypadá</h2>
         <p className="mt-2 max-w-prose text-sm text-seda-uredni">
           Následující blok je ukázka tvaru hodnocení. Nepatří žádnému skutečnému
@@ -53,7 +66,7 @@ export default function StrankaMetodiky() {
         />
       </section>
 
-      <section>
+      <section id="prehled-stavu" className="scroll-mt-20">
         <h2 className="text-2xl">Přehled stavů</h2>
         <p className="mt-2 max-w-prose text-sm text-seda-uredni">
           Značka nese stejnou informaci jako barva — plný kroužek znamená bez překážky,
@@ -64,7 +77,7 @@ export default function StrankaMetodiky() {
         </div>
       </section>
 
-      <p className="popisek-uredni">Aktualizováno {stranka.aktualizovano}</p>
+      <p className="popisek-uredni">Aktualizováno {datumCesky(stranka.aktualizovano)}</p>
     </article>
   )
 }

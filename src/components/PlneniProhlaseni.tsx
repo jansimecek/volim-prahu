@@ -23,7 +23,7 @@ export function PlneniProhlaseni() {
     <div className="space-y-12">
       <section>
         <h2 className="text-2xl">Kolik z prohlášení jde ověřit</h2>
-        <dl className="mt-5 grid grid-cols-2 gap-px border border-inkoust bg-linka sm:grid-cols-4">
+        <dl className="mt-5 grid grid-cols-2 gap-px border border-inkoust bg-linka-silna sm:grid-cols-4">
           <Udaj popisek="Závazků celkem" hodnota={String(mereni.zavazkuCelkem)} />
           <Udaj
             popisek="Obsahuje číslici"
@@ -42,7 +42,7 @@ export function PlneniProhlaseni() {
           />
         </dl>
 
-        <div className="mt-5 max-w-prose border-l-2 border-linka pl-4">
+        <div className="mt-5 max-w-prose border-l-2 border-linka-silna pl-4">
           <h3 className="popisek-uredni">Jak jsme počítali</h3>
           <p className="mt-1 text-sm">{mereni.metoda}</p>
           <p className="mt-2 text-sm">
@@ -66,7 +66,7 @@ export function PlneniProhlaseni() {
           {zavazky.map((zavazek) => {
             const stav = POPIS_STAVU[zavazek.stav]
             return (
-              <article key={zavazek.id} id={zavazek.id} className="border-b border-linka py-5 scroll-mt-20">
+              <article key={zavazek.id} id={zavazek.id} className="border-b border-linka-silna py-5 scroll-mt-20">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                   <p className="popisek-uredni">
                     {zavazek.oblast} · {POPIS_KATEGORIE[zavazek.kategorie]}
@@ -79,7 +79,7 @@ export function PlneniProhlaseni() {
                   </p>
                 </div>
 
-                <blockquote className="mt-2 max-w-prose border-l-2 border-linka pl-4">
+                <blockquote className="mt-2 max-w-prose border-l-2 border-linka-silna pl-4">
                   {`„${zavazek.zneni}“`}
                 </blockquote>
 

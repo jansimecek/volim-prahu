@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Drobecky } from '@/components/Drobecky'
+import { KandidatiSenatu } from '@/components/KandidatiSenatu'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
@@ -17,7 +19,7 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   const obvod = OBVODY.find((o) => o.slug === slug)
   if (!obvod) return {}
   return {
-    title: `Senátní obvod č. ${obvod.cislo} — ${obvod.nazev}`,
+    title: `Senátní obvod č. ${obvod.cislo}: ${obvod.nazev}`,
     description: `Které městské části patří do senátního obvodu č. ${obvod.cislo} a kdo v něm dnes zastupuje Prahu v Senátu.`,
   }
 }
@@ -34,17 +36,19 @@ export default async function StrankaObvodu({ params }: Parametry) {
   return (
     <div className="space-y-10">
       <header>
-        <p className="popisek-uredni">
-          <Link href="/senat" className="no-underline">
-            Senátní volby v Praze
-          </Link>
-        </p>
-        <h1 className="mt-2 text-4xl">
+        <Drobecky
+          cesta={[
+            { popisek: 'Úvod', href: '/' },
+            { popisek: 'Senát', href: '/senat' },
+            { popisek: `Obvod č. ${obvod.cislo}` },
+          ]}
+        />
+        <h1 className="mt-3 text-4xl">
           Obvod č. {obvod.cislo} — {obvod.nazev}
         </h1>
       </header>
 
-      <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka sm:grid-cols-3">
+      <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
         <div className="bg-papir p-3">
           <dt className="popisek-uredni">Stávající senátor</dt>
           <dd className="mt-1 font-mono">
@@ -83,34 +87,24 @@ export default async function StrankaObvodu({ params }: Parametry) {
         <section>
           <h2 className="text-2xl">Kandidáti</h2>
           <p className="mt-1 max-w-prose text-sm text-seda-uredni">
-            Pořadí je podle vylosovaných čísel na hlasovacím lístku. Zvolen je ten, kdo
-            v prvním kole získá nadpoloviční většinu; jinak se koná druhé kolo mezi
-            dvěma nejúspěšnějšími.
+            {kandidati.some((k) => k.cislo)
+              ? 'Výchozí pořadí je podle vylosovaných čísel na hlasovacím lístku, tedy tak, jak kandidáty uvidíte ve volební místnosti.'
+              : 'Čísla na hlasovacím lístku zatím vylosovaná nebyla, pořadí je proto podle příjmení.'}{' '}
+            Zvolen je ten, kdo v prvním kole získá nadpoloviční většinu; jinak se koná
+            druhé kolo mezi dvěma nejúspěšnějšími.
           </p>
-          <div className="mt-5 overflow-x-auto">
-            <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-inkoust">
-                  <th className="popisek-uredni py-2 pr-3 text-right">#</th>
-                  <th className="popisek-uredni py-2 pr-3">Jméno</th>
-                  <th className="popisek-uredni py-2 pr-3 text-right">Věk</th>
-                  <th className="popisek-uredni py-2 pr-3">Navrhla</th>
-                  <th className="popisek-uredni py-2">Povolání</th>
-                </tr>
-              </thead>
-              <tbody>
-                {kandidati.map((k) => (
-                  <tr key={k.cislo} className="border-b border-linka align-top">
-                    <td className="py-2 pr-3 text-right font-mono">{k.cislo}</td>
-                    <td className="py-2 pr-3">{celeJmenoSenat(k)}</td>
-                    <td className="py-2 pr-3 text-right font-mono">{k.vek}</td>
-                    <td className="py-2 pr-3">{k.volebniStrana || '—'}</td>
-                    <td className="py-2">{k.povolani || '—'}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <KandidatiSenatu
+            kandidati={kandidati.map((k) => ({
+              slug: `${k.slug}-${k.cislo}`,
+              cislo: k.cislo,
+              jmeno: k.jmeno,
+              prijmeni: k.prijmeni,
+              celeJmeno: celeJmenoSenat(k),
+              vek: k.vek,
+              volebniStrana: k.volebniStrana,
+              povolani: k.povolani,
+            }))}
+          />
           <p className="popisek-uredni mt-3">
             Zdroj: otevřená data ČSÚ, sada {sadaSenat()}
           </p>
@@ -150,7 +144,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
       </section>
 
       <footer className="border-t border-linka pt-6">
-        <h2 className="popisek-uredni">Zdroje</h2>
+        <p className="popisek-uredni">Zdroje</p>
         <ul className="mt-2 text-sm">
           {obvod.zdroje.map((z) => (
             <li key={z.url}>

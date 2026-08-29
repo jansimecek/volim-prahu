@@ -20,6 +20,11 @@ const TRASY = [
   { cesta: '/hledani', nazev: 'hledání' },
   { cesta: '/vysledky', nazev: 'výsledky' },
   { cesta: '/hlasovani', nazev: 'anketa' },
+  { cesta: '/zpravicky', nazev: 'zprávičky' },
+  { cesta: '/zpravicky/moratorium-na-pruzkumy-2026', nazev: 'jedna zprávička' },
+  { cesta: '/mestska-cast/praha-22', nazev: 'městská část s přepínačem řazení' },
+  { cesta: '/senat/24-praha-9', nazev: 'senátní obvod' },
+  { cesta: '/nic-takoveho-neexistuje', nazev: 'stránka 404' },
 ]
 
 for (const { cesta, nazev } of TRASY) {

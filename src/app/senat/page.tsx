@@ -28,7 +28,7 @@ export default function StrankaSenatu() {
 
       {/* Nejužitečnější informace na stránce dřív než výčet obvodů. */}
       <section className="max-w-prose border-l-2 border-praha pl-5">
-        <h2 className="font-display text-lg font-semibold">Kdo letos senátora nevolí</h2>
+        <h2 className="text-2xl">Kdo letos senátora nevolí</h2>
         <p className="mt-2">
           Senátní lístek se letos vydává jen v {pocetDotcenychMC()} z{' '}
           {MESTSKE_CASTI.length} městských částí, a u dvou z nich pouze na části území.
@@ -44,7 +44,7 @@ export default function StrankaSenatu() {
 
       <section>
         <h2 className="text-2xl">Tři obvody, kde se letos volí</h2>
-        <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-3">
+        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
           {OBVODY.map((obvod) => (
             <li key={obvod.slug} className="bg-papir">
               <Link

@@ -13,15 +13,33 @@
   /*
    * Šedá a okr jsou proti zadání ztmavené. Původní #8C9196 má na papíru
    * kontrast 2.70:1 a #A8762C 3.37:1 — obojí pod hranicí 4.5:1, kterou WCAG
-   * 2.2 AA vyžaduje pro běžný text. Odstín zůstává, jen se posouvá světlost.
-   * Hlídá to test tests/kontrast.test.ts, aby se to nedalo omylem vrátit.
+   * 2.2 AA vyžaduje pro běžný text.
+   *
+   * Podruhé ztmavené kvůli hoverům: dlaždice se při najetí přebarvují na
+   * --color-papir-tmavsi a na něm mělo #666b70 jen 4.17:1 a #8c6122 jen 4.23:1.
+   * Kontrast se nesmí posuzovat jen proti výchozímu podkladu — text zůstává
+   * stejný, plocha pod ním ne. Hlídá to tests/kontrast.test.ts na obou
+   * podkladech, aby se to nedalo omylem vrátit.
    */
-  --color-seda-uredni: #666b70; /* 4.58:1 */
-  --color-okr: #8c6122; /* 4.64:1 */
+  --color-seda-uredni: #5f6469; /* 5.08:1 na papíru, 4.63:1 na tmavším */
+  --color-okr: #855c1f; /* 5.03:1 / 4.59:1 */
 
   /* Odvozené odstíny pro plochy — jen zesvětlení základní pětice, žádné nové barvy. */
   --color-papir-tmavsi: #e2e3de;
-  --color-linka: #c9cbc5;
+
+  /*
+   * Dvě síly linky, protože nesou různou informaci.
+   *
+   * --color-linka je dekorativní vlas pod sekcí: nic nerozděluje, jen
+   * oddechuje. Zůstává pod hranicí pro text, aby jím nikdo neobarvil písmo.
+   *
+   * --color-linka-silna odděluje buňky mřížek, řádky tabulek a pole razítka.
+   * To už je informace o struktuře, a WCAG 2.2 (1.4.11) na ni chce 3:1.
+   * Původní #c9cbc5 mělo 1.39:1 — mřížka kandidátek se prakticky slévala
+   * do jedné plochy a nebylo poznat, kde končí jedna dlaždice a začíná druhá.
+   */
+  --color-linka: #b3b6ae; /* 1.75:1 — dekorace */
+  --color-linka-silna: #7c807a; /* 3.42:1 na papíru, 3.11:1 na tmavším */
 
   --font-display: var(--font-bricolage), 'Helvetica Neue', Arial, sans-serif;
   --font-cteci: var(--font-source-serif), Georgia, 'Times New Roman', serif;
@@ -37,6 +55,8 @@
   --seda-uredni: var(--color-seda-uredni);
   --praha: var(--color-praha);
   --okr: var(--color-okr);
+  --linka: var(--color-linka);
+  --linka-silna: var(--color-linka-silna);
 }
 
 @layer base {
@@ -114,6 +134,55 @@
   }
 
   /*
+   * Odkazy v hlavní navigaci a v patičce.
+   *
+   * Dřív používaly .popisek-uredni, tedy nejsvětlejší šeď na webu. Nejhůř
+   * čitelný text na stránce byl zrovna ten, kterým se čtenář orientuje.
+   * Tady je proto plný inkoust a stav „jsem tady“ nese barevný podtrh
+   * i atribut aria-current, ne jen barva (WCAG 1.4.1).
+   *
+   * Svislé odsazení drží dotykový cíl nad 24 px podle WCAG 2.2 (2.5.8).
+   */
+  .odkaz-navigace {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--text-drobne);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-inkoust);
+    text-decoration: none;
+    padding-block: 0.4rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .odkaz-navigace:hover {
+    border-bottom-color: var(--color-linka-silna);
+  }
+
+  .odkaz-navigace[aria-current='page'] {
+    border-bottom-color: var(--color-praha);
+  }
+
+  /* Drobečková navigace. Odděluje se znakem, ne obrázkem, a ten je skrytý AT. */
+  .drobecky {
+    font-family: var(--font-mono);
+    font-size: var(--text-drobne);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-seda-uredni);
+  }
+
+  .drobecky a {
+    color: var(--color-inkoust);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-linka-silna);
+  }
+
+  .drobecky a:hover {
+    border-bottom-color: var(--color-praha);
+  }
+
+  /*
    * Čtyřdílné razítko hodnocení proveditelnosti — signature prvek.
    * Barvy jsou odvozené z inkoustu, okru a pražské červené. Nikdy zelená:
    * semafor implikuje verdikt pravda/lež, a ten tenhle web nevydává.
@@ -124,8 +193,8 @@
   }
 
   .razitko-bunka {
-    border-top: 1px solid var(--color-linka);
-    border-left: 1px solid var(--color-linka);
+    border-top: 1px solid var(--color-linka-silna);
+    border-left: 1px solid var(--color-linka-silna);
     padding: 0.625rem 0.75rem;
   }
 
@@ -202,7 +271,7 @@
   }
 
   .proza blockquote {
-    border-left: 2px solid var(--color-linka);
+    border-left: 2px solid var(--color-linka-silna);
     padding-left: 1rem;
     color: var(--color-seda-uredni);
   }

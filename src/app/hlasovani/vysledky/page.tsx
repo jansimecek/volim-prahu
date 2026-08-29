@@ -78,7 +78,7 @@ export default async function StrankaVysledkuAnkety() {
           </thead>
           <tbody>
             {poradi.map(([subjekt, pocet]) => (
-              <tr key={subjekt} className="border-b border-linka">
+              <tr key={subjekt} className="border-b border-linka-silna">
                 <td className="py-2">{subjekt}</td>
                 <td className="py-2 text-right font-mono">{pocet}</td>
                 <td className="py-2 text-right font-mono">
@@ -89,6 +89,33 @@ export default async function StrankaVysledkuAnkety() {
           </tbody>
         </table>
       )}
+
+      {/* Zveřejněná anketa je pro spoustu čtenářů vstupní stránka z odkazu.
+          Bez cesty dál je to slepá ulička — a přirozený další krok jsou
+          oficiální výsledky, ne opakované čtení ankety. */}
+      <footer className="border-t border-linka pt-6 text-sm">
+        <p className="popisek-uredni">Kam dál</p>
+        <ul className="mt-2 space-y-2">
+          <li>
+            <Link href="/vysledky" className="odkaz-akcent">
+              Skutečné výsledky voleb
+            </Link>{' '}
+            — průběžná i konečná čísla z otevřených dat ČSÚ.
+          </li>
+          <li>
+            <Link href="/hlasovani" className="odkaz-akcent">
+              O anketě
+            </Link>{' '}
+            — proč není průzkum a co se v ní ukládalo.
+          </li>
+          <li>
+            <Link href="/ochrana-udaju" className="odkaz-akcent">
+              Ochrana údajů
+            </Link>{' '}
+            — co se s odevzdanými hlasy děje dál.
+          </li>
+        </ul>
+      </footer>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { programy, strany, vyroky } from '#content'
 import { celeJmeno, lidr, stranaPodleKodu } from './kandidatky'
+import type { IdOkruhu } from './okruhy'
 
 /**
  * Srovnání zásadních témat.
@@ -15,7 +16,7 @@ import { celeJmeno, lidr, stranaPodleKodu } from './kandidatky'
  */
 
 export type Okruh = {
-  id: string
+  id: IdOkruhu
   nazev: string
   popis: string
   /** Štítky z výroků a z programů, které do okruhu spadají. */

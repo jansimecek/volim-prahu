@@ -43,7 +43,7 @@ export function VyrokyOsoby({ osobaSlug }: { osobaSlug: string }) {
         {osoba.vyroky.map((v, i) => {
           const zdroj = zdrojPodleId.get(v.zdroj)
           return (
-            <article key={i} className="border-b border-linka py-5">
+            <article key={i} className="border-b border-linka-silna py-5">
               <p className="popisek-uredni">{v.tema}</p>
               <blockquote className="mt-2 max-w-prose border-l-2 border-inkoust pl-4 font-cteci text-lg">
                 {`„${v.citace}“`}
@@ -75,7 +75,7 @@ export function VyrokyOsoby({ osobaSlug }: { osobaSlug: string }) {
       </div>
 
       {osoba.poznamka && (
-        <p className="mt-5 max-w-prose border-l-2 border-linka pl-4 text-sm">
+        <p className="mt-5 max-w-prose border-l-2 border-linka-silna pl-4 text-sm">
           <span className="popisek-uredni block">Co jsme nepublikovali</span>
           {osoba.poznamka}
         </p>

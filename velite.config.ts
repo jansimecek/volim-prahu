@@ -7,6 +7,7 @@ import {
   ROZPOCET,
   ZAVER,
 } from './src/lib/hodnoceni'
+import { ID_OKRUHU } from './src/lib/okruhy'
 
 /**
  * Schémata obsahu. Build musí spadnout na nevalidním obsahu — u jednoho vývojáře
@@ -134,6 +135,11 @@ const stranky = defineCollection({
     popis: s.string().min(1),
     aktualizovano: s.isodate(),
     content: s.mdx(),
+    /**
+     * Nezkompilovaný text. Slouží jen k vytažení nadpisů pro obsah stránky —
+     * ze zkompilovaného MDX se nadpisy zpětně dolovat nedají.
+     */
+    surovy: s.raw(),
   }),
 })
 
@@ -410,6 +416,237 @@ const rozhovory = defineCollection({
   }),
 })
 
+
+/**
+ * Předvolební průzkumy.
+ *
+ * Průzkum je jediný obsah na webu, který dokáže sám o sobě ovlivnit volbu —
+ * proto je schéma přísnější než u čehokoli jiného. Vyžaduje termín SBĚRU dat
+ * (ne jen zveřejnění, to bývá o týdny později), velikost vzorku, metodu
+ * a odkaz. Bez toho je to číslo bez možnosti kontroly.
+ *
+ * Zobrazení navíc prochází přes src/lib/moratorium.ts. Ani validní průzkum
+ * se nesmí ukázat v zakázané lhůtě před volbami.
+ */
+const pruzkumy = defineCollection({
+  name: 'Pruzkumy',
+  pattern: 'pruzkumy.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      /**
+       * Proč tu (zatím) žádný průzkum není. Prázdný seznam musí být vysvětlený.
+       *
+       * Není to interní komentář — zobrazuje se čtenáři pod výpisem subjektů.
+       * Platí pro něj proto stejné pravidlo jako pro zbytek webu: co tvrdí
+       * o jmenovaném subjektu, musí jít ověřit, takže zdroje jsou povinné.
+       */
+      poznamka: s
+        .object({
+          text: s.string().min(1),
+          zdroje: s
+            .array(s.object({ text: s.string().min(1), url: url }))
+            .min(1, 'Poznámka o průzkumech se zobrazuje čtenáři, takže potřebuje zdroj.'),
+        })
+        .optional(),
+      pruzkumy: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            /** `magistrat` nebo slug městské části. */
+            uroven: s.string().min(1),
+            agentura: s.string().min(1),
+            zadavatel: s.string().min(1),
+            sberOd: s.isodate(),
+            sberDo: s.isodate(),
+            zverejneno: s.isodate(),
+            velikostVzorku: s.number().int().positive(),
+            /** Kvótní výběr přes CAWI panel a náhodný výběr přes CATI nejsou totéž. */
+            metoda: s.string().min(10),
+            url: url,
+            /** Tisková zpráva agentury, pokud existuje — je blíž datům než článek. */
+            urlPrimarni: url.optional(),
+            /** Co je na průzkumu metodicky sporné. Zobrazuje se vždy s ním. */
+            vyhrady: s.string().min(1).optional(),
+            vysledky: s
+              .array(
+                s.object({
+                  /** Slug subjektu z content/strany — kontroluje se křížově ve validate-content. */
+                  subjekt: s.string().min(1),
+                  procenta: s.number().min(0).max(100),
+                }),
+              )
+              .min(2, 'Průzkum s jediným subjektem nedává smysl srovnávat.'),
+          }),
+        )
+        .default([]),
+    })
+    .superRefine((data, ctx) => {
+      const videna = new Set<string>()
+      for (const p of data.pruzkumy) {
+        if (videna.has(p.id)) {
+          ctx.addIssue({ code: 'custom', message: `Průzkum s id "${p.id}" je uvedený dvakrát.` })
+        }
+        videna.add(p.id)
+
+        if (p.sberOd > p.sberDo) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Průzkum "${p.id}" má konec sběru dřív než začátek.`,
+          })
+        }
+        if (p.zverejneno < p.sberDo) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Průzkum "${p.id}" je podle dat zveřejněný dřív, než skončil sběr.`,
+          })
+        }
+
+        const soucet = p.vysledky.reduce((n, v) => n + v.procenta, 0)
+        // Bez „ostatních" a nerozhodnutých součet nikdy nedá 100, ale přes
+        // 100 se dostat nemůže — to už je chyba přepisu.
+        if (soucet > 100.5) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Průzkum "${p.id}" má součet procent ${soucet.toFixed(1)}, tedy víc než 100.`,
+          })
+        }
+
+        const subjekty = new Set<string>()
+        for (const v of p.vysledky) {
+          if (subjekty.has(v.subjekt)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Průzkum "${p.id}" uvádí subjekt "${v.subjekt}" dvakrát.`,
+            })
+          }
+          subjekty.add(v.subjekt)
+        }
+      }
+
+      if (data.pruzkumy.length === 0 && !data.poznamka) {
+        ctx.addIssue({
+          code: 'custom',
+          message: 'Prázdný seznam průzkumů musí mít poznámku vysvětlující proč.',
+        })
+      }
+    }),
+})
+
+/**
+ * Zprávičky — krátké zápisy o průběhu voleb.
+ *
+ * Formát je záměrně sevřený: nadpis, pár vět, zdroj. Zprávička není článek
+ * a nemá být komentářem. Platí tu stejné pravidlo jako všude jinde na webu:
+ * tvrzení o volbách musí mít dohledatelný zdroj. Výjimku mají jen provozní
+ * poznámky o samotném webu, kde jsme zdrojem my.
+ */
+const zpravicky = defineCollection({
+  name: 'Zpravicka',
+  pattern: 'zpravicky/**/*.mdx',
+  schema: s
+    .object({
+      nadpis: s.string().min(1).max(120),
+      slug: s.slug('zpravicka'),
+      /**
+       * Plný časový údaj VČETNĚ posunu (2026-10-09T18:30:00+02:00). Bez posunu
+       * by se čas na serveru v UTC posunul o dvě hodiny — přesně na tuhle
+       * chybu se tenhle projekt už jednou chytil u dat ČSÚ.
+       */
+      vydano: s
+        .string()
+        .regex(
+          /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?[+-]\d{2}:\d{2}$/,
+          'Čas vydání musí být ISO 8601 včetně posunu, například 2026-10-09T18:30:00+02:00.',
+        ),
+      /** `zprava` o volbách vyžaduje zdroj, `provozni` poznámka o webu ne. */
+      typ: s.enum(['zprava', 'provozni']).default('zprava'),
+      /**
+       * Volitelné zařazení do okruhu ze srovnání témat. Enum, ne volný
+       * řetězec: překlep by zprávičku tiše odznačil — build by prošel,
+       * autor by si myslel, že ji zařadil, a čtenář by žádné zařazení neviděl.
+       */
+      okruh: s.enum(ID_OKRUHU).optional(),
+      /**
+       * Obsahuje zprávička výsledky předvolebního průzkumu? Rozhoduje to
+       * o zobrazení v zakázané lhůtě — bez příznaku by rubrika byla dírou
+       * v moratoriu, protože schéma jinak jen vyžaduje zdroj.
+       */
+      obsahujePruzkum: s.boolean().default(false),
+      /** Perex do výpisu. Musí dávat smysl i bez rozkliknutí. */
+      shrnuti: s.string().min(1).max(300),
+      zdroje: s.array(s.object({ text: s.string().min(1), url: url })).default([]),
+      obrazek: s
+        .object({
+          /** Soubor vedle .mdx — Velite ho zkopíruje a doplní rozměry. */
+          soubor: s.image().optional(),
+          /** Nebo adresa ve Vercel Blobu, pak jsou rozměry povinné. */
+          url: url.optional(),
+          sirka: s.number().int().positive().optional(),
+          vyska: s.number().int().positive().optional(),
+          /** Bez alternativního textu se obrázek nepublikuje (WCAG 1.1.1). */
+          alt: s.string().min(1),
+          popisek: s.string().min(1).optional(),
+          /** Autor nebo instituce. Fotka bez původu se sem nedostane. */
+          zdroj: s.string().min(1),
+          zdrojUrl: url.optional(),
+          licence: s.string().min(1).optional(),
+        })
+        .optional(),
+      koncept: s.boolean().default(false),
+      content: s.mdx(),
+    })
+    .superRefine((data, ctx) => {
+      /**
+       * Posun musí být ten, který v Praze v daný okamžik platí. Regulární
+       * výraz vynutí jen jeho přítomnost, takže by prošlo i `+02:00` zapsané
+       * v listopadu — a čas by se čtenáři zobrazil o hodinu jinak, než jak
+       * ho autor napsal. Letní čas končí 25. 10. 2026, tedy uprostřed
+       * období, kdy se rubrika bude psát.
+       */
+      const okamzik = new Date(data.vydano)
+      if (Number.isFinite(okamzik.getTime())) {
+        const vPraze = new Intl.DateTimeFormat('sv-SE', {
+          timeZone: 'Europe/Prague',
+          dateStyle: 'short',
+          timeStyle: 'short',
+        }).format(okamzik)
+        const zapsany = data.vydano.slice(0, 16).replace('T', ' ')
+        if (vPraze !== zapsany) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Zprávička "${data.slug}" má čas ${zapsany}, ale s uvedeným posunem to je v Praze ${vPraze}. Zkontrolujte posun — letní čas končí 25. 10. 2026.`,
+          })
+        }
+      }
+
+      if (data.typ === 'zprava' && data.zdroje.length === 0) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `Zpráva "${data.slug}" nemá zdroj. Tvrzení o volbách bez zdroje nepublikujeme — provozní poznámka o webu má typ "provozni".`,
+        })
+      }
+
+      const o = data.obrazek
+      if (o) {
+        if (Boolean(o.soubor) === Boolean(o.url)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Obrázek u "${data.slug}" musí mít buď "soubor" (lokální), nebo "url" (Blob), právě jedno z toho.`,
+          })
+        }
+        if (o.url && (!o.sirka || !o.vyska)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Obrázek u "${data.slug}" je z Blobu, takže potřebuje "sirka" a "vyska" — bez nich stránka při načtení poskočí.`,
+          })
+        }
+      }
+    })
+    .transform((data) => ({ ...data, url: `/zpravicky/${data.slug}` })),
+})
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -419,5 +656,18 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { mestskeCasti, strany, programy, stranky, senat, rozhovory, kompetence, rozpocet, plneni, vyroky },
+  collections: {
+    mestskeCasti,
+    strany,
+    programy,
+    stranky,
+    senat,
+    rozhovory,
+    kompetence,
+    rozpocet,
+    plneni,
+    vyroky,
+    pruzkumy,
+    zpravicky,
+  },
 })

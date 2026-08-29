@@ -25,7 +25,8 @@
     "gen:strany": "tsx scripts/generate-strany.ts",
     "import:desky": "tsx scripts/import-uredni-desky.ts",
     "nacvik": "tsx scripts/nacvik-volebni-noc.ts",
-    "import:senat": "tsx scripts/import-senat.ts"
+    "import:senat": "tsx scripts/import-senat.ts",
+    "obrazek": "tsx scripts/nahraj-obrazek.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",

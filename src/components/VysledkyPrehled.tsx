@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { StariSnapshotu } from '@/components/StariSnapshotu'
 import { celkovyPostup, formatujCasCSU, KOD_MAGISTRATU, type Snapshot } from '@/lib/vysledky'
+import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
 
 const cas = new Intl.DateTimeFormat('cs-CZ', {
   dateStyle: 'short',
@@ -32,7 +33,7 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
   return (
     <div className="space-y-10">
       {/* Stáří dat je první věc na stránce. Neoznačená stará data jsou horší než žádná. */}
-      <section className="max-w-prose border-l-2 border-linka pl-5">
+      <section className="max-w-prose border-l-2 border-linka-silna pl-5">
         <p className="popisek-uredni">Stav dat</p>
         <p className="mt-1">
           Naposledy staženo{' '}
@@ -54,7 +55,7 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
             {procenta.format(magistrat.ucastProcenta)} % ·{' '}
             {cislo.format(magistrat.mandatuCelkem)} mandátů
           </p>
-          <div className="mt-5 overflow-x-auto">
+          <PosuvnaTabulka popisek="Výsledky volebních stran" trida="mt-5">
             <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-inkoust">
@@ -66,7 +67,7 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
               </thead>
               <tbody>
                 {magistrat.strany.map((s) => (
-                  <tr key={s.kod + s.cislo} className="border-b border-linka">
+                  <tr key={s.kod + s.cislo} className="border-b border-linka-silna">
                     <td className="py-2 pr-3">{s.nazev}</td>
                     <td className="py-2 pr-3 text-right font-mono">{cislo.format(s.hlasy)}</td>
                     <td className="py-2 pr-3 text-right font-mono whitespace-nowrap">
@@ -79,7 +80,7 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </PosuvnaTabulka>
           <p className="popisek-uredni mt-3">
             Platných hlasů celkem {cislo.format(magistrat.platneHlasy)}. V komunálních
             volbách má volič tolik hlasů, kolik se volí zastupitelů — není to počet voličů.
@@ -89,7 +90,7 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
 
       <section>
         <h2 className="text-2xl">Městské části</h2>
-        <ul className="mt-5 grid gap-px border border-inkoust bg-linka sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           {casti.map((z) => {
             // Dokud není sečteno nic, nemá „vedoucí strana“ smysl — první
             // v pořadí by byla jen ta s nejnižším číslem na lístku.

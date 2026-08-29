@@ -42,7 +42,7 @@ export function KompetencniMatice() {
                 <article
                   key={agenda.id}
                   id={agenda.id}
-                  className="border-b border-linka py-5 scroll-mt-20"
+                  className="border-b border-linka-silna py-5 scroll-mt-20"
                 >
                   <h3 className="font-display text-lg font-semibold">{agenda.nazev}</h3>
                   <p className="mt-1 max-w-prose">{agenda.vysvetleni}</p>

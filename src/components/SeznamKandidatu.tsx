@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { celeJmeno, type StranaNaKandidatce } from '@/lib/kandidatky'
+import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
 
 /**
  * Kandidátní listina jedné volební strany. Bydliště se zobrazuje jen v rozsahu,
@@ -7,7 +8,7 @@ import { celeJmeno, type StranaNaKandidatce } from '@/lib/kandidatky'
  */
 export function SeznamKandidatu({ strana }: { strana: StranaNaKandidatce }) {
   return (
-    <div className="overflow-x-auto">
+    <PosuvnaTabulka popisek={`Kandidátní listina — ${strana.nazev}`}>
       <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
         <thead>
           <tr className="border-b border-inkoust">
@@ -20,7 +21,7 @@ export function SeznamKandidatu({ strana }: { strana: StranaNaKandidatce }) {
         </thead>
         <tbody>
           {strana.kandidati.map((k) => (
-            <tr key={k.id} className="border-b border-linka align-top">
+            <tr key={k.id} className="border-b border-linka-silna align-top">
               <td className="py-2 pr-3 text-right font-mono">{k.poradi}</td>
               <td className="py-2 pr-3">
                 <Link href={`/kandidat/${k.slug}`} className="odkaz-akcent">
@@ -36,6 +37,6 @@ export function SeznamKandidatu({ strana }: { strana: StranaNaKandidatce }) {
           ))}
         </tbody>
       </table>
-    </div>
+    </PosuvnaTabulka>
   )
 }
