@@ -1,8 +1,8 @@
 import type { Metadata, Route } from 'next'
 import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import Link from 'next/link'
-import { Analytics } from '@vercel/analytics/next'
 import { HlavniNavigace } from '@/components/HlavniNavigace'
+import { Mereni } from '@/components/Mereni'
 import { PruhRezimu } from '@/components/PruhRezimu'
 import '../styles/globals.css'
 
@@ -152,7 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
           </div>
         </footer>
-        <Analytics />
+        <Mereni />
       </body>
     </html>
   )
