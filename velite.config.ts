@@ -400,18 +400,32 @@ const vyroky = defineCollection({
     }),
 })
 
+/**
+ * Rozhovory s kandidáty v médiích.
+ *
+ * Zásada je stejná jako u výroků: cizí text nepřebíráme. Ukládá se odkaz,
+ * kdo s kým a kdy mluvil, a naše vlastní anotace — nikdy ne přepis rozhovoru.
+ * Proto je `anotace` omezená délkou; kdyby rostla, začal by z ní být opis.
+ */
 const rozhovory = defineCollection({
   name: 'Rozhovor',
   pattern: 'rozhovory/**/*.mdx',
   schema: s.object({
     nadpis: s.string().min(1),
     slug: s.slug('rozhovor'),
+    /**
+     * Slug osoby z kandidátních listin ČSÚ. Jméno se do obsahu nepíše —
+     * bere se z dat, aby se nemohlo rozejít. Existenci slugu kontroluje
+     * `pnpm validate`.
+     */
     osoba: s.string().min(1),
     medium: s.string().min(1),
     datum: s.isodate(),
     /** Nikdy nepřebíráme celý text — jen odkaz a vlastní anotace (kap. 11.4). */
     odkaz: url,
     anotace: s.string().min(1).max(600),
+    /** Je rozhovor za placenou zdí? Čtenář to má vědět, než klikne. */
+    zaPlacenouZdi: s.boolean().default(false),
     content: s.mdx(),
   }),
 })
@@ -454,7 +468,12 @@ const pruzkumy = defineCollection({
         .array(
           s.object({
             id: s.string().min(1),
-            /** `magistrat` nebo slug městské části. */
+            /**
+             * `magistrat`, slug městské části, nebo `celostatni` pro sněmovní
+             * model. Celostátní průzkum NIKDY neřadí pražské kandidátky —
+             * měří jiné strany a o zastupitelstvu nevypovídá. Slouží jen jako
+             * kontext v rubrice Aktuálně.
+             */
             uroven: s.string().min(1),
             agentura: s.string().min(1),
             zadavatel: s.string().min(1),

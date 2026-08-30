@@ -223,6 +223,9 @@ function overKrizoveOdkazy() {
   }
 
   for (const pruzkum of pruzkumy.pruzkumy) {
+    // Celostátní sněmovní model měří jiné strany než pražské volební subjekty —
+    // porovnávat ho s content/strany nedává smysl.
+    if (pruzkum.uroven === 'celostatni') continue
     for (const vysledek of pruzkum.vysledky) {
       const existuje = strany.some(
         (s) => s.slug === vysledek.subjekt && s.uroven === pruzkum.uroven,
@@ -235,6 +238,45 @@ function overKrizoveOdkazy() {
           tvrde: true,
         })
       }
+    }
+  }
+
+  overOsobyRozhovoru(velite)
+}
+
+/**
+ * Rozhovor musí odkazovat na existující osobu z kandidátních listin.
+ *
+ * Jméno se do obsahu nepíše, dopočítává se z dat ČSÚ — překlep ve slugu by
+ * tedy neshodil build, jen by na stránce místo jména stál slug. Tomu brání
+ * tahle kontrola.
+ */
+function overOsobyRozhovoru(velite: string) {
+  if (!existsSync(join(velite, 'rozhovory.json'))) return
+  const rozhovory = JSON.parse(readFileSync(join(velite, 'rozhovory.json'), 'utf8')) as {
+    slug: string
+    osoba: string
+  }[]
+  if (rozhovory.length === 0) return
+
+  const adresar = join(KOREN, 'data/kandidatky')
+  if (!existsSync(adresar)) return
+  const slugy = new Set<string>()
+  for (const soubor of readdirSync(adresar).filter((f) => f.endsWith('.json'))) {
+    const data = JSON.parse(readFileSync(join(adresar, soubor), 'utf8')) as {
+      strany: { kandidati: { slug: string }[] }[]
+    }
+    for (const strana of data.strany) for (const k of strana.kandidati) slugy.add(k.slug)
+  }
+
+  for (const r of rozhovory) {
+    if (!slugy.has(r.osoba)) {
+      nalezy.push({
+        soubor: 'content/rozhovory/',
+        radek: 0,
+        zprava: `Rozhovor "${r.slug}" odkazuje na osobu "${r.osoba}", která na žádné kandidátní listině není.`,
+        tvrde: true,
+      })
     }
   }
 }

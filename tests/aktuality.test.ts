@@ -7,7 +7,7 @@ import {
   poDnech,
   publikovane,
   rozmeryObrazku,
-  stranka,
+  strankaZe,
 } from '../src/lib/aktuality'
 
 /**
@@ -33,27 +33,37 @@ describe('výběr aktualit', () => {
 })
 
 describe('stránkování', () => {
-  it('prázdná rubrika má jednu stranu, ne nulu', async () => {
+  const vse = publikovane()
+
+  it('prázdná rubrika má jednu stranu, ne nulu', () => {
     // Nula stran by znamenala dělení nulou v odkazech a „strana 1 z 0".
-    const { celkem, cislo } = await stranka(1)
-    expect(celkem).toBeGreaterThanOrEqual(1)
-    expect(cislo).toBe(1)
+    expect(strankaZe([], 1).celkem).toBe(1)
+    expect(strankaZe([], 1).aktuality).toEqual([])
   })
 
-  it.each([0, -5, 1.7])('nesmyslný vstup %s se ořízne na první stranu', async (vstup) => {
-    expect((await stranka(vstup)).cislo).toBe(1)
+  it.each([0, -5, 1.7])('nesmyslný vstup %s se ořízne na první stranu', (vstup) => {
+    expect(strankaZe(vse, vstup).cislo).toBe(1)
   })
 
-  it('strana za posledním číslem se ořízne, aby to volající poznal', async () => {
-    const { celkem } = await stranka(1)
-    const prilis = await stranka(celkem + 10)
+  it('strana za posledním číslem se ořízne, aby to volající poznal', () => {
+    const { celkem } = strankaZe(vse, 1)
     // Stránka to porovná s požadovaným číslem a vrátí 404 místo duplicity.
-    expect(prilis.cislo).toBe(celkem)
+    expect(strankaZe(vse, celkem + 10).cislo).toBe(celkem)
   })
 
-  it('na jedné straně nikdy není víc položek, než dovoluje NA_STRANU', async () => {
-    const { aktuality } = await stranka(1)
-    expect(aktuality.length).toBeLessThanOrEqual(NA_STRANU)
+  it('na jedné straně nikdy není víc položek, než dovoluje NA_STRANU', () => {
+    expect(strankaZe(vse, 1).aktuality.length).toBeLessThanOrEqual(NA_STRANU)
+  })
+
+  it('rozdělí přesně a nic neztratí ani nezdvojí', () => {
+    const hodne = Array.from({ length: NA_STRANU * 2 + 3 }, (_, i) =>
+      ({ slug: `a${i}`, vydano: `2026-08-${String((i % 28) + 1).padStart(2, '0')}T12:00:00+02:00` }) as never,
+    )
+    const { celkem } = strankaZe(hodne, 1)
+    expect(celkem).toBe(3)
+    const posbirane = [1, 2, 3].flatMap((n) => strankaZe(hodne, n).aktuality)
+    expect(posbirane).toHaveLength(hodne.length)
+    expect(new Set(posbirane.map((x) => x.slug)).size).toBe(hodne.length)
   })
 })
 

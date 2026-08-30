@@ -15,7 +15,7 @@ const KOREN = join(__dirname, '..')
  * Poziční pole místo objektů — u osmi tisíc položek ušetří názvy klíčů
  * zhruba polovinu velikosti souboru: [nazev, popis, url, typ].
  */
-type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z']
+type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z' | 'r']
 
 const zaznamy: Zaznam[] = []
 
@@ -125,6 +125,17 @@ const aktuality = JSON.parse(readFileSync(join(KOREN, '.velite/aktuality.json'),
 }[]
 for (const z of aktuality.filter((x) => !x.koncept && !x.obsahujePruzkum)) {
   zaznamy.push([z.nadpis, z.shrnuti, `/aktualne/${z.slug}`, 'z'])
+}
+
+// Rozhovory — hledá se podle titulku, popis nese médium a datum.
+const rozhovory = JSON.parse(readFileSync(join(KOREN, '.velite/rozhovory.json'), 'utf8')) as {
+  slug: string
+  nadpis: string
+  medium: string
+  datum: string
+}[]
+for (const r of rozhovory) {
+  zaznamy.push([r.nadpis, `Rozhovor · ${r.medium} · ${r.datum.slice(0, 10)}`, `/rozhovory#${r.slug}`, 'r'])
 }
 
 mkdirSync(join(KOREN, 'public'), { recursive: true })

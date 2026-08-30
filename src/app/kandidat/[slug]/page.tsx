@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Drobecky } from '@/components/Drobecky'
 import { notFound } from 'next/navigation'
+import { Rozhovory } from '@/components/Rozhovory'
 import { VyrokyOsoby } from '@/components/VyrokyOsoby'
+import { rozhovoryOsoby } from '@/lib/rozhovory'
 import { celeJmeno, kandidaturyOsoby } from '@/lib/kandidatky'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -93,6 +95,18 @@ export default async function StrankaKandidata({ params }: Parametry) {
           ))}
         </ul>
       </section>
+
+      {rozhovoryOsoby(slug).length > 0 && (
+        <section className="border-t border-linka pt-6">
+          <h2 className="text-2xl">Rozhovory v médiích</h2>
+          <p className="mt-1 max-w-prose text-sm text-seda-uredni">
+            Odkazy a anotace, ne přepisy. Text patří médiu, které rozhovor udělalo.
+          </p>
+          <div className="mt-4">
+            <Rozhovory rozhovory={rozhovoryOsoby(slug)} sJmenem={false} />
+          </div>
+        </section>
+      )}
 
       <VyrokyOsoby osobaSlug={slug} />
 

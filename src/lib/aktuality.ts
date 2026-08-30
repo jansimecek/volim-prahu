@@ -149,7 +149,16 @@ export type Strankovani = {
  * z jedné aktuality by čtenáře vrátilo na začátek.
  */
 export async function stranka(cislo: number): Promise<Strankovani> {
-  const vse = await kZobrazeni()
+  return strankaZe(await kZobrazeni(), cislo)
+}
+
+/**
+ * Čistá část stránkování. Oddělená schválně: `stranka()` sahá přes bránu
+ * moratoria na `connection()`, které mimo vyřizování požadavku vyhodí výjimku,
+ * takže by šla ověřit jedině v prohlížeči. Logika ořezávání je přitom to
+ * jediné, co se tu dá splést.
+ */
+export function strankaZe(vse: Aktualita[], cislo: number): Strankovani {
   const celkem = Math.max(1, Math.ceil(vse.length / NA_STRANU))
   const bezpecne = Math.min(Math.max(1, Math.trunc(cislo)), celkem)
   return {

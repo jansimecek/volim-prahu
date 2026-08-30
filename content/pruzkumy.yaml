@@ -28,4 +28,47 @@ poznamka:
     - text: Průzkum z Prahy (Phoenix Research), ParlamentníListy.cz, 4. 5. 2026
       url: https://www.parlamentnilisty.cz/arena/monitor/Pruzkum-z-Prahy-Velky-navrat-STAN-i-prekvapeni-z-Prisahy-790823
 
-pruzkumy: []
+pruzkumy:
+  # Celostátní sněmovní model. NEŘADÍ pražské kandidátky — měří jiné strany
+  # a o složení zastupitelstva hl. m. Prahy nevypovídá. Slouží jako kontext
+  # v rubrice Aktuálně a nikde jinde se nezobrazuje.
+  - id: kantar-2026-08
+    uroven: celostatni
+    agentura: Kantar CZ
+    zadavatel: Česká televize
+    sberOd: 2026-08-03
+    sberDo: 2026-08-21
+    zverejneno: 2026-08-30
+    velikostVzorku: 1200
+    metoda: >-
+      Telefonické dotazování (CATI) v kombinaci s online panelem (CAWI). Vzorek
+      reprezentativní podle pohlaví, věku, kraje, vzdělání a velikosti bydliště;
+      statistická odchylka ±1,0 až ±3,3 procentního bodu podle velikosti podpory.
+    url: https://ct24.ceskatelevize.cz/clanek/domaci/ano-se-dle-kantaru-dal-drzi-na-spici-cast-jeho-volicu-ale-miri-ke-stan-377082
+    vyhrady: >-
+      Je to model voleb do Poslanecké sněmovny, ne do pražského zastupitelstva.
+      O tom, jak dopadnou komunální volby v Praze, neříká nic: v obcích kandidují
+      jiné subjekty než ve sněmovních volbách, často koalice a sdružení nezávislých,
+      a Praha tvoří jen zhruba osminu celostátního vzorku. Do samotného modelu
+      vstoupilo 991 z 1 200 dotázaných — ti, kdo nevylučují účast ve volbách.
+      Čísla jsou zaokrouhlená na půl procentního bodu.
+    vysledky:
+      - subjekt: ANO
+        procenta: 30.5
+      - subjekt: STAN
+        procenta: 17
+      - subjekt: ODS
+        procenta: 15.5
+      - subjekt: Piráti
+        procenta: 8.5
+      - subjekt: SPD
+        procenta: 6.5
+      - subjekt: Motoristé sobě
+        procenta: 5
+      - subjekt: KDU-ČSL
+        procenta: 3.5
+      - subjekt: Naše Česko
+        procenta: 2.5
+      - subjekt: TOP 09
+        procenta: 2
+

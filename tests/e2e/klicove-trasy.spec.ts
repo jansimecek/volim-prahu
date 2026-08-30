@@ -175,3 +175,32 @@ test('infografika plnění vede na konkrétní závazek a stav nese i text', asy
   // Tvrzení o nesplnění musí u sebe mít zdroj, na který se dá kliknout.
   await expect(zavazek.getByRole('link')).not.toHaveCount(0)
 })
+
+test('rozhovor odkazuje ven a jméno bere z dat ČSÚ', async ({ page }) => {
+  await page.goto('/rozhovory')
+  await expect(page.getByRole('heading', { level: 1, name: 'Rozhovory s kandidáty' })).toBeVisible()
+
+  // Jméno se nepíše do obsahu, dopočítává se z kandidátní listiny —
+  // v obsahu je jen slug, takže titul „Mgr." může přijít jedině z dat.
+  await expect(page.getByRole('link', { name: 'Mgr. Tomáš Portlík' }).first()).toBeVisible()
+
+  // Text rozhovoru nepřebíráme; odkaz musí vést k médiu, které ho udělalo.
+  const odkaz = page.getByRole('link', { name: /Číst rozhovor na webu/ }).first()
+  await expect(odkaz).toHaveAttribute('href', /^https?:\/\/(?!.*volimprahu)/)
+})
+
+test('rozhovory se objeví i na profilu kandidáta', async ({ page }) => {
+  await page.goto('/kandidat/portlik-tomas')
+  await expect(page.getByRole('heading', { name: 'Rozhovory v médiích' })).toBeVisible()
+})
+
+test('celostátní model se ukáže s výhradou a neřadí pražské kandidátky', async ({ page }) => {
+  await page.goto('/aktualne/kantar-snemovni-model-srpen-2026')
+  await expect(page.getByText('ANO')).not.toHaveCount(0)
+  await expect(page.getByText('Je to model voleb do Poslanecké sněmovny')).not.toHaveCount(0)
+
+  // Na stránce magistrátu se podle něj nesmí dát řadit — měří jiné strany.
+  await page.goto('/praha')
+  await expect(page.getByRole('radio', { name: 'Podle posledního průzkumu' })).toHaveCount(0)
+  await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
+})

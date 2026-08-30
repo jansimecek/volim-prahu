@@ -114,6 +114,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </li>
               <li>
+                <Link href="/rozhovory" className="odkaz-navigace">
+                  Rozhovory s kandidáty
+                </Link>
+              </li>
+              <li>
                 <Link href="/minule-obdobi" className="odkaz-navigace">
                   Co slíbila současná rada
                 </Link>

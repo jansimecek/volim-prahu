@@ -29,6 +29,11 @@ export default function StrankaTemat() {
           Doslovné citace vedle sebe, u každé zdroj a datum. Nic neshrnujeme vlastními
           slovy a nikoho nehodnotíme — čtete přesně to, co dotyčný řekl a kde.
         </p>
+        <p className="mt-4">
+          <Link href="/rozhovory" className="odkaz-akcent">
+            Rozhovory s kandidáty v médiích
+          </Link>
+        </p>
         <p className="mt-3 border-l-2 border-praha pl-5">
           Většina lídrů se k většině témat veřejně nevyjádřila, nebo se nám to
           nepodařilo doložit. U každého okruhu proto uvádíme i to, u koho nemáme nic —

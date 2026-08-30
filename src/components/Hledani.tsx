@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useMemo, useRef, useState } from 'react'
 import { bezDiakritiky } from '@/lib/slug'
 
-type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z']
+type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z' | 'r']
 type Dokument = { id: number; nazev: string; popis: string; url: string; typ: Zaznam[3] }
 
 const POPIS_TYPU: Record<Zaznam[3], string> = {
@@ -15,6 +15,7 @@ const POPIS_TYPU: Record<Zaznam[3], string> = {
   m: 'městská část',
   p: 'stránka',
   z: 'aktualita',
+  r: 'rozhovor',
 }
 
 /** Index se hledá bez ohledu na diakritiku — „novak" musí najít Nováka. */

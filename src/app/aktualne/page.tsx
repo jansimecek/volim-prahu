@@ -59,6 +59,10 @@ export default async function StrankaAktualne() {
           <a href="/aktualne/feed.xml" className="odkaz-akcent">
             Odebírat aktuality (RSS)
           </a>
+          {' · '}
+          <Link href="/rozhovory" className="odkaz-akcent">
+            Rozhovory s kandidáty
+          </Link>
         </p>
         {celkem > 1 && (
           <p className="text-sm">

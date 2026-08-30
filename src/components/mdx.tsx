@@ -1,4 +1,5 @@
 import * as runtime from 'react/jsx-runtime'
+import { PruzkumTabulka } from '@/components/PruzkumTabulka'
 import { slugify } from '@/lib/slug'
 
 /**
@@ -31,11 +32,16 @@ function nadpisSId(Znacka: 'h2' | 'h3') {
   return Komponenta
 }
 
-const KOMPONENTY = { h2: nadpisSId('h2'), h3: nadpisSId('h3') }
+/**
+ * Komponenty dostupné v MDX. Zatím jen nadpisy s kotvou a tabulka průzkumu —
+ * ta patří do obsahu, ale nesmí se psát ručně, aby čísla vždycky přišla
+ * z ověřených dat a prošla branou moratoria.
+ */
+const KOMPONENTY = { h2: nadpisSId('h2'), h3: nadpisSId('h3'), PruzkumTabulka }
 
 export function MDXContent({ code }: { code: string }) {
   const Component = new Function(code)({ ...runtime }).default as React.ComponentType<{
-    components?: Record<string, React.ComponentType<VlastnostiNadpisu>>
+    components?: Record<string, React.ComponentType<never>>
   }>
-  return <Component components={KOMPONENTY} />
+  return <Component components={KOMPONENTY as Record<string, React.ComponentType<never>>} />
 }
