@@ -18,7 +18,8 @@ next-env.d.ts
 coverage/
 
 # lokální
-.env*.local
+# Širší než jen *.local: prostý .env by jinak prošel a odnesl tajemství do repa.
+.env*
 .DS_Store
 *.log
 
