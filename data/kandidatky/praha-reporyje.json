@@ -6,12 +6,12 @@
     "mandaty": 15
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "768",
       "nazev": "ANO 2011",
       "zkratka": "ANO",
@@ -21,7 +21,7 @@
       ],
       "kandidati": [
         {
-          "id": "539635-501-1",
+          "id": "539635-1-1",
           "slug": "alexyova-vlasta",
           "jmeno": "Vlasta",
           "prijmeni": "Alexyová",
@@ -36,7 +36,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-2",
+          "id": "539635-1-2",
           "slug": "hubata-radek",
           "jmeno": "Radek",
           "prijmeni": "Hubata",
@@ -51,7 +51,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-3",
+          "id": "539635-1-3",
           "slug": "hoznauer-ludek",
           "jmeno": "Luděk",
           "prijmeni": "Hoznauer",
@@ -66,7 +66,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-4",
+          "id": "539635-1-4",
           "slug": "hermanova-veronika",
           "jmeno": "Veronika",
           "prijmeni": "Hermanová",
@@ -81,7 +81,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-5",
+          "id": "539635-1-5",
           "slug": "vodslonova-helena",
           "jmeno": "Helena",
           "prijmeni": "Vodsloňová",
@@ -96,7 +96,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-6",
+          "id": "539635-1-6",
           "slug": "hermanova-jana",
           "jmeno": "Jana",
           "prijmeni": "Hermanová",
@@ -111,7 +111,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-7",
+          "id": "539635-1-7",
           "slug": "tuma-michal-2",
           "jmeno": "Michal",
           "prijmeni": "Tuma",
@@ -126,7 +126,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-8",
+          "id": "539635-1-8",
           "slug": "hubatova-helena",
           "jmeno": "Helena",
           "prijmeni": "Hubatová",
@@ -141,7 +141,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-9",
+          "id": "539635-1-9",
           "slug": "ullrichova-iveta",
           "jmeno": "Iveta",
           "prijmeni": "Ullrichová",
@@ -156,7 +156,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-10",
+          "id": "539635-1-10",
           "slug": "mithova-marie",
           "jmeno": "Marie",
           "prijmeni": "Míthová",
@@ -171,7 +171,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-11",
+          "id": "539635-1-11",
           "slug": "fortova-emilia",
           "jmeno": "Emília",
           "prijmeni": "Fořtová",
@@ -186,7 +186,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-12",
+          "id": "539635-1-12",
           "slug": "gerhatova-jana",
           "jmeno": "Jana",
           "prijmeni": "Gerhátová",
@@ -201,7 +201,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-13",
+          "id": "539635-1-13",
           "slug": "rakitanskaja-sofie",
           "jmeno": "Sofie",
           "prijmeni": "Rakiťanskaja",
@@ -216,7 +216,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-14",
+          "id": "539635-1-14",
           "slug": "hubatova-radka",
           "jmeno": "Radka",
           "prijmeni": "Hubatová",
@@ -231,7 +231,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-501-15",
+          "id": "539635-1-15",
           "slug": "rakitanskaja-natalie",
           "jmeno": "Natalie",
           "prijmeni": "Rakiťanskaja",
@@ -248,9 +248,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "53",
       "nazev": "Občanská demokratická strana",
       "zkratka": "ODS",
@@ -260,7 +260,7 @@
       ],
       "kandidati": [
         {
-          "id": "539635-502-1",
+          "id": "539635-2-1",
           "slug": "novotny-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Novotný",
@@ -275,7 +275,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-2",
+          "id": "539635-2-2",
           "slug": "hanak-radek",
           "jmeno": "Radek",
           "prijmeni": "Hanák",
@@ -290,7 +290,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-3",
+          "id": "539635-2-3",
           "slug": "urban-radek",
           "jmeno": "Radek",
           "prijmeni": "Urban",
@@ -305,7 +305,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-4",
+          "id": "539635-2-4",
           "slug": "fialova-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Fialová",
@@ -320,7 +320,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-5",
+          "id": "539635-2-5",
           "slug": "stipek-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Štípek",
@@ -335,7 +335,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-6",
+          "id": "539635-2-6",
           "slug": "ruda-lubos",
           "jmeno": "Luboš",
           "prijmeni": "Ruda",
@@ -350,7 +350,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-7",
+          "id": "539635-2-7",
           "slug": "majer-martin",
           "jmeno": "Martin",
           "prijmeni": "Majer",
@@ -365,7 +365,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-8",
+          "id": "539635-2-8",
           "slug": "seifert-jan",
           "jmeno": "Jan",
           "prijmeni": "Seifert",
@@ -380,7 +380,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-9",
+          "id": "539635-2-9",
           "slug": "pyroutek-radek",
           "jmeno": "Radek",
           "prijmeni": "Pyroutek",
@@ -395,7 +395,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-10",
+          "id": "539635-2-10",
           "slug": "drunecky-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Drunecký",
@@ -410,7 +410,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-11",
+          "id": "539635-2-11",
           "slug": "zika-jan",
           "jmeno": "Jan",
           "prijmeni": "Zika",
@@ -425,7 +425,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-12",
+          "id": "539635-2-12",
           "slug": "dolas-karel",
           "jmeno": "Karel",
           "prijmeni": "Doláš",
@@ -440,7 +440,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-13",
+          "id": "539635-2-13",
           "slug": "urbanova-eva-2",
           "jmeno": "Eva",
           "prijmeni": "Urbanová",
@@ -455,7 +455,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-14",
+          "id": "539635-2-14",
           "slug": "prochazka-vilem",
           "jmeno": "Vilém",
           "prijmeni": "Procházka",
@@ -470,7 +470,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-502-15",
+          "id": "539635-2-15",
           "slug": "fiala-jan",
           "jmeno": "Jan",
           "prijmeni": "Fiala",
@@ -487,9 +487,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "1691",
       "nazev": "PŘÍVĚTIVÉ ŘEPORYJE",
       "zkratka": "KDU+STAN+Piráti",
@@ -501,7 +501,7 @@
       ],
       "kandidati": [
         {
-          "id": "539635-503-1",
+          "id": "539635-3-1",
           "slug": "palkovsky-martin",
           "jmeno": "Martin",
           "prijmeni": "Palkovský",
@@ -516,7 +516,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-2",
+          "id": "539635-3-2",
           "slug": "cuba-vojtech",
           "jmeno": "Vojtěch",
           "prijmeni": "Čuba",
@@ -531,7 +531,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-3",
+          "id": "539635-3-3",
           "slug": "rihova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Říhová",
@@ -546,7 +546,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-4",
+          "id": "539635-3-4",
           "slug": "palkovska-zuzana",
           "jmeno": "Zuzana",
           "prijmeni": "Palkovská",
@@ -561,7 +561,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-5",
+          "id": "539635-3-5",
           "slug": "cigler-lukas",
           "jmeno": "Lukáš",
           "prijmeni": "Cígler",
@@ -576,7 +576,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-6",
+          "id": "539635-3-6",
           "slug": "vodicka-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Vodička",
@@ -591,7 +591,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-7",
+          "id": "539635-3-7",
           "slug": "wolf-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Wolf",
@@ -606,7 +606,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-8",
+          "id": "539635-3-8",
           "slug": "rombaldova-martina",
           "jmeno": "Martina",
           "prijmeni": "Rombaldová",
@@ -621,7 +621,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-9",
+          "id": "539635-3-9",
           "slug": "kuchar-vojtech",
           "jmeno": "Vojtěch",
           "prijmeni": "Kuchař",
@@ -636,7 +636,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-10",
+          "id": "539635-3-10",
           "slug": "pacner-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Pacner",
@@ -651,7 +651,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-11",
+          "id": "539635-3-11",
           "slug": "souckova-miroslava",
           "jmeno": "Miroslava",
           "prijmeni": "Součková",
@@ -666,7 +666,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-12",
+          "id": "539635-3-12",
           "slug": "hovorka-milan",
           "jmeno": "Milan",
           "prijmeni": "Hovorka",
@@ -681,7 +681,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-13",
+          "id": "539635-3-13",
           "slug": "krajcovicova-nicole",
           "jmeno": "Nicole",
           "prijmeni": "Krajčovičová",
@@ -696,7 +696,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-14",
+          "id": "539635-3-14",
           "slug": "cicatka-kamil",
           "jmeno": "Kamil",
           "prijmeni": "Čičatka",
@@ -711,7 +711,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-503-15",
+          "id": "539635-3-15",
           "slug": "blazek-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Blažek",
@@ -728,9 +728,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 504,
+      "cislo": 4,
+      "vylosovano": true,
+      "poradiVDatech": 4,
       "kodStrany": "721",
       "nazev": "TOP 09",
       "zkratka": "TOP 09",
@@ -740,7 +740,7 @@
       ],
       "kandidati": [
         {
-          "id": "539635-504-1",
+          "id": "539635-4-1",
           "slug": "roznetinsky-david",
           "jmeno": "David",
           "prijmeni": "Roznětinský",
@@ -755,7 +755,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-2",
+          "id": "539635-4-2",
           "slug": "chrastil-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Chrastil",
@@ -770,7 +770,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-3",
+          "id": "539635-4-3",
           "slug": "blazek-frantisek",
           "jmeno": "František",
           "prijmeni": "Blažek",
@@ -785,7 +785,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-4",
+          "id": "539635-4-4",
           "slug": "rudolf-michal",
           "jmeno": "Michal",
           "prijmeni": "Rudolf",
@@ -800,7 +800,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-5",
+          "id": "539635-4-5",
           "slug": "sorm-johana",
           "jmeno": "Johana",
           "prijmeni": "Šorm",
@@ -815,7 +815,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-6",
+          "id": "539635-4-6",
           "slug": "svoboda-jan-4",
           "jmeno": "Jan",
           "prijmeni": "Svoboda",
@@ -830,7 +830,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-7",
+          "id": "539635-4-7",
           "slug": "kocovsky-vojtech",
           "jmeno": "Vojtěch",
           "prijmeni": "Kočovský",
@@ -845,7 +845,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-8",
+          "id": "539635-4-8",
           "slug": "chmelir-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Chmelíř",
@@ -860,7 +860,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-9",
+          "id": "539635-4-9",
           "slug": "bartos-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Bartoš",
@@ -875,7 +875,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-10",
+          "id": "539635-4-10",
           "slug": "alanova-renata",
           "jmeno": "Renata",
           "prijmeni": "Alánová",
@@ -890,7 +890,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-11",
+          "id": "539635-4-11",
           "slug": "vosmik-petr",
           "jmeno": "Petr",
           "prijmeni": "Vosmík",
@@ -905,7 +905,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-12",
+          "id": "539635-4-12",
           "slug": "krasnov-sergej",
           "jmeno": "Sergej",
           "prijmeni": "Krasnov",
@@ -920,7 +920,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-13",
+          "id": "539635-4-13",
           "slug": "roznetinska-marketa",
           "jmeno": "Markéta",
           "prijmeni": "Roznětinská",
@@ -935,7 +935,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-14",
+          "id": "539635-4-14",
           "slug": "vlach-tomas-2",
           "jmeno": "Tomáš",
           "prijmeni": "Vlach",
@@ -950,7 +950,7 @@
           "zastupitelstvo": "praha-reporyje"
         },
         {
-          "id": "539635-504-15",
+          "id": "539635-4-15",
           "slug": "benak-ales",
           "jmeno": "Aleš",
           "prijmeni": "Benák",

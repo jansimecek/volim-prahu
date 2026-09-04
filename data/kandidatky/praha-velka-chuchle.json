@@ -6,12 +6,12 @@
     "mandaty": 15
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "355",
       "nazev": "LaNka – Lidovci a nezávislí kandidáti",
       "zkratka": "KDU-ČSL+NK",
@@ -22,7 +22,7 @@
       ],
       "kandidati": [
         {
-          "id": "547115-501-1",
+          "id": "547115-1-1",
           "slug": "vokurka-david",
           "jmeno": "David",
           "prijmeni": "Vokurka",
@@ -37,7 +37,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-2",
+          "id": "547115-1-2",
           "slug": "sigmundova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Sigmundová",
@@ -52,7 +52,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-3",
+          "id": "547115-1-3",
           "slug": "rezabek-simon",
           "jmeno": "Šimon",
           "prijmeni": "Řežábek",
@@ -67,7 +67,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-4",
+          "id": "547115-1-4",
           "slug": "ness-eva",
           "jmeno": "Eva",
           "prijmeni": "Ness",
@@ -82,7 +82,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-5",
+          "id": "547115-1-5",
           "slug": "pesik-antonin",
           "jmeno": "Antonín",
           "prijmeni": "Pešík",
@@ -97,7 +97,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-6",
+          "id": "547115-1-6",
           "slug": "cerna-eliska",
           "jmeno": "Eliška",
           "prijmeni": "Černá",
@@ -112,7 +112,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-7",
+          "id": "547115-1-7",
           "slug": "weiss-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Weiss",
@@ -127,7 +127,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-8",
+          "id": "547115-1-8",
           "slug": "snajdr-michal",
           "jmeno": "Michal",
           "prijmeni": "Šnajdr",
@@ -142,7 +142,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-9",
+          "id": "547115-1-9",
           "slug": "vrbecky-matous",
           "jmeno": "Matouš",
           "prijmeni": "Vrběcký",
@@ -157,7 +157,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-10",
+          "id": "547115-1-10",
           "slug": "postler-karel",
           "jmeno": "Karel",
           "prijmeni": "Postler",
@@ -167,12 +167,12 @@
           "povolani": "finanční poradce",
           "bydliste": "Praha-Velká Chuchle",
           "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "KDU-ČSL",
+          "politickaPrislusnost": "",
           "poradi": 10,
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-11",
+          "id": "547115-1-11",
           "slug": "vesely-miroslav",
           "jmeno": "Miroslav",
           "prijmeni": "Veselý",
@@ -187,7 +187,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-12",
+          "id": "547115-1-12",
           "slug": "formanova-vera",
           "jmeno": "Věra",
           "prijmeni": "Formanová",
@@ -202,7 +202,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-13",
+          "id": "547115-1-13",
           "slug": "zahnova-marie",
           "jmeno": "Marie",
           "prijmeni": "Zahnová",
@@ -217,7 +217,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-14",
+          "id": "547115-1-14",
           "slug": "hajna-vera",
           "jmeno": "Věra",
           "prijmeni": "Hajná",
@@ -232,7 +232,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-501-15",
+          "id": "547115-1-15",
           "slug": "spackova-kristina",
           "jmeno": "Kristina",
           "prijmeni": "Špačková",
@@ -249,9 +249,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "427",
       "nazev": "Nezávislí kandidáti a Chuchelští sousedé",
       "zkratka": "SD-SN+NK",
@@ -262,7 +262,7 @@
       ],
       "kandidati": [
         {
-          "id": "547115-502-1",
+          "id": "547115-2-1",
           "slug": "palicova-helena",
           "jmeno": "Helena",
           "prijmeni": "Palicová",
@@ -277,7 +277,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-2",
+          "id": "547115-2-2",
           "slug": "melichar-martin",
           "jmeno": "Martin",
           "prijmeni": "Melichar",
@@ -292,7 +292,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-3",
+          "id": "547115-2-3",
           "slug": "matouskova-zora",
           "jmeno": "Zora",
           "prijmeni": "Matoušková",
@@ -307,7 +307,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-4",
+          "id": "547115-2-4",
           "slug": "oberherr-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Oberherr",
@@ -322,7 +322,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-5",
+          "id": "547115-2-5",
           "slug": "praus-david",
           "jmeno": "David",
           "prijmeni": "Praus",
@@ -337,7 +337,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-6",
+          "id": "547115-2-6",
           "slug": "bernathova-ivana",
           "jmeno": "Ivana",
           "prijmeni": "Bernáthová",
@@ -352,7 +352,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-7",
+          "id": "547115-2-7",
           "slug": "formanova-vlasta",
           "jmeno": "Vlasta",
           "prijmeni": "Formanová",
@@ -367,7 +367,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-8",
+          "id": "547115-2-8",
           "slug": "zemlicka-matej",
           "jmeno": "Matěj",
           "prijmeni": "Žemlička",
@@ -382,7 +382,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-9",
+          "id": "547115-2-9",
           "slug": "saskova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Šašková",
@@ -397,7 +397,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-10",
+          "id": "547115-2-10",
           "slug": "cerny-vladimir",
           "jmeno": "Vladimír",
           "prijmeni": "Černý",
@@ -412,7 +412,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-11",
+          "id": "547115-2-11",
           "slug": "cesakova-zdenka",
           "jmeno": "Zdeňka",
           "prijmeni": "Česáková",
@@ -427,7 +427,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-12",
+          "id": "547115-2-12",
           "slug": "maly-marek",
           "jmeno": "Marek",
           "prijmeni": "Malý",
@@ -442,7 +442,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-13",
+          "id": "547115-2-13",
           "slug": "kozak-jan",
           "jmeno": "Jan",
           "prijmeni": "Kozák",
@@ -457,7 +457,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-14",
+          "id": "547115-2-14",
           "slug": "havlina-martin",
           "jmeno": "Martin",
           "prijmeni": "Havlina",
@@ -472,7 +472,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-502-15",
+          "id": "547115-2-15",
           "slug": "jovanovic-zarko",
           "jmeno": "Žarko",
           "prijmeni": "Jovanovič",
@@ -489,9 +489,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "389",
       "nazev": "Občanská demokratická strana a nezávislí kandidáti s podporou Lepší Chuchle z.s.",
       "zkratka": "ODS+NK",
@@ -502,7 +502,7 @@
       ],
       "kandidati": [
         {
-          "id": "547115-503-1",
+          "id": "547115-3-1",
           "slug": "kren-jan",
           "jmeno": "Jan",
           "prijmeni": "Křen",
@@ -517,7 +517,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-2",
+          "id": "547115-3-2",
           "slug": "jandova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Jandová",
@@ -532,7 +532,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-3",
+          "id": "547115-3-3",
           "slug": "klan-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Klán",
@@ -547,7 +547,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-4",
+          "id": "547115-3-4",
           "slug": "derdova-zdenka",
           "jmeno": "Zdeňka",
           "prijmeni": "Děrdová",
@@ -562,7 +562,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-5",
+          "id": "547115-3-5",
           "slug": "bartonicek-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Bartoníček",
@@ -577,7 +577,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-6",
+          "id": "547115-3-6",
           "slug": "kuznikova-olga",
           "jmeno": "Olga",
           "prijmeni": "Kuzníková",
@@ -592,7 +592,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-7",
+          "id": "547115-3-7",
           "slug": "porizek-jan-2",
           "jmeno": "Jan",
           "prijmeni": "Pořízek",
@@ -607,7 +607,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-8",
+          "id": "547115-3-8",
           "slug": "szaboova-dana",
           "jmeno": "Dana",
           "prijmeni": "Szabóová",
@@ -622,7 +622,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-9",
+          "id": "547115-3-9",
           "slug": "kadlecova-vendula",
           "jmeno": "Vendula",
           "prijmeni": "Kadlecová",
@@ -637,7 +637,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-10",
+          "id": "547115-3-10",
           "slug": "prikryl-marek",
           "jmeno": "Marek",
           "prijmeni": "Přikryl",
@@ -652,7 +652,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-11",
+          "id": "547115-3-11",
           "slug": "rotter-martin",
           "jmeno": "Martin",
           "prijmeni": "Rotter",
@@ -667,7 +667,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-12",
+          "id": "547115-3-12",
           "slug": "porizek-robert",
           "jmeno": "Robert",
           "prijmeni": "Pořízek",
@@ -682,7 +682,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-13",
+          "id": "547115-3-13",
           "slug": "faltejskova-nina",
           "jmeno": "Nina",
           "prijmeni": "Faltejsková",
@@ -697,7 +697,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-14",
+          "id": "547115-3-14",
           "slug": "visek-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Víšek",
@@ -712,7 +712,7 @@
           "zastupitelstvo": "praha-velka-chuchle"
         },
         {
-          "id": "547115-503-15",
+          "id": "547115-3-15",
           "slug": "piskacek-jaromir",
           "jmeno": "Jaromír",
           "prijmeni": "Piskáček",

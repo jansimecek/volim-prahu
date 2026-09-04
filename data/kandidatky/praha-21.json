@@ -6,12 +6,12 @@
     "mandaty": 17
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "768",
       "nazev": "ANO 2011",
       "zkratka": "ANO",
@@ -21,7 +21,7 @@
       ],
       "kandidati": [
         {
-          "id": "538949-501-1",
+          "id": "538949-1-1",
           "slug": "trcalova-yvona",
           "jmeno": "Yvona",
           "prijmeni": "Trčalová",
@@ -36,7 +36,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-2",
+          "id": "538949-1-2",
           "slug": "pekny-vit",
           "jmeno": "Vít",
           "prijmeni": "Pěkný",
@@ -51,7 +51,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-3",
+          "id": "538949-1-3",
           "slug": "zadrazilova-marcella",
           "jmeno": "Marcella",
           "prijmeni": "Zadražilová",
@@ -66,7 +66,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-4",
+          "id": "538949-1-4",
           "slug": "klinger-petr",
           "jmeno": "Petr",
           "prijmeni": "Klinger",
@@ -81,7 +81,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-5",
+          "id": "538949-1-5",
           "slug": "balahura-milan",
           "jmeno": "Milan",
           "prijmeni": "Balahura",
@@ -96,7 +96,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-6",
+          "id": "538949-1-6",
           "slug": "skutilova-vladimira",
           "jmeno": "Vladimíra",
           "prijmeni": "Skutilová",
@@ -111,7 +111,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-7",
+          "id": "538949-1-7",
           "slug": "pachner-milan",
           "jmeno": "Milan",
           "prijmeni": "Pachner",
@@ -126,7 +126,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-8",
+          "id": "538949-1-8",
           "slug": "jeriova-jirina",
           "jmeno": "Jiřina",
           "prijmeni": "Jeriová",
@@ -141,7 +141,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-9",
+          "id": "538949-1-9",
           "slug": "hubalek-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Hubálek",
@@ -156,7 +156,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-10",
+          "id": "538949-1-10",
           "slug": "maly-frantisek",
           "jmeno": "František",
           "prijmeni": "Malý",
@@ -171,7 +171,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-11",
+          "id": "538949-1-11",
           "slug": "simek-petr",
           "jmeno": "Petr",
           "prijmeni": "Šimek",
@@ -186,7 +186,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-12",
+          "id": "538949-1-12",
           "slug": "hava-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Háva",
@@ -201,7 +201,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-13",
+          "id": "538949-1-13",
           "slug": "ildza-andrej",
           "jmeno": "Andrej",
           "prijmeni": "Ildža",
@@ -216,7 +216,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-14",
+          "id": "538949-1-14",
           "slug": "stepan-petr",
           "jmeno": "Petr",
           "prijmeni": "Štěpán",
@@ -231,7 +231,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-15",
+          "id": "538949-1-15",
           "slug": "dvorakova-monika",
           "jmeno": "Monika",
           "prijmeni": "Dvořáková",
@@ -246,7 +246,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-16",
+          "id": "538949-1-16",
           "slug": "pribylova-elena",
           "jmeno": "Elena",
           "prijmeni": "Přibylová",
@@ -261,7 +261,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-501-17",
+          "id": "538949-1-17",
           "slug": "klepetkova-jitka",
           "jmeno": "Jitka",
           "prijmeni": "Klepetková",
@@ -278,551 +278,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
-      "kodStrany": "687",
-      "nazev": "ODS a TOP 09 - SPOLEČNĚ PRO ÚJEZD",
-      "zkratka": "ODS+TOP 09",
-      "slug": "ods-a-top-09-spolecne-pro-ujezd",
-      "slozeni": [
-        "053",
-        "721"
-      ],
-      "kandidati": [
-        {
-          "id": "538949-502-1",
-          "slug": "hazdra-michal",
-          "jmeno": "Michal",
-          "prijmeni": "Hazdra",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 52,
-          "povolani": "starosta MČ, manažer rizik",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 1,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-2",
-          "slug": "samec-milan",
-          "jmeno": "Milan",
-          "prijmeni": "Samec",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 52,
-          "povolani": "radní MČ, ICT specialista",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 2,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-3",
-          "slug": "motejlova-alena",
-          "jmeno": "Alena",
-          "prijmeni": "Motejlová",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 42,
-          "povolani": "místostarostka MČ, ekonomka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 3,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-4",
-          "slug": "cubinek-david",
-          "jmeno": "David",
-          "prijmeni": "Cubínek",
-          "titulPred": "Ing.",
-          "titulZa": "MBA",
-          "vek": 56,
-          "povolani": "ICT manažer",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 4,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-5",
-          "slug": "frey-jiri",
-          "jmeno": "Jiří",
-          "prijmeni": "Frey",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 47,
-          "povolani": "revizní technik",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 5,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-6",
-          "slug": "sedlak-petr",
-          "jmeno": "Petr",
-          "prijmeni": "Sedlák",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 52,
-          "povolani": "OSVČ",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 6,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-7",
-          "slug": "filipinska-lucie",
-          "jmeno": "Lucie",
-          "prijmeni": "Filipinská",
-          "titulPred": "Mgr.",
-          "titulZa": "Ph.D.",
-          "vek": 54,
-          "povolani": "radní MČ, právník",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 7,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-8",
-          "slug": "koza-richard",
-          "jmeno": "Richard",
-          "prijmeni": "Koza",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 55,
-          "povolani": "místostarosta MČ, ředitel",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 8,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-9",
-          "slug": "hubinkova-zdenka",
-          "jmeno": "Zdeňka",
-          "prijmeni": "Hubínková",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 61,
-          "povolani": "referentka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 9,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-10",
-          "slug": "vaclavik-libor",
-          "jmeno": "Libor",
-          "prijmeni": "Václavík",
-          "titulPred": "Mgr.",
-          "titulZa": "MBA, MSc.",
-          "vek": 31,
-          "povolani": "manažer prodeje, konzultant",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 10,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-11",
-          "slug": "blahova-katerina",
-          "jmeno": "Kateřina",
-          "prijmeni": "Bláhová",
-          "titulPred": "MUDr.",
-          "titulZa": "",
-          "vek": 53,
-          "povolani": "praktická lékařka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 11,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-12",
-          "slug": "vojta-ondrej-2",
-          "jmeno": "Ondřej",
-          "prijmeni": "Vojta",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 63,
-          "povolani": "důchodce",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 12,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-13",
-          "slug": "havelkova-veronika",
-          "jmeno": "Veronika",
-          "prijmeni": "Havelková",
-          "titulPred": "PhDr.",
-          "titulZa": "Ph.D.",
-          "vek": 38,
-          "povolani": "podnikatelka, lektorka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 13,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-14",
-          "slug": "hazuza-petr",
-          "jmeno": "Petr",
-          "prijmeni": "Hazuza",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 46,
-          "povolani": "administrativní pracovník",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 14,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-15",
-          "slug": "ponicova-lucie",
-          "jmeno": "Lucie",
-          "prijmeni": "Ponicová",
-          "titulPred": "Ing.",
-          "titulZa": "DiS.",
-          "vek": 49,
-          "povolani": "projektová manažerka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 15,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-16",
-          "slug": "blaha-patrik",
-          "jmeno": "Patrik",
-          "prijmeni": "Bláha",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 55,
-          "povolani": "podnikatel",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "",
-          "poradi": 16,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-502-17",
-          "slug": "kozova-lucie",
-          "jmeno": "Lucie",
-          "prijmeni": "Kozová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 56,
-          "povolani": "učitelka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "",
-          "poradi": 17,
-          "zastupitelstvo": "praha-21"
-        }
-      ]
-    },
-    {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
-      "kodStrany": "1602",
-      "nazev": "Otevřený Újezd – pro dobrý život bez planých slibů",
-      "zkratka": "KDU+Zel+Souk+NK",
-      "slug": "otevreny-ujezd-pro-dobry-zivot-bez-planych-slibu",
-      "slozeni": [
-        "001",
-        "005",
-        "080",
-        "716"
-      ],
-      "kandidati": [
-        {
-          "id": "538949-503-1",
-          "slug": "rousar-pavel",
-          "jmeno": "Pavel",
-          "prijmeni": "Roušar",
-          "titulPred": "RNDr.",
-          "titulZa": "",
-          "vek": 62,
-          "povolani": "specialista AI, zastupitel a bývalý starosta",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Zelení",
-          "politickaPrislusnost": "",
-          "poradi": 1,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-2",
-          "slug": "kucera-robert",
-          "jmeno": "Robert",
-          "prijmeni": "Kučera",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 57,
-          "povolani": "živnostník, mechanik veteránů",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Soukromníci",
-          "politickaPrislusnost": "Soukromníci",
-          "poradi": 2,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-3",
-          "slug": "kazdova-zita",
-          "jmeno": "Zita",
-          "prijmeni": "Kazdová",
-          "titulPred": "MUDr.",
-          "titulZa": "",
-          "vek": 59,
-          "povolani": "knihovnice",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "KDU-ČSL",
-          "politickaPrislusnost": "",
-          "poradi": 3,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-4",
-          "slug": "cieply-ales",
-          "jmeno": "Aleš",
-          "prijmeni": "Cieplý",
-          "titulPred": "RNDr.",
-          "titulZa": "DSc.",
-          "vek": 61,
-          "povolani": "vědecký pracovník",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 4,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-5",
-          "slug": "baitler-martin",
-          "jmeno": "Martin",
-          "prijmeni": "Baitler",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 66,
-          "povolani": "stavební inženýr ve výslužbě",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 5,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-6",
-          "slug": "syriste-ivo",
-          "jmeno": "Ivo",
-          "prijmeni": "Syřiště",
-          "titulPred": "PhDr. Dr.",
-          "titulZa": "",
-          "vek": 61,
-          "povolani": "vysokoškolský pedagog UK",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Soukromníci",
-          "politickaPrislusnost": "Soukromníci",
-          "poradi": 6,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-7",
-          "slug": "pokova-daniela",
-          "jmeno": "Daniela",
-          "prijmeni": "Poková",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 57,
-          "povolani": "majitelka tanečního studia",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 7,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-8",
-          "slug": "hartmanova-monika",
-          "jmeno": "Monika",
-          "prijmeni": "Hartmanová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 61,
-          "povolani": "středoškolská učitelka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Zelení",
-          "politickaPrislusnost": "",
-          "poradi": 8,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-9",
-          "slug": "vlach-tomas",
-          "jmeno": "Tomáš",
-          "prijmeni": "Vlach",
-          "titulPred": "MVDr.",
-          "titulZa": "",
-          "vek": 58,
-          "povolani": "veterinární lékař",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 9,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-10",
-          "slug": "hajkova-lenka",
-          "jmeno": "Lenka",
-          "prijmeni": "Hájková",
-          "titulPred": "MUDr.",
-          "titulZa": "",
-          "vek": 49,
-          "povolani": "praktická lékařka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "KDU-ČSL",
-          "politickaPrislusnost": "",
-          "poradi": 10,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-11",
-          "slug": "klimes-jeronym",
-          "jmeno": "Jeroným",
-          "prijmeni": "Klimeš",
-          "titulPred": "PhDr. Mgr.",
-          "titulZa": "Ph.D.",
-          "vek": 59,
-          "povolani": "psycholog",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 11,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-12",
-          "slug": "semeradova-zuzana",
-          "jmeno": "Zuzana",
-          "prijmeni": "Semerádová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 49,
-          "povolani": "policistka, zdravotnice, učitelka",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 12,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-13",
-          "slug": "marek-ladislav",
-          "jmeno": "Ladislav",
-          "prijmeni": "Marek",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 74,
-          "povolani": "živnostník, hospodský, jachetní kapitán",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Soukromníci",
-          "politickaPrislusnost": "Soukromníci",
-          "poradi": 13,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-14",
-          "slug": "frydl-roman",
-          "jmeno": "Roman",
-          "prijmeni": "Frýdl",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 71,
-          "povolani": "stavař a autorizovaný stavitel",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Soukromníci",
-          "politickaPrislusnost": "",
-          "poradi": 14,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-15",
-          "slug": "stanek-antonin",
-          "jmeno": "Antonín",
-          "prijmeni": "Staněk",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 76,
-          "povolani": "výpravčí ČD ve výslužbě",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "KDU-ČSL",
-          "politickaPrislusnost": "",
-          "poradi": 15,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-16",
-          "slug": "sasek-jiri",
-          "jmeno": "Jiří",
-          "prijmeni": "Šašek",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 61,
-          "povolani": "analytik a softwarový specialista",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 16,
-          "zastupitelstvo": "praha-21"
-        },
-        {
-          "id": "538949-503-17",
-          "slug": "jenicek-jaroslav",
-          "jmeno": "Jaroslav",
-          "prijmeni": "Jeníček",
-          "titulPred": "MUDr.",
-          "titulZa": "CSc.",
-          "vek": 61,
-          "povolani": "lékař",
-          "bydliste": "Praha 21",
-          "navrhujiciStrana": "Soukromníci",
-          "politickaPrislusnost": "Soukromníci",
-          "poradi": 17,
-          "zastupitelstvo": "praha-21"
-        }
-      ]
-    },
-    {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 504,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "470",
       "nazev": "STAROSTOVÉ A NEZÁVISLÍ – ÚJEZD ŽIJE",
       "zkratka": "STAN+NK",
@@ -833,7 +291,7 @@
       ],
       "kandidati": [
         {
-          "id": "538949-504-1",
+          "id": "538949-2-1",
           "slug": "dolezalova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Doležalová",
@@ -848,7 +306,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-2",
+          "id": "538949-2-2",
           "slug": "kucera-petr-2",
           "jmeno": "Petr",
           "prijmeni": "Kučera",
@@ -863,7 +321,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-3",
+          "id": "538949-2-3",
           "slug": "cermonova-hana",
           "jmeno": "Hana",
           "prijmeni": "Cermonová",
@@ -878,7 +336,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-4",
+          "id": "538949-2-4",
           "slug": "mertova-hana",
           "jmeno": "Hana",
           "prijmeni": "Mertová",
@@ -893,7 +351,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-5",
+          "id": "538949-2-5",
           "slug": "kucerova-marie",
           "jmeno": "Marie",
           "prijmeni": "Kučerová",
@@ -908,7 +366,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-6",
+          "id": "538949-2-6",
           "slug": "hladik-marek",
           "jmeno": "Marek",
           "prijmeni": "Hladík",
@@ -923,7 +381,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-7",
+          "id": "538949-2-7",
           "slug": "konickova-chvojkova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Koníčková Chvojková",
@@ -938,7 +396,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-8",
+          "id": "538949-2-8",
           "slug": "dolezal-stepan",
           "jmeno": "Štěpán",
           "prijmeni": "Doležal",
@@ -953,7 +411,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-9",
+          "id": "538949-2-9",
           "slug": "vrtichova-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Vrtichová",
@@ -968,7 +426,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-10",
+          "id": "538949-2-10",
           "slug": "kozlovskij-skalnikova-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Kozlovskij Skalníková",
@@ -983,7 +441,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-11",
+          "id": "538949-2-11",
           "slug": "smatlakova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Šmatláková",
@@ -998,7 +456,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-12",
+          "id": "538949-2-12",
           "slug": "elias-dalibor",
           "jmeno": "Dalibor",
           "prijmeni": "Eliáš",
@@ -1013,7 +471,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-13",
+          "id": "538949-2-13",
           "slug": "zmeskalova-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Zmeškalová",
@@ -1028,7 +486,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-14",
+          "id": "538949-2-14",
           "slug": "kucharik-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Kuchařík",
@@ -1043,7 +501,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-15",
+          "id": "538949-2-15",
           "slug": "klimesova-judita",
           "jmeno": "Judita",
           "prijmeni": "Klimešová",
@@ -1058,7 +516,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-16",
+          "id": "538949-2-16",
           "slug": "havrdova-egle",
           "jmeno": "Egle",
           "prijmeni": "Havrdová",
@@ -1073,7 +531,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-504-17",
+          "id": "538949-2-17",
           "slug": "bruothova-jana",
           "jmeno": "Jana",
           "prijmeni": "Bruothová",
@@ -1090,9 +548,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 505,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "901",
       "nazev": "ÚJEZD21",
       "zkratka": "SNK",
@@ -1102,7 +560,7 @@
       ],
       "kandidati": [
         {
-          "id": "538949-505-1",
+          "id": "538949-3-1",
           "slug": "jackanic-jan",
           "jmeno": "Jan",
           "prijmeni": "Jackanič",
@@ -1117,7 +575,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-2",
+          "id": "538949-3-2",
           "slug": "buchtel-marek",
           "jmeno": "Marek",
           "prijmeni": "Buchtel",
@@ -1132,7 +590,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-3",
+          "id": "538949-3-3",
           "slug": "cikhart-david-otto",
           "jmeno": "David Otto",
           "prijmeni": "Cikhart",
@@ -1147,7 +605,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-4",
+          "id": "538949-3-4",
           "slug": "bauerova-jana",
           "jmeno": "Jana",
           "prijmeni": "Bauerová",
@@ -1162,7 +620,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-5",
+          "id": "538949-3-5",
           "slug": "svoboda-jan-3",
           "jmeno": "Jan",
           "prijmeni": "Svoboda",
@@ -1177,7 +635,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-6",
+          "id": "538949-3-6",
           "slug": "schwanova-jitka",
           "jmeno": "Jitka",
           "prijmeni": "Schwanová",
@@ -1192,7 +650,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-7",
+          "id": "538949-3-7",
           "slug": "fialka-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Fialka",
@@ -1207,7 +665,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-8",
+          "id": "538949-3-8",
           "slug": "bilkova-barbora",
           "jmeno": "Barbora",
           "prijmeni": "Bílková",
@@ -1222,7 +680,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-9",
+          "id": "538949-3-9",
           "slug": "kratinova-eliska",
           "jmeno": "Eliška",
           "prijmeni": "Kratinová",
@@ -1237,7 +695,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-10",
+          "id": "538949-3-10",
           "slug": "bredova-linda",
           "jmeno": "Linda",
           "prijmeni": "Bredová",
@@ -1252,7 +710,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-11",
+          "id": "538949-3-11",
           "slug": "bures-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Bureš",
@@ -1267,7 +725,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-12",
+          "id": "538949-3-12",
           "slug": "kratina-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Kratina",
@@ -1282,7 +740,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-13",
+          "id": "538949-3-13",
           "slug": "svoboda-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Svoboda",
@@ -1297,7 +755,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-14",
+          "id": "538949-3-14",
           "slug": "buchtel-filip",
           "jmeno": "Filip",
           "prijmeni": "Buchtel",
@@ -1312,7 +770,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-15",
+          "id": "538949-3-15",
           "slug": "chrastova-petra",
           "jmeno": "Petra",
           "prijmeni": "Chrástová",
@@ -1327,7 +785,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-16",
+          "id": "538949-3-16",
           "slug": "kosova-ivona",
           "jmeno": "Ivona",
           "prijmeni": "Kosová",
@@ -1342,7 +800,7 @@
           "zastupitelstvo": "praha-21"
         },
         {
-          "id": "538949-505-17",
+          "id": "538949-3-17",
           "slug": "eibichova-jana",
           "jmeno": "Jana",
           "prijmeni": "Eibichová",
@@ -1352,6 +810,548 @@
           "povolani": "speciální pedagožka",
           "bydliste": "Praha 21",
           "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 17,
+          "zastupitelstvo": "praha-21"
+        }
+      ]
+    },
+    {
+      "cislo": 4,
+      "vylosovano": true,
+      "poradiVDatech": 4,
+      "kodStrany": "1602",
+      "nazev": "Otevřený Újezd – pro dobrý život bez planých slibů",
+      "zkratka": "KDU+Zel+Souk+NK",
+      "slug": "otevreny-ujezd-pro-dobry-zivot-bez-planych-slibu",
+      "slozeni": [
+        "001",
+        "005",
+        "080",
+        "716"
+      ],
+      "kandidati": [
+        {
+          "id": "538949-4-1",
+          "slug": "rousar-pavel",
+          "jmeno": "Pavel",
+          "prijmeni": "Roušar",
+          "titulPred": "RNDr.",
+          "titulZa": "",
+          "vek": 62,
+          "povolani": "specialista AI, zastupitel a bývalý starosta",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Zelení",
+          "politickaPrislusnost": "",
+          "poradi": 1,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-2",
+          "slug": "kucera-robert",
+          "jmeno": "Robert",
+          "prijmeni": "Kučera",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 57,
+          "povolani": "živnostník, mechanik veteránů",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Soukromníci",
+          "politickaPrislusnost": "Soukromníci",
+          "poradi": 2,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-3",
+          "slug": "kazdova-zita",
+          "jmeno": "Zita",
+          "prijmeni": "Kazdová",
+          "titulPred": "MUDr.",
+          "titulZa": "",
+          "vek": 59,
+          "povolani": "knihovnice",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "KDU-ČSL",
+          "politickaPrislusnost": "",
+          "poradi": 3,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-4",
+          "slug": "cieply-ales",
+          "jmeno": "Aleš",
+          "prijmeni": "Cieplý",
+          "titulPred": "RNDr.",
+          "titulZa": "CSc., DSc.",
+          "vek": 61,
+          "povolani": "vědecký pracovník",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 4,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-5",
+          "slug": "baitler-martin",
+          "jmeno": "Martin",
+          "prijmeni": "Baitler",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 66,
+          "povolani": "stavební inženýr ve výslužbě",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 5,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-6",
+          "slug": "syriste-ivo",
+          "jmeno": "Ivo",
+          "prijmeni": "Syřiště",
+          "titulPred": "PhDr. Dr.",
+          "titulZa": "",
+          "vek": 61,
+          "povolani": "vysokoškolský pedagog UK",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Soukromníci",
+          "politickaPrislusnost": "Soukromníci",
+          "poradi": 6,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-7",
+          "slug": "pokova-daniela",
+          "jmeno": "Daniela",
+          "prijmeni": "Poková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 57,
+          "povolani": "majitelka tanečního studia",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 7,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-8",
+          "slug": "hartmanova-monika",
+          "jmeno": "Monika",
+          "prijmeni": "Hartmanová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 61,
+          "povolani": "středoškolská učitelka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Zelení",
+          "politickaPrislusnost": "",
+          "poradi": 8,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-9",
+          "slug": "vlach-tomas",
+          "jmeno": "Tomáš",
+          "prijmeni": "Vlach",
+          "titulPred": "MVDr.",
+          "titulZa": "",
+          "vek": 58,
+          "povolani": "veterinární lékař",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 9,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-10",
+          "slug": "hajkova-lenka",
+          "jmeno": "Lenka",
+          "prijmeni": "Hájková",
+          "titulPred": "MUDr.",
+          "titulZa": "",
+          "vek": 49,
+          "povolani": "praktická lékařka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "KDU-ČSL",
+          "politickaPrislusnost": "",
+          "poradi": 10,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-11",
+          "slug": "klimes-jeronym",
+          "jmeno": "Jeroným",
+          "prijmeni": "Klimeš",
+          "titulPred": "PhDr. Mgr.",
+          "titulZa": "Ph.D.",
+          "vek": 59,
+          "povolani": "psycholog",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 11,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-12",
+          "slug": "semeradova-zuzana",
+          "jmeno": "Zuzana",
+          "prijmeni": "Semerádová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 49,
+          "povolani": "policistka, zdravotnice, učitelka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 12,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-13",
+          "slug": "marek-ladislav",
+          "jmeno": "Ladislav",
+          "prijmeni": "Marek",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 74,
+          "povolani": "živnostník, hospodský, jachetní kapitán",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Soukromníci",
+          "politickaPrislusnost": "Soukromníci",
+          "poradi": 13,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-14",
+          "slug": "frydl-roman",
+          "jmeno": "Roman",
+          "prijmeni": "Frýdl",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 71,
+          "povolani": "stavař a autorizovaný stavitel",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Soukromníci",
+          "politickaPrislusnost": "",
+          "poradi": 14,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-15",
+          "slug": "stanek-antonin",
+          "jmeno": "Antonín",
+          "prijmeni": "Staněk",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 76,
+          "povolani": "výpravčí ČD ve výslužbě",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "KDU-ČSL",
+          "politickaPrislusnost": "",
+          "poradi": 15,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-16",
+          "slug": "sasek-jiri",
+          "jmeno": "Jiří",
+          "prijmeni": "Šašek",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 61,
+          "povolani": "analytik a softwarový specialista",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 16,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-4-17",
+          "slug": "jenicek-jaroslav",
+          "jmeno": "Jaroslav",
+          "prijmeni": "Jeníček",
+          "titulPred": "MUDr.",
+          "titulZa": "CSc.",
+          "vek": 61,
+          "povolani": "lékař",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "Soukromníci",
+          "politickaPrislusnost": "Soukromníci",
+          "poradi": 17,
+          "zastupitelstvo": "praha-21"
+        }
+      ]
+    },
+    {
+      "cislo": 5,
+      "vylosovano": true,
+      "poradiVDatech": 5,
+      "kodStrany": "687",
+      "nazev": "ODS a TOP 09 - SPOLEČNĚ PRO ÚJEZD",
+      "zkratka": "ODS+TOP 09",
+      "slug": "ods-a-top-09-spolecne-pro-ujezd",
+      "slozeni": [
+        "053",
+        "721"
+      ],
+      "kandidati": [
+        {
+          "id": "538949-5-1",
+          "slug": "hazdra-michal",
+          "jmeno": "Michal",
+          "prijmeni": "Hazdra",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "starosta MČ, manažer rizik",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 1,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-2",
+          "slug": "samec-milan",
+          "jmeno": "Milan",
+          "prijmeni": "Samec",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "radní MČ, ICT specialista",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 2,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-3",
+          "slug": "motejlova-alena",
+          "jmeno": "Alena",
+          "prijmeni": "Motejlová",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 42,
+          "povolani": "místostarostka MČ, ekonomka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 3,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-4",
+          "slug": "cubinek-david",
+          "jmeno": "David",
+          "prijmeni": "Cubínek",
+          "titulPred": "Ing.",
+          "titulZa": "MBA",
+          "vek": 56,
+          "povolani": "ICT manažer",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 4,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-5",
+          "slug": "frey-jiri",
+          "jmeno": "Jiří",
+          "prijmeni": "Frey",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 47,
+          "povolani": "revizní technik",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 5,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-6",
+          "slug": "sedlak-petr",
+          "jmeno": "Petr",
+          "prijmeni": "Sedlák",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "OSVČ",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 6,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-7",
+          "slug": "filipinska-lucie",
+          "jmeno": "Lucie",
+          "prijmeni": "Filipinská",
+          "titulPred": "Mgr.",
+          "titulZa": "Ph.D.",
+          "vek": 54,
+          "povolani": "radní MČ, právník",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 7,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-8",
+          "slug": "koza-richard",
+          "jmeno": "Richard",
+          "prijmeni": "Koza",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 55,
+          "povolani": "místostarosta MČ, ředitel",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 8,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-9",
+          "slug": "hubinkova-zdenka",
+          "jmeno": "Zdeňka",
+          "prijmeni": "Hubínková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 61,
+          "povolani": "referentka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 9,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-10",
+          "slug": "vaclavik-libor",
+          "jmeno": "Libor",
+          "prijmeni": "Václavík",
+          "titulPred": "Mgr.",
+          "titulZa": "MBA, MSc.",
+          "vek": 31,
+          "povolani": "manažer prodeje, konzultant",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 10,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-11",
+          "slug": "blahova-katerina",
+          "jmeno": "Kateřina",
+          "prijmeni": "Bláhová",
+          "titulPred": "MUDr.",
+          "titulZa": "",
+          "vek": 53,
+          "povolani": "praktická lékařka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 11,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-12",
+          "slug": "vojta-ondrej-2",
+          "jmeno": "Ondřej",
+          "prijmeni": "Vojta",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 63,
+          "povolani": "důchodce",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 12,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-13",
+          "slug": "havelkova-veronika",
+          "jmeno": "Veronika",
+          "prijmeni": "Havelková",
+          "titulPred": "PhDr.",
+          "titulZa": "Ph.D.",
+          "vek": 38,
+          "povolani": "podnikatelka, lektorka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 13,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-14",
+          "slug": "hazuza-petr",
+          "jmeno": "Petr",
+          "prijmeni": "Hazuza",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 46,
+          "povolani": "administrativní pracovník",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 14,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-15",
+          "slug": "ponicova-lucie",
+          "jmeno": "Lucie",
+          "prijmeni": "Ponicová",
+          "titulPred": "Ing.",
+          "titulZa": "DiS.",
+          "vek": 49,
+          "povolani": "projektová manažerka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 15,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-16",
+          "slug": "blaha-patrik",
+          "jmeno": "Patrik",
+          "prijmeni": "Bláha",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 55,
+          "povolani": "podnikatel",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "",
+          "poradi": 16,
+          "zastupitelstvo": "praha-21"
+        },
+        {
+          "id": "538949-5-17",
+          "slug": "kozova-lucie",
+          "jmeno": "Lucie",
+          "prijmeni": "Kozová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "učitelka",
+          "bydliste": "Praha 21",
+          "navrhujiciStrana": "ODS",
           "politickaPrislusnost": "",
           "poradi": 17,
           "zastupitelstvo": "praha-21"

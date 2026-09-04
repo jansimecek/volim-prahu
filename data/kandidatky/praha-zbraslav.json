@@ -6,12 +6,12 @@
     "mandaty": 17
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "401",
       "nazev": "Nezávislá Zbraslav",
       "zkratka": "NEZ+NK",
@@ -22,7 +22,7 @@
       ],
       "kandidati": [
         {
-          "id": "539864-501-1",
+          "id": "539864-1-1",
           "slug": "pavlikova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Pavlíková",
@@ -37,7 +37,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-2",
+          "id": "539864-1-2",
           "slug": "hanel-ales",
           "jmeno": "Aleš",
           "prijmeni": "Háněl",
@@ -52,7 +52,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-3",
+          "id": "539864-1-3",
           "slug": "tousek-filip",
           "jmeno": "Filip",
           "prijmeni": "Toušek",
@@ -67,7 +67,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-4",
+          "id": "539864-1-4",
           "slug": "hloupa-klara",
           "jmeno": "Klára",
           "prijmeni": "Hloupá",
@@ -82,7 +82,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-5",
+          "id": "539864-1-5",
           "slug": "kosan-petr",
           "jmeno": "Petr",
           "prijmeni": "Košan",
@@ -97,7 +97,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-6",
+          "id": "539864-1-6",
           "slug": "kovarik-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Kovařík",
@@ -112,7 +112,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-7",
+          "id": "539864-1-7",
           "slug": "rybicka-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Rybicka",
@@ -127,7 +127,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-8",
+          "id": "539864-1-8",
           "slug": "krausova-kindlova-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Krausová Kindlová",
@@ -142,7 +142,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-9",
+          "id": "539864-1-9",
           "slug": "bohatec-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Bohatec",
@@ -157,7 +157,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-10",
+          "id": "539864-1-10",
           "slug": "soucek-radek",
           "jmeno": "Radek",
           "prijmeni": "Souček",
@@ -172,7 +172,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-11",
+          "id": "539864-1-11",
           "slug": "curinova-kristina",
           "jmeno": "Kristina",
           "prijmeni": "Cuřínová",
@@ -187,7 +187,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-12",
+          "id": "539864-1-12",
           "slug": "kovar-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Kovář",
@@ -202,7 +202,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-13",
+          "id": "539864-1-13",
           "slug": "santarova-sylva",
           "jmeno": "Sylva",
           "prijmeni": "Santarová",
@@ -217,7 +217,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-14",
+          "id": "539864-1-14",
           "slug": "meisnerova-dagmar",
           "jmeno": "Dagmar",
           "prijmeni": "Meisnerová",
@@ -232,7 +232,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-15",
+          "id": "539864-1-15",
           "slug": "kadlec-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Kadlec",
@@ -247,7 +247,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-16",
+          "id": "539864-1-16",
           "slug": "bendova-pavlina",
           "jmeno": "Pavlína",
           "prijmeni": "Bendová",
@@ -262,7 +262,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-501-17",
+          "id": "539864-1-17",
           "slug": "cumpelik-petr",
           "jmeno": "Petr",
           "prijmeni": "Čumpelík",
@@ -279,279 +279,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
-      "kodStrany": "1323",
-      "nazev": "ODS a STAN",
-      "zkratka": "ODS+STAN",
-      "slug": "ods-a-stan",
-      "slozeni": [
-        "053",
-        "166"
-      ],
-      "kandidati": [
-        {
-          "id": "539864-502-1",
-          "slug": "medvid-martin",
-          "jmeno": "Martin",
-          "prijmeni": "Medvíď",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 28,
-          "povolani": "PR konzultant pro oblast dopravy, předseda MS ODS Zbraslav",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 1,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-2",
-          "slug": "anfilov-adam",
-          "jmeno": "Adam",
-          "prijmeni": "Anfilov",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 27,
-          "povolani": "provozní kavárny, student",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 2,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-3",
-          "slug": "novotny-tomas",
-          "jmeno": "Tomáš",
-          "prijmeni": "Novotný",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 42,
-          "povolani": "předseda odborové organizace v DPP, zastupitel MČ Praha-Zbraslav",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "STAN",
-          "poradi": 3,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-4",
-          "slug": "kouba-jiri",
-          "jmeno": "Jiří",
-          "prijmeni": "Kouba",
-          "titulPred": "Ing. arch.",
-          "titulZa": "",
-          "vek": 26,
-          "povolani": "architekt, projektový manažer",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 4,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-5",
-          "slug": "nedoma-karel",
-          "jmeno": "Karel",
-          "prijmeni": "Nedoma",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 71,
-          "povolani": "ředitel ZUŠ, zastupitel MČ Praha-Zbraslav",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 5,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-6",
-          "slug": "macku-david",
-          "jmeno": "David",
-          "prijmeni": "Macků",
-          "titulPred": "MUDr. Ing.",
-          "titulZa": "",
-          "vek": 52,
-          "povolani": "lékař, etický konzultant, zastupitel MČ Praha-Zbraslav",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 6,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-7",
-          "slug": "kuchar-daniel",
-          "jmeno": "Daniel",
-          "prijmeni": "Kuchař",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 19,
-          "povolani": "lektor primární prevence, student",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "STAN",
-          "poradi": 7,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-8",
-          "slug": "horn-filip",
-          "jmeno": "Filip",
-          "prijmeni": "Horn",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 28,
-          "povolani": "OSVČ v oblasti kultury",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 8,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-9",
-          "slug": "hrdy-daniel",
-          "jmeno": "Daniel",
-          "prijmeni": "Hrdý",
-          "titulPred": "Bc.",
-          "titulZa": "",
-          "vek": 27,
-          "povolani": "datový konzultant, student",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 9,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-10",
-          "slug": "dolezilkova-nedomova-karolina",
-          "jmeno": "Karolina",
-          "prijmeni": "Doležílková Nedomová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 39,
-          "povolani": "učitelka",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 10,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-11",
-          "slug": "zakova-veronika-2",
-          "jmeno": "Veronika",
-          "prijmeni": "Žáková",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 43,
-          "povolani": "právník",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "",
-          "poradi": 11,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-12",
-          "slug": "dolezilek-jakub",
-          "jmeno": "Jakub",
-          "prijmeni": "Doležílek",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 33,
-          "povolani": "realitní makléř",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 12,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-13",
-          "slug": "svejda-miroslav",
-          "jmeno": "Miroslav",
-          "prijmeni": "Švejda",
-          "titulPred": "Ing.",
-          "titulZa": "M.A.",
-          "vek": 68,
-          "povolani": "ministerský rada",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "STAN",
-          "poradi": 13,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-14",
-          "slug": "morcus-stanislav",
-          "jmeno": "Stanislav",
-          "prijmeni": "Morčuš",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 62,
-          "povolani": "zpěvák, hlasový vedoucí sboru Státní opery Praha",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 14,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-15",
-          "slug": "indracek-marek",
-          "jmeno": "Marek",
-          "prijmeni": "Indráček",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 28,
-          "povolani": "administrativní pracovník",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 15,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-16",
-          "slug": "andelek-michal",
-          "jmeno": "Michal",
-          "prijmeni": "Andelek",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 39,
-          "povolani": "projektový manažer pro strategické projekty",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "STAN",
-          "poradi": 16,
-          "zastupitelstvo": "praha-zbraslav"
-        },
-        {
-          "id": "539864-502-17",
-          "slug": "kobylkova-dagmar",
-          "jmeno": "Dagmar",
-          "prijmeni": "Kobylková",
-          "titulPred": "PaedDr.",
-          "titulZa": "",
-          "vek": 73,
-          "povolani": "ředitelka mateřské školy",
-          "bydliste": "Praha-Zbraslav",
-          "navrhujiciStrana": "ODS",
-          "politickaPrislusnost": "ODS",
-          "poradi": 17,
-          "zastupitelstvo": "praha-zbraslav"
-        }
-      ]
-    },
-    {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "1920",
       "nazev": "100pro Zbraslav",
       "zkratka": "ZelPirPHASOBĚNK",
@@ -564,7 +294,7 @@
       ],
       "kandidati": [
         {
-          "id": "539864-503-1",
+          "id": "539864-2-1",
           "slug": "gaspar-filip",
           "jmeno": "Filip",
           "prijmeni": "Gaspar",
@@ -579,7 +309,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-2",
+          "id": "539864-2-2",
           "slug": "vejvodova-zuzana",
           "jmeno": "Zuzana",
           "prijmeni": "Vejvodová",
@@ -594,7 +324,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-3",
+          "id": "539864-2-3",
           "slug": "murin-michal",
           "jmeno": "Michal",
           "prijmeni": "Murín",
@@ -609,7 +339,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-4",
+          "id": "539864-2-4",
           "slug": "hrda-stepanka",
           "jmeno": "Štěpánka",
           "prijmeni": "Hrdá",
@@ -624,7 +354,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-5",
+          "id": "539864-2-5",
           "slug": "slocar-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Šlocar",
@@ -639,7 +369,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-6",
+          "id": "539864-2-6",
           "slug": "petraskova-jana",
           "jmeno": "Jana",
           "prijmeni": "Petrášková",
@@ -654,7 +384,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-7",
+          "id": "539864-2-7",
           "slug": "chovanec-michal",
           "jmeno": "Michal",
           "prijmeni": "Chovanec",
@@ -669,7 +399,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-8",
+          "id": "539864-2-8",
           "slug": "rejnova-rubkova-eliska",
           "jmeno": "Eliška",
           "prijmeni": "Rejnová Rubková",
@@ -684,7 +414,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-9",
+          "id": "539864-2-9",
           "slug": "kulich-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Kulich",
@@ -699,7 +429,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-10",
+          "id": "539864-2-10",
           "slug": "michalkova-marcela",
           "jmeno": "Marcela",
           "prijmeni": "Michálková",
@@ -714,7 +444,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-11",
+          "id": "539864-2-11",
           "slug": "svestka-martin",
           "jmeno": "Martin",
           "prijmeni": "Švestka",
@@ -729,7 +459,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-12",
+          "id": "539864-2-12",
           "slug": "hlubinkova-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Hlubinková",
@@ -744,7 +474,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-13",
+          "id": "539864-2-13",
           "slug": "slocar-martin",
           "jmeno": "Martin",
           "prijmeni": "Šlocar",
@@ -759,7 +489,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-14",
+          "id": "539864-2-14",
           "slug": "stankova-denisa",
           "jmeno": "Denisa",
           "prijmeni": "Staňková",
@@ -774,7 +504,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-15",
+          "id": "539864-2-15",
           "slug": "hamplova-zuzana",
           "jmeno": "Zuzana",
           "prijmeni": "Hamplová",
@@ -789,7 +519,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-16",
+          "id": "539864-2-16",
           "slug": "osvaldova-bozena",
           "jmeno": "Božena",
           "prijmeni": "Osvaldová",
@@ -804,7 +534,7 @@
           "zastupitelstvo": "praha-zbraslav"
         },
         {
-          "id": "539864-503-17",
+          "id": "539864-2-17",
           "slug": "samarkova-janetta",
           "jmeno": "Janetta",
           "prijmeni": "Šamárková",
@@ -815,6 +545,276 @@
           "bydliste": "Praha-Zbraslav",
           "navrhujiciStrana": "NK",
           "politickaPrislusnost": "",
+          "poradi": 17,
+          "zastupitelstvo": "praha-zbraslav"
+        }
+      ]
+    },
+    {
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
+      "kodStrany": "1323",
+      "nazev": "ODS a STAN",
+      "zkratka": "ODS+STAN",
+      "slug": "ods-a-stan",
+      "slozeni": [
+        "053",
+        "166"
+      ],
+      "kandidati": [
+        {
+          "id": "539864-3-1",
+          "slug": "medvid-martin",
+          "jmeno": "Martin",
+          "prijmeni": "Medvíď",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 28,
+          "povolani": "PR konzultant pro oblast dopravy, předseda MS ODS Zbraslav",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 1,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-2",
+          "slug": "anfilov-adam",
+          "jmeno": "Adam",
+          "prijmeni": "Anfilov",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 27,
+          "povolani": "provozní kavárny, student",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 2,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-3",
+          "slug": "novotny-tomas",
+          "jmeno": "Tomáš",
+          "prijmeni": "Novotný",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 42,
+          "povolani": "předseda odborové organizace v DPP, zastupitel MČ Praha-Zbraslav",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
+          "poradi": 3,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-4",
+          "slug": "kouba-jiri",
+          "jmeno": "Jiří",
+          "prijmeni": "Kouba",
+          "titulPred": "Ing. arch.",
+          "titulZa": "",
+          "vek": 26,
+          "povolani": "architekt, projektový manažer",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 4,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-5",
+          "slug": "nedoma-karel",
+          "jmeno": "Karel",
+          "prijmeni": "Nedoma",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 71,
+          "povolani": "ředitel ZUŠ, zastupitel MČ Praha-Zbraslav",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 5,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-6",
+          "slug": "macku-david",
+          "jmeno": "David",
+          "prijmeni": "Macků",
+          "titulPred": "MUDr. Ing.",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "lékař, etický konzultant, zastupitel MČ Praha-Zbraslav",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 6,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-7",
+          "slug": "kuchar-daniel",
+          "jmeno": "Daniel",
+          "prijmeni": "Kuchař",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 19,
+          "povolani": "lektor primární prevence, student",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
+          "poradi": 7,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-8",
+          "slug": "horn-filip",
+          "jmeno": "Filip",
+          "prijmeni": "Horn",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 28,
+          "povolani": "OSVČ v oblasti kultury",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 8,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-9",
+          "slug": "hrdy-daniel",
+          "jmeno": "Daniel",
+          "prijmeni": "Hrdý",
+          "titulPred": "Bc.",
+          "titulZa": "",
+          "vek": 27,
+          "povolani": "datový konzultant, student",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 9,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-10",
+          "slug": "dolezilkova-nedomova-karolina",
+          "jmeno": "Karolina",
+          "prijmeni": "Doležílková Nedomová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 39,
+          "povolani": "učitelka",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 10,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-11",
+          "slug": "zakova-veronika-2",
+          "jmeno": "Veronika",
+          "prijmeni": "Žáková",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 43,
+          "povolani": "právník",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "",
+          "poradi": 11,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-12",
+          "slug": "dolezilek-jakub",
+          "jmeno": "Jakub",
+          "prijmeni": "Doležílek",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 33,
+          "povolani": "realitní makléř",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 12,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-13",
+          "slug": "svejda-miroslav",
+          "jmeno": "Miroslav",
+          "prijmeni": "Švejda",
+          "titulPred": "Ing.",
+          "titulZa": "M.A.",
+          "vek": 68,
+          "povolani": "ministerský rada",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
+          "poradi": 13,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-14",
+          "slug": "morcus-stanislav",
+          "jmeno": "Stanislav",
+          "prijmeni": "Morčuš",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 62,
+          "povolani": "zpěvák, hlasový vedoucí sboru Státní opery Praha",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 14,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-15",
+          "slug": "indracek-marek",
+          "jmeno": "Marek",
+          "prijmeni": "Indráček",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 28,
+          "povolani": "administrativní pracovník",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
+          "poradi": 15,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-16",
+          "slug": "andelek-michal",
+          "jmeno": "Michal",
+          "prijmeni": "Andelek",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 39,
+          "povolani": "projektový manažer pro strategické projekty",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
+          "poradi": 16,
+          "zastupitelstvo": "praha-zbraslav"
+        },
+        {
+          "id": "539864-3-17",
+          "slug": "kobylkova-dagmar",
+          "jmeno": "Dagmar",
+          "prijmeni": "Kobylková",
+          "titulPred": "PaedDr.",
+          "titulZa": "",
+          "vek": 73,
+          "povolani": "ředitelka mateřské školy",
+          "bydliste": "Praha-Zbraslav",
+          "navrhujiciStrana": "ODS",
+          "politickaPrislusnost": "ODS",
           "poradi": 17,
           "zastupitelstvo": "praha-zbraslav"
         }

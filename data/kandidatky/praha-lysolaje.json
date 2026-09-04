@@ -6,12 +6,12 @@
     "mandaty": 9
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "470",
       "nazev": "NAŠE LYSOLAJE S PODPOROU STAROSTŮ",
       "zkratka": "STAN+NK",
@@ -22,7 +22,7 @@
       ],
       "kandidati": [
         {
-          "id": "547140-501-1",
+          "id": "547140-1-1",
           "slug": "vyskocil-matej",
           "jmeno": "Matěj",
           "prijmeni": "Vyskočil",
@@ -37,7 +37,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-2",
+          "id": "547140-1-2",
           "slug": "simon-milos",
           "jmeno": "Miloš",
           "prijmeni": "Šimon",
@@ -52,7 +52,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-3",
+          "id": "547140-1-3",
           "slug": "valkova-marie",
           "jmeno": "Marie",
           "prijmeni": "Válková",
@@ -67,7 +67,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-4",
+          "id": "547140-1-4",
           "slug": "kotal-jandova-martina",
           "jmeno": "Martina",
           "prijmeni": "Kotál Jandová",
@@ -82,7 +82,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-5",
+          "id": "547140-1-5",
           "slug": "matyas-vojtech",
           "jmeno": "Vojtěch",
           "prijmeni": "Matyáš",
@@ -97,7 +97,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-6",
+          "id": "547140-1-6",
           "slug": "spenikova-zuzana",
           "jmeno": "Zuzana",
           "prijmeni": "Špeniková",
@@ -112,7 +112,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-7",
+          "id": "547140-1-7",
           "slug": "zavadilova-alena",
           "jmeno": "Alena",
           "prijmeni": "Zavadilová",
@@ -127,7 +127,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-8",
+          "id": "547140-1-8",
           "slug": "kalinova-dominika",
           "jmeno": "Dominika",
           "prijmeni": "Kalinová",
@@ -142,7 +142,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-501-9",
+          "id": "547140-1-9",
           "slug": "janovec-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Janovec",
@@ -159,9 +159,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "901",
       "nazev": "NEZÁVISLÉ – LYSOLAJE",
       "zkratka": "SNK",
@@ -171,7 +171,7 @@
       ],
       "kandidati": [
         {
-          "id": "547140-502-1",
+          "id": "547140-2-1",
           "slug": "cisarova-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Císařová",
@@ -186,7 +186,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-2",
+          "id": "547140-2-2",
           "slug": "gulkova-dominika",
           "jmeno": "Dominika",
           "prijmeni": "Gulková",
@@ -201,7 +201,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-3",
+          "id": "547140-2-3",
           "slug": "pravda-jan",
           "jmeno": "Jan",
           "prijmeni": "Pravda",
@@ -216,7 +216,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-4",
+          "id": "547140-2-4",
           "slug": "zapletal-lukas",
           "jmeno": "Lukáš",
           "prijmeni": "Zapletal",
@@ -231,7 +231,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-5",
+          "id": "547140-2-5",
           "slug": "stepanova-vendula",
           "jmeno": "Vendula",
           "prijmeni": "Štěpánová",
@@ -246,7 +246,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-6",
+          "id": "547140-2-6",
           "slug": "eignerova-martina",
           "jmeno": "Martina",
           "prijmeni": "Eignerová",
@@ -261,7 +261,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-7",
+          "id": "547140-2-7",
           "slug": "peprnicek-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Peprníček",
@@ -276,7 +276,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-8",
+          "id": "547140-2-8",
           "slug": "blazek-milan",
           "jmeno": "Milan",
           "prijmeni": "Blažek",
@@ -291,7 +291,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-502-9",
+          "id": "547140-2-9",
           "slug": "mensikova-natalie",
           "jmeno": "Natálie",
           "prijmeni": "Menšíková",
@@ -308,9 +308,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "687",
       "nazev": "TOP 09 a ODS pro Lysolaje",
       "zkratka": "ODS+TOP 09",
@@ -321,7 +321,7 @@
       ],
       "kandidati": [
         {
-          "id": "547140-503-1",
+          "id": "547140-3-1",
           "slug": "kucera-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Kučera",
@@ -336,7 +336,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-2",
+          "id": "547140-3-2",
           "slug": "lorman-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Lorman",
@@ -351,7 +351,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-3",
+          "id": "547140-3-3",
           "slug": "sitar-martin",
           "jmeno": "Martin",
           "prijmeni": "Sitár",
@@ -366,7 +366,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-4",
+          "id": "547140-3-4",
           "slug": "zahradnikova-adela",
           "jmeno": "Adéla",
           "prijmeni": "Zahradníková",
@@ -381,7 +381,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-5",
+          "id": "547140-3-5",
           "slug": "danko-petra",
           "jmeno": "Petra",
           "prijmeni": "Daňko",
@@ -396,7 +396,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-6",
+          "id": "547140-3-6",
           "slug": "huleja-radim",
           "jmeno": "Radim",
           "prijmeni": "Huleja",
@@ -411,7 +411,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-7",
+          "id": "547140-3-7",
           "slug": "hrbek-kubatova-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Hrbek Kubátová",
@@ -426,7 +426,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-8",
+          "id": "547140-3-8",
           "slug": "medvedova-libuse",
           "jmeno": "Libuše",
           "prijmeni": "Medveďová",
@@ -441,7 +441,7 @@
           "zastupitelstvo": "praha-lysolaje"
         },
         {
-          "id": "547140-503-9",
+          "id": "547140-3-9",
           "slug": "prochazka-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Procházka",

@@ -6,12 +6,252 @@
     "mandaty": 15
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
+      "kodStrany": "480",
+      "nazev": "TOP 09 SPOLU PRO KUNRATICE",
+      "zkratka": "TOP 09+NK",
+      "slug": "top-09-spolu-pro-kunratice",
+      "slozeni": [
+        "080",
+        "721"
+      ],
+      "kandidati": [
+        {
+          "id": "547042-1-1",
+          "slug": "fila-karel",
+          "jmeno": "Karel",
+          "prijmeni": "Fíla",
+          "titulPred": "Ing.",
+          "titulZa": "MSc.",
+          "vek": 81,
+          "povolani": "podnikatel",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 1,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-2",
+          "slug": "klimova-katerina",
+          "jmeno": "Kateřina",
+          "prijmeni": "Klímová",
+          "titulPred": "MUDr.",
+          "titulZa": "MBA",
+          "vek": 62,
+          "povolani": "lékařka",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 2,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-3",
+          "slug": "horky-vladimir",
+          "jmeno": "Vladimír",
+          "prijmeni": "Horký",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "podnikatel",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 3,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-4",
+          "slug": "behunkova-cecakova-anezka",
+          "jmeno": "Anežka",
+          "prijmeni": "Běhunková Čečáková",
+          "titulPred": "Bc.",
+          "titulZa": "",
+          "vek": 30,
+          "povolani": "lektor krizové připravenosti",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 4,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-5",
+          "slug": "pestova-jana",
+          "jmeno": "Jana",
+          "prijmeni": "Peštová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 74,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 5,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-6",
+          "slug": "holec-jakub",
+          "jmeno": "Jakub",
+          "prijmeni": "Holec",
+          "titulPred": "Mgr.",
+          "titulZa": "Ph.D.",
+          "vek": 42,
+          "povolani": "učitel na ZŠ a VŠ",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 6,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-7",
+          "slug": "jindrakova-jana",
+          "jmeno": "Jana",
+          "prijmeni": "Jindráková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 82,
+          "povolani": "důchodce",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "TOP 09",
+          "politickaPrislusnost": "TOP 09",
+          "poradi": 7,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-8",
+          "slug": "davisova-isabela",
+          "jmeno": "Isabela",
+          "prijmeni": "Davisová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 60,
+          "povolani": "manažerka",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 8,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-9",
+          "slug": "sosnova-radka",
+          "jmeno": "Radka",
+          "prijmeni": "Sosnová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 53,
+          "povolani": "podnikatelka",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 9,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-10",
+          "slug": "rosik-lubomir",
+          "jmeno": "Ľubomír",
+          "prijmeni": "Rosík",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 69,
+          "povolani": "podnikatel",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 10,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-11",
+          "slug": "sosnova-kristyna",
+          "jmeno": "Kristýna",
+          "prijmeni": "Sosnová",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 32,
+          "povolani": "mateřská dovolená",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 11,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-12",
+          "slug": "jindrak-pavel",
+          "jmeno": "Pavel",
+          "prijmeni": "Jindrák",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 54,
+          "povolani": "OSVČ",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 12,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-13",
+          "slug": "zindulka-jiri",
+          "jmeno": "Jiří",
+          "prijmeni": "Zindulka",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 60,
+          "povolani": "jachtař",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 13,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-14",
+          "slug": "berger-tomas",
+          "jmeno": "Tomáš",
+          "prijmeni": "Berger",
+          "titulPred": "akad. mal.",
+          "titulZa": "",
+          "vek": 64,
+          "povolani": "restaurátor",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 14,
+          "zastupitelstvo": "praha-kunratice"
+        },
+        {
+          "id": "547042-1-15",
+          "slug": "zofka-zdenek",
+          "jmeno": "Zdeněk",
+          "prijmeni": "Žofka",
+          "titulPred": "JUDr.",
+          "titulZa": "",
+          "vek": 69,
+          "povolani": "tenisový trenér",
+          "bydliste": "Praha-Kunratice",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 15,
+          "zastupitelstvo": "praha-kunratice"
+        }
+      ]
+    },
+    {
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "768",
       "nazev": "ANO 2011",
       "zkratka": "ANO",
@@ -21,7 +261,7 @@
       ],
       "kandidati": [
         {
-          "id": "547042-501-1",
+          "id": "547042-2-1",
           "slug": "salansky-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Šalanský",
@@ -36,7 +276,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-2",
+          "id": "547042-2-2",
           "slug": "mikulova-ivana",
           "jmeno": "Ivana",
           "prijmeni": "Mikulová",
@@ -51,7 +291,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-3",
+          "id": "547042-2-3",
           "slug": "pubrdle-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Pubrdle",
@@ -66,7 +306,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-4",
+          "id": "547042-2-4",
           "slug": "hrebik-filip",
           "jmeno": "Filip",
           "prijmeni": "Hřebík",
@@ -81,7 +321,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-5",
+          "id": "547042-2-5",
           "slug": "chytil-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Chytil",
@@ -96,7 +336,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-6",
+          "id": "547042-2-6",
           "slug": "slamova-monika",
           "jmeno": "Monika",
           "prijmeni": "Slámová",
@@ -111,7 +351,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-7",
+          "id": "547042-2-7",
           "slug": "duskova-silvie",
           "jmeno": "Silvie",
           "prijmeni": "Dušková",
@@ -126,7 +366,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-8",
+          "id": "547042-2-8",
           "slug": "hanakova-barbora",
           "jmeno": "Barbora",
           "prijmeni": "Hanáková",
@@ -141,7 +381,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-9",
+          "id": "547042-2-9",
           "slug": "boskova-ivana",
           "jmeno": "Ivana",
           "prijmeni": "Bošková",
@@ -156,7 +396,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-10",
+          "id": "547042-2-10",
           "slug": "vaneckova-yvette",
           "jmeno": "Yvette",
           "prijmeni": "Vaněčková",
@@ -171,7 +411,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-11",
+          "id": "547042-2-11",
           "slug": "pubrdle-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Pubrdle",
@@ -186,7 +426,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-12",
+          "id": "547042-2-12",
           "slug": "tuma-adam",
           "jmeno": "Adam",
           "prijmeni": "Tůma",
@@ -201,7 +441,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-13",
+          "id": "547042-2-13",
           "slug": "bosek-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Bošek",
@@ -216,7 +456,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-14",
+          "id": "547042-2-14",
           "slug": "kalinova-jindriska",
           "jmeno": "Jindřiška",
           "prijmeni": "Kalinová",
@@ -231,7 +471,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-501-15",
+          "id": "547042-2-15",
           "slug": "jie-jin-zhong",
           "jmeno": "Zhong",
           "prijmeni": "Jie Jin",
@@ -248,9 +488,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "1341",
       "nazev": "Hnutí Praha-Kunratice \"HPK\" v koalici STAN",
       "zkratka": "STAN+„HPK“",
@@ -261,7 +501,7 @@
       ],
       "kandidati": [
         {
-          "id": "547042-502-1",
+          "id": "547042-3-1",
           "slug": "alincova-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Alinčová",
@@ -276,7 +516,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-2",
+          "id": "547042-3-2",
           "slug": "hyza-ivan",
           "jmeno": "Ivan",
           "prijmeni": "Hýža",
@@ -291,7 +531,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-3",
+          "id": "547042-3-3",
           "slug": "novacek-ondrej-2",
           "jmeno": "Ondřej",
           "prijmeni": "Nováček",
@@ -306,7 +546,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-4",
+          "id": "547042-3-4",
           "slug": "hilmarova-petra",
           "jmeno": "Petra",
           "prijmeni": "Hilmarová",
@@ -321,7 +561,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-5",
+          "id": "547042-3-5",
           "slug": "matousek-milan",
           "jmeno": "Milan",
           "prijmeni": "Matoušek",
@@ -336,7 +576,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-6",
+          "id": "547042-3-6",
           "slug": "mozola-petr",
           "jmeno": "Petr",
           "prijmeni": "Mozola",
@@ -351,7 +591,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-7",
+          "id": "547042-3-7",
           "slug": "dolezilova-veronika",
           "jmeno": "Veronika",
           "prijmeni": "Doležilová",
@@ -366,7 +606,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-8",
+          "id": "547042-3-8",
           "slug": "kolomicenkova-nataliya",
           "jmeno": "Nataliya",
           "prijmeni": "Kolomičenková",
@@ -381,7 +621,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-9",
+          "id": "547042-3-9",
           "slug": "cumpelik-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Čumpelík",
@@ -396,7 +636,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-10",
+          "id": "547042-3-10",
           "slug": "fork-simon",
           "jmeno": "Šimon",
           "prijmeni": "Fork",
@@ -411,7 +651,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-11",
+          "id": "547042-3-11",
           "slug": "svobodova-jana",
           "jmeno": "Jana",
           "prijmeni": "Svobodová",
@@ -426,7 +666,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-12",
+          "id": "547042-3-12",
           "slug": "soukup-jan",
           "jmeno": "Jan",
           "prijmeni": "Soukup",
@@ -441,7 +681,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-13",
+          "id": "547042-3-13",
           "slug": "zavodny-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Závodný",
@@ -456,7 +696,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-14",
+          "id": "547042-3-14",
           "slug": "carska-jana",
           "jmeno": "Jana",
           "prijmeni": "Čarská",
@@ -471,7 +711,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-502-15",
+          "id": "547042-3-15",
           "slug": "votava-borek",
           "jmeno": "Bořek",
           "prijmeni": "Votava",
@@ -488,9 +728,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 4,
+      "vylosovano": true,
+      "poradiVDatech": 4,
       "kodStrany": "1373",
       "nazev": "Kunratice sobě",
       "zkratka": "PRAHA SOBĚ+NK",
@@ -501,7 +741,7 @@
       ],
       "kandidati": [
         {
-          "id": "547042-503-1",
+          "id": "547042-4-1",
           "slug": "linkova-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Linková",
@@ -516,7 +756,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-2",
+          "id": "547042-4-2",
           "slug": "vizek-adam",
           "jmeno": "Adam",
           "prijmeni": "Vízek",
@@ -531,7 +771,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-3",
+          "id": "547042-4-3",
           "slug": "marsalkova-jana",
           "jmeno": "Jana",
           "prijmeni": "Maršálková",
@@ -546,7 +786,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-4",
+          "id": "547042-4-4",
           "slug": "svobodova-eva",
           "jmeno": "Eva",
           "prijmeni": "Svobodová",
@@ -561,7 +801,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-5",
+          "id": "547042-4-5",
           "slug": "zebrakova-petra",
           "jmeno": "Petra",
           "prijmeni": "Žebráková",
@@ -576,7 +816,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-6",
+          "id": "547042-4-6",
           "slug": "nurnbergerova-veronika",
           "jmeno": "Veronika",
           "prijmeni": "Nürnbergerová",
@@ -591,7 +831,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-7",
+          "id": "547042-4-7",
           "slug": "novotny-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Novotný",
@@ -606,7 +846,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-8",
+          "id": "547042-4-8",
           "slug": "nemcova-hana",
           "jmeno": "Hana",
           "prijmeni": "Němcová",
@@ -621,7 +861,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-9",
+          "id": "547042-4-9",
           "slug": "lachman-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Lachman",
@@ -636,7 +876,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-10",
+          "id": "547042-4-10",
           "slug": "kourilova-michaela",
           "jmeno": "Michaela",
           "prijmeni": "Kouřilová",
@@ -651,7 +891,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-11",
+          "id": "547042-4-11",
           "slug": "benes-petr-3",
           "jmeno": "Petr",
           "prijmeni": "Beneš",
@@ -666,7 +906,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-12",
+          "id": "547042-4-12",
           "slug": "svoboda-matous",
           "jmeno": "Matouš",
           "prijmeni": "Svoboda",
@@ -681,7 +921,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-13",
+          "id": "547042-4-13",
           "slug": "masek-zdenek",
           "jmeno": "Zdeněk",
           "prijmeni": "Mašek",
@@ -696,7 +936,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-14",
+          "id": "547042-4-14",
           "slug": "linova-dita",
           "jmeno": "Dita",
           "prijmeni": "Línová",
@@ -711,7 +951,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-503-15",
+          "id": "547042-4-15",
           "slug": "vankova-zdenka",
           "jmeno": "Zdenka",
           "prijmeni": "Vaňková",
@@ -728,9 +968,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 504,
+      "cislo": 5,
+      "vylosovano": true,
+      "poradiVDatech": 5,
       "kodStrany": "210",
       "nazev": "ODS a Přátelé, s podporou KDU-ČSL",
       "zkratka": "KDU-ČSL+ODS",
@@ -741,7 +981,7 @@
       ],
       "kandidati": [
         {
-          "id": "547042-504-1",
+          "id": "547042-5-1",
           "slug": "klima-karel-3",
           "jmeno": "Karel",
           "prijmeni": "Klíma",
@@ -756,7 +996,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-2",
+          "id": "547042-5-2",
           "slug": "matejkova-daniela",
           "jmeno": "Daniela",
           "prijmeni": "Matějková",
@@ -771,7 +1011,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-3",
+          "id": "547042-5-3",
           "slug": "klecek-libor",
           "jmeno": "Libor",
           "prijmeni": "Kleček",
@@ -786,7 +1026,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-4",
+          "id": "547042-5-4",
           "slug": "kubova-denisa",
           "jmeno": "Denisa",
           "prijmeni": "Kubová",
@@ -801,7 +1041,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-5",
+          "id": "547042-5-5",
           "slug": "hylena-ladislav",
           "jmeno": "Ladislav",
           "prijmeni": "Hylena",
@@ -816,7 +1056,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-6",
+          "id": "547042-5-6",
           "slug": "cihala-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Číhala",
@@ -831,7 +1071,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-7",
+          "id": "547042-5-7",
           "slug": "kleckova-radka",
           "jmeno": "Radka",
           "prijmeni": "Klečková",
@@ -846,7 +1086,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-8",
+          "id": "547042-5-8",
           "slug": "mazalek-petr",
           "jmeno": "Petr",
           "prijmeni": "Mazálek",
@@ -861,7 +1101,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-9",
+          "id": "547042-5-9",
           "slug": "zelena-lenka",
           "jmeno": "Lenka",
           "prijmeni": "Zelená",
@@ -876,7 +1116,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-10",
+          "id": "547042-5-10",
           "slug": "cervinka-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Červinka",
@@ -891,7 +1131,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-11",
+          "id": "547042-5-11",
           "slug": "kusak-vlastislav",
           "jmeno": "Vlastislav",
           "prijmeni": "Kusák",
@@ -906,7 +1146,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-12",
+          "id": "547042-5-12",
           "slug": "cihala-valentyn",
           "jmeno": "Valentýn",
           "prijmeni": "Číhala",
@@ -921,7 +1161,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-13",
+          "id": "547042-5-13",
           "slug": "sladek-ivan",
           "jmeno": "Ivan",
           "prijmeni": "Sládek",
@@ -936,7 +1176,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-14",
+          "id": "547042-5-14",
           "slug": "polak-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Polák",
@@ -951,7 +1191,7 @@
           "zastupitelstvo": "praha-kunratice"
         },
         {
-          "id": "547042-504-15",
+          "id": "547042-5-15",
           "slug": "grodl-vojtech",
           "jmeno": "Vojtěch",
           "prijmeni": "Grödl",
@@ -962,246 +1202,6 @@
           "bydliste": "Praha-Kunratice",
           "navrhujiciStrana": "ODS",
           "politickaPrislusnost": "ODS",
-          "poradi": 15,
-          "zastupitelstvo": "praha-kunratice"
-        }
-      ]
-    },
-    {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 505,
-      "kodStrany": "480",
-      "nazev": "TOP 09 SPOLU PRO KUNRATICE",
-      "zkratka": "TOP 09+NK",
-      "slug": "top-09-spolu-pro-kunratice",
-      "slozeni": [
-        "080",
-        "721"
-      ],
-      "kandidati": [
-        {
-          "id": "547042-505-1",
-          "slug": "fila-karel",
-          "jmeno": "Karel",
-          "prijmeni": "Fíla",
-          "titulPred": "Ing.",
-          "titulZa": "MSc.",
-          "vek": 81,
-          "povolani": "podnikatel",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 1,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-2",
-          "slug": "klimova-katerina",
-          "jmeno": "Kateřina",
-          "prijmeni": "Klímová",
-          "titulPred": "MUDr.",
-          "titulZa": "MBA",
-          "vek": 62,
-          "povolani": "lékařka",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 2,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-3",
-          "slug": "horky-vladimir",
-          "jmeno": "Vladimír",
-          "prijmeni": "Horký",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 56,
-          "povolani": "podnikatel",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 3,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-4",
-          "slug": "behunkova-cecakova-anezka",
-          "jmeno": "Anežka",
-          "prijmeni": "Běhunková Čečáková",
-          "titulPred": "Bc.",
-          "titulZa": "",
-          "vek": 30,
-          "povolani": "lektor krizové připravenosti",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 4,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-5",
-          "slug": "pestova-jana",
-          "jmeno": "Jana",
-          "prijmeni": "Peštová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 74,
-          "povolani": "důchodce",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 5,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-6",
-          "slug": "holec-jakub",
-          "jmeno": "Jakub",
-          "prijmeni": "Holec",
-          "titulPred": "Mgr.",
-          "titulZa": "Ph.D.",
-          "vek": 42,
-          "povolani": "učitel na ZŠ a VŠ",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 6,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-7",
-          "slug": "jindrakova-jana",
-          "jmeno": "Jana",
-          "prijmeni": "Jindráková",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 82,
-          "povolani": "důchodce",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "TOP 09",
-          "politickaPrislusnost": "TOP 09",
-          "poradi": 7,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-8",
-          "slug": "davisova-isabela",
-          "jmeno": "Isabela",
-          "prijmeni": "Davisová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 60,
-          "povolani": "manažerka",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 8,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-9",
-          "slug": "sosnova-radka",
-          "jmeno": "Radka",
-          "prijmeni": "Sosnová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 53,
-          "povolani": "podnikatelka",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 9,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-10",
-          "slug": "rosik-lubomir",
-          "jmeno": "Ľubomír",
-          "prijmeni": "Rosík",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 69,
-          "povolani": "podnikatel",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 10,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-11",
-          "slug": "sosnova-kristyna",
-          "jmeno": "Kristýna",
-          "prijmeni": "Sosnová",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 32,
-          "povolani": "mateřská dovolená",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 11,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-12",
-          "slug": "jindrak-pavel",
-          "jmeno": "Pavel",
-          "prijmeni": "Jindrák",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 54,
-          "povolani": "OSVČ",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 12,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-13",
-          "slug": "zindulka-jiri",
-          "jmeno": "Jiří",
-          "prijmeni": "Zindulka",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 60,
-          "povolani": "jachtař",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 13,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-14",
-          "slug": "berger-tomas",
-          "jmeno": "Tomáš",
-          "prijmeni": "Berger",
-          "titulPred": "akad. mal.",
-          "titulZa": "",
-          "vek": 64,
-          "povolani": "restaurátor",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 14,
-          "zastupitelstvo": "praha-kunratice"
-        },
-        {
-          "id": "547042-505-15",
-          "slug": "zofka-zdenek",
-          "jmeno": "Zdeněk",
-          "prijmeni": "Žofka",
-          "titulPred": "JUDr.",
-          "titulZa": "",
-          "vek": 69,
-          "povolani": "tenisový trenér",
-          "bydliste": "Praha-Kunratice",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
           "poradi": 15,
           "zastupitelstvo": "praha-kunratice"
         }

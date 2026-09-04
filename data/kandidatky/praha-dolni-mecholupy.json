@@ -6,252 +6,12 @@
     "mandaty": 15
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
-      "kodStrany": "470",
-      "nazev": "Měcholupy Společně – s podporou Starostů",
-      "zkratka": "STAN+NK",
-      "slug": "mecholupy-spolecne-s-podporou-starostu",
-      "slozeni": [
-        "080",
-        "166"
-      ],
-      "kandidati": [
-        {
-          "id": "547379-501-1",
-          "slug": "dolakova-jana",
-          "jmeno": "Jana",
-          "prijmeni": "Doláková",
-          "titulPred": "Bc.",
-          "titulZa": "",
-          "vek": 60,
-          "povolani": "místostarostka MČ Praha - Dolní Měcholupy pro školství, vedoucí komunitního centra",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "STAN",
-          "politickaPrislusnost": "STAN",
-          "poradi": 1,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-2",
-          "slug": "tyburec-miroslav",
-          "jmeno": "Miroslav",
-          "prijmeni": "Tyburec",
-          "titulPred": "Ing.",
-          "titulZa": "",
-          "vek": 60,
-          "povolani": "manažer v oblasti obchodu, financí a práva",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 2,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-3",
-          "slug": "mracek-ondrej",
-          "jmeno": "Ondřej",
-          "prijmeni": "Mráček",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 36,
-          "povolani": "OSVČ - nákupčí pro mezinárodní obchod, člen výboru SKDM, fotbalista týmu",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 3,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-4",
-          "slug": "brozkova-renata",
-          "jmeno": "Renáta",
-          "prijmeni": "Brožková",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 59,
-          "povolani": "státní zaměstnanec, digitalizace úřadů a služeb",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 4,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-5",
-          "slug": "fort-ferdinand",
-          "jmeno": "Ferdinand",
-          "prijmeni": "Fořt",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 28,
-          "povolani": "specialista na food servis, organizátor komunitních akcí",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 5,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-6",
-          "slug": "krotilova-miroslava",
-          "jmeno": "Miroslava",
-          "prijmeni": "Krotilová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 56,
-          "povolani": "administrativní práce v rodinné firmě",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 6,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-7",
-          "slug": "vala-lukas",
-          "jmeno": "Lukáš",
-          "prijmeni": "Vala",
-          "titulPred": "Mgr.",
-          "titulZa": "",
-          "vek": 37,
-          "povolani": "obchodní ředitel společnosti pro smart technologie, trenér přípravky SKDM, moderátor fotbalové Slavie",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 7,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-8",
-          "slug": "hoffmannova-anna",
-          "jmeno": "Anna",
-          "prijmeni": "Hoffmannová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 47,
-          "povolani": "jednatelka společnosti pro systémy požárně bezpečnostních zařízení, účetní, předsedkyně SVJ",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 8,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-9",
-          "slug": "landa-jakub",
-          "jmeno": "Jakub",
-          "prijmeni": "Landa",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 52,
-          "povolani": "manažer expanze maloobchodních prodejen, místopředseda SVJ",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 9,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-10",
-          "slug": "kasparek-jan",
-          "jmeno": "Jan",
-          "prijmeni": "Kašpárek",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 56,
-          "povolani": "obchodní zástupce pro kancelářskou techniku",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 10,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-11",
-          "slug": "blazek-michal",
-          "jmeno": "Michal",
-          "prijmeni": "Blažek",
-          "titulPred": "Bc.",
-          "titulZa": "",
-          "vek": 27,
-          "povolani": "student VŠ Škoda Auto, softwarový architekt, člen Sboru dobrovolných hasičů, trenér",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 11,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-12",
-          "slug": "jandova-pavla",
-          "jmeno": "Pavla",
-          "prijmeni": "Jandová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 37,
-          "povolani": "vedoucí dětských skupin",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 12,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-13",
-          "slug": "chybova-irena",
-          "jmeno": "Irena",
-          "prijmeni": "Chybová",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 50,
-          "povolani": "dokumentaristka ve VFN, předsedkyně družstva garážistů",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 13,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-14",
-          "slug": "frouz-lukas",
-          "jmeno": "Lukáš",
-          "prijmeni": "Frouz",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 44,
-          "povolani": "OSVČ - softwarový developer bankovních systému",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 14,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        },
-        {
-          "id": "547379-501-15",
-          "slug": "sobek-jakub",
-          "jmeno": "Jakub",
-          "prijmeni": "Sobek",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 26,
-          "povolani": "gastronomický specialista",
-          "bydliste": "Praha-Dolní Měcholupy",
-          "navrhujiciStrana": "NK",
-          "politickaPrislusnost": "",
-          "poradi": 15,
-          "zastupitelstvo": "praha-dolni-mecholupy"
-        }
-      ]
-    },
-    {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "53",
       "nazev": "Občanská demokratická strana",
       "zkratka": "ODS",
@@ -261,7 +21,7 @@
       ],
       "kandidati": [
         {
-          "id": "547379-502-1",
+          "id": "547379-1-1",
           "slug": "jindrich-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Jindřich",
@@ -276,7 +36,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-2",
+          "id": "547379-1-2",
           "slug": "vltavsky-petr",
           "jmeno": "Petr",
           "prijmeni": "Vltavský",
@@ -291,7 +51,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-3",
+          "id": "547379-1-3",
           "slug": "vorisek-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Voříšek",
@@ -306,7 +66,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-4",
+          "id": "547379-1-4",
           "slug": "jezil-lubos",
           "jmeno": "Luboš",
           "prijmeni": "Ježil",
@@ -321,7 +81,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-5",
+          "id": "547379-1-5",
           "slug": "brabec-petr",
           "jmeno": "Petr",
           "prijmeni": "Brabec",
@@ -336,7 +96,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-6",
+          "id": "547379-1-6",
           "slug": "jelinek-jakub",
           "jmeno": "Jakub",
           "prijmeni": "Jelínek",
@@ -351,7 +111,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-7",
+          "id": "547379-1-7",
           "slug": "dostal-ludek",
           "jmeno": "Luděk",
           "prijmeni": "Dostál",
@@ -366,7 +126,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-8",
+          "id": "547379-1-8",
           "slug": "savrda-petr",
           "jmeno": "Petr",
           "prijmeni": "Šavrda",
@@ -381,7 +141,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-9",
+          "id": "547379-1-9",
           "slug": "krotil-petr",
           "jmeno": "Petr",
           "prijmeni": "Krotil",
@@ -396,7 +156,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-10",
+          "id": "547379-1-10",
           "slug": "sobek-david",
           "jmeno": "David",
           "prijmeni": "Sobek",
@@ -411,7 +171,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-11",
+          "id": "547379-1-11",
           "slug": "brabec-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Brabec",
@@ -426,7 +186,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-12",
+          "id": "547379-1-12",
           "slug": "machackova-marika",
           "jmeno": "Marika",
           "prijmeni": "Macháčková",
@@ -441,7 +201,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-13",
+          "id": "547379-1-13",
           "slug": "brabcova-eva",
           "jmeno": "Eva",
           "prijmeni": "Brabcová",
@@ -456,7 +216,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-14",
+          "id": "547379-1-14",
           "slug": "vorisek-jiri-2",
           "jmeno": "Jiří",
           "prijmeni": "Voříšek",
@@ -471,7 +231,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-502-15",
+          "id": "547379-1-15",
           "slug": "frolik-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Frolík",
@@ -488,9 +248,249 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
+      "kodStrany": "470",
+      "nazev": "Měcholupy Společně – s podporou Starostů",
+      "zkratka": "STAN+NK",
+      "slug": "mecholupy-spolecne-s-podporou-starostu",
+      "slozeni": [
+        "080",
+        "166"
+      ],
+      "kandidati": [
+        {
+          "id": "547379-2-1",
+          "slug": "dolakova-jana",
+          "jmeno": "Jana",
+          "prijmeni": "Doláková",
+          "titulPred": "Bc.",
+          "titulZa": "",
+          "vek": 60,
+          "povolani": "místostarostka MČ Praha - Dolní Měcholupy pro školství, vedoucí komunitního centra",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "STAN",
+          "politickaPrislusnost": "STAN",
+          "poradi": 1,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-2",
+          "slug": "tyburec-miroslav",
+          "jmeno": "Miroslav",
+          "prijmeni": "Tyburec",
+          "titulPred": "Ing.",
+          "titulZa": "",
+          "vek": 60,
+          "povolani": "manažer v oblasti obchodu, financí a práva",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 2,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-3",
+          "slug": "mracek-ondrej",
+          "jmeno": "Ondřej",
+          "prijmeni": "Mráček",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 36,
+          "povolani": "OSVČ - nákupčí pro mezinárodní obchod, člen výboru SKDM, fotbalista týmu",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 3,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-4",
+          "slug": "brozkova-renata",
+          "jmeno": "Renáta",
+          "prijmeni": "Brožková",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 59,
+          "povolani": "státní zaměstnanec, digitalizace úřadů a služeb",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 4,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-5",
+          "slug": "fort-ferdinand",
+          "jmeno": "Ferdinand",
+          "prijmeni": "Fořt",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 28,
+          "povolani": "specialista na food servis, organizátor komunitních akcí",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 5,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-6",
+          "slug": "krotilova-miroslava",
+          "jmeno": "Miroslava",
+          "prijmeni": "Krotilová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "administrativní práce v rodinné firmě",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 6,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-7",
+          "slug": "vala-lukas",
+          "jmeno": "Lukáš",
+          "prijmeni": "Vala",
+          "titulPred": "Mgr.",
+          "titulZa": "",
+          "vek": 37,
+          "povolani": "obchodní ředitel společnosti pro smart technologie, trenér přípravky SKDM, moderátor fotbalové Slavie",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 7,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-8",
+          "slug": "hoffmannova-anna",
+          "jmeno": "Anna",
+          "prijmeni": "Hoffmannová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 47,
+          "povolani": "jednatelka společnosti pro systémy požárně bezpečnostních zařízení, účetní, předsedkyně SVJ",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 8,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-9",
+          "slug": "landa-jakub",
+          "jmeno": "Jakub",
+          "prijmeni": "Landa",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 52,
+          "povolani": "manažer expanze maloobchodních prodejen, místopředseda SVJ",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 9,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-10",
+          "slug": "kasparek-jan",
+          "jmeno": "Jan",
+          "prijmeni": "Kašpárek",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 56,
+          "povolani": "obchodní zástupce pro kancelářskou techniku",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 10,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-11",
+          "slug": "blazek-michal",
+          "jmeno": "Michal",
+          "prijmeni": "Blažek",
+          "titulPred": "Bc.",
+          "titulZa": "",
+          "vek": 27,
+          "povolani": "student VŠ Škoda Auto, softwarový architekt, člen Sboru dobrovolných hasičů, trenér",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 11,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-12",
+          "slug": "jandova-pavla",
+          "jmeno": "Pavla",
+          "prijmeni": "Jandová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 37,
+          "povolani": "vedoucí dětských skupin",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 12,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-13",
+          "slug": "chybova-irena",
+          "jmeno": "Irena",
+          "prijmeni": "Chybová",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 50,
+          "povolani": "dokumentaristka ve VFN, předsedkyně družstva garážistů",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 13,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-14",
+          "slug": "frouz-lukas",
+          "jmeno": "Lukáš",
+          "prijmeni": "Frouz",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 44,
+          "povolani": "OSVČ - softwarový developer bankovních systému",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 14,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        },
+        {
+          "id": "547379-2-15",
+          "slug": "sobek-jakub",
+          "jmeno": "Jakub",
+          "prijmeni": "Sobek",
+          "titulPred": "",
+          "titulZa": "",
+          "vek": 26,
+          "povolani": "gastronomický specialista",
+          "bydliste": "Praha-Dolní Měcholupy",
+          "navrhujiciStrana": "NK",
+          "politickaPrislusnost": "",
+          "poradi": 15,
+          "zastupitelstvo": "praha-dolni-mecholupy"
+        }
+      ]
+    },
+    {
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "901",
       "nazev": "Sdružení nezávislých kandidátů PRO Měcholupy",
       "zkratka": "SNK",
@@ -500,7 +500,7 @@
       ],
       "kandidati": [
         {
-          "id": "547379-503-1",
+          "id": "547379-3-1",
           "slug": "student-vladimir",
           "jmeno": "Vladimír",
           "prijmeni": "Študent",
@@ -515,7 +515,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-2",
+          "id": "547379-3-2",
           "slug": "motlik-libor",
           "jmeno": "Libor",
           "prijmeni": "Motlík",
@@ -530,7 +530,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-3",
+          "id": "547379-3-3",
           "slug": "svoboda-martin",
           "jmeno": "Martin",
           "prijmeni": "Svoboda",
@@ -545,7 +545,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-4",
+          "id": "547379-3-4",
           "slug": "vojta-libor",
           "jmeno": "Libor",
           "prijmeni": "Vojta",
@@ -560,7 +560,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-5",
+          "id": "547379-3-5",
           "slug": "motlikova-edita",
           "jmeno": "Edita",
           "prijmeni": "Motlíková",
@@ -575,7 +575,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-6",
+          "id": "547379-3-6",
           "slug": "nemeckova-maki",
           "jmeno": "Maki",
           "prijmeni": "Němečková",
@@ -590,7 +590,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-7",
+          "id": "547379-3-7",
           "slug": "stecova-jana",
           "jmeno": "Jana",
           "prijmeni": "Štecová",
@@ -605,7 +605,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-8",
+          "id": "547379-3-8",
           "slug": "hajna-katerina",
           "jmeno": "Kateřina",
           "prijmeni": "Hajná",
@@ -620,7 +620,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-9",
+          "id": "547379-3-9",
           "slug": "karel-michal",
           "jmeno": "Michal",
           "prijmeni": "Karel",
@@ -635,7 +635,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-10",
+          "id": "547379-3-10",
           "slug": "lokvencova-kristyna",
           "jmeno": "Kristýna",
           "prijmeni": "Lokvencová",
@@ -650,7 +650,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-11",
+          "id": "547379-3-11",
           "slug": "ambrosova-andrea",
           "jmeno": "Andrea",
           "prijmeni": "Ambrosová",
@@ -665,7 +665,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-12",
+          "id": "547379-3-12",
           "slug": "stursa-petr",
           "jmeno": "Petr",
           "prijmeni": "Štursa",
@@ -680,7 +680,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-13",
+          "id": "547379-3-13",
           "slug": "albrechtova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Albrechtová",
@@ -695,7 +695,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-14",
+          "id": "547379-3-14",
           "slug": "vich-otakar",
           "jmeno": "Otakar",
           "prijmeni": "Vich",
@@ -710,7 +710,7 @@
           "zastupitelstvo": "praha-dolni-mecholupy"
         },
         {
-          "id": "547379-503-15",
+          "id": "547379-3-15",
           "slug": "ambros-lukas",
           "jmeno": "Lukáš",
           "prijmeni": "Ambros",

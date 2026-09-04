@@ -6,12 +6,12 @@
     "mandaty": 9
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "901",
       "nazev": "\"Sdružení Lochkov 2026\"",
       "zkratka": "SNK",
@@ -21,7 +21,7 @@
       ],
       "kandidati": [
         {
-          "id": "539465-501-1",
+          "id": "539465-1-1",
           "slug": "rendl-jiri",
           "jmeno": "Jiří",
           "prijmeni": "Rendl",
@@ -36,7 +36,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-2",
+          "id": "539465-1-2",
           "slug": "filipova-eva",
           "jmeno": "Eva",
           "prijmeni": "Filipová",
@@ -51,7 +51,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-3",
+          "id": "539465-1-3",
           "slug": "dlouhy-miroslav",
           "jmeno": "Miroslav",
           "prijmeni": "Dlouhý",
@@ -66,7 +66,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-4",
+          "id": "539465-1-4",
           "slug": "kosar-karel",
           "jmeno": "Karel",
           "prijmeni": "Košař",
@@ -81,7 +81,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-5",
+          "id": "539465-1-5",
           "slug": "wais-frantisek",
           "jmeno": "František",
           "prijmeni": "Wais",
@@ -96,7 +96,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-6",
+          "id": "539465-1-6",
           "slug": "filipova-jana",
           "jmeno": "Jana",
           "prijmeni": "Filipová",
@@ -111,7 +111,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-7",
+          "id": "539465-1-7",
           "slug": "panek-karel",
           "jmeno": "Karel",
           "prijmeni": "Pánek",
@@ -126,7 +126,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-8",
+          "id": "539465-1-8",
           "slug": "joudl-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Joudl",
@@ -141,7 +141,7 @@
           "zastupitelstvo": "praha-lochkov"
         },
         {
-          "id": "539465-501-9",
+          "id": "539465-1-9",
           "slug": "smutna-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Smutná",
