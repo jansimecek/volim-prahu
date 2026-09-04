@@ -5,6 +5,9 @@
 # politiky bez vazby na Prahu. Každý výrok prošel nezávislým ověřením proti
 # zdroji; parafráze a výroky jen z titulků jsme vyřadili.
 
+# Datum poslední úplné revize celé sady. Výroky ze zdroje `ctk-koalice`
+# přibyly později a byly ověřeny 4. 9. 2026 — proti textu ČTK i proti jeho
+# převzetí v Pražském deníku, které přineslo tytéž citace.
 overeno: 2026-08-27
 
 zdroje:
@@ -92,6 +95,12 @@ zdroje:
     datum: 2026-02-17
     typ: redakcni
     url: "https://radiozurnal.rozhlas.cz/presvedcujeme-prazany-aby-se-nebali-vystavby-rika-namestek-hlavacek-k-9596551"
+  - id: ctk-koalice
+    medium: "České noviny (ČTK)"
+    nazev: "Pražský lídr Spolu Portlík je skeptický k vládnutí s hnutím ANO"
+    datum: 2026-08-23
+    typ: redakcni
+    url: "https://www.ceskenoviny.cz/zpravy/prazsky-lidr-spolu-portlik-je-skepticky-k-vladnuti-s-hnutim-ano/2865060"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -120,6 +129,16 @@ osoby:
         pokracovani: " a výsledkem je, že termíny metra D nikdo nebere vážně."
         kontext: "Odmítá slíbit konkrétní datum dokončení metra D."
         zdroj: echo-metro
+      - tema: "Povolební spolupráce"
+        citace: "My v tuhletu chvíli nevylučujeme tuto spolupráci (se Spolu)"
+        pokracovani: " pro nás budou důležité programové záležitosti, jestli je dokážeme plnit, a stejně tak i náš koaliční partner."
+        kontext: "V debatě Poledne s Moravcem odpovídal na otázku po možné povolební spolupráci se SPOLU na pražském magistrátu."
+        poznamka: "Upřesnění „(se Spolu)“ doplnila v závorce ČTK, aby bylo zřejmé, o koho jde. Titulky, podle kterých Hušbauer spolupráci „nevyloučil“, jsou nepřímá řeč novináře — doslova řekl „nevylučujeme“."
+        zdroj: ctk-koalice
+      - tema: "Volební cíl"
+        citace: "Chci udržet minimálně ten výsledek, který jsme měli čtyři roky zpátky"
+        kontext: "V téže debatě odpovídal na otázku, jaký výsledek považuje v Praze za úspěch."
+        zdroj: ctk-koalice
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana
@@ -249,6 +268,18 @@ osoby:
         pokracovani: " a budou stát nemalé peníze. Například na dokončení Městského okruhu."
         kontext: "Zdůvodňoval, proč má mít infrastruktura přednost."
         zdroj: ods-forum
+      - tema: "Povolební spolupráce"
+        citace: "Nerad bych udělal koalici s ANO"
+        kontext: "V debatě Poledne s Moravcem odpovídal na otázku po možných povolebních koalicích na pražském magistrátu."
+        zdroj: ctk-koalice
+      - tema: "Povolební spolupráce"
+        citace: "Pokud by mi neumožňoval výsledek voleb sestavit kvalitní a stabilní koalici, pak jsem připraven na to, že bych v koalici nebyl"
+        kontext: "V téže debatě upřesnil, za jakých okolností by do koalice nevstoupil."
+        zdroj: ctk-koalice
+      - tema: "Doprava a MHD"
+        citace: "Rozhodně bych radního pro dopravu nenechal Zdeňku Hřibovi"
+        kontext: "V téže debatě odpovídal na otázku o rozdělení gescí v případné povolební koalici."
+        zdroj: ctk-koalice
   - osobaSlug: hlavacek-petr
     jmeno: "Petr Hlaváček"
     subjekt: starostove-a-nezavisli
