@@ -6,12 +6,12 @@
     "mandaty": 9
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "470",
       "nazev": "ZA KOPANINU KRÁSNĚJŠÍ S PODPOROU STAN",
       "zkratka": "STAN+NK",
@@ -22,7 +22,7 @@
       ],
       "kandidati": [
         {
-          "id": "539589-501-1",
+          "id": "539589-1-1",
           "slug": "kyzek-karel",
           "jmeno": "Karel",
           "prijmeni": "Kyzek",
@@ -37,7 +37,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-2",
+          "id": "539589-1-2",
           "slug": "neubauer-frantisek",
           "jmeno": "František",
           "prijmeni": "Neubauer",
@@ -52,7 +52,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-3",
+          "id": "539589-1-3",
           "slug": "salat-petr",
           "jmeno": "Petr",
           "prijmeni": "Salát",
@@ -67,7 +67,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-4",
+          "id": "539589-1-4",
           "slug": "tichy-miroslav-2",
           "jmeno": "Miroslav",
           "prijmeni": "Tichý",
@@ -82,7 +82,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-5",
+          "id": "539589-1-5",
           "slug": "rehor-jan",
           "jmeno": "Jan",
           "prijmeni": "Řehoř",
@@ -97,7 +97,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-6",
+          "id": "539589-1-6",
           "slug": "rabinakova-dana",
           "jmeno": "Dana",
           "prijmeni": "Rabiňáková",
@@ -112,7 +112,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-7",
+          "id": "539589-1-7",
           "slug": "koucky-josef",
           "jmeno": "Josef",
           "prijmeni": "Koucký",
@@ -127,7 +127,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-8",
+          "id": "539589-1-8",
           "slug": "hanus-jan",
           "jmeno": "Jan",
           "prijmeni": "Hanuš",
@@ -142,7 +142,7 @@
           "zastupitelstvo": "praha-predni-kopanina"
         },
         {
-          "id": "539589-501-9",
+          "id": "539589-1-9",
           "slug": "spackova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Špačková",

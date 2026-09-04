@@ -6,12 +6,12 @@
     "mandaty": 15
   },
   "sada": "kv2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-04",
   "strany": [
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 501,
+      "cislo": 1,
+      "vylosovano": true,
+      "poradiVDatech": 1,
       "kodStrany": "389",
       "nazev": "Sdružení občanů pro rozvoj Suchdola, SORS",
       "zkratka": "ODS+NK",
@@ -22,7 +22,7 @@
       ],
       "kandidati": [
         {
-          "id": "547271-501-1",
+          "id": "547271-1-1",
           "slug": "bor-marek",
           "jmeno": "Marek",
           "prijmeni": "Bor",
@@ -37,7 +37,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-2",
+          "id": "547271-1-2",
           "slug": "pivonka-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Pivoňka",
@@ -52,7 +52,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-3",
+          "id": "547271-1-3",
           "slug": "binova-helena",
           "jmeno": "Helena",
           "prijmeni": "Bínová",
@@ -67,7 +67,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-4",
+          "id": "547271-1-4",
           "slug": "honek-jan",
           "jmeno": "Jan",
           "prijmeni": "Honek",
@@ -82,7 +82,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-5",
+          "id": "547271-1-5",
           "slug": "halek-arnost",
           "jmeno": "Arnošt",
           "prijmeni": "Hálek",
@@ -97,7 +97,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-6",
+          "id": "547271-1-6",
           "slug": "buzek-petr",
           "jmeno": "Petr",
           "prijmeni": "Bůžek",
@@ -112,7 +112,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-7",
+          "id": "547271-1-7",
           "slug": "pivonkova-hana",
           "jmeno": "Hana",
           "prijmeni": "Pivoňková",
@@ -127,7 +127,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-8",
+          "id": "547271-1-8",
           "slug": "koubkova-magdalena",
           "jmeno": "Magdalena",
           "prijmeni": "Koubková",
@@ -142,7 +142,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-9",
+          "id": "547271-1-9",
           "slug": "linxova-daniela",
           "jmeno": "Daniela",
           "prijmeni": "Linxová",
@@ -157,7 +157,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-10",
+          "id": "547271-1-10",
           "slug": "novakova-helena",
           "jmeno": "Helena",
           "prijmeni": "Nováková",
@@ -172,7 +172,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-11",
+          "id": "547271-1-11",
           "slug": "kozeny-vaclav-2",
           "jmeno": "Václav",
           "prijmeni": "Kožený",
@@ -187,7 +187,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-12",
+          "id": "547271-1-12",
           "slug": "borova-olga",
           "jmeno": "Olga",
           "prijmeni": "Borová",
@@ -202,7 +202,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-13",
+          "id": "547271-1-13",
           "slug": "urbanova-daniela",
           "jmeno": "Daniela",
           "prijmeni": "Urbanová",
@@ -217,7 +217,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-14",
+          "id": "547271-1-14",
           "slug": "sip-martin",
           "jmeno": "Martin",
           "prijmeni": "Šíp",
@@ -232,7 +232,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-501-15",
+          "id": "547271-1-15",
           "slug": "honkova-lucie",
           "jmeno": "Lucie",
           "prijmeni": "Honková",
@@ -249,9 +249,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 502,
+      "cislo": 2,
+      "vylosovano": true,
+      "poradiVDatech": 2,
       "kodStrany": "901",
       "nazev": "SDRUŽENÍ OBČANŮ SUCHDOLA (SOS)",
       "zkratka": "SNK",
@@ -261,7 +261,7 @@
       ],
       "kandidati": [
         {
-          "id": "547271-502-1",
+          "id": "547271-2-1",
           "slug": "skala-david",
           "jmeno": "David",
           "prijmeni": "Skála",
@@ -276,7 +276,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-2",
+          "id": "547271-2-2",
           "slug": "novak-arazimova-marketa",
           "jmeno": "Markéta",
           "prijmeni": "Novák Arazimová",
@@ -291,7 +291,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-3",
+          "id": "547271-2-3",
           "slug": "hejl-petr",
           "jmeno": "Petr",
           "prijmeni": "Hejl",
@@ -306,7 +306,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-4",
+          "id": "547271-2-4",
           "slug": "stepankova-vera",
           "jmeno": "Věra",
           "prijmeni": "Štěpánková",
@@ -321,7 +321,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-5",
+          "id": "547271-2-5",
           "slug": "vik-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Vik",
@@ -336,7 +336,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-6",
+          "id": "547271-2-6",
           "slug": "lnenickova-gabriela",
           "jmeno": "Gabriela",
           "prijmeni": "Lněničková",
@@ -351,7 +351,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-7",
+          "id": "547271-2-7",
           "slug": "imlauf-ondrej",
           "jmeno": "Ondřej",
           "prijmeni": "Imlauf",
@@ -366,7 +366,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-8",
+          "id": "547271-2-8",
           "slug": "opocensky-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Opočenský",
@@ -381,7 +381,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-9",
+          "id": "547271-2-9",
           "slug": "hrobska-minarikova-andrea",
           "jmeno": "Andrea",
           "prijmeni": "Hrobská Mináriková",
@@ -396,7 +396,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-10",
+          "id": "547271-2-10",
           "slug": "kubecek-vladimir",
           "jmeno": "Vladimír",
           "prijmeni": "Kubeček",
@@ -411,7 +411,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-11",
+          "id": "547271-2-11",
           "slug": "kohoutova-zlata",
           "jmeno": "Zlata",
           "prijmeni": "Kohoutová",
@@ -426,7 +426,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-12",
+          "id": "547271-2-12",
           "slug": "knappova-ludmila",
           "jmeno": "Ludmila",
           "prijmeni": "Knappová",
@@ -441,7 +441,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-13",
+          "id": "547271-2-13",
           "slug": "bradacova-pavla",
           "jmeno": "Pavla",
           "prijmeni": "Bradáčová",
@@ -456,7 +456,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-14",
+          "id": "547271-2-14",
           "slug": "kreisl-albert",
           "jmeno": "Albert",
           "prijmeni": "Kreisl",
@@ -471,7 +471,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-502-15",
+          "id": "547271-2-15",
           "slug": "lobkowicz-michal",
           "jmeno": "Michal",
           "prijmeni": "Lobkowicz",
@@ -488,9 +488,9 @@
       ]
     },
     {
-      "cislo": null,
-      "vylosovano": false,
-      "poradiVDatech": 503,
+      "cislo": 3,
+      "vylosovano": true,
+      "poradiVDatech": 3,
       "kodStrany": "902",
       "nazev": "Suchdol Srdcem",
       "zkratka": "SNK",
@@ -500,7 +500,7 @@
       ],
       "kandidati": [
         {
-          "id": "547271-503-1",
+          "id": "547271-3-1",
           "slug": "fiser-radim",
           "jmeno": "Radim",
           "prijmeni": "Fišer",
@@ -515,7 +515,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-2",
+          "id": "547271-3-2",
           "slug": "kadlec-jakub",
           "jmeno": "Jakub",
           "prijmeni": "Kadlec",
@@ -530,7 +530,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-3",
+          "id": "547271-3-3",
           "slug": "maca-ales",
           "jmeno": "Aleš",
           "prijmeni": "Máca",
@@ -545,7 +545,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-4",
+          "id": "547271-3-4",
           "slug": "blahnova-marcela",
           "jmeno": "Marcela",
           "prijmeni": "Blahnová",
@@ -560,7 +560,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-5",
+          "id": "547271-3-5",
           "slug": "mareda-ludek",
           "jmeno": "Luděk",
           "prijmeni": "Mareda",
@@ -575,7 +575,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-6",
+          "id": "547271-3-6",
           "slug": "janda-pavel",
           "jmeno": "Pavel",
           "prijmeni": "Janda",
@@ -590,7 +590,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-7",
+          "id": "547271-3-7",
           "slug": "walterova-martina",
           "jmeno": "Martina",
           "prijmeni": "Walterová",
@@ -605,7 +605,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-8",
+          "id": "547271-3-8",
           "slug": "blahna-jakub",
           "jmeno": "Jakub",
           "prijmeni": "Blahna",
@@ -620,7 +620,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-9",
+          "id": "547271-3-9",
           "slug": "kadlec-tomas",
           "jmeno": "Tomáš",
           "prijmeni": "Kadlec",
@@ -635,7 +635,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-10",
+          "id": "547271-3-10",
           "slug": "viska-jan",
           "jmeno": "Jan",
           "prijmeni": "Víška",
@@ -650,7 +650,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-11",
+          "id": "547271-3-11",
           "slug": "dvorackova-gabriela",
           "jmeno": "Gabriela",
           "prijmeni": "Dvořáčková",
@@ -665,7 +665,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-12",
+          "id": "547271-3-12",
           "slug": "svatos-jakub",
           "jmeno": "Jakub",
           "prijmeni": "Svatoš",
@@ -680,7 +680,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-13",
+          "id": "547271-3-13",
           "slug": "jirakova-petra",
           "jmeno": "Petra",
           "prijmeni": "Jiráková",
@@ -695,7 +695,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-14",
+          "id": "547271-3-14",
           "slug": "janecek-vaclav",
           "jmeno": "Václav",
           "prijmeni": "Janeček",
@@ -710,7 +710,7 @@
           "zastupitelstvo": "praha-suchdol"
         },
         {
-          "id": "547271-503-15",
+          "id": "547271-3-15",
           "slug": "kadlec-lukas",
           "jmeno": "Lukáš",
           "prijmeni": "Kadlec",

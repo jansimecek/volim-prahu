@@ -112,12 +112,13 @@ hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých měst
 rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.
 
 Kandidátky ze sady `kv2026` jsou naimportované: 8 607 kandidatur, 7 861 osob,
-24 volebních stran na magistrát. Čísla na hlasovacím lístku zatím vylosovaná
-nebyla — ČSÚ za ně dosazuje náhradní hodnoty od 501 výš a import je do
-`cislo` nepustí.
+24 volebních stran na magistrát. Čísla na hlasovacím lístku jsou od 4. 9. 2026
+vylosovaná a naimportovaná — všech 330 stran v 58 zastupitelstvech. Do losování
+za ně ČSÚ dosazoval náhradní hodnoty od 501 výš, které import do `cislo`
+nepouštěl; ta pojistka v kódu zůstává pro příští ročník.
 
-**Čeká se na:** vylosování čísel kandidátek, stanovisko ÚDHPSH k registraci
-třetí osoby, souhlas IPR Praha s ArcGIS endpointem, úložiště ankety ve Vercelu.
+**Čeká se na:** stanovisko ÚDHPSH k registraci třetí osoby, souhlas IPR Praha
+s ArcGIS endpointem, úložiště ankety ve Vercelu.
 
 Doložené mediální výroky lídrů jsou v `content/vyroky-lidru.yaml` a zobrazují
 se na profilu kandidáta. Publikují se jen doslovné citace ověřené proti zdroji;
