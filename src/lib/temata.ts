@@ -1,4 +1,4 @@
-import { programy, strany, vyroky } from '#content'
+import { postoje, programy, strany, vyroky } from '#content'
 import { celeJmeno, lidr, stranaPodleKodu } from './kandidatky'
 import type { IdOkruhu } from './okruhy'
 
@@ -152,4 +152,50 @@ export function bezVyroku(okruh: Okruh): { jmeno: string; subjekt: string; zkrat
     .filter((x): x is NonNullable<typeof x> => x !== null)
     .filter((x) => !maji.has(x.slug))
     .map(({ jmeno, subjekt, zkratka }) => ({ jmeno, subjekt, zkratka }))
+}
+
+export type PostojVOkruhu = {
+  subjekt: string
+  zkratkaStrany: string
+  shrnuti: string
+  postoj: string
+  typZdroje: 'program' | 'vyrok' | 'hlasovani' | 'odvozeni'
+  zdroj?: { text: string; url: string; datum: string }
+  poznamka?: string
+}
+
+/**
+ * Zapsané postoje subjektů k okruhu.
+ *
+ * Na rozdíl od výroků se tu nesrovnávají lidé, ale subjekty — a na rozdíl od
+ * slibů to není naše hodnocení, jen zápis toho, co subjekt říká. Typ zdroje
+ * jde ven spolu s postojem vždycky; bez něj vypadá odvození stejně jako
+ * programový závazek.
+ */
+export function postojeOkruhu(okruh: Okruh): PostojVOkruhu[] {
+  return postoje
+    .filter((z) => z.uroven === 'magistrat')
+    .flatMap((z) =>
+      z.postoje
+        .filter((p) => p.okruh === okruh.id)
+        .map((p) => ({
+          subjekt: z.subjekt,
+          zkratkaStrany: strany.find((s) => s.slug === z.subjekt)?.zkratka ?? z.subjekt,
+          shrnuti: p.shrnuti,
+          postoj: p.postoj,
+          typZdroje: p.typZdroje,
+          zdroj: p.zdroj,
+          poznamka: p.poznamka,
+        })),
+    )
+    .sort((a, b) => a.zkratkaStrany.localeCompare(b.zkratkaStrany, 'cs'))
+}
+
+/** Subjekty, u kterých k okruhu žádný zapsaný postoj nemáme. */
+export function bezPostoje(okruh: Okruh): { subjekt: string; zkratka: string }[] {
+  const maji = new Set(postojeOkruhu(okruh).map((p) => p.subjekt))
+  return strany
+    .filter((s) => s.uroven === 'magistrat' && !maji.has(s.slug))
+    .map((s) => ({ subjekt: s.slug, zkratka: s.zkratka }))
+    .sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs'))
 }

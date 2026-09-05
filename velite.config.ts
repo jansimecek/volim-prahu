@@ -554,6 +554,122 @@ const pruzkumy = defineCollection({
 })
 
 /**
+ * Postoje subjektů k okruhům srovnání.
+ *
+ * Rozdíl proti `programy/` je v ambici: hodnocení proveditelnosti je náš
+ * rozbor jednoho slibu, tohle je jen zápis toho, co subjekt k okruhu říká,
+ * aby šly postoje položit vedle sebe.
+ *
+ * Celá hodnota téhle kolekce stojí na jednom poli — `typZdroje`. Zápis
+ * postoje z programu, z výroku v médiích a z našeho odvození vypadá po
+ * zveřejnění stejně, ale znamená úplně jiné věci. Schéma proto odvozený
+ * postoj bez vysvětlení nepustí a u ostatních typů vyžaduje zdroj: bez toho
+ * by se z „nedohledali jsme nic, tipujeme" stalo tvrzení o straně.
+ */
+const postoje = defineCollection({
+  name: 'Postoje',
+  pattern: 'postoje/**/*.yaml',
+  schema: s
+    .object({
+      /** Slug subjektu z content/strany. Existenci hlídá `pnpm validate`. */
+      subjekt: s.string().min(1),
+      /** `magistrat` nebo slug městské části — musí sedět s úrovní subjektu. */
+      uroven: s.string().min(1),
+      overeno: s.isodate(),
+      postoje: s
+        .array(
+          s.object({
+            /** Okruh ze srovnání témat, ne volný štítek — jinak se nedá srovnávat. */
+            okruh: s.enum(ID_OKRUHU),
+            /** Do přehledové matice. Musí dávat smysl bez rozkliknutí. */
+            shrnuti: s.string().min(1).max(120),
+            /** Delší zápis postoje vlastními slovy. Nikdy ne opis cizího textu. */
+            postoj: s.string().min(1).max(600),
+            /**
+             * `program` = psaný programový závazek subjektu.
+             * `vyrok` = doložený veřejný výrok lídra nebo mluvčího.
+             * `hlasovani` = jak subjekt skutečně hlasoval v ZHMP.
+             * `odvozeni` = náš odhad. NENÍ to postoj subjektu a nesmí tak vypadat.
+             */
+            typZdroje: s.enum(['program', 'vyrok', 'hlasovani', 'odvozeni']),
+            zdroj: s
+              .object({
+                text: s.string().min(1),
+                url: url,
+                datum: s.isodate(),
+              })
+              .optional(),
+            /** Jen u typu `hlasovani` — co a kdy se hlasovalo. */
+            hlasovani: s
+              .object({
+                predmet: s.string().min(1),
+                datum: s.isodate(),
+                usneseni: s.string().min(1).optional(),
+                hlas: s.enum(['pro', 'proti', 'zdrzel-se', 'nehlasoval', 'neznamo']),
+              })
+              .optional(),
+            proveditelnost: s
+              .object({
+                /** Id agendy z content/kompetence.yaml — dělá z „mimo pravomoc" citaci. */
+                agenda: s.string().min(1).optional(),
+                kompetence: s.enum(KOMPETENCE),
+                rozpocet: s.enum(ROZPOCET),
+                cas: s.enum(CAS),
+              })
+              .optional(),
+            poznamka: s.string().min(1).optional(),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      for (const p of data.postoje) {
+        if (p.typZdroje === 'odvozeni') {
+          // Odvození se zdrojem je skoro vždy špatně označený citát z toho
+          // zdroje. Nechat obojí vedle sebe znamená tvrdit, že si to subjekt
+          // myslí, a odkazovat na text, kde to není.
+          if (p.zdroj) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Postoj subjektu "${data.subjekt}" k okruhu "${p.okruh}" je odvozený, ale má zdroj. Buď je to citace ze zdroje, pak změňte typ, nebo zdroj odeberte.`,
+            })
+          }
+          if (!p.poznamka) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Odvozený postoj subjektu "${data.subjekt}" k okruhu "${p.okruh}" nemá poznámku. Z čeho odvozený je a co o něm nevíme, musí být napsané.`,
+            })
+          }
+        } else if (!p.zdroj) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Postoj subjektu "${data.subjekt}" k okruhu "${p.okruh}" je typu "${p.typZdroje}", ale nemá zdroj. Bez odkazu to publikovat nejde.`,
+          })
+        }
+
+        if (p.typZdroje === 'hlasovani' && !p.hlasovani) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Postoj subjektu "${data.subjekt}" k okruhu "${p.okruh}" se odvolává na hlasování, ale neuvádí, co a kdy se hlasovalo.`,
+          })
+        }
+      }
+
+      const videne = new Set<string>()
+      for (const p of data.postoje) {
+        const klic = `${p.okruh}/${p.typZdroje}/${p.shrnuti}`
+        if (videne.has(klic)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Subjekt "${data.subjekt}" má dvakrát týž postoj k okruhu "${p.okruh}".`,
+          })
+        }
+        videne.add(klic)
+      }
+    }),
+})
+
+/**
  * Aktuálně — krátké zápisy o průběhu voleb.
  *
  * Formát je záměrně sevřený: nadpis, pár vět, zdroj. Aktualita není článek
@@ -687,6 +803,7 @@ export default defineConfig({
     plneni,
     vyroky,
     pruzkumy,
+    postoje,
     aktuality,
   },
 })

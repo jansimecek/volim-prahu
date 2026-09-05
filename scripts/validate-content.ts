@@ -242,6 +242,57 @@ function overKrizoveOdkazy() {
   }
 
   overOsobyRozhovoru(velite)
+  overPostoje(velite, strany)
+}
+
+/**
+ * Postoj musí patřit existujícímu subjektu a odkazovat na existující agendu.
+ *
+ * Obojí by jinak selhalo tiše. Překlep ve slugu subjektu by postoj odpojil od
+ * strany — ve srovnání by prostě chyběl, aniž by kdokoli poznal, že tam měl
+ * být. Překlep v id agendy je horší: `proveditelnost.agenda` je to, co dělá
+ * z tvrzení „tohle je mimo pravomoc" citaci kompetenční matice. Neplatné id
+ * čtenáři žádnou oporu neukáže, ale razítko proveditelnosti zůstane.
+ */
+function overPostoje(velite: string, strany: { slug: string; uroven: string }[]) {
+  if (!existsSync(join(velite, 'postoje.json'))) return
+  const postoje = JSON.parse(readFileSync(join(velite, 'postoje.json'), 'utf8')) as {
+    subjekt: string
+    uroven: string
+    postoje: { okruh: string; proveditelnost?: { agenda?: string } }[]
+  }[]
+  if (postoje.length === 0) return
+
+  const agendy = new Set<string>()
+  if (existsSync(join(velite, 'kompetence.json'))) {
+    const k = JSON.parse(readFileSync(join(velite, 'kompetence.json'), 'utf8')) as {
+      agendy: { id: string }[]
+    }
+    for (const a of k.agendy) agendy.add(a.id)
+  }
+
+  for (const zaznam of postoje) {
+    if (!strany.some((s) => s.slug === zaznam.subjekt && s.uroven === zaznam.uroven)) {
+      nalezy.push({
+        soubor: `content/postoje/${zaznam.uroven}/${zaznam.subjekt}.yaml`,
+        radek: 0,
+        zprava: `Postoje odkazují na subjekt "${zaznam.subjekt}", který na úrovni "${zaznam.uroven}" v content/strany neexistuje.`,
+        tvrde: true,
+      })
+    }
+
+    for (const p of zaznam.postoje) {
+      const agenda = p.proveditelnost?.agenda
+      if (agenda && agendy.size > 0 && !agendy.has(agenda)) {
+        nalezy.push({
+          soubor: `content/postoje/${zaznam.uroven}/${zaznam.subjekt}.yaml`,
+          radek: 0,
+          zprava: `Postoj k okruhu "${p.okruh}" odkazuje na agendu "${agenda}", která v content/kompetence.yaml není.`,
+          tvrde: true,
+        })
+      }
+    }
+  }
 }
 
 /**

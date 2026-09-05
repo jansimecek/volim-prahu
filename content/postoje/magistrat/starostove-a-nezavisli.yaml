@@ -1,0 +1,135 @@
+# Postoje STAN k okruhům srovnání.
+#
+# Zapsáno z programové stránky subjektu, otevřené 4. 9. 2026. Bereme jen to,
+# co na ní opravdu stojí. Externí rešerše u tohohle subjektu uváděla i novou
+# nemocnici v Letňanech, posílení Pražské developerské společnosti a úvěry
+# EIB — na programové stránce jsme nic z toho nenašli, takže to tu není.
+
+subjekt: starostove-a-nezavisli
+uroven: magistrat
+overeno: 2026-09-04
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Zahájit výstavbu 2 000 městských bytů v devíti lokalitách"
+    postoj: >-
+      Program slibuje zahájit výstavbu dvou tisíc městských bytů a jmenuje
+      lokality: Nové Dvory, Palmovka, Vršovice, Dolní Počernice, Jinonice,
+      Letňany, Běchovice, Suchdol a Horní Počernice. Slib je o zahájení
+      výstavby, ne o dokončení bytů.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: bytovy-fond
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Program neuvádí, kolik z bytů má být za období dokončeno ani odkud se
+      vezmou peníze. „Zahájíme výstavbu" je měřitelné jinak než „postavíme".
+
+  - okruh: doprava
+    shrnuti: "Dotáhnout metro D, připravit linku E, nové tramvajové tratě"
+    postoj: >-
+      Program slibuje dotažení výstavby metra D a přípravu linky metra E,
+      nové tramvajové tratě na Nové Dvory, Strahov, Suchdol a do Komořan
+      a přestavbu hlavního nádraží.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: mhd
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: uzemni-plan
+    shrnuti: "Vltavská filharmonie, humanizace Magistrály, byty na městských pozemcích"
+    postoj: >-
+      Program počítá se stavbou Vltavské filharmonie, humanizací
+      severojižní magistrály a výstavbou tisíců bytů na městských pozemcích.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: uzemni-plan
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: rozpocet
+    shrnuti: "Závazný plán strategických investic a stabilní financování městských částí"
+    postoj: >-
+      Program slibuje závazný plán strategických investic, pružné řízení
+      investic a stabilní financování městských částí.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: dotace-mestskym-castem
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+
+  - okruh: skolstvi
+    shrnuti: "Rozšířit kapacity od mateřských po střední školy"
+    postoj: >-
+      Program slibuje rozšíření kapacit od mateřských po střední školy
+      a podporu učitelů a jejich vzdělávání.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Mateřské a základní školy zřizují městské části, střední školy kraj,
+      tedy v Praze magistrát. Jeden slib tak míří na dvě různé úrovně.
+
+  - okruh: prostredi
+    shrnuti: "Zelené promenády, modernizace ZEVO Malešice, revitalizace toků"
+    postoj: >-
+      Program slibuje nové zelené promenády, modernizaci spalovny ZEVO
+      Malešice a revitalizaci vodních toků.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: verejna-zelen
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: socialni
+    shrnuti: "Získat 270 chybějících strážníků, rozšířit terénní péči"
+    postoj: >-
+      Program slibuje získat pro Prahu 270 chybějících strážníků, posílit
+      složky integrovaného záchranného systému, rozšířit domácí a terénní
+      péči a odstraňovat bariéry pro zdravotně postižené.
+    typZdroje: program
+    zdroj:
+      text: Program STAN pro Zastupitelstvo hl. m. Prahy
+      url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: mestska-policie
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Městská policie je zřizovaná magistrátem, počet strážníků tedy město
+      ovlivnit může. Program neuvádí, čím chce nábor podpořit.
