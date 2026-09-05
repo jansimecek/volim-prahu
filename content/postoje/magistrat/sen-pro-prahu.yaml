@@ -1,0 +1,137 @@
+# Postoje SEN pro Prahu k okruhům srovnání.
+#
+# Zapsáno z programu na praha.senprocesko.cz, otevřeného 4. 9. 2026. Program
+# je členěný po kapitolách, takže zdrojem je vždy konkrétní podstránka, ne
+# rozcestník. Dva sliby z bydlení už mají vlastní hodnocení proveditelnosti
+# v content/programy/magistrat/sen-pro-prahu.mdx.
+
+subjekt: sen-pro-prahu
+uroven: magistrat
+overeno: 2026-09-04
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Zvýšit podíl městských bytů na deset procent"
+    postoj: >-
+      Program chce rozšířit městský bytový fond na deset procent a podpořit
+      městské nájemní a družstevní bydlení. Odůvodňuje to cenami, na které
+      podle něj střední třída nedosáhne.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Dostupné bydlení
+      url: https://praha.senprocesko.cz/program/dostupne-bydleni
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: bytovy-fond
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Tenhle slib má na webu vlastní hodnocení proveditelnosti se závěrem
+      „nereálný v tomto období" — znamená zhruba zdvojnásobení počtu městských
+      bytů a program neuvádí cenu ani zdroj peněz.
+
+  - okruh: skolstvi
+    shrnuti: "Řešit nedostatek míst na středních školách, stavět nové"
+    postoj: >-
+      Program upozorňuje na prognózu IPR, podle které bude do roku 2030 chybět
+      18 tisíc míst na středních školách, a slibuje masivní investice a stavbu
+      nových škol.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Školství
+      url: https://praha.senprocesko.cz/program/skolstvi
+      datum: 2026-09-04
+    proveditelnost:
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Střední školy zřizuje kraj, tedy v Praze magistrát — na rozdíl od
+      základních a mateřských škol, které jsou na městských částech. Tenhle
+      slib tak míří na úroveň, do které se kandiduje.
+
+  - okruh: uzemni-plan
+    shrnuti: "Sídliště nejsou stavební parcela"
+    postoj: >-
+      Program staví proti zahušťování sídlišť: považuje je za dlouhodobě
+      obývané čtvrti, ne za stavební parcely, a slibuje respektovat zájmy
+      jejich obyvatel při změnách.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Ochrana sídlišť
+      url: https://praha.senprocesko.cz/program/ochrana-sidlist
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: uzemni-plan
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+
+  - okruh: doprava
+    shrnuti: "Veřejná doprava jako první volba, důraz na rychlost a komfort"
+    postoj: >-
+      Program slibuje modernizaci veřejné dopravy se zaměřením na rychlost
+      a komfort tak, aby byla první volbou cestování.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Doprava
+      url: https://praha.senprocesko.cz/program/doprava
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: mhd
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Kapitola je psaná v obecné rovině — neuvádí konkrétní linky, stavby ani
+      termíny, takže z ní nejde odvodit, co by se za období stihlo.
+
+  - okruh: rozpocet
+    shrnuti: "Transparentní rozpočet a spravedlivé financování městských částí"
+    postoj: >-
+      Program slibuje transparentní rozdělování magistrátního rozpočtu,
+      spravedlivé financování městských částí a jasná pravidla pro investice
+      a údržbu.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Rozpočet, investice a městské firmy
+      url: https://praha.senprocesko.cz/program/rozpocet-investice-a-mestske-firmy
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: dotace-mestskym-castem
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+
+  - okruh: prostredi
+    shrnuti: "Péče o veřejný prostor, omezení kácení a kontrola reklamy"
+    postoj: >-
+      Program slibuje poctivou péči o veřejný prostor ve všech městských
+      částech, omezení zbytečného kácení stromů a kontrolu umísťování reklamy.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Veřejný prostor, úklid a životní prostředí
+      url: https://praha.senprocesko.cz/program/verejny-prostor-a-uklid
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: verejna-zelen
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: do-4-let
+
+  - okruh: socialni
+    shrnuti: "Víc míst v domovech pro seniory a přednost terénním službám"
+    postoj: >-
+      Program slibuje zvýšit kapacitu domovů pro seniory, rozšířit zařízení
+      se zvláštním režimem a přednostně rozvíjet terénní služby pro domácí
+      péči.
+    typZdroje: program
+    zdroj:
+      text: Program SEN pro Prahu — Senioři, sociální péče a zdravotnictví
+      url: https://praha.senprocesko.cz/program/seniori-socialni-pece-a-zdravotnictvi
+      datum: 2026-09-04
+    proveditelnost:
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje

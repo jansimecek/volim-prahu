@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { vyroky } from '#content'
 import { datumCesky, sPoctem } from '@/lib/cestina'
 import { POPIS_ZAVER } from '@/lib/hodnoceni'
-import { OKRUHY, bezVyroku, slibyOkruhu, vyrokyOkruhu } from '@/lib/temata'
+import { PostojeOkruhu } from '@/components/PostojeOkruhu'
+import { OKRUHY, bezPostoje, bezVyroku, postojeOkruhu, slibyOkruhu, vyrokyOkruhu } from '@/lib/temata'
 
 export const metadata: Metadata = {
   title: 'Srovnání témat',
@@ -57,6 +58,8 @@ export default function StrankaTemat() {
         const vyrokyOk = vyrokyOkruhu(okruh)
         const sliby = slibyOkruhu(okruh)
         const chybi = bezVyroku(okruh)
+        const postojeOk = postojeOkruhu(okruh)
+        const bezPostojeOk = bezPostoje(okruh)
 
         return (
           <section key={okruh.id} id={okruh.id} className="scroll-mt-20">
@@ -68,6 +71,14 @@ export default function StrankaTemat() {
               {sliby.length > 0 &&
                 ` · ${sPoctem(sliby.length, 'hodnocený slib', 'hodnocené sliby', 'hodnocených slibů')}`}
             </p>
+
+            {postojeOk.length > 0 && (
+              <>
+                <h3 className="mt-6 text-lg">Co k tomu subjekty říkají</h3>
+                <PostojeOkruhu postoje={postojeOk} chybi={bezPostojeOk} />
+                <h3 className="mt-8 text-lg">Doslovné výroky lídrů</h3>
+              </>
+            )}
 
             {vyrokyOk.length === 0 ? (
               <p className="mt-5 max-w-prose">

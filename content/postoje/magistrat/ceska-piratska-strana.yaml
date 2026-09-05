@@ -1,0 +1,87 @@
+# Postoje Pirátů k okruhům srovnání.
+#
+# Zapsáno z Akčního plánu bydlení zveřejněného 21. 5. 2026, otevřeného
+# 4. 9. 2026. Je to plán k jednomu tématu, ne ucelený program — proto je tu
+# jen bydlení a dva okruhy, které z něj přímo plynou. Externí rešerše u Pirátů
+# uváděla financování z EIB; v plánu stojí Pražský investiční fond s půjčkami
+# od bank, takže EIB tu není.
+
+subjekt: ceska-piratska-strana
+uroven: magistrat
+overeno: 2026-09-04
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Akcelerační zóny u metra, několik tisíc městských bytů za období"
+    postoj: >-
+      Akční plán slibuje akcelerační zóny pro dostupné bydlení navázané na
+      rozšíření metra A, B a C, tři nové čtvrti — Nové Kolovraty, Východní
+      a Západní město — s kapacitou pro 200 tisíc obyvatel a 70 tisíc
+      pracovních míst, stavbu několika tisíc městských bytů za volební období
+      a rozšíření Městské nájemní agentury ze 75 na 500 bytů. Celoměstským
+      cílem je 10 tisíc nových bytů ročně od všech stavebníků.
+    typZdroje: program
+    zdroj:
+      text: Piráti představili akční plán bydlení v Praze
+      url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
+      datum: 2026-05-21
+    proveditelnost:
+      agenda: bytovy-fond
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Cíl 10 tisíc bytů ročně není závazek města postavit je — většinu bytů
+      v Praze staví soukromí investoři a povolování staveb je mimo samosprávu.
+      Vlastním slibem města je „několik tisíc" bytů za období.
+
+  - okruh: bydleni
+    shrnuti: "Několikanásobná daň z nemovitosti na dlouhodobě prázdné domy"
+    postoj: >-
+      Plán počítá s několikanásobnou daní z nemovitosti u dlouhodobě
+      prázdných bytových domů.
+    typZdroje: program
+    zdroj:
+      text: Piráti představili akční plán bydlení v Praze
+      url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
+      datum: 2026-05-21
+    proveditelnost:
+      agenda: obecne-zavazne-vyhlasky
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Místní koeficient daně z nemovitých věcí stanovuje obec obecně závaznou
+      vyhláškou, tedy nástrojem, který zastupitelstvo skutečně drží.
+
+  - okruh: bydleni
+    shrnuti: "Nové koleje pro vysokoškoláky v Karlíně, Troji a na Palmovce"
+    postoj: >-
+      Plán slibuje nové ubytovací kapacity pro studenty vysokých škol
+      v Kasárnách Karlín, v Troji a na Palmovce.
+    typZdroje: program
+    zdroj:
+      text: Piráti představili akční plán bydlení v Praze
+      url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
+      datum: 2026-05-21
+    proveditelnost:
+      agenda: sverenymajetek
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: rozpocet
+    shrnuti: "Pražský investiční fond s půjčkami od bank na výstavbu bydlení"
+    postoj: >-
+      Výstavbu má financovat Pražský investiční fond, do kterého mají vstupovat
+      půjčky od bank.
+    typZdroje: program
+    zdroj:
+      text: Piráti představili akční plán bydlení v Praze
+      url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
+      datum: 2026-05-21
+    proveditelnost:
+      agenda: rozpocet-prahy
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
