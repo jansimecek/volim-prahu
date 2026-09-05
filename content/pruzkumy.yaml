@@ -8,7 +8,7 @@
 # Slug v `subjekt` musí odpovídat souboru v content/strany/. Kontroluje to
 # `pnpm validate`, aby překlep neshodil řazení až u čtenáře.
 
-overeno: 2026-08-29
+overeno: 2026-09-04
 
 # Zobrazuje se čtenáři pod výpisem subjektů, takže platí stejné pravidlo jako
 # jinde: co tvrdí, musí jít ověřit. Schéma proto vyžaduje zdroje.
@@ -17,16 +17,28 @@ poznamka:
     Zatím tu není žádný průzkum, a řazení podle průzkumu se proto vůbec
     nenabízí. Zveřejňujeme jen průzkumy, u kterých je dohledatelný termín
     sběru dat, velikost a typ vzorku, metoda a zadavatel — bez toho je číslo
-    neověřitelné. K 29. srpnu 2026 jsme dohledali jediný zveřejněný průzkum
+    neověřitelné. K 4. září 2026 jsme dohledali jediný zveřejněný průzkum
     preferencí pro pražské zastupitelstvo (Phoenix Research, zveřejněný
     4. května 2026) a tyhle údaje u něj publikované nejsou; posuďte ho sami
-    z odkazu níže. Ostatní modely agentur z roku 2026 jsou sněmovní, tedy
-    celostátní, a o pražském zastupitelstvu nevypovídají. Pozor také na
-    záměnu ročníků: vyhledávače vracejí pražské průzkumy z roku 2022, jako
-    by byly aktuální.
+    z odkazu níže. Pozor na dvě záměny, na které se tu dá snadno naletět.
+    První je záměna voleb: agentura NMS zveřejnila pod názvem „Volební model
+    Praha“ model voleb do Poslanecké sněmovny měřený mezi Pražany, ne průzkum
+    do zastupitelstva — o tom, kdo povede město, neříká nic. Totéž platí
+    o ostatních modelech agentur z roku 2026. Druhá je záměna ročníků:
+    vyhledávače vracejí pražské průzkumy z roku 2022, jako by byly aktuální.
+    A ještě jedna věc, i když na ni tady zatím nenarazíte: volební potenciál
+    není volební model. Potenciál říká, kolik lidí stranu aspoň zvažuje,
+    takže součet za všechny strany výrazně přesahuje sto procent a strana
+    s velkým potenciálem může skončit malá. Kandidátky bychom podle
+    potenciálu nikdy neřadili.
   zdroje:
     - text: Průzkum z Prahy (Phoenix Research), ParlamentníListy.cz, 4. 5. 2026
       url: https://www.parlamentnilisty.cz/arena/monitor/Pruzkum-z-Prahy-Velky-navrat-STAN-i-prekvapeni-z-Prisahy-790823
+    - text: >-
+        Volební model Praha (NMS Market Research pro Novinky.cz, sběr
+        5.–10. 9. 2025, 1006 respondentů) — sněmovní model mezi Pražany,
+        ne průzkum do zastupitelstva
+      url: https://nms.global/cz/volebni-model-praha-koalice-spolu-drzi-v-praze-vedeni-se-stan-a-piraty-svede-boj-o-volice/
 
 pruzkumy:
   # Celostátní sněmovní model. NEŘADÍ pražské kandidátky — měří jiné strany
