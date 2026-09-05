@@ -1,0 +1,187 @@
+# Postoje Spojené levice pro Prahu k okruhům srovnání.
+#
+# Zapsáno z kompletního programu ve formátu PDF, staženého a přečteného
+# 4. 9. 2026. Program je ze všech dosud zpracovaných nejkonkrétnější —
+# jmenuje trasy, termíny i lokality.
+#
+# Externí rešerše u tohohle subjektu uváděla, že chce „zrušit samosprávnou
+# vrstvu městských částí" a ušetřené „~2 mld." dát „do škol a dopravy".
+# V programu stojí reforma, ne zrušení; „miliardy" bez čísla; a „služby pro
+# občany", ne školy a doprava. Zapsané je to, co je v programu.
+
+subjekt: spojena-levice-pro-prahu
+uroven: magistrat
+overeno: 2026-09-04
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Obecní nájemní byty za nákladové nájemné, bez tržní marže"
+    postoj: >-
+      Program slibuje masivní výstavbu obecních nájemních a družstevních bytů
+      za nákladové nájemné bez tržní marže, s přednostním přidělováním
+      učitelům, lékařům, hasičům, policistům, mladým rodinám a seniorům.
+      Pražská developerská společnost má dostat akční plán s termíny
+      a konkrétními projekty a město má být aktivním developerem, ne jen
+      regulátorem. K tomu pozemková banka a strategický výkup pozemků.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Bydlení
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: bytovy-fond
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: bydleni
+    shrnuti: "Omezit Airbnb v bytových domech a zpoplatnit prázdné byty"
+    postoj: >-
+      Program chce přísnou evidenci krátkodobých pobytů a omezení pronájmů
+      přes Airbnb v bytovém fondu s odůvodněním, že byt určený územním plánem
+      k bydlení není hotel. Neobývané a investiční byty chce radikálně omezit
+      poplatkem.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Bydlení
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: obecne-zavazne-vyhlasky
+      kompetence: castecne
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Místní koeficient daně z nemovitých věcí i poplatky obec vyhláškou
+      stanovit může. Regulace samotného krátkodobého pronájmu ale stojí
+      na celostátní úpravě, takže tuhle část město samo nedotáhne.
+
+  - okruh: doprava
+    shrnuti: "Roční kupon za 3 650 Kč nezdražíme, výhledově MHD zdarma"
+    postoj: >-
+      Program slibuje nezdražovat roční kupon nad 3 650 korun a zároveň
+      investovat do počtu spojů, modernějších vozů a pokrytí. V dlouhodobém
+      horizontu chce připravit MHD na bezplatný provoz na celém území Prahy.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Doprava a MHD
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: mhd
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Nezdražení kuponu má na webu vlastní hodnocení proveditelnosti. Bezplatná
+      MHD je v programu bez termínu i bez vyčíslení, proto se hodnotí jen ta
+      část slibu, která termín má.
+
+  - okruh: doprava
+    shrnuti: "Mýto do centra až po dokončení dálničního a městského okruhu"
+    postoj: >-
+      Program zavádí mýto pro vjezd do centra, ale výslovně až po dokončení
+      dálničního a městského okruhu; ulice historického jádra pak mají patřit
+      chodcům, cyklistům a rezidentům. Prioritou je dokončení okruhu 511.
+      Do výhledu patří i přesun magistrály do tunelu za Národním muzeem.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Doprava a MHD
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: parkovaci-zony
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Podmínka „až po dokončení okruhů" posouvá mýto mimo volební období —
+      okruh 511 staví stát, ne město. Slib je tím opatrnější, než jak zní.
+
+  - okruh: skolstvi
+    shrnuti: "Garantovaná místa ve školkách a jeslích, byty pro klíčové profese"
+    postoj: >-
+      Program slibuje garantovaná místa ve školkách a jeslích pro všechny děti,
+      snížení maximálního počtu žáků ve třídě, přednostní přijímání dětí
+      s trvalým pobytem v Praze na střední školy zřizované městem a garantované
+      bydlení pro učitele, lékaře a hasiče.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Školství
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: skoly-a-skolky
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Školky a jesle zřizují městské části, střední školy magistrát. Jeden slib
+      tak míří na dvě úrovně a celoměstská garance míst ve školkách závisí na
+      57 zřizovatelích.
+
+  - okruh: socialni
+    shrnuti: "Čtyři nová sociální centra a polikliniky s nepřetržitým provozem"
+    postoj: >-
+      Program slibuje čtyři nová městská sociální centra v Bohnicích,
+      Letňanech, na Milíčově a v Holyni s ústavní péčí, stacionáři a zázemím
+      pro terénní služby, obnovu sítě poliklinik s pohotovostmi a lékárnami
+      v nepřetržitém provozu a podporu výstavby nové nemocnice na území
+      dnešní FN Vinohrady.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Sociální a zdravotní služby
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Fakultní nemocnice Královské Vinohrady zřizuje ministerstvo zdravotnictví,
+      ne město. Program to bere v potaz a mluví o podpoře výstavby, ne o tom,
+      že ji Praha postaví.
+
+  - okruh: prostredi
+    shrnuti: "Výkup PVK od Veolie do roku 2028 a energetický strop"
+    postoj: >-
+      Program chce vykoupit Pražské vodovody a kanalizace od Veolie do roku
+      2028, sloučit je s PVS a dodávat vodu za nákladové ceny. Pražská
+      plynárenská má zavést garantované ceny elektřiny a plynu pro Pražany
+      a střechy městských budov se mají pokrýt fotovoltaikou.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Energie a voda
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      agenda: sverenymajetek
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Výkup PVK má na webu vlastní hodnocení proveditelnosti: rozhodnutí je
+      v rukou zastupitelstva, ale prodej se neobejde bez souhlasu druhé strany
+      a program neuvádí cenu.
+
+  - okruh: rozpocet
+    shrnuti: "Reforma systému 57 městských částí, ne jeho zrušení"
+    postoj: >-
+      Program označuje současný systém 57 městských částí za nehospodárný
+      a nespravedlivý a slibuje prosazovat jeho reformu tak, aby miliardy
+      ušetřené na platech politiků šly do služeb pro občany. Součástí je
+      příprava sjednocení území výkonu státní správy a samosprávy.
+    typZdroje: program
+    zdroj:
+      text: Program Spojené levice pro Prahu, kapitola Správa města
+      url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+      datum: 2026-09-04
+    proveditelnost:
+      kompetence: mimo-pravomoc
+      rozpocet: pokryto
+      cas: presahuje
+    poznamka: >-
+      Počet a postavení městských částí určuje zákon o hlavním městě Praze,
+      takže reformu nemůže zastupitelstvo přijmout samo — potřebuje změnu
+      zákona. Program to formuluje jako „budeme prosazovat", ne jako závazek
+      provést. Program neuvádí, o kolik miliard jde.
