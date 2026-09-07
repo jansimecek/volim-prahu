@@ -116,7 +116,11 @@ leží — celá Praha se na něj nikdy netahá.
 
 K výsledku se kreslí mapa (`src/components/MapaOkrsku.tsx`): hranice
 nalezeného okrsku z `/api/okrsky/<mč>/hranice`, ostatní okrsky části slabě,
-bod adresy. Leaflet i hranice se stahují až po zobrazení výsledku. Podklad
+bod adresy a červený čtverec volební místnosti, když známe její polohu.
+Tu dohledává `src/lib/geokodovani.ts` při buildu z adresy místnosti
+v našem registru ČÚZK (žádný cizí geokodér); v YAML jde zadat ručně
+polem `poloha`, když vchod leží jinde. Leaflet i hranice se stahují až po
+zobrazení výsledku. Podklad
 jsou dlaždice OpenStreetMap, jediný cizí server, na který web sahá —
 zásady ochrany údajů to říkají výslovně a e2e test mapy proto kontroluje
 jen vektorové vrstvy z našich dat, ne dlaždice.

@@ -818,6 +818,8 @@ const volebniMistnosti = defineCollection({
             okrsky: s.array(s.number().int().positive()).min(1),
             bezbarierova: s.boolean().optional(),
             poznamka: s.string().min(1).optional(),
+            /** Jen když se adresa nedá dohledat v registru ČÚZK automaticky (vchod z jiné ulice apod.). */
+            poloha: s.object({ lat: s.number().min(49.9).max(50.2), lon: s.number().min(14.2).max(14.8) }).optional(),
           }),
         )
         .min(1),

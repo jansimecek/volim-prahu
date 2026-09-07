@@ -59,6 +59,24 @@ test('vyhledávač najde okrsek podle ulice a orientačního čísla', async ({ 
   await expect(page.getByText(/hranice okrsku 7001 podle RÚIAN/)).toBeVisible()
 })
 
+/**
+ * Praha 9 má adresy místností v poznámkách RÚIAN; z adresy se při buildu
+ * dohledá poloha v registru ČÚZK, takže výsledek nese vzdálenost a mapa
+ * značku místnosti. Zdroj musí být označený jako poznámka, ne oznámení 2026.
+ */
+test('u známé místnosti ukáže vzdálenost a značku na mapě', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('Malá Skloněná')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('2')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText('Volební okrsek 9001')).toBeVisible()
+  await expect(page.getByText(/Novovysočanská 501\/5/)).toBeVisible()
+  await expect(page.getByText(/Vzdušnou čarou asi \d+ m od vaší adresy/)).toBeVisible()
+  await expect(page.getByText(/není to oznámení pro rok 2026/i)).toBeVisible()
+  const mapa = page.getByRole('region', { name: 'Mapa volebního okrsku 9001' })
+  await expect(mapa.locator('.leaflet-marker-icon')).toHaveCount(1)
+})
+
 test('vyhledávač neznámou ulici nedomýšlí', async ({ page }) => {
   await page.goto('/kde-volim')
   await page.getByRole('combobox', { name: 'Ulice' }).fill('Neexistující')

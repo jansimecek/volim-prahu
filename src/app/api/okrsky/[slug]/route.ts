@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
+import { polohaAdresy } from '@/lib/geokodovani'
 import { mistnostiMestskeCasti, mistnostZPoznamky, type Mistnost } from '@/lib/mistnosti'
 import { MESTSKE_CASTI, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { adresyMestskeCasti, okrskyMestskeCasti, type AdresyMestskeCasti } from '@/lib/okrsky'
@@ -31,16 +32,21 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
   const adresy = adresyMestskeCasti(slug)
   if (!mc || !adresy) return NextResponse.json({ chyba: 'Neznámá městská část.' }, { status: 404 })
 
+  /** Poloha z oznámení má přednost; jinak se adresa místnosti dohledá v registru části. */
+  const sPolohou = (m: Mistnost): Mistnost => {
+    const poloha = m.poloha ?? polohaAdresy(m.adresa, adresy)
+    return poloha ? { ...m, poloha } : m
+  }
   const mistnosti: Record<number, Mistnost> = {}
-  for (const m of mistnostiMestskeCasti(slug)) for (const o of m.okrsky) mistnosti[o] = m
+  for (const m of mistnostiMestskeCasti(slug).map(sPolohou)) for (const o of m.okrsky) mistnosti[o] = m
   for (const o of okrskyMestskeCasti(slug)) {
     const zRuian = mistnostZPoznamky(o.poznamka)
     if (!mistnosti[o.cislo] && zRuian) {
-      mistnosti[o.cislo] = {
+      mistnosti[o.cislo] = sPolohou({
         ...zRuian,
         okrsky: [o.cislo],
         zdroj: { typ: 'ruian', nazev: 'RÚIAN, poznámka správce okrsku', overeno: o.platiOd },
-      }
+      })
     }
   }
 

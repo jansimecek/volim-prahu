@@ -18,6 +18,8 @@ type Props = {
   okrsek: number
   poloha: { lat: number; lon: number }
   popisAdresy: string
+  /** Volební místnost, pokud známe její polohu. */
+  mistnost?: { nazev: string; poloha: { lat: number; lon: number } }
 }
 
 const cacheHranic = new Map<string, Promise<HraniceOkrsku>>()
@@ -40,7 +42,7 @@ function barva(promenna: string, zaloha: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(promenna).trim() || zaloha
 }
 
-export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy }: Props) {
+export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy, mistnost }: Props) {
   const kontejner = useRef<HTMLDivElement>(null)
   const [stav, setStav] = useState<'nacita' | 'hotovo' | 'chyba'>('nacita')
 
@@ -96,7 +98,24 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy }: Props) 
           .bindTooltip(popisAdresy, { direction: 'top', offset: [0, -8] })
           .addTo(mapa)
 
+        if (mistnost) {
+          // Volební místnost: plný červený čtverec, aby se lišila od kulatého bodu adresy.
+          L.marker([mistnost.poloha.lat, mistnost.poloha.lon], {
+            icon: L.divIcon({
+              className: '',
+              html: `<span style="display:block;width:16px;height:16px;background:${praha};border:2px solid #fff;box-shadow:0 0 0 1px ${inkoust}"></span>`,
+              iconSize: [16, 16],
+              iconAnchor: [8, 8],
+            }),
+            alt: `Volební místnost: ${mistnost.nazev}`,
+          })
+            .bindTooltip(`Volební místnost: ${mistnost.nazev}`, { direction: 'top', offset: [0, -10] })
+            .addTo(mapa)
+        }
+
         const rozsah = vrstvaOkrsku?.getBounds() ?? ostatni.getBounds()
+        rozsah.extend([poloha.lat, poloha.lon])
+        if (mistnost) rozsah.extend([mistnost.poloha.lat, mistnost.poloha.lon])
         if (rozsah.isValid()) mapa.fitBounds(rozsah.pad(0.15))
 
         setStav('hotovo')
@@ -111,7 +130,7 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy }: Props) 
       zruseno = true
       mapa?.remove()
     }
-  }, [mestskaCast, okrsek, poloha.lat, poloha.lon, popisAdresy])
+  }, [mestskaCast, okrsek, poloha.lat, poloha.lon, popisAdresy, mistnost])
 
   const odkazOsm = `https://www.openstreetmap.org/?mlat=${poloha.lat}&mlon=${poloha.lon}#map=17/${poloha.lat}/${poloha.lon}`
 
@@ -128,7 +147,8 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy }: Props) 
       )}
       <p className="popisek-uredni mt-2">
         {stav === 'nacita' ? 'Načítám mapu… · ' : ''}
-        Červeně hranice okrsku {okrsek} podle RÚIAN, bílý bod je vaše adresa ·{' '}
+        Červeně hranice okrsku {okrsek} podle RÚIAN, bílý bod je vaše adresa
+        {mistnost ? ', červený čtverec volební místnost' : ''} ·{' '}
         <a href={odkazOsm} className="odkaz-akcent" rel="noopener">
           otevřít v OpenStreetMap
         </a>

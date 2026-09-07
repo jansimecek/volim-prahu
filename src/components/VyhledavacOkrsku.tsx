@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useId, useMemo, useRef, useState } from 'react'
 import type { OdpovedOkrsku } from '@/app/api/okrsky/[slug]/route'
 import { MapaOkrsku } from '@/components/MapaOkrsku'
+import { vzdalenostMetru } from '@/lib/geokodovani'
 import { POPIS_ZDROJE, type Mistnost } from '@/lib/mistnostiTypy'
 import { najdiAdresu, normalizujUlici, type NalezenaAdresa } from '@/lib/okrskyHledani'
 
@@ -42,6 +43,16 @@ const KUDY_K_VOLBAM = 'https://kudykvolbam.iprpraha.cz'
 const MAX_NAPOVED = 8
 
 const cacheCasti = new Map<string, Promise<OdpovedOkrsku>>()
+
+/** „asi 450 m", nad kilometr „asi 1,3 km" — přesnost na metry by byla falešná. */
+function popisVzdalenosti(metru: number): string {
+  if (metru < 40) return 'Volební místnost je přímo na vaší adrese.'
+  const text =
+    metru < 1000
+      ? `asi ${Math.max(50, Math.round(metru / 50) * 50)} m`
+      : `asi ${(Math.round(metru / 100) / 10).toLocaleString('cs-CZ')} km`
+  return `Vzdušnou čarou ${text} od vaší adresy.`
+}
 
 function nactiCast(slug: string): Promise<OdpovedOkrsku> {
   let slib = cacheCasti.get(slug)
@@ -265,6 +276,9 @@ export function VyhledavacOkrsku() {
                         {v.mistnost.bezbarierova && <span className="popisek-uredni ml-2">bezbariérová</span>}
                       </p>
                       {v.mistnost.poznamka && <p className="mt-1 text-sm">{v.mistnost.poznamka}</p>}
+                      {v.mistnost.poloha && (
+                        <p className="mt-1 text-sm">{popisVzdalenosti(vzdalenostMetru(v.poloha, v.mistnost.poloha))}</p>
+                      )}
                       <p className="popisek-uredni mt-2">
                         {POPIS_ZDROJE[v.mistnost.zdroj.typ]}
                         {v.mistnost.zdroj.url && (
@@ -295,6 +309,9 @@ export function VyhledavacOkrsku() {
                     okrsek={v.okrsek}
                     poloha={v.poloha}
                     popisAdresy={`${v.ulice} ${v.cislo}`}
+                    mistnost={
+                      v.mistnost?.poloha ? { nazev: v.mistnost.nazev, poloha: v.mistnost.poloha } : undefined
+                    }
                   />
                   <p className="popisek-uredni mt-3">
                     <Link href={`/mestska-cast/${v.mestskaCast}`} className="odkaz-akcent">

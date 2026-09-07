@@ -98,6 +98,13 @@ describe('místnost z poznámky RÚIAN', () => {
     })
   })
 
+  it('čtvrť za adresou nepovažuje za adresu', () => {
+    expect(mistnostZPoznamky('Volební místnost: Základní škola Špitálská 789/4, Vysočany')).toEqual({
+      nazev: 'Základní škola Špitálská 789/4, Vysočany',
+      adresa: 'Základní škola Špitálská 789/4',
+    })
+  })
+
   it('jinou poznámku ignoruje', () => {
     expect(mistnostZPoznamky('Oprava VO čp 385/178')).toBeUndefined()
     expect(mistnostZPoznamky(undefined)).toBeUndefined()

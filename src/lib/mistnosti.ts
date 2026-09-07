@@ -23,6 +23,7 @@ function mistnostiZeSouboru(soubor: SouborMistnosti): Mistnost[] {
     okrsky: m.okrsky,
     ...(m.bezbarierova !== undefined ? { bezbarierova: m.bezbarierova } : {}),
     ...(m.poznamka ? { poznamka: m.poznamka } : {}),
+    ...(m.poloha ? { poloha: m.poloha } : {}),
     zdroj: {
       typ: soubor.volby === 'komunalni-2026' ? 'oznameni-2026' : 'drivejsi-volby',
       nazev: soubor.zdroj.nazev,
@@ -32,13 +33,18 @@ function mistnostiZeSouboru(soubor: SouborMistnosti): Mistnost[] {
   }))
 }
 
-/** „Volební místnost: SOU služeb, Novovysočanská 501/5" → název + adresa. */
+/**
+ * „Volební místnost: SOU služeb, Novovysočanská 501/5" → název + adresa.
+ * Adresa je ta část za čárkou, která obsahuje číslo domu; Praha 9 občas
+ * píše za adresu ještě čtvrť („…Špitálská 789/4, Vysočany").
+ */
 export function mistnostZPoznamky(poznamka: string | undefined): { nazev: string; adresa: string } | undefined {
   const text = poznamka?.match(/^Volební místnost:\s*(.+)$/)?.[1]?.trim()
   if (!text) return undefined
-  const carka = text.lastIndexOf(',')
-  if (carka === -1) return { nazev: text, adresa: text }
-  return { nazev: text.slice(0, carka).trim(), adresa: text.slice(carka + 1).trim() }
+  const casti = text.split(',').map((c) => c.trim())
+  const iAdresy = casti.map((c) => /\d/.test(c)).lastIndexOf(true)
+  if (iAdresy <= 0) return { nazev: text, adresa: casti[iAdresy] ?? text }
+  return { nazev: casti.filter((_, i) => i !== iAdresy).join(', '), adresa: casti[iAdresy]! }
 }
 
 function mistnostZRuian(okrsek: Okrsek): Mistnost | undefined {

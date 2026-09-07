@@ -10,6 +10,8 @@ export type Mistnost = {
   okrsky: number[]
   bezbarierova?: boolean
   poznamka?: string
+  /** WGS84. Z oznámení (ručně) nebo dohledaná z adresy v registru ČÚZK při buildu. */
+  poloha?: { lat: number; lon: number }
   zdroj: { typ: TypZdrojeMistnosti; nazev: string; url?: string; overeno?: string }
 }
 
