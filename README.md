@@ -31,6 +31,7 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 | `pnpm import:csu` | Import kandidátek a číselníků z ČSÚ |
 | `pnpm import:senat` | Import senátních kandidátů (sada se2026) |
 | `pnpm import:desky` | Sběr oznámení z úředních desek městských částí |
+| `pnpm import:okrsky` | Import volebních okrsků Prahy z ČÚZK (adresy → okrsek, hranice) |
 | `pnpm nacvik` | Nácvik volební noci proti datům 2022 |
 | `pnpm gen:mc` | Doplní chybějící skelety městských částí |
 
@@ -61,6 +62,74 @@ pnpm import:csu --rok 2022 --vystup data/vysledky-2022/kandidatky
 ```
 
 Ověřeno: 58 zastupitelstev (magistrát + 57 MČ), 8 253 kandidátů.
+
+## Volební okrsky a místnosti
+
+Datová vrstva pro `/kde-volim`: ke každé pražské adrese číslo okrsku, ke
+každému okrsku hranice a střed, a schéma pro adresy volebních místností.
+
+```bash
+pnpm import:okrsky
+```
+
+Zdrojem je ČÚZK, ne ČSÚ ani IPR — jediný registr, který mapuje adresní místo
+na okrsek pro celou Prahu a aktualizuje se prakticky denně:
+
+- **Sestavy „Seznam adresních míst s volebními okrsky"**
+  (`services.cuzk.cz/sestavy/VO/<kód MOMC>.zip`). Praha jako obec vlastní
+  soubor **nemá**; existuje 57 souborů po městských částech a kód MOMC je
+  totožný s kódem zastupitelstva v `data/ciselniky/zastupitelstva.json`.
+  CSV se středníkem ve Windows-1250.
+- **Speciální výměnný formát RÚIAN `ST_UVOH`**
+  (`vdp.cuzk.cz/vymenny_format/specialni/<YYYYMMDD>_ST_UVOH.xml.zip`),
+  hranice a definiční body všech okrsků v ČR. Vzniká ke 3. dni v měsíci;
+  skript si poslední vydání najde sám, `--datum 20260903` ho vynutí.
+
+Výstup v `data/okrsky/` (asi 9 MB, commituje se):
+
+| Soubor | Co v něm je |
+|---|---|
+| `prehled.json` | 1 120 okrsků: číslo, městská část, střed, počet adres, poznámka z RÚIAN |
+| `adresy/<mč>.json` | každé adresní místo městské části jako `[číslo domu, okrsek, kód ADM, lat, lon]`, seskupené po ulicích |
+| `hranice/<mč>.geojson` | polygony okrsků ve WGS84, vlastnosti `cislo`, `kod`, `mestskaCast` |
+
+Souřadnice převádí `src/lib/krovak.ts` (S-JTSK → WGS84, Helmert EPSG:1623)
+a test je drží na dvacet centimetrů od hodnot, které pro tytéž body vrací
+prohlížecí služba ČÚZK. Geometrický server hl. m. Prahy používá hrubší
+tříparametrovou transformaci, která je proti tomu posunutá asi o deset
+metrů — proto se s ním neporovnáváme.
+
+Vyhledání okrsku podle adresy dělá `najdiAdresu` v `src/lib/okrsky.ts`:
+ulice se porovnává celá bez diakritiky, číslo domu se zkouší jako
+popisné/orientační, samotné orientační i samotné popisné, a víc shod se
+vrátí všechny — rozhodnout musí čtenář, ne kód. Import ověřuje, že počet
+okrsků v adresách i v hranicích sedí na číselník ČSÚ (1 120), a vypíše
+adresy, které RÚIAN řadí do okrsku jiné městské části (k 7. 9. 2026 jedna:
+Měchnovská 2426/6 v Praze 11 patří do okrsku 10064).
+
+**Adresy volebních místností** v datech ČÚZK nejsou. Píšou se ručně podle
+„Oznámení o době a místě konání voleb" do `content/volebni-mistnosti/<mč>.yaml`,
+jeden soubor na městskou část:
+
+```yaml
+mestskaCast: praha-7
+overeno: 2026-09-25
+volby: komunalni-2026        # nebo `drivejsi`, dokud oznámení 2026 nevyšlo
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb, ÚMČ Praha 7"
+  url: "https://www.praha7.cz/..."
+  vyveseno: 2026-09-24
+mistnosti:
+  - nazev: "ZŠ Strossmayerovo náměstí"
+    adresa: "Strossmayerovo nám. 990/4, Praha 7"
+    okrsky: [7001, 7002]
+    bezbarierova: true
+```
+
+Build spadne, když je okrsek uvedený dvakrát nebo nepatří do rozsahu dané
+městské části. Praha 9 si adresy místností zapisuje přímo do RÚIAN jako
+poznámku k okrsku; `src/lib/mistnosti.ts` je nabídne jako záložní zdroj
+s nálepkou, že to není oznámení pro rok 2026. Redakční soubor má vždy přednost.
 
 ## Anketa čtenářů — co je potřeba dozapnout
 
@@ -106,7 +175,8 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 **Hotovo:** skelet a datový model, import z ČSÚ, číselník 57 MČ, stránky všech
 městských částí, metodika, `/kde-volim` fáze 1, CI, anketa čtenářů,
 kompetenční matice (`/kdo-o-cem-rozhoduje`), rozpočtový rámec
-(`/rozpoctovy-ramec`), profily všech 24 kandidátek do ZHMP, prvních osm
+(`/rozpoctovy-ramec`), datová vrstva volebních okrsků (`pnpm import:okrsky`,
+`data/okrsky/`), profily všech 24 kandidátek do ZHMP, prvních osm
 hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých městských
 částech se senátor letos vůbec nevolí, a rozbor plnění programového prohlášení
 rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.

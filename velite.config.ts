@@ -8,6 +8,7 @@ import {
   ZAVER,
 } from './src/lib/hodnoceni'
 import { ID_OKRUHU } from './src/lib/okruhy'
+import ciselnikZastupitelstev from './data/ciselniky/zastupitelstva.json'
 
 /**
  * Schémata obsahu. Build musí spadnout na nevalidním obsahu — u jednoho vývojáře
@@ -782,6 +783,77 @@ const aktuality = defineCollection({
     .transform((data) => ({ ...data, url: `/aktualne/${data.slug}` })),
 })
 
+/**
+ * Volební místnosti podle „Oznámení o době a místě konání voleb" z úředních
+ * desek. Jeden soubor na městskou část. Schéma hlídá, že každý uvedený okrsek
+ * do té městské části opravdu patří (podle rozsahů z číselníku ČSÚ) a že není
+ * uvedený dvakrát — poslat voliče do špatné místnosti je nejhorší chyba,
+ * kterou tahle stránka může udělat.
+ */
+const rozsahyOkrskuPodleSlugu = new Map(
+  ciselnikZastupitelstev.zastupitelstva
+    .filter((z) => !z.jeMagistrat)
+    .map((z) => [z.slug, z.rozsahyOkrsku] as const),
+)
+
+const volebniMistnosti = defineCollection({
+  name: 'VolebniMistnosti',
+  pattern: 'volebni-mistnosti/**/*.yaml',
+  schema: s
+    .object({
+      mestskaCast: s.string().min(1),
+      overeno: s.isodate(),
+      /** Oznámení pro rok 2026, nebo údaj z dřívějších voleb, který se do 24. 9. může změnit. */
+      volby: s.enum(['komunalni-2026', 'drivejsi']),
+      zdroj: s.object({
+        nazev: s.string().min(1),
+        url: url,
+        vyveseno: s.isodate().optional(),
+      }),
+      mistnosti: s
+        .array(
+          s.object({
+            nazev: s.string().min(1),
+            adresa: s.string().min(1),
+            okrsky: s.array(s.number().int().positive()).min(1),
+            bezbarierova: s.boolean().optional(),
+            poznamka: s.string().min(1).optional(),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const rozsahy = rozsahyOkrskuPodleSlugu.get(data.mestskaCast)
+      if (!rozsahy) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `Městská část "${data.mestskaCast}" není v číselníku zastupitelstev.`,
+        })
+        return
+      }
+      const videne = new Set<number>()
+      for (const m of data.mistnosti) {
+        for (const okrsek of m.okrsky) {
+          if (!rozsahy.some((r) => okrsek >= r.od && okrsek <= r.do)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Okrsek ${okrsek} nepatří do městské části "${data.mestskaCast}" (rozsahy ${rozsahy
+                .map((r) => `${r.od}–${r.do}`)
+                .join(', ')}).`,
+            })
+          }
+          if (videne.has(okrsek)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Okrsek ${okrsek} je v "${data.mestskaCast}" přiřazený dvěma místnostem.`,
+            })
+          }
+          videne.add(okrsek)
+        }
+      }
+    }),
+})
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -805,5 +877,6 @@ export default defineConfig({
     pruzkumy,
     postoje,
     aktuality,
+    volebniMistnosti,
   },
 })
