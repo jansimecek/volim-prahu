@@ -1,0 +1,87 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků pro volby do zastupitelstev obcí a Senátu 2026 (starosta Bc. Lukáš Herold), ÚMČ Praha 5, č. j. MC05 343562/2026, vyvěšeno 17. 8. 2026 na elektronické úřední desce. U okrsku 5047 zdroj uvádí překlep „Kudmova“, sloučeno s 5046 (Kudrnova 235/1a).
+mestskaCast: praha-5
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků pro volby do zastupitelstev obcí a Senátu Parlamentu ČR v roce 2026, ÚMČ Praha 5"
+  url: "https://eud.praha5.cz/pub/deska/13000002/MC05AWO0A02N/MC050B9AHPUX%230/MC050B9AHPUX/Informace%20o%20po%C4%8Dtu%20a%20s%C3%ADdlech%20volebn%C3%ADch%20okrsk%C5%AF.pdf"
+  vyveseno: 2026-08-17
+mistnosti:
+  - nazev: "Gymnázium Christiana Dopplera"
+    adresa: "Zborovská 621/45, Praha 5"
+    okrsky: [5001, 5002, 5003]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "Kořenského 760/10, Praha 5"
+    okrsky: [5004, 5005, 5006, 5007, 5008]
+  - nazev: "Fakultní základní škola s rozšířenou výukou jazyků při PedF UK"
+    adresa: "Drtinová 1861/1, Praha 5"
+    okrsky: [5009, 5010, 5011, 5012, 5013, 5016]
+  - nazev: "Úřad městské části Praha 5"
+    adresa: "Nám. 14. října 1381/4, Praha 5"
+    okrsky: [5014, 5015]
+  - nazev: "Mateřská škola"
+    adresa: "U Železničního mostu 2629/4, Praha 5"
+    okrsky: [5017]
+  - nazev: "Česká správa sociálního zabezpečení"
+    adresa: "Křížová 1292/25, Praha 5"
+    okrsky: [5018, 5019]
+  - nazev: "Střední škola, Základní škola a Mateřská škola pro sluchově postižené"
+    adresa: "Výmolová 169/2, Praha 5"
+    okrsky: [5020]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "Radlická 115/140, Praha 5"
+    okrsky: [5021, 5022, 5023]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "U Santošky 1007/1, Praha 5"
+    okrsky: [5024, 5025, 5026, 5027, 5028, 5029]
+  - nazev: "Vysoká škola zdravotnická, o.p.s."
+    adresa: "Duškova 1094/7, Praha 5"
+    okrsky: [5030, 5031]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "Grafická 1060/13, Praha 5"
+    okrsky: [5032, 5033, 5034]
+  - nazev: "Základní škola"
+    adresa: "Podbělohorská 720/26, Praha 5"
+    okrsky: [5035, 5036, 5037, 5038, 5039]
+  - nazev: "Komunitní centrum"
+    adresa: "Holečkova 668/38, Praha 5"
+    okrsky: [5040, 5041]
+  - nazev: "Mateřská škola"
+    adresa: "Podbělohorská 2185/1, Praha 5"
+    okrsky: [5042, 5043]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "Weberova 1090/1, Praha 5"
+    okrsky: [5044, 5045]
+  - nazev: "Mateřská škola"
+    adresa: "Kudrnova 235/1 a, Praha 5"
+    okrsky: [5046, 5047]
+  - nazev: "Základní škola"
+    adresa: "Nepomucká 139/1, Praha 5"
+    okrsky: [5048, 5049, 5050, 5051, 5052]
+  - nazev: "Základní škola"
+    adresa: "Beníškové 1258/1, Praha 5"
+    okrsky: [5053, 5054, 5055]
+  - nazev: "Základní umělecká škola"
+    adresa: "Na Popelce 1/18, Praha 5"
+    okrsky: [5056, 5057]
+  - nazev: "Mateřská škola"
+    adresa: "Peroutkova 1004/24, Praha 5"
+    okrsky: [5058, 5059, 5060]
+  - nazev: "Tyršova základní škola a mateřská škola"
+    adresa: "U Tyršovy školy 430/1, Praha 5"
+    okrsky: [5061, 5062, 5063]
+  - nazev: "Základní škola pro žáky se specifickými poruchami chování"
+    adresa: "Na Zlíchově 254/19, Praha 5"
+    okrsky: [5064]
+  - nazev: "Mateřská škola"
+    adresa: "Hlubočepská 90/40, Praha 5"
+    okrsky: [5065]
+  - nazev: "Mateřská škola"
+    adresa: "Kurandové 669/8, Praha 5"
+    okrsky: [5066]
+  - nazev: "Základní škola a mateřská škola"
+    adresa: "Chaplinovo nám. 615/1, Praha 5"
+    okrsky: [5067, 5068, 5069, 5070, 5071, 5072, 5073, 5074, 5075]
+  - nazev: "Fakultní základní škola a mateřská škola Barrandov II při PedF UK Praha"
+    adresa: "V Remízku 919/7, Praha 5"
+    okrsky: [5076, 5077, 5078, 5079, 5080, 5081]

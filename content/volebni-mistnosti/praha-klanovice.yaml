@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků na k. ú. MČ Praha-Klánovice, ÚMČ Praha-Klánovice, vyvěšeno 20. 8. 2026
+mestskaCast: praha-klanovice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků na k. ú. MČ Praha-Klánovice pro volby 9.–10. 10. 2026, ÚMČ Praha-Klánovice"
+  url: "https://www.praha-klanovice.cz/e_download.php?file=/data/uredni_deska/obsah2990_2.pdf&original=Informace%20o%20po%C4%8Dtu%20VO.pdf"
+  vyveseno: 2026-08-20
+mistnosti:
+  - nazev: "Masarykova základní škola Praha-Klánovice"
+    adresa: "Slavětínská 200, 190 14 Praha-Klánovice"
+    okrsky: [32001, 32002]

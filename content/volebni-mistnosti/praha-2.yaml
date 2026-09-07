@@ -1,0 +1,42 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků, starosta MČ Praha 2, 24. 8. 2026, vyvěšeno na úřední desce 25. 8. 2026 (skenované PDF; zdroj uvádí jen orientační čísla)
+mestskaCast: praha-2
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků, MČ Praha 2 (starosta), 24. 8. 2026"
+  url: "https://www.praha2.cz/file/4270758"
+  vyveseno: 2026-08-25
+mistnosti:
+  - nazev: "ZŠ Londýnská"
+    adresa: "Londýnská 34, Praha 2"
+    okrsky: [2001, 2002]
+  - nazev: "ZŠ Na Smetance"
+    adresa: "Na Smetance 1, Praha 2"
+    okrsky: [2003, 2004, 2005]
+  - nazev: "ZŠ Sázavská"
+    adresa: "Sázavská 5, Praha 2"
+    okrsky: [2006, 2007, 2008, 2009, 2010, 2011]
+  - nazev: "OA Vinohradská"
+    adresa: "Vinohradská 38, Praha 2"
+    okrsky: [2012, 2013, 2014]
+  - nazev: "ZŠ Kladská"
+    adresa: "Kladská 1, Praha 2"
+    okrsky: [2015, 2016, 2017]
+  - nazev: "SŠO Belgická"
+    adresa: "Belgická 29, Praha 2"
+    okrsky: [2018, 2019, 2020]
+  - nazev: "ZŠ Jana Masaryka"
+    adresa: "Jana Masaryka 21, Praha 2"
+    okrsky: [2021, 2022, 2023, 2024]
+  - nazev: "ZŠ Křesomyslova"
+    adresa: "Křesomyslova 724, Praha 2"
+    okrsky: [2025, 2026, 2027, 2028, 2029]
+  - nazev: "Gymnázium Botičská"
+    adresa: "Botičská 1, Praha 2"
+    okrsky: [2030, 2031, 2032, 2033, 2034]
+  - nazev: "ZŠ Štěpánská"
+    adresa: "Štěpánská 8, Praha 2"
+    okrsky: [2035, 2036, 2037, 2038]
+  - nazev: "ZŠ Resslova"
+    adresa: "Resslova 10, Praha 2"
+    okrsky: [2039, 2040, 2041]

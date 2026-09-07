@@ -1,0 +1,17 @@
+# Zdroj: Počet a sídlo volebních okrsků – Volby do zastupitelstev obcí 9. a 10. 10. 2026, starosta MČ Praha-Čakovice, 20. 8. 2026
+mestskaCast: praha-cakovice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Počet a sídlo volebních okrsků – Volby do zastupitelstev obcí konané ve dnech 09. a 10. října 2026, ÚMČ Praha-Čakovice"
+  url: "https://www.cakovice.cz/file/kqe1/2-poskytnuti-informace-o-poctu-a-sidle-volebnich-okrsku-GDPR.pdf"
+mistnosti:
+  - nazev: "ZŠ Dr. Edvarda Beneše"
+    adresa: "Jizerská 816, Čakovice"
+    okrsky: [26001, 26002, 26003, 26006, 26007, 26008]
+  - nazev: "Restaurace Maximum – sál"
+    adresa: "Slaviborské nám. 20/1, Třeboradice"
+    okrsky: [26004]
+  - nazev: "Hasičská zbrojnice"
+    adresa: "Na Kačence 401/6a, Miškovice"
+    okrsky: [26005]

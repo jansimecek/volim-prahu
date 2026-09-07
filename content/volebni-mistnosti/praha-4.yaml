@@ -1,0 +1,114 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků v Městské části Praha 4 (starosta Ing. Ondřej Kubín, MBA), ÚMČ Praha 4, vyvěšeno 24. 8. 2026 na elektronické úřední desce (detailId=23553); skenované PDF bez textové vrstvy, přepsáno OCR a zkontrolováno proti obrazu stránek.
+mestskaCast: praha-4
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků v Městské části Praha 4 pro volby do zastupitelstev 9.–10. 10. 2026, ÚMČ Praha 4"
+  url: "https://cztedeskaext.praha4.cz/eDeska/download.jsp?idPriloha=46584"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "Základní škola"
+    adresa: "Táborská 421/45, Nusle, Praha 4"
+    okrsky: [4001, 4002, 4003, 4005, 4006]
+  - nazev: "Úřad MČ Praha 4"
+    adresa: "Táborská 500/30, Nusle, Praha 4"
+    okrsky: [4004, 4007, 4008, 4009, 4010]
+  - nazev: "Základní škola"
+    adresa: "Mendíků 1000/2, Michle, Praha 4"
+    okrsky: [4011, 4012, 4032, 4033, 4034]
+  - nazev: "Základní škola"
+    adresa: "Sdružení 1080/2a, Nusle, Praha 4"
+    okrsky: [4013, 4014, 4015, 4016, 4017, 4018, 4019]
+  - nazev: "Mateřská škola Táborská"
+    adresa: "Táborská 122/19, Nusle, Praha 4"
+    okrsky: [4020]
+  - nazev: "Gymnázium"
+    adresa: "Na Vítězné pláni 1160/1, Nusle, Praha 4"
+    okrsky: [4021, 4022, 4023]
+  - nazev: "Vysoká škola kreativní komunikace"
+    adresa: "Na Pankráci 420/54, Nusle, Praha 4"
+    okrsky: [4024, 4025, 4026]
+  - nazev: "Základní škola"
+    adresa: "Plamínkové 1593/2, Nusle, Praha 4"
+    okrsky: [4027, 4028, 4029, 4030, 4031]
+  - nazev: "Základní škola"
+    adresa: "Ohradní 1366/49, Michle, Praha 4"
+    okrsky: [4035, 4036, 4037, 4038, 4039]
+  - nazev: "Základní škola"
+    adresa: "Na Líše 936/16, Michle, Praha 4"
+    okrsky: [4040, 4041, 4042, 4043]
+  - nazev: "Gymnázium"
+    adresa: "Budějovická 680/17, Michle, Praha 4"
+    okrsky: [4044, 4045, 4046, 4078, 4079]
+  - nazev: "Základní škola"
+    adresa: "Bítovská 1246/1, Michle, Praha 4"
+    okrsky: [4047, 4048, 4049]
+  - nazev: "Základní škola"
+    adresa: "Na Chodovci 2700/54, Záběhlice, Praha 4"
+    okrsky: [4050, 4051, 4052, 4053]
+  - nazev: "Gymnázium"
+    adresa: "Postupická 3150/4, Záběhlice, Praha 4"
+    okrsky: [4054, 4055, 4056, 4057, 4058]
+  - nazev: "Základní škola"
+    adresa: "Jižní IV. 1750/10, Záběhlice, Praha 4"
+    okrsky: [4059, 4060, 4061, 4062, 4063]
+  - nazev: "První jazyková základní škola"
+    adresa: "Horáčkova 1100/14, Krč, Praha 4"
+    okrsky: [4064, 4065, 4066, 4067, 4068]
+  - nazev: "Základní škola"
+    adresa: "Poláčkova 1067/3, Krč, Praha 4"
+    okrsky: [4069, 4070, 4071, 4072, 4073, 4074]
+  - nazev: "Základní škola"
+    adresa: "Na Planině 1393/13, Krč, Praha 4"
+    okrsky: [4075, 4076, 4077]
+  - nazev: "Krčská mateřská škola"
+    adresa: "Kukučínova 1150/3, Krč, Praha 4"
+    okrsky: [4080]
+  - nazev: "Gymnázium a Základní škola, NOVÝ PORG"
+    adresa: "Pod Krčským lesem 1300/25, Krč, Praha 4"
+    okrsky: [4081]
+  - nazev: "Základní škola U Krčského lesa"
+    adresa: "Jánošíkova 1320/2, Krč, Praha 4"
+    okrsky: [4082, 4084, 4085, 4086, 4087, 4088, 4089, 4090]
+  - nazev: "Dětské integrační centrum a mateřská škola, s.r.o"
+    adresa: "Hurbanova 1285/14, Krč, Praha 4"
+    okrsky: [4083]
+  - nazev: "Kulturní dům TEMPO"
+    adresa: "Vzdušná 564/8, Lhotka, Praha 4"
+    okrsky: [4091, 4094]
+  - nazev: "Mateřská škola Alšovy sady"
+    adresa: "Na Větrově 1022/22, Lhotka, Praha 4"
+    okrsky: [4092, 4093]
+  - nazev: "Základní škola"
+    adresa: "Filosofská 1166/3, Braník, Praha 4"
+    okrsky: [4095, 4096, 4128]
+  - nazev: "Základní škola"
+    adresa: "Nedvědovo náměstí 140/13, Podolí, Praha 4"
+    okrsky: [4097, 4098, 4099, 4100, 4101, 4102, 4103]
+  - nazev: "Základní škola Jeremenkova"
+    adresa: "Jeremenkova 1003/66a, Braník, Praha 4"
+    okrsky: [4104, 4105, 4109, 4110]
+  - nazev: "Škola Kavčí hory"
+    adresa: "K Sídlišti 840/2, Podolí, Praha 4"
+    okrsky: [4106, 4107, 4108]
+  - nazev: "Akademie řemesel Praha - Střední škola technická"
+    adresa: "Zelený Pruh 1294/54, Krč, Praha 4"
+    okrsky: [4111, 4112]
+  - nazev: "Základní škola"
+    adresa: "Školní 700/5, Braník, Praha 4"
+    okrsky: [4113, 4114, 4116, 4118]
+  - nazev: "Mateřská škola Trojlístek"
+    adresa: "Bezová 1592/4, Braník, Praha 4"
+    okrsky: [4115, 4117]
+  - nazev: "Základní škola"
+    adresa: "Jitřní 185/6, Hodkovičky, Praha 4"
+    okrsky: [4119, 4121, 4129, 4130, 4131]
+  - nazev: "Střední škola gastronomická a hotelová s.r.o."
+    adresa: "Vrbova 1233/34, Braník, Praha 4"
+    okrsky: [4120]
+  - nazev: "Základní škola"
+    adresa: "Jílovská 1100/16, Braník, Praha 4"
+    okrsky: [4122, 4123, 4124, 4125, 4126, 4127]
+  - nazev: "Úřad MČ Praha 4"
+    adresa: "Antala Staška 2059/80b, Krč, Praha 4"
+    okrsky: [4132]

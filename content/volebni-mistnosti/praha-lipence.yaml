@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků na území MČ Praha-Lipence pro volby konané 9. a 10. 10. 2026, ÚMČ Praha-Lipence, č.j. 1691/8-2026, 18. 8. 2026
+mestskaCast: praha-lipence
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků v MČ Praha-Lipence pro volby 2026, ÚMČ Praha-Lipence"
+  url: "https://www.praha-lipence.cz/e_download.php?file=/data/uredni_deska/obsah2035_1.pdf&original=1691%20-%20Informace%20o%20po%C4%8Dtu%20volebn%C3%ADch%20okrsk%C5%AF.pdf"
+  vyveseno: 2026-08-18
+mistnosti:
+  - nazev: "Jídelna Základní školy Praha-Lipence"
+    adresa: "Černošická 168, Praha 5 - Lipence"
+    okrsky: [39001]

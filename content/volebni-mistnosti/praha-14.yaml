@@ -1,0 +1,51 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků pro volby do ZMČ Praha 14, ZHMP a Senátu PČR v roce 2026, ÚMČ Praha 14 (starosta), vyvěšeno 25. 8. 2026
+mestskaCast: praha-14
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků pro volby do Zastupitelstva městské části Praha 14, Zastupitelstva hlavního města Prahy a Senátu Parlamentu České republiky v roce 2026, ÚMČ Praha 14"
+  url: "https://edeska.praha14.cz/eDeska/download.jsp?idPriloha=46609"
+  vyveseno: 2026-08-25
+mistnosti:
+  - nazev: "ZŠ Šimanovská"
+    adresa: "Šimanovská 16, Kyje, 198 00 Praha 14"
+    okrsky: [14001, 14024]
+  - nazev: "ZŠ Hloubětín"
+    adresa: "Hloubětínská 700/24, Hloubětín, 198 00 Praha 14"
+    okrsky: [14002, 14003]
+  - nazev: "ZŠ Tolerance"
+    adresa: "Mochovská 570/41, Hloubětín, 198 00 Praha 14"
+    okrsky: [14004, 14005, 14006, 14007]
+  - nazev: "ZŠ Chvaletická, dolní budova"
+    adresa: "Rochovská 691/14, Hloubětín, 198 00 Praha 14"
+    okrsky: [14008, 14009]
+  - nazev: "ZŠ Chvaletická"
+    adresa: "Chvaletická 918/3, Hloubětín, 198 00 Praha 14"
+    okrsky: [14010, 14011]
+  - nazev: "ZŠ Bratří Venclíků"
+    adresa: "Bratří Venclíků 1140/1, Černý Most, 198 00 Praha 14"
+    okrsky: [14012, 14013, 14014, 14015]
+  - nazev: "ZŠ Generála Janouška"
+    adresa: "Dygrýnova 1006/21, Černý Most, 198 00 Praha 14"
+    okrsky: [14016, 14017, 14018]
+  - nazev: "ZŠ Vybíralova"
+    adresa: "Vybíralova 964/8, Černý Most, 198 00 Praha 14"
+    okrsky: [14019, 14020, 14021, 14029, 14030]
+  - nazev: "SŠ podnikání a gastronomie (Pramen)"
+    adresa: "Za Černým mostem 362/3, Hloubětín, 198 00 Praha 14"
+    okrsky: [14022, 14032]
+  - nazev: "Restaurace U rybníka"
+    adresa: "Tálínská 1312, Kyje, 198 00 Praha 14"
+    okrsky: [14023]
+  - nazev: "Hospoda Šuplík"
+    adresa: "Hamerská 1307, Kyje, 198 00 Praha 14"
+    okrsky: [14025]
+  - nazev: "TJ Sokol Jahodnice"
+    adresa: "Bezdrevská 26, Hostavice, 198 00 Praha 14"
+    okrsky: [14026, 14027]
+  - nazev: "Zámek Hostavice"
+    adresa: "Pilská 9, Hostavice, 198 00 Praha 14"
+    okrsky: [14028]
+  - nazev: "Galerie 14"
+    adresa: "nám. Plukovníka Vlčka 686/11, Černý Most, 198 00 Praha 14"
+    okrsky: [14031]

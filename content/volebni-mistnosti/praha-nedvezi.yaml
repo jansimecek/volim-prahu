@@ -1,0 +1,12 @@
+# Zdroj: Informace pro občany o počtu a sídle volebních okrsků zřízených na území MČ Praha-Nedvězí pro volby 9.–10. 10. 2026, MČ Praha-Nedvězí, vyvěšeno 16. 7. 2026
+mestskaCast: praha-nedvezi
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků zřízených na území MČ Praha-Nedvězí, MČ Praha-Nedvězí"
+  url: "https://www.mcnedvezi.cz/e_download.php?file=/data/uredni_deska/obsah1049_1.pdf&original=2026%20-%20Informace_volebn%C3%AD%20okrsky.pdf"
+  vyveseno: 2026-07-16
+mistnosti:
+  - nazev: "Úřad městské části Praha-Nedvězí"
+    adresa: "Únorová 15/3, Praha - Nedvězí"
+    okrsky: [43001]

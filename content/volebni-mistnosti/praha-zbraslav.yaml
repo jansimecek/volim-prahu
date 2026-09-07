@@ -1,0 +1,30 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků v MČ Praha-Zbraslav, starostka MČ Praha-Zbraslav, 20. 8. 2026, zveřejněno 21. 8. 2026
+mestskaCast: praha-zbraslav
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků v MČ Praha-Zbraslav, MČ Praha-Zbraslav"
+  url: "https://www.mc-zbraslav.cz/assets/File.ashx?id_org=80134&id_dokumenty=18802"
+  vyveseno: 2026-08-21
+mistnosti:
+  - nazev: "Základní škola Vladislava Vančury"
+    adresa: "Hauptova 591, Praha-Zbraslav"
+    okrsky: [56001]
+    bezbarierova: false
+  - nazev: "Hasičská zbrojnice"
+    adresa: "Žitavského 571, Praha-Zbraslav"
+    okrsky: [56002]
+    bezbarierova: true
+  - nazev: "Základní škola Vladislava Vančury"
+    adresa: "Nad Parkem 1180, Praha-Zbraslav"
+    okrsky: [56003, 56006, 56007, 56008, 56009]
+    bezbarierova: true
+    poznamka: "Bezbariérový přístup plošinou pro vozíčkáře"
+  - nazev: "Výzkumný ústav monitoringu a ochrany půdy"
+    adresa: "Žabovřeská 250, Praha-Zbraslav"
+    okrsky: [56004, 56005]
+    bezbarierova: false
+  - nazev: "Objekt č.p. 125"
+    adresa: "Strakonická 125, Praha-Lahovice"
+    okrsky: [56010]
+    bezbarierova: false

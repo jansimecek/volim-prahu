@@ -40,6 +40,51 @@ test('kde volím vysvětluje pravidlo o voličských průkazech', async ({ page 
   await expect(page.getByText(/voličské průkazy nevydávají/i)).toBeVisible()
 })
 
+/**
+ * Vyhledávač adresa → okrsek. Partyzánská 18/23 je v Praze 7 a patří do
+ * okrsku 7001 podle sestav ČÚZK; kdyby se to změnilo, změní se i data
+ * v repu a test to ukáže, ne čtenář.
+ */
+test('vyhledávač najde okrsek podle ulice a orientačního čísla', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('partyzanska')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('23')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText('Volební okrsek 7001')).toBeVisible()
+  await expect(page.getByText('Partyzánská 18/23 · Praha 7')).toBeVisible()
+  const mapa = page.getByRole('region', { name: 'Mapa volebního okrsku 7001' })
+  await expect(mapa).toBeVisible()
+  // Hranice se kreslí z našich dat, ne z cizího serveru — musí být vidět i bez sítě.
+  await expect(mapa.locator('.leaflet-overlay-pane path').first()).toBeAttached()
+  await expect(page.getByText(/hranice okrsku 7001 podle RÚIAN/)).toBeVisible()
+})
+
+/**
+ * Praha 9 má místnosti z dokumentu 2026 v content/volebni-mistnosti; z adresy
+ * se při buildu dohledá poloha v registru ČÚZK, takže výsledek nese
+ * vzdálenost a mapa značku místnosti. Zdroj musí být čtenáři označený.
+ */
+test('u známé místnosti ukáže vzdálenost a značku na mapě', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('Malá Skloněná')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('2')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText('Volební okrsek 9001')).toBeVisible()
+  await expect(page.getByText(/Novovysočanská 501\/5/)).toBeVisible()
+  await expect(page.getByText(/Vzdušnou čarou asi \d+ m od vaší adresy/)).toBeVisible()
+  await expect(page.getByText(/k volbám 2026/i).first()).toBeVisible()
+  const mapa = page.getByRole('region', { name: 'Mapa volebního okrsku 9001' })
+  await expect(mapa.locator('.leaflet-marker-icon')).toHaveCount(1)
+})
+
+test('vyhledávač neznámou ulici nedomýšlí', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('Neexistující')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('1')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText(/jsme v Praze nenašli/)).toBeVisible()
+})
+
 test('každá stránka má funkční přeskočení na obsah', async ({ page }) => {
   await page.goto('/')
   await page.keyboard.press('Tab')

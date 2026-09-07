@@ -1,0 +1,48 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků, ÚMČ Praha 11 (starosta), vydáno 8. 7. 2026, vyvěšeno 9. 7. 2026
+mestskaCast: praha-11
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva MČ Praha 11, ÚMČ Praha 11"
+  url: "https://www.praha11.cz/filemanager/files/file.php?file=68736792"
+  vyveseno: 2026-07-09
+mistnosti:
+  - nazev: "ZŠ Mendelova"
+    adresa: "Mendelova 550, Praha 11"
+    okrsky: [11005, 11006, 11009, 11010, 11011]
+  - nazev: "ZŠ a SŠ Kupeckého"
+    adresa: "Kupeckého 576, Praha 11"
+    okrsky: [11007, 11008, 11018, 11032]
+  - nazev: "ZŠ s RvJ K Milíčovu"
+    adresa: "K Milíčovu 674, Praha 11"
+    okrsky: [11012, 11013, 11014, 11015, 11016, 11017]
+  - nazev: "ZŠ Ke Kateřinkám"
+    adresa: "Ke Kateřinkám 1400, Praha 11"
+    okrsky: [11019, 11020, 11021, 11022, 11023, 11024, 11025]
+  - nazev: "Gymnázium Opatov"
+    adresa: "Konstantinova 1500, Praha 11"
+    okrsky: [11026, 11027, 11028, 11029, 11030, 11031]
+  - nazev: "ZŠ Mikulova"
+    adresa: "Mikulova 1594, Praha 11"
+    okrsky: [11033, 11034, 11035, 11036]
+  - nazev: "ZŠ Květnového vítězství"
+    adresa: "Květnového vítězství 1554, Praha 11"
+    okrsky: [11001, 11002, 11003, 11004, 11037, 11038, 11039, 11040]
+  - nazev: "ZŠ a MŠ Chodov"
+    adresa: "Květnového vítězství 57, Praha 11"
+    okrsky: [11041, 11043, 11045, 11046]
+    # V ulici je 57 popisné (57/17, adresní místo ZŠ a MŠ Chodov) i orientační (2367/57).
+    # Zdroj Prahy 11 uvádí všude čísla popisná; poloha je adresní místo 57/17 z RÚIAN.
+    poloha: { lat: 50.033937, lon: 14.505123 }
+  - nazev: "ZŠ Donovalská"
+    adresa: "Donovalská 1684, Praha 11"
+    okrsky: [11042, 11044, 11047, 11048]
+  - nazev: "TOP HOTEL Praha"
+    adresa: "Blažimská 1781, Praha 11"
+    okrsky: [11049, 11050]
+  - nazev: "ZŠ Campanus"
+    adresa: "Jírovcovo nám. 1782, Praha 11"
+    okrsky: [11051, 11052, 11053, 11054, 11055]
+  - nazev: "ZŠ Pošepného nám."
+    adresa: "Pošepného nám. 2022, Praha 11"
+    okrsky: [11056, 11057, 11058, 11059, 11060, 11061, 11062]

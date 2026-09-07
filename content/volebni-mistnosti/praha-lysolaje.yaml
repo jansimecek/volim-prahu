@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu členů zastupitelstva MČ Praha-Lysolaje, o počtu volebních obvodů a počtu a sídle volebních okrsků pro volební období 2026-2030, ÚMČ Praha-Lysolaje, 13. 7. 2026 (skenovaný PDF)
+mestskaCast: praha-lysolaje
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu členů zastupitelstva MČ Praha-Lysolaje, o počtu volebních obvodů a počtu a sídle volebních okrsků, ÚMČ Praha-Lysolaje"
+  url: "https://www.praha-lysolaje.cz/sites/default/files/uredni_deska/2026/07/informace_o_poctu_clenu_zmc.pdf"
+  vyveseno: 2026-07-13
+mistnosti:
+  - nazev: "Budova Sokolovny"
+    adresa: "Horní náměstí 424/10, Praha-Lysolaje"
+    okrsky: [41001]

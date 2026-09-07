@@ -26,6 +26,7 @@
     "import:desky": "tsx scripts/import-uredni-desky.ts",
     "nacvik": "tsx scripts/nacvik-volebni-noc.ts",
     "import:senat": "tsx scripts/import-senat.ts",
+    "import:okrsky": "tsx scripts/import-okrsky.ts",
     "obrazek": "tsx scripts/nahraj-obrazek.ts"
   },
   "dependencies": {
@@ -33,6 +34,7 @@
     "@vercel/blob": "^2.8.0",
     "fast-xml-parser": "^5.11.0",
     "fflate": "^0.8.3",
+    "leaflet": "^1.9.4",
     "minisearch": "^7.2.0",
     "next": "^16.3.2",
     "postgres": "^3.4.9",
@@ -44,6 +46,7 @@
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.56.0",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/leaflet": "^1.9.22",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",

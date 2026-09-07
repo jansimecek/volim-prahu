@@ -1,0 +1,13 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků, starosta MČ Praha-Březiněves, 19. 8. 2026 (na úřední desce od 19. 8. 2026)
+mestskaCast: praha-brezineves
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva MČ Praha-Březiněves a Zastupitelstva hl. m. Prahy 9.–10. 10. 2026, ÚMČ Praha-Březiněves"
+  url: "https://brezineves.cz/upload/1787130258_3.%20Informace%20o%20po%C4%8Dtu%20a%20s%C3%ADdle%20volebn%C3%ADch%20okrsk%C5%AF%20v%20M%C4%8CB.pdf"
+  vyveseno: 2026-08-19
+mistnosti:
+  - nazev: "Budova B objektu CZSSB"
+    adresa: "Na Hlavní 14/41, 182 00 Praha 8 – Březiněves"
+    okrsky: [25001]
+    poznamka: "Budova B objektu CZSSB (Centrum zdravotních a sociálních služeb Březiněves)"

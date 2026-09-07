@@ -1,0 +1,21 @@
+# Zdroj: Oznámení o době a místě konání voleb do Zastupitelstva MČ Praha-Zličín a Zastupitelstva hl. m. Prahy 9.–10. 10. 2026, ÚMČ Praha-Zličín, č.j. 1740/2026/Zlic/KUMC/KKol, 21. 7. 2026, vyvěšeno 22. 7. 2026
+mestskaCast: praha-zlicin
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do Zastupitelstva MČ Praha-Zličín a Zastupitelstva hl. m. Prahy 2026, ÚMČ Praha-Zličín"
+  url: "https://mczlicin.galileo-smartcity.cz/e_download.php?file=/data/uredni_deska/obsah321_1.pdf&original=1._oznameni_o_dobe_a_miste_konani_voleb.pdf"
+  vyveseno: 2026-07-22
+mistnosti:
+  - nazev: "Dům s pečovatelskou službou"
+    adresa: "Křivatcová 416, Praha - Zličín"
+    okrsky: [57001]
+  - nazev: "Základní škola a Mateřská škola"
+    adresa: "Nedašovská 328, Praha - Zličín"
+    okrsky: [57002, 57005]
+  - nazev: "Základní škola a Mateřská škola"
+    adresa: "Míšovická 513/12, Praha - Zličín"
+    okrsky: [57003]
+  - nazev: "Restaurace Na Hrázi"
+    adresa: "Hostivická 95, Praha-Sobín"
+    okrsky: [57004]

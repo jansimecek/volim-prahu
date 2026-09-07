@@ -1,0 +1,12 @@
+# Zdroj: Informace o konání voleb a způsobu hlasování do Zastupitelstva MČ Praha-Suchdol a Zastupitelstva hl. m. Prahy konaných 9.–10. 10. 2026, ÚMČ Praha-Suchdol, srpen 2026
+mestskaCast: praha-suchdol
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o konání voleb a způsobu hlasování do Zastupitelstva MČ Praha-Suchdol a Zastupitelstva hl. m. Prahy 2026, ÚMČ Praha-Suchdol"
+  url: "https://praha-suchdol.cz/wp-content/uploads/2026/08/web_Informace-k-volbam-2026.pdf"
+mistnosti:
+  - nazev: "Základní škola M. Alše"
+    adresa: "Suchdolská 360, Praha-Suchdol"
+    okrsky: [49001, 49002, 49003, 49004, 49005]
+    poznamka: "I. patro"

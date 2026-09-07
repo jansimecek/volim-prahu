@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídle volebního okrsku, starostka MČ Praha-Benice, 10. 8. 2026 (vyvěšeno 10. 8. 2026)
+mestskaCast: praha-benice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebního okrsku pro volby do zastupitelstev obcí 9.–10. 10. 2026, ÚMČ Praha-Benice"
+  url: "https://www.praha-benice.cz/e_download.php?file=/data/uredni_deska/obsah2001_1.pdf&original=260810%20Informace%20o%20po%C4%8Dtu%20a%20s%C3%ADdle%20volebn%C3%ADho%20okrsku.pdf"
+  vyveseno: 2026-08-10
+mistnosti:
+  - nazev: "Úřad městské části Praha-Benice"
+    adresa: "Květnového povstání 21, Praha 10"
+    okrsky: [24001]

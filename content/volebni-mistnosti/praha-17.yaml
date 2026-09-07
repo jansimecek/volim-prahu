@@ -1,0 +1,29 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků, ÚMČ Praha 17 (starostka), čj. S-ÚMČP17 007545/2026/OOS/Hos, vyvěšeno 4. 8. 2026
+mestskaCast: praha-17
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků pro volby do zastupitelstev obcí 9. a 10. října 2026, ÚMČ Praha 17"
+  url: "https://edeska.repy.cz/download.jsp?idPriloha=48448"
+  vyveseno: 2026-08-04
+mistnosti:
+  - nazev: "ÚMČ Praha 17"
+    adresa: "Žalanského 291/12b"
+    okrsky: [17001, 17002]
+    poznamka: "1. patro (okrsek 17001 zasedací místnost, 17002 obřadní síň)"
+  - nazev: "ZŠ genpor. Fr. Peřiny, pracoviště Laudova"
+    adresa: "Laudova 1024/10"
+    okrsky: [17003, 17005, 17006, 17007, 17008]
+    poznamka: "Okrsek 17003 přízemí (společenská místnost), ostatní 1. patro (družina)"
+  - nazev: "ZŠ Jana Wericha"
+    adresa: "Španielova 1111/19"
+    okrsky: [17004, 17009, 17010, 17015, 17016]
+    poznamka: "1. patro"
+  - nazev: "ZŠ genpor. Fr. Peřiny"
+    adresa: "Socháňova 1139/19"
+    okrsky: [17011, 17012, 17013, 17014, 17017]
+    poznamka: "Okrsek 17013 přízemí (společenská místnost), ostatní 1. patro"
+  - nazev: "Kulturní dům na Bílé Hoře"
+    adresa: "Ke Kulturnímu domu 439/14"
+    okrsky: [17018]
+    poznamka: "Přízemí"

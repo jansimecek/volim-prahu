@@ -1,0 +1,21 @@
+# Zdroj: Oznámení o době a místě konání voleb do Zastupitelstva hl. m. Prahy a Zastupitelstva městské části Praha 19, ÚMČ Praha 19, zn. 112/2026/OKS, vyvěšeno 2. 9. 2026
+mestskaCast: praha-19
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do Zastupitelstva hl. m. Prahy a Zastupitelstva městské části Praha 19, ÚMČ Praha 19"
+  url: "https://kbely.imunis.cz/edeska/file?id=90049"
+  vyveseno: 2026-09-02
+mistnosti:
+  - nazev: "ZŠ Albrechtická"
+    adresa: "Albrechtická 732"
+    okrsky: [19001, 19006]
+  - nazev: "Lidový dům"
+    adresa: "Toužimská 244"
+    okrsky: [19002, 19004]
+  - nazev: "DS"
+    adresa: "Mladoboleslavská 20"
+    okrsky: [19003]
+  - nazev: "KNAUF"
+    adresa: "Mladoboleslavská 949"
+    okrsky: [19005]

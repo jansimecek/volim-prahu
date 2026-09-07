@@ -1,0 +1,15 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků (č. j. 111/26), ÚMČ Praha-Běchovice, vyvěšeno 25. 8. 2026
+mestskaCast: praha-bechovice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva MČ Praha-Běchovice a Zastupitelstva hl. m. Prahy 9.–10. 10. 2026, starosta MČ Praha-Běchovice"
+  url: "https://www.praha-bechovice.cz/e_download.php?file=/data/uredni_deska/obsah3810_1.pdf&original=Informace%20o%20po%C4%8Dtu%20%20a%20s%C3%ADdle%20volebn%C3%ADch%20okrsk%C5%AF_%28111_26%29.pdf"
+  vyveseno: 2026-08-25
+mistnosti:
+  - nazev: "Úřad městské části Praha-Běchovice"
+    adresa: "Českobrodská 3, Praha 9 - Běchovice"
+    okrsky: [23001]
+  - nazev: "Sportovní areál Na Korunce"
+    adresa: "Na Korunce 580, Praha 9 - Běchovice"
+    okrsky: [23002]

@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků pro volby do zastupitelstev obcí 9. a 10. 10. 2026, starostka MČ Praha-Satalice, 20. 8. 2026 (skenovaný PDF)
+mestskaCast: praha-satalice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků, volby do zastupitelstev obcí 2026, MČ Praha-Satalice"
+  url: "https://satalice.imunis.cz/edeska/file?id=16841"
+  vyveseno: 2026-08-20
+mistnosti:
+  - nazev: "Budova Základní školy Satalice"
+    adresa: "K Cihelně 137, Praha 9 - Satalice"
+    okrsky: [47001]

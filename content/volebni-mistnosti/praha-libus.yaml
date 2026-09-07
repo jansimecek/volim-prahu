@@ -1,0 +1,21 @@
+# Zdroj: Oznámení o době a místě konání voleb do zastupitelstev obcí, ÚMČ Praha-Libuš (odbor správní a školství), 1. 7. 2026
+mestskaCast: praha-libus
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do zastupitelstev obcí, ÚMČ Praha-Libuš"
+  url: "https://www.praha-libus.cz/sites/default/files/prilohy/2026/07/02/oznameni_o_dobe_a_miste_konani_voleb.pdf"
+  vyveseno: 2026-07-01
+mistnosti:
+  - nazev: "Základní škola Meteorologická"
+    adresa: "Meteorologická 181/2, Praha 4 - Libuš"
+    okrsky: [38001]
+  - nazev: "Základní škola Písnice"
+    adresa: "Ladislava Coňka 40/3, Praha 4 - Písnice"
+    okrsky: [38002]
+  - nazev: "Klub Junior"
+    adresa: "Na Okruhu 395/1, Praha 4 - Písnice"
+    okrsky: [38003, 38004]
+  - nazev: "ÚMČ Praha-Libuš, Klub Senior"
+    adresa: "K Lukám 664/1, Praha 4 - Libuš"
+    okrsky: [38005, 38006]

@@ -1,0 +1,30 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků, ÚMČ Praha 15 (starosta), čj. ÚMČ P15 081341/2026, vyvěšeno 24. 8. 2026
+mestskaCast: praha-15
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Volby 2026 - informace o počtu a sídlech volebních okrsků, ÚMČ Praha 15"
+  url: "https://www.praha15.cz/assets/File.ashx?id_org=80115&id_dokumenty=29463"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "ZŠ Křimická"
+    adresa: "Křimická 314, Praha 10 - Horní Měcholupy"
+    okrsky: [15001, 15004, 15023]
+  - nazev: "Hasičská zbrojnice"
+    adresa: "Holoubkovská 323, Praha 10 - Horní Měcholupy"
+    okrsky: [15002]
+  - nazev: "ZŠ Veronské nám."
+    adresa: "Veronské nám. 391, Praha 10 - Horní Měcholupy"
+    okrsky: [15003, 15005, 15022]
+  - nazev: "ZŠ Nad Přehradou"
+    adresa: "Nad Přehradou 469, Praha 10 - Horní Měcholupy"
+    okrsky: [15006, 15007, 15008]
+  - nazev: "Sokolovna Hostivař"
+    adresa: "U Branek 674/7, Praha 10 – Hostivař"
+    okrsky: [15009]
+  - nazev: "ZŠ Hornoměcholupská"
+    adresa: "Hornoměcholupská 873, Praha 10 - Hostivař"
+    okrsky: [15010, 15011, 15012, 15013, 15014, 15015]
+  - nazev: "ZŠ Hostivař"
+    adresa: "Kozinova 1000/1, Praha 10 - Hostivař"
+    okrsky: [15016, 15017, 15018, 15019, 15020, 15021]
