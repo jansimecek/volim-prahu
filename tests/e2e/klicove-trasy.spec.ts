@@ -52,6 +52,11 @@ test('vyhledávač najde okrsek podle ulice a orientačního čísla', async ({ 
   await page.getByRole('button', { name: 'Najít okrsek' }).click()
   await expect(page.getByText('Volební okrsek 7001')).toBeVisible()
   await expect(page.getByText('Partyzánská 18/23 · Praha 7')).toBeVisible()
+  const mapa = page.getByRole('region', { name: 'Mapa volebního okrsku 7001' })
+  await expect(mapa).toBeVisible()
+  // Hranice se kreslí z našich dat, ne z cizího serveru — musí být vidět i bez sítě.
+  await expect(mapa.locator('.leaflet-overlay-pane path').first()).toBeAttached()
+  await expect(page.getByText(/hranice okrsku 7001 podle RÚIAN/)).toBeVisible()
 })
 
 test('vyhledávač neznámou ulici nedomýšlí', async ({ page }) => {

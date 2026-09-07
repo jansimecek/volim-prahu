@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useId, useMemo, useRef, useState } from 'react'
 import type { OdpovedOkrsku } from '@/app/api/okrsky/[slug]/route'
+import { MapaOkrsku } from '@/components/MapaOkrsku'
 import { POPIS_ZDROJE, type Mistnost } from '@/lib/mistnostiTypy'
 import { najdiAdresu, normalizujUlici, type NalezenaAdresa } from '@/lib/okrskyHledani'
 
@@ -289,6 +290,12 @@ export function VyhledavacOkrsku() {
                       nejpozději 24. září 2026.
                     </p>
                   )}
+                  <MapaOkrsku
+                    mestskaCast={v.mestskaCast}
+                    okrsek={v.okrsek}
+                    poloha={v.poloha}
+                    popisAdresy={`${v.ulice} ${v.cislo}`}
+                  />
                   <p className="popisek-uredni mt-3">
                     <Link href={`/mestska-cast/${v.mestskaCast}`} className="odkaz-akcent">
                       Kdo kandiduje v části {v.nazevMC}

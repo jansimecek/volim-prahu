@@ -114,6 +114,13 @@ Data k němu servírují dvě statické routy generované při buildu:
 6 kB až 580 kB). Klient si stáhne jen soubory částí, kde hledaná ulice
 leží — celá Praha se na něj nikdy netahá.
 
+K výsledku se kreslí mapa (`src/components/MapaOkrsku.tsx`): hranice
+nalezeného okrsku z `/api/okrsky/<mč>/hranice`, ostatní okrsky části slabě,
+bod adresy. Leaflet i hranice se stahují až po zobrazení výsledku. Podklad
+jsou dlaždice OpenStreetMap, jediný cizí server, na který web sahá —
+zásady ochrany údajů to říkají výslovně a e2e test mapy proto kontroluje
+jen vektorové vrstvy z našich dat, ne dlaždice.
+
 **Adresy volebních místností** v datech ČÚZK nejsou. Píšou se ručně podle
 „Oznámení o době a místě konání voleb" do `content/volebni-mistnosti/<mč>.yaml`,
 jeden soubor na městskou část:
