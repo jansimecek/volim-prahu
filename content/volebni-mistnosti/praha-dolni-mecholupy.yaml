@@ -1,0 +1,14 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků v MČ Praha-Dolní Měcholupy (č. j. 1186/2026), ÚMČ Praha-Dolní Měcholupy, 12. 8. 2026
+mestskaCast: praha-dolni-mecholupy
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků v Městské části Praha-Dolní Měcholupy pro volby do zastupitelstev obcí 9.–10. 10. 2026, ÚMČ Praha-Dolní Měcholupy"
+  url: "https://www.dolnimecholupy.cz/wp-content/uploads/2026/08/Informace-o-poctu-a-sidle-VO.pdf"
+mistnosti:
+  - nazev: "Základní škola Dolní Měcholupy – venkovní učebna"
+    adresa: "Kutnohorská 36, 111 01 Praha 10"
+    okrsky: [29001]
+  - nazev: "Úřad MČ Praha-Dolní Měcholupy"
+    adresa: "Dolnoměcholupská 168/37, 111 01 Praha 10"
+    okrsky: [29002]

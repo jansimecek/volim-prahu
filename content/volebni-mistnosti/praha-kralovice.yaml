@@ -1,0 +1,13 @@
+# Zdroj: Informace o počtu a sídle volebního okrsku, starosta MČ Praha-Královice, 17. 7. 2026 (vyvěšeno 18. 7. 2026)
+mestskaCast: praha-kralovice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebního okrsku, počtu volených členů ZMČ a počtu podpisů na petici – volby do zastupitelstev obcí 9.–10. 10. 2026, ÚMČ Praha-Královice"
+  url: "https://www.mckralovice.cz/store/47-pocet-a-sidlo-volebniho-okrsku-informace.pdf"
+  vyveseno: 2026-07-18
+mistnosti:
+  - nazev: "Úřad městské části Praha-Královice"
+    adresa: "K Nedvězí 66, Praha-Královice"
+    okrsky: [35001]
+    poznamka: "Zasedací místnost, přízemí"

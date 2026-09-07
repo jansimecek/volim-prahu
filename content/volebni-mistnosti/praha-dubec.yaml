@@ -1,0 +1,14 @@
+# Zdroj: Informace k volbám do Poslanecké sněmovny 3.–4. 10. 2025, ÚMČ Praha-Dubeč (leták v Dubečském zpravodaji Rohožník 2/2025).
+# Leták uvádí jedinou volební místnost pro celou městskou část bez čísel okrsků; Dubeč má okrsky dva (31001, 31002),
+# oba tedy volí v ZŠ Dubeč. Dokument pro rok 2026 k 7. 9. 2026 na webu ani úřední desce nebyl.
+mestskaCast: praha-dubec
+overeno: 2026-09-07
+volby: drivejsi
+zdroj:
+  nazev: "Informace k volbám do Poslanecké sněmovny 2025, ÚMČ Praha-Dubeč"
+  url: "https://www.praha-dubec.cz/assets/File.ashx?id_org=80158&id_dokumenty=60376"
+mistnosti:
+  - nazev: "Základní škola Dubeč"
+    adresa: "Starodubečská 413/14, Praha-Dubeč"
+    okrsky: [31001, 31002]
+    poznamka: "Jediná volební místnost v městské části; leták z roku 2025 čísla okrsků neuvádí."

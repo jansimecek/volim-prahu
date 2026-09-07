@@ -1,0 +1,31 @@
+# Zdroj: Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do ZMČ Praha 20, ÚMČ Praha 20 (starosta), čj. MCP20 037549/2026/OZOSA/Hejk, vyvěšeno 25. 8. 2026
+mestskaCast: praha-20
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva Městské části Praha 20 konaných ve dnech 9. a 10. října 2026, ÚMČ Praha 20"
+  url: "https://www.pocernice.cz/eDeska/download.jsp?idPriloha=230058"
+  vyveseno: 2026-08-25
+mistnosti:
+  - nazev: "ZŠ Stoliňská"
+    adresa: "Stoliňská 823, Praha 9 – Horní Počernice"
+    okrsky: [20001, 20002]
+  - nazev: "ZŠ Spojenců"
+    adresa: "Spojenců 1408, Praha 9 – Horní Počernice"
+    okrsky: [20003, 20004]
+  - nazev: "Místní veřejná knihovna"
+    adresa: "Náchodská 754, Praha 9 – Horní Počernice"
+    okrsky: [20005]
+  - nazev: "ZŠ Ratibořická"
+    adresa: "Ratibořická 1700, Praha 9 – Horní Počernice"
+    okrsky: [20006, 20007, 20008]
+  - nazev: "MŠ a ZŠ Bártlova"
+    adresa: "Bártlova 83, Praha 9 – Horní Počernice"
+    okrsky: [20009]
+  - nazev: "KC Domeček"
+    adresa: "Votuzská 322, Praha 9 – Horní Počernice"
+    okrsky: [20010, 20011]
+    poznamka: "Okrsek 20010 v 1. patře, okrsek 20011 v přízemí"
+  - nazev: "ZŠ Chodovická"
+    adresa: "Chodovická 2250, Praha 9 – Horní Počernice"
+    okrsky: [20012]

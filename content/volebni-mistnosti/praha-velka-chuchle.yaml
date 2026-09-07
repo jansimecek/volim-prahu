@@ -1,0 +1,15 @@
+# Zdroj: Volby do zastupitelstev obcí – oznámení o místě a době konání voleb, starosta MČ Praha-Velká Chuchle, 18. 8. 2026, vyvěšeno na e-desce 20. 8. 2026
+mestskaCast: praha-velka-chuchle
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Volby do zastupitelstev obcí – oznámení o místě a době konání voleb, MČ Praha-Velká Chuchle"
+  url: "https://housing.espis.mepnet.cz/eDeskaChuchle/download.jsp?idPriloha=33414"
+  vyveseno: 2026-08-20
+mistnosti:
+  - nazev: "Základní škola Charlotty Masarykové"
+    adresa: "Starochuchelská 240, Praha-Velká Chuchle"
+    okrsky: [54001, 54002]
+  - nazev: "Zahradní pavilon v ČZÚ"
+    adresa: "V Lázních 42/3, Praha-Malá Chuchle"
+    okrsky: [54003]

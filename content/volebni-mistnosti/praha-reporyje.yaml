@@ -1,0 +1,15 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků na území MČ Praha-Řeporyje pro volby do zastupitelstev obcí 9. a 10. 10. 2026, starosta MČ Praha-Řeporyje, 20. 8. 2026 (úřední deska „2026 VOLBY - INFORMACE")
+mestskaCast: praha-reporyje
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků na území MČ Praha-Řeporyje pro volby do zastupitelstev obcí 2026, starosta MČ Praha-Řeporyje"
+  url: "https://housing.espis.mepnet.cz/eDeskaReporyje/download.jsp?idPriloha=33488"
+  vyveseno: 2026-08-20
+mistnosti:
+  - nazev: "SZUŠ Řeporyje"
+    adresa: "Smíchovská čp. 96, Praha-Řeporyje"
+    okrsky: [46001, 46002]
+  - nazev: "ZŠ Řeporyje"
+    adresa: "Od Školy čp. 596, Praha-Řeporyje"
+    okrsky: [46003]

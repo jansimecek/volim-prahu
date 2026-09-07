@@ -1,0 +1,104 @@
+# Zdroj: Oznámení o době a místě konání voleb do zastupitelstev obcí a do třetiny Senátu Parlamentu ČR, ÚMČ Praha 6 (odbor OŽO, Mgr. Anna Palasová), 22. 7. 2026. Oznámení uvádí jen adresy místností; názvy objektů doplněny z dokumentu ÚMČ Praha 6 „Stanovení počtu členů volebních komisí a počtu zástěn“ (https://www.praha6.cz/cs/assets/potrebuji_vyresit/77173/prilohy/stanoveni_poctu_clenu_volebnich_komisi_a_poctu_zasten_a0c7e5bc3c.pdf). Bezbariérovost je ve zdroji po okrscích (překlep „61103“ čten jako 6103); u U dělnického cvičiště chybí v seznamu 6049 a u Šantrochovy 6101, budova je označena podle ostatních okrsků.
+mestskaCast: praha-6
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do zastupitelstev obcí a do třetiny Senátu Parlamentu ČR 9.–10. 10. 2026, ÚMČ Praha 6"
+  url: "https://www.praha6.cz/cs/assets/potrebuji_vyresit/77170/prilohy/oznameni_o_dobe_a_miste_konani_voleb_v_praze_6_v_2026_1_informace_pro_volice_5_63e70b2b9b.pdf"
+  vyveseno: 2026-07-22
+mistnosti:
+  - nazev: "ZŠ a MŠ Antonína Čermáka"
+    adresa: "Antonína Čermáka 1022/6, Bubeneč, 160 00 Praha 6"
+    okrsky: [6001, 6002, 6003, 6004, 6005]
+  - nazev: "ZŠ a MŠ náměstí Svobody"
+    adresa: "náměstí Svobody 930/2, Bubeneč, 160 00 Praha 6"
+    okrsky: [6006, 6007, 6008, 6016, 6017, 6018, 6019]
+    bezbarierova: true
+  - nazev: "ZŠ Emy Destinnové"
+    adresa: "náměstí Svobody 930/3, Bubeneč, 160 00 Praha 6"
+    okrsky: [6009, 6010, 6011, 6012, 6013, 6014, 6015]
+    bezbarierova: true
+  - nazev: "Písecká brána"
+    adresa: "K Brusce 208/5, Hradčany, 160 00 Praha 6"
+    okrsky: [6020]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ Bílá"
+    adresa: "Bílá 1784/1, Dejvice, 160 00 Praha 6"
+    okrsky: [6021, 6022, 6023, 6024, 6025]
+  - nazev: "ZŠ a MŠ Antonína Čermáka (Janákova)"
+    adresa: "Janákova 2358/9, Dejvice, 160 00 Praha 6"
+    okrsky: [6026]
+  - nazev: "ZŠ Hanspaulka"
+    adresa: "Sušická 1000/29, Dejvice, 160 00 Praha 6"
+    okrsky: [6027, 6028, 6029, 6030, 6031, 6032]
+  - nazev: "ZUŠ V Šáreckém údolí"
+    adresa: "V Šáreckém údolí 187/38, Dejvice, 160 00 Praha 6"
+    okrsky: [6033]
+  - nazev: "Ústav MAKRO"
+    adresa: "Heyrovského náměstí 1888/2, Břevnov, 162 00 Praha 6"
+    okrsky: [6034]
+  - nazev: "VOŠ ped. a soc., SPŠ a gymn."
+    adresa: "Evropská 330/33, Dejvice, 160 00 Praha 6"
+    okrsky: [6035, 6036, 6037, 6038, 6039, 6040, 6041]
+  - nazev: "ZŠ Norbertov"
+    adresa: "Norbertov 126/1, Střešovice, 162 00 Praha 6"
+    okrsky: [6042, 6043, 6044, 6045, 6046, 6047]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ J. A. Komenského"
+    adresa: "U dělnického cvičiště 1100/1, Břevnov, 169 00 Praha 6"
+    okrsky: [6048, 6049, 6050, 6051]
+    bezbarierova: true
+  - nazev: "ZŠ Pod Marjánkou"
+    adresa: "Pod Marjánkou 1900/2, Břevnov, 169 00 Praha 6"
+    okrsky: [6052, 6053, 6054, 6055, 6056, 6057, 6058]
+  - nazev: "Gymnázium Jana Keplera"
+    adresa: "Parléřova 118/2, Hradčany, 169 00 Praha 6"
+    okrsky: [6059, 6060, 6061]
+  - nazev: "ZŠ „Cesta k úspěchu“"
+    adresa: "Bělohorská 226/103, Břevnov, 169 00 Praha 6"
+    okrsky: [6062, 6063, 6064, 6065]
+  - nazev: "ZŠ a MŠ T. G. M. Bělohorská"
+    adresa: "Bělohorská 162/174, Břevnov, 169 00 Praha 6"
+    okrsky: [6066, 6067]
+    bezbarierova: true
+  - nazev: "SOŠ civilního letectví"
+    adresa: "K letišti 278/4a, Ruzyně, 161 00 Praha 6"
+    okrsky: [6068]
+  - nazev: "ZŠ a MŠ T. G. Masaryka"
+    adresa: "náměstí Českého povstání 511/6, Ruzyně, 161 00 Praha 6"
+    okrsky: [6069, 6070]
+  - nazev: "ZŠ Dědina"
+    adresa: "Žukovského 580/6, Liboc, 161 00 Praha 6"
+    okrsky: [6071, 6072, 6073, 6074, 6075]
+  - nazev: "MŠ Libocká"
+    adresa: "Libocká 148/66, Liboc, 161 00 Praha 6"
+    okrsky: [6076, 6077]
+  - nazev: "ZŠ Vokovice"
+    adresa: "Vokovická 32/3, Vokovice, 160 00 Praha 6"
+    okrsky: [6078, 6079, 6080]
+  - nazev: "Gymnázium Arabská"
+    adresa: "Arabská 682/14, Vokovice, 160 00 Praha 6"
+    okrsky: [6081, 6082, 6083]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ Červený vrch"
+    adresa: "Alžírská 680/26, Vokovice, 160 00 Praha 6"
+    okrsky: [6084, 6085, 6086, 6087]
+    bezbarierova: true
+  - nazev: "ZŠ Na Dlouhém lánu"
+    adresa: "Na dlouhém lánu 555/43, Vokovice, 160 00 Praha 6"
+    okrsky: [6088, 6089, 6090, 6091]
+  - nazev: "ZŠ Petřiny - sever"
+    adresa: "Na okraji 305/43, Veleslavín, 162 00 Praha 6"
+    okrsky: [6092, 6093, 6094, 6095, 6096]
+  - nazev: "Gymnázium Nad alejí"
+    adresa: "Nad alejí 1952/5, Břevnov, 162 00 Praha 6"
+    okrsky: [6097, 6098, 6103]
+    bezbarierova: true
+  - nazev: "ZŠ Věry Čáslavské"
+    adresa: "Šantrochova 1800/2, Břevnov, 162 00 Praha 6"
+    okrsky: [6099, 6100, 6101, 6102]
+    bezbarierova: true
+  - nazev: "Informační místo MČ Praha 6"
+    adresa: "V Sedlci 41/20, Sedlec, 160 00 Praha 6"
+    okrsky: [6104]
+    bezbarierova: true

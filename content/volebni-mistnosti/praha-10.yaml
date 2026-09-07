@@ -1,0 +1,59 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků na území MČ Praha 10 pro volby do zastupitelstev obcí 2026, ÚMČ Praha 10 (starosta), č. j. P10-469755/2026, 6. 8. 2026
+mestskaCast: praha-10
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků na území městské části Praha 10 pro volby do zastupitelstev obcí konané ve dnech 9. a 10. října 2026, ÚMČ Praha 10"
+  url: "https://praha10.cz/wp-content/uploads/2026/08/info-o-poctu-a-sidle-vol.-okrsku-zastupko-2026.docx"
+mistnosti:
+  - nazev: "ZŠ Karla Čapka"
+    adresa: "Kodaňská 658/16, Praha 10"
+    okrsky: [10001, 10002, 10003, 10004, 10081, 10082, 10083, 10086, 10087, 10088, 10089, 10090]
+  - nazev: "Gymnázium Omská"
+    adresa: "Omská 1300/4, Praha 10"
+    okrsky: [10005, 10102, 10103, 10104, 10105]
+  - nazev: "ZŠ Nad Vodovodem"
+    adresa: "Nad Vodovodem 460/81, Praha 10"
+    okrsky: [10006, 10007, 10008, 10011, 10012, 10015]
+  - nazev: "SPŠEaG V Úžlabině"
+    adresa: "V Úžlabině 320/23, Praha 10"
+    okrsky: [10009, 10010, 10013]
+  - nazev: "Domov pro seniory Malešice"
+    adresa: "Rektorská 577, Praha 10"
+    okrsky: [10014]
+  - nazev: "ZŠ Hostýnská"
+    adresa: "Hostýnská 2100/2, Praha 10"
+    okrsky: [10016, 10017, 10019, 10020, 10027, 10109]
+  - nazev: "ZŠ Solidarita"
+    adresa: "Brigádníků 510/14, Praha 10"
+    okrsky: [10018, 10021, 10022, 10023, 10024, 10025, 10026, 10028, 10029, 10030, 10031]
+  - nazev: "ZŠ Olešská"
+    adresa: "Olešská 2222/18, Praha 10"
+    okrsky: [10032, 10047, 10048, 10049]
+  - nazev: "ZŠ V Rybníčkách"
+    adresa: "V Rybníčkách 1980/31, Praha 10"
+    okrsky: [10033, 10034, 10043, 10045, 10046]
+  - nazev: "Gymnázium Voděradská"
+    adresa: "Voděradská 900/2, Praha 10"
+    okrsky: [10035, 10042, 10044, 10050]
+  - nazev: "ZŠ Gutova"
+    adresa: "Gutova 1987/39, Praha 10"
+    okrsky: [10036, 10037, 10038, 10039, 10040, 10041]
+  - nazev: "ZŠ Břečťanová"
+    adresa: "Břečťanová 2919/6, Praha 10"
+    okrsky: [10051, 10059, 10063, 10064, 10065, 10066, 10067, 10068]
+  - nazev: "ZŠ Švehlova"
+    adresa: "Švehlova 2900/12, Praha 10"
+    okrsky: [10052, 10053, 10054, 10055, 10056, 10057, 10058, 10060, 10061, 10062]
+  - nazev: "ZŠ Eden"
+    adresa: "Vladivostocká 1035/6, Praha 10"
+    okrsky: [10069, 10070, 10071, 10107, 10108]
+  - nazev: "ZŠ U Vršovického nádraží"
+    adresa: "U Vršovického nádraží 950/1, Praha 10"
+    okrsky: [10072, 10073, 10074, 10075, 10076, 10077, 10078, 10079, 10080, 10084, 10085]
+  - nazev: "ZŠ U Roháč. kasáren"
+    adresa: "U Roháč. kasáren 1381/19, Praha 10"
+    okrsky: [10091, 10092, 10093, 10094, 10095, 10096, 10097]
+  - nazev: "ZŠ Jakutská"
+    adresa: "Jakutská 1210/2, Praha 10"
+    okrsky: [10098, 10099, 10100, 10101, 10106]

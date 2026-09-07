@@ -1,0 +1,35 @@
+# Zdroj: Oznámení o době a místě konání voleb do zastupitelstva městské části Praha 3 a hlavního města Prahy, ÚMČ Praha 3, stránka Volby 2026 (bez data vyvěšení na stránce)
+mestskaCast: praha-3
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do zastupitelstva městské části Praha 3 a hlavního města Prahy, ÚMČ Praha 3"
+  url: "https://www.praha3.cz/potrebuji-zaridit/zivotni-situace/volby-2026#h_842216"
+mistnosti:
+  - nazev: "ZŠ Jaroslava Seiferta"
+    adresa: "Vlkova 800/31, Praha 3"
+    okrsky: [3001, 3005, 3006, 3007]
+  - nazev: "ZŠ Lupáčova"
+    adresa: "Lupáčova 1200/1, Praha 3"
+    okrsky: [3002, 3003, 3004, 3010, 3011, 3015, 3025]
+  - nazev: "ZŠ nám. Jiřího z Poděbrad"
+    adresa: "náměstí Jiřího z Poděbrad 1685/8, Praha 3"
+    okrsky: [3008, 3009, 3020, 3021, 3022, 3027, 3028, 3029, 3030]
+  - nazev: "ZŠ Žerotínova"
+    adresa: "Žerotínova 1100/36, Praha 3"
+    okrsky: [3012, 3013, 3014, 3017, 3018]
+  - nazev: "ZŠ Jeseniova"
+    adresa: "Jeseniova 2400/96, Praha 3"
+    okrsky: [3016, 3019, 3036, 3037, 3039]
+  - nazev: "ZŠ nám. Jiřího z Lobkovic"
+    adresa: "náměstí Jiřího z Lobkovic 121/22, Praha 3"
+    okrsky: [3023, 3024, 3026, 3031, 3032, 3033, 3034, 3035]
+  - nazev: "ZŠ Pražačka"
+    adresa: "Nad Ohradou 1700/25, Praha 3"
+    okrsky: [3038, 3040, 3041, 3042, 3043]
+  - nazev: "ZŠ Jarov"
+    adresa: "V Zahrádkách 1966/48, Praha 3"
+    okrsky: [3044, 3045, 3046, 3047, 3048, 3052]
+  - nazev: "ZŠ Chmelnice"
+    adresa: "K Lučinám 2500/18, Praha 3"
+    okrsky: [3049, 3050, 3051]

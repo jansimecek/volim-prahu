@@ -5,13 +5,16 @@ import { Obsah } from '@/components/Obsah'
 import { MDXContent } from '@/components/mdx'
 import { nadpisyStranky } from '@/lib/nadpisy'
 import { datumCesky } from '@/lib/cestina'
-import { strankaPodleSlugu } from '@/lib/obsah'
+import { cislo, strankaPodleSlugu } from '@/lib/obsah'
+import { pokrytiMistnosti } from '@/lib/mistnosti'
+import { prehledOkrsku } from '@/lib/okrsky'
 
 const stranka = strankaPodleSlugu('kde-volim')
 
 export const metadata: Metadata = { title: stranka.title, description: stranka.popis }
 
 export default function Stranka() {
+  const pokryti = pokrytiMistnosti(prehledOkrsku()?.okrsky ?? [])
   return (
     <article className="space-y-8">
       <header className="max-w-prose">
@@ -28,6 +31,10 @@ export default function Stranka() {
           Zadejte adresu trvalého pobytu. Číslo okrsku bereme z registru adres ČÚZK, který
           městské části průběžně aktualizují; adresu volební místnosti doplňujeme z oznámení
           na úředních deskách, jakmile vyjdou.
+        </p>
+        <p className="popisek-uredni mt-2">
+          Adresu místnosti známe pro {cislo(pokryti.okrskuSMistnosti)} z {cislo(pokryti.okrskuCelkem)} okrsků
+          {pokryti.okrskuPodle2026 > 0 && <>, z toho {cislo(pokryti.okrskuPodle2026)} podle dokumentů k volbám 2026</>}
         </p>
         <div className="mt-5">
           <VyhledavacOkrsku />

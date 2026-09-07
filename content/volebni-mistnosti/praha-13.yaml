@@ -1,0 +1,48 @@
+# Zdroj: Oznámení o počtu a sídle volebních okrsků na území Městské části Praha 13 pro volby do ZMČ Praha 13 a ZHMP konané 9. a 10. 10. 2026, ÚMČ Praha 13, vyvěšeno 26. 8. 2026 (datováno 24. 8. 2026)
+mestskaCast: praha-13
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o počtu a sídle volebních okrsků na území Městské části Praha 13 pro volby do Zastupitelstva městské části Praha 13 a Zastupitelstva hl. m. Prahy konané ve dnech 9. 10. a 10. 10. 2026, ÚMČ Praha 13"
+  url: "https://eud.praha13.cz/pub/deska/17000002/edeska1/106257122/01/oznameni_o_poctu_a_sidle_volebnich_okrsku.pdf"
+  vyveseno: 2026-08-26
+mistnosti:
+  - nazev: "Základní škola Bronzová"
+    adresa: "Bronzová 2027/35"
+    okrsky: [13001, 13002, 13044, 13049, 13050]
+  - nazev: "Základní škola Mohylová"
+    adresa: "Mohylová 1963/2"
+    okrsky: [13003, 13004]
+  - nazev: "Základní škola Brdičkova"
+    adresa: "Brdičkova 1878/2"
+    okrsky: [13005, 13006, 13007, 13008]
+  - nazev: "Základní škola Trávníčkova"
+    adresa: "Trávníčkova 1744/4"
+    okrsky: [13009, 13010, 13011, 13031, 13032]
+  - nazev: "Dům dětí a mládeže Stodůlky"
+    adresa: "Chlupova 1800/6"
+    okrsky: [13012, 13013]
+  - nazev: "Základní škola Janského"
+    adresa: "Janského 2189/18"
+    okrsky: [13014, 13015, 13016, 13017, 13019, 13047, 13054]
+  - nazev: "Základní škola Klausova"
+    adresa: "Klausova 2450/2"
+    okrsky: [13018, 13020, 13021, 13022, 13055]
+  - nazev: "Základní škola prof. Otokara Chlupa"
+    adresa: "Fingerova 2186/17"
+    okrsky: [13023, 13024, 13025, 13026]
+  - nazev: "Základní škola Mezi Školami"
+    adresa: "Mezi Školami 2322/1"
+    okrsky: [13027, 13028, 13029, 13030, 13045, 13046, 13048, 13052, 13056]
+  - nazev: "Základní škola Kuncova"
+    adresa: "Kuncova 1580/1"
+    okrsky: [13033, 13034, 13035, 13036, 13037, 13038, 13057]
+  - nazev: "Základní škola Mládí"
+    adresa: "Mládí 135/4"
+    okrsky: [13039, 13040, 13041, 13051, 13053, 13058]
+  - nazev: "Hasičská zbrojnice Třebonice"
+    adresa: "K Náplavce 173/19"
+    okrsky: [13042]
+  - nazev: "Speciální pedagogické centrum Vertikála"
+    adresa: "Ke Koh-i-nooru 433/25"
+    okrsky: [13043]

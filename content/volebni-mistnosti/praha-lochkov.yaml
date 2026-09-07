@@ -1,0 +1,12 @@
+# Zdroj: Informace pro volby do zastupitelstev obcí konané ve dnech 9. a 10. října 2026, starosta MČ Praha-Lochkov, č.j. 424/2026, 13. 7. 2026
+mestskaCast: praha-lochkov
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace pro volby do zastupitelstev obcí konané ve dnech 9. a 10. října 2026 (volební obvod a sídlo volebního okrsku), MČ Praha-Lochkov"
+  url: "https://www.praha-lochkov.cz/e_download.php?file=/data/uredni_deska/obsah1425_1.pdf&original=informace%20o%20voleb.%20obvodu%2C%20a%20%20voleb.%20okrsku.pdf"
+  vyveseno: 2026-07-13
+mistnosti:
+  - nazev: "Zasedací místnost Úřadu městské části Praha-Lochkov"
+    adresa: "Za Ovčínem 1, Praha - Lochkov"
+    okrsky: [40001]

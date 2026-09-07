@@ -16,7 +16,7 @@ export type Mistnost = {
 }
 
 export const POPIS_ZDROJE: Record<TypZdrojeMistnosti, string> = {
-  'oznameni-2026': 'Podle oznámení o době a místě konání voleb 2026',
+  'oznameni-2026': 'Podle dokumentu městské části k volbám 2026 — sídlo okrsku z úřední desky',
   'drivejsi-volby': 'Údaj z dřívějších voleb — do 24. 9. 2026 se může změnit',
   ruian: 'Poznámka městské části v registru RÚIAN — není to oznámení pro rok 2026',
 }

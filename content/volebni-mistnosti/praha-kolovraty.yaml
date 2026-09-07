@@ -1,0 +1,17 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků, starosta MČ Praha-Kolovraty, úřední deska 2026
+mestskaCast: praha-kolovraty
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků v MČ Praha-Kolovraty pro volby do zastupitelstev obcí 9.–10. 10. 2026, ÚMČ Praha-Kolovraty"
+  url: "https://kolovraty.imunis.cz/edeska/file?id=78947"
+mistnosti:
+  - nazev: "Základní škola Praha-Kolovraty"
+    adresa: "Albíny Hochové 880/26a, 103 00 Praha 10"
+    okrsky: [34001, 34004]
+  - nazev: "Úřad městské části Praha-Kolovraty"
+    adresa: "Mírová 364/34, 103 00 Praha 10"
+    okrsky: [34002]
+  - nazev: "Lipanská hospůdka U Klingra"
+    adresa: "Do Kopečka 11, 103 00 Praha 10"
+    okrsky: [34003]

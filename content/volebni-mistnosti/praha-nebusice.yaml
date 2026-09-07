@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků v MČ Praha-Nebušice pro volby do zastupitelstev obcí 9. a 10. 10. 2026, ÚMČ Praha-Nebušice, č.j. MCPNE 01433/2026, vyvěšeno 17. 8. 2026
+mestskaCast: praha-nebusice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků v Městské části Praha-Nebušice pro volby do Zastupitelstev obcí 2026, ÚMČ Praha-Nebušice"
+  url: "https://www.prahanebusice.cz/modules/file_storage/download.php?file=2e682504%7C421"
+  vyveseno: 2026-08-17
+mistnosti:
+  - nazev: "ZŠ a MŠ Praha-Nebušice"
+    adresa: "Nebušická 369, Praha-Nebušice"
+    okrsky: [42001, 42002]

@@ -1,0 +1,17 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků pro volby do zastupitelstev obcí na území MČ Praha-Šeberov konané 9. a 10. 10. 2026, starostka MČ Praha-Šeberov, 21. 7. 2026, vyvěšeno 24. 7. 2026
+mestskaCast: praha-seberov
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků pro volby do zastupitelstev obcí na území Městské části Praha-Šeberov 2026, MČ Praha-Šeberov"
+  url: "https://www.seberov.cz/e_download.php?file=/data/uredni_deska/obsah2410_1.pdf&original=Informace%20o%20po%C4%8Dtu%20a%20s%C3%ADdle%202026.pdf"
+  vyveseno: 2026-07-24
+mistnosti:
+  - nazev: "Bývalá Základní škola"
+    adresa: "V Ladech 6, Praha 4 - Šeberov"
+    okrsky: [50001]
+    poznamka: "Pro voliče bydlící v Šeberově"
+  - nazev: "Baráčnická rychta"
+    adresa: "K Šeberovu 805, Praha 4 - Šeberov"
+    okrsky: [50002]
+    poznamka: "Pro voliče bydlící v Hrnčířích"

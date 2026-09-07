@@ -1,0 +1,40 @@
+# Zdroj: Oznámení o době a místu konání voleb do ZHMP a ZMČ Praha 16 (Radotín), ÚMČ Praha 16, čj. P16-136885/2026/OOS, vyvěšeno 2. 9. 2026
+mestskaCast: praha-16
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místu konání voleb do Zastupitelstva hlavního města Prahy a Zastupitelstva MČ Praha 16 (Radotín), ÚMČ Praha 16"
+  url: "https://www.praha16.eu/radnice/urad/uredni-deska-1/oznameni-o-dobe-a-miste-konani-voleb-3930.html"
+  vyveseno: 2026-09-02
+mistnosti:
+  - nazev: "Dům s pečovatelskou službou Praha-Radotín"
+    adresa: "K cementárně 1522/1c, Praha 5 – Radotín"
+    okrsky: [16001]
+    bezbarierova: true
+    poznamka: "Hala u jídelny"
+  - nazev: "Základní škola Radotín (2. stupeň)"
+    adresa: "Loučanská 1112/3, Praha 5 – Radotín"
+    okrsky: [16002, 16004]
+    bezbarierova: true
+  - nazev: "Sportovní hala Radotín"
+    adresa: "U starého stadiónu 1585/9, Praha 5 – Radotín"
+    okrsky: [16003]
+    bezbarierova: true
+    poznamka: "Klubovna"
+  - nazev: "Základní škola Radotín (2. stupeň)"
+    adresa: "nám. Sv. Petra a Pavla 102/4, Praha 5 – Radotín"
+    okrsky: [16005]
+    bezbarierova: true
+  - nazev: "Restaurace Pivní sanatorium"
+    adresa: "Štěrková 549/15, Praha 5 – Radotín"
+    okrsky: [16006]
+    bezbarierova: false
+  - nazev: "Sokolovna TJ Sokol Radotín"
+    adresa: "Vykoukových 622/2, Praha 5 – Radotín"
+    okrsky: [16007]
+    bezbarierova: false
+  - nazev: "Kulturně komunitní centrum Koruna"
+    adresa: "náměstí Osvoboditelů 1740/17, Praha 5 – Radotín"
+    okrsky: [16008]
+    bezbarierova: false
+    poznamka: "Prostory nového Kulturně komunitního centra Koruna"

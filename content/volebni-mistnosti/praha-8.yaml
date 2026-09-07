@@ -1,0 +1,94 @@
+# Zdroj: Informace o počtu a sídle volebních okrsků v MČ Praha 8 pro volby do Zastupitelstva MČ Praha 8 a Zastupitelstva hl. m. Prahy ve dnech 9. a 10. října 2026, ÚMČ Praha 8 (starosta), 11. 8. 2026 (na webu 13. 8. 2026)
+mestskaCast: praha-8
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídle volebních okrsků v MČ Praha 8 pro volby do ZMČ Praha 8 a ZHMP ve dnech 9. a 10. října 2026, ÚMČ Praha 8"
+  url: "https://www.praha8.cz/file/VzJ/Informace-o-poctu-a-sidle-volebnich-okrsku-v-MC-Praha-8-pro-volby-do-ZMC-Praha-8-a-ZHMP.pdf"
+  vyveseno: 2026-08-13
+mistnosti:
+  - nazev: "Dům dětí a mládeže hl. m. Prahy"
+    adresa: "Karlínské nám. 7/316, Praha 8 - Karlín"
+    okrsky: [8001, 8002, 8003]
+  - nazev: "Karlínská obchodní akademie"
+    adresa: "Kollárova 5/271, Praha 8 - Karlín"
+    okrsky: [8004, 8006, 8008]
+  - nazev: "SMYSLUPLNÁ ŠKOLA, ZŠ a MŠ"
+    adresa: "Lyčkovo nám. 6/460, Praha 8 - Karlín"
+    okrsky: [8005, 8009, 8010, 8011, 8012, 8013]
+  - nazev: "MFF UK"
+    adresa: "Sokolovská 83/49, Praha 8 - Karlín"
+    okrsky: [8007]
+  - nazev: "ZŠ a MŠ Petra Strozziho"
+    adresa: "Za Invalidovnou 3/579, Praha 8 - Karlín"
+    okrsky: [8014, 8015, 8016]
+  - nazev: "ZŠ Palmovka 8"
+    adresa: "Heydukova 5/359, Praha 8 - Libeň"
+    okrsky: [8017, 8018, 8019, 8020]
+  - nazev: "ZŠ Bohumila Hrabala"
+    adresa: "Zenklova 52/26, Praha 8 - Libeň"
+    okrsky: [8021, 8023, 8024, 8025]
+  - nazev: "Gymnázium"
+    adresa: "U Libeňského zámku 1/3, Praha 8 - Libeň"
+    okrsky: [8022]
+  - nazev: "PORG – gymnázium, ZŠ a MŠ, o.p.s."
+    adresa: "Lindnerova 3/517, Praha 8 - Libeň"
+    okrsky: [8026, 8027, 8028]
+  - nazev: "ZŠ Bohumila Hrabala (budova Na Korábě)"
+    adresa: "Krejčího 1/350, Praha 8 - Libeň"
+    okrsky: [8029, 8030, 8031, 8032, 8033, 8034]
+  - nazev: "ART ECON – Gymnázium a Střední odborná škola Praha, s.r.o."
+    adresa: "Nad Rokoskou 7/111, Praha 8 - Libeň"
+    okrsky: [8035, 8036]
+  - nazev: "ZUŠ"
+    adresa: "Klapkova 25/156, Praha 8 - Kobylisy"
+    okrsky: [8037, 8066]
+  - nazev: "ZŠ a MŠ"
+    adresa: "U Školské zahrady 4/1030, Praha 8 - Kobylisy"
+    okrsky: [8038, 8039, 8063, 8065]
+  - nazev: "ZŠ a MŠ Na Slovance"
+    adresa: "Bedřichovská 1/1960, Praha 8 - Libeň"
+    okrsky: [8040, 8042]
+  - nazev: "Fyzikální ústav AV ČR, v.v.i."
+    adresa: "Pod Vodárenskou věží 1/1999, Praha 8 - Libeň"
+    okrsky: [8041]
+  - nazev: "Soukromá SŠ a ZŠ (1. KŠPA), Praha s.r.o."
+    adresa: "Chabařovická 4/1125, Praha 8 - Kobylisy"
+    okrsky: [8043, 8044, 8047, 8048, 8049, 8050, 8051, 8052]
+  - nazev: "ZŠ"
+    adresa: "Burešova 14/1130, Praha 8 - Kobylisy"
+    okrsky: [8045, 8046, 8059, 8060, 8061, 8062]
+  - nazev: "MERIDIAN INTERNATIONAL SCHOOL s.r.o."
+    adresa: "Frýdlantská 1/1350, Praha 8 - Kobylisy"
+    okrsky: [8053, 8054]
+  - nazev: "ZŠ"
+    adresa: "Žernosecká 3/1597, Praha 8 - Kobylisy"
+    okrsky: [8055, 8056, 8058]
+  - nazev: "ZŠ a MŠ"
+    adresa: "Dolákova 1/555, Praha 8 - Bohnice"
+    okrsky: [8057, 8095, 8096, 8097, 8098, 8099, 8100, 8101]
+  - nazev: "Dům dětí a mládeže Praha 8 - Spirála"
+    adresa: "Přemyšlenská 15/1102, Praha 8 - Kobylisy"
+    okrsky: [8064, 8073]
+  - nazev: "ZŠ"
+    adresa: "Na Šutce 28/440, Praha 8 - Troja"
+    okrsky: [8067, 8068, 8069, 8070, 8071]
+  - nazev: "ZŠ"
+    adresa: "Hovorčovická 11/1281, Praha 8 - Kobylisy"
+    okrsky: [8072, 8074, 8075, 8077]
+  - nazev: "ZŠ Mazurská"
+    adresa: "Svídnická 1a/599, Praha 8 - Troja"
+    okrsky: [8076, 8104, 8105, 8106]
+  - nazev: "ZŠ"
+    adresa: "Glowackého 6/555, Praha 8 - Troja"
+    okrsky: [8078, 8091, 8092, 8093]
+  - nazev: "ZŠ a MŠ Ústavní / Gymnázium Ústavní"
+    adresa: "Hlivická 1/400, Praha 8 - Bohnice"
+    okrsky: [8079, 8082, 8083, 8084, 8089, 8090, 8102, 8103]
+    poznamka: "Okrsky 8079, 8089, 8090, 8102 a 8103 volí v ZŠ a MŠ Ústavní, okrsky 8082–8084 v Gymnáziu Ústavní (stejná adresa)."
+  - nazev: "ZŠ"
+    adresa: "Libčická 10/658, Praha 8 - Čimice"
+    okrsky: [8080, 8081, 8085, 8086, 8087, 8088]
+  - nazev: "ZŠ a MŠ"
+    adresa: "Na Bendovce 20/186, Praha 8 - Bohnice"
+    okrsky: [8094]

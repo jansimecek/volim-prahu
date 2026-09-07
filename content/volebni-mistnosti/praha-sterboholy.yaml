@@ -1,0 +1,12 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků volebním stranám, volby do zastupitelstev obcí 9. a 10. 10. 2026, starosta MČ Praha-Štěrboholy, č.j. MČ P-Š 986/2026, 19. 8. 2026 (skenovaný PDF)
+mestskaCast: praha-sterboholy
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků, volby do zastupitelstev obcí 2026, MČ Praha-Štěrboholy"
+  url: "https://admin-storage.munipolis.com/sterboholy/smart-delivery/files/f3a8eaee-91c3-48ec-9f41-7889abedb83a.pdf"
+  vyveseno: 2026-08-19
+mistnosti:
+  - nazev: "U Školy 285"
+    adresa: "U Školy 285, Praha 10 - Štěrboholy"
+    okrsky: [51001, 51002]

@@ -81,3 +81,33 @@ export function okrskyBezMistnosti(slug: string, okrsky: Okrsek[]): number[] {
     .filter((o) => o.mestskaCast === slug && !pokryte.has(o.cislo) && !mistnostZPoznamky(o.poznamka))
     .map((o) => o.cislo)
 }
+
+export type PokrytiMistnosti = {
+  okrskuCelkem: number
+  /** Okrsky s místností z redakčního obsahu nebo z poznámky RÚIAN. */
+  okrskuSMistnosti: number
+  /** Z toho podle dokumentu k volbám 2026. */
+  okrskuPodle2026: number
+  castiSObsahem: number
+}
+
+/** Kolik okrsků má známou místnost — pro souhrn na /kde-volim. */
+export function pokrytiMistnosti(okrsky: Okrsek[]): PokrytiMistnosti {
+  const podle2026 = new Set<number>()
+  const pokryte = new Set<number>()
+  for (const soubor of volebniMistnosti) {
+    for (const m of soubor.mistnosti) {
+      for (const o of m.okrsky) {
+        pokryte.add(o)
+        if (soubor.volby === 'komunalni-2026') podle2026.add(o)
+      }
+    }
+  }
+  for (const o of okrsky) if (mistnostZPoznamky(o.poznamka)) pokryte.add(o.cislo)
+  return {
+    okrskuCelkem: okrsky.length,
+    okrskuSMistnosti: [...pokryte].filter((c) => okrsky.some((o) => o.cislo === c)).length,
+    okrskuPodle2026: podle2026.size,
+    castiSObsahem: new Set(volebniMistnosti.map((s) => s.mestskaCast)).size,
+  }
+}

@@ -1,0 +1,57 @@
+# Zdroj: Počet a sídla volebních okrsků (příloha), starosta MČ Praha 9, 17. 8. 2026, vyvěšeno 24. 8. 2026
+mestskaCast: praha-9
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Volby 2026 - Počet a sídla volebních okrsků, ÚMČ Praha 9"
+  url: "https://www.praha9.cz/sites/default/files/downloads/2026/08/Pocet_a_sidla_volebnich_okrsku.pdf"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "SOU služeb"
+    adresa: "Novovysočanská 501/5, Praha 9"
+    okrsky: [9001, 9002]
+  - nazev: "COPTH Harfa"
+    adresa: "Poděbradská 179/1, Praha 9"
+    okrsky: [9003]
+  - nazev: "Základní škola"
+    adresa: "Sousedíkova 1044/8, Praha 9"
+    okrsky: [9004, 9006]
+  - nazev: "Základní škola"
+    adresa: "Špitálská 789/4, Praha 9"
+    okrsky: [9005, 9007, 9009]
+  - nazev: "Středisko pro mládež"
+    adresa: "Čakovická 783/51, Praha 9"
+    okrsky: [9008, 9043]
+  - nazev: "ÚMČ P9 - Radnice"
+    adresa: "Sokolovská 14/324, Praha 9"
+    okrsky: [9010, 9011]
+  - nazev: "Divadlo GONG"
+    adresa: "Sokolovská 969/191, Praha 9"
+    okrsky: [9012, 9017]
+  - nazev: "Ubytovna"
+    adresa: "U Svobodárny 1110/12, Praha 9"
+    okrsky: [9013]
+  - nazev: "Základní škola"
+    adresa: "nám. Na Balabence 800/7, Praha 9"
+    okrsky: [9014, 9015, 9016, 9018]
+  - nazev: "SPŠZ"
+    adresa: "Pod Táborem 300/7, Praha 9"
+    okrsky: [9019]
+  - nazev: "Základní škola"
+    adresa: "Litvínovská 500/5, Praha 9"
+    okrsky: [9020, 9021, 9022, 9023, 9029, 9030]
+  - nazev: "Poliklinika Prosek"
+    adresa: "Lovosická 440/40, Praha 9"
+    okrsky: [9024, 9025]
+  - nazev: "Základní škola"
+    adresa: "Novoborská 371/10, Praha 9"
+    okrsky: [9026, 9027, 9028, 9036, 9037]
+  - nazev: "Základní škola"
+    adresa: "Litvínovská 600/1, Praha 9"
+    okrsky: [9031, 9032, 9033, 9034]
+  - nazev: "PAVANA"
+    adresa: "U Mateřské školy 355/2, Praha 9"
+    okrsky: [9035]
+  - nazev: "Střední prům. škola"
+    adresa: "Novoborská 610/2, Praha 9"
+    okrsky: [9038, 9039, 9040, 9041, 9042]

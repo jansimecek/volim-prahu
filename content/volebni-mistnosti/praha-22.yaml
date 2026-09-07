@@ -1,0 +1,27 @@
+# Zdroj: Oznámení o době a místě konání voleb do ZMČ Praha 22 a do ZHMP 2026, ÚMČ Praha 22 (tajemník), zn. P22 18311/2026 TAJ 05, vyvěšeno 24. 8. 2026
+mestskaCast: praha-22
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do Zastupitelstva MČ Praha 22 a do Zastupitelstva hlavního města Prahy, ÚMČ Praha 22"
+  url: "https://praha22.prod.ki-wi.cz/file/MC220B0TDLZX%230%23MC220B0TDLZX.pdf"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "ZŠ Bří Jandusů"
+    adresa: "nám. bří Jandusů č.p. 2"
+    okrsky: [22001, 22002, 22003]
+  - nazev: "Veřejná jídelna"
+    adresa: "Nové náměstí č.p. 1440/2a"
+    okrsky: [22004]
+    bezbarierova: true
+  - nazev: "ZŠ U Obory"
+    adresa: "Vachkova č.p. 630"
+    okrsky: [22005, 22006, 22007]
+  - nazev: "Mateřská škola Pitkovice"
+    adresa: "Hlívová č.p. 303/4"
+    okrsky: [22008]
+    bezbarierova: true
+  - nazev: "Hájek u Uhříněvsi (Centrum Hájek)"
+    adresa: "Pod Přehradou č.p. 18"
+    okrsky: [22009]
+    bezbarierova: true

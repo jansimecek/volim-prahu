@@ -1,0 +1,31 @@
+# Zdroj: Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva městské části Praha 7 a Senátu Parlamentu České republiky, ÚMČ Praha 7 (starosta), 24. 8. 2026
+mestskaCast: praha-7
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o době a místě konání voleb a informace o počtu a sídle volebních okrsků pro volby do Zastupitelstva městské části Praha 7 a Senátu Parlamentu České republiky, ÚMČ Praha 7"
+  url: "https://www.praha7.cz/wp-content/uploads/2026/08/Info_doba_a_misto_konani_voleb_2026.pdf"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "Gymnázium Duhovka / Základní škola TGM"
+    adresa: "Ortenovo náměstí 1275/34, 170 00 Praha 7 - Holešovice"
+    okrsky: [7001, 7002, 7003, 7004, 7005, 7006, 7007, 7036]
+    poznamka: "Okrsky 7001–7003 volí v Gymnáziu Duhovka, okrsky 7004–7007 a 7036 v Základní škole TGM (stejná adresa)."
+  - nazev: "Základní škola"
+    adresa: "Tusarova 790/21, 170 00 Praha 7 - Holešovice"
+    okrsky: [7008, 7009, 7010, 7011, 7012]
+  - nazev: "Základní škola"
+    adresa: "Umělecká 850/8, 170 00 Praha 7 - Holešovice"
+    okrsky: [7013, 7014, 7015, 7022, 7023, 7024, 7025]
+  - nazev: "Základní škola"
+    adresa: "Strossmayerovo náměstí 990/4, 170 00 Praha 7 - Holešovice"
+    okrsky: [7016, 7017, 7018, 7019, 7020, 7035]
+  - nazev: "Základní škola"
+    adresa: "Letohradská 370/1, 170 00 Praha 7 - Holešovice"
+    okrsky: [7021, 7030, 7031, 7032, 7033]
+  - nazev: "Základní škola"
+    adresa: "Korunovační 164/8, 170 00 Praha 7 - Bubeneč"
+    okrsky: [7026, 7027, 7028, 7029]
+  - nazev: "Základní škola F. Plamínkové"
+    adresa: "Františka Křížka 490/2, 170 00 Praha 7 - Holešovice"
+    okrsky: [7034]

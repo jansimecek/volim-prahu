@@ -1,0 +1,12 @@
+# Zdroj: Volby do Zastupitelstva MČ Praha-Dolní Chabry a do Zastupitelstva hl. m. Prahy 2026 (stránka Volby), ÚMČ Praha-Dolní Chabry, 10. 8. 2026
+mestskaCast: praha-dolni-chabry
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Volby do Zastupitelstva MČ Praha-Dolní Chabry a do Zastupitelstva hlavního města Prahy 9.–10. 10. 2026 – místo konání voleb, ÚMČ Praha-Dolní Chabry"
+  url: "https://www.dchabry.cz/volby"
+mistnosti:
+  - nazev: "Úřad MČ Praha-Dolní Chabry"
+    adresa: "Hrušovanské nám. 253/5, 184 00 Praha 8 – Dolní Chabry"
+    okrsky: [28001, 28002, 28003, 28004]
+    poznamka: "Okrsek 28001 knihovna, 28002 čajovna, 28003 obřadní sál, 28004 sekretariát"

@@ -1,0 +1,16 @@
+# Zdroj: Oznámení o době a místě konání voleb do ZMČ 2026, ÚMČ Praha-Kunratice, sekce Volby (zveřejněno 2026)
+mestskaCast: praha-kunratice
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do Zastupitelstva hl. m. Prahy a Zastupitelstva MČ Praha-Kunratice 9.–10. 10. 2026, ÚMČ Praha-Kunratice"
+  url: "https://www.praha-kunratice.cz/sites/default/files/volby/oznameni_o_dobe_a_miste_konani_voleb_do_zmc_2026.pdf"
+mistnosti:
+  - nazev: "Základní škola Kunratice"
+    adresa: "Předškolní 420, Praha 4 – Kunratice"
+    okrsky: [37001, 37002, 37003, 37004]
+    bezbarierova: true
+  - nazev: "Základní umělecká škola"
+    adresa: "Jana Růžičky 1179, Praha 4 – Kunratice"
+    okrsky: [37005, 37006]
+    poznamka: "Okrsek 37005 bezbariérový přístup; okrsek 37006 v patře – na požádání možnost volit do přenosné schránky v přízemí"

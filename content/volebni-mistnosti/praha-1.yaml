@@ -1,0 +1,55 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků pro volby do Zastupitelstva městské části Praha 1, Zastupitelstva hlavního města Prahy a Senátu Parlamentu ČR na území MČ Praha 1, ÚMČ Praha 1 (č.j. UMCP1 629542/2026, 31. 8. 2026), vyvěšeno na úřední desce 3. 9. 2026
+mestskaCast: praha-1
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků pro volby do Zastupitelstva městské části Praha 1, Zastupitelstva hlavního města Prahy a Senátu Parlamentu ČR na území MČ Praha 1, ÚMČ Praha 1"
+  url: "https://www.praha1.cz/ud/download.jsp?idPriloha=124735"
+  vyveseno: 2026-09-03
+mistnosti:
+  - nazev: "Pobočka Městské knihovny v Praze POHOŘELEC"
+    adresa: "Pohořelec 111/25, Praha 1"
+    okrsky: [1001]
+  - nazev: "Malostranská základní škola"
+    adresa: "Josefská 626/7, Praha 1"
+    okrsky: [1002, 1003]
+  - nazev: "SPŠ Grafická"
+    adresa: "Maltézské nám. 472/16, Praha 1"
+    okrsky: [1004]
+  - nazev: "Gymnázium Jana Nerudy"
+    adresa: "Hellichova 457/3, Praha 1"
+    okrsky: [1005]
+  - nazev: "Akademie věd ČR"
+    adresa: "Národní 1009/5, Praha 1"
+    okrsky: [1006]
+  - nazev: "ZŠ Brána jazyků s rozšířenou výukou matematiky"
+    adresa: "Uhelný trh 425/4, Praha 1"
+    okrsky: [1007, 1008]
+  - nazev: "ZŠ Curieových"
+    adresa: "Dušní 886/19, Praha 1"
+    okrsky: [1009, 1010, 1013]
+  - nazev: "Veselá škola ZŠ a ZUŠ"
+    adresa: "Soukenická 1088/10, Praha 1"
+    okrsky: [1011]
+  - nazev: "SPŠ sdělovací techniky"
+    adresa: "Malá Štupartská 977/8, Praha 1"
+    okrsky: [1012]
+  - nazev: "ZŠ a Gymnázium J. G. Jarkovského"
+    adresa: "Klimentská 1550/38, Praha 1"
+    okrsky: [1014, 1015]
+  - nazev: "ZŠ Vodičkova"
+    adresa: "Jindřišská 974/32, Praha 1"
+    okrsky: [1016]
+  - nazev: "OŘ Městské policie Praha 1"
+    adresa: "Opletalova 1441/19, Praha 1"
+    okrsky: [1017]
+  - nazev: "ÚMČ Praha 1"
+    adresa: "Vodičkova 681/18, Praha 1"
+    okrsky: [1018]
+    poznamka: "Zasedací místnost"
+  - nazev: "ZŠ Vodičkova"
+    adresa: "Vodičkova 683/22, Praha 1"
+    okrsky: [1019, 1020]
+  - nazev: "Gymnázium Jana Palacha"
+    adresa: "Pštrossova 203/13, Praha 1"
+    okrsky: [1021]

@@ -1,0 +1,14 @@
+# Zdroj: Oznámení o době a místě konání voleb do Poslanecké sněmovny PČR (3.–4. 10. 2025), starostka MČ Praha-Slivenec, č.j. MC P_SL 01470/2025/TAJ, 18. 9. 2025
+mestskaCast: praha-slivenec
+overeno: 2026-09-07
+volby: drivejsi
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do Poslanecké sněmovny Parlamentu ČR 2025, MČ Praha-Slivenec"
+  url: "https://www.praha-slivenec.cz/assets/File.ashx?id_org=80131&id_dokumenty=13811"
+  vyveseno: 2025-09-18
+mistnosti:
+  - nazev: "ÚMČ Praha-Slivenec (zasedací místnost, komunitní centrum Na Půdě, Veřejná knihovna Slivenec)"
+    adresa: "K Lochkovu 6/2, Praha - Slivenec"
+    okrsky: [48001, 48002, 48003]
+    bezbarierova: true
+    poznamka: "Okrsek 48001 zasedací místnost ÚMČ (1. patro), 48002 komunitní centrum Na Půdě (2. patro), 48003 Veřejná knihovna Slivenec (přízemí dvora ÚMČ)"

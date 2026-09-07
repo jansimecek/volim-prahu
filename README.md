@@ -145,7 +145,12 @@ mistnosti:
 ```
 
 Build spadne, když je okrsek uvedený dvakrát nebo nepatří do rozsahu dané
-městské části. Praha 9 si adresy místností zapisuje přímo do RÚIAN jako
+městské části. K 7. 9. 2026 je vyplněno 54 z 57 částí (1 104 z 1 120 okrsků),
+z toho 50 podle dokumentů k volbám 2026 („Informace o počtu a sídle volebních
+okrsků", případně už „Oznámení o době a místě konání voleb") a čtyři podle
+voleb 2025 nebo 2024 (Dubeč, Křeslice, Petrovice, Slivenec). Chybí Praha 18,
+Přední Kopanina a Újezd, kde k tomu datu nic nebylo vyvěšené nebo web
+neběžel. Každý soubor má v hlavičce komentář se zdrojem a nesrovnalostmi. Praha 9 si adresy místností zapisuje přímo do RÚIAN jako
 poznámku k okrsku; `src/lib/mistnosti.ts` je nabídne jako záložní zdroj
 s nálepkou, že to není oznámení pro rok 2026. Redakční soubor má vždy přednost.
 

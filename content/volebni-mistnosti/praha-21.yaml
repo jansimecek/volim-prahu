@@ -1,0 +1,30 @@
+# Zdroj: Informace o počtu a sídlech volebních okrsků, ÚMČ Praha 21 (starosta), čj. UMCP21/18919/2026/OOS/Ned, vyvěšeno 24. 8. 2026
+mestskaCast: praha-21
+overeno: 2026-09-07
+volby: komunalni-2026
+zdroj:
+  nazev: "Informace o počtu a sídlech volebních okrsků, ÚMČ Praha 21"
+  url: "https://edeska.praha21.cz/eDeska/download.jsp?idPriloha=9212"
+  vyveseno: 2026-08-24
+mistnosti:
+  - nazev: "Masarykova ZŠ, II. stupeň"
+    adresa: "Polesná 1690"
+    okrsky: [21001, 21002]
+    poznamka: "Vchod z ulice Čentické"
+  - nazev: "Obřadní síň MČ Praha 21"
+    adresa: "Staroklánovická 260"
+    okrsky: [21003]
+  - nazev: "MŠ Sedmikráska"
+    adresa: "Lišická 1502"
+    okrsky: [21004, 21006]
+    poznamka: "Okrsek 21004 pavilon 1, okrsek 21006 pavilon 2"
+  - nazev: "Polyfunkční dům"
+    adresa: "Staroújezdská 2300"
+    okrsky: [21005]
+  - nazev: "Zdravotní středisko Rohožník"
+    adresa: "Živonínská 1630"
+    okrsky: [21007]
+    poznamka: "Prostory osobní hygieny"
+  - nazev: "MŠ Rohožník"
+    adresa: "Žárovická 1653"
+    okrsky: [21008]
