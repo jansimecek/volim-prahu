@@ -107,6 +107,13 @@ okrsků v adresách i v hranicích sedí na číselník ČSÚ (1 120), a vypíš
 adresy, které RÚIAN řadí do okrsku jiné městské části (k 7. 9. 2026 jedna:
 Měchnovská 2426/6 v Praze 11 patří do okrsku 10064).
 
+Na `/kde-volim` nad tím běží vyhledávač (`src/components/VyhledavacOkrsku.tsx`).
+Data k němu servírují dvě statické routy generované při buildu:
+`/api/okrsky/ulice` (index ulic → městské části, asi 215 kB) a
+`/api/okrsky/<mč>` (adresy jedné části s okrsky a známými místnostmi,
+6 kB až 580 kB). Klient si stáhne jen soubory částí, kde hledaná ulice
+leží — celá Praha se na něj nikdy netahá.
+
 **Adresy volebních místností** v datech ČÚZK nejsou. Píšou se ručně podle
 „Oznámení o době a místě konání voleb" do `content/volebni-mistnosti/<mč>.yaml`,
 jeden soubor na městskou část:
@@ -175,8 +182,8 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 **Hotovo:** skelet a datový model, import z ČSÚ, číselník 57 MČ, stránky všech
 městských částí, metodika, `/kde-volim` fáze 1, CI, anketa čtenářů,
 kompetenční matice (`/kdo-o-cem-rozhoduje`), rozpočtový rámec
-(`/rozpoctovy-ramec`), datová vrstva volebních okrsků (`pnpm import:okrsky`,
-`data/okrsky/`), profily všech 24 kandidátek do ZHMP, prvních osm
+(`/rozpoctovy-ramec`), vyhledávač adresa → volební okrsek na `/kde-volim`
+nad daty ČÚZK (`pnpm import:okrsky`, `data/okrsky/`), profily všech 24 kandidátek do ZHMP, prvních osm
 hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých městských
 částech se senátor letos vůbec nevolí, a rozbor plnění programového prohlášení
 rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.

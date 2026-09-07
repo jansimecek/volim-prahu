@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { UredniDesky } from '@/components/UredniDesky'
+import { VyhledavacOkrsku } from '@/components/VyhledavacOkrsku'
 import { Obsah } from '@/components/Obsah'
 import { MDXContent } from '@/components/mdx'
 import { nadpisyStranky } from '@/lib/nadpisy'
@@ -18,6 +19,20 @@ export default function Stranka() {
         <p className="mt-3 text-lg text-seda-uredni">{stranka.popis}</p>
       </header>
       <Obsah polozky={nadpisyStranky(stranka.surovy)} />
+
+      <section className="border-t border-inkoust pt-8" aria-labelledby="vyhledavac-okrsku">
+        <h2 id="vyhledavac-okrsku" className="text-2xl">
+          Najděte svůj volební okrsek
+        </h2>
+        <p className="mt-2 max-w-prose">
+          Zadejte adresu trvalého pobytu. Číslo okrsku bereme z registru adres ČÚZK, který
+          městské části průběžně aktualizují; adresu volební místnosti doplňujeme z oznámení
+          na úředních deskách, jakmile vyjdou.
+        </p>
+        <div className="mt-5">
+          <VyhledavacOkrsku />
+        </div>
+      </section>
 
       <div className="proza max-w-prose">
         <MDXContent code={stranka.content} />

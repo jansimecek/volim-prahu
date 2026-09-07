@@ -40,6 +40,28 @@ test('kde volím vysvětluje pravidlo o voličských průkazech', async ({ page 
   await expect(page.getByText(/voličské průkazy nevydávají/i)).toBeVisible()
 })
 
+/**
+ * Vyhledávač adresa → okrsek. Partyzánská 18/23 je v Praze 7 a patří do
+ * okrsku 7001 podle sestav ČÚZK; kdyby se to změnilo, změní se i data
+ * v repu a test to ukáže, ne čtenář.
+ */
+test('vyhledávač najde okrsek podle ulice a orientačního čísla', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('partyzanska')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('23')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText('Volební okrsek 7001')).toBeVisible()
+  await expect(page.getByText('Partyzánská 18/23 · Praha 7')).toBeVisible()
+})
+
+test('vyhledávač neznámou ulici nedomýšlí', async ({ page }) => {
+  await page.goto('/kde-volim')
+  await page.getByRole('combobox', { name: 'Ulice' }).fill('Neexistující')
+  await page.getByRole('textbox', { name: 'Číslo domu' }).fill('1')
+  await page.getByRole('button', { name: 'Najít okrsek' }).click()
+  await expect(page.getByText(/jsme v Praze nenašli/)).toBeVisible()
+})
+
 test('každá stránka má funkční přeskočení na obsah', async ({ page }) => {
   await page.goto('/')
   await page.keyboard.press('Tab')

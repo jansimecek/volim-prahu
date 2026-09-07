@@ -10,24 +10,11 @@
 import { volebniMistnosti } from '#content'
 import { okrsekPodleCisla, type Okrsek } from './okrsky'
 
-export type TypZdrojeMistnosti = 'oznameni-2026' | 'drivejsi-volby' | 'ruian'
+import type { Mistnost } from './mistnostiTypy'
 
-export type Mistnost = {
-  nazev: string
-  adresa: string
-  okrsky: number[]
-  bezbarierova?: boolean
-  poznamka?: string
-  zdroj: { typ: TypZdrojeMistnosti; nazev: string; url?: string; overeno?: string }
-}
+export { POPIS_ZDROJE, type Mistnost, type TypZdrojeMistnosti } from './mistnostiTypy'
 
 type SouborMistnosti = (typeof volebniMistnosti)[number]
-
-export const POPIS_ZDROJE: Record<TypZdrojeMistnosti, string> = {
-  'oznameni-2026': 'Oznámení o době a místě konání voleb 2026',
-  'drivejsi-volby': 'Údaj z dřívějších voleb — do 24. 9. 2026 se může změnit',
-  ruian: 'Poznámka městské části v registru RÚIAN — není to oznámení pro rok 2026',
-}
 
 function mistnostiZeSouboru(soubor: SouborMistnosti): Mistnost[] {
   return soubor.mistnosti.map((m) => ({
