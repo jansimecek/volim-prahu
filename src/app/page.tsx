@@ -4,6 +4,8 @@ import { programy } from '#content'
 import { DlazdiceStrany } from '@/components/DlazdiceStrany'
 import { RazenySeznam } from '@/components/RazenySeznam'
 import { Aktualita } from '@/components/Aktualita'
+import { MojeVolby } from '@/components/MojeVolby'
+import { VyzvaAnketa } from '@/components/VyzvaAnketa'
 import { sPoctem } from '@/lib/cestina'
 import { kandidatka } from '@/lib/kandidatky'
 import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
@@ -15,6 +17,9 @@ export const metadata: Metadata = {
   description:
     'Lídři všech 24 kandidátek do zastupitelstva Prahy, srovnání jejich postojů k bydlení, dopravě a územnímu plánu a hodnocení, co z jejich slibů daná úroveň samosprávy vůbec může splnit. Volby 9.–10. října 2026.',
 }
+
+// Výzva k anketě závisí na čase, titulní strana se proto nesmí zabetonovat do buildu.
+export const revalidate = 300
 
 export default async function Rozcestnik() {
   const listina = kandidatka('magistrat')
@@ -45,6 +50,22 @@ export default async function Rozcestnik() {
           </Link>
         </p>
       </section>
+
+      <section aria-labelledby="moje-volby" className="border border-inkoust bg-papir p-5 sm:p-8">
+        <p className="popisek-uredni">Moje volby</p>
+        <h2 id="moje-volby" className="mt-1 text-2xl">
+          Kde a koho budu volit?
+        </h2>
+        <p className="mt-2 max-w-prose">
+          Podle polohy zjistíme váš okrsek a k němu městskou část, kandidátky, jestli volíte
+          i senátora a kde je volební místnost. Poloha zůstane ve vašem prohlížeči.
+        </p>
+        <div className="mt-5">
+          <MojeVolby />
+        </div>
+      </section>
+
+      <VyzvaAnketa />
 
       {/* Lídři patří na titulní stranu — je to první věc, kterou volič hledá. */}
       {polozky.length > 0 && (
@@ -134,7 +155,7 @@ export default async function Rozcestnik() {
             href="/kde-volim"
             popisek="Praktické"
             nadpis="Kde volím"
-            popis="Kdy jsou otevřené volební místnosti a proč u komunálních voleb neexistuje voličský průkaz."
+            popis="Okrsek a místnost podle adresy, termín do kalendáře a proč u komunálních voleb neexistuje voličský průkaz."
           />
         </ul>
       </section>

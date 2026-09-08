@@ -7,6 +7,38 @@ test('rozcestník nabídne obě úrovně samosprávy', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Městské části' }).first()).toBeVisible()
 })
 
+/**
+ * Z polohy se určí okrsek, část, senát i místnost. Playwright polohu
+ * podstrčí: Malá Skloněná 521/2 v Praze 9, okrsek 9001, senátní obvod 24.
+ */
+test('titulní strana zjistí okrsek z polohy', async ({ page, context }) => {
+  await context.grantPermissions(['geolocation'])
+  await context.setGeolocation({ latitude: 50.099278, longitude: 14.485802 })
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Zjistit podle mojí polohy' }).click()
+  await expect(page.getByText('Praha 9', { exact: true })).toBeVisible()
+  await expect(page.getByText(/Volební okrsek 9001/)).toBeVisible()
+  await expect(page.getByText(/obvodu č\. 24/)).toBeVisible()
+  await expect(page.getByText(/Novovysočanská 501\/5/)).toBeVisible()
+})
+
+test('plnění slibů je v hlavní navigaci', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Plnění slibů').click()
+  await expect(page).toHaveURL(/\/minule-obdobi$/)
+})
+
+/**
+ * Výzva k anketě se ukazuje jen s nastaveným úložištěm. Produkční build
+ * v testu ho nemá, takže se tu ověřuje opak: bez úložiště žádná výzva —
+ * jinak by čtenář klikl na formulář, který selže.
+ */
+test('bez úložiště titulní strana k anketě nevyzývá', async ({ page }) => {
+  test.skip(Boolean(process.env.POSTGRES_URL), 'úložiště je nastavené')
+  await page.goto('/')
+  await expect(page.getByRole('link', { name: 'Hlasovat v anketě' })).toHaveCount(0)
+})
+
 test('seznam městských částí filtruje bez ohledu na diakritiku', async ({ page }) => {
   await page.goto('/mestska-cast')
   await page.getByLabel('Najít městskou část').fill('reporyje')
