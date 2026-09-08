@@ -1,0 +1,60 @@
+# Postoje ANO 2011 k okruhům srovnání.
+#
+# Ucelený pražský program hnutí k 8. 9. 2026 nedohledán (viz profil), postoje
+# jsou z doložených výroků lídra Jana Hušbauera. Přesné citace jsou
+# v content/vyroky-lidru.yaml.
+
+subjekt: ano-2011
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: doprava
+    shrnuti: "Roční kupon nezdražovat; nejdřív úspory a kontrola zakázek v DPP"
+    postoj: >-
+      Lídr v anketě o cenách MHD odmítl zdražení ročního kuponu pro Pražany
+      a slevy pro seniory a lidi v nouzi označil za nedotknutelné. Finance
+      Dopravního podniku chce řešit vnitřními úsporami a kontrolou zakázek;
+      o cenách pro návštěvníky se podle něj dá mluvit až potom.
+    typZdroje: vyrok
+    zdroj:
+      text: Anketa Echa — zdraží po volbách MHD? (Echo24)
+      url: https://www.echo24.cz/a/Hnw5f/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-zdrazi-po-volbach-mhd
+      datum: 2026-08-12
+    proveditelnost:
+      agenda: mhd
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Ceník PID schvaluje rada, takže nezdražit je v pravomoci; jak se bez
+      zdražení pokryje rostoucí ztráta DPP, výrok neříká.
+
+  - okruh: rozpocet
+    shrnuti: "Město má přes 180 miliard na účtech a nestaví; do sta dnů audit metra D"
+    postoj: >-
+      Podle lídra má Praha na účtech přes 180 miliard korun a problém není
+      nedostatek peněz, ale schopnost rozhodnout a dokončit. Jako primátor
+      by do sta dnů nechal udělat audit harmonogramu a financování metra D
+      a zveřejnil závazný investiční plán. Datum dokončení metra odmítá slibovat.
+    typZdroje: vyrok
+    zdroj:
+      text: Metro D má vozit cestující za šest let, opozice volá po auditu (Echo24 / EchoPrime)
+      url: https://www.echoprime.cz/a/HMSTF/metro-d-ma-vozit-cestujici-za-sest-let-opozice-vola-po-auditu-a-vetsi-kontrole
+      datum: 2026-08-26
+    poznamka: >-
+      Výše rezerv je tvrzení kandidáta; rozpočtový rámec města a meze
+      rezerv popisuje stránka /rozpoctovy-ramec.
+
+  - okruh: bydleni
+    shrnuti: "Vytýká koalici, že za osm let nepostavila žádný městský byt"
+    postoj: >-
+      V reakci na pirátské vyloučení ANO z povolební spolupráce lídr uvedl, že
+      koalice s Piráty by jeho hnutí stejně neuzavřelo, a vytkl jim, že za osm
+      let ve vedení města nepostavili žádný městský byt. Vlastní cíl v počtu
+      bytů ani způsob výstavby veřejně nevyčíslil.
+    typZdroje: vyrok
+    zdroj:
+      text: Pražští Piráti vyloučili povolební spolupráci s ANO a ANO nemá zájem o Piráty (Respekt / ČTK)
+      url: https://www.respekt.cz/informacni-servis/prazsti-pirati-vyloucili-povolebni-spolupraci-s-ano-a-ano-nema-zajem-o-piraty-2026-08-12-12-45
+      datum: 2026-08-12

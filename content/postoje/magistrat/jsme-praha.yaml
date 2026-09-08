@@ -1,0 +1,26 @@
+# Postoje JSME PRAHA (Jsme Team + Volt) k okruhům srovnání.
+#
+# Program je avizovaný (viz profil). Jediný doložený postoj je hlasování
+# lídryně Jany Komrskové v zastupitelstvu — to je fakt, ne výrok.
+
+subjekt: jsme-praha
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: uzemni-plan
+    shrnuti: "Lídryně hlasovala proti Metropolitnímu plánu"
+    postoj: >-
+      Při schvalování Metropolitního plánu 28. května 2026 byla Jana Komrsková
+      jednou ze tří zastupitelů, kteří hlasovali proti (s Evou Tylovou a Hanou
+      Kordovou Marvanovou); pro bylo 50 z 65. Plán je účinný od 1. září 2026.
+    typZdroje: hlasovani
+    zdroj:
+      text: Jasné hlasování v Praze — proti Metropolitnímu plánu byly jen tři zastupitelky (Pražský deník)
+      url: https://prazsky.denik.cz/zpravy_region/praha-se-dockala-noveho-uzemniho-planu-schvalili-ho-zastupitele-20260528.html
+      datum: 2026-05-28
+    hlasovani:
+      predmet: Vydání Metropolitního plánu (Územního plánu hl. m. Prahy)
+      datum: 2026-05-28
+      usneseni: "34/2"
+      hlas: proti

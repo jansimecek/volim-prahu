@@ -8,30 +8,37 @@
 # Slug v `subjekt` musí odpovídat souboru v content/strany/. Kontroluje to
 # `pnpm validate`, aby překlep neshodil řazení až u čtenáře.
 
-overeno: 2026-09-04
+overeno: 2026-09-08
 
 # Zobrazuje se čtenáři pod výpisem subjektů, takže platí stejné pravidlo jako
 # jinde: co tvrdí, musí jít ověřit. Schéma proto vyžaduje zdroje.
 poznamka:
   text: >-
-    Zatím tu není žádný průzkum, a řazení podle průzkumu se proto vůbec
-    nenabízí. Zveřejňujeme jen průzkumy, u kterých je dohledatelný termín
-    sběru dat, velikost a typ vzorku, metoda a zadavatel — bez toho je číslo
-    neověřitelné. K 4. září 2026 jsme dohledali jediný zveřejněný průzkum
-    preferencí pro pražské zastupitelstvo (Phoenix Research, zveřejněný
-    4. května 2026) a tyhle údaje u něj publikované nejsou; posuďte ho sami
-    z odkazu níže. Pozor na dvě záměny, na které se tu dá snadno naletět.
-    První je záměna voleb: agentura NMS zveřejnila pod názvem „Volební model
-    Praha“ model voleb do Poslanecké sněmovny měřený mezi Pražany, ne průzkum
-    do zastupitelstva — o tom, kdo povede město, neříká nic. Totéž platí
-    o ostatních modelech agentur z roku 2026. Druhá je záměna ročníků:
-    vyhledávače vracejí pražské průzkumy z roku 2022, jako by byly aktuální.
-    A ještě jedna věc, i když na ni tady zatím nenarazíte: volební potenciál
+    Řadit podle průzkumu jde od 8. září 2026 podle jediného průzkumu, který
+    splňuje naše podmínky: volebního modelu agentury Median pro server
+    PrahaIN.cz (sběr 31. 8.–3. 9. 2026, 731 dotázaných, online kvótní výběr).
+    Zveřejňujeme jen průzkumy, u kterých je dohledatelný termín sběru dat,
+    velikost a typ vzorku, metoda a zadavatel — bez toho je číslo
+    neověřitelné. Starší průzkum Phoenix Research (zveřejněný 4. května 2026)
+    tyhle údaje publikované nemá, a proto v řazení není; posuďte ho sami
+    z odkazu níže. Jeden průzkum s 731 dotázanými je pořád jen jeden
+    průzkum: rozdíl mezi prvními dvěma subjekty je menší než jeho statistická
+    chyba a pětina dotázaných ještě nevěděla, koho volit. Pozor na dvě záměny,
+    na které se tu dá snadno naletět. První je záměna voleb: agentura NMS
+    zveřejnila pod názvem „Volební model Praha“ model voleb do Poslanecké
+    sněmovny měřený mezi Pražany, ne průzkum do zastupitelstva — o tom, kdo
+    povede město, neříká nic. Totéž platí o celostátních modelech agentur
+    z roku 2026. Druhá je záměna ročníků: vyhledávače vracejí pražské průzkumy
+    z roku 2022, jako by byly aktuální. A ještě jedna věc: volební potenciál
     není volební model. Potenciál říká, kolik lidí stranu aspoň zvažuje,
     takže součet za všechny strany výrazně přesahuje sto procent a strana
     s velkým potenciálem může skončit malá. Kandidátky bychom podle
     potenciálu nikdy neřadili.
   zdroje:
+    - text: >-
+        EXKLUZIVNÍ PRŮZKUM: V Praze měsíc před volbami vede ANO těsně před
+        STAN (Median pro PrahaIN.cz, 7. 9. 2026)
+      url: https://www.prahain.cz/politika/exkluzivni-pruzkum-v-praze-mesic-pred-volbami-vede-ano-tesne-pred-stan-28574.html
     - text: Průzkum z Prahy (Phoenix Research), ParlamentníListy.cz, 4. 5. 2026
       url: https://www.parlamentnilisty.cz/arena/monitor/Pruzkum-z-Prahy-Velky-navrat-STAN-i-prekvapeni-z-Prisahy-790823
     - text: >-
@@ -41,6 +48,49 @@ poznamka:
       url: https://nms.global/cz/volebni-model-praha-koalice-spolu-drzi-v-praze-vedeni-se-stan-a-piraty-svede-boj-o-volice/
 
 pruzkumy:
+  # Jediný pražský průzkum do ZHMP s doloženou metodikou. Řadí výpis
+  # kandidujících subjektů na magistrátu (přes moratorium).
+  - id: median-2026-09
+    uroven: magistrat
+    agentura: Median
+    zadavatel: PrahaIN.cz
+    sberOd: 2026-08-31
+    sberDo: 2026-09-03
+    zverejneno: 2026-09-07
+    velikostVzorku: 731
+    metoda: >-
+      Online dotazování (CAWI) na vzorku 731 obyvatel Prahy starších 18 let.
+      Kvótní výběr, reprezentativní podle pohlaví, věku a vzdělání. Uvedená
+      čísla jsou volební model — bez respondentů, kteří k volbám nechtějí.
+    url: https://www.prahain.cz/politika/exkluzivni-pruzkum-v-praze-mesic-pred-volbami-vede-ano-tesne-pred-stan-28574.html
+    vyhrady: >-
+      Je to volební model, ne volební potenciál: vypadli z něj lidé, kteří
+      volit nechtějí, a subjekty, které nikdo z dotázaných nejmenoval, tu
+      nejsou vůbec. U vzorku 731 lidí vychází podle našeho výpočtu statistická
+      chyba u velkých stran kolem tří procentních bodů — rozdíl mezi prvním
+      a druhým místem je menší než ona a u SPD a Motoristů rozhoduje o vstupu
+      do zastupitelstva jediný bod. Pětina dotázaných (u žen čtvrtina) ještě
+      nevěděla, koho bude volit. Agentura ani server nezveřejnily statistickou
+      odchylku. Primátorské preference ze stejného průzkumu (Portlík 13 %,
+      Hlaváček 11 %, Hušbauer a Scheinherr po 10 %) nejsou volební model —
+      primátora nevolí lidé, ale nově zvolené zastupitelstvo — a do řazení
+      nevstupují.
+    vysledky:
+      - subjekt: ano-2011
+        procenta: 23.3
+      - subjekt: starostove-a-nezavisli
+        procenta: 22.6
+      - subjekt: spolu-pro-prahu
+        procenta: 13.9
+      - subjekt: praha-sobe
+        procenta: 12.9
+      - subjekt: ceska-piratska-strana
+        procenta: 10.8
+      - subjekt: spd-pro-prahu
+        procenta: 5.4
+      - subjekt: motoriste-sobe
+        procenta: 5
+
   # Celostátní sněmovní model. NEŘADÍ pražské kandidátky — měří jiné strany
   # a o složení zastupitelstva hl. m. Prahy nevypovídá. Slouží jako kontext
   # v rubrice Aktuálně a nikde jinde se nezobrazuje.

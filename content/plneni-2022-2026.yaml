@@ -22,14 +22,17 @@ mereni:
   vyhled: 210
   sJakymkoliCislem: 80
   sLetopoctem: 28
-  sKonkretnimCilem: 9
+  sKonkretnimCilem: 12
   metoda: >
     Dokument člení závazky do odrážek pod třemi hlavičkami — V realizaci,
     Připravované a Výhled. Odrážek je v textové vrstvě PDF celkem 714, z toho
     138 jsou samotné hlavičky kategorií; zbývá 576 závazků. Kolik jich obsahuje
     číslici a kolik letopočet, je strojový výsledek. Devět závazků s konkrétním
     měřitelným cílem jsme z nich vybrali ručně — zbylá čísla odkazují na jiné
-    strategické dokumenty, na roky jejich platnosti nebo na paragrafy.
+    strategické dokumenty, na roky jejich platnosti nebo na paragrafy. V září
+    2026 přibyly tři závazky bez čísla, ale s ověřitelným výstupem nebo termínem
+    (schválení Metropolitního plánu v tomto volebním období, zahájení dalších
+    úseků metra D, územní rozhodnutí pro Vltavskou filharmonii).
 
 zavazky:
   - id: pr-petrzilkova
@@ -281,3 +284,72 @@ zavazky:
           Program pro vlastníky památkově významných objektů pro rok 2027 — předpokládaný objem 47,8
           mil. Kč (příloha usnesení Rady HMP č. 1449 z 22. 6. 2026)
         url: https://praha.eu/documents/d/pamatky/usneseni-rhmp-c-1449-program-priloha-c-1
+
+  # Kapitola 2 „Územní plánování" nemá hlavičky V realizaci / Připravované /
+  # Výhled jako ostatní kapitoly; závazek sám říká „v tomto volebním období",
+  # proto je zařazený jako v realizaci.
+  - id: metropolitni-plan
+    kategorie: v-realizaci
+    oblast: Územní plánování
+    zneni: >-
+      Zasadíme se o dokončení a schválení nového územního plánu, tzv. Metropolitního plánu. …
+      Vytvoříme podmínky pro jeho pořizování tak, aby bylo možné ho schválit v tomto volebním období.
+    stav: splneno
+    vysledek: >-
+      Zastupitelstvo hl. m. Prahy Metropolitní plán schválilo 28. května 2026 usnesením č. 34/2
+      (opatření obecné povahy č. 001/2026); pro hlasovalo 50 z 65 zastupitelů, proti tři
+      (Jana Komrsková, Eva Tylová a Hana Kordová Marvanová). Plán nabyl účinnosti 1. září 2026
+      a nahradil územní plán z roku 1999. Pořizování začalo v roce 2012, tedy dvě volební období
+      před tímto slibem.
+    zdroje:
+      - text: Pražské zastupitelstvo schválilo nový Územní plán hl. m. Prahy (tisková zpráva hl. m. Prahy, 28. 5. 2026)
+        url: https://praha.eu/w/prazske-zastupitelstvo-schvalilo-novy-uzemni-plan-hl-m-prahy
+      - text: Jasné hlasování v Praze — proti Metropolitnímu plánu byly jen tři zastupitelky (Pražský deník, 28. 5. 2026)
+        url: https://prazsky.denik.cz/zpravy_region/praha-se-dockala-noveho-uzemniho-planu-schvalili-ho-zastupitele-20260528.html
+      - text: Metropolitní plán schválili zastupitelé, účinný bude od září (IPR Praha)
+        url: https://iprpraha.cz/page/4509
+
+  - id: metro-d-dalsi-useky
+    kategorie: v-realizaci
+    oblast: Doprava
+    zneni: >-
+      Zahájíme výstavbu dalších úseků metra D a budeme usilovat o spolufinancování této stavby státem.
+    stav: castecne
+    vysledek: >-
+      Výstavba dalšího úseku začala: 19. června 2026 Dopravní podnik zahájil stavbu úseku
+      Olbrachtova – Nové Dvory (tři stanice, 29,99 miliardy korun bez DPH, sdružení Subterra,
+      HOCHTIEF CZ, HOCHTIEF Infrastructure a BeMo Tunneling), zprovoznění úseku Pankrác – Nové Dvory
+      plánuje na druhou polovinu roku 2032. Úsek Pankrác – Olbrachtova ze staví od dubna 2022 a ražby
+      jsou hotové. Podle harmonogramu DPP měl úsek na Nové Dvory začít už v říjnu 2023; zpoždění je
+      necelé tři roky. Doklad o spolufinancování státem jsme v tiskových zprávách DPP nenašli — proto
+      částečně, ne splněno.
+    zdroje:
+      - text: Začala stavba dalšího úseku metra D od stanice Olbrachtova na Nové Dvory (tisková zpráva DPP, 19. 6. 2026)
+        url: https://www.dpp.cz/spolecnost/pro-media/tiskove-zpravy/detail/278_3368-zacala-stavba-dalsiho-useku-metra-d-od-stanice-olbrachtova-na-nove-dvory
+      - text: Harmonogram metra D (DPP)
+        url: https://www.dpp.cz/metro-d/popis-projektu/harmonogram
+      - text: Úsek Pankrác – Olbrachtova (DPP)
+        url: https://www.dpp.cz/metro-d/realizace/usek-pankrac-olbrachtova
+
+  - id: filharmonie-uzemni-rozhodnuti
+    kategorie: pripravovane
+    oblast: Kultura a investice
+    zneni: >-
+      Získáme územní rozhodnutí a připravíme investiční akci Vltavské filharmonie. Zajistíme financování
+      ve spolupráci se státem a soukromým sektorem.
+    stav: castecne
+    vysledek: >-
+      Investiční akce je připravená do fáze žádosti o povolení: v srpnu 2026 Praha po dokončení
+      dokumentace podala žádost o povolení záměru (podle nového stavebního zákona nahrazuje územní
+      rozhodnutí i stavební povolení), rozhodnutí se čeká v lednu 2027, stavba má začít v roce 2028
+      a skončit 2033. Odhad nákladů vzrostl z 9,4 miliardy korun v soutěži z roku 2022 na 12,33 miliardy
+      za budovu a zhruba 17 miliard včetně okolí. Financování státem ani soukromým sektorem doložené
+      není; v červnu 2026 Pražská developerská společnost po kritice zastupitelů zrušila zakázku na
+      externí komunikaci projektu v hodnotě přes sto milionů korun.
+    zdroje:
+      - text: Vltavská filharmonie — stavba za 12,33 miliardy má začít v roce 2028, má zažádáno o povolení (ESTAV.cz, 1. 9. 2026)
+        url: https://www.estav.cz/cz/14891.vltavska-filharmonie-stavba-za-12-33-miliardy-ma-zacit-v-roce-2028-ma-zazadano-o-povoleni
+      - text: Propagace filharmonie za 120 milionů? Ostře kritizovaný tendr končí (Pražský deník, 3. 6. 2026)
+        url: https://prazsky.denik.cz/zpravy_region/propagace-filharmonie-za-120-milionu-ostre-kritizovany-tendr-konci-20260603.html
+      - text: Praha shání stavební povolení pro Vltavskou filharmonii (Echo24, 23. 9. 2024 — původní harmonogram a odhad 11,65 mld. Kč)
+        url: https://www.echo24.cz/a/HbfHK/zpravy-panorama-praha-shani-stavebni-povoleni-pro-vltavska-filharmonie

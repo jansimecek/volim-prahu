@@ -1,0 +1,44 @@
+# Postoje SPOLU pro Prahu (ODS + TOP 09) k okruhům srovnání.
+#
+# Subjekt má k 8. 9. 2026 jen priority, ne tematický program (viz profil),
+# proto jsou postoje z doložených výroků lídra Tomáše Portlíka. Zdroje jsou
+# totožné s content/vyroky-lidru.yaml, kde je i přesné znění citací.
+
+subjekt: spolu-pro-prahu
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: doprava
+    shrnuti: "Priorita vnitřní i vnější okruh a metro D; otevřít debatu o zdražení MHD"
+    postoj: >-
+      Lídr jmenuje jako zásadní investice vnitřní okruh, vnější okruh a metro D
+      a chce vyjednat spolupráci se státem na financování. Zároveň uvedl, že
+      koalice chtěla už v tomto období mluvit o reformě zón placeného stání
+      a o zdražení jízdného v MHD, ale koaliční partner to podmínil uzavřením
+      centra. Zdražení tedy nevylučuje, konkrétní částku nesliboval.
+    typZdroje: vyrok
+    zdroj:
+      text: Kandidát na primátora Tomáš Portlík — Chci Prahu, která bude stavět a růst (FORUM 24, přetisk na ods.cz)
+      url: https://www.ods.cz/clanek/28703-kandidat-na-primatora-tomas-portlik-chci-prahu-ktera-bude-stavet-a-rust
+      datum: 2026-08-18
+    proveditelnost:
+      agenda: mhd
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Městský okruh i metro D jsou stavby přes několik volebních období; ceny
+      jízdného schvaluje rada, ale okruh a metro závisí i na státu.
+
+  - okruh: bydleni
+    shrnuti: "„Dát Praze tempo“ — rozjet bytovou výstavbu a klíčové investice"
+    postoj: >-
+      Na zahájení kampaně lídr shrnul priority slovy o tempu: má se rozjet bytová
+      výstavba, klíčové investice a zrychlit doprava zpomalená uzavírkami. Kolik
+      bytů, kdo je má stavět a za kolik, veřejné vyjádření neuvádí.
+    typZdroje: vyrok
+    zdroj:
+      text: ODS a TOP 09 zahájily v Praze předvolební kampaň (Pražský patriot)
+      url: https://www.prazskypatriot.cz/ods-a-top-09-zahajily-v-praze-predvolebni-kampan-pred-komunalnimi-volbami-co-vzkazali-starostove-kandidatovi-na-primatora/
+      datum: 2026-05-02
