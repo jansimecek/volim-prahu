@@ -69,6 +69,25 @@ export default function Stranka() {
           ve třech senátních obvodech i do Senátu. Případné druhé kolo senátních voleb
           připadá na 16. a 17. října 2026.
         </p>
+      </section>
+
+      <Obsah polozky={[...SEKCE_STRANKY, ...nadpisyStranky(stranka.surovy)]} />
+
+      <section aria-labelledby="kdy-se-voli" className="max-w-prose">
+        <h2 id="kdy-se-voli" className="text-2xl">
+          Kdy se volí
+        </h2>
+        <dl className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-[auto_1fr]">
+          <dt className="popisek-uredni">Pátek 9. října 2026</dt>
+          <dd className="font-mono">14:00 – 22:00</dd>
+          <dt className="popisek-uredni">Sobota 10. října 2026</dt>
+          <dd className="font-mono">8:00 – 14:00</dd>
+        </dl>
+        <p className="mt-4">
+          Volí se do zastupitelstev městských částí a Zastupitelstva hlavního města Prahy,
+          ve třech senátních obvodech i do Senátu. Případné druhé kolo senátních voleb
+          připadá na 16. a 17. října 2026.
+        </p>
         <div className="mt-5">
           <PridatDoKalendare />
         </div>
