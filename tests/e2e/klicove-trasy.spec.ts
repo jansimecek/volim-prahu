@@ -187,7 +187,7 @@ test('řazení podle průzkumu se nabízí, dokud neplatí moratorium', async ({
     await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
   } else {
     await expect(prepinac).toHaveCount(1)
-    await prepinac.check()
+    await page.getByText('Podle posledního průzkumu', { exact: true }).click()
     await expect(page.getByText(/Zdroj čísel: Median pro PrahaIN\.cz/)).toBeVisible()
   }
 })
