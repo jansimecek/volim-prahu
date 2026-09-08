@@ -20,6 +20,15 @@ export function SeznamKandidatu({ strana }: { strana: StranaNaKandidatce }) {
           </tr>
         </thead>
         <tbody>
+          {/* Škrtnutá pozice zůstává v pořadí jako prázdný řádek — bez něj by číslování skákalo. */}
+          {(strana.skrtnutePozice ?? []).map((poradi) => (
+            <tr key={`skrtnuto-${poradi}`} className="border-b border-linka-silna align-top">
+              <td className="py-2 pr-3 text-right font-mono">{poradi}</td>
+              <td className="py-2 text-seda-uredni" colSpan={4}>
+                Pozice zůstala volná — kandidát byl při registraci škrtnut a registrační úřad ji neobsadil.
+              </td>
+            </tr>
+          ))}
           {strana.kandidati.map((k) => (
             <tr key={k.id} className="border-b border-linka-silna align-top">
               <td className="py-2 pr-3 text-right font-mono">{k.poradi}</td>

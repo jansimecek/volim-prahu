@@ -12,6 +12,7 @@ import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { unzipSync } from 'fflate'
 import { parseCsvObjects } from '../src/lib/csv'
+import { jeSkrtnutyKandidat } from '../src/lib/kandidatky'
 import { KOD_MAGISTRAT, slugKandidata, slugZastupitelstva, slugify } from '../src/lib/slug'
 
 const KOREN = join(__dirname, '..')
@@ -208,6 +209,7 @@ function sestavKandidatky(
         slug: slugify(nazev),
         slozeni: (strana?.SLOZENI ?? '').split(',').filter(Boolean),
         kandidati: [],
+        skrtnutePozice: [] as number[],
       }
       kandidatka.strany.push(zaznamStrany)
     }
@@ -215,6 +217,11 @@ function sestavKandidatky(
     const poradi = Number(radek.PORCISLO ?? 0)
     const prijmeni = radek.PRIJMENI ?? ''
     const jmeno = radek.JMENO ?? ''
+    // Škrtnutý kandidát není osoba — pozice zůstává volná a web to řekne.
+    if (jeSkrtnutyKandidat(prijmeni, jmeno)) {
+      ;(zaznamStrany.skrtnutePozice ??= []).push(poradi)
+      continue
+    }
     const identita = [
       slugify(prijmeni),
       slugify(jmeno),
@@ -251,7 +258,10 @@ function sestavKandidatky(
   for (const kandidatka of vystup.values()) {
     // Řadíme podle pořadí v datech; dokud není vylosováno, je to abecedně.
     kandidatka.strany.sort((a, b) => a.poradiVDatech - b.poradiVDatech)
-    for (const s of kandidatka.strany) s.kandidati.sort((a, b) => a.poradi - b.poradi)
+    for (const s of kandidatka.strany) {
+      s.kandidati.sort((a, b) => a.poradi - b.poradi)
+      if (s.skrtnutePozice?.length === 0) delete s.skrtnutePozice
+    }
   }
   return vystup
 }
@@ -283,6 +293,8 @@ function prazdnaKandidatka(z: Zastupitelstvo) {
       slug: string
       slozeni: string[]
       kandidati: Kandidat[]
+      /** Jen když nějaká pozice volná zůstala — prázdné pole se nezapisuje, aby diff nešuměl. */
+      skrtnutePozice?: number[]
     }[],
   }
 }

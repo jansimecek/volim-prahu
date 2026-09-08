@@ -28,6 +28,18 @@ export type StranaNaKandidatce = {
   slug: string
   slozeni: string[]
   kandidati: Kandidat[]
+  /** Pořadí, která registrační úřad po škrtnutí kandidáta nechal volná. */
+  skrtnutePozice?: number[]
+}
+
+/**
+ * ČSÚ nechává škrtnutého kandidáta v datech jako řádek s textem místo jména
+ * („Kandidát v registraci škrtnut" / „Registrační úřad ponechal pozici
+ * volnou"). Bez rozpoznání by se ta věta zobrazila jako jméno lídra.
+ */
+export function jeSkrtnutyKandidat(prijmeni: string, jmeno: string): boolean {
+  const text = `${prijmeni} ${jmeno}`.toLowerCase()
+  return text.includes('škrtnut') || text.includes('ponechal pozici volnou')
 }
 
 export type Kandidatka = {

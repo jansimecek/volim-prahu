@@ -6,7 +6,7 @@
     "mandaty": 45
   },
   "sada": "kv2026",
-  "stazeno": "2026-09-04",
+  "stazeno": "2026-09-08",
   "strany": [
     {
       "cislo": 1,
@@ -1402,21 +1402,6 @@
       ],
       "kandidati": [
         {
-          "id": "500224-3-1",
-          "slug": "kandidat-v-registraci-skrtnut-registracni-urad-ponechal-pozici-volnou",
-          "jmeno": "Registrační úřad ponechal pozici volnou",
-          "prijmeni": "Kandidát v registraci škrtnut",
-          "titulPred": "",
-          "titulZa": "",
-          "vek": 0,
-          "povolani": "",
-          "bydliste": "",
-          "navrhujiciStrana": "",
-          "politickaPrislusnost": "",
-          "poradi": 1,
-          "zastupitelstvo": "praha-10"
-        },
-        {
           "id": "500224-3-2",
           "slug": "jarosova-dita",
           "jmeno": "Dita",
@@ -1431,6 +1416,9 @@
           "poradi": 2,
           "zastupitelstvo": "praha-10"
         }
+      ],
+      "skrtnutePozice": [
+        1
       ]
     },
     {
