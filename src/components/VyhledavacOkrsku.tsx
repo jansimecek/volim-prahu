@@ -39,7 +39,6 @@ type Stav =
   | { typ: 'cislo-nenalezeno'; casti: string[] }
   | { typ: 'nalezeno'; vysledky: Vysledek[] }
 
-const KUDY_K_VOLBAM = 'https://kudykvolbam.iprpraha.cz'
 const MAX_NAPOVED = 8
 
 const cacheCasti = new Map<string, Promise<OdpovedOkrsku>>()
@@ -245,11 +244,7 @@ export function VyhledavacOkrsku() {
           <p>
             Ulice <strong>{ulice.trim()}</strong> leží v části {stav.casti.join(' a ')}, ale číslo{' '}
             <strong>{cislo.trim()}</strong> v ní registr adres nezná. Zkuste druhé číslo z domovního
-            štítku, nebo ověřte adresu v aplikaci{' '}
-            <a href={KUDY_K_VOLBAM} className="odkaz-akcent" rel="noopener">
-              Kudy k volbám
-            </a>
-            .
+            štítku — na štítku bývá popisné i orientační.
           </p>
         )}
         {stav.typ === 'nalezeno' && (

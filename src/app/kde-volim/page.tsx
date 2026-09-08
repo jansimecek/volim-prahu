@@ -44,11 +44,6 @@ export default function Stranka() {
         <p className="popisek-uredni mt-6">
           Adresu místnosti známe pro {cislo(pokryti.okrskuSMistnosti)} z {cislo(pokryti.okrskuCelkem)} okrsků
           {pokryti.okrskuPodle2026 > 0 && <>, z toho {cislo(pokryti.okrskuPodle2026)} podle dokumentů k volbám 2026</>}
-          {' · '}
-          oficiální nástroj:{' '}
-          <a href="https://kudykvolbam.iprpraha.cz" className="odkaz-akcent" rel="noopener">
-            Kudy k volbám (IPR Praha)
-          </a>
         </p>
       </section>
 
