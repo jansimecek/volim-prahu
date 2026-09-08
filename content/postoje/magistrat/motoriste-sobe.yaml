@@ -1,0 +1,28 @@
+# Postoje Motoristů sobě k okruhům srovnání.
+#
+# Ucelený pražský program k 8. 9. 2026 nedohledán (viz profil), postoj je
+# z doloženého výroku lídryně Kláry Sovové při jejím představení.
+
+subjekt: motoriste-sobe
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: doprava
+    shrnuti: "Rušit cyklopruhy, víc svobody pro řidiče"
+    postoj: >-
+      Lídryně při představení shrnula dopravní program slovy o více svobody
+      pro lidi a rušení cyklopruhů. Které konkrétní pruhy a v jakém rozsahu,
+      veřejně neupřesnila.
+    typZdroje: vyrok
+    zdroj:
+      text: Motoristé představili pražskou lídryni Kláru Sovovou (INFO.CZ)
+      url: https://www.info.cz/zpravodajstvi-a-komentare/motoriste-klara-sovova-praha-cyklopruhy-komunalni-volby
+      datum: 2026-06-12
+    proveditelnost:
+      kompetence: castecne
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Cyklopruhy na komunikacích ve správě města lze rušit rozhodnutím
+      silničního správního úřadu; na státních silnicích je to věc státu.

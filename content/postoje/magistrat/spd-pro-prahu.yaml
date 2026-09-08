@@ -1,0 +1,60 @@
+# Postoje SPD pro Prahu k okruhům srovnání.
+#
+# Ucelený pražský program k 8. 9. 2026 nedohledán (viz profil), postoje jsou
+# z doložených výroků lídra Milana Urbana.
+
+subjekt: spd-pro-prahu
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Město nemá byty stavět samo; developeři mají odevzdávat část bytů městu"
+    postoj: >-
+      Lídr odmítá, aby město stavělo byty vlastní developerskou společností —
+      vznikla by podle něj šedá zóna. Místo toho chce v plánovacích smlouvách
+      po developerech část bytů pro město namísto příspěvků na infrastrukturu.
+      Praze podle něj chybí zhruba 20 tisíc sociálních a 60 tisíc dostupných bytů.
+    typZdroje: vyrok
+    zdroj:
+      text: Praha byty stavět nemá, vedou ji aktivisté, říká Urban z SPD (CNN Prima News)
+      url: https://cnn.iprima.cz/praha-byty-stavet-nema-vladnou-ji-aktiviste-rika-urban-prekvapil-s-kym-by-vladl-520871
+      datum: 2026-09-05
+    proveditelnost:
+      agenda: stavebni-rizeni
+      kompetence: castecne
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Plánovací smlouvy umožňuje stavební zákon a Praha je už používá;
+      odevzdávání bytů místo příspěvků je otázka nastavení městské metodiky.
+
+  - okruh: uzemni-plan
+    shrnuti: "Stavět do výšky u dopravních uzlů a na brownfieldech"
+    postoj: >-
+      Nová výstavba má podle lídra jít do výšky, hlavně na brownfieldech,
+      u dopravních uzlů a stanic metra.
+    typZdroje: vyrok
+    zdroj:
+      text: Praha byty stavět nemá, vedou ji aktivisté, říká Urban z SPD (CNN Prima News)
+      url: https://cnn.iprima.cz/praha-byty-stavet-nema-vladnou-ji-aktiviste-rika-urban-prekvapil-s-kym-by-vladl-520871
+      datum: 2026-09-05
+    proveditelnost:
+      agenda: uzemni-plan
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: presahuje
+    poznamka: >-
+      Výškovou regulaci určuje Metropolitní plán účinný od 1. 9. 2026; jeho
+      změna je proces na roky.
+
+  - okruh: doprava
+    shrnuti: "Omezování aut a zdražování MHD si podle něj protiřečí"
+    postoj: >-
+      Kritizuje současné vedení, že zároveň chce omezit cestování auty a
+      zdražit MHD. Vlastní model cen jízdného veřejně nepředložil.
+    typZdroje: vyrok
+    zdroj:
+      text: Milan Urban (SPD) — mašinerie v Praze nehledá řešení (iportaL24.cz)
+      url: https://iportal24.cz/rozhovory/milan-urban-spd-masinerie-v-praze-nehleda-reseni-ale-raduje-se-z-kazdeho-problemu-vsichni/
+      datum: 2026-08-26

@@ -1,0 +1,42 @@
+# Postoje PRAHA SOBĚ k okruhům srovnání.
+#
+# Subjekt má tematický program „Zlepšení" (viz profil); do jeho hodnocení
+# zatím nešlo, postoje jsou proto z doložených výroků lídra Adama Scheinherra.
+
+subjekt: praha-sobe
+uroven: magistrat
+overeno: 2026-09-08
+
+postoje:
+  - okruh: bydleni
+    shrnuti: "Regulovat Airbnb, ale chybějící tisíce bytů to nevyřeší"
+    postoj: >-
+      Lídr považuje krátkodobé pronájmy za problém — v bytech se má bydlet,
+      ne dělat z nich hotely — a zároveň říká, že regulace nedostatek tisíců
+      bytů nevyřeší. Jak má město byty doplnit, v této odpovědi nerozvádí.
+    typZdroje: vyrok
+    zdroj:
+      text: Anketa kandidátů na primátora o krátkodobých pronájmech (CNN Prima News)
+      url: https://cnn.iprima.cz/praha-vs-airbnb-nici-nam-centrum-shoduji-se-kandidati-na-primatora-ano-hovori-i-o-limitu-dnu-519615
+      datum: 2026-08-23
+    proveditelnost:
+      agenda: obecne-zavazne-vyhlasky
+      kompetence: castecne
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Regulace krátkodobých pronájmů je z části věcí státního zákona, město
+      má k dispozici jen některé nástroje.
+
+  - okruh: rozpocet
+    shrnuti: "Proti zakázce na propagaci Vltavské filharmonie za víc než sto milionů"
+    postoj: >-
+      Zakázku Pražské developerské společnosti na externí komunikaci
+      filharmonie kritizoval s tím, že si společnost chce udělat vlastní
+      reklamní agenturu. Zakázka byla po kritice napříč zastupitelstvem
+      v červnu 2026 zrušena.
+    typZdroje: vyrok
+    zdroj:
+      text: Propagace filharmonie za 120 milionů? Ostře kritizovaný tendr končí (Pražský deník)
+      url: https://prazsky.denik.cz/zpravy_region/propagace-filharmonie-za-120-milionu-ostre-kritizovany-tendr-konci-20260603.html
+      datum: 2026-06-03
