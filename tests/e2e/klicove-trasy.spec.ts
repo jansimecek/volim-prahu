@@ -172,10 +172,24 @@ test('výpis stran jde přeřadit podle vylosovaného čísla', async ({ page })
   expect([...podleCisla].sort()).toEqual([...abecedne].sort())
 })
 
-test('řazení podle průzkumu se nenabízí a je vysvětlené proč', async ({ page }) => {
+/**
+ * Od 8. 9. 2026 existuje pražský průzkum s doloženou metodikou (Median pro
+ * PrahaIN.cz), takže se řazení nabízí. Od 6. 10. 2026 ho schová moratorium
+ * a test musí čekat opak — jinak by v den moratoria spadl.
+ */
+const MORATORIUM_OD = new Date('2026-10-06T00:00:00+02:00')
+
+test('řazení podle průzkumu se nabízí, dokud neplatí moratorium', async ({ page }) => {
   await page.goto('/praha')
-  await expect(page.getByRole('radio', { name: 'Podle posledního průzkumu' })).toHaveCount(0)
-  await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
+  const prepinac = page.getByRole('radio', { name: 'Podle posledního průzkumu' })
+  if (new Date() >= MORATORIUM_OD) {
+    await expect(prepinac).toHaveCount(0)
+    await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
+  } else {
+    await expect(prepinac).toHaveCount(1)
+    await page.getByText('Podle posledního průzkumu', { exact: true }).click()
+    await expect(page.getByText(/Zdroj čísel: Median pro PrahaIN\.cz/)).toBeVisible()
+  }
 })
 
 test('aktuality mají permalink, čas a zdroj', async ({ page }) => {
@@ -277,7 +291,7 @@ test('celostátní model se ukáže s výhradou a neřadí pražské kandidátky
   await expect(page.getByText('Je to model voleb do Poslanecké sněmovny')).not.toHaveCount(0)
 
   // Na stránce magistrátu se podle něj nesmí dát řadit — měří jiné strany.
+  // Řazení, pokud se nabízí, musí vycházet z pražského průzkumu, ne z Kantaru.
   await page.goto('/praha')
-  await expect(page.getByRole('radio', { name: 'Podle posledního průzkumu' })).toHaveCount(0)
-  await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
+  await expect(page.getByText(/Kantar/)).toHaveCount(0)
 })
