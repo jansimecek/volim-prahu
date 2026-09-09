@@ -9,7 +9,7 @@ import { kZobrazeni } from '@/lib/aktuality'
  * text čte vytržený z kontextu stránky.
  */
 
-const ZAKLAD = 'https://volimprahu.cz'
+import { ZAKLAD_WEBU as ZAKLAD } from '@/lib/web'
 
 /** Feed se přegeneruje stejně často jako zbytek webu. */
 export const revalidate = 900

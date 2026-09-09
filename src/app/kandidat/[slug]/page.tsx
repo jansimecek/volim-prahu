@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Drobecky } from '@/components/Drobecky'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { absolutni } from '@/lib/web'
 import { notFound } from 'next/navigation'
 import { Rozhovory } from '@/components/Rozhovory'
 import { VyrokyOsoby } from '@/components/VyrokyOsoby'
@@ -40,6 +42,17 @@ export default async function StrankaKandidata({ params }: Parametry) {
 
   return (
     <div className="space-y-10">
+      <StrukturovanaData
+        data={{
+          '@type': 'Person',
+          name: celeJmeno(osoba),
+          url: absolutni(`/kandidat/${slug}`),
+          ...(osoba.povolani ? { jobTitle: osoba.povolani } : {}),
+          description: `Kandiduje v pražských komunálních volbách 2026: ${kandidatury
+            .map((k) => `${k.strana.nazev} (${k.zastupitelstvo.nazev}, ${k.kandidat.poradi}. místo)`)
+            .join('; ')}. Zdroj: otevřená data ČSÚ.`,
+        }}
+      />
       <header>
         <Drobecky
           cesta={[

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Volím Prahu">
+  <rect width="64" height="64" fill="#ecede9"/>
+  <rect x="8" y="46" width="48" height="6" fill="#c8102e"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="34" fill="#161c24">VP</text>
+</svg>

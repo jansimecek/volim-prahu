@@ -154,6 +154,18 @@ neběžel. Každý soubor má v hlavičce komentář se zdrojem a nesrovnalostmi
 poznámku k okrsku; `src/lib/mistnosti.ts` je nabídne jako záložní zdroj
 s nálepkou, že to není oznámení pro rok 2026. Redakční soubor má vždy přednost.
 
+## Vyhledávače a jazykové modely
+
+Kanonická doména je `https://www.volimprahu.cz` (apex přesměrovává na www),
+konstanta je v `src/lib/web.ts`. Web vydává `/robots.txt` (zakázáno jen
+`/api/` a `/hledani`), `/sitemap.xml` se všemi stránkami včetně profilů
+kandidátů, `/llms.txt` jako mapu obsahu a zásad pro jazykové modely,
+RSS `/aktualne/feed.xml`, výchozí náhledový obrázek `/opengraph-image`
+a favicon `/icon.svg`. Každá stránka má kanonickou adresu; strukturovaná
+data (JSON-LD) nese komponenta `StrukturovanaData`: WebSite v layoutu, Event
+na titulní straně, NewsArticle u aktuality, Person na profilu kandidáta a
+BreadcrumbList všude, kde jsou drobečky. E2E test to hlídá.
+
 ## Anketa čtenářů — co je potřeba dozapnout
 
 Anketa je hotová, ale bez úložiště v produkci úmyslně selže nahlas, aby se
