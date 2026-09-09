@@ -20,9 +20,6 @@ export const metadata: Metadata = {
     'Lídři všech 24 kandidátek do zastupitelstva Prahy, srovnání jejich postojů k bydlení, dopravě a územnímu plánu a hodnocení, co z jejich slibů daná úroveň samosprávy vůbec může splnit. Volby 9.–10. října 2026.',
 }
 
-// Výzva k anketě závisí na čase, titulní strana se proto nesmí zabetonovat do buildu.
-export const revalidate = 300
-
 export default async function Rozcestnik() {
   const listina = kandidatka('magistrat')
   const { polozky, pruzkum } = await vypisStran('magistrat')

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { programy, stranky, strany } from '#content'
-import { kZobrazeni } from '@/lib/aktuality'
+import { jeSPruzkumem, publikovane } from '@/lib/aktuality'
 import { kandidatka, vsechnyKandidatky } from '@/lib/kandidatky'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
@@ -9,27 +9,28 @@ import { absolutni } from '@/lib/web'
 /**
  * Sitemapa všech veřejných stránek. Profily kandidátů se generují na
  * vyžádání, takže bez sitemapy by je vyhledávač našel jen přes odkazy
- * z kandidátek; tady jsou všechny. Aktuality se berou přes stejnou bránu
- * jako na webu, aby se během moratoria neodkazovalo na stránku, která
- * vrací 404.
+ * z kandidátek; tady jsou všechny.
+ *
+ * Generuje se při buildu a je deterministická — žádné `new Date()`, aby
+ * se megabajtový soubor nezapisoval do ISR cache znovu při každé
+ * regeneraci (Vercel účtuje zápis jen při změně obsahu). Aktuality
+ * s průzkumem tu nejsou vůbec: během moratoria vracejí 404 a sitemapa
+ * by na ně nesměla odkazovat; z rubriky jsou dostupné tak jako tak.
  */
-export const revalidate = 3600
-
 type Polozka = MetadataRoute.Sitemap[number]
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const dnes = new Date()
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticke: Polozka[] = [
-    { url: absolutni('/'), lastModified: dnes, changeFrequency: 'daily', priority: 1 },
-    { url: absolutni('/praha'), lastModified: dnes, changeFrequency: 'daily', priority: 0.9 },
-    { url: absolutni('/mestska-cast'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolutni('/senat'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolutni('/temata'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolutni('/aktualne'), lastModified: dnes, changeFrequency: 'daily', priority: 0.8 },
-    { url: absolutni('/kde-volim'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.9 },
-    { url: absolutni('/hlasovani'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.5 },
-    { url: absolutni('/rozhovory'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.5 },
-    { url: absolutni('/vysledky'), lastModified: dnes, changeFrequency: 'weekly', priority: 0.6 },
+    { url: absolutni('/'), changeFrequency: 'daily', priority: 1 },
+    { url: absolutni('/praha'), changeFrequency: 'daily', priority: 0.9 },
+    { url: absolutni('/mestska-cast'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: absolutni('/senat'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: absolutni('/temata'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: absolutni('/aktualne'), changeFrequency: 'daily', priority: 0.8 },
+    { url: absolutni('/kde-volim'), changeFrequency: 'weekly', priority: 0.9 },
+    { url: absolutni('/hlasovani'), changeFrequency: 'weekly', priority: 0.5 },
+    { url: absolutni('/rozhovory'), changeFrequency: 'weekly', priority: 0.5 },
+    { url: absolutni('/vysledky'), changeFrequency: 'weekly', priority: 0.6 },
   ]
 
   const referencni: Polozka[] = stranky
@@ -43,7 +44,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const mestskeCasti: Polozka[] = MESTSKE_CASTI.map((mc) => ({
     url: absolutni(`/mestska-cast/${mc.slug}`),
-    lastModified: dnes,
     changeFrequency: 'weekly',
     priority: 0.8,
   }))
@@ -65,17 +65,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const senat: Polozka[] = OBVODY.map((o) => ({
     url: absolutni(`/senat/${o.slug}`),
-    lastModified: dnes,
     changeFrequency: 'weekly',
     priority: 0.7,
   }))
 
-  const aktuality: Polozka[] = (await kZobrazeni()).map((z) => ({
+  const aktuality: Polozka[] = publikovane()
+    .filter((z) => !jeSPruzkumem(z))
+    .map((z) => ({
     url: absolutni(`/aktualne/${z.slug}`),
-    lastModified: new Date(z.vydano),
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }))
+      lastModified: new Date(z.vydano),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }))
 
   const osoby = new Set<string>()
   for (const slug of vsechnyKandidatky()) {

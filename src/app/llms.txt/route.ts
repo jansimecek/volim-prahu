@@ -13,7 +13,8 @@ import { KONTAKT_EMAIL, ZAKLAD_WEBU, absolutni } from '@/lib/web'
  * zásady (proveditelnost, ne pravdivost; zdroj u každého tvrzení) a
  * strojové vstupy, ze kterých se dá citovat.
  */
-export const revalidate = 3600
+// Statické: obsah se mění jen s nasazením, regenerace v ISR by byla zbytečná.
+export const dynamic = 'force-static'
 
 export function GET(): Response {
   const magistrat = strany.filter((s) => s.uroven === 'magistrat').sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs'))
