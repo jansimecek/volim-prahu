@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import type { Route } from 'next'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { absolutni } from '@/lib/web'
 
 /**
  * `href` je obyčejný řetězec, ne `Route`. Typované cesty Nextu neumějí projít
@@ -24,6 +26,18 @@ export function Drobecky({ cesta }: { cesta: Drobek[] }) {
 
   return (
     <nav aria-label="Drobečková navigace" className="drobecky">
+      {/* Tatáž cesta i pro vyhledávače — BreadcrumbList z drobečků, ne z ruky. */}
+      <StrukturovanaData
+        data={{
+          '@type': 'BreadcrumbList',
+          itemListElement: cesta.map((drobek, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: drobek.popisek,
+            ...(drobek.href ? { item: absolutni(drobek.href) } : {}),
+          })),
+        }}
+      />
       <ol className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
         {cesta.map((drobek, i) => {
           const posledni = i === cesta.length - 1

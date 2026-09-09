@@ -3,6 +3,8 @@ import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/go
 import Link from 'next/link'
 import { HlavniNavigace } from '@/components/HlavniNavigace'
 import { Mereni } from '@/components/Mereni'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { KONTAKT_EMAIL, ZAKLAD_WEBU } from '@/lib/web'
 import { PruhRezimu } from '@/components/PruhRezimu'
 import '../styles/globals.css'
 
@@ -36,12 +38,18 @@ export const metadata: Metadata = {
   },
   description:
     'Kdo kandiduje do vašeho zastupitelstva, co slibuje a co z toho daná úroveň pražské samosprávy vůbec může splnit. Komunální a senátní volby 9.–10. října 2026.',
-  metadataBase: new URL('https://volimprahu.cz'),
+  metadataBase: new URL(ZAKLAD_WEBU),
+  // Kanonická adresa každé stránky = její vlastní cesta na www doméně.
+  alternates: {
+    canonical: './',
+    types: { 'application/rss+xml': '/aktualne/feed.xml' },
+  },
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
     siteName: 'Volím Prahu',
   },
+  robots: { index: true, follow: true },
 }
 
 /**
@@ -165,6 +173,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
           </div>
         </footer>
+        <StrukturovanaData
+          data={{
+            '@type': 'WebSite',
+            name: 'Volím Prahu',
+            url: ZAKLAD_WEBU,
+            inLanguage: 'cs',
+            description:
+              'Nezávislý volební průvodce pro komunální a senátní volby v Praze 9.–10. října 2026.',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Volím Prahu',
+              url: ZAKLAD_WEBU,
+              email: KONTAKT_EMAIL,
+            },
+          }}
+        />
         <Mereni />
       </body>
     </html>

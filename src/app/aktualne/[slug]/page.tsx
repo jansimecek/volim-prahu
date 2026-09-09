@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import { Drobecky } from '@/components/Drobecky'
 import { Aktualita } from '@/components/Aktualita'
 import { kZobrazeni, publikovane, aktualitaPodleSlugu } from '@/lib/aktuality'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { ZAKLAD_WEBU, absolutni } from '@/lib/web'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -36,6 +38,19 @@ export default async function StrankaAktuality({ params }: Parametry) {
     <div className="space-y-8">
       <Drobecky cesta={[{ popisek: 'Úvod', href: '/' }, { popisek: 'Aktuálně', href: '/aktualne' }, { popisek: aktualita.nadpis }]} />
 
+      <StrukturovanaData
+        data={{
+          '@type': 'NewsArticle',
+          headline: aktualita.nadpis,
+          description: aktualita.shrnuti,
+          datePublished: aktualita.vydano,
+          inLanguage: 'cs',
+          url: absolutni(`/aktualne/${aktualita.slug}`),
+          author: { '@type': 'Organization', name: 'Volím Prahu', url: ZAKLAD_WEBU },
+          publisher: { '@type': 'Organization', name: 'Volím Prahu', url: ZAKLAD_WEBU },
+          ...(aktualita.zdroje.length > 0 ? { citation: aktualita.zdroje.map((z) => z.url) } : {}),
+        }}
+      />
       <Aktualita aktualita={aktualita} plne urovenNadpisu={1} />
 
       <nav

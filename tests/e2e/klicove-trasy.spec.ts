@@ -295,3 +295,52 @@ test('celostátní model se ukáže s výhradou a neřadí pražské kandidátky
   await page.goto('/praha')
   await expect(page.getByText(/Kantar/)).toHaveCount(0)
 })
+
+/**
+ * Dostupnost pro vyhledávače a jazykové modely: robots, sitemapa, llms.txt,
+ * kanonická adresa na www doméně a strukturovaná data. Bez nich je web
+ * k nalezení jen odkazy, a odpovědi asistentů na „kde volím" jdou jinam.
+ */
+test('robots, sitemapa a llms.txt existují a ukazují na www doménu', async ({ request }) => {
+  const robots = await request.get('/robots.txt')
+  expect(robots.ok()).toBeTruthy()
+  expect(await robots.text()).toContain('Sitemap: https://www.volimprahu.cz/sitemap.xml')
+
+  const sitemap = await request.get('/sitemap.xml')
+  expect(sitemap.ok()).toBeTruthy()
+  const xml = await sitemap.text()
+  expect(xml).toContain('<loc>https://www.volimprahu.cz/kde-volim</loc>')
+  expect(xml).toContain('<loc>https://www.volimprahu.cz/mestska-cast/praha-7</loc>')
+  expect(xml).toContain('<loc>https://www.volimprahu.cz/kandidat/portlik-tomas</loc>')
+
+  const llms = await request.get('/llms.txt')
+  expect(llms.ok()).toBeTruthy()
+  const text = await llms.text()
+  expect(text).toContain('# Volím Prahu')
+  expect(text).toContain('https://www.volimprahu.cz/kde-volim')
+})
+
+test('stránky mají kanonickou adresu, náhledový obrázek a strukturovaná data', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://www.volimprahu.cz')
+  await expect(page.locator('meta[property="og:image"]')).toHaveCount(1)
+  const typy = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(typy.some((t) => t.includes('"@type":"WebSite"'))).toBeTruthy()
+  expect(typy.some((t) => t.includes('"@type":"Event"'))).toBeTruthy()
+
+  await page.goto('/kandidat/portlik-tomas')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://www.volimprahu.cz/kandidat/portlik-tomas',
+  )
+  const naProfilu = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(naProfilu.some((t) => t.includes('"@type":"Person"'))).toBeTruthy()
+  expect(naProfilu.some((t) => t.includes('"@type":"BreadcrumbList"'))).toBeTruthy()
+
+  await page.goto('/aktualne/vylosovana-cisla-kandidatek')
+  const uAktuality = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(uAktuality.some((t) => t.includes('"@type":"NewsArticle"'))).toBeTruthy()
+
+  await page.goto('/hledani')
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+})

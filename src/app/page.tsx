@@ -6,6 +6,8 @@ import { RazenySeznam } from '@/components/RazenySeznam'
 import { Aktualita } from '@/components/Aktualita'
 import { MojeVolby } from '@/components/MojeVolby'
 import { VyzvaAnketa } from '@/components/VyzvaAnketa'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { absolutni } from '@/lib/web'
 import { sPoctem } from '@/lib/cestina'
 import { kandidatka } from '@/lib/kandidatky'
 import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
@@ -30,6 +32,21 @@ export default async function Rozcestnik() {
 
   return (
     <div className="space-y-16">
+      <StrukturovanaData
+        data={{
+          '@type': 'Event',
+          name: 'Komunální a senátní volby v Praze 2026',
+          description:
+            'Volby do zastupitelstev městských částí a Zastupitelstva hl. m. Prahy, ve třech obvodech i do Senátu. Pátek 14–22 h, sobota 8–14 h.',
+          startDate: '2026-10-09T14:00:00+02:00',
+          endDate: '2026-10-10T14:00:00+02:00',
+          eventStatus: 'https://schema.org/EventScheduled',
+          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+          location: { '@type': 'City', name: 'Praha', address: { '@type': 'PostalAddress', addressLocality: 'Praha', addressCountry: 'CZ' } },
+          organizer: { '@type': 'GovernmentOrganization', name: 'Ministerstvo vnitra ČR', url: 'https://mv.gov.cz/volby-referenda' },
+          url: absolutni('/kde-volim'),
+        }}
+      />
       <section>
         <p className="popisek-uredni">Komunální a senátní volby · 9.–10. října 2026</p>
         <h1 className="mt-3 max-w-3xl text-4xl md:text-5xl">

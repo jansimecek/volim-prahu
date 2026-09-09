@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: 'Hledat',
   description:
     'Vyhledávání v kandidátech, volebních stranách a městských částech pražských voleb 2026.',
+  // Stránka bez vlastního obsahu — vyhledávače mají indexovat cíle, ne formulář.
+  robots: { index: false, follow: true },
 }
 
 export default function StrankaHledani() {
