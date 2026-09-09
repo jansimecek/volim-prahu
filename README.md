@@ -154,6 +154,18 @@ neběžel. Každý soubor má v hlavičce komentář se zdrojem a nesrovnalostmi
 poznámku k okrsku; `src/lib/mistnosti.ts` je nabídne jako záložní zdroj
 s nálepkou, že to není oznámení pro rok 2026. Redakční soubor má vždy přednost.
 
+## ISR a cena cache na Vercelu
+
+Všechny stránky regeneruje layout po 900 s (`revalidate = 900`) kvůli
+fázím voleb a moratoriu; Vercel účtuje zápis do ISR cache jen při změně
+obsahu, takže deterministický výstup je zadarmo. Z toho plynou tři pravidla:
+žádné `new Date()` ani náhodnost v renderu, sitemapa a `llms.txt` jsou
+statické, a `connection()` (čtení času za běhu, které stránku vyřadí z cache
+úplně) se volá jen v okně dvou revalidací kolem hranic moratoria —
+viz `src/lib/zaBehu.ts` a test, který drží obě čísla pohromadě. Profily
+kandidátů (7 860) se generují na vyžádání a po nasazení se do cache zapíší
+jednou; předgenerovat je v buildu by nasazení nafouklo o stovky megabajtů.
+
 ## Vyhledávače a jazykové modely
 
 Kanonická doména je `https://www.volimprahu.cz` (apex přesměrovává na www),
