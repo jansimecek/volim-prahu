@@ -8,6 +8,8 @@
 # Datum poslední úplné revize celé sady. Výroky ze zdroje `ctk-koalice`
 # přibyly později a byly ověřeny 4. 9. 2026 — proti textu ČTK i proti jeho
 # převzetí v Pražském deníku, které přineslo tytéž citace.
+# Výroky ze zdrojů `cnn-husbauer` a `ctk-uhrineves` přibyly 14. 9. 2026,
+# ověřené proti textu zdroje.
 overeno: 2026-08-27
 
 zdroje:
@@ -101,6 +103,18 @@ zdroje:
     datum: 2026-08-23
     typ: redakcni
     url: "https://www.ceskenoviny.cz/zpravy/prazsky-lidr-spolu-portlik-je-skepticky-k-vladnuti-s-hnutim-ano/2865060"
+  - id: cnn-husbauer
+    medium: "CNN Prima NEWS"
+    nazev: "Praha spala osm let, říká lídr ANO Hušbauer. ODS má za přívěsek Pirátů, koalici ale nevyloučil"
+    datum: 2026-09-10
+    typ: redakcni
+    url: "https://cnn.iprima.cz/praha-spala-osm-let-rika-lidr-ano-husbauer-ods-ma-za-privesek-piratu-koalici-ale-nevyloucil-519585"
+  - id: ctk-uhrineves
+    medium: "Pražský deník (ČTK)"
+    nazev: "Kampaň ANO v hlavním městě startuje v Uhříněvsi. Program mířil na dopravu"
+    datum: 2026-09-13
+    typ: redakcni
+    url: "https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -139,6 +153,28 @@ osoby:
         citace: "Chci udržet minimálně ten výsledek, který jsme měli čtyři roky zpátky"
         kontext: "V téže debatě odpovídal na otázku, jaký výsledek považuje v Praze za úspěch."
         zdroj: ctk-koalice
+      - tema: "Povolební spolupráce"
+        citace: "Koaliční jednání v Praze povedu já. Celostátní politika nás v Praze neomezuje a neměla by omezovat"
+        kontext: "V rozhovoru pro CNN Prima News o povolebních jednáních v Praze a o roli celostátního vedení ANO."
+        zdroj: cnn-husbauer
+      - tema: "Povolební spolupráce"
+        citace: "U povolebního vyjednávání o koalicích mám jednoduchou podmínku – program a způsob řízení"
+        kontext: "V témže rozhovoru jmenoval podmínku, na které podle něj bude povolební spolupráce záviset."
+        poznamka: "Titulek rozhovoru, podle kterého Hušbauer koalici s ODS „nevyloučil“, je formulace redakce, ne jeho věta."
+        zdroj: cnn-husbauer
+      - tema: "Povolební spolupráce"
+        citace: "Rozhodně se nedomluvím s tím, kdo chce pokračovat ve stylu posledních osmi let"
+        kontext: "V témže rozhovoru o tom, s kým by se po volbách nedomluvil."
+        zdroj: cnn-husbauer
+      - tema: "Povolební spolupráce"
+        citace: "Já v Praze půjdu do koalice s tím, kdo dokáže plnit naše programové prohlášení."
+        pokracovani: " A primárně s tím, kdo se mnou bude chtít řešit nedostupné bydlení v Praze, dopravu, obnovu sportovních ploch, obnovu sídlišť a veškeré tyhle důležité věci pro Prahu a pro Pražany."
+        kontext: "Na zahájení pražské kampaně ANO v Uhříněvsi pro ČTK."
+        zdroj: ctk-uhrineves
+      - tema: "Rozpočet a investice"
+        citace: "Pro mě je největší priorita, aby se Praha rozvíjela, aby se do ní investovalo - do všech oblastí, ve kterých je to potřeba, ať je to doprava, bezpečnost, bydlení, školství nebo sport"
+        kontext: "Na zahájení pražské kampaně ANO v Uhříněvsi pro ČTK."
+        zdroj: ctk-uhrineves
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana

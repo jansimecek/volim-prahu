@@ -1,6 +1,6 @@
 {
   "sada": "se2026",
-  "stazeno": "2026-08-28",
+  "stazeno": "2026-09-14",
   "kandidati": [
     {
       "obvod": 21,
@@ -71,7 +71,7 @@
       "titulPred": "Ing.",
       "titulZa": "Ph.D.",
       "vek": 42,
-      "povolani": "vysokoškolský pedagog, vědecko - technický pracovník",
+      "povolani": "vysokoškolský pedagog, vědecko-technický pracovník",
       "bydliste": "Praha",
       "navrhujiciStrana": "1114",
       "politickaPrislusnost": "1114",
@@ -132,7 +132,7 @@
       "titulZa": "",
       "vek": 67,
       "povolani": "senátor, bojovník za nezávislost médií, cimrmanolog",
-      "bydliste": "Praha-Vinoř",
+      "bydliste": "Praha 9 - Vinoř",
       "navrhujiciStrana": "166",
       "politickaPrislusnost": "99",
       "volebniStrana": "\"David Smoljak je náš senátor!\""
@@ -192,7 +192,7 @@
       "titulZa": "",
       "vek": 59,
       "povolani": "podnikatel, vydavatel, producent",
-      "bydliste": "Ústí nad Labem",
+      "bydliste": "Praha 1",
       "navrhujiciStrana": "1291",
       "politickaPrislusnost": "99",
       "volebniStrana": "Hnutí Generace"
@@ -251,7 +251,7 @@
       "titulPred": "doc. MUDr.",
       "titulZa": "Ph.D.,MPH",
       "vek": 62,
-      "povolani": "lékař, ředitel Fakultní nemocnice",
+      "povolani": "ředitel VFN Praha, lékař urgentní medicíny, záchranář",
       "bydliste": "Praha 4",
       "navrhujiciStrana": "768",
       "politickaPrislusnost": "99",
@@ -260,8 +260,8 @@
     {
       "obvod": 27,
       "cislo": 6,
-      "slug": "pesek-pavel",
-      "jmeno": "Pavel",
+      "slug": "pesek-jiri-pavel",
+      "jmeno": "Jiří Pavel",
       "prijmeni": "Pešek",
       "titulPred": "Ing.",
       "titulZa": "",
