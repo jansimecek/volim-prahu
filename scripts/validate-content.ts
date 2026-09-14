@@ -38,8 +38,9 @@ const ZAKAZANY_SLOVNIK = [
  * Slovník verdiktu se kontroluje jen tam, kde hodnotíme vlastními slovy.
  *
  * Kontrolují se kolekce, kde redakce píše vlastními slovy o subjektech:
- * hodnocení programů a aktuality. Při přidání další takové rubriky se sem
- * musí dopsat, jinak v ní pravidlo mlčky přestane platit.
+ * hodnocení programů, aktuality, zápisy postojů a vyjádření o koalicích.
+ * Při přidání další takové rubriky se sem musí dopsat, jinak v ní pravidlo
+ * mlčky přestane platit.
  *
  * Metodika o slovníku mluvit musí — vysvětluje, proč takové výroky
  * nevydáváme. A profily subjektů citují registrované názvy volebních stran,
@@ -48,7 +49,10 @@ const ZAKAZANY_SLOVNIK = [
  * ne náš verdikt, takže se `content/strany/` nekontroluje.
  */
 const KONTROLOVAT_SLOVNIK = (soubor: string) =>
-  soubor.startsWith('content/programy/') || soubor.startsWith('content/aktualne/')
+  soubor.startsWith('content/programy/') ||
+  soubor.startsWith('content/aktualne/') ||
+  soubor.startsWith('content/postoje/') ||
+  soubor === 'content/koalice.yaml'
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 
@@ -243,6 +247,7 @@ function overKrizoveOdkazy() {
 
   overOsobyRozhovoru(velite)
   overPostoje(velite, strany)
+  overKoalice(velite, strany)
 }
 
 /**
@@ -328,6 +333,32 @@ function overOsobyRozhovoru(velite: string) {
         zprava: `Rozhovor "${r.slug}" odkazuje na osobu "${r.osoba}", která na žádné kandidátní listině není.`,
         tvrde: true,
       })
+    }
+  }
+}
+
+/**
+ * Vyjádření o koalicích musí mluvit o existujících subjektech na magistrátu.
+ *
+ * Kalkulačka podle `vylucuje` vyznačuje sestavy. Překlep ve slugu by vyloučení
+ * tiše zahodil — sestava by vypadala průchozí, i když ji někdo veřejně vyloučil.
+ */
+function overKoalice(velite: string, strany: { slug: string; uroven: string }[]) {
+  if (!existsSync(join(velite, 'koalice.json'))) return
+  const data = JSON.parse(readFileSync(join(velite, 'koalice.json'), 'utf8')) as {
+    deklarace: { id: string; subjekt: string; vylucuje: string[]; pripousti: string[] }[]
+  }
+  const magistrat = new Set(strany.filter((s) => s.uroven === 'magistrat').map((s) => s.slug))
+  for (const d of data.deklarace) {
+    for (const slug of [d.subjekt, ...d.vylucuje, ...d.pripousti]) {
+      if (!magistrat.has(slug)) {
+        nalezy.push({
+          soubor: 'content/koalice.yaml',
+          radek: 0,
+          zprava: `Vyjádření "${d.id}" odkazuje na subjekt "${slug}", který na magistrátu v content/strany neexistuje.`,
+          tvrde: true,
+        })
+      }
     }
   }
 }

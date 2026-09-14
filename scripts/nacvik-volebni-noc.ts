@@ -11,6 +11,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { nactiSnapshot, stariMinut, ulozSnapshot } from '../src/lib/snapshot'
+import { rozdelMandaty } from '../src/lib/mandaty'
 import { celkovyPostup, stahniVysledky, type Snapshot } from '../src/lib/vysledky'
 
 const KOREN = join(__dirname, '..')
@@ -120,6 +121,21 @@ async function main() {
   )
   const bezStran = snapshot.zastupitelstva.filter((z) => z.strany.length === 0)
   kontrola('každé zastupitelstvo má aspoň jednu stranu', bezStran.length === 0)
+  // Kalkulačka na /koalice počítá podle § 45. Tady se to měří proti ostrým
+  // mandátům ČSÚ — ve volební noc 2026 stejně jako teď proti roku 2022.
+  const nesediPrepocet = snapshot.zastupitelstva.filter((z) => {
+    const r = rozdelMandaty(
+      z.strany.map((s) => ({ id: String(s.cislo), hlasy: s.hlasy, kandidatu: s.kandidatu })),
+      z.mandatuCelkem,
+      z.platneHlasy,
+    )
+    return z.strany.some((s) => r.strany.find((x) => x.id === String(s.cislo))?.mandaty !== s.mandaty)
+  })
+  kontrola(
+    'přepočet podle § 45 sedí s mandáty ČSÚ ve všech zastupitelstvech',
+    nesediPrepocet.length === 0,
+    nesediPrepocet.map((z) => z.nazev).join(', '),
+  )
   const spatnaUcast = snapshot.zastupitelstva.filter(
     (z) => z.ucastProcenta <= 0 || z.ucastProcenta > 100,
   )

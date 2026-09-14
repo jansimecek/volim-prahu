@@ -23,6 +23,7 @@ const TRASY = [
   { cesta: '/hlasovani', nazev: 'anketa' },
   { cesta: '/aktualne', nazev: 'aktuality' },
   { cesta: '/rozhovory', nazev: 'rozhovory s kandidáty' },
+  { cesta: '/koalice', nazev: 'koalice a kalkulačka mandátů' },
   { cesta: '/aktualne/kantar-snemovni-model-srpen-2026', nazev: 'aktualita s tabulkou průzkumu' },
   { cesta: '/aktualne/moratorium-na-pruzkumy-2026', nazev: 'jedna aktualita' },
   { cesta: '/mestska-cast/praha-22', nazev: 'městská část s přepínačem řazení' },

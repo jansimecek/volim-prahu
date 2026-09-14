@@ -41,6 +41,7 @@ export function GET(): Response {
     `- [Postoje k zásadním tématům](${absolutni('/temata')}): bydlení, doprava, územní plán, rozpočet, školství, prostředí, sociální oblast — po subjektech se zdroji.`,
     `- [Jak hodnotíme](${absolutni('/jak-hodnotime')}): metodika čtyř os proveditelnosti a slovník stavů.`,
     `- [Kdo o čem rozhoduje](${absolutni('/kdo-o-cem-rozhoduje')}): kompetence magistrátu vs. městských částí s paragrafy.`,
+    `- [Kdo s kým po volbách](${absolutni('/koalice')}): doložená vyjádření kandidátek o povolební spolupráci (usnesení, citace, nebo parafráze se zdrojem) a kalkulačka mandátů podle § 45 zákona o volbách do zastupitelstev obcí; bez předpovědí.`,
     `- [Kolik má Praha peněz](${absolutni('/rozpoctovy-ramec')}): rozpočtový rámec 2026 a výhled.`,
     `- [Plnění slibů současné rady 2023–2026](${absolutni('/minule-obdobi')}): ověřitelné závazky programového prohlášení a jejich stav.`,
     `- [Aktuálně](${absolutni('/aktualne')}): datované zprávy o průběhu voleb se zdroji; RSS ${absolutni('/aktualne/feed.xml')}.`,
