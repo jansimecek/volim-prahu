@@ -1,0 +1,2342 @@
+{
+  "zdroj": "https://volby.gov.cz/pls/kv2022/vysledky_obce_okres?datumvoleb=20220923&nuts=CZ0100",
+  "generovano": "2026-09-14T12:23:38",
+  "zastupitelstva": [
+    {
+      "kod": "554782",
+      "nazev": "Praha hl.m.",
+      "mandatu": 65,
+      "platnychHlasu": 23577957,
+      "strany": [
+        {
+          "cislo": 14,
+          "hlasy": 5828523,
+          "kandidatu": 65,
+          "mandaty": 19
+        },
+        {
+          "cislo": 21,
+          "hlasy": 4559782,
+          "kandidatu": 65,
+          "mandaty": 14
+        },
+        {
+          "cislo": 8,
+          "hlasy": 4180324,
+          "kandidatu": 65,
+          "mandaty": 13
+        },
+        {
+          "cislo": 4,
+          "hlasy": 3472648,
+          "kandidatu": 65,
+          "mandaty": 11
+        },
+        {
+          "cislo": 6,
+          "hlasy": 1831696,
+          "kandidatu": 65,
+          "mandaty": 5
+        },
+        {
+          "cislo": 16,
+          "hlasy": 1218622,
+          "kandidatu": 65,
+          "mandaty": 3
+        },
+        {
+          "cislo": 9,
+          "hlasy": 540209,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 15,
+          "hlasy": 475968,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 13,
+          "hlasy": 347643,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 281478,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 5,
+          "hlasy": 207719,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 10,
+          "hlasy": 195426,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 3,
+          "hlasy": 157626,
+          "kandidatu": 64,
+          "mandaty": 0
+        },
+        {
+          "cislo": 2,
+          "hlasy": 100579,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 17,
+          "hlasy": 71216,
+          "kandidatu": 39,
+          "mandaty": 0
+        },
+        {
+          "cislo": 22,
+          "hlasy": 52497,
+          "kandidatu": 65,
+          "mandaty": 0
+        },
+        {
+          "cislo": 20,
+          "hlasy": 42216,
+          "kandidatu": 21,
+          "mandaty": 0
+        },
+        {
+          "cislo": 11,
+          "hlasy": 4709,
+          "kandidatu": 13,
+          "mandaty": 0
+        },
+        {
+          "cislo": 18,
+          "hlasy": 4816,
+          "kandidatu": 9,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 2071,
+          "kandidatu": 1,
+          "mandaty": 0
+        },
+        {
+          "cislo": 19,
+          "hlasy": 1187,
+          "kandidatu": 6,
+          "mandaty": 0
+        },
+        {
+          "cislo": 12,
+          "hlasy": 1002,
+          "kandidatu": 1,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500054",
+      "nazev": "Praha 1",
+      "mandatu": 27,
+      "platnychHlasu": 202820,
+      "strany": [
+        {
+          "cislo": 5,
+          "hlasy": 46372,
+          "kandidatu": 27,
+          "mandaty": 7
+        },
+        {
+          "cislo": 9,
+          "hlasy": 36395,
+          "kandidatu": 27,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 32986,
+          "kandidatu": 27,
+          "mandaty": 4
+        },
+        {
+          "cislo": 6,
+          "hlasy": 26673,
+          "kandidatu": 27,
+          "mandaty": 4
+        },
+        {
+          "cislo": 3,
+          "hlasy": 19925,
+          "kandidatu": 26,
+          "mandaty": 3
+        },
+        {
+          "cislo": 7,
+          "hlasy": 15740,
+          "kandidatu": 27,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 15426,
+          "kandidatu": 27,
+          "mandaty": 2
+        },
+        {
+          "cislo": 4,
+          "hlasy": 6609,
+          "kandidatu": 27,
+          "mandaty": 0
+        },
+        {
+          "cislo": 8,
+          "hlasy": 2694,
+          "kandidatu": 27,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500224",
+      "nazev": "Praha 10",
+      "mandatu": 45,
+      "platnychHlasu": 1391351,
+      "strany": [
+        {
+          "cislo": 7,
+          "hlasy": 377754,
+          "kandidatu": 45,
+          "mandaty": 14
+        },
+        {
+          "cislo": 6,
+          "hlasy": 260962,
+          "kandidatu": 45,
+          "mandaty": 10
+        },
+        {
+          "cislo": 2,
+          "hlasy": 245960,
+          "kandidatu": 45,
+          "mandaty": 9
+        },
+        {
+          "cislo": 3,
+          "hlasy": 233459,
+          "kandidatu": 45,
+          "mandaty": 8
+        },
+        {
+          "cislo": 4,
+          "hlasy": 108747,
+          "kandidatu": 45,
+          "mandaty": 4
+        },
+        {
+          "cislo": 5,
+          "hlasy": 63247,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 56666,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 8,
+          "hlasy": 42867,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 9,
+          "hlasy": 1689,
+          "kandidatu": 8,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547034",
+      "nazev": "Praha 11",
+      "mandatu": 35,
+      "platnychHlasu": 749107,
+      "strany": [
+        {
+          "cislo": 5,
+          "hlasy": 201497,
+          "kandidatu": 35,
+          "mandaty": 11
+        },
+        {
+          "cislo": 2,
+          "hlasy": 186773,
+          "kandidatu": 35,
+          "mandaty": 10
+        },
+        {
+          "cislo": 8,
+          "hlasy": 82681,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 1,
+          "hlasy": 80765,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 7,
+          "hlasy": 69796,
+          "kandidatu": 35,
+          "mandaty": 3
+        },
+        {
+          "cislo": 6,
+          "hlasy": 64940,
+          "kandidatu": 35,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 22776,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 4,
+          "hlasy": 21311,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 9,
+          "hlasy": 18568,
+          "kandidatu": 34,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547107",
+      "nazev": "Praha 12",
+      "mandatu": 35,
+      "platnychHlasu": 569661,
+      "strany": [
+        {
+          "cislo": 6,
+          "hlasy": 144028,
+          "kandidatu": 35,
+          "mandaty": 9
+        },
+        {
+          "cislo": 1,
+          "hlasy": 138749,
+          "kandidatu": 35,
+          "mandaty": 9
+        },
+        {
+          "cislo": 2,
+          "hlasy": 120194,
+          "kandidatu": 35,
+          "mandaty": 8
+        },
+        {
+          "cislo": 7,
+          "hlasy": 63719,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 5,
+          "hlasy": 52434,
+          "kandidatu": 35,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 32656,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 4,
+          "hlasy": 17881,
+          "kandidatu": 33,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "539694",
+      "nazev": "Praha 13",
+      "mandatu": 35,
+      "platnychHlasu": 585248,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 162280,
+          "kandidatu": 35,
+          "mandaty": 11
+        },
+        {
+          "cislo": 4,
+          "hlasy": 94653,
+          "kandidatu": 35,
+          "mandaty": 6
+        },
+        {
+          "cislo": 7,
+          "hlasy": 88287,
+          "kandidatu": 35,
+          "mandaty": 6
+        },
+        {
+          "cislo": 9,
+          "hlasy": 64494,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 3,
+          "hlasy": 55799,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 11,
+          "hlasy": 34659,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 10,
+          "hlasy": 34250,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 8,
+          "hlasy": 28553,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 6,
+          "hlasy": 11125,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 2,
+          "hlasy": 6496,
+          "kandidatu": 22,
+          "mandaty": 0
+        },
+        {
+          "cislo": 5,
+          "hlasy": 4652,
+          "kandidatu": 16,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547361",
+      "nazev": "Praha 14",
+      "mandatu": 31,
+      "platnychHlasu": 342874,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 70153,
+          "kandidatu": 31,
+          "mandaty": 7
+        },
+        {
+          "cislo": 10,
+          "hlasy": 56580,
+          "kandidatu": 31,
+          "mandaty": 5
+        },
+        {
+          "cislo": 8,
+          "hlasy": 53056,
+          "kandidatu": 31,
+          "mandaty": 5
+        },
+        {
+          "cislo": 1,
+          "hlasy": 37810,
+          "kandidatu": 31,
+          "mandaty": 4
+        },
+        {
+          "cislo": 7,
+          "hlasy": 34062,
+          "kandidatu": 31,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 32173,
+          "kandidatu": 31,
+          "mandaty": 3
+        },
+        {
+          "cislo": 9,
+          "hlasy": 22877,
+          "kandidatu": 31,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 22706,
+          "kandidatu": 31,
+          "mandaty": 2
+        },
+        {
+          "cislo": 5,
+          "hlasy": 6984,
+          "kandidatu": 31,
+          "mandaty": 0
+        },
+        {
+          "cislo": 6,
+          "hlasy": 6473,
+          "kandidatu": 31,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547387",
+      "nazev": "Praha 15",
+      "mandatu": 31,
+      "platnychHlasu": 294932,
+      "strany": [
+        {
+          "cislo": 6,
+          "hlasy": 110084,
+          "kandidatu": 31,
+          "mandaty": 12
+        },
+        {
+          "cislo": 2,
+          "hlasy": 66792,
+          "kandidatu": 31,
+          "mandaty": 7
+        },
+        {
+          "cislo": 7,
+          "hlasy": 48890,
+          "kandidatu": 31,
+          "mandaty": 5
+        },
+        {
+          "cislo": 5,
+          "hlasy": 27913,
+          "kandidatu": 31,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 20948,
+          "kandidatu": 31,
+          "mandaty": 2
+        },
+        {
+          "cislo": 4,
+          "hlasy": 18021,
+          "kandidatu": 31,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2284,
+          "kandidatu": 12,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "539601",
+      "nazev": "Praha 16",
+      "mandatu": 15,
+      "platnychHlasu": 44541,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 27200,
+          "kandidatu": 15,
+          "mandaty": 10
+        },
+        {
+          "cislo": 3,
+          "hlasy": 12615,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 1,
+          "hlasy": 4726,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "547174",
+      "nazev": "Praha 17",
+      "mandatu": 23,
+      "platnychHlasu": 147629,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 38460,
+          "kandidatu": 23,
+          "mandaty": 7
+        },
+        {
+          "cislo": 6,
+          "hlasy": 32297,
+          "kandidatu": 23,
+          "mandaty": 6
+        },
+        {
+          "cislo": 10,
+          "hlasy": 29874,
+          "kandidatu": 23,
+          "mandaty": 6
+        },
+        {
+          "cislo": 2,
+          "hlasy": 14565,
+          "kandidatu": 23,
+          "mandaty": 2
+        },
+        {
+          "cislo": 9,
+          "hlasy": 8843,
+          "kandidatu": 23,
+          "mandaty": 1
+        },
+        {
+          "cislo": 4,
+          "hlasy": 8831,
+          "kandidatu": 23,
+          "mandaty": 1
+        },
+        {
+          "cislo": 3,
+          "hlasy": 7319,
+          "kandidatu": 23,
+          "mandaty": 0
+        },
+        {
+          "cislo": 8,
+          "hlasy": 4409,
+          "kandidatu": 23,
+          "mandaty": 0
+        },
+        {
+          "cislo": 5,
+          "hlasy": 2729,
+          "kandidatu": 23,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 302,
+          "kandidatu": 23,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547417",
+      "nazev": "Praha 18",
+      "mandatu": 23,
+      "platnychHlasu": 120354,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 29811,
+          "kandidatu": 23,
+          "mandaty": 7
+        },
+        {
+          "cislo": 8,
+          "hlasy": 28483,
+          "kandidatu": 23,
+          "mandaty": 6
+        },
+        {
+          "cislo": 3,
+          "hlasy": 20014,
+          "kandidatu": 23,
+          "mandaty": 4
+        },
+        {
+          "cislo": 2,
+          "hlasy": 12017,
+          "kandidatu": 23,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 10189,
+          "kandidatu": 23,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 8176,
+          "kandidatu": 23,
+          "mandaty": 1
+        },
+        {
+          "cislo": 5,
+          "hlasy": 7572,
+          "kandidatu": 23,
+          "mandaty": 1
+        },
+        {
+          "cislo": 7,
+          "hlasy": 4092,
+          "kandidatu": 23,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547344",
+      "nazev": "Praha 19",
+      "mandatu": 15,
+      "platnychHlasu": 38070,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 24019,
+          "kandidatu": 15,
+          "mandaty": 10
+        },
+        {
+          "cislo": 5,
+          "hlasy": 8665,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 2452,
+          "kandidatu": 15,
+          "mandaty": 1
+        },
+        {
+          "cislo": 4,
+          "hlasy": 2345,
+          "kandidatu": 15,
+          "mandaty": 1
+        },
+        {
+          "cislo": 1,
+          "hlasy": 589,
+          "kandidatu": 8,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500089",
+      "nazev": "Praha 2",
+      "mandatu": 35,
+      "platnychHlasu": 428538,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 152561,
+          "kandidatu": 35,
+          "mandaty": 14
+        },
+        {
+          "cislo": 4,
+          "hlasy": 82207,
+          "kandidatu": 35,
+          "mandaty": 7
+        },
+        {
+          "cislo": 1,
+          "hlasy": 79371,
+          "kandidatu": 35,
+          "mandaty": 7
+        },
+        {
+          "cislo": 6,
+          "hlasy": 48733,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 5,
+          "hlasy": 24007,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 2,
+          "hlasy": 20233,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 17943,
+          "kandidatu": 29,
+          "mandaty": 1
+        },
+        {
+          "cislo": 8,
+          "hlasy": 3483,
+          "kandidatu": 24,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "538213",
+      "nazev": "Praha 20",
+      "mandatu": 25,
+      "platnychHlasu": 110630,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 27581,
+          "kandidatu": 25,
+          "mandaty": 7
+        },
+        {
+          "cislo": 7,
+          "hlasy": 26933,
+          "kandidatu": 25,
+          "mandaty": 7
+        },
+        {
+          "cislo": 1,
+          "hlasy": 21670,
+          "kandidatu": 25,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 11390,
+          "kandidatu": 25,
+          "mandaty": 3
+        },
+        {
+          "cislo": 8,
+          "hlasy": 11238,
+          "kandidatu": 25,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 7159,
+          "kandidatu": 25,
+          "mandaty": 1
+        },
+        {
+          "cislo": 4,
+          "hlasy": 3986,
+          "kandidatu": 25,
+          "mandaty": 0
+        },
+        {
+          "cislo": 5,
+          "hlasy": 673,
+          "kandidatu": 4,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "538949",
+      "nazev": "Praha 21",
+      "mandatu": 17,
+      "platnychHlasu": 62944,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 35725,
+          "kandidatu": 17,
+          "mandaty": 11
+        },
+        {
+          "cislo": 3,
+          "hlasy": 10127,
+          "kandidatu": 17,
+          "mandaty": 3
+        },
+        {
+          "cislo": 5,
+          "hlasy": 8449,
+          "kandidatu": 17,
+          "mandaty": 2
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3855,
+          "kandidatu": 16,
+          "mandaty": 1
+        },
+        {
+          "cislo": 6,
+          "hlasy": 2529,
+          "kandidatu": 17,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2259,
+          "kandidatu": 17,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "538931",
+      "nazev": "Praha 22",
+      "mandatu": 25,
+      "platnychHlasu": 92013,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 20648,
+          "kandidatu": 25,
+          "mandaty": 6
+        },
+        {
+          "cislo": 1,
+          "hlasy": 17201,
+          "kandidatu": 25,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 15764,
+          "kandidatu": 25,
+          "mandaty": 5
+        },
+        {
+          "cislo": 3,
+          "hlasy": 15397,
+          "kandidatu": 25,
+          "mandaty": 5
+        },
+        {
+          "cislo": 8,
+          "hlasy": 8603,
+          "kandidatu": 25,
+          "mandaty": 2
+        },
+        {
+          "cislo": 5,
+          "hlasy": 6522,
+          "kandidatu": 25,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 4427,
+          "kandidatu": 25,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 3451,
+          "kandidatu": 25,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500097",
+      "nazev": "Praha 3",
+      "mandatu": 35,
+      "platnychHlasu": 668816,
+      "strany": [
+        {
+          "cislo": 7,
+          "hlasy": 191031,
+          "kandidatu": 35,
+          "mandaty": 11
+        },
+        {
+          "cislo": 2,
+          "hlasy": 101468,
+          "kandidatu": 35,
+          "mandaty": 6
+        },
+        {
+          "cislo": 5,
+          "hlasy": 100092,
+          "kandidatu": 35,
+          "mandaty": 6
+        },
+        {
+          "cislo": 4,
+          "hlasy": 82161,
+          "kandidatu": 35,
+          "mandaty": 4
+        },
+        {
+          "cislo": 8,
+          "hlasy": 48633,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 10,
+          "hlasy": 45003,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 38892,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 37137,
+          "kandidatu": 35,
+          "mandaty": 2
+        },
+        {
+          "cislo": 9,
+          "hlasy": 18551,
+          "kandidatu": 35,
+          "mandaty": 0
+        },
+        {
+          "cislo": 6,
+          "hlasy": 5760,
+          "kandidatu": 24,
+          "mandaty": 0
+        },
+        {
+          "cislo": 11,
+          "hlasy": 88,
+          "kandidatu": 1,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500119",
+      "nazev": "Praha 4",
+      "mandatu": 45,
+      "platnychHlasu": 1618356,
+      "strany": [
+        {
+          "cislo": 8,
+          "hlasy": 404504,
+          "kandidatu": 45,
+          "mandaty": 13
+        },
+        {
+          "cislo": 6,
+          "hlasy": 327250,
+          "kandidatu": 45,
+          "mandaty": 10
+        },
+        {
+          "cislo": 7,
+          "hlasy": 273219,
+          "kandidatu": 45,
+          "mandaty": 8
+        },
+        {
+          "cislo": 9,
+          "hlasy": 247443,
+          "kandidatu": 45,
+          "mandaty": 8
+        },
+        {
+          "cislo": 3,
+          "hlasy": 199177,
+          "kandidatu": 45,
+          "mandaty": 6
+        },
+        {
+          "cislo": 5,
+          "hlasy": 64639,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 43639,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 2,
+          "hlasy": 37343,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 4,
+          "hlasy": 21142,
+          "kandidatu": 29,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500143",
+      "nazev": "Praha 5",
+      "mandatu": 41,
+      "platnychHlasu": 978054,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 209131,
+          "kandidatu": 41,
+          "mandaty": 10
+        },
+        {
+          "cislo": 7,
+          "hlasy": 208605,
+          "kandidatu": 41,
+          "mandaty": 10
+        },
+        {
+          "cislo": 12,
+          "hlasy": 135445,
+          "kandidatu": 41,
+          "mandaty": 7
+        },
+        {
+          "cislo": 8,
+          "hlasy": 114871,
+          "kandidatu": 41,
+          "mandaty": 6
+        },
+        {
+          "cislo": 6,
+          "hlasy": 105102,
+          "kandidatu": 40,
+          "mandaty": 5
+        },
+        {
+          "cislo": 3,
+          "hlasy": 68285,
+          "kandidatu": 41,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 46819,
+          "kandidatu": 41,
+          "mandaty": 0
+        },
+        {
+          "cislo": 5,
+          "hlasy": 41873,
+          "kandidatu": 41,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 27935,
+          "kandidatu": 41,
+          "mandaty": 0
+        },
+        {
+          "cislo": 9,
+          "hlasy": 8502,
+          "kandidatu": 31,
+          "mandaty": 0
+        },
+        {
+          "cislo": 11,
+          "hlasy": 6337,
+          "kandidatu": 41,
+          "mandaty": 0
+        },
+        {
+          "cislo": 10,
+          "hlasy": 5149,
+          "kandidatu": 35,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500178",
+      "nazev": "Praha 6",
+      "mandatu": 45,
+      "platnychHlasu": 1531307,
+      "strany": [
+        {
+          "cislo": 6,
+          "hlasy": 333431,
+          "kandidatu": 45,
+          "mandaty": 11
+        },
+        {
+          "cislo": 8,
+          "hlasy": 225097,
+          "kandidatu": 45,
+          "mandaty": 7
+        },
+        {
+          "cislo": 1,
+          "hlasy": 210728,
+          "kandidatu": 45,
+          "mandaty": 7
+        },
+        {
+          "cislo": 9,
+          "hlasy": 199126,
+          "kandidatu": 45,
+          "mandaty": 6
+        },
+        {
+          "cislo": 4,
+          "hlasy": 195058,
+          "kandidatu": 45,
+          "mandaty": 6
+        },
+        {
+          "cislo": 10,
+          "hlasy": 186380,
+          "kandidatu": 43,
+          "mandaty": 6
+        },
+        {
+          "cislo": 2,
+          "hlasy": 81443,
+          "kandidatu": 45,
+          "mandaty": 2
+        },
+        {
+          "cislo": 5,
+          "hlasy": 40980,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 34487,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 3,
+          "hlasy": 24577,
+          "kandidatu": 45,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500186",
+      "nazev": "Praha 7",
+      "mandatu": 29,
+      "platnychHlasu": 376909,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 199745,
+          "kandidatu": 29,
+          "mandaty": 18
+        },
+        {
+          "cislo": 5,
+          "hlasy": 63626,
+          "kandidatu": 29,
+          "mandaty": 5
+        },
+        {
+          "cislo": 3,
+          "hlasy": 51359,
+          "kandidatu": 29,
+          "mandaty": 4
+        },
+        {
+          "cislo": 2,
+          "hlasy": 29016,
+          "kandidatu": 29,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 15610,
+          "kandidatu": 29,
+          "mandaty": 0
+        },
+        {
+          "cislo": 1,
+          "hlasy": 13423,
+          "kandidatu": 29,
+          "mandaty": 0
+        },
+        {
+          "cislo": 8,
+          "hlasy": 2927,
+          "kandidatu": 15,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 1203,
+          "kandidatu": 11,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500208",
+      "nazev": "Praha 8",
+      "mandatu": 45,
+      "platnychHlasu": 1321044,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 254745,
+          "kandidatu": 45,
+          "mandaty": 10
+        },
+        {
+          "cislo": 4,
+          "hlasy": 237578,
+          "kandidatu": 45,
+          "mandaty": 9
+        },
+        {
+          "cislo": 11,
+          "hlasy": 225040,
+          "kandidatu": 45,
+          "mandaty": 9
+        },
+        {
+          "cislo": 5,
+          "hlasy": 153198,
+          "kandidatu": 45,
+          "mandaty": 6
+        },
+        {
+          "cislo": 6,
+          "hlasy": 147787,
+          "kandidatu": 45,
+          "mandaty": 5
+        },
+        {
+          "cislo": 12,
+          "hlasy": 89885,
+          "kandidatu": 45,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 78981,
+          "kandidatu": 45,
+          "mandaty": 3
+        },
+        {
+          "cislo": 8,
+          "hlasy": 55873,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 7,
+          "hlasy": 46150,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 10,
+          "hlasy": 17304,
+          "kandidatu": 29,
+          "mandaty": 0
+        },
+        {
+          "cislo": 9,
+          "hlasy": 11859,
+          "kandidatu": 45,
+          "mandaty": 0
+        },
+        {
+          "cislo": 3,
+          "hlasy": 2644,
+          "kandidatu": 5,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "500216",
+      "nazev": "Praha 9",
+      "mandatu": 33,
+      "platnychHlasu": 484412,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 209572,
+          "kandidatu": 33,
+          "mandaty": 15
+        },
+        {
+          "cislo": 2,
+          "hlasy": 85841,
+          "kandidatu": 33,
+          "mandaty": 6
+        },
+        {
+          "cislo": 1,
+          "hlasy": 67793,
+          "kandidatu": 33,
+          "mandaty": 4
+        },
+        {
+          "cislo": 5,
+          "hlasy": 56553,
+          "kandidatu": 33,
+          "mandaty": 4
+        },
+        {
+          "cislo": 4,
+          "hlasy": 32381,
+          "kandidatu": 33,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 32272,
+          "kandidatu": 33,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "538060",
+      "nazev": "Praha-Běchovice",
+      "mandatu": 15,
+      "platnychHlasu": 8167,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 8167,
+          "kandidatu": 15,
+          "mandaty": 15
+        }
+      ]
+    },
+    {
+      "kod": "538078",
+      "nazev": "Praha-Benice",
+      "mandatu": 7,
+      "platnychHlasu": 1685,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 1685,
+          "kandidatu": 8,
+          "mandaty": 7
+        }
+      ]
+    },
+    {
+      "kod": "538124",
+      "nazev": "Praha-Březiněves",
+      "mandatu": 9,
+      "platnychHlasu": 6145,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 4555,
+          "kandidatu": 9,
+          "mandaty": 7
+        },
+        {
+          "cislo": 2,
+          "hlasy": 1590,
+          "kandidatu": 9,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "547310",
+      "nazev": "Praha-Čakovice",
+      "mandatu": 21,
+      "platnychHlasu": 72300,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 31556,
+          "kandidatu": 21,
+          "mandaty": 10
+        },
+        {
+          "cislo": 5,
+          "hlasy": 19465,
+          "kandidatu": 21,
+          "mandaty": 6
+        },
+        {
+          "cislo": 2,
+          "hlasy": 12215,
+          "kandidatu": 21,
+          "mandaty": 3
+        },
+        {
+          "cislo": 4,
+          "hlasy": 8609,
+          "kandidatu": 21,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 455,
+          "kandidatu": 6,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547298",
+      "nazev": "Praha-Ďáblice",
+      "mandatu": 15,
+      "platnychHlasu": 19328,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 8611,
+          "kandidatu": 15,
+          "mandaty": 7
+        },
+        {
+          "cislo": 1,
+          "hlasy": 5802,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 2,
+          "hlasy": 4915,
+          "kandidatu": 15,
+          "mandaty": 4
+        }
+      ]
+    },
+    {
+      "kod": "547301",
+      "nazev": "Praha-Dolní Chabry",
+      "mandatu": 15,
+      "platnychHlasu": 26967,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 12145,
+          "kandidatu": 15,
+          "mandaty": 7
+        },
+        {
+          "cislo": 2,
+          "hlasy": 7716,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 1,
+          "hlasy": 4497,
+          "kandidatu": 15,
+          "mandaty": 2
+        },
+        {
+          "cislo": 4,
+          "hlasy": 2609,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "547379",
+      "nazev": "Praha-Dolní Měcholupy",
+      "mandatu": 15,
+      "platnychHlasu": 16232,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 7657,
+          "kandidatu": 15,
+          "mandaty": 7
+        },
+        {
+          "cislo": 3,
+          "hlasy": 5077,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3498,
+          "kandidatu": 15,
+          "mandaty": 3
+        }
+      ]
+    },
+    {
+      "kod": "538175",
+      "nazev": "Praha-Dolní Počernice",
+      "mandatu": 15,
+      "platnychHlasu": 15498,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 4971,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 1,
+          "hlasy": 4278,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3562,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 2687,
+          "kandidatu": 15,
+          "mandaty": 3
+        }
+      ]
+    },
+    {
+      "kod": "538205",
+      "nazev": "Praha-Dubeč",
+      "mandatu": 15,
+      "platnychHlasu": 18951,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 9745,
+          "kandidatu": 15,
+          "mandaty": 8
+        },
+        {
+          "cislo": 3,
+          "hlasy": 5524,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3682,
+          "kandidatu": 15,
+          "mandaty": 3
+        }
+      ]
+    },
+    {
+      "kod": "538302",
+      "nazev": "Praha-Klánovice",
+      "mandatu": 15,
+      "platnychHlasu": 21660,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 6229,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 4783,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 5,
+          "hlasy": 4550,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 2838,
+          "kandidatu": 15,
+          "mandaty": 2
+        },
+        {
+          "cislo": 6,
+          "hlasy": 1737,
+          "kandidatu": 15,
+          "mandaty": 1
+        },
+        {
+          "cislo": 4,
+          "hlasy": 1523,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "538353",
+      "nazev": "Praha-Koloděje",
+      "mandatu": 7,
+      "platnychHlasu": 4337,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 2933,
+          "kandidatu": 9,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 1225,
+          "kandidatu": 9,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 179,
+          "kandidatu": 1,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "538361",
+      "nazev": "Praha-Kolovraty",
+      "mandatu": 15,
+      "platnychHlasu": 21053,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 15881,
+          "kandidatu": 15,
+          "mandaty": 12
+        },
+        {
+          "cislo": 1,
+          "hlasy": 5172,
+          "kandidatu": 15,
+          "mandaty": 3
+        }
+      ]
+    },
+    {
+      "kod": "538388",
+      "nazev": "Praha-Královice",
+      "mandatu": 5,
+      "platnychHlasu": 619,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 619,
+          "kandidatu": 6,
+          "mandaty": 5
+        }
+      ]
+    },
+    {
+      "kod": "538400",
+      "nazev": "Praha-Křeslice",
+      "mandatu": 9,
+      "platnychHlasu": 4529,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 2133,
+          "kandidatu": 9,
+          "mandaty": 4
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1361,
+          "kandidatu": 9,
+          "mandaty": 3
+        },
+        {
+          "cislo": 1,
+          "hlasy": 1035,
+          "kandidatu": 9,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "547042",
+      "nazev": "Praha-Kunratice",
+      "mandatu": 11,
+      "platnychHlasu": 31950,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 16760,
+          "kandidatu": 11,
+          "mandaty": 7
+        },
+        {
+          "cislo": 2,
+          "hlasy": 8583,
+          "kandidatu": 11,
+          "mandaty": 3
+        },
+        {
+          "cislo": 3,
+          "hlasy": 4777,
+          "kandidatu": 11,
+          "mandaty": 1
+        },
+        {
+          "cislo": 1,
+          "hlasy": 1830,
+          "kandidatu": 11,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "547051",
+      "nazev": "Praha-Libuš",
+      "mandatu": 17,
+      "platnychHlasu": 43695,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 20745,
+          "kandidatu": 17,
+          "mandaty": 8
+        },
+        {
+          "cislo": 2,
+          "hlasy": 12001,
+          "kandidatu": 17,
+          "mandaty": 5
+        },
+        {
+          "cislo": 3,
+          "hlasy": 10949,
+          "kandidatu": 17,
+          "mandaty": 4
+        }
+      ]
+    },
+    {
+      "kod": "539449",
+      "nazev": "Praha-Lipence",
+      "mandatu": 15,
+      "platnychHlasu": 17149,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 5123,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 5,
+          "hlasy": 4669,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2895,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 4,
+          "hlasy": 2563,
+          "kandidatu": 15,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1899,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "539465",
+      "nazev": "Praha-Lochkov",
+      "mandatu": 9,
+      "platnychHlasu": 1965,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 1965,
+          "kandidatu": 9,
+          "mandaty": 9
+        }
+      ]
+    },
+    {
+      "kod": "547140",
+      "nazev": "Praha-Lysolaje",
+      "mandatu": 9,
+      "platnychHlasu": 5212,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 3222,
+          "kandidatu": 9,
+          "mandaty": 6
+        },
+        {
+          "cislo": 1,
+          "hlasy": 1341,
+          "kandidatu": 9,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 649,
+          "kandidatu": 7,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "547158",
+      "nazev": "Praha-Nebušice",
+      "mandatu": 11,
+      "platnychHlasu": 9559,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 7225,
+          "kandidatu": 11,
+          "mandaty": 9
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2334,
+          "kandidatu": 11,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "538531",
+      "nazev": "Praha-Nedvězí",
+      "mandatu": 5,
+      "platnychHlasu": 495,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 495,
+          "kandidatu": 6,
+          "mandaty": 5
+        }
+      ]
+    },
+    {
+      "kod": "547395",
+      "nazev": "Praha-Petrovice",
+      "mandatu": 15,
+      "platnychHlasu": 25708,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 7493,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 6,
+          "hlasy": 6409,
+          "kandidatu": 15,
+          "mandaty": 4
+        },
+        {
+          "cislo": 5,
+          "hlasy": 3886,
+          "kandidatu": 15,
+          "mandaty": 2
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3354,
+          "kandidatu": 15,
+          "mandaty": 2
+        },
+        {
+          "cislo": 4,
+          "hlasy": 2852,
+          "kandidatu": 15,
+          "mandaty": 1
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1714,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "539589",
+      "nazev": "Praha-Přední Kopanina",
+      "mandatu": 9,
+      "platnychHlasu": 1120,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 1120,
+          "kandidatu": 9,
+          "mandaty": 9
+        }
+      ]
+    },
+    {
+      "kod": "539635",
+      "nazev": "Praha-Řeporyje",
+      "mandatu": 11,
+      "platnychHlasu": 20213,
+      "strany": [
+        {
+          "cislo": 5,
+          "hlasy": 7506,
+          "kandidatu": 11,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 6317,
+          "kandidatu": 11,
+          "mandaty": 4
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2895,
+          "kandidatu": 11,
+          "mandaty": 1
+        },
+        {
+          "cislo": 4,
+          "hlasy": 2443,
+          "kandidatu": 11,
+          "mandaty": 1
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1052,
+          "kandidatu": 11,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "538736",
+      "nazev": "Praha-Satalice",
+      "mandatu": 11,
+      "platnychHlasu": 10040,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 5244,
+          "kandidatu": 11,
+          "mandaty": 6
+        },
+        {
+          "cislo": 1,
+          "hlasy": 3236,
+          "kandidatu": 11,
+          "mandaty": 4
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1560,
+          "kandidatu": 11,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "539678",
+      "nazev": "Praha-Slivenec",
+      "mandatu": 11,
+      "platnychHlasu": 15615,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 10343,
+          "kandidatu": 11,
+          "mandaty": 8
+        },
+        {
+          "cislo": 1,
+          "hlasy": 3498,
+          "kandidatu": 11,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1774,
+          "kandidatu": 11,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "547271",
+      "nazev": "Praha-Suchdol",
+      "mandatu": 15,
+      "platnychHlasu": 30980,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 23164,
+          "kandidatu": 15,
+          "mandaty": 12
+        },
+        {
+          "cislo": 3,
+          "hlasy": 7173,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 643,
+          "kandidatu": 1,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "539724",
+      "nazev": "Praha-Šeberov",
+      "mandatu": 15,
+      "platnychHlasu": 16846,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 11036,
+          "kandidatu": 15,
+          "mandaty": 11
+        },
+        {
+          "cislo": 3,
+          "hlasy": 3853,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 1957,
+          "kandidatu": 15,
+          "mandaty": 1
+        }
+      ]
+    },
+    {
+      "kod": "547409",
+      "nazev": "Praha-Štěrboholy",
+      "mandatu": 9,
+      "platnychHlasu": 3629,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 3629,
+          "kandidatu": 9,
+          "mandaty": 9
+        }
+      ]
+    },
+    {
+      "kod": "547328",
+      "nazev": "Praha-Troja",
+      "mandatu": 9,
+      "platnychHlasu": 4757,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 3731,
+          "kandidatu": 9,
+          "mandaty": 7
+        },
+        {
+          "cislo": 2,
+          "hlasy": 1026,
+          "kandidatu": 9,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "539791",
+      "nazev": "Praha-Újezd",
+      "mandatu": 11,
+      "platnychHlasu": 11232,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 6300,
+          "kandidatu": 11,
+          "mandaty": 6
+        },
+        {
+          "cislo": 2,
+          "hlasy": 4932,
+          "kandidatu": 11,
+          "mandaty": 5
+        }
+      ]
+    },
+    {
+      "kod": "547115",
+      "nazev": "Praha-Velká Chuchle",
+      "mandatu": 11,
+      "platnychHlasu": 10274,
+      "strany": [
+        {
+          "cislo": 4,
+          "hlasy": 4869,
+          "kandidatu": 11,
+          "mandaty": 6
+        },
+        {
+          "cislo": 5,
+          "hlasy": 2157,
+          "kandidatu": 11,
+          "mandaty": 2
+        },
+        {
+          "cislo": 2,
+          "hlasy": 1686,
+          "kandidatu": 11,
+          "mandaty": 2
+        },
+        {
+          "cislo": 3,
+          "hlasy": 1562,
+          "kandidatu": 11,
+          "mandaty": 1
+        },
+        {
+          "cislo": 1,
+          "hlasy": 0,
+          "kandidatu": 0,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "539007",
+      "nazev": "Praha-Vinoř",
+      "mandatu": 15,
+      "platnychHlasu": 21831,
+      "strany": [
+        {
+          "cislo": 3,
+          "hlasy": 11148,
+          "kandidatu": 15,
+          "mandaty": 8
+        },
+        {
+          "cislo": 1,
+          "hlasy": 7451,
+          "kandidatu": 15,
+          "mandaty": 5
+        },
+        {
+          "cislo": 2,
+          "hlasy": 3232,
+          "kandidatu": 15,
+          "mandaty": 2
+        }
+      ]
+    },
+    {
+      "kod": "539864",
+      "nazev": "Praha-Zbraslav",
+      "mandatu": 17,
+      "platnychHlasu": 58754,
+      "strany": [
+        {
+          "cislo": 2,
+          "hlasy": 24692,
+          "kandidatu": 17,
+          "mandaty": 8
+        },
+        {
+          "cislo": 4,
+          "hlasy": 23848,
+          "kandidatu": 17,
+          "mandaty": 7
+        },
+        {
+          "cislo": 3,
+          "hlasy": 7719,
+          "kandidatu": 17,
+          "mandaty": 2
+        },
+        {
+          "cislo": 1,
+          "hlasy": 2495,
+          "kandidatu": 15,
+          "mandaty": 0
+        }
+      ]
+    },
+    {
+      "kod": "539899",
+      "nazev": "Praha-Zličín",
+      "mandatu": 15,
+      "platnychHlasu": 26953,
+      "strany": [
+        {
+          "cislo": 1,
+          "hlasy": 16932,
+          "kandidatu": 15,
+          "mandaty": 10
+        },
+        {
+          "cislo": 3,
+          "hlasy": 5503,
+          "kandidatu": 15,
+          "mandaty": 3
+        },
+        {
+          "cislo": 2,
+          "hlasy": 4518,
+          "kandidatu": 15,
+          "mandaty": 2
+        }
+      ]
+    }
+  ]
+}
