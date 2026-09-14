@@ -1,69 +1,106 @@
 # Postoje Pirátů k okruhům srovnání.
 #
-# Zapsáno z Akčního plánu bydlení zveřejněného 21. 5. 2026, otevřeného
-# 4. 9. 2026. Je to plán k jednomu tématu, ne ucelený program — proto je tu
-# jen bydlení a dva okruhy, které z něj přímo plynou. Externí rešerše u Pirátů
-# uváděla financování z EIB; v plánu stojí Pražský investiční fond s půjčkami
-# od bank, takže EIB tu není.
+# Zapsáno z článku, kterým pražští Piráti zveřejnili Akční plán bydlení.
+# Článek sám datum nenese; plán podle něj představili na čtvrtečním zahájení
+# kampaně na Pankráci, o kterém psal Pražský patriot 23. 5. 2026 — jde tedy
+# o čtvrtek 21. 5. 2026. Otevřeno 4. 9. 2026, se surovým textem článku znovu
+# porovnáno 14. 9. 2026.
+#
+# Je to plán k jednomu tématu, ne ucelený program — proto je tu jen bydlení
+# a financování, které z něj přímo plyne. Externí rešerše u Pirátů uváděla
+# financování z EIB; plán počítá s pražským investičním fondem, který si má
+# půjčovat od velkých bank, a EIB nejmenuje.
+#
+# Oprava ze 14. 9.: akcelerační zóny tu byly zapsané jako slib města, přitom
+# je podle plánu teprve musí umožnit Sněmovna, a koleje v Karlíně, Troji a na
+# Palmovce jako slib, přitom o nich plán mluví jen jako o zvažovaných místech.
+# U zdroje se místo dne ověření zobrazovalo datum představení plánu.
 
 subjekt: ceska-piratska-strana
 uroven: magistrat
-overeno: 2026-09-04
+overeno: 2026-09-14
 
 postoje:
   - okruh: bydleni
-    shrnuti: "Akcelerační zóny u metra, několik tisíc městských bytů za období"
+    shrnuti: "Postavit několik tisíc městských bytů za období a posílit Pražskou developerskou společnost"
     postoj: >-
-      Akční plán slibuje akcelerační zóny pro dostupné bydlení navázané na
-      rozšíření metra A, B a C, tři nové čtvrti — Nové Kolovraty, Východní
-      a Západní město — s kapacitou pro 200 tisíc obyvatel a 70 tisíc
-      pracovních míst, stavbu několika tisíc městských bytů za volební období
-      a rozšíření Městské nájemní agentury ze 75 na 500 bytů. Celoměstským
-      cílem je 10 tisíc nových bytů ročně od všech stavebníků.
+      Akční plán slibuje za volební období postavit několik tisíc městských
+      bytů pro mladé rodiny, samoživitele, nízkopříjmové domácnosti
+      a podporované profese, jako jsou učitelé a zdravotní sestry. Pražskou
+      developerskou společnost chce finančně i personálně posílit, menší
+      městské pozemky nabídnout družstvům a počet bytů Městské nájemní
+      agentury rozšířit ze 75 na 500.
     typZdroje: program
     zdroj:
-      text: Piráti představili akční plán bydlení v Praze
+      text: Piráti představili Akční plán bydlení v Praze
       url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
-      datum: 2026-05-21
+      datum: 2026-09-14
     proveditelnost:
       agenda: bytovy-fond
       kompetence: castecne
       rozpocet: nejiste
       cas: presahuje
     poznamka: >-
-      Cíl 10 tisíc bytů ročně není závazek města postavit je — většinu bytů
-      v Praze staví soukromí investoři a povolování staveb je mimo samosprávu.
-      Vlastním slibem města je „několik tisíc" bytů za období.
+      „Několik tisíc“ plán nijak nezpřesňuje, splnění tedy nepůjde změřit
+      proti konkrétnímu číslu.
+
+  - okruh: bydleni
+    shrnuti: "Akcelerační zóny pro tři nové čtvrti u metra, pokud je umožní zákon"
+    postoj: >-
+      Plán chce dál usilovat o to, aby Sněmovna umožnila akcelerační zóny se
+      zvláštním režimem územního plánování a povolování staveb. Díky nim by
+      vznikly tři nové čtvrti — Nové Kolovraty, Východní a Západní město —
+      s bydlením pro 200 tisíc lidí a prostory pro 70 tisíc pracovních míst,
+      napojené na prodloužené linky metra A, B a C. Územním plánováním chce
+      dosáhnout toho, aby v Praze přibývalo 10 tisíc bytů ročně.
+    typZdroje: program
+    zdroj:
+      text: Piráti představili Akční plán bydlení v Praze
+      url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
+      datum: 2026-09-14
+    proveditelnost:
+      agenda: uzemni-plan
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Podle plánu z května 2026 akcelerační zóny zatím zákon neumožňuje; jejich
+      zavedení závisí na Sněmovně. Cíl 10 tisíc bytů ročně není závazek, že je
+      město postaví — většinu bytů v Praze stavějí soukromí investoři.
 
   - okruh: bydleni
     shrnuti: "Několikanásobná daň z nemovitosti na dlouhodobě prázdné domy"
     postoj: >-
-      Plán počítá s několikanásobnou daní z nemovitosti u dlouhodobě
-      prázdných bytových domů.
+      Plán chce uvalit několikanásobnou daň z nemovitosti na dlouhodobě
+      prázdné bytové domy a stejně zdanit domy, které celé slouží k ubytování
+      turistů místo bydlení.
     typZdroje: program
     zdroj:
-      text: Piráti představili akční plán bydlení v Praze
+      text: Piráti představili Akční plán bydlení v Praze
       url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
-      datum: 2026-05-21
+      datum: 2026-09-14
     proveditelnost:
-      agenda: obecne-zavazne-vyhlasky
       kompetence: v-pravomoci
       rozpocet: pokryto
       cas: do-4-let
     poznamka: >-
-      Místní koeficient daně z nemovitých věcí stanovuje obec obecně závaznou
-      vyhláškou, tedy nástrojem, který zastupitelstvo skutečně drží.
+      Zákon o dani z nemovitých věcí v § 12 dovoluje stanovit místní koeficient
+      až 5,0, a to i opatřením obecné povahy, které vydává zastupitelstvo, pro
+      jednotlivé vymezené nemovité věci. Nástroj tedy město drží. Prázdnotu
+      domu ale § 12 jako důvod nezmiňuje — které domy koeficient ponesou, musí
+      zastupitelstvo v opatření vymezit samo.
 
   - okruh: bydleni
-    shrnuti: "Nové koleje pro vysokoškoláky v Karlíně, Troji a na Palmovce"
+    shrnuti: "Nové koleje s vysokými školami, zvažované třeba v Karlíně, Troji a na Palmovce"
     postoj: >-
-      Plán slibuje nové ubytovací kapacity pro studenty vysokých škol
-      v Kasárnách Karlín, v Troji a na Palmovce.
+      Plán slibuje s vysokými školami vytipovat místa pro nové koleje a pak
+      pomoci s jejich stavbou, nebo je postavit přímo. Jako možná místa
+      zmiňuje Kasárna Karlín, Troju a Palmovku.
     typZdroje: program
     zdroj:
-      text: Piráti představili akční plán bydlení v Praze
+      text: Piráti představili Akční plán bydlení v Praze
       url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
-      datum: 2026-05-21
+      datum: 2026-09-14
     proveditelnost:
       agenda: sverenymajetek
       kompetence: castecne
@@ -71,15 +108,19 @@ postoje:
       cas: presahuje
 
   - okruh: rozpocet
-    shrnuti: "Pražský investiční fond s půjčkami od bank na výstavbu bydlení"
+    shrnuti: "Pražský investiční fond, který si půjčí od bank a splácí z nájemného"
     postoj: >-
-      Výstavbu má financovat Pražský investiční fond, do kterého mají vstupovat
-      půjčky od bank.
+      Výstavbu městských bytů má financovat nově založený pražský investiční
+      fond, který si bude půjčovat od velkých bank; úvěry chce plán splácet
+      z vybraného nájemného, aby výstavba méně zatěžovala rozpočet. Městským
+      částem chce přes Fond rozvoje dostupného bydlení dávat víc peněz na nové
+      byty a opravy prázdných, výměnou za část bytů pro celoměstskou bytovou
+      politiku.
     typZdroje: program
     zdroj:
-      text: Piráti představili akční plán bydlení v Praze
+      text: Piráti představili Akční plán bydlení v Praze
       url: https://praha.pirati.cz/aktuality/pirati-predstavili-akcni-plan-bydleni-v-praze/
-      datum: 2026-05-21
+      datum: 2026-09-14
     proveditelnost:
       agenda: rozpocet-prahy
       kompetence: v-pravomoci
