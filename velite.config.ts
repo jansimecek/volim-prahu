@@ -671,6 +671,91 @@ const postoje = defineCollection({
 })
 
 /**
+ * Doložená předvolební vyjádření o povolební spolupráci na magistrátu.
+ *
+ * Nejsnáz zkreslitelný obsah na webu: z „nevyloučil“ se v titulku stane
+ * „chce“, z parafráze citace. Schéma proto u každého vyjádření vyžaduje, jak
+ * je doložené — usnesení strany, doslovná citace, nebo parafráze médií — a
+ * parafrázi nedovolí nést citaci, která by vypadala jako přímá řeč.
+ */
+const koalice = defineCollection({
+  name: 'Koalice',
+  pattern: 'koalice.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      zdroje: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            medium: s.string().min(1),
+            nazev: s.string().min(1),
+            datum: s.isodate(),
+            url: url,
+          }),
+        )
+        .min(1),
+      deklarace: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            /** Slug subjektu z content/strany, za který vyjádření zaznělo. */
+            subjekt: s.string().min(1),
+            /** Kdo to řekl — jméno a funkce, nebo orgán strany. */
+            kdo: s.string().min(1),
+            uroven: s.enum(['prazska-organizace', 'lidr-kandidatky', 'celostatni-vedeni']),
+            datum: s.isodate(),
+            /** Subjekty, se kterými vyjádření spolupráci vylučuje. Kalkulačka je vyznačí u sestav. */
+            vylucuje: s.array(s.string().min(1)).default([]),
+            /** Subjekty, se kterými vyjádření spolupráci výslovně nevylučuje. Nic se podle nich nevyznačuje. */
+            pripousti: s.array(s.string().min(1)).default([]),
+            doklad: s.enum(['usneseni', 'citace', 'parafraze']),
+            citace: s.string().min(1).optional(),
+            shrnuti: s.string().min(1).max(300),
+            poznamka: s.string().min(1).optional(),
+            zdroje: s.array(s.string().min(1)).min(1),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const zdroje = new Set(data.zdroje.map((z) => z.id))
+      const videna = new Set<string>()
+      for (const d of data.deklarace) {
+        if (videna.has(d.id)) {
+          ctx.addIssue({ code: 'custom', message: `Vyjádření s id "${d.id}" je uvedené dvakrát.` })
+        }
+        videna.add(d.id)
+        for (const z of d.zdroje) {
+          if (!zdroje.has(z)) {
+            ctx.addIssue({ code: 'custom', message: `Vyjádření "${d.id}" odkazuje na neexistující zdroj "${z}".` })
+          }
+        }
+        if (d.doklad === 'citace' && !d.citace) {
+          ctx.addIssue({ code: 'custom', message: `Vyjádření "${d.id}" je doložené citací, ale citace chybí.` })
+        }
+        if (d.doklad === 'parafraze' && d.citace) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Vyjádření "${d.id}" je parafráze médií, a proto nesmí nést citaci — vypadala by jako přímá řeč.`,
+          })
+        }
+        if (d.vylucuje.includes(d.subjekt) || d.pripousti.includes(d.subjekt)) {
+          ctx.addIssue({ code: 'custom', message: `Vyjádření "${d.id}" vylučuje nebo připouští vlastní subjekt.` })
+        }
+        const oboji = d.vylucuje.filter((x) => d.pripousti.includes(x))
+        if (oboji.length > 0) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Vyjádření "${d.id}" současně vylučuje i připouští: ${oboji.join(', ')}.`,
+          })
+        }
+      }
+    }),
+})
+
+/**
  * Aktuálně — krátké zápisy o průběhu voleb.
  *
  * Formát je záměrně sevřený: nadpis, pár vět, zdroj. Aktualita není článek
@@ -880,5 +965,6 @@ export default defineConfig({
     postoje,
     aktuality,
     volebniMistnosti,
+    koalice,
   },
 })

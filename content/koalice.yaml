@@ -1,0 +1,262 @@
+# Doložená předvolební vyjádření o povolební spolupráci na magistrátu.
+#
+# Zapisuje se jen to, co jde ukázat u zdroje: usnesení strany, doslovná
+# citace, nebo parafráze médií — a vždy s označením, co z toho to je.
+# „Nevyloučil“ z titulku není citace. Kdo mluvil za celostátní vedení, není
+# lídr pražské kandidátky, a u vyjádření je to vidět.
+#
+# Pole `vylucuje` vyznačuje kalkulačka mandátů u sestav, kde se oba subjekty
+# potkají. Slug musí být ten, pod kterým subjekt kandiduje na magistrát —
+# KSČM je na listině spojena-levice-pro-prahu, ODS v koalici spolu-pro-prahu —
+# a u každého takového převodu je poznámka.
+#
+# Vědomě tu chybí SEN pro Prahu a JSME PRAHA: jejich stanoviska uvádí jen
+# iROZHLAS z 31. 8. 2026, jehož text se nepodařilo otevřít a ověřit.
+
+overeno: 2026-09-14
+
+zdroje:
+  - id: pirati-strategie
+    medium: "Česká pirátská strana, krajské sdružení Praha"
+    nazev: "Povolební strategie Pirátů v Praze pro volby do zastupitelstva hlavního města Prahy 2026"
+    datum: 2026-08-10
+    url: "https://praha.pirati.cz/documents/641/Povolebni_strategie_-_Praha_2026.pdf"
+  - id: pd-pirati-12-8
+    medium: "Pražský deník (ČTK)"
+    nazev: "Pražští Piráti vylučují ANO, SPD a Motoristy z povolební spolupráce"
+    datum: 2026-08-12
+    url: "https://prazsky.denik.cz/zpravy-region/prazsti-pirati-vylucuji-ano-spd-a-motoristy-z-povolebni-spoluprace/"
+  - id: respekt-ctk-12-8
+    medium: "Respekt (ČTK)"
+    nazev: "Pražští Piráti vyloučili povolební spolupráci s ANO a ANO nemá zájem o Piráty"
+    datum: 2026-08-12
+    url: "https://www.respekt.cz/informacni-servis/prazsti-pirati-vyloucili-povolebni-spolupraci-s-ano-a-ano-nema-zajem-o-piraty-2026-08-12-12-45"
+  - id: ctk-praha-sobe-1-6
+    medium: "České noviny (ČTK)"
+    nazev: "Praha Sobě, Zelení a lidovci se v kampani před volbami zaměří na dopravu"
+    datum: 2026-06-01
+    url: "https://www.ceskenoviny.cz/zpravy/2833274"
+  - id: ctk-portlik-23-8
+    medium: "České noviny (ČTK)"
+    nazev: "Pražský lídr Spolu Portlík je skeptický k vládnutí s hnutím ANO"
+    datum: 2026-08-23
+    url: "https://www.ceskenoviny.cz/zpravy/prazsky-lidr-spolu-portlik-je-skepticky-k-vladnuti-s-hnutim-ano/2865060"
+  - id: pd-scheinherr-30-8
+    medium: "Pražský deník (ČTK)"
+    nazev: "Lídr pražské kandidátky Adam Scheinherr označil Motoristy a SPD za extremisty"
+    datum: 2026-08-30
+    url: "https://prazsky.denik.cz/komunalni-volby/lidr-prazske-kandidatky-adam-scheinherr-oznacil-motoristy-a-spd-za-extremisty/"
+  - id: cnn-urban-5-9
+    medium: "CNN Prima NEWS"
+    nazev: "Praha byty stavět nemá, vedou ji aktivisté, říká Urban z SPD. Překvapil, s kým by vládl"
+    datum: 2026-09-05
+    url: "https://cnn.iprima.cz/praha-byty-stavet-nema-vladnou-ji-aktiviste-rika-urban-prekvapil-s-kym-by-vladl-520871"
+  - id: pd-uhrineves-13-9
+    medium: "Pražský deník (ČTK)"
+    nazev: "Kampaň ANO v hlavním městě startuje v Uhříněvsi. Program mířil na dopravu"
+    datum: 2026-09-13
+    url: "https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/"
+  - id: ctk-partie-13-9
+    medium: "České noviny (ČTK)"
+    nazev: "Kupka ani Rakušan zcela nevyloučili povolební spolupráci s ANO v Praze"
+    datum: 2026-09-13
+    url: "https://www.ceskenoviny.cz/zpravy/kupka-ani-rakusan-zcela-nevyloucili-povolebni-spolupraci-s-ano-v-praze/2873865"
+  - id: aktualne-rakusan-13-9
+    medium: "Aktuálně.cz"
+    nazev: "Rakušan nevyloučil spolupráci s ANO. V Praze preferuje koalici Spolu"
+    datum: 2026-09-13
+    url: "https://zpravy.aktualne.cz/domaci/rakusan-nevyloucil-spolupraci-s-ano-v-praze-preferuje-koalici-spolu/r~aaa295a2b8eb72c748d3008c5a0d3117/"
+
+deklarace:
+  - id: pirati-povolebni-strategie
+    subjekt: ceska-piratska-strana
+    kdo: Krajské fórum Pirátů v Praze
+    uroven: prazska-organizace
+    datum: 2026-08-10
+    vylucuje: [ano-2011, spd-pro-prahu, motoriste-sobe, spojena-levice-pro-prahu]
+    doklad: usneseni
+    citace: >-
+      Nepodpoříme Radu s účastí subjektů ohrožujících základy liberální
+      demokracie nebo s historickým dědictvím likvidace demokracie v této zemi,
+      tj. zejména s účastí KSČM, SPD a Motoristy. […] Spolupráci s hnutím ANO
+      na pražské radnici nepovažujeme za slučitelnou s tím, na čem si jako
+      Piráti zakládáme.
+    shrnuti: >-
+      Povolební strategie schválená krajským fórem vylučuje radu s účastí ANO,
+      SPD, Motoristů a KSČM. Obsazení rady i jakoukoli smlouvu o povolební
+      spolupráci musí schválit krajské fórum.
+    poznamka: >-
+      KSČM kandiduje na magistrát na společné listině Spojená levice pro Prahu,
+      proto je vyloučení zapsané u ní. Strategie počítá i s tolerancí menšinové
+      rady a v opozici s požadavkem na předsednictví kontrolního výboru.
+    zdroje: [pirati-strategie, pd-pirati-12-8]
+
+  - id: praha-sobe-scheinherr-cerven
+    subjekt: praha-sobe
+    kdo: Adam Scheinherr, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-06-01
+    vylucuje: [ano-2011]
+    pripousti: [ceska-piratska-strana, spolu-pro-prahu]
+    doklad: parafraze
+    shrnuti: >-
+      Podle ČTK zopakoval, že Praha sobě dlouhodobě odmítá spolupráci s ANO.
+      Za nejpřirozenější povolební uspořádání označil spolupráci s Piráty,
+      nevyloučil ani koalici s ODS.
+    poznamka: ODS kandiduje na magistrát v koalici SPOLU pro Prahu s TOP 09.
+    zdroje: [ctk-praha-sobe-1-6]
+
+  - id: praha-sobe-scheinherr-srpen
+    subjekt: praha-sobe
+    kdo: Adam Scheinherr, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-30
+    vylucuje: [ano-2011, spd-pro-prahu, motoriste-sobe]
+    doklad: citace
+    citace: >-
+      vnímáme Motoristy sobě jako za extremisty, vnímáme takhle i SPD, a hnutí
+      ANO s nimi spolupracuje, drží je u vlády, takže s nimi rozhodně
+      spolupracovat nebudeme
+    shrnuti: >-
+      V Poledni s Moravcem odmítl po volbách spolupracovat s Motoristy, SPD
+      i s hnutím ANO. S ostatními stranami podle svých slov jedná a spolupráci
+      s nimi vítá.
+    poznamka: Že se vyloučení týká i ANO, uvádí k citaci výslovně ČTK.
+    zdroje: [pd-scheinherr-30-8]
+
+  - id: motoriste-sovova-praha-sobe
+    subjekt: motoriste-sobe
+    kdo: Klára Sovová, lídryně kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-30
+    vylucuje: [praha-sobe]
+    doklad: citace
+    citace: Tak my se zase nebudeme teda spolčovat s vámi
+    shrnuti: >-
+      V Poledni s Moravcem odpověděla Adamu Scheinherrovi, že se Motoristé
+      s Prahou sobě spolčovat nebudou. Označení Motoristů za extremisty odmítla.
+    zdroje: [pd-scheinherr-30-8]
+
+  - id: motoriste-sovova-pirati
+    subjekt: motoriste-sobe
+    kdo: Klára Sovová, lídryně kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-30
+    vylucuje: [ceska-piratska-strana]
+    doklad: parafraze
+    shrnuti: V téže debatě podle ČTK uvedla, že pro Motoristy jsou nepřijatelným partnerem Piráti.
+    zdroje: [pd-scheinherr-30-8]
+
+  - id: spd-urban
+    subjekt: spd-pro-prahu
+    kdo: Milan Urban, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-05
+    vylucuje: [ceska-piratska-strana, praha-sobe]
+    pripousti: [ano-2011, motoriste-sobe]
+    doklad: citace
+    citace: >-
+      Z mých vystoupení určitě víte, že bych rozhodně nešel do koalice s Piráty
+      nebo Prahou sobě.
+    shrnuti: >-
+      V rozhovoru pro CNN Prima News vyloučil koalici s Piráty a Prahou sobě.
+      Spolupráci s ANO a Motoristy po vzoru vládní koalice označil za logickou;
+      o lidech z ODS, TOP 09 a STAN mluvil jako o jednotlivcích.
+    poznamka: >-
+      Na otázku, jestli lze čekat spolupráci s hnutím ANO a Motoristy po vzoru
+      vládní koalice, odpověděl „Vycházelo by to logicky.“ a pokračoval
+      citovanou větou.
+    zdroje: [cnn-urban-5-9]
+
+  - id: ano-husbauer-pirati
+    subjekt: ano-2011
+    kdo: Jan Hušbauer, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-12
+    vylucuje: [ceska-piratska-strana]
+    doklad: citace
+    citace: >-
+      Představa, že bychom šli do koalice s někým, kdo posledních osm let ničí
+      Prahu a kvalitu života Pražanů, je pro mě noční můra.
+    shrnuti: >-
+      V reakci na pirátskou povolební strategii pro ČTK odmítl koalici
+      s Piráty, které v navazující větě jmenuje.
+    zdroje: [respekt-ctk-12-8]
+
+  - id: ano-husbauer-spolu
+    subjekt: ano-2011
+    kdo: Jan Hušbauer, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-23
+    pripousti: [spolu-pro-prahu]
+    doklad: citace
+    citace: My v tuhletu chvíli nevylučujeme tuto spolupráci (se Spolu)
+    shrnuti: >-
+      V Poledni s Moravcem nevyloučil spolupráci se SPOLU; důležité podle něj
+      budou programové záležitosti.
+    poznamka: Upřesnění „(se Spolu)“ doplnila do citace ČTK.
+    zdroje: [ctk-portlik-23-8]
+
+  - id: ano-havlicek
+    subjekt: ano-2011
+    kdo: Karel Havlíček, místopředseda ANO
+    uroven: celostatni-vedeni
+    datum: 2026-09-13
+    vylucuje: [ceska-piratska-strana]
+    pripousti: [spolu-pro-prahu, starostove-a-nezavisli]
+    doklad: parafraze
+    shrnuti: >-
+      V Partii CNN Prima News podle ČTK nevyloučil v Praze spolupráci s ODS ani
+      se STAN; koalice s Piráty podle něj nepřipadá v úvahu.
+    poznamka: ODS kandiduje na magistrát v koalici SPOLU pro Prahu s TOP 09.
+    zdroje: [pd-uhrineves-13-9, ctk-partie-13-9]
+
+  - id: spolu-portlik
+    subjekt: spolu-pro-prahu
+    kdo: Tomáš Portlík, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-08-23
+    doklad: citace
+    citace: Nerad bych udělal koalici s ANO
+    shrnuti: >-
+      V Poledni s Moravcem koalici s ANO nevyloučil, ale řekl, že by ji udělal
+      nerad. Pokud by výsledek voleb neumožnil sestavit stabilní koalici, je
+      podle svých slov připraven v koalici nebýt.
+    zdroje: [ctk-portlik-23-8]
+
+  - id: ods-kupka
+    subjekt: spolu-pro-prahu
+    kdo: Martin Kupka, předseda ODS
+    uroven: celostatni-vedeni
+    datum: 2026-09-13
+    vylucuje: [spojena-levice-pro-prahu]
+    pripousti: [starostove-a-nezavisli]
+    doklad: parafraze
+    shrnuti: >-
+      V Partii CNN Prima News podle ČTK vyloučil spolupráci s komunisty
+      a preferoval by spolupráci se STAN. Pražskou koalici s ANO podle agentury
+      zakázat nemůže, ODS se jako demokratická strana musí rozhodovat
+      demokraticky.
+    poznamka: >-
+      Mluvil za ODS, která kandiduje na magistrát v koalici SPOLU s TOP 09.
+      Komunisté (KSČM a KSČ) kandidují na listině Spojená levice pro Prahu.
+    zdroje: [ctk-partie-13-9]
+
+  - id: stan-rakusan
+    subjekt: starostove-a-nezavisli
+    kdo: Vít Rakušan, předseda STAN
+    uroven: celostatni-vedeni
+    datum: 2026-09-13
+    vylucuje: [spd-pro-prahu, spojena-levice-pro-prahu]
+    doklad: citace
+    citace: >-
+      My obecně necháváme našim regionů velkou volnost ve skládání koalic
+      a spoléháme na to, že oni vědí, kdo je tím pravým partnerem. Dlouhodobě
+      říkám, že ta červená linie pro nás jsou určitě strany, které my
+      považujeme za extrémní, ať už jsou to komunisté nebo SPD.
+    shrnuti: >-
+      V Partii CNN Prima News řekl, že koalice nechává STAN na regionech
+      a červenou linií jsou komunisté a SPD. Koalici s ANO podle ČTK
+      nevyloučil, není ale preferovanou variantou; přednost dává SPOLU.
+    poznamka: Komunisté (KSČM a KSČ) kandidují na listině Spojená levice pro Prahu.
+    zdroje: [ctk-partie-13-9, aktualne-rakusan-13-9]
