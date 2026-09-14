@@ -213,6 +213,10 @@ Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
 - Přístupnost hlídá axe se sadou pravidel WCAG 2.2 AA nad dvanácti trasami
   (`tests/e2e/pristupnost.spec.ts`). Lighthouse staví své skóre přístupnosti
   na témže nástroji.
+- Kalkulačka mandátů na `/koalice` počítá podle § 45 zákona č. 491/2001 Sb.
+  Drží ji `tests/mandaty.test.ts` proti oficiálnímu rozdělení mandátů z roku 2022
+  ve všech 58 pražských zastupitelstvech a `pnpm nacvik` totéž proti živým datům ČSÚ.
+  Vyjádření o koalicích v `content/koalice.yaml` nesmí jako parafráze nést citaci.
 - Výsledky ankety nelze vydat před zavřením volebních místností. Rozhoduje
   o tom jediná funkce, kterou volá API i stránka, a test hlídá, že se okno
   hlasování a okno výsledků nikdy nepřekryjí (`tests/hlasovani.test.ts`).

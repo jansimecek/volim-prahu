@@ -103,6 +103,11 @@ export default async function StrankaMagistratu() {
             Jak hodnotíme proveditelnost
           </Link>
         </p>
+        <p className="mt-2 max-w-prose">
+          <Link href="/koalice" className="odkaz-akcent">
+            Kdo s kým po volbách a kalkulačka mandátů
+          </Link>
+        </p>
         <p className="popisek-uredni mt-6">
           Údaje o mandátech a okrscích jsou ze sady {SADA_CISELNIKU} · zdroj:{' '}
           <a href="https://volby.gov.cz/opendata/opendata.htm" className="underline">

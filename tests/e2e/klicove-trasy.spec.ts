@@ -344,3 +344,13 @@ test('stránky mají kanonickou adresu, náhledový obrázek a strukturovaná da
   await page.goto('/hledani')
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
 })
+
+test('kalkulačka mandátů přepočte procenta a ukáže sestavy s většinou', async ({ page }) => {
+  await page.goto('/koalice')
+  await expect(page.getByRole('heading', { name: 'Kalkulačka mandátů' })).toBeVisible()
+  await page.getByLabel('SPOLU', { exact: true }).fill('60')
+  await page.getByLabel('STAN', { exact: true }).fill('40')
+  await expect(page.getByText('Rozděleno 65 z 65 mandátů')).toBeVisible()
+  // 60 : 40 dává podle d'Hondta 39 : 26, takže většinu má SPOLU samo.
+  await expect(page.getByRole('listitem').filter({ hasText: '39 mandátů' })).toHaveText(/SPOLU/)
+})
