@@ -1,299 +1,168 @@
 # Volím Prahu — volební průvodce 2026
 
-Web, kde pražský volič najde, kdo kandiduje do jeho zastupitelstva, co slibuje a
-**co z toho daná úroveň samosprávy vůbec může splnit**. Komunální a senátní volby
-9.–10. října 2026.
+**[www.volimprahu.cz](https://www.volimprahu.cz)**
 
-Implementační zadání: [`docs/zadani.md`](docs/zadani.md).
+Nezávislý volební průvodce pro komunální a senátní volby v Praze
+**9.–10. října 2026**. Ukazuje, kdo kandiduje do Zastupitelstva hl. m. Prahy
+a do zastupitelstev 57 městských částí, co slibuje a **co z toho daná úroveň
+samosprávy vůbec může splnit**. Web nikoho nedoporučuje ani neodrazuje od volby.
 
-## Rychlý start
+Praha má dvě úrovně samosprávy a hranice mezi nimi není intuitivní. Slib, který
+je na magistrátu běžnou agendou, bývá pro městskou část mimo pravomoc — a naopak.
+Programy tuhle hranici většinou nezmiňují, takže ji z nich volič nepozná. Web
+proto u slibů ukazuje, kdo o věci skutečně rozhoduje, jestli na ni jsou peníze
+a jestli se stihne za čtyři roky.
 
-```bash
-pnpm install
-pnpm dev
-```
+## Co na webu najdete
 
-Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spustí Next.
+### Kde a koho volím
 
-## Příkazy
+- **Moje volby** na [titulní straně](https://www.volimprahu.cz) — podle polohy
+  nebo zadané adresy najde volební okrsek, městskou část, kandidátky, volební
+  místnost a jestli se u vás volí i senátor. Poloha zůstává v prohlížeči.
+- **[Kde a jak volím](https://www.volimprahu.cz/kde-volim)** — vyhledávač
+  adresa → okrsek a místnost s mapou, přehled oznámení z úředních desek všech
+  57 městských částí, termín voleb do kalendáře a vysvětlení, proč u komunálních
+  voleb neexistuje voličský průkaz.
 
-| Příkaz | Co dělá |
-|---|---|
-| `pnpm dev` | Vývojový server (kompilace obsahu + Next) |
-| `pnpm dev:content` | Sleduje `content/` a překompilovává při změně |
-| `pnpm build` | Produkční build |
-| `pnpm typecheck` | `tsc --noEmit` |
-| `pnpm lint` | ESLint |
-| `pnpm test` | Vitest — ETL, slugy, kontrast palety |
-| `pnpm test:e2e` | Playwright — klíčové trasy na mobilu i desktopu |
-| `pnpm validate` | Kontrola obsahu (nedopsané pasáže, slovník verdiktu) |
-| `pnpm validate --strict --odkazy` | Přísná varianta před ostrým spuštěním |
-| `pnpm import:csu` | Import kandidátek a číselníků z ČSÚ |
-| `pnpm import:senat` | Import senátních kandidátů (sada se2026) |
-| `pnpm import:desky` | Sběr oznámení z úředních desek městských částí |
-| `pnpm import:okrsky` | Import volebních okrsků Prahy z ČÚZK (adresy → okrsek, hranice) |
-| `pnpm nacvik` | Nácvik volební noci proti datům 2022 |
-| `pnpm gen:mc` | Doplní chybějící skelety městských částí |
+### Kandidáti a programy
 
-## Jak je repo rozdělené
+- **[Magistrát](https://www.volimprahu.cz/praha)** — 24 volebních stran
+  kandidujících do Zastupitelstva hl. m. Prahy (65 mandátů): lídři, kandidátní
+  listiny, vylosovaná čísla na hlasovacím lístku a hodnocení programů.
+- **[Městské části](https://www.volimprahu.cz/mestska-cast)** — všech 57
+  zastupitelstev městských částí: počet mandátů, kandidující subjekty, vedení
+  radnice a místní témata.
+- **[Senát](https://www.volimprahu.cz/senat)** — tři pražské senátní obvody,
+  ve kterých se letos volí, a přehled, kdo senátní lístek dostane a kdo ne.
+- **[Témata](https://www.volimprahu.cz/temata)** — co lídři řekli o bydlení,
+  dopravě, územním plánu, rozpočtu, školství a dalších tématech. Doslovné citace
+  vedle sebe, u každé zdroj.
+- **Profily kandidátů** — každý kandidát má vlastní stránku s údaji z otevřených
+  dat ČSÚ, u lídrů i s doloženými výroky z médií.
 
-- **`content/`** — všechno, co píše člověk (MDX + frontmatter). Tvar hlídají Zod
-  schémata v [`velite.config.ts`](velite.config.ts); nevalidní obsah shodí build.
-- **`data/`** — generováno skripty, **nikdy se needituje ručně**. Chyba
-  v generovaných datech se opravuje jako override v `content/opravy/`, ne
-  přepsáním JSONu — jinak ji smaže další import.
-- **`scripts/`** — ETL a generátory, spouští se ručně a výsledek se commituje.
-- **`src/`** — routy, komponenty, hodnotící logika.
+### Podklady k hodnocení
 
-## Import dat z ČSÚ
+- **[Kdo o čem rozhoduje](https://www.volimprahu.cz/kdo-o-cem-rozhoduje)** —
+  dělba pravomocí mezi magistrátem a městskými částmi, u každé agendy odkaz na
+  konkrétní ustanovení zákona.
+- **[Kolik má Praha peněz](https://www.volimprahu.cz/rozpoctovy-ramec)** —
+  řádová čísla rozpočtu města i městských částí ze schválených rozpočtových
+  dokumentů.
+- **[Plnění slibů](https://www.volimprahu.cz/minule-obdobi)** — co slíbila
+  současná rada v programovém prohlášení a kolik z toho jde vůbec ověřit.
+- **[Kdo s kým po volbách](https://www.volimprahu.cz/koalice)** — doložená
+  vyjádření kandidátek o povolební spolupráci a kalkulačka mandátů podle § 45
+  zákona o volbách do zastupitelstev obcí. Bez předpovědí.
 
-```bash
-pnpm import:csu
-```
+### Průběh voleb
 
-Sada `kv2026` na `volby.gov.cz/opendata` **zatím neexistuje** — skript to pozná,
-nic nepřepíše a řekne to. Kontrolovat denně; ČSÚ ji má vydat v řádu dnů po
-22. 8. 2026.
+- **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy
+  o průběhu voleb, každá se zdrojem. Odebírat je jde přes
+  [RSS](https://www.volimprahu.cz/aktualne/feed.xml).
+- **[Rozhovory](https://www.volimprahu.cz/rozhovory)** — rozhovory s lídry
+  kandidátek v médiích: kdo, kde, kdy a o čem mluvil. Odkazy a anotace, ne přepisy.
+- **[Anketa](https://www.volimprahu.cz/hlasovani)** — nezávazná anonymní anketa
+  čtenářů bez registrace. Není to průzkum; souhrn se zveřejní až po zavření
+  volebních místností.
+- **[Výsledky](https://www.volimprahu.cz/vysledky)** — ve volební noci průběžné
+  výsledky voleb do zastupitelstva Prahy i městských částí z otevřených dat ČSÚ.
 
-Nácvik pipeline a archivní ročník proti reálným datům:
+Od 13. října 2026 je web archivem: obsah zůstává dostupný kvůli dohledatelnosti,
+s upozorněním, že už není návodem, jak volit.
 
-```bash
-pnpm import:csu --rok 2022 --vystup data/vysledky-2022/kandidatky
-```
+## Jak web hodnotí sliby
 
-Ověřeno: 58 zastupitelstev (magistrát + 57 MČ), 8 253 kandidátů.
+Hodnotí se **proveditelnost** slibů — ne jejich pravdivost a ne to, jestli jsou
+dobrý nápad. U každého slibu se web ptá, jestli ho úroveň samosprávy, do které
+se kandiduje, může ve volebním období 2026–2030 skutečně udělat. Odpověď skládají
+čtyři nezávislé osy:
 
-## Volební okrsky a místnosti
+- **Kompetence** — rozhoduje o věci magistrát, městská část, nebo někdo jiný?
+- **Rozpočet** — jsou na to peníze?
+- **Čas** — stihne se to za čtyři roky?
+- **Historie** — co ukazuje plnění dřívějších závazků, například programového
+  prohlášení současné rady?
 
-Datová vrstva pro `/kde-volim`: ke každé pražské adrese číslo okrsku, ke
-každému okrsku hranice a střed, a schéma pro adresy volebních místností.
+Závěr není mechanický součet, rozhoduje nejtvrdší překážka: slib mimo pravomoc
+dané úrovně je mimo pravomoc bez ohledu na to, jak dobře je rozpočtově
+připravený. Hodnocení bez zdůvodnění a alespoň jednoho zdroje nejde publikovat —
+hlídá to build webu, ne redakční proces. Stejný rámec platí pro všechny
+kandidující subjekty, a kde hodnocení není, web to napíše natvrdo. Každý
+hodnocený subjekt má právo na odpověď, která se po ověření zveřejní přímo
+u hodnocení.
 
-```bash
-pnpm import:okrsky
-```
+Podrobně na stránce [Jak hodnotíme](https://www.volimprahu.cz/jak-hodnotime).
 
-Zdrojem je ČÚZK, ne ČSÚ ani IPR — jediný registr, který mapuje adresní místo
-na okrsek pro celou Prahu a aktualizuje se prakticky denně:
+## Zásady
 
-- **Sestavy „Seznam adresních míst s volebními okrsky"**
-  (`services.cuzk.cz/sestavy/VO/<kód MOMC>.zip`). Praha jako obec vlastní
-  soubor **nemá**; existuje 57 souborů po městských částech a kód MOMC je
-  totožný s kódem zastupitelstva v `data/ciselniky/zastupitelstva.json`.
-  CSV se středníkem ve Windows-1250.
-- **Speciální výměnný formát RÚIAN `ST_UVOH`**
-  (`vdp.cuzk.cz/vymenny_format/specialni/<YYYYMMDD>_ST_UVOH.xml.zip`),
-  hranice a definiční body všech okrsků v ČR. Vzniká ke 3. dni v měsíci;
-  skript si poslední vydání najde sám, `--datum 20260903` ho vynutí.
+- **Každé tvrzení o jmenovaném subjektu má dohledatelný zdroj.** Citace jsou
+  doslovné a ověřené proti zdroji; parafráze se za citaci nevydává.
+- **Předvolební průzkumy** se zobrazují jen s doloženou metodikou. Od úterý
+  6. října do konce hlasování v sobotu 10. října ve 14:00 se nezobrazují vůbec —
+  web to podle § 6 odst. 1 zákona č. 234/2025 Sb. vynucuje technicky.
+- **Anketa čtenářů není průzkum.** Je anonymní a její souhrn se zveřejní až po
+  zavření volebních místností, aby nemohla nikoho ovlivnit.
+- **Soukromí.** Adresa zadaná do vyhledávače okrsku ani poloha neopouštějí
+  prohlížeč. Návštěvnost se měří bez cookies a signál Global Privacy Control
+  nebo Do Not Track se respektuje. Podrobnosti jsou v [zásadách ochrany
+  osobních údajů](https://www.volimprahu.cz/ochrana-udaju).
+- **Přístupnost.** Web se automaticky testuje proti WCAG 2.2 AA.
 
-Výstup v `data/okrsky/` (asi 9 MB, commituje se):
+## Odkud jsou data
 
-| Soubor | Co v něm je |
-|---|---|
-| `prehled.json` | 1 120 okrsků: číslo, městská část, střed, počet adres, poznámka z RÚIAN |
-| `adresy/<mč>.json` | každé adresní místo městské části jako `[číslo domu, okrsek, kód ADM, lat, lon]`, seskupené po ulicích |
-| `hranice/<mč>.geojson` | polygony okrsků ve WGS84, vlastnosti `cislo`, `kod`, `mestskaCast` |
+- **Kandidáti, kandidátní listiny a výsledky** — otevřená data Českého
+  statistického úřadu (sady `kv2026` a `se2026`), bez ručních úprav.
+- **Volební okrsky a adresy** — registr RÚIAN Českého úřadu zeměměřického
+  a katastrálního.
+- **Volební místnosti** — oznámení na úředních deskách městských částí.
+- **Pravomoci a rozpočty** — zákon č. 131/2000 Sb., o hlavním městě Praze,
+  Statut hl. m. Prahy a schválené rozpočty města a městských částí.
+- **Odkazy do veřejných rejstříků** — [Hlídač státu](https://www.hlidacstatu.cz),
+  jen u osob, u kterých byla shoda ručně ověřená.
+- **Mapové podklady** — [OpenStreetMap](https://www.openstreetmap.org).
 
-Souřadnice převádí `src/lib/krovak.ts` (S-JTSK → WGS84, Helmert EPSG:1623)
-a test je drží na dvacet centimetrů od hodnot, které pro tytéž body vrací
-prohlížecí služba ČÚZK. Geometrický server hl. m. Prahy používá hrubší
-tříparametrovou transformaci, která je proti tomu posunutá asi o deset
-metrů — proto se s ním neporovnáváme.
+## Data k dalšímu použití
 
-Vyhledání okrsku podle adresy dělá `najdiAdresu` v `src/lib/okrsky.ts`:
-ulice se porovnává celá bez diakritiky, číslo domu se zkouší jako
-popisné/orientační, samotné orientační i samotné popisné, a víc shod se
-vrátí všechny — rozhodnout musí čtenář, ne kód. Import ověřuje, že počet
-okrsků v adresách i v hranicích sedí na číselník ČSÚ (1 120), a vypíše
-adresy, které RÚIAN řadí do okrsku jiné městské části (k 7. 9. 2026 jedna:
-Měchnovská 2426/6 v Praze 11 patří do okrsku 10064).
+Web vydává statická data bez autentizace:
 
-Na `/kde-volim` nad tím běží vyhledávač (`src/components/VyhledavacOkrsku.tsx`).
-Data k němu servírují dvě statické routy generované při buildu:
-`/api/okrsky/ulice` (index ulic → městské části, asi 215 kB) a
-`/api/okrsky/<mč>` (adresy jedné části s okrsky a známými místnostmi,
-6 kB až 580 kB). Klient si stáhne jen soubory částí, kde hledaná ulice
-leží — celá Praha se na něj nikdy netahá.
+- [`/api/okrsky/prehled`](https://www.volimprahu.cz/api/okrsky/prehled) — 1 120
+  volebních okrsků Prahy se středy (WGS84) a městskou částí,
+- `/api/okrsky/{slug}` — adresní místa městské části (například
+  [`praha-7`](https://www.volimprahu.cz/api/okrsky/praha-7)) s číslem okrsku
+  a známými volebními místnostmi,
+- `/api/okrsky/{slug}/hranice` — hranice okrsků jako GeoJSON,
+- `/api/okrsky/{slug}/info` — místnosti po okrscích, senátní stav a počet
+  kandidátek,
+- [`/sitemap.xml`](https://www.volimprahu.cz/sitemap.xml),
+  [`/llms.txt`](https://www.volimprahu.cz/llms.txt) a
+  [RSS aktualit](https://www.volimprahu.cz/aktualne/feed.xml).
 
-K výsledku se kreslí mapa (`src/components/MapaOkrsku.tsx`): hranice
-nalezeného okrsku z `/api/okrsky/<mč>/hranice`, ostatní okrsky části slabě,
-bod adresy a červený čtverec volební místnosti, když známe její polohu.
-Tu dohledává `src/lib/geokodovani.ts` při buildu z adresy místnosti
-v našem registru ČÚZK (žádný cizí geokodér); v YAML jde zadat ručně
-polem `poloha`, když vchod leží jinde. Leaflet i hranice se stahují až po
-zobrazení výsledku. Podklad
-jsou dlaždice OpenStreetMap, jediný cizí server, na který web sahá —
-zásady ochrany údajů to říkají výslovně a e2e test mapy proto kontroluje
-jen vektorové vrstvy z našich dat, ne dlaždice.
+Při citaci uveďte „Volím Prahu (https://www.volimprahu.cz)" a odkaz na konkrétní
+stránku. U údajů o kandidátech je původním zdrojem ČSÚ, u okrsků ČÚZK/RÚIAN,
+u místností úřední deska dané městské části.
 
-**Adresy volebních místností** v datech ČÚZK nejsou. Píšou se ručně podle
-„Oznámení o době a místě konání voleb" do `content/volebni-mistnosti/<mč>.yaml`,
-jeden soubor na městskou část:
+## Kdo web dělá
 
-```yaml
-mestskaCast: praha-7
-overeno: 2026-09-25
-volby: komunalni-2026        # nebo `drivejsi`, dokud oznámení 2026 nevyšlo
-zdroj:
-  nazev: "Oznámení o době a místě konání voleb, ÚMČ Praha 7"
-  url: "https://www.praha7.cz/..."
-  vyveseno: 2026-09-24
-mistnosti:
-  - nazev: "ZŠ Strossmayerovo náměstí"
-    adresa: "Strossmayerovo nám. 990/4, Praha 7"
-    okrsky: [7001, 7002]
-    bezbarierova: true
-```
+Web provozuje **Jan Šimek** jako nezávislý projekt. Není spojený s žádnou
+kandidující stranou, hnutím ani sdružením nezávislých kandidátů a nemá žádné
+externí financování — doménu, hosting a čas hradí autor ze svého. Kdyby projekt
+někdy přijal příspěvek, na stránce
+[O projektu](https://www.volimprahu.cz/o-projektu) se objeví jméno dárce
+a částka dřív, než se příspěvek použije.
 
-Build spadne, když je okrsek uvedený dvakrát nebo nepatří do rozsahu dané
-městské části. K 7. 9. 2026 je vyplněno 54 z 57 částí (1 104 z 1 120 okrsků),
-z toho 50 podle dokumentů k volbám 2026 („Informace o počtu a sídle volebních
-okrsků", případně už „Oznámení o době a místě konání voleb") a čtyři podle
-voleb 2025 nebo 2024 (Dubeč, Křeslice, Petrovice, Slivenec). Chybí Praha 18,
-Přední Kopanina a Újezd, kde k tomu datu nic nebylo vyvěšené nebo web
-neběžel. Každý soubor má v hlavičce komentář se zdrojem a nesrovnalostmi. Praha 9 si adresy místností zapisuje přímo do RÚIAN jako
-poznámku k okrsku; `src/lib/mistnosti.ts` je nabídne jako záložní zdroj
-s nálepkou, že to není oznámení pro rok 2026. Redakční soubor má vždy přednost.
+**Našli jste chybu?** Napište na [volimprahu@gmail.com](mailto:volimprahu@gmail.com)
+s odkazem na stránku a popisem, v čem je údaj špatně. Věcné chyby v datech se
+opravují nebo vysvětlují do 48 hodin.
 
-## ISR a cena cache na Vercelu
+Web vědomě nesestavuje databázi majetkových a firemních vazeb (na to je
+[Hlídač státu](https://www.hlidacstatu.cz)), neověřuje pravdivost jednotlivých
+výroků (to dělá [Demagog.cz](https://demagog.cz)) a nenabízí volební kalkulačku,
+diskuse ani uživatelské účty.
 
-Všechny stránky regeneruje layout po 900 s (`revalidate = 900`) kvůli
-fázím voleb a moratoriu; Vercel účtuje zápis do ISR cache jen při změně
-obsahu, takže deterministický výstup je zadarmo. Z toho plynou tři pravidla:
-žádné `new Date()` ani náhodnost v renderu, sitemapa a `llms.txt` jsou
-statické, a `connection()` (čtení času za běhu, které stránku vyřadí z cache
-úplně) se volá jen v okně dvou revalidací kolem hranic moratoria —
-viz `src/lib/zaBehu.ts` a test, který drží obě čísla pohromadě. Profily
-kandidátů (7 860) se generují na vyžádání a po nasazení se do cache zapíší
-jednou; předgenerovat je v buildu by nasazení nafouklo o stovky megabajtů.
+## Zdrojový kód
 
-## Vyhledávače a jazykové modely
-
-Kanonická doména je `https://www.volimprahu.cz` (apex přesměrovává na www),
-konstanta je v `src/lib/web.ts`. Web vydává `/robots.txt` (zakázáno jen
-`/api/` a `/hledani`), `/sitemap.xml` se všemi stránkami včetně profilů
-kandidátů, `/llms.txt` jako mapu obsahu a zásad pro jazykové modely,
-RSS `/aktualne/feed.xml`, výchozí náhledový obrázek `/opengraph-image`
-a favicon `/icon.svg`. Každá stránka má kanonickou adresu; strukturovaná
-data (JSON-LD) nese komponenta `StrukturovanaData`: WebSite v layoutu, Event
-na titulní straně, NewsArticle u aktuality, Person na profilu kandidáta a
-BreadcrumbList všude, kde jsou drobečky. E2E test to hlídá.
-
-## Anketa čtenářů — co je potřeba dozapnout
-
-Anketa je hotová, ale bez úložiště v produkci úmyslně selže nahlas, aby se
-hlasy neztrácely do efemérních funkcí. Zbývá jedno nastavení ve Vercelu:
-
-1. Vercel → projekt `volim-prahu` → **Storage** → přidat Postgres z Marketplace
-   (Neon má bezplatný tarif, který na tenhle objem stačí).
-2. **Zvolit region v Evropské unii** (například Frankfurt). Zásady ochrany
-   osobních údajů tvrdí, že data leží v EU — s jiným regionem by ta věta
-   přestala platit.
-3. Integrace sama nastaví `POSTGRES_URL`. Aplikace si tabulky `hlasy`
-   a `odbery` vytvoří při prvním spuštění.
-
-Lokálně žádná databáze potřeba není — mimo produkci se zapisuje do `.data/`.
-
-Anketa se navíc čtenářům otevře až ve chvíli, kdy budou v `data/kandidatky`
-skutečné subjekty. Do té doby stránka vysvětluje, že není z čeho vybírat.
-
-## Co build vynucuje sám
-
-Tyhle věci nejsou na lidské pozornosti — spadne na nich build nebo CI:
-
-- Hodnocení bez zdůvodnění delšího než 120 znaků nebo bez alespoň jednoho zdroje
-  se **nedá publikovat**.
-- Barvy použité na text musí splňovat WCAG 2.2 AA (`tests/kontrast.test.ts`).
-- V hodnoceních se nesmí objevit slovník verdiktu („lež", „podvod", …) —
-  web hodnotí proveditelnost, ne pravdivost (`pnpm validate`).
-- Předvolební průzkumy se nezobrazují, dokud není potvrzený právní základ
-  moratoria. Návrh je fail-closed: `src/lib/moratorium.ts` má `MORATORIUM_OD`
-  i `PRAVNI_OPORA` na `null`, a dokud tam obojí nebude, `BlokPruzkumu` nepustí
-  ven nic. Zákon č. 491/2001 Sb. byl letos novelizován zákonem č. 70/2026 Sb.
-  a přesné znění lhůty se nepodařilo z veřejných zdrojů ověřit.
-- Přístupnost hlídá axe se sadou pravidel WCAG 2.2 AA nad dvanácti trasami
-  (`tests/e2e/pristupnost.spec.ts`). Lighthouse staví své skóre přístupnosti
-  na témže nástroji.
-- Kalkulačka mandátů na `/koalice` počítá podle § 45 zákona č. 491/2001 Sb.
-  Drží ji `tests/mandaty.test.ts` proti oficiálnímu rozdělení mandátů z roku 2022
-  ve všech 58 pražských zastupitelstvech a `pnpm nacvik` totéž proti živým datům ČSÚ.
-  Vyjádření o koalicích v `content/koalice.yaml` nesmí jako parafráze nést citaci.
-- Výsledky ankety nelze vydat před zavřením volebních místností. Rozhoduje
-  o tom jediná funkce, kterou volá API i stránka, a test hlídá, že se okno
-  hlasování a okno výsledků nikdy nepřekryjí (`tests/hlasovani.test.ts`).
-
-## Stav
-
-**Hotovo:** skelet a datový model, import z ČSÚ, číselník 57 MČ, stránky všech
-městských částí, metodika, `/kde-volim` fáze 1, CI, anketa čtenářů,
-kompetenční matice (`/kdo-o-cem-rozhoduje`), rozpočtový rámec
-(`/rozpoctovy-ramec`), vyhledávač adresa → volební okrsek na `/kde-volim`
-nad daty ČÚZK (`pnpm import:okrsky`, `data/okrsky/`), profily všech 24 kandidátek do ZHMP, prvních osm
-hodnocení proveditelnosti, senátní blok včetně odpovědi, ve kterých městských
-částech se senátor letos vůbec nevolí, a rozbor plnění programového prohlášení
-rady 2022–2026 (`/minule-obdobi`). Všechny čtyři osy hodnocení tím mají oporu.
-
-Kandidátky ze sady `kv2026` jsou naimportované: 8 607 kandidatur, 7 861 osob,
-24 volebních stran na magistrát. Čísla na hlasovacím lístku jsou od 4. 9. 2026
-vylosovaná a naimportovaná — všech 330 stran v 58 zastupitelstvech. Do losování
-za ně ČSÚ dosazoval náhradní hodnoty od 501 výš, které import do `cislo`
-nepouštěl; ta pojistka v kódu zůstává pro příští ročník.
-
-**Čeká se na:** stanovisko ÚDHPSH k registraci třetí osoby, souhlas IPR Praha
-s ArcGIS endpointem, úložiště ankety ve Vercelu.
-
-Doložené mediální výroky lídrů jsou v `content/vyroky-lidru.yaml` a zobrazují
-se na profilu kandidáta. Publikují se jen doslovné citace ověřené proti zdroji;
-u 14 z 24 lídrů se nic doložitelného nenašlo a je u nich napsáno proč.
-
-Fáze 2 `/kde-volim` běží: `pnpm import:desky` stahuje úřední desky 14 městských
-částí, které je publikují jako otevřená data, a hledá v nich oznámení o době
-a místě konání voleb. Adresy desek zbylých 43 částí jsou v
-`content/uredni-desky.yaml`. Spouštět opakovaně od poloviny září — lhůta
-pro vyvěšení je 24. 9. 2026.
-
-## Volební noc
-
-Pipeline je hotová a **nacvičená proti reálným datům roku 2022**:
-
-```bash
-pnpm nacvik
-```
-
-Skript projde celou cestu — stažení z ČSÚ, parsování, uložení snapshotu,
-načtení zpět, chování při výpadku — a ověří známé výsledky roku 2022
-(SPOLU 24,72 % a 19 mandátů, účast 43,91 %, součet mandátů 65 v každém
-z 58 zastupitelstev). Nekončí nulou, když cokoli nesedí.
-
-Jak to funguje:
-
-- Jeden požadavek na ČSÚ vrací celou Prahu, tedy všech 58 zastupitelstev.
-- Stahuje výhradně cron přes `/api/volebni-noc`, nikdy požadavek uživatele.
-- Když stahování selže, poslední dobrý snapshot se **nepřepisuje** a stránka
-  ukáže starší data s viditelným časem. Nad 10 minut na to upozorní červeně.
-- `/vysledky` čte jen snapshot, s `revalidate = 30`.
-
-**Před volbami je potřeba:**
-
-1. Přidat Blob store ve Vercelu (nastaví `BLOB_READ_WRITE_TOKEN`). Bez něj
-   se snapshot ukládá na disk, což na efemérních funkcích nepřežije.
-2. Nastavit `CRON_SECRET`. Bez něj endpoint v produkci vrací 503 — je
-   fail-closed schválně, aby chybějící nastavení nešlo přehlédnout.
-3. Do Secrets repozitáře doplnit `CRON_SECRET` a `VOLEBNI_NOC_URL`
-   (`https://…/api/volebni-noc`).
-
-Sčítání spouští **GitHub Actions** (`.github/workflows/volebni-noc.yml`),
-ne Vercel Cron — Hobby umožňuje cron jen jednou denně, což ve volební noci
-znamená, že by neproběhl ani jednou. Workflow volá stejný endpoint každé
-dvě minuty v sobotu večer a každých pět minut přes noc. Zdarma a bez závislosti
-na tarifu. Denní cron ve `vercel.json` zůstává jako doběh.
-
-Nácvik nikdy nepíše do ostrého snapshotu — má vlastní cíl a nad produkčním
-úložištěm odmítne běžet, aby výsledky roku 2022 nemohl vydat za průběžný
-stav voleb 2026.
-
-Web se sám přepíná mezi režimy podle času (`src/lib/rezim.ts`): před volbami,
-volební dny, sčítání a od 13. 10. **archiv**. V archivním režimu je nad obsahem
-pruh, který říká, že volby proběhly a nic z webu už není návod, jak volit.
-
-**Zbývá:** nastavení, která potřebují účet — Blob store, `CRON_SECRET`,
-secrets v repozitáři, Postgres pro anketu. A ověřit znění moratoria.
+Zdrojový kód i veškerý redakční obsah jsou veřejné v tomto repozitáři, takže
+každá změna hodnocení je dohledatelná v historii. Texty, hodnocení a postoje
+jsou v `content/`, data převzatá z otevřených zdrojů v `data/`. Jak je web
+technicky postavený, popisuje [technická dokumentace](docs/technicka-dokumentace.md).

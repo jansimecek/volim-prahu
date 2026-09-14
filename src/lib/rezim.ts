@@ -1,9 +1,8 @@
 /**
  * Režim webu podle fáze voleb.
  *
- * Zadání je v tomhle výslovné: po volbách nesmí web zůstat viset
- * v předvolebním stavu. Přepnutí je proto odvozené od času, ne od toho,
- * jestli si na to někdo vzpomene.
+ * Po volbách nesmí web zůstat viset v předvolebním stavu. Přepnutí je proto
+ * odvozené od času, ne od toho, jestli si na to někdo vzpomene.
  */
 
 /** Otevření volebních místností v pátek. */
