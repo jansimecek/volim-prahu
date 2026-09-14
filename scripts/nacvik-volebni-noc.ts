@@ -3,7 +3,7 @@
  *
  *   pnpm nacvik
  *
- * Zadání to žádá jako povinnost: volební noc není okamžik na první ostré
+ * Nácvik je povinný: volební noc není okamžik na první ostré
  * spuštění pipeline. Skript projde celou cestu — stažení z ČSÚ, parsování,
  * uložení snapshotu, načtení zpět — a ověří známé výsledky roku 2022.
  * Nekončí nulou, pokud cokoli neodpovídá.

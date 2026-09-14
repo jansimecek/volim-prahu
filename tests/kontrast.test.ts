@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 
 /**
  * Kontrast se čte přímo z globals.css, ne z kopie hodnot v testu — jinak by
- * test hlídal sám sebe a ne skutečné styly. WCAG 2.2 AA je v zadání
+ * test hlídal sám sebe a ne skutečné styly. WCAG 2.2 AA je pro web
  * nepodkročitelný požadavek, takže ho hlídá build, ne lidská paměť.
  */
 const css = readFileSync(join(__dirname, '../src/styles/globals.css'), 'utf8')

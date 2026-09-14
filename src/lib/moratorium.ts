@@ -1,8 +1,8 @@
 /**
  * Moratorium na zveřejňování předvolebních průzkumů.
  *
- * Zadání žádá, aby bylo vynucené technicky, ne ruční — nastavené dopředu,
- * ne klikané večer před volbami.
+ * Vynucuje se technicky, ne ručně — nastavené dopředu, ne klikané večer
+ * před volbami.
  *
  * PRÁVNÍ ZÁKLAD SE ZMĚNIL. Do voleb 2026 platil § 30 odst. 3 zákona
  * č. 491/2001 Sb.; volební reforma ho odtud vyňala a od 1. 1. 2026 platí

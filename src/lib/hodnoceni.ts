@@ -1,5 +1,5 @@
 /**
- * Hodnotící rámec proveditelnosti — jádro produktu (kap. 8 zadání).
+ * Hodnotící rámec proveditelnosti — jádro produktu (metodika na /jak-hodnotime).
  *
  * Zásady, které se nesmí porušit:
  *  - Není to verdikt pravda/lež. Slovník je o proveditelnosti, ne o pravdivosti.

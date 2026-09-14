@@ -4,7 +4,7 @@ import { expect, test } from '@playwright/test'
 /**
  * Automatický audit přístupnosti. Lighthouse staví své skóre přístupnosti
  * převážně na axe, takže tohle je totéž měřítko, jen vynucené v CI —
- * zadání žádá WCAG 2.2 AA bez výjimek.
+ * web musí splňovat WCAG 2.2 AA bez výjimek.
  */
 const TRASY = [
   { cesta: '/', nazev: 'rozcestník' },

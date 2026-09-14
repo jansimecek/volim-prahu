@@ -31,7 +31,7 @@ const hodnoceni = s.object({
       `Zdůvodnění musí mít alespoň ${MIN_DELKA_ZDUVODNENI} znaků a odkazovat na konkrétní fakt, ne na obecné hodnocení.`,
     ),
   zdroje: s.array(url).min(1, 'Hodnocení bez alespoň jednoho zdroje se nesmí publikovat.'),
-  /** Reakce subjektu podle práva na odpověď (kap. 8 zadání). */
+  /** Reakce subjektu podle práva na odpověď (metodika na /jak-hodnotime). */
   reakce_subjektu: s
     .object({
       text: s.string().min(1),
@@ -119,7 +119,7 @@ const programy = defineCollection({
     zdroj_programu: url.optional(),
     /**
      * Když subjekt program nezveřejnil, uvede se důvod a hodnocení se u něj
-     * nezobrazuje vůbec — symetrie podle kap. 8 zadání.
+     * nezobrazuje vůbec — symetrie podle metodiky na /jak-hodnotime.
      */
     program_nedohledan: s.string().optional(),
     body: s.array(bodProgramu).default([]),
@@ -422,7 +422,7 @@ const rozhovory = defineCollection({
     osoba: s.string().min(1),
     medium: s.string().min(1),
     datum: s.isodate(),
-    /** Nikdy nepřebíráme celý text — jen odkaz a vlastní anotace (kap. 11.4). */
+    /** Nikdy nepřebíráme celý text — jen odkaz a vlastní anotace (licence, viz /ochrana-udaju). */
     odkaz: url,
     anotace: s.string().min(1).max(600),
     /** Je rozhovor za placenou zdí? Čtenář to má vědět, než klikne. */
