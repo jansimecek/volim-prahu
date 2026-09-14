@@ -2,7 +2,8 @@
 #
 # Ucelený pražský program hnutí k 8. 9. 2026 nedohledán (viz profil), postoje
 # jsou z doložených výroků lídra Jana Hušbauera. Přesné citace jsou
-# v content/vyroky-lidru.yaml.
+# v content/vyroky-lidru.yaml. Postoj k dopravě ze zahájení pražské kampaně
+# přibyl 14. 9. 2026.
 
 subjekt: ano-2011
 uroven: magistrat
@@ -58,3 +59,16 @@ postoje:
       text: Pražští Piráti vyloučili povolební spolupráci s ANO a ANO nemá zájem o Piráty (Respekt / ČTK)
       url: https://www.respekt.cz/informacni-servis/prazsti-pirati-vyloucili-povolebni-spolupraci-s-ano-a-ano-nema-zajem-o-piraty-2026-08-12-12-45
       datum: 2026-08-12
+
+  - okruh: doprava
+    shrnuti: "V dopravě staví na dostavbě městského okruhu a parkovacích domech"
+    postoj: >-
+      Na zahájení pražské kampaně 13. září lídr podle ČTK uvedl, že v dopravě
+      řadí mezi nejdůležitější projekty dostavbu městského okruhu a výstavbu
+      parkovacích domů. Počet ani lokality parkovacích domů zpráva ČTK
+      neuvádí.
+    typZdroje: vyrok
+    zdroj:
+      text: Zahájení pražské kampaně ANO v Uhříněvsi (Pražský deník / ČTK)
+      url: https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/
+      datum: 2026-09-13
