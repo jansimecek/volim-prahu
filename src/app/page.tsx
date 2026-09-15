@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { programy } from '#content'
 import { DlazdiceStrany } from '@/components/DlazdiceStrany'
 import { RazenySeznam } from '@/components/RazenySeznam'
@@ -8,9 +9,9 @@ import { MojeVolby } from '@/components/MojeVolby'
 import { VyzvaAnketa } from '@/components/VyzvaAnketa'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
 import { absolutni } from '@/lib/web'
-import { sPoctem } from '@/lib/cestina'
+import { sPoctem, sklonuj } from '@/lib/cestina'
 import { kandidatka } from '@/lib/kandidatky'
-import { MAGISTRAT, MESTSKE_CASTI, cislo } from '@/lib/obsah'
+import { MAGISTRAT, MESTSKE_CASTI } from '@/lib/obsah'
 import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
 import { vypisStran } from '@/lib/vypisStran'
 import { nejnovejsi } from '@/lib/aktuality'
@@ -25,10 +26,14 @@ export default async function Rozcestnik() {
   const { polozky, pruzkum } = await vypisStran('magistrat')
   const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
   const hodnoceno = programy.reduce((n, p) => n + p.body.filter((b) => b.hodnoceni).length, 0)
-  const aktuality = await nejnovejsi(3)
+  const sProgramem = polozky.filter((s) => s.programStav === 'zverejnen').length
+  const sCastiProgramu = polozky.filter(
+    (s) => s.programStav === 'jen-casti' || s.programStav === 'jen-priority',
+  ).length
+  const aktuality = await nejnovejsi(4)
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 sm:space-y-16">
       <StrukturovanaData
         data={{
           '@type': 'Event',
@@ -46,14 +51,16 @@ export default async function Rozcestnik() {
       />
       <section>
         <p className="popisek-uredni">Komunální a senátní volby · 9.–10. října 2026</p>
-        <h1 className="mt-3 max-w-3xl text-4xl md:text-5xl">
+        <h1 className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl">
           Co vaši kandidáti slibují — a co z toho jejich úroveň samosprávy vůbec může splnit
         </h1>
+        {/* Úvod říká „u hodnocených slibů“, ne „u každého“: hodnocení má jen
+            menšina slibů a titulní strana nesmí tvrdit víc než zbytek webu. */}
         <p className="mt-5 max-w-prose text-lg">
-          Praha má dvě úrovně samosprávy a hranice mezi nimi není intuitivní. Slib, který
-          zvládne magistrát, je pro městskou část často mimo pravomoc. Tenhle web u každého
-          slibu ukazuje, kdo o věci skutečně rozhoduje, jestli na ni jsou peníze a jestli se
-          stihne za čtyři roky.
+          V Praze se volí dvě úrovně samosprávy: zastupitelstvo celého města a zastupitelstvo
+          městské části. Slib, který zvládne magistrát, bývá pro městskou část mimo pravomoc.
+          U hodnocených slibů ukazujeme, kdo o věci rozhoduje, jestli jsou na ni peníze
+          a jestli se stihne za čtyři roky.
         </p>
         <p className="mt-4 flex flex-wrap gap-x-6 gap-y-1">
           <Link href="/temata" className="odkaz-akcent">
@@ -63,6 +70,23 @@ export default async function Rozcestnik() {
             Jak hodnotíme
           </Link>
         </p>
+
+        {/* Tři otázky, se kterými volič na web přichází nejčastěji. Údaje jsou
+            tytéž jako na /kde-volim, kde jsou rozepsané i se zdroji. */}
+        <dl className="mt-8 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
+          <Fakt popisek="Kdy">
+            <span className="block">Pátek 9.&nbsp;října, 14–22&nbsp;h</span>
+            <span className="block">Sobota 10.&nbsp;října, 8–14&nbsp;h</span>
+          </Fakt>
+          <Fakt popisek="Co volíte">
+            Zastupitelstvo Prahy a zastupitelstvo své městské části. Ve třech obvodech
+            i senátora.
+          </Fakt>
+          <Fakt popisek="Kde">
+            Ve svém okrsku podle trvalého pobytu, s občanským průkazem nebo pasem. Voličský
+            průkaz u komunálních voleb neexistuje.
+          </Fakt>
+        </dl>
       </section>
 
       <section aria-labelledby="moje-volby" className="border border-inkoust bg-papir p-5 sm:p-8">
@@ -79,22 +103,20 @@ export default async function Rozcestnik() {
         </div>
       </section>
 
-      <VyzvaAnketa />
-
       {/* Lídři patří na titulní stranu — je to první věc, kterou volič hledá. */}
       {polozky.length > 0 && (
         <section aria-labelledby="lidri">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-            <h2 id="lidri" className="text-2xl">
-              Kdo vede kandidátky na magistrát
-            </h2>
-            <p className="popisek-uredni">
-              {sPoctem(polozky.length, 'volební strana', 'volební strany', 'volebních stran')} ·{' '}
-              {sPoctem(kandidatuCelkem, 'kandidát', 'kandidáti', 'kandidátů')}
-            </p>
-          </div>
-          <p className="mt-2 max-w-prose text-sm text-seda-uredni">
-            Jména lídrů jsou z otevřených dat ČSÚ, tedy z prvního místa kandidátní listiny.
+          <h2 id="lidri" className="text-2xl">
+            Kdo vede kandidátky na magistrát
+          </h2>
+          <p className="mt-2 max-w-prose">
+            Do Zastupitelstva hl. m. Prahy ({MAGISTRAT.mandaty} mandátů){' '}
+            {sklonuj(polozky.length, 'kandiduje', 'kandidují', 'kandiduje')}{' '}
+            {sPoctem(polozky.length, 'volební strana', 'volební strany', 'volebních stran')} s{' '}
+            {sPoctem(kandidatuCelkem, 'kandidátem', 'kandidáty', 'kandidáty')}. Program
+            zveřejnil{sklonuj(sProgramem, 'a', 'y', 'o')} {sProgramem} z nich
+            {sCastiProgramu > 0 && `, u dalších ${sCastiProgramu} známe jen části nebo priority`}.
+            Hodnotíme zatím {sPoctem(hodnoceno, 'slib', 'sliby', 'slibů')}.
           </p>
 
           <RazenySeznam
@@ -103,7 +125,7 @@ export default async function Rozcestnik() {
               nazev: strana.zkratka,
               cislo: strana.cislo,
               procenta: strana.procenta,
-              obsah: <DlazdiceStrany strana={strana} />,
+              obsah: <DlazdiceStrany strana={strana} kompaktni />,
             }))}
             tridaSeznamu="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3"
             popisSeznamu="Lídři kandidátek na magistrát"
@@ -114,10 +136,14 @@ export default async function Rozcestnik() {
             zdrojeDuvodu={zdrojePoznamky()}
           />
 
-          <p className="mt-4 text-sm">
+          <p className="mt-4 max-w-prose text-sm">
+            Lídr je první jméno na kandidátní listině podle otevřených dat ČSÚ. Povolání
+            lídrů, celé listiny a vysvětlení, proč má hodnocení jen část stran, jsou na
+            stránce{' '}
             <Link href="/praha" className="odkaz-akcent">
-              Podrobnosti o magistrátu a kandidátkách
+              Magistrát
             </Link>
+            .
           </p>
         </section>
       )}
@@ -136,17 +162,19 @@ export default async function Rozcestnik() {
           </div>
           <div className="mt-2 border-t border-inkoust">
             {aktuality.map((z) => (
-              <Aktualita key={z.slug} aktualita={z} />
+              <Aktualita key={z.slug} aktualita={z} strucne />
             ))}
           </div>
         </section>
       )}
 
+      <VyzvaAnketa />
+
       <section aria-labelledby="kam-dal">
         <h2 id="kam-dal" className="text-2xl">
           Kam dál
         </h2>
-        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           <Rozcestka
             href="/mestska-cast"
             popisek="Moje čtvrť"
@@ -160,33 +188,40 @@ export default async function Rozcestnik() {
             popis="Volí se jen ve třech z deseti pražských obvodů. Většina Pražanů senátní lístek nedostane."
           />
           <Rozcestka
+            href="/koalice"
+            popisek="Po volbách"
+            nadpis="Kdo s kým po volbách"
+            popis="Doložená vyjádření o povolební spolupráci a kalkulačka mandátů. Bez předpovědí."
+          />
+          <Rozcestka
+            href="/temata"
+            popisek="Srovnání"
+            nadpis="Témata"
+            popis="Postoje kandidátek k bydlení, dopravě a územnímu plánu vedle sebe, u každého zdroj."
+          />
+          <Rozcestka
             href="/kdo-o-cem-rozhoduje"
             popisek="Podklad"
             nadpis="Kdo o čem rozhoduje"
             popis="Sedmnáct agend a u každé odkaz na paragraf. Parkovací zóny nejsou na radnici, ale na magistrátu."
           />
           <Rozcestka
-            href="/kde-volim"
-            popisek="Praktické"
-            nadpis="Kde volím"
-            popis="Okrsek a místnost podle adresy, termín do kalendáře a proč u komunálních voleb neexistuje voličský průkaz."
+            href="/minule-obdobi"
+            popisek="Podklad"
+            nadpis="Plnění slibů"
+            popis="Co slíbila současná rada v programovém prohlášení a kolik z toho jde vůbec ověřit."
           />
         </ul>
       </section>
+    </div>
+  )
+}
 
-      <section className="max-w-prose">
-        <h2 className="text-2xl">V jakém je to teď stavu</h2>
-        <p className="mt-3">
-          Kandidátní listiny jsou naimportované z otevřených dat ČSÚ — {MAGISTRAT.mandaty}{' '}
-          mandátů na magistrátu, kandidátky ve všech {cislo(MESTSKE_CASTI.length)} městských
-          částech a tři senátní obvody.
-        </p>
-        <p className="mt-3">
-          Hodnocení proveditelnosti zveřejňujeme u {hodnoceno} slibů. Většina subjektů
-          zatím nezveřejnila dost konkrétní program — u každého je napsané, jak na tom je,
-          aby nevznikl dojem, že hodnotíme jen některé.
-        </p>
-      </section>
+function Fakt({ popisek, children }: { popisek: string; children: ReactNode }) {
+  return (
+    <div className="bg-papir p-4">
+      <dt className="popisek-uredni">{popisek}</dt>
+      <dd className="mt-1">{children}</dd>
     </div>
   )
 }
@@ -197,14 +232,14 @@ function Rozcestka({
   nadpis,
   popis,
 }: {
-  href: '/mestska-cast' | '/senat' | '/kdo-o-cem-rozhoduje' | '/kde-volim'
+  href: '/mestska-cast' | '/senat' | '/koalice' | '/temata' | '/kdo-o-cem-rozhoduje' | '/minule-obdobi'
   popisek: string
   nadpis: string
   popis: string
 }) {
   return (
     <li className="bg-papir">
-      <Link href={href} className="group block h-full p-5 no-underline hover:bg-papir-tmavsi">
+      <Link href={href} className="group block h-full p-4 no-underline hover:bg-papir-tmavsi sm:p-5">
         <span className="popisek-uredni">{popisek}</span>
         <span className="mt-2 block font-display text-xl font-semibold group-hover:underline">
           {nadpis}
