@@ -59,6 +59,13 @@ a naimportovaná — všech 330 stran v 58 zastupitelstvech. Do losování za n�
 dosazoval náhradní hodnoty od 501 výš, které import do `cislo` nepouští; ta
 pojistka v kódu zůstává pro příští ročník.
 
+Registr kandidátů nese u každého kandidáta i údaj `PLATNOST` (A = platný,
+N = „neplatný, odvolaný“). Import u hodnoty N zapíše `neplatny: true`: kandidát
+zůstává na svém místě v listině, web ho označí jako neplatnou kandidaturu, do
+počtů kandidátů ho nepočítá a lídrem kandidátky být nemůže. K 9. 9. 2026 jde
+o 17 kandidatur v pěti městských částech, na magistrátu ani v senátních
+obvodech o žádnou.
+
 Nácvik pipeline a archivní ročník proti reálným datům:
 
 ```bash
@@ -148,12 +155,12 @@ mistnosti:
 ```
 
 Build spadne, když je okrsek uvedený dvakrát nebo nepatří do rozsahu dané
-městské části. K 7. 9. 2026 je vyplněno 54 z 57 částí (1 104 z 1 120 okrsků),
-z toho 50 podle dokumentů k volbám 2026 („Informace o počtu a sídle volebních
+městské části. K 15. 9. 2026 je vyplněno 55 z 57 částí (1 107 z 1 120 okrsků),
+z toho 51 podle dokumentů k volbám 2026 („Informace o počtu a sídle volebních
 okrsků", případně už „Oznámení o době a místě konání voleb") a čtyři podle
-voleb 2025 nebo 2024 (Dubeč, Křeslice, Petrovice, Slivenec). Chybí Praha 18,
-Přední Kopanina a Újezd, kde k tomu datu nic nebylo vyvěšené nebo web
-neběžel. Každý soubor má v hlavičce komentář se zdrojem a nesrovnalostmi.
+voleb 2025 nebo 2024 (Dubeč, Křeslice, Petrovice, Slivenec). Chybí Praha 18
+a Přední Kopanina, u kterých k tomu datu oznámení dohledané nebylo. Každý
+soubor má v hlavičce komentář se zdrojem a nesrovnalostmi.
 
 Praha 9 si adresy místností zapisuje přímo do RÚIAN jako poznámku k okrsku;
 `src/lib/mistnosti.ts` je nabídne jako záložní zdroj s nálepkou, že to není
