@@ -1159,7 +1159,8 @@
           "navrhujiciStrana": "ČSSD",
           "politickaPrislusnost": "",
           "poradi": 30,
-          "zastupitelstvo": "praha-8"
+          "zastupitelstvo": "praha-8",
+          "neplatny": true
         },
         {
           "id": "500208-2-31",
@@ -1354,7 +1355,8 @@
           "navrhujiciStrana": "ČSSD",
           "politickaPrislusnost": "",
           "poradi": 43,
-          "zastupitelstvo": "praha-8"
+          "zastupitelstvo": "praha-8",
+          "neplatny": true
         },
         {
           "id": "500208-2-44",
@@ -6182,7 +6184,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 43,
-          "zastupitelstvo": "praha-8"
+          "zastupitelstvo": "praha-8",
+          "neplatny": true
         },
         {
           "id": "500208-9-44",

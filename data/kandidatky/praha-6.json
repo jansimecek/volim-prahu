@@ -378,7 +378,8 @@
           "navrhujiciStrana": "STAN",
           "politickaPrislusnost": "",
           "poradi": 24,
-          "zastupitelstvo": "praha-6"
+          "zastupitelstvo": "praha-6",
+          "neplatny": true
         },
         {
           "id": "500178-1-25",

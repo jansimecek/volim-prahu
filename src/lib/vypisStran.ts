@@ -30,7 +30,7 @@ export async function vypisStran(uroven: string): Promise<{
       zkratka: strana.zkratka,
       lidr: jednicka ? celeJmeno(jednicka) : null,
       povolani: jednicka?.povolani || null,
-      pocetKandidatu: naListine?.kandidati.length ?? 0,
+      pocetKandidatu: naListine?.kandidati.filter((k) => !k.neplatny).length ?? 0,
       programStav: strana.programStav,
       pocetHodnoceni:
         programy

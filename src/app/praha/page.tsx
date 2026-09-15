@@ -56,7 +56,10 @@ export default async function StrankaMagistratu() {
               </strong>{' '}
               s celkem{' '}
               {cislo(
-                listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0,
+                listina?.strany.reduce(
+                  (n, s) => n + s.kandidati.filter((k) => !k.neplatny).length,
+                  0,
+                ) ?? 0,
               )}{' '}
               kandidáty. Výchozí pořadí je abecední, ne podle preferencí ani velikosti —
               {vylosovano

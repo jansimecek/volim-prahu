@@ -1937,7 +1937,8 @@
           "navrhujiciStrana": "NK",
           "politickaPrislusnost": "",
           "poradi": 20,
-          "zastupitelstvo": "praha-12"
+          "zastupitelstvo": "praha-12",
+          "neplatny": true
         },
         {
           "id": "547107-4-21",
@@ -2072,7 +2073,8 @@
           "navrhujiciStrana": "NK",
           "politickaPrislusnost": "",
           "poradi": 29,
-          "zastupitelstvo": "praha-12"
+          "zastupitelstvo": "praha-12",
+          "neplatny": true
         },
         {
           "id": "547107-4-30",

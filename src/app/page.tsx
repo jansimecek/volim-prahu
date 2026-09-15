@@ -24,7 +24,8 @@ export const metadata: Metadata = {
 export default async function Rozcestnik() {
   const listina = kandidatka('magistrat')
   const { polozky, pruzkum } = await vypisStran('magistrat')
-  const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
+  const kandidatuCelkem =
+    listina?.strany.reduce((n, s) => n + s.kandidati.filter((k) => !k.neplatny).length, 0) ?? 0
   const hodnoceno = programy.reduce((n, p) => n + p.body.filter((b) => b.hodnoceni).length, 0)
   const sProgramem = polozky.filter((s) => s.programStav === 'zverejnen').length
   const sCastiProgramu = polozky.filter(
@@ -83,8 +84,8 @@ export default async function Rozcestnik() {
             i senátora.
           </Fakt>
           <Fakt popisek="Kde">
-            Ve svém okrsku podle trvalého pobytu, s občanským průkazem nebo pasem. Voličský
-            průkaz u komunálních voleb neexistuje.
+            Ve svém okrsku podle trvalého pobytu, s občanským průkazem, pasem nebo
+            eDokladem. Voličský průkaz u komunálních voleb neexistuje.
           </Fakt>
         </dl>
       </section>
@@ -115,8 +116,9 @@ export default async function Rozcestnik() {
             {sPoctem(polozky.length, 'volební strana', 'volební strany', 'volebních stran')} s{' '}
             {sPoctem(kandidatuCelkem, 'kandidátem', 'kandidáty', 'kandidáty')}. Program
             zveřejnil{sklonuj(sProgramem, 'a', 'y', 'o')} {sProgramem} z nich
-            {sCastiProgramu > 0 && `, u dalších ${sCastiProgramu} známe jen části nebo priority`}.
-            Hodnotíme zatím {sPoctem(hodnoceno, 'slib', 'sliby', 'slibů')}.
+            {sCastiProgramu > 0 &&
+              `, ${sPoctem(sCastiProgramu, 'další kandidátka', 'další kandidátky', 'dalších kandidátek')} jen části nebo priority`}
+            . Hodnotíme zatím {sPoctem(hodnoceno, 'slib', 'sliby', 'slibů')}.
           </p>
 
           <RazenySeznam

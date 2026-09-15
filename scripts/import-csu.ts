@@ -251,6 +251,10 @@ function sestavKandidatky(
       politickaPrislusnost: nazevPolitickeStrany(radek.PSTRANA, politickeStrany),
       poradi,
       zastupitelstvo: podleKodu.get(kodZastup)!.slug,
+      // PLATNOST=N („neplatný, odvolaný“ podle popisu registru). Kandidát zůstává
+      // na svém místě v listině, ale označený — bez označení by web tvrdil,
+      // že dál kandiduje.
+      ...(radek.PLATNOST === 'N' ? { neplatny: true as const } : {}),
     }
     zaznamStrany.kandidati.push(kandidat)
   }

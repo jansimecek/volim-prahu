@@ -73,8 +73,15 @@ export function duvodBezPruzkumu(uroven: string, ted: Date = new Date()): string
   return null
 }
 
-/** Zdroje k poznámce o průzkumech. Tvrzení o jmenovaných subjektech je musí mít. */
-export function zdrojePoznamky(): { text: string; url: string }[] {
+/**
+ * Zdroje k poznámce o průzkumech. Tvrzení o jmenovaných subjektech je musí mít.
+ *
+ * V zakázané lhůtě se nevydávají. Poznámka se tehdy zobrazuje i se seznamem
+ * zdrojů a titulky článků o průzkumech bývají samy výsledkem („vede ANO těsně
+ * před STAN“) — seznam odkazů by moratorium obešel.
+ */
+export function zdrojePoznamky(ted: Date = new Date()): { text: string; url: string }[] {
+  if (!smiZobrazitPruzkum(ted)) return []
   return obsah.poznamka?.zdroje ?? []
 }
 

@@ -587,7 +587,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 4,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-5",
@@ -602,7 +603,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 5,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-6",
@@ -647,7 +649,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 8,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-9",
@@ -662,7 +665,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 9,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-10",
@@ -677,7 +681,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 10,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-11",
@@ -692,7 +697,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 11,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-12",
@@ -707,7 +713,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 12,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-13",
@@ -722,7 +729,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 13,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-14",
@@ -737,7 +745,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 14,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         },
         {
           "id": "547298-4-15",
@@ -752,7 +761,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 15,
-          "zastupitelstvo": "praha-dablice"
+          "zastupitelstvo": "praha-dablice",
+          "neplatny": true
         }
       ]
     },

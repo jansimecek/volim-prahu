@@ -1146,7 +1146,8 @@
           "navrhujiciStrana": "ANO",
           "politickaPrislusnost": "",
           "poradi": 11,
-          "zastupitelstvo": "praha-16"
+          "zastupitelstvo": "praha-16",
+          "neplatny": true
         },
         {
           "id": "539601-5-12",

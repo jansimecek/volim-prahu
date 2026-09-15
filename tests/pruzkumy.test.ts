@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { MORATORIUM_DO, MORATORIUM_OD } from '../src/lib/moratorium'
-import { duvodBezPruzkumu, pruzkumyUrovne, zobrazitelnyPruzkum } from '../src/lib/pruzkumy'
+import { duvodBezPruzkumu, pruzkumyUrovne, zdrojePoznamky, zobrazitelnyPruzkum } from '../src/lib/pruzkumy'
 
 /**
  * Průzkum je jediný obsah na webu, který dokáže sám o sobě ovlivnit volbu.
@@ -16,6 +16,11 @@ describe('zveřejnitelnost průzkumů', () => {
 
   it('v zakázané lhůtě nevrátí průzkum, ani kdyby nějaký byl', () => {
     expect(zobrazitelnyPruzkum('magistrat', behemMoratoria)).toBeNull()
+  })
+
+  it('v zakázané lhůtě nevydá ani zdroje poznámky — titulky článků o průzkumech nesou výsledky', () => {
+    expect(zdrojePoznamky(behemMoratoria)).toEqual([])
+    expect(zdrojePoznamky(predVolbami).length).toBeGreaterThan(0)
   })
 
   it('v zakázané lhůtě vysvětluje důvod zákonem — ale jen když je co skrývat', () => {
