@@ -1,5 +1,5 @@
 {
-  "zkontrolovano": "2026-09-07",
+  "zkontrolovano": "2026-09-15",
   "stavy": [
     {
       "slug": "praha-1",
@@ -34,6 +34,11 @@
       "urlDesky": "https://www.praha12.cz/uredni-deska/",
       "dalsiVolebni": [
         {
+          "nazev": "Pozvánka na povinné školení pro zapisovatele, předsedy a místopředsedy  okrskových volebních komisí",
+          "url": "https://www.praha12.cz/pozvanka-na-povinne-skoleni-pro-zapisovatele-predsedy-a-mistopredsedy-okrskovych-volebnich-komisi/d-120671",
+          "vyveseno": "2026-09-09"
+        },
+        {
           "nazev": "Oznámení o svolání prvního zasedání  okrskových volebních  komisí",
           "url": "https://www.praha12.cz/oznameni-o-svolani-prvniho-zasedani-okrskovych-volebnich-komisi/d-120432",
           "vyveseno": "2026-08-27"
@@ -67,11 +72,6 @@
           "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem  SOUSEDÉ LIBUŠE A PÍSNICE - STAN, TOP 09 A NEZÁVISLÍ",
           "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-sousede-libuse-a-pisnice-stan-top-09-a-nezavisli/d-120363",
           "vyveseno": "2026-08-21"
-        },
-        {
-          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem SPOLEČNĚ PRO LIBUŠ A PÍSNICI",
-          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-spolecne-pro-libus-a-pisnici/d-120361",
-          "vyveseno": "2026-08-21"
         }
       ],
       "deskaDostupna": true
@@ -83,6 +83,11 @@
       "stav": "ceka-se",
       "urlDesky": "https://www.praha13.cz/uredni-deska/",
       "dalsiVolebni": [
+        {
+          "nazev": "svolání prvního zasedání okrskových volebních komisí",
+          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106818612",
+          "vyveseno": "2026-09-14"
+        },
         {
           "nazev": "oznámení o počtu a sídle volebních okrsků",
           "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/106257122",
@@ -116,11 +121,6 @@
         {
           "nazev": "oznámení registračního úřadu ke komunálním volbám",
           "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/105006818",
-          "vyveseno": "2026-07-09"
-        },
-        {
-          "nazev": "oznámení starosty - volební obvod, počet členů zastupitelstva, počet podpisů na peticích",
-          "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/105003395",
           "vyveseno": "2026-07-09"
         }
       ],
@@ -230,9 +230,14 @@
       "slug": "praha-17",
       "nazev": "Praha 17",
       "zdroj": "otevrena-data",
-      "stav": "ceka-se",
+      "stav": "oznameni-nalezeno",
       "urlDesky": "https://edeska.repy.cz/",
       "dalsiVolebni": [
+        {
+          "nazev": "Volba do školské rady z řad zákonných zástupců nezletilých žáků",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=49008",
+          "vyveseno": "2026-09-11"
+        },
         {
           "nazev": "Pořadí volebních stran na hlasovacím lístku pro volby do Zastupitelstva MČ Praha 17",
           "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48821",
@@ -267,13 +272,13 @@
           "nazev": "Informace o počtu a sídlech volebních okrsků",
           "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48447",
           "vyveseno": "2026-08-04"
-        },
-        {
-          "nazev": "Informace o stanovení počtu členů okrskových volebních komisí",
-          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48432",
-          "vyveseno": "2026-08-03"
         }
       ],
+      "oznameni": {
+        "nazev": "Oznámení o době a místě konání voleb",
+        "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=49021",
+        "vyveseno": "2026-09-14"
+      },
       "deskaDostupna": true
     },
     {
@@ -329,6 +334,11 @@
       "urlDesky": "https://www.pocernice.cz/uredni-deska/",
       "dalsiVolebni": [
         {
+          "nazev": "Oznámení o svolání prvního zasedání okrskových volebních komisí a termín povinného školení",
+          "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225140",
+          "vyveseno": "2026-09-09"
+        },
+        {
           "nazev": "Volby do ZMČ Praha 20 - 2026 - počet zastupitelů",
           "url": "https://www.pocernice.cz/eDeska/eDeskaDetail.jsp?detailId=225064",
           "vyveseno": "2026-07-16"
@@ -353,6 +363,16 @@
       "stav": "ceka-se",
       "urlDesky": "https://www.praha3.cz/eDeska/eDeskaAktualni.jsp",
       "dalsiVolebni": [
+        {
+          "nazev": "rozhodnutí + opatření - volební akce - Biskupcova, nám.J. z Pod., Hartigova, Chelčického",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99245",
+          "vyveseno": "2026-09-11"
+        },
+        {
+          "nazev": "Pozvánka na 1. zasedání okrskové volební komise a jmenný seznam členů OVK",
+          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99239",
+          "vyveseno": "2026-09-10"
+        },
         {
           "nazev": "Rozhodnutí + opatření - volební prezentace - nám. Barikád",
           "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99214",
@@ -424,13 +444,13 @@
           "vyveseno": "2026-07-24"
         },
         {
-          "nazev": "Volby 2026 - počty podpisů na peticích",
-          "url": "https://www.praha9.cz/volby-2026-pocty-podpisu-na-peticich",
+          "nazev": "VOLBY 2026 - oznámení, zveřejnění informací o podání kandidátních listin",
+          "url": "https://www.praha9.cz/volby-2026-oznameni-zverejneni-informaci-o-podani-kandidatnich-listin",
           "vyveseno": "2026-06-19"
         },
         {
-          "nazev": "VOLBY 2026 - oznámení, zveřejnění informací o podání kandidátních listin",
-          "url": "https://www.praha9.cz/volby-2026-oznameni-zverejneni-informaci-o-podani-kandidatnich-listin",
+          "nazev": "Volby 2026 - počty podpisů na peticích",
+          "url": "https://www.praha9.cz/volby-2026-pocty-podpisu-na-peticich",
           "vyveseno": "2026-06-19"
         },
         {
@@ -794,8 +814,7 @@
       "stav": "bez-otevrenych-dat",
       "urlDesky": "https://praha-ujezd.cz/uredni-deska/",
       "dalsiVolebni": [],
-      "poznamka": "Server neodpověděl včas.",
-      "deskaDostupna": false
+      "deskaDostupna": true
     },
     {
       "slug": "praha-velka-chuchle",
@@ -804,6 +823,11 @@
       "stav": "ceka-se",
       "urlDesky": "https://housing.espis.mepnet.cz/eDeskaChuchle/",
       "dalsiVolebni": [
+        {
+          "nazev": "Oznámení starosty - volební kampaň",
+          "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33613",
+          "vyveseno": "2026-09-10"
+        },
         {
           "nazev": "VOLBY DO ZASTUPITELSTEV OBCÍ",
           "url": "http://housing.espis.mepnet.cz/eDeskaChuchle/eDeskaDetail.jsp?detailId=33413",
