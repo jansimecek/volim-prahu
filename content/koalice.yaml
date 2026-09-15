@@ -11,9 +11,14 @@
 # a u každého takového převodu je poznámka.
 #
 # Vědomě tu chybí SEN pro Prahu a JSME PRAHA: jejich stanoviska uvádí jen
-# iROZHLAS z 31. 8. 2026, jehož text se nepodařilo otevřít a ověřit.
+# iROZHLAS z 31. 8. 2026, jehož text se nepodařilo otevřít a ověřit, a
+# v písemné anketě ČTK z 12. 9. 2026 (lídři stran ze stávajícího
+# zastupitelstva a Motoristé) nejsou.
+#
+# Odpovědi z ankety ČTK jsou písemné odpovědi lídrů otištěné pod jejich jménem,
+# proto jsou zapsané jako citace.
 
-overeno: 2026-09-14
+overeno: 2026-09-15
 
 zdroje:
   - id: pirati-strategie
@@ -51,6 +56,11 @@ zdroje:
     nazev: "Praha byty stavět nemá, vedou ji aktivisté, říká Urban z SPD. Překvapil, s kým by vládl"
     datum: 2026-09-05
     url: "https://cnn.iprima.cz/praha-byty-stavet-nema-vladnou-ji-aktiviste-rika-urban-prekvapil-s-kym-by-vladl-520871"
+  - id: pp-anketa-ctk-12-9
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Anketa: Co chtějí po volbách řešit pražští lídři? S kým by šli do koalice a s kým ne?"
+    datum: 2026-09-12
+    url: "https://www.prazskypatriot.cz/anketa-co-chteji-po-volbach-resit-prazsti-lidri-s-kym-by-sli-do-koalice-a-s-kym-ne/"
   - id: pd-uhrineves-13-9
     medium: "Pražský deník (ČTK)"
     nazev: "Kampaň ANO v hlavním městě startuje v Uhříněvsi. Program mířil na dopravu"
@@ -61,11 +71,21 @@ zdroje:
     nazev: "Kupka ani Rakušan zcela nevyloučili povolební spolupráci s ANO v Praze"
     datum: 2026-09-13
     url: "https://www.ceskenoviny.cz/zpravy/kupka-ani-rakusan-zcela-nevyloucili-povolebni-spolupraci-s-ano-v-praze/2873865"
+  - id: cnn-partie-13-9
+    medium: "CNN Prima NEWS"
+    nazev: "Havlíček: V Praze řádí Piráti, je to katastrofa. Za vás padaly mosty a lávky, odsekl Hřib"
+    datum: 2026-09-13
+    url: "https://cnn.iprima.cz/havlicek-v-praze-radi-pirati-je-to-katastrofa-za-vas-padaly-mosty-a-lavky-odsekl-hrib-521663"
   - id: aktualne-rakusan-13-9
     medium: "Aktuálně.cz"
     nazev: "Rakušan nevyloučil spolupráci s ANO. V Praze preferuje koalici Spolu"
     datum: 2026-09-13
     url: "https://zpravy.aktualne.cz/domaci/rakusan-nevyloucil-spolupraci-s-ano-v-praze-preferuje-koalici-spolu/r~aaa295a2b8eb72c748d3008c5a0d3117/"
+  - id: echo-portlik-14-9
+    medium: "Echo24"
+    nazev: "Cenu MHD bych vrátil do roku 2015, Piráty na dopravě už si neumím představit, říká Portlík"
+    datum: 2026-09-14
+    url: "https://www.echo24.cz/a/HqEXb/rozhovor-domaci-komunalni-volby-tomas-portlik-ods-spolu-pro-prahu-piraty-na-doprave-si-neumim-predstavit"
 
 deklarace:
   - id: pirati-povolebni-strategie
@@ -90,6 +110,29 @@ deklarace:
       proto je vyloučení zapsané u ní. Strategie počítá i s tolerancí menšinové
       rady a v opozici s požadavkem na předsednictví kontrolního výboru.
     zdroje: [pirati-strategie, pd-pirati-12-8]
+
+  - id: pirati-nislerova-anketa
+    subjekt: ceska-piratska-strana
+    kdo: Tereza Nislerová, lídryně kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    vylucuje: [ano-2011, motoriste-sobe]
+    pripousti: [starostove-a-nezavisli, praha-sobe, spolu-pro-prahu]
+    doklad: citace
+    citace: >-
+      Piráti v povolební strategii vyloučili spolupráci s extremisty,
+      motoristy, jakýmkoliv typem šmelinářů a také s hnutím ANO […]. Jako
+      ideální povolební uspořádání si představuji koalici Pirátů se STAN
+      a Prahou Sobě, jako méně ideální s ODS.
+    shrnuti: >-
+      V písemné anketě ČTK zopakovala vyloučení ANO a Motoristů z povolební
+      strategie. Za ideální označila koalici Pirátů se STAN a Prahou sobě,
+      koalici s ODS za méně ideální.
+    poznamka: >-
+      Extremisty odpověď nejmenuje; povolební strategie z 10. 8. jmenuje KSČM,
+      SPD a Motoristy. ODS kandiduje na magistrát v koalici SPOLU pro Prahu
+      s TOP 09.
+    zdroje: [pp-anketa-ctk-12-9]
 
   - id: praha-sobe-scheinherr-cerven
     subjekt: praha-sobe
@@ -124,6 +167,25 @@ deklarace:
     poznamka: Že se vyloučení týká i ANO, uvádí k citaci výslovně ČTK.
     zdroje: [pd-scheinherr-30-8]
 
+  - id: praha-sobe-scheinherr-anketa
+    subjekt: praha-sobe
+    kdo: Adam Scheinherr, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    vylucuje: [spd-pro-prahu, motoriste-sobe, ano-2011]
+    pripousti: [ceska-piratska-strana, starostove-a-nezavisli, spolu-pro-prahu]
+    doklad: citace
+    citace: >-
+      Jako primátor bych rád vedl koalici Prahy Sobě, Pirátů a STAN. Nebráním
+      se ani spolupráci se Spolu. Určitě ale v žádném případě nebudeme
+      spolupracovat s extremisty z SPD a Motoristů. Odmítáme i spolupráci
+      s hnutím ANO, které tyto extremisty přivedlo do celostátní vlády.
+    shrnuti: >-
+      V písemné anketě ČTK uvedl, že by jako primátor rád vedl koalici Prahy
+      sobě, Pirátů a STAN, a nebrání se ani spolupráci se SPOLU. Vyloučil
+      spolupráci s SPD, Motoristy a ANO.
+    zdroje: [pp-anketa-ctk-12-9]
+
   - id: motoriste-sovova-praha-sobe
     subjekt: motoriste-sobe
     kdo: Klára Sovová, lídryně kandidátky
@@ -147,6 +209,20 @@ deklarace:
     shrnuti: V téže debatě podle ČTK uvedla, že pro Motoristy jsou nepřijatelným partnerem Piráti.
     zdroje: [pd-scheinherr-30-8]
 
+  - id: motoriste-sovova-anketa
+    subjekt: motoriste-sobe
+    kdo: Klára Sovová, lídryně kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    vylucuje: [ceska-piratska-strana, praha-sobe]
+    doklad: citace
+    citace: Už nyní ale vylučujeme spolupráci s Piráty a Prahou Sobě.
+    shrnuti: >-
+      V písemné anketě ČTK vyloučila spolupráci s Piráty a Prahou sobě.
+      Koalice se podle ní sestavují až po volbách.
+    poznamka: Vyloučení Pirátů dosud dokládala jen parafráze ČTK z 30. 8.
+    zdroje: [pp-anketa-ctk-12-9]
+
   - id: spd-urban
     subjekt: spd-pro-prahu
     kdo: Milan Urban, lídr kandidátky
@@ -167,6 +243,25 @@ deklarace:
       vládní koalice, odpověděl „Vycházelo by to logicky.“ a pokračoval
       citovanou větou.
     zdroje: [cnn-urban-5-9]
+
+  - id: spd-urban-anketa
+    subjekt: spd-pro-prahu
+    kdo: Milan Urban, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    doklad: citace
+    citace: >-
+      My jsme ochotni spolupracovat se všemi ochotnými politiky, co jsou tady
+      pro Pražany, ne proti Pražanům. Vyložení škůdci Prahy jsou však Piráti
+      a Praha Sobě.
+    shrnuti: >-
+      V písemné anketě ČTK uvedl, že SPD je ochotna spolupracovat se všemi
+      politiky, kteří jsou tu pro Pražany. Piráty a Prahu sobě označil za
+      škůdce Prahy a STAN podle něj potřebuje větší sebereflexi.
+    poznamka: >-
+      V anketě koalici s nikým výslovně nevylučuje. Koalici s Piráty a Prahou
+      sobě výslovně vyloučil 5. 9. v rozhovoru pro CNN Prima News.
+    zdroje: [pp-anketa-ctk-12-9]
 
   - id: ano-husbauer-pirati
     subjekt: ano-2011
@@ -197,6 +292,27 @@ deklarace:
     poznamka: Upřesnění „(se Spolu)“ doplnila do citace ČTK.
     zdroje: [ctk-portlik-23-8]
 
+  - id: ano-husbauer-anketa
+    subjekt: ano-2011
+    kdo: Jan Hušbauer, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    pripousti: [spolu-pro-prahu]
+    doklad: citace
+    citace: >-
+      Spolupráci s ODS či koalicí Spolu si za určitých programových
+      a personálních podmínek představit umím. Piráti jsou pro nás velmi
+      nepravděpodobným partnerem a jasně říkám, že v radě se Zdeňkem Hřibem
+      sedět nechci.
+    shrnuti: >-
+      V písemné anketě ČTK uvedl, že si za určitých programových a personálních
+      podmínek umí představit spolupráci s ODS či koalicí SPOLU. Piráty označil
+      za velmi nepravděpodobného partnera a v radě se Zdeňkem Hřibem sedět nechce.
+    poznamka: >-
+      Koalici s Piráty odmítl už 12. 8.; v anketě ji výslovně nevylučuje.
+      Zdeněk Hřib kandiduje na pirátské kandidátce na desátém místě.
+    zdroje: [pp-anketa-ctk-12-9]
+
   - id: ano-havlicek
     subjekt: ano-2011
     kdo: Karel Havlíček, místopředseda ANO
@@ -204,12 +320,20 @@ deklarace:
     datum: 2026-09-13
     vylucuje: [ceska-piratska-strana]
     pripousti: [spolu-pro-prahu, starostove-a-nezavisli]
-    doklad: parafraze
+    doklad: citace
+    citace: >-
+      Chceme v Praze uspět, abychom měli primátora a dostali konečně Piráty
+      mimo dosah působnosti. Posledních osm let bylo tristních. Koalici sice
+      vede ODS, ale fakticky v Praze řádí Piráti. My s nimi vládnout rozhodně
+      nebudeme
     shrnuti: >-
-      V Partii CNN Prima News podle ČTK nevyloučil v Praze spolupráci s ODS ani
-      se STAN; koalice s Piráty podle něj nepřipadá v úvahu.
-    poznamka: ODS kandiduje na magistrát v koalici SPOLU pro Prahu s TOP 09.
-    zdroje: [pd-uhrineves-13-9, ctk-partie-13-9]
+      V Partii CNN Prima News vyloučil vládnutí s Piráty. Spolupráci s ODS ani
+      se STAN v Praze podle ČTK i CNN Prima News nevyloučil.
+    poznamka: >-
+      Že koalici s ODS a STAN nevyloučil, píší ČTK i CNN Prima News vlastními
+      slovy; doslovnou větu k tomu nemáme. ODS kandiduje na magistrát
+      v koalici SPOLU pro Prahu s TOP 09.
+    zdroje: [cnn-partie-13-9, ctk-partie-13-9, pd-uhrineves-13-9]
 
   - id: spolu-portlik
     subjekt: spolu-pro-prahu
@@ -224,6 +348,36 @@ deklarace:
       podle svých slov připraven v koalici nebýt.
     zdroje: [ctk-portlik-23-8]
 
+  - id: spolu-portlik-anketa
+    subjekt: spolu-pro-prahu
+    kdo: Tomáš Portlík, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    doklad: citace
+    citace: >-
+      Nechci dopředu žádnou stranu vylučovat nebo naopak utvářet koalice ještě
+      před tím, než rozhodnou voliči.
+    shrnuti: >-
+      V písemné anketě ČTK uvedl, že dopředu nechce žádnou stranu vylučovat
+      ani utvářet koalice, dokud nerozhodnou voliči. Do vedení města si chce
+      vybrat schopné a zkušené lidi bez ohledu na stranické průkazky.
+    zdroje: [pp-anketa-ctk-12-9]
+
+  - id: spolu-portlik-echo24
+    subjekt: spolu-pro-prahu
+    kdo: Tomáš Portlík, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-14
+    doklad: citace
+    citace: >-
+      Záměrně nevylučuji nic, protože jsem zažil už hodně volebních výsledků,
+      kdy se deklarací jednoho politického scénáře uměle vytvořil scénář jiný.
+    shrnuti: >-
+      V rozhovoru pro Echo24 na otázku po koalici s Piráty řekl, že záměrně
+      nevylučuje nic. Dopravu by jim ale svěřit nechtěl a koalici opřenou
+      o ultimáta partnerů podle svých slov vést nebude.
+    zdroje: [echo-portlik-14-9]
+
   - id: ods-kupka
     subjekt: spolu-pro-prahu
     kdo: Martin Kupka, předseda ODS
@@ -231,16 +385,37 @@ deklarace:
     datum: 2026-09-13
     vylucuje: [spojena-levice-pro-prahu]
     pripousti: [starostove-a-nezavisli]
-    doklad: parafraze
+    doklad: citace
+    citace: >-
+      Ta pomyslná červená linie je pro nás opravdu červená, čili vylučujeme
+      komunisty. Pokud jde o ostatní strany, důležitý bude hlavně program.
     shrnuti: >-
-      V Partii CNN Prima News podle ČTK vyloučil spolupráci s komunisty
-      a preferoval by spolupráci se STAN. Pražskou koalici s ANO podle agentury
-      zakázat nemůže, ODS se jako demokratická strana musí rozhodovat
-      demokraticky.
+      V Partii CNN Prima News vyloučil spolupráci s komunisty; u ostatních stran
+      bude podle něj rozhodovat program. Podle ČTK by preferoval spolupráci se
+      STAN a pražskou koalici s ANO zakázat nemůže.
     poznamka: >-
       Mluvil za ODS, která kandiduje na magistrát v koalici SPOLU s TOP 09.
       Komunisté (KSČM a KSČ) kandidují na listině Spojená levice pro Prahu.
-    zdroje: [ctk-partie-13-9]
+    zdroje: [cnn-partie-13-9, ctk-partie-13-9]
+
+  - id: stan-hlavacek-anketa
+    subjekt: starostove-a-nezavisli
+    kdo: Petr Hlaváček, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-12
+    doklad: citace
+    citace: >-
+      Chceme pokračovat s partnery, kteří mají stejné priority. Budeme rádi
+      pokračovat i ve stávající koalici a podle podpory, kterou od voličů
+      dostaneme, bychom v ní rádi hráli i větší roli.
+    shrnuti: >-
+      V písemné anketě ČTK uvedl, že STAN chce pokračovat s partnery se
+      stejnými prioritami, rád i ve stávající koalici. Výsledek, ve kterém by
+      v Praze vyhrálo ANO, označil za neuspokojivý.
+    poznamka: >-
+      Stávající koalici na magistrátu tvoří SPOLU, Piráti a STAN; strany
+      v odpovědi nejmenuje a nikoho výslovně nevylučuje.
+    zdroje: [pp-anketa-ctk-12-9]
 
   - id: stan-rakusan
     subjekt: starostove-a-nezavisli

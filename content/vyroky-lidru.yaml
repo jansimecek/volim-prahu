@@ -10,6 +10,8 @@
 # převzetí v Pražském deníku, které přineslo tytéž citace.
 # Výroky ze zdrojů `cnn-husbauer` a `ctk-uhrineves` přibyly 14. 9. 2026,
 # ověřené proti textu zdroje.
+# Výroky ze zdrojů `echo-portlik`, `f24-hlavacek`, `pd-summit` a
+# `ctk-pirati-kampan` přibyly 15. 9. 2026, ověřené v surovém textu zdroje.
 overeno: 2026-08-27
 
 zdroje:
@@ -115,6 +117,30 @@ zdroje:
     datum: 2026-09-13
     typ: redakcni
     url: "https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/"
+  - id: ctk-pirati-kampan
+    medium: "České noviny (ČTK)"
+    nazev: "Piráti jdou do závěru kampaně s heslem Volím bydlení, ať to tu žije!"
+    datum: 2026-09-09
+    typ: redakcni
+    url: "https://www.ceskenoviny.cz/zpravy/pirati-jdou-do-zaveru-kampane-s-heslem-volim-bydleni-at-to-tu-zije/2872175"
+  - id: pd-summit
+    medium: "Pražský deník"
+    nazev: "Kandidáti na primátora chtějí rozhýbat výstavbu. Praha má investovat miliardy"
+    datum: 2026-09-12
+    typ: redakcni
+    url: "https://prazsky.denik.cz/komunalni-volby/kandidati-na-primatora-chteji-rozhybat-vystavbu-praha-ma-investovat-miliardy/"
+  - id: echo-portlik
+    medium: "Echo24"
+    nazev: "Cenu MHD bych vrátil do roku 2015, Piráty na dopravě už si neumím představit, říká Portlík"
+    datum: 2026-09-14
+    typ: redakcni
+    url: "https://www.echo24.cz/a/HqEXb/rozhovor-domaci-komunalni-volby-tomas-portlik-ods-spolu-pro-prahu-piraty-na-doprave-si-neumim-predstavit"
+  - id: f24-hlavacek
+    medium: "FORUM 24"
+    nazev: "Kandidát na primátora Hlaváček: Chci, aby Praha měla Vltavskou filharmonii"
+    datum: 2026-09-15
+    typ: redakcni
+    url: "https://www.forum24.cz/kandidat-na-primatora-hlavacek-chci-aby-praha-mela-vltavskou-filharmonii"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -175,6 +201,11 @@ osoby:
         citace: "Pro mě je největší priorita, aby se Praha rozvíjela, aby se do ní investovalo - do všech oblastí, ve kterých je to potřeba, ať je to doprava, bezpečnost, bydlení, školství nebo sport"
         kontext: "Na zahájení pražské kampaně ANO v Uhříněvsi pro ČTK."
         zdroj: ctk-uhrineves
+      - tema: "Rozpočet a investice"
+        citace: "Tempo za poslední čtyři roky nijak nevidím. Praha má téměř 200 miliard korun. To jsou peníze, které nejsou investované a neslouží lidem k bydlení"
+        kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje kritizoval dosavadní tempo investic města."
+        zdroj: pd-summit
+        poznamka: "Výše prostředků na účtech města je tvrzení kandidáta."
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana
@@ -206,6 +237,14 @@ osoby:
         pokracovani: " než se opravdu ty nové městské byty dostanou na trh."
         kontext: "V rozhovoru hodnotí osm let pirátského působení na magistrátu v oblasti městské bytové výstavby."
         zdroj: radio-praha
+      - tema: "Bydlení"
+        citace: "Budu primátorka pro bydlení. Budeme stavět více a rychleji, využijeme městské pozemky a rozjedeme v Praze nové investice do dostupného bydlení"
+        kontext: "Na startu závěrečné fáze pirátské kampaně 9. září pro ČTK, při představení svého akčního plánu pro bydlení."
+        zdroj: ctk-pirati-kampan
+      - tema: "Bydlení a územní rozvoj"
+        citace: "Stavět chceme tam, kde vedou koleje"
+        kontext: "V debatě kandidátů na Summitu dostupného bydlení a stavebního rozvoje shrnula princip pirátského plánu tří nových čtvrtí navázaných na prodloužení linek metra."
+        zdroj: pd-summit
   - osobaSlug: komrskova-jana
     jmeno: "Jana Komrsková"
     subjekt: jsme-praha
@@ -223,6 +262,10 @@ osoby:
         citace: "Chceme více svobody pro lidi a rušit cyklopruhy."
         kontext: "Při představení jako lídryně pražské kandidátky Motoristů shrnula, co chce hnutí v pražské dopravě prosazovat. Obsah nezávisle potvrzují Echo24, CNN Prima News, ČTK i Deník N k témuž datu."
         zdroj: info-motor
+      - tema: "Doprava"
+        citace: "Chceme změnu v dopravě a méně ideologie na našich silnicích. K tomu chceme dostavbu městského okruhu"
+        kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje."
+        zdroj: pd-summit
   - osobaSlug: scheinherr-adam
     jmeno: "Adam Scheinherr"
     subjekt: praha-sobe
@@ -316,6 +359,18 @@ osoby:
         citace: "Rozhodně bych radního pro dopravu nenechal Zdeňku Hřibovi"
         kontext: "V téže debatě odpovídal na otázku o rozdělení gescí v případné povolební koalici."
         zdroj: ctk-koalice
+      - tema: "Doprava a MHD"
+        citace: "Na začátku bych se vrátil do roku 2015, neboť ironií osudu máme teď levnější dopravu, než jsme měli před 20 lety. Tedy těch 4750 korun."
+        kontext: "V rozhovoru pro Echo24 odpovídal na otázku, o kolik by se mohlo zdražit jízdné; podle perexu redakce jde o cenu celoročního kuponu."
+        zdroj: echo-portlik
+      - tema: "Povolební spolupráce"
+        citace: "Záměrně nevylučuji nic, protože jsem zažil už hodně volebních výsledků, kdy se deklarací jednoho politického scénáře uměle vytvořil scénář jiný."
+        kontext: "V rozhovoru pro Echo24 na otázku, jestli je vyloučené, že by znovu šel do koalice s Piráty."
+        zdroj: echo-portlik
+      - tema: "Bydlení a investice"
+        citace: "Máme potenciál a chceme předběhnout západní města. Musíme ale nastartovat výstavbu a dát Pražanům to, co jim dlužíme"
+        kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje."
+        zdroj: pd-summit
   - osobaSlug: hlavacek-petr
     jmeno: "Petr Hlaváček"
     subjekt: starostove-a-nezavisli
@@ -342,6 +397,15 @@ osoby:
         pokracovani: " že zpracováváme podrobnější dokumentaci"
         kontext: "Popisoval, jak město získává pro výstavbu městské části a veřejnost."
         zdroj: rz-hlavacek
+      - tema: "Povolební spolupráce"
+        citace: "Hlavní město nejvíc potřebuje co nejrychleji hledat dohody v koalici v Zastupitelstvu a následně s městskými částmi."
+        pokracovani: " To je strašně pracný, nervy drásající proces."
+        kontext: "V rozhovoru pro FORUM 24 odpovídal na otázku, co Praha momentálně nejvíc potřebuje."
+        zdroj: f24-hlavacek
+      - tema: "Doprava a parkování"
+        citace: "Je potřeba najít rozumné řešení, i za cenu zvýšení ceny parkování, ale větší péče o veřejný prostor, např. výsadbu stromů."
+        kontext: "V rozhovoru pro FORUM 24 odpovídal na otázku, jak by se v Praze mělo parkovat."
+        zdroj: f24-hlavacek
   - osobaSlug: dubsky-jiri
     jmeno: "Jiří Dubský"
     subjekt: ano-lepsi-cesko-s-mimozemstany

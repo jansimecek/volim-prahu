@@ -8,10 +8,14 @@
 # Slug v `subjekt` musí odpovídat souboru v content/strany/. Kontroluje to
 # `pnpm validate`, aby překlep neshodil řazení až u čtenáře.
 
-overeno: 2026-09-08
+overeno: 2026-09-15
 
 # Zobrazuje se čtenáři pod výpisem subjektů, takže platí stejné pravidlo jako
 # jinde: co tvrdí, musí jít ověřit. Schéma proto vyžaduje zdroje.
+#
+# Texty odkazů jsou schválně bez výsledků. Titulky článků o průzkumech bývají
+# samy výsledkem („vede ANO těsně před STAN“) a odkaz na průzkum, který naše
+# podmínky nesplňuje, nemá jeho čísla nést ani mimo zakázanou lhůtu.
 poznamka:
   text: >-
     Řadit podle průzkumu jde od 8. září 2026 podle jediného průzkumu, který
@@ -21,26 +25,32 @@ poznamka:
     velikost a typ vzorku, metoda a zadavatel — bez toho je číslo
     neověřitelné. Starší průzkum Phoenix Research (zveřejněný 4. května 2026)
     tyhle údaje publikované nemá, a proto v řazení není; posuďte ho sami
-    z odkazu níže. Jeden průzkum s 731 dotázanými je pořád jen jeden
-    průzkum: rozdíl mezi prvními dvěma subjekty je menší než jeho statistická
-    chyba a pětina dotázaných ještě nevěděla, koho volit. Pozor na dvě záměny,
-    na které se tu dá snadno naletět. První je záměna voleb: agentura NMS
-    zveřejnila pod názvem „Volební model Praha“ model voleb do Poslanecké
-    sněmovny měřený mezi Pražany, ne průzkum do zastupitelstva — o tom, kdo
-    povede město, neříká nic. Totéž platí o celostátních modelech agentur
-    z roku 2026. Druhá je záměna ročníků: vyhledávače vracejí pražské průzkumy
-    z roku 2022, jako by byly aktuální. A ještě jedna věc: volební potenciál
-    není volební model. Potenciál říká, kolik lidí stranu aspoň zvažuje,
-    takže součet za všechny strany výrazně přesahuje sto procent a strana
-    s velkým potenciálem může skončit malá. Kandidátky bychom podle
-    potenciálu nikdy neřadili.
+    z odkazu níže. Totéž platí o dvou dalších zářijových průzkumech:
+    u průzkumu agentury Ipsos pro kandidující koalici SPOLU, o kterém 8. září
+    informovala ČTK, chybí přesný termín sběru dat, typ vzorku i metoda;
+    u průzkumu Phoenix Research, který 10. září zveřejnily Krajské listy,
+    velikost vzorku, metoda i zadavatel. Jeden průzkum s 731 dotázanými je
+    pořád jen jeden průzkum: rozdíl mezi prvními dvěma subjekty je menší než
+    jeho statistická chyba a pětina dotázaných ještě nevěděla, koho volit.
+    Pozor na dvě záměny, na které se tu dá snadno naletět. První je záměna
+    voleb: agentura NMS zveřejnila pod názvem „Volební model Praha“ model
+    voleb do Poslanecké sněmovny měřený mezi Pražany, ne průzkum do
+    zastupitelstva — o tom, kdo povede město, neříká nic. Totéž platí
+    o celostátních modelech agentur z roku 2026. Druhá je záměna ročníků:
+    vyhledávače vracejí pražské průzkumy z roku 2022, jako by byly aktuální.
+    A ještě jedna věc: volební potenciál není volební model. Potenciál říká,
+    kolik lidí stranu aspoň zvažuje, takže součet za všechny strany výrazně
+    přesahuje sto procent a strana s velkým potenciálem může skončit malá.
+    Kandidátky bychom podle potenciálu nikdy neřadili.
   zdroje:
-    - text: >-
-        EXKLUZIVNÍ PRŮZKUM: V Praze měsíc před volbami vede ANO těsně před
-        STAN (Median pro PrahaIN.cz, 7. 9. 2026)
+    - text: Průzkum agentury Median pro PrahaIN.cz (PrahaIN.cz, 7. 9. 2026)
       url: https://www.prahain.cz/politika/exkluzivni-pruzkum-v-praze-mesic-pred-volbami-vede-ano-tesne-pred-stan-28574.html
     - text: Průzkum z Prahy (Phoenix Research), ParlamentníListy.cz, 4. 5. 2026
       url: https://www.parlamentnilisty.cz/arena/monitor/Pruzkum-z-Prahy-Velky-navrat-STAN-i-prekvapeni-z-Prisahy-790823
+    - text: Průzkum agentury Ipsos pro SPOLU, zpráva ČTK (FORUM 24, 8. 9. 2026)
+      url: https://www.forum24.cz/ipsos-volby-v-praze-by-vyhralo-spolu-pred-hnutim-stan-a-ano
+    - text: Zářijový průzkum agentury Phoenix Research (Krajské listy, 10. 9. 2026)
+      url: https://www.krajskelisty.cz/praha/35663-pruzkum-pred-prazskymi-volbami-spolu-prvni-stan-druhy-spd-i-motoriste-maji-sanci.htm
     - text: >-
         Volební model Praha (NMS Market Research pro Novinky.cz, sběr
         5.–10. 9. 2025, 1006 respondentů) — sněmovní model mezi Pražany,

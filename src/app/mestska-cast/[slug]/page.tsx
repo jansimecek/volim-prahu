@@ -36,7 +36,9 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   const senat = senatniStavMestskeCasti(slug)
   const deska = stavMestskeCasti(slug)
   const listina = kandidatka(slug)
-  const kandidatuCelkem = listina?.strany.reduce((n, s) => n + s.kandidati.length, 0) ?? 0
+  // Neplatné kandidatury podle registru ČSÚ se do počtu nepočítají.
+  const kandidatuCelkem =
+    listina?.strany.reduce((n, s) => n + s.kandidati.filter((k) => !k.neplatny).length, 0) ?? 0
 
   return (
     <div className="space-y-10">
@@ -200,11 +202,18 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
                               : 'číslo zatím nevylosováno'}{' '}
                             ·{' '}
                             {sPoctem(
-                              strana.kandidati.length,
+                              strana.kandidati.filter((k) => !k.neplatny).length,
                               'kandidát',
                               'kandidáti',
                               'kandidátů',
                             )}
+                            {strana.kandidati.some((k) => k.neplatny) &&
+                              ` · ${sPoctem(
+                                strana.kandidati.filter((k) => k.neplatny).length,
+                                'neplatná kandidatura',
+                                'neplatné kandidatury',
+                                'neplatných kandidatur',
+                              )}`}
                           </p>
                         </div>
                         {jednicka && (

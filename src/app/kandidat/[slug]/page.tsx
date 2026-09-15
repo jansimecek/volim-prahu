@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
 import { Rozhovory } from '@/components/Rozhovory'
 import { VyrokyOsoby } from '@/components/VyrokyOsoby'
 import { rozhovoryOsoby } from '@/lib/rozhovory'
-import { celeJmeno, kandidaturyOsoby } from '@/lib/kandidatky'
+import { POPIS_NEPLATNE_KANDIDATURY, celeJmeno, kandidaturyOsoby } from '@/lib/kandidatky'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -39,6 +39,8 @@ export default async function StrankaKandidata({ params }: Parametry) {
   const osoba = kandidatury[0]!.kandidat
   // Kandidát může kandidovat na víc úrovních; drobečky vedou přes tu první.
   const prvniZastupitelstvo = kandidatury[0]!.zastupitelstvo
+  // Popis pro vyhledávače nesmí tvrdit, že člověk kandiduje, když ČSÚ vede kandidaturu jako neplatnou.
+  const platne = kandidatury.filter((k) => !k.kandidat.neplatny)
 
   return (
     <div className="space-y-10">
@@ -48,9 +50,12 @@ export default async function StrankaKandidata({ params }: Parametry) {
           name: celeJmeno(osoba),
           url: absolutni(`/kandidat/${slug}`),
           ...(osoba.povolani ? { jobTitle: osoba.povolani } : {}),
-          description: `Kandiduje v pražských komunálních volbách 2026: ${kandidatury
-            .map((k) => `${k.strana.nazev} (${k.zastupitelstvo.nazev}, ${k.kandidat.poradi}. místo)`)
-            .join('; ')}. Zdroj: otevřená data ČSÚ.`,
+          description:
+            platne.length > 0
+              ? `Kandiduje v pražských komunálních volbách 2026: ${platne
+                  .map((k) => `${k.strana.nazev} (${k.zastupitelstvo.nazev}, ${k.kandidat.poradi}. místo)`)
+                  .join('; ')}. Zdroj: otevřená data ČSÚ.`
+              : 'Kandidaturu v pražských komunálních volbách 2026 vede ČSÚ v registru kandidátů jako neplatnou. Zdroj: otevřená data ČSÚ.',
         }}
       />
       <header>
@@ -104,6 +109,12 @@ export default async function StrankaKandidata({ params }: Parametry) {
                 navrhující strana {kandidat.navrhujiciStrana || 'neuvedeno'} · politická
                 příslušnost {kandidat.politickaPrislusnost || 'neuvedeno'}
               </p>
+              {kandidat.neplatny && (
+                <p className="mt-2 max-w-prose text-sm">
+                  <span className="popisek-uredni text-okr">Kandidatura neplatná</span> —{' '}
+                  {POPIS_NEPLATNE_KANDIDATURY}
+                </p>
+              )}
             </li>
           ))}
         </ul>

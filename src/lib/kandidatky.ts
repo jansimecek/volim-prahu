@@ -15,6 +15,11 @@ export type Kandidat = {
   politickaPrislusnost: string
   poradi: number
   zastupitelstvo: string
+  /**
+   * ČSÚ vede kandidaturu v registru jako neplatnou (PLATNOST=N). Zapisuje se
+   * jen u takových kandidátů, aby diff dat nešuměl u tisíců platných.
+   */
+  neplatny?: true
 }
 
 export type StranaNaKandidatce = {
@@ -42,6 +47,17 @@ export function jeSkrtnutyKandidat(prijmeni: string, jmeno: string): boolean {
   return text.includes('škrtnut') || text.includes('ponechal pozici volnou')
 }
 
+/**
+ * Vysvětlení neplatné kandidatury. Jedno znění pro kandidátní listinu i profil
+ * kandidáta, ať neříkají každé něco jiného.
+ *
+ * Registr uvádí jen stav („neplatný, odvolaný“), ne důvod. Podle přehledu
+ * lhůt ministerstva vnitra se do něj promítá vzdání se kandidatury i odvolání
+ * kandidáta — který případ nastal, z dat nepoznáme, a proto ho nepíšeme.
+ */
+export const POPIS_NEPLATNE_KANDIDATURY =
+  'Český statistický úřad ji v registru kandidátů vede jako neplatnou. Tak se do registru promítá vzdání se kandidatury nebo odvolání kandidáta volební stranou; který z důvodů nastal, registr neuvádí.'
+
 export type Kandidatka = {
   zastupitelstvo: { kod: string; nazev: string; slug: string; mandaty: number }
   sada: string
@@ -68,9 +84,18 @@ export function stranaPodleKodu(
   return kandidatka(slugZastupitelstva)?.strany.find((s) => s.kodStrany === kodStrany)
 }
 
-/** Jednička kandidátky. Autoritativní zdroj je ČSÚ, ne redakční text. */
+/** Kandidáti, jejichž kandidatura podle registru ČSÚ platí. */
+export function platniKandidati(strana: StranaNaKandidatce | undefined): Kandidat[] {
+  return strana?.kandidati.filter((k) => !k.neplatny) ?? []
+}
+
+/**
+ * Jednička kandidátky. Autoritativní zdroj je ČSÚ, ne redakční text.
+ * Kandidát s neplatnou kandidaturou kandidátku nevede, i kdyby byl na listině první.
+ */
 export function lidr(strana: StranaNaKandidatce | undefined): Kandidat | undefined {
-  return strana?.kandidati.find((k) => k.poradi === 1) ?? strana?.kandidati[0]
+  const platni = platniKandidati(strana)
+  return platni.find((k) => k.poradi === 1) ?? platni[0]
 }
 
 export function celeJmeno(k: Kandidat): string {

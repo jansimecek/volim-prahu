@@ -6,7 +6,7 @@
     "mandaty": 45
   },
   "sada": "kv2026",
-  "stazeno": "2026-09-08",
+  "stazeno": "2026-09-15",
   "strany": [
     {
       "cislo": 1,
@@ -378,7 +378,8 @@
           "navrhujiciStrana": "STAN",
           "politickaPrislusnost": "",
           "poradi": 24,
-          "zastupitelstvo": "praha-6"
+          "zastupitelstvo": "praha-6",
+          "neplatny": true
         },
         {
           "id": "500178-1-25",

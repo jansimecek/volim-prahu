@@ -24,9 +24,10 @@ export default async function StrankaKoalic() {
     slug: s.slug,
     zkratka: s.zkratka,
     // Počítají se jen kandidáti na hlasovacím lístku — škrtnutý kandidát mandát dostat nemůže.
+    // Stejně tak ne kandidát, jehož kandidaturu vede ČSÚ v registru jako neplatnou.
     kandidatu:
       stranaPodleKodu('magistrat', s.kodStrany)?.kandidati.filter(
-        (k) => !jeSkrtnutyKandidat(k.prijmeni, k.jmeno),
+        (k) => !k.neplatny && !jeSkrtnutyKandidat(k.prijmeni, k.jmeno),
       ).length ?? 0,
   }))
 
