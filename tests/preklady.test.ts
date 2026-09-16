@@ -8,10 +8,12 @@ import {
   jeJazyk,
 } from '../src/lib/jazyky'
 import { dosad } from '../src/lib/sablony'
-import { PREKLADY } from '../src/preklady'
+import { PREKLADY, type Preklad } from '../src/preklady'
 import { dalsiOtazka, vyhodnot } from '../src/components/TestZpusobilosti'
 import { popisVzdalenosti } from '../src/components/VyhledavacOkrsku'
 import { VYHLEDAVAC_CESKY } from '../src/preklady/vyhledavacCesky'
+import { MOJE_VOLBY_CESKY } from '../src/preklady/mojeVolbyCesky'
+import { popisVzdalenosti as vzdalenostPodlePolohy } from '../src/components/MojeVolby'
 
 /**
  * Překlad je obsah, ne řetězce v kódu — a platí pro něj stejné pravidlo
@@ -151,6 +153,67 @@ describe('texty pro sdílení', () => {
   })
 })
 
+/**
+ * Widget „Moje volby" sdílí s vyhledávačem dvě věci, které musí říkat
+ * totéž: jednotky vzdálenosti a popisy toho, odkud web zná adresu
+ * místnosti. Obojí je ve slovníku definované jednou a použité dvakrát;
+ * test hlídá, že to tak zůstane, i kdyby to někdo rozepsal.
+ */
+describe('widget podle polohy ve všech jazycích', () => {
+  const vsechny: Record<string, Preklad['mojeVolby']> = {
+    cs: MOJE_VOLBY_CESKY,
+    ...Object.fromEntries(JAZYKY.map((j) => [j, PREKLADY[j].mojeVolby])),
+  }
+  const vyhledavace: Record<string, Preklad['vyhledavac']> = {
+    cs: VYHLEDAVAC_CESKY,
+    ...Object.fromEntries(JAZYKY.map((j) => [j, PREKLADY[j].vyhledavac])),
+  }
+
+  it('má českou variantu ve stejném tvaru jako překlady', () => {
+    const referencni = new Map<string, string>()
+    projdi(PREKLADY.en.mojeVolby, '', (cesta, hodnota) => referencni.set(cesta, tvar(hodnota)))
+
+    for (const [jazyk, texty] of Object.entries(vsechny)) {
+      const rozdily: string[] = []
+      projdi(texty, '', (cesta, hodnota) => {
+        if (referencni.get(cesta) !== tvar(hodnota)) rozdily.push(cesta)
+      })
+      expect(rozdily, `tvar widgetu v ${jazyk}`).toEqual([])
+    }
+  })
+
+  it('říká o vzdálenosti a o zdroji místnosti totéž co vyhledávač', () => {
+    for (const jazyk of Object.keys(vsechny)) {
+      const w = vsechny[jazyk]!
+      const v = vyhledavace[jazyk]!
+      expect(w.jednotkaM, `jednotky v ${jazyk}`).toBe(v.jednotkaM)
+      expect(w.jednotkaKm, `jednotky v ${jazyk}`).toBe(v.jednotkaKm)
+      expect(w.zdrojeMistnosti, `zdroje místnosti v ${jazyk}`).toEqual(v.zdrojeMistnosti)
+    }
+  })
+
+  it('formátuje vzdálenost podle jazyka', () => {
+    expect(vzdalenostPodlePolohy(430, PREKLADY.en.mojeVolby, 'en-GB')).toBe('450 m')
+    expect(vzdalenostPodlePolohy(1340, PREKLADY.en.mojeVolby, 'en-GB')).toBe('1.3 km')
+    expect(vzdalenostPodlePolohy(1340, MOJE_VOLBY_CESKY, 'cs-CZ')).toBe('1,3 km')
+    expect(vzdalenostPodlePolohy(1340, PREKLADY.uk.mojeVolby, 'uk-UA')).toContain('км')
+  })
+
+  it('nenechá v hláškách nedosazenou značku', () => {
+    for (const [jazyk, texty] of Object.entries(vsechny)) {
+      const hotove = [
+        dosad(texty.okrsekVeta, { okrsek: 7001 }),
+        dosad(texty.pocetStran, { pocet: 12 }),
+        dosad(texty.senatVoli, { cislo: 24, nazev: 'Praha 9' }),
+        dosad(texty.senatCastecne, { cislo: 24, nazev: 'Praha 9', popis: 'Kateřinky' }),
+        dosad(texty.mistnostOkrsku, { okrsek: 7001 }),
+        dosad(texty.odVasiPolohy, { vzdalenost: '450 m' }),
+      ]
+      for (const text of hotove) expect(text, jazyk).not.toMatch(/\{\w+\}/)
+    }
+  })
+})
+
 describe('rozpoznání jazyka v adrese', () => {
   it('bere jen podporované kódy', () => {
     expect(jeJazyk('en')).toBe(true)
@@ -218,7 +281,10 @@ describe('hreflang', () => {
  * by se dalo přidat pole do angličtiny a nechat český web s `undefined`.
  */
 describe('vyhledávač okrsku ve všech jazycích', () => {
-  const vsechny = { cs: VYHLEDAVAC_CESKY, ...Object.fromEntries(JAZYKY.map((j) => [j, PREKLADY[j].vyhledavac])) }
+  const vsechny: Record<string, Preklad['vyhledavac']> = {
+    cs: VYHLEDAVAC_CESKY,
+    ...Object.fromEntries(JAZYKY.map((j) => [j, PREKLADY[j].vyhledavac])),
+  }
 
   it('má českou variantu ve stejném tvaru jako překlady', () => {
     const referencni = new Map<string, string>()

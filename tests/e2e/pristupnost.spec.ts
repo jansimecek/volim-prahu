@@ -203,6 +203,62 @@ test('nejsdílenější stránky mají vlastní náhledovou kartu', async ({ pag
 })
 
 
+/**
+ * Widget podle polohy. Poloha se podstrčí, protože prohlížeč v testu
+ * povolení nedá a bez něj se výsledek nikdy nevykreslí — a právě výsledek
+ * je to, co muselo být přeložené: okrsek, senátní stav i volební místnost.
+ *
+ * Staroměstské náměstí leží v okrsku 1012 (Praha 1), který podle senátního
+ * číselníku volí i senátora v obvodu 27. Kdyby se to změnilo, změní se
+ * i data v repu a test to ukáže.
+ */
+async function podstrcPolohu(page: import('@playwright/test').Page) {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'geolocation', {
+      value: {
+        getCurrentPosition: (ok: PositionCallback) =>
+          ok({ coords: { latitude: 50.0875, longitude: 14.4213, accuracy: 20 } } as GeolocationPosition),
+      },
+      configurable: true,
+    })
+  })
+}
+
+test('widget podle polohy odpoví anglicky', async ({ page }) => {
+  await podstrcPolohu(page)
+  await page.goto('/en/where-do-i-vote')
+  await page.getByRole('button', { name: 'Use my location' }).click()
+
+  await expect(page.getByText('Electoral precinct 1012')).toBeVisible()
+  await expect(page.getByText('Your location is in')).toBeVisible()
+  await expect(page.getByRole('link', { name: /Parties standing in your city district/ })).toBeVisible()
+  await expect(page.getByText(/You also elect a senator in constituency 27/)).toBeVisible()
+  await expect(page.getByText(/from where you are/)).toBeVisible()
+  // Nedosazená značka by znamenala, že se šablona rozešla s voláním.
+  await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)
+})
+
+test('widget podle polohy odpoví ukrajinsky', async ({ page }) => {
+  await podstrcPolohu(page)
+  await page.goto('/uk/where-do-i-vote')
+  await page.getByRole('button', { name: 'Визначити за моїм місцем' }).click()
+
+  await expect(page.getByText('Виборча дільниця 1012')).toBeVisible()
+  await expect(page.getByText(/сенатора в окрузі № 27/)).toBeVisible()
+  await expect(page.getByText(/від місця, де ви зараз/)).toBeVisible()
+  await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)
+})
+
+test('widget na české titulní straně zůstal český', async ({ page }) => {
+  await podstrcPolohu(page)
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Zjistit podle mojí polohy' }).click()
+
+  await expect(page.getByText('Volební okrsek 1012')).toBeVisible()
+  await expect(page.getByText('Vaše poloha leží v části')).toBeVisible()
+  await expect(page.getByRole('link', { name: /Kandidátky na magistrát/ })).toBeVisible()
+})
+
 test('karta a popisek jsou v jazyce stránky', async ({ page }) => {
   await page.goto('/uk/where-do-i-vote')
   await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(

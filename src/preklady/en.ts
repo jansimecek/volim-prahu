@@ -9,6 +9,18 @@
  * neexistuje. Odkazy na paragrafy jsou proto součástí obsahu, ne poznámka
  * pod čarou.
  */
+/**
+ * Odkud web zná adresu volební místnosti. Definované jednou a použité ve
+ * vyhledávači i ve widgetu podle polohy — obojí zobrazuje tutéž místnost
+ * a dvě znění téhož by se dřív nebo později rozešla.
+ */
+const ZDROJE_MISTNOSTI = {
+  'oznameni-2026':
+    'From the city district’s own 2026 election notice — precinct seat taken from the official board',
+  'drivejsi-volby': 'From an earlier election — may still change before 24 September 2026',
+  ruian: 'A city district note in the RÚIAN register — not a notice for 2026',
+}
+
 export const en = {
   htmlLang: 'en',
   smerCteni: 'ltr',
@@ -557,12 +569,7 @@ export const en = {
     kdoKandiduje: 'Who is standing in {mc}',
     registrAdres: 'ČÚZK address register as of {datum}',
 
-    zdrojeMistnosti: {
-      'oznameni-2026':
-        'From the city district’s own 2026 election notice — precinct seat taken from the official board',
-      'drivejsi-volby': 'From an earlier election — may still change before 24 September 2026',
-      ruian: 'A city district note in the RÚIAN register — not a notice for 2026',
-    },
+    zdrojeMistnosti: ZDROJE_MISTNOSTI,
 
     mapa: {
       popisek: 'Map of electoral precinct {okrsek}',
@@ -576,6 +583,58 @@ export const en = {
     },
   },
 
+  /**
+   * „Moje volby" — určení okrsku z polohy prohlížeče.
+   *
+   * Odkazy jsou v textech na konci věty, ne uprostřed: skládat větu ze tří
+   * kusů kolem odkazu jde česky i anglicky, ale v jazyce s jiným slovosledem
+   * z toho vznikne nesmysl, který si nikdo nevšimne, dokud ho neuvidí.
+   */
+  mojeVolby: {
+    tlacitko: 'Use my location',
+    neboAdresa: 'Or type an address',
+    hledani: {
+      povoleni: 'Waiting for location permission…',
+      okrsek: 'Working out your precinct…',
+      hranice: 'Searching precinct boundaries…',
+    },
+
+    odmitnuto:
+      'This needs location permission, and that is a fair thing to refuse — searching by address gives the same answer.',
+    odmitnutoOdkaz: 'Find your precinct by address',
+    nepodporovano: 'Your browser cannot provide a location. Search by address instead.',
+    chyba: 'We could not determine your location. Try again, or search by address.',
+    mimoPrahu:
+      'This location is not inside any Prague precinct. If you are away from Prague right now, enter the address where your residence is registered.',
+    mimoPrahuOdkaz: 'Search by address',
+
+    polohaLeziV: 'Your location is in',
+    okrsekVeta:
+      'Electoral precinct {okrsek}. Voting here goes by registered residence only — if you live elsewhere, your own address decides, not this spot.',
+    kandidatkyMC: 'Parties standing in your city district',
+    pocetStran: '({pocet})',
+    kandidatkyMagistrat: 'Parties standing for the city assembly (all of Prague votes)',
+
+    senatNadpis: 'Senate',
+    senatNevoliHlavni: 'No senator is elected in your city district this year.',
+    senatNevoliDoplnek: 'You will not be given a Senate ballot.',
+    senatVoli: 'You also elect a senator in constituency {cislo} ({nazev}).',
+    senatCastecne:
+      'Part of this district elects a senator in constituency {cislo} ({nazev}): {popis}.',
+    kandidatiSenatu: 'Senate candidates',
+
+    mistnostOkrsku: 'Polling station for precinct {okrsek}',
+    odVasiPolohy: '{vzdalenost} from where you are',
+    mistnostNeznama:
+      'We do not know the polling station for this precinct yet. The official board will publish it by 24 September 2026.',
+    mapaAHledani: 'Map of the precinct and address search',
+    znovu: 'Check again',
+
+    jednotkaM: 'm',
+    jednotkaKm: 'km',
+    zdrojeMistnosti: ZDROJE_MISTNOSTI,
+  },
+
   whereDoIVote: {
     h1: 'Where do I vote?',
     perex:
@@ -587,6 +646,9 @@ export const en = {
       'We know the polling station for {sMistnosti} of {celkem} precincts{podle2026}.',
     pokryti2026: ', {pocet} of them from 2026 election documents',
     oficialniNastroj: 'Official tool: Kudy k volbám (IPR Praha)',
+    polohaNadpis: 'Or use your phone’s location',
+    polohaPopis:
+      'Quicker if you are standing at the address you are registered at. The location is read only when you press the button, stays in your browser and is never sent anywhere — what gets downloaded is the precinct boundaries, not your position uploaded.',
     lhutaNadpis: 'If your precinct has no polling station yet',
     lhutaText:
       'Every city district must publish its notice of the time and place of the election on its official board at least 15 days beforehand — by 24 September 2026. Until then, some precincts show the address from an earlier election, clearly marked as such, and a few show none at all.',

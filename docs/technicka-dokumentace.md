@@ -100,9 +100,11 @@ při korektuře nikdo neprohlíží, takže staré číslo by v něm zůstalo.
 `og:locale` nese jazyk stránky a `og:locale:alternate` obě zbylé verze,
 aby jazykové mutace nevypadaly jako tři samostatné weby.
 
-**Vyhledávač okrsku je sdílená komponenta.** `VyhledavacOkrsku`
-a `MapaOkrsku` obsluhují českou i obě cizojazyčné stránky; texty berou
-prop `texty` a formát čísel a data prop `locale`. Čeština není výchozí
+**Vyhledávač okrsku a widget podle polohy jsou sdílené komponenty.**
+`VyhledavacOkrsku`, `MapaOkrsku` a `MojeVolby` obsluhují českou i obě
+cizojazyčné stránky; texty berou prop `texty` a formát čísel a data prop
+`locale`. `MojeVolby` k tomu bere `odkazNaAdresu` — z české titulní
+strany vede na `/kde-volim`, z cizojazyčné na vlastní vyhledávač. Čeština není výchozí
 zadrátovaný text, ale `src/preklady/vyhledavacCesky.ts` ve stejném tvaru
 jako překlady (`Preklad['vyhledavac']`), takže přidaný řetězec
 v angličtině shodí `tsc`, dokud ho nemá i čeština.
@@ -112,6 +114,17 @@ rozhodují. Hláška „ulici jsme nenašli" v češtině čtenáři, který če
 neumí, neřekne, jestli udělal překlep, nebo je nástroj rozbitý.
 Nepřekládají se naopak názvy ulic, městských částí a volebních místností:
 jsou to jména míst, která musí člověk poznat na ceduli.
+
+Jednotky vzdálenosti a popisy toho, odkud web zná adresu místnosti, jsou
+ve slovníku **definované jednou a použité dvakrát** — vyhledávač i widget
+zobrazují tutéž místnost a dvě znění téhož by se dřív nebo později
+rozešla. Test to porovnává napříč jazyky.
+
+Odkazy jsou v přeložených větách zásadně **na konci, ne uprostřed**.
+Skládat větu ze tří kusů kolem odkazu jde česky i anglicky, ale v jazyce
+s jiným slovosledem z toho vznikne nesmysl, kterého si nikdo nevšimne,
+dokud ho neuvidí. Ze stejného důvodu nese zvýraznění celá věta, ne dvě
+slova uvnitř ní.
 
 `dosad()` kvůli tomu sedí v `src/lib/sablony.ts` bez závislostí. Ve
 `mandatyPrehled.ts`, kde vzniklo, by do klientského balíku přitáhlo
