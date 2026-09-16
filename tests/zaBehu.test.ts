@@ -27,7 +27,7 @@ describe('okno pro čtení času za běhu', () => {
   })
 
   it('layout regeneruje přesně tak často, s čím počítá okno', () => {
-    const layout = readFileSync('src/app/layout.tsx', 'utf8')
+    const layout = readFileSync('src/app/(cesky)/layout.tsx', 'utf8')
     expect(layout).toContain(`export const revalidate = ${REVALIDACE_LAYOUTU_S}`)
   })
 })

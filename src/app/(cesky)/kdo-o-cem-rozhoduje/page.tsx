@@ -6,10 +6,15 @@ import { MDXContent } from '@/components/mdx'
 import { nadpisyStranky } from '@/lib/nadpisy'
 import { datumCesky } from '@/lib/cestina'
 import { strankaPodleSlugu } from '@/lib/obsah'
+import { cizojazycneVarianty } from '@/lib/jazyky'
 
 const stranka = strankaPodleSlugu('kdo-o-cem-rozhoduje')
 
-export const metadata: Metadata = { title: stranka.title, description: stranka.popis }
+export const metadata: Metadata = {
+  title: stranka.title,
+  description: stranka.popis,
+  alternates: { languages: cizojazycneVarianty('/kdo-o-cem-rozhoduje', 'what-is-decided') },
+}
 
 export default function StrankaKompetenci() {
   return (

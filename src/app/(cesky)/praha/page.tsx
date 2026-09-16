@@ -7,11 +7,13 @@ import { MAGISTRAT, SADA_CISELNIKU, cislo } from '@/lib/obsah'
 import { kandidatka } from '@/lib/kandidatky'
 import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
 import { vypisStran } from '@/lib/vypisStran'
+import { cizojazycneVarianty } from '@/lib/jazyky'
 
 export const metadata: Metadata = {
   title: 'Magistrát',
   description:
     'Volby do Zastupitelstva hlavního města Prahy 2026: 65 mandátů, kandidující subjekty a hodnocení proveditelnosti jejich programů.',
+  alternates: { languages: cizojazycneVarianty('/praha', 'who-is-running') },
 }
 
 export default async function StrankaMagistratu() {

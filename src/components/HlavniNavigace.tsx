@@ -14,22 +14,26 @@ import type { Route } from 'next'
 export function HlavniNavigace({
   polozky,
   trida,
+  popisek = 'Hlavní navigace',
 }: {
   polozky: readonly { href: Route; popisek: string }[]
   trida?: string
+  /** Popisek navigace pro odečítač. V cizojazyčné verzi musí být v jejím jazyce. */
+  popisek?: string
 }) {
   const cesta = usePathname()
 
   return (
-    <nav aria-label="Hlavní navigace" className={trida}>
+    <nav aria-label={popisek} className={trida}>
       <ul className="flex flex-wrap items-baseline gap-x-5 gap-y-0">
         {polozky.map((polozka) => {
-          // Titulní strana se shoduje jen přesně, ostatní i na podstránkách:
+          // Rozcestník sekce se shoduje jen přesně, ostatní i na podstránkách:
           // z profilu strany má čtenář vidět, že je pořád v sekci Magistrát.
-          const aktivni =
-            polozka.href === '/'
-              ? cesta === '/'
-              : cesta === polozka.href || cesta.startsWith(`${polozka.href}/`)
+          // `/en` a `/uk` jsou rozcestníky svých sekcí stejně jako `/`.
+          const jeRozcestnik = /^\/(en|uk)?$/.test(polozka.href)
+          const aktivni = jeRozcestnik
+            ? cesta === polozka.href
+            : cesta === polozka.href || cesta.startsWith(`${polozka.href}/`)
 
           return (
             <li key={polozka.href}>
