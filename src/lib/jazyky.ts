@@ -32,7 +32,13 @@ export const POPIS_JAZYKA: Record<Jazyk, { vlastni: string; cesky: string; htmlL
 }
 
 /** Podstránky cizojazyčné verze. Slugy jsou anglické ve všech jazycích. */
-export const PODSTRANKY = ['can-i-vote', 'how-to-vote', 'what-is-decided', 'who-is-running'] as const
+export const PODSTRANKY = [
+  'can-i-vote',
+  'where-do-i-vote',
+  'how-to-vote',
+  'what-is-decided',
+  'who-is-running',
+] as const
 
 export type Podstranka = (typeof PODSTRANKY)[number]
 
@@ -62,6 +68,28 @@ export function jazykoveVarianty(cesta: string): Record<string, string> {
 }
 
 /**
+ * Dvojice stránek, které si odpovídají doslova — táž věc v jiném jazyce.
+ * Z nich se odvozuje přepínač jazyků oběma směry. Cizojazyčné stránky bez
+ * dvojice (`can-i-vote`, `how-to-vote`) míří do češtiny na nejbližší
+ * stránku, ale opačným směrem se na ně neodkazuje: slibovat překlad, který
+ * česká stránka nemá, by čtenáře poslalo jinam, než čekal.
+ */
+const PARY: readonly { cesky: string; podstranka: Podstranka }[] = [
+  { cesky: '/kde-volim', podstranka: 'where-do-i-vote' },
+  { cesky: '/kdo-o-cem-rozhoduje', podstranka: 'what-is-decided' },
+  { cesky: '/praha', podstranka: 'who-is-running' },
+]
+
+/**
+ * Cizojazyčná podstránka odpovídající české cestě, pokud existuje.
+ * Přepínač jazyků podle toho rozhodne, jestli čtenáře pustí na překlad
+ * téže stránky, nebo na rozcestník jazyka.
+ */
+export function cizojazycnyProtejsek(ceskaCesta: string): Podstranka | null {
+  return PARY.find((p) => p.cesky === ceskaCesta)?.podstranka ?? null
+}
+
+/**
  * Česká stránka, která nejlíp odpovídá dané cizojazyčné. Není to překlad
  * jedna ku jedné — česká verze dělí obsah jinak — ale vyhledávač i čtenář
  * se mají kam vrátit.
@@ -69,6 +97,7 @@ export function jazykoveVarianty(cesta: string): Record<string, string> {
 export function ceskyProtejsek(zbytek: string): string {
   switch (zbytek) {
     case '/can-i-vote':
+    case '/where-do-i-vote':
     case '/how-to-vote':
       return '/kde-volim'
     case '/what-is-decided':
@@ -97,3 +126,11 @@ export function cizojazycneVarianty(
   for (const j of JAZYKY) mapa[j] = `/${j}${zbytek}`
   return mapa
 }
+
+/**
+ * Locale ve tvaru, jaký chce Open Graph (`og:locale`). Liší se od `htmlLang`
+ * podtržítkem a regionem — sociální sítě jiný tvar ignorují.
+ */
+export const OG_LOCALE: Record<Jazyk, string> = { en: 'en_GB', uk: 'uk_UA' }
+
+export const OG_LOCALE_CESKY = 'cs_CZ'

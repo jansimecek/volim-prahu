@@ -6,7 +6,7 @@ import { HlavniNavigace } from '@/components/HlavniNavigace'
 import { Mereni } from '@/components/Mereni'
 import { PrepinacJazyka } from '@/components/PrepinacJazyka'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
-import { JAZYKY, jazykoveVarianty, jeJazyk, PODSTRANKY } from '@/lib/jazyky'
+import { JAZYKY, OG_LOCALE, OG_LOCALE_CESKY, jazykoveVarianty, jeJazyk, PODSTRANKY } from '@/lib/jazyky'
 import { preklad } from '@/preklady'
 import { KONTAKT_EMAIL, ZAKLAD_WEBU, absolutni } from '@/lib/web'
 import '../../../styles/globals.css'
@@ -69,7 +69,10 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      locale: jazyk === 'uk' ? 'uk_UA' : 'en_GB',
+      locale: OG_LOCALE[jazyk],
+      // Facebook a spol. z toho poznají, že totéž existuje i jinak —
+      // bez toho vypadá každá jazyková verze jako samostatný web.
+      alternateLocale: [OG_LOCALE_CESKY, ...JAZYKY.filter((j) => j !== jazyk).map((j) => OG_LOCALE[j])],
       siteName: t.meta.nazevWebu,
     },
     robots: { index: true, follow: true },

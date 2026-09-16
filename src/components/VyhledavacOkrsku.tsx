@@ -5,8 +5,11 @@ import { useId, useMemo, useRef, useState } from 'react'
 import type { OdpovedOkrsku } from '@/app/api/okrsky/[slug]/route'
 import { MapaOkrsku } from '@/components/MapaOkrsku'
 import { vzdalenostMetru } from '@/lib/geokodovani'
-import { POPIS_ZDROJE, type Mistnost } from '@/lib/mistnostiTypy'
+import type { Mistnost } from '@/lib/mistnostiTypy'
 import { najdiAdresu, normalizujUlici, type NalezenaAdresa } from '@/lib/okrskyHledani'
+import { dosad } from '@/lib/sablony'
+import type { Preklad } from '@/preklady'
+import { LOCALE_CESKY, VYHLEDAVAC_CESKY } from '@/preklady/vyhledavacCesky'
 
 /**
  * Vyhledávač adresa → volební okrsek nad daty ČÚZK (data/okrsky).
@@ -19,6 +22,12 @@ import { najdiAdresu, normalizujUlici, type NalezenaAdresa } from '@/lib/okrskyH
  * Výsledek nikdy neodhaduje: cizí ulici nedoplní, nejednoznačné číslo vrátí
  * všechny možnosti. Poslat voliče do špatné místnosti je horší než říct
  * „nenašli jsme".
+ *
+ * Texty bere zvenčí, aby tentýž vyhledávač obsloužil českou i cizojazyčnou
+ * stránku. Přeložit se musí i stavy, kdy nic nenajde: hlášku „ulici jsme
+ * nenašli" v češtině nepřečte ten, kdo česky neumí, a odejde s dojmem, že
+ * je nástroj rozbitý. Názvy ulic a městských částí zůstávají české — jsou
+ * to jména míst, ne text k překladu, a člověk je musí poznat na ceduli.
  */
 
 type IndexUlic = Record<string, string[]>
@@ -43,14 +52,18 @@ const MAX_NAPOVED = 8
 
 const cacheCasti = new Map<string, Promise<OdpovedOkrsku>>()
 
-/** „asi 450 m", nad kilometr „asi 1,3 km" — přesnost na metry by byla falešná. */
-function popisVzdalenosti(metru: number): string {
-  if (metru < 40) return 'Volební místnost je přímo na vaší adrese.'
-  const text =
+/** „450 m", nad kilometr „1,3 km" — přesnost na metry by byla falešná. */
+export function popisVzdalenosti(
+  metru: number,
+  texty: Preklad['vyhledavac'],
+  locale: string,
+): string {
+  if (metru < 40) return texty.naAdrese
+  const vzdalenost =
     metru < 1000
-      ? `asi ${Math.max(50, Math.round(metru / 50) * 50)} m`
-      : `asi ${(Math.round(metru / 100) / 10).toLocaleString('cs-CZ')} km`
-  return `Vzdušnou čarou ${text} od vaší adresy.`
+      ? `${Math.max(50, Math.round(metru / 50) * 50)} ${texty.jednotkaM}`
+      : `${(Math.round(metru / 100) / 10).toLocaleString(locale)} ${texty.jednotkaKm}`
+  return dosad(texty.vzdusnouCarou, { vzdalenost })
 }
 
 function nactiCast(slug: string): Promise<OdpovedOkrsku> {
@@ -65,7 +78,13 @@ function nactiCast(slug: string): Promise<OdpovedOkrsku> {
   return slib
 }
 
-export function VyhledavacOkrsku() {
+export function VyhledavacOkrsku({
+  texty = VYHLEDAVAC_CESKY,
+  locale = LOCALE_CESKY,
+}: {
+  texty?: Preklad['vyhledavac']
+  locale?: string
+} = {}) {
   const [ulice, setUlice] = useState('')
   const [cislo, setCislo] = useState('')
   const [index, setIndex] = useState<IndexUlic | null>(null)
@@ -154,7 +173,7 @@ export function VyhledavacOkrsku() {
       <form onSubmit={hledej} className="grid max-w-xl gap-4 sm:grid-cols-[1fr_8rem_auto] sm:items-end">
         <div className="relative">
           <label htmlFor={`${id}-ulice`} className="popisek-uredni">
-            Ulice
+            {texty.ulice}
           </label>
           <input
             id={`${id}-ulice`}
@@ -167,7 +186,7 @@ export function VyhledavacOkrsku() {
             }}
             onFocus={() => void nactiIndex()}
             onBlur={() => setTimeout(() => setNapovedaOtevrena(false), 150)}
-            placeholder="například Partyzánská"
+            placeholder={texty.ulicePlaceholder}
             autoComplete="off"
             required
             role="combobox"
@@ -180,7 +199,7 @@ export function VyhledavacOkrsku() {
             <ul
               id={`${id}-napoveda`}
               role="listbox"
-              aria-label="Návrhy ulic"
+              aria-label={texty.navrhyUlic}
               className="absolute left-0 right-0 z-10 mt-1 border border-inkoust bg-papir shadow-sm"
             >
               {napovedy.map((n) => (
@@ -197,7 +216,9 @@ export function VyhledavacOkrsku() {
                   >
                     {n}
                     {(index?.[n]?.length ?? 0) > 1 && (
-                      <span className="popisek-uredni ml-2">{index![n]!.length}× v Praze</span>
+                      <span className="popisek-uredni ml-2">
+                        {dosad(texty.vicekrat, { pocet: index![n]!.length })}
+                      </span>
                     )}
                   </button>
                 </li>
@@ -207,14 +228,14 @@ export function VyhledavacOkrsku() {
         </div>
         <div>
           <label htmlFor={`${id}-cislo`} className="popisek-uredni">
-            Číslo domu
+            {texty.cisloDomu}
           </label>
           <input
             id={`${id}-cislo`}
             type="text"
             value={cislo}
             onChange={(e) => setCislo(e.target.value)}
-            placeholder="18/23"
+            placeholder={texty.cisloPlaceholder}
             autoComplete="off"
             required
             inputMode="text"
@@ -222,37 +243,32 @@ export function VyhledavacOkrsku() {
           />
         </div>
         <button type="submit" className="border border-praha px-4 py-2 text-praha">
-          Najít okrsek
+          {texty.odeslat}
         </button>
       </form>
 
-      <p className="popisek-uredni mt-2">
-        Číslo domu stačí orientační (ze štítku na domě) nebo popisné. Na diakritice nezáleží.
-      </p>
+      <p className="popisek-uredni mt-2">{texty.napovedaCisla}</p>
 
       <div aria-live="polite" className="mt-6">
-        {indexChyba && <p>Seznam ulic se nepodařilo načíst. Zkuste stránku obnovit.</p>}
-        {stav.typ === 'hleda' && <p className="popisek-uredni">Hledám…</p>}
-        {stav.typ === 'chyba' && <p>Data se nepodařilo načíst. Zkuste to znovu.</p>}
+        {indexChyba && <p>{texty.indexChyba}</p>}
+        {stav.typ === 'hleda' && <p className="popisek-uredni">{texty.hleda}</p>}
+        {stav.typ === 'chyba' && <p>{texty.chyba}</p>}
         {stav.typ === 'ulice-nenalezena' && (
-          <p>
-            Ulici <strong>{ulice.trim()}</strong> jsme v Praze nenašli. Zkuste ji vybrat z nabídky — název
-            musí sedět celý. U adres bez ulice (Hradčany, Malá Strana) zadejte název části obce.
-          </p>
+          <p>{dosad(texty.uliceNenalezena, { ulice: `„${ulice.trim()}"` })}</p>
         )}
         {stav.typ === 'cislo-nenalezeno' && (
           <p>
-            Ulice <strong>{ulice.trim()}</strong> leží v části {stav.casti.join(' a ')}, ale číslo{' '}
-            <strong>{cislo.trim()}</strong> v ní registr adres nezná. Zkuste druhé číslo z domovního
-            štítku — na štítku bývá popisné i orientační.
+            {dosad(texty.cisloNenalezeno, {
+              ulice: `„${ulice.trim()}"`,
+              casti: stav.casti.join(' + '),
+              cislo: cislo.trim(),
+            })}
           </p>
         )}
         {stav.typ === 'nalezeno' && (
           <>
             {stav.vysledky.length > 1 && (
-              <p className="mb-4">
-                Zadání odpovídá {stav.vysledky.length} adresám — vyberte tu svou podle celého čísla.
-              </p>
+              <p className="mb-4">{dosad(texty.viceAdres, { pocet: stav.vysledky.length })}</p>
             )}
             <ul className="space-y-4">
               {stav.vysledky.map((v) => (
@@ -261,26 +277,34 @@ export function VyhledavacOkrsku() {
                     {v.ulice} {v.cislo} · {v.nazevMC}
                   </p>
                   <p className="mt-1 font-display text-2xl">
-                    Volební okrsek <span className="font-mono">{v.okrsek}</span>
+                    {texty.volebniOkrsek} <span className="font-mono">{v.okrsek}</span>
                   </p>
                   {v.mistnost ? (
                     <div className="mt-3">
                       <p>
                         <strong>{v.mistnost.nazev}</strong>
                         {v.mistnost.adresa !== v.mistnost.nazev && <>, {v.mistnost.adresa}</>}
-                        {v.mistnost.bezbarierova && <span className="popisek-uredni ml-2">bezbariérová</span>}
+                        {v.mistnost.bezbarierova && (
+                          <span className="popisek-uredni ml-2">{texty.bezbarierova}</span>
+                        )}
                       </p>
                       {v.mistnost.poznamka && <p className="mt-1 text-sm">{v.mistnost.poznamka}</p>}
                       {v.mistnost.poloha && (
-                        <p className="mt-1 text-sm">{popisVzdalenosti(vzdalenostMetru(v.poloha, v.mistnost.poloha))}</p>
+                        <p className="mt-1 text-sm">
+                          {popisVzdalenosti(
+                            vzdalenostMetru(v.poloha, v.mistnost.poloha),
+                            texty,
+                            locale,
+                          )}
+                        </p>
                       )}
                       <p className="popisek-uredni mt-2">
-                        {POPIS_ZDROJE[v.mistnost.zdroj.typ]}
+                        {texty.zdrojeMistnosti[v.mistnost.zdroj.typ]}
                         {v.mistnost.zdroj.url && (
                           <>
                             {' · '}
                             <a href={v.mistnost.zdroj.url} className="odkaz-akcent" rel="noopener">
-                              zdroj
+                              {texty.zdroj}
                             </a>
                           </>
                         )}
@@ -288,15 +312,15 @@ export function VyhledavacOkrsku() {
                     </div>
                   ) : (
                     <p className="mt-3 text-sm">
-                      Adresu volební místnosti pro tento okrsek zatím neznáme. Zveřejní ji{' '}
+                      {texty.mistnostNeznamaUvod}
                       {v.urlDesky ? (
                         <a href={v.urlDesky} className="odkaz-akcent" rel="noopener">
-                          úřední deska {v.nazevMC}
+                          {dosad(texty.uredniDeska, { mc: v.nazevMC })}
                         </a>
                       ) : (
-                        <>úřední deska {v.nazevMC}</>
-                      )}{' '}
-                      nejpozději 24. září 2026.
+                        dosad(texty.uredniDeska, { mc: v.nazevMC })
+                      )}
+                      {texty.mistnostNeznamaLhuta}
                     </p>
                   )}
                   <MapaOkrsku
@@ -307,12 +331,16 @@ export function VyhledavacOkrsku() {
                     mistnost={
                       v.mistnost?.poloha ? { nazev: v.mistnost.nazev, poloha: v.mistnost.poloha } : undefined
                     }
+                    texty={texty.mapa}
                   />
                   <p className="popisek-uredni mt-3">
-                    <Link href={`/mestska-cast/${v.mestskaCast}`} className="odkaz-akcent">
-                      Kdo kandiduje v části {v.nazevMC}
+                    <Link href={`/mestska-cast/${v.mestskaCast}`} className="odkaz-akcent" hrefLang="cs">
+                      {dosad(texty.kdoKandiduje, { mc: v.nazevMC })}
                     </Link>
-                    {' · '}registr adres ČÚZK k {new Date(v.stazeno).toLocaleDateString('cs-CZ')}
+                    {' · '}
+                    {dosad(texty.registrAdres, {
+                      datum: new Date(v.stazeno).toLocaleDateString(locale),
+                    })}
                   </p>
                 </li>
               ))}

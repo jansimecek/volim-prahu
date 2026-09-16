@@ -22,7 +22,7 @@ export async function generateMetadata({
   const t = preklad(jazyk)
   return {
     title: t.whoIsRunning.h1,
-    description: t.whoIsRunning.perex,
+    description: t.sdileni['who-is-running'].popis,
     alternates: { languages: jazykoveVarianty(`/${jazyk}/who-is-running`) },
   }
 }

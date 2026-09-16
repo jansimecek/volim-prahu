@@ -17,13 +17,3 @@ export function pocetMandatu(): { magistrat: number; mcOd: number; mcDo: number 
     mcDo: mc.length > 0 ? Math.max(...mc) : 0,
   }
 }
-
-/**
- * Dosazení hodnot do zástupných značek `{klic}`. Záměrně nepodporuje nic
- * víc než prosté nahrazení — překlad není šablonovací jazyk.
- */
-export function dosad(sablona: string, hodnoty: Record<string, string | number>): string {
-  return sablona.replace(/\{(\w+)\}/g, (cele, klic: string) =>
-    klic in hodnoty ? String(hodnoty[klic]) : cele,
-  )
-}

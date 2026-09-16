@@ -19,7 +19,7 @@ export async function generateMetadata({
   const t = preklad(jazyk)
   return {
     title: t.whatIsDecided.h1,
-    description: t.whatIsDecided.perex,
+    description: t.sdileni['what-is-decided'].popis,
     alternates: { languages: jazykoveVarianty(`/${jazyk}/what-is-decided`) },
   }
 }

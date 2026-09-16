@@ -33,11 +33,13 @@ const TRASY = [
   // `lang` — chyba v jazyce stránky je porušení WCAG 3.1.1 a axe ji zachytí.
   { cesta: '/en', nazev: 'anglický rozcestník' },
   { cesta: '/en/can-i-vote', nazev: 'anglicky: smím volit' },
+  { cesta: '/en/where-do-i-vote', nazev: 'anglicky: kde volím' },
   { cesta: '/en/how-to-vote', nazev: 'anglicky: jak volit' },
   { cesta: '/en/who-is-running', nazev: 'anglicky: kdo kandiduje' },
   { cesta: '/uk', nazev: 'ukrajinský rozcestník' },
   { cesta: '/uk/can-i-vote', nazev: 'ukrajinsky: smím volit' },
   { cesta: '/uk/what-is-decided', nazev: 'ukrajinsky: co se volí' },
+  { cesta: '/uk/where-do-i-vote', nazev: 'ukrajinsky: kde volím' },
 ]
 
 for (const { cesta, nazev } of TRASY) {
@@ -80,6 +82,7 @@ for (const { cesta, jazyk } of [
   { cesta: '/en/can-i-vote', jazyk: 'en' },
   { cesta: '/uk', jazyk: 'uk' },
   { cesta: '/uk/how-to-vote', jazyk: 'uk' },
+  { cesta: '/uk/where-do-i-vote', jazyk: 'uk' },
 ]) {
   test(`${cesta} deklaruje jazyk ${jazyk}`, async ({ page }) => {
     await page.goto(cesta)
@@ -107,13 +110,109 @@ test('test způsobilosti dojde k odpovědi a neptá se zbytečně', async ({ pag
   await expect(page.getByText('You vote on both municipal ballots.')).toBeVisible()
 })
 
-test('přepínač jazyků vede z české stránky do překladu a zpět', async ({ page }) => {
+test('přepínač jazyků vede z české stránky na její překlad a zpět', async ({ page }) => {
+  // /kde-volim má doslovný protějšek, takže přepínač nesmí končit na
+  // rozcestníku jazyka — čtenář hledá tutéž stránku, jen anglicky.
   await page.goto('/kde-volim')
   await page.getByRole('link', { name: 'English' }).first().click()
-  await expect(page).toHaveURL(/\/en$/)
+  await expect(page).toHaveURL(/\/en\/where-do-i-vote$/)
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
 
   await page.getByRole('link', { name: 'Čeština' }).click()
-  await expect(page).toHaveURL(/\/$/)
+  await expect(page).toHaveURL(/\/kde-volim$/)
   await expect(page.locator('html')).toHaveAttribute('lang', 'cs')
+})
+
+test('stránka bez protějšku posílá přepínačem na rozcestník jazyka', async ({ page }) => {
+  await page.goto('/temata')
+  await page.getByRole('link', { name: 'Українська' }).first().click()
+  await expect(page).toHaveURL(/\/uk$/)
+  await expect(page.locator('html')).toHaveAttribute('lang', 'uk')
+})
+
+/**
+ * Vyhledávač okrsku v cizím jazyce. Stejná adresa jako v českém testu
+ * (Partyzánská 18/23 → okrsek 7001), takže kdyby se rozešly výsledky, je
+ * to chyba v datech, ne v překladu.
+ *
+ * Kontroluje se i stav „nenašli jsme": právě ten musí být přeložený, aby
+ * čtenář poznal, že udělal překlep, a nemyslel si, že je nástroj rozbitý.
+ */
+test('anglický vyhledávač najde okrsek a hlásí se anglicky', async ({ page }) => {
+  await page.goto('/en/where-do-i-vote')
+  await page.getByRole('combobox', { name: 'Street' }).fill('partyzanska')
+  await page.getByRole('textbox', { name: 'Number' }).fill('23')
+  await page.getByRole('button', { name: 'Find my precinct' }).click()
+
+  await expect(page.getByText('Electoral precinct 7001')).toBeVisible()
+  await expect(page.getByText('Partyzánská 18/23 · Praha 7')).toBeVisible()
+  await expect(page.getByRole('region', { name: 'Map of electoral precinct 7001' })).toBeVisible()
+  await expect(page.getByText(/red outline is precinct 7001/)).toBeVisible()
+})
+
+test('ukrajinský vyhledávač vysvětlí ukrajinsky, že ulici nezná', async ({ page }) => {
+  await page.goto('/uk/where-do-i-vote')
+  await page.getByRole('combobox', { name: 'Вулиця' }).fill('Neexistujici')
+  await page.getByRole('textbox', { name: 'Номер' }).fill('1')
+  await page.getByRole('button', { name: 'Знайти дільницю' }).click()
+
+  await expect(page.getByText(/у Празі не знайдено/)).toBeVisible()
+  // Nedosazená značka by znamenala, že se šablona rozešla s voláním.
+  await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)
+})
+
+/**
+ * Náhledová karta pro sdílení. Testuje se obojí, co může tiše selhat:
+ * že každá stránka má vlastní obrázek (ne jeden na celou sekci) a že
+ * se doopravdy vykreslí. Karta, která vrátí 500, se pozná až tím, že
+ * odkaz ve facebookové skupině vypadá jako prázdný rámeček.
+ */
+test('každá cizojazyčná stránka má vlastní náhledovou kartu', async ({ page, request }) => {
+  const adresy = new Map<string, string>()
+
+  for (const cesta of [
+    '/en',
+    '/en/can-i-vote',
+    '/en/where-do-i-vote',
+    '/uk',
+    '/uk/can-i-vote',
+    '/uk/where-do-i-vote',
+  ]) {
+    await page.goto(cesta)
+    const obrazek = await page.locator('meta[property="og:image"]').getAttribute('content')
+    expect(obrazek, `${cesta} nemá og:image`).toBeTruthy()
+
+    // Adresa musí být absolutní: robot sociální sítě čte značku mimo
+    // kontext stránky a relativní cestu si nedoplní.
+    expect(obrazek, `og:image u ${cesta} není absolutní`).toMatch(/^https?:\/\//)
+    adresy.set(cesta, obrazek!)
+
+    // Kreslí se ale z běžícího buildu, ne z produkce, na kterou adresa míří.
+    const odpoved = await request.get(new URL(obrazek!).pathname + new URL(obrazek!).search)
+    expect(odpoved.status(), `karta pro ${cesta}`).toBe(200)
+    expect(odpoved.headers()['content-type']).toContain('image/png')
+  }
+
+  // Šest stránek, šest různých karet.
+  expect(new Set(adresy.values()).size).toBe(adresy.size)
+})
+
+test('karta a popisek jsou v jazyce stránky', async ({ page }) => {
+  await page.goto('/uk/where-do-i-vote')
+  await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+    'content',
+    /[Ѐ-ӿ]/,
+  )
+  await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'uk_UA')
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+    'content',
+    /[Ѐ-ӿ]/,
+  )
+
+  await page.goto('/en/where-do-i-vote')
+  await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'en_GB')
+  await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+    'content',
+    /English/,
+  )
 })

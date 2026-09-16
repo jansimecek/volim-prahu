@@ -2,7 +2,10 @@
 
 import 'leaflet/dist/leaflet.css'
 import { useEffect, useRef, useState } from 'react'
+import { dosad } from '@/lib/sablony'
 import type { HraniceOkrsku } from '@/lib/okrsky'
+import { VYHLEDAVAC_CESKY } from '@/preklady/vyhledavacCesky'
+import type { Preklad } from '@/preklady'
 
 /**
  * Mapa nalezeného okrsku: jeho hranice z RÚIAN zvýrazněná, ostatní okrsky
@@ -20,6 +23,8 @@ type Props = {
   popisAdresy: string
   /** Volební místnost, pokud známe její polohu. */
   mistnost?: { nazev: string; poloha: { lat: number; lon: number } }
+  /** Texty mapy. Výchozí je čeština, cizojazyčná stránka předá svoje. */
+  texty?: Preklad['vyhledavac']['mapa']
 }
 
 const cacheHranic = new Map<string, Promise<HraniceOkrsku>>()
@@ -42,7 +47,14 @@ function barva(promenna: string, zaloha: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(promenna).trim() || zaloha
 }
 
-export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy, mistnost }: Props) {
+export function MapaOkrsku({
+  mestskaCast,
+  okrsek,
+  poloha,
+  popisAdresy,
+  mistnost,
+  texty = VYHLEDAVAC_CESKY.mapa,
+}: Props) {
   const kontejner = useRef<HTMLDivElement>(null)
   const [stav, setStav] = useState<'nacita' | 'hotovo' | 'chyba'>('nacita')
 
@@ -65,7 +77,7 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy, mistnost 
         )
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
-          attribution: '&copy; přispěvatelé <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+          attribution: texty.autori,
         }).addTo(mapa)
 
         const ostatni = L.geoJSON(
@@ -130,7 +142,7 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy, mistnost 
       zruseno = true
       mapa?.remove()
     }
-  }, [mestskaCast, okrsek, poloha.lat, poloha.lon, popisAdresy, mistnost])
+  }, [mestskaCast, okrsek, poloha.lat, poloha.lon, popisAdresy, mistnost, texty])
 
   const odkazOsm = `https://www.openstreetmap.org/?mlat=${poloha.lat}&mlon=${poloha.lon}#map=17/${poloha.lat}/${poloha.lon}`
 
@@ -139,18 +151,18 @@ export function MapaOkrsku({ mestskaCast, okrsek, poloha, popisAdresy, mistnost 
       <div
         ref={kontejner}
         role="region"
-        aria-label={`Mapa volebního okrsku ${okrsek}`}
+        aria-label={dosad(texty.popisek, { okrsek })}
         className="h-80 w-full border border-inkoust bg-papir-tmavsi"
       />
       {stav === 'chyba' && (
-        <p className="mt-2 text-sm">Mapu se nepodařilo načíst. Polohu adresy otevře odkaz pod mapou.</p>
+        <p className="mt-2 text-sm">{texty.chyba}</p>
       )}
       <p className="popisek-uredni mt-2">
-        {stav === 'nacita' ? 'Načítám mapu… · ' : ''}
-        Červeně hranice okrsku {okrsek} podle RÚIAN, bílý bod je vaše adresa
-        {mistnost ? ', červený čtverec volební místnost' : ''} ·{' '}
+        {stav === 'nacita' ? texty.nacita : ''}
+        {dosad(texty.legenda, { okrsek })}
+        {mistnost ? texty.legendaMistnost : ''} ·{' '}
         <a href={odkazOsm} className="odkaz-akcent" rel="noopener">
-          otevřít v OpenStreetMap
+          {texty.osm}
         </a>
       </p>
     </div>

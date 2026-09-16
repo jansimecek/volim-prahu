@@ -19,7 +19,9 @@ export async function generateMetadata({
   const t = preklad(jazyk)
   return {
     title: t.canIVote.h1,
-    description: t.canIVote.perex,
+    // Krátký popis, ne úvodní odstavec: ten se jako popisek odkazu utne
+    // v půlce věty a ve výsledcích vyhledávání taky.
+    description: t.sdileni['can-i-vote'].popis,
     alternates: { languages: jazykoveVarianty(`/${jazyk}/can-i-vote`) },
   }
 }

@@ -16,9 +16,10 @@ const stranka = strankaPodleSlugu('kde-volim')
 export const metadata: Metadata = {
   title: stranka.title,
   description: stranka.popis,
-  // Protějšek anglické a ukrajinské stránky „smím volit". hreflang musí
-  // vést oběma směry, jinak vyhledávač jazykové varianty nespáruje.
-  alternates: { languages: cizojazycneVarianty('/kde-volim', 'can-i-vote') },
+  // Doslovný protějšek anglické a ukrajinské stránky „kde volím" — je to
+  // táž stránka s týmž vyhledávačem. hreflang musí vést oběma směry,
+  // jinak vyhledávač jazykové varianty nespáruje.
+  alternates: { languages: cizojazycneVarianty('/kde-volim', 'where-do-i-vote') },
 }
 
 /** Sekce mimo MDX musí být v obsahu stránky také — jinak by nešly přeskočit. */

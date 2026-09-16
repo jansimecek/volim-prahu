@@ -3,7 +3,7 @@
 import type { Route } from 'next'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { JAZYKY, POPIS_JAZYKA, ceskyProtejsek, type Jazyk } from '@/lib/jazyky'
+import { JAZYKY, POPIS_JAZYKA, ceskyProtejsek, cizojazycnyProtejsek, type Jazyk } from '@/lib/jazyky'
 
 /**
  * Přepínač jazyků.
@@ -24,6 +24,9 @@ import { JAZYKY, POPIS_JAZYKA, ceskyProtejsek, type Jazyk } from '@/lib/jazyky'
 export function PrepinacJazyka({ aktualni }: { aktualni?: Jazyk }) {
   const cesta = usePathname()
   const zbytek = cesta.replace(/^\/(en|uk)(?=\/|$)/, '')
+  // Z české stránky, která má doslovný protějšek, vede přepínač rovnou na
+  // něj; odjinud na rozcestník jazyka.
+  const protejsek = aktualni ? null : cizojazycnyProtejsek(cesta)
 
   const polozky: { klic: string; href: string; popisek: string; lang: string }[] = [
     {
@@ -34,10 +37,7 @@ export function PrepinacJazyka({ aktualni }: { aktualni?: Jazyk }) {
     },
     ...JAZYKY.map((j) => ({
       klic: j,
-      // Z české stránky vede přepínač na rozcestník jazyka, ne na její
-      // překlad — ten ve většině případů neexistuje a slibovat ho odkazem
-      // by znamenalo posílat čtenáře na 404.
-      href: aktualni ? `/${j}${zbytek}` : `/${j}`,
+      href: aktualni ? `/${j}${zbytek}` : `/${j}${protejsek ? `/${protejsek}` : ''}`,
       popisek: POPIS_JAZYKA[j].vlastni,
       lang: POPIS_JAZYKA[j].htmlLang,
     })),

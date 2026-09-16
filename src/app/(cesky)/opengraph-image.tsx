@@ -8,7 +8,7 @@ export const contentType = TYP_OBSAHU
 export default function ObrazekProSdileni() {
   return nahledovyObrazek({
     nadpisek: 'Komunální a senátní volby · 9.–10. října 2026',
-    nazev: 'Volím Prahu',
-    podtitul: 'Kdo kandiduje, co slibuje — a co z toho jeho úroveň samosprávy vůbec může splnit.',
+    titulek: 'Co vaši kandidáti slibují — a co z toho můžou splnit',
+    podtitul: 'Nezávislý průvodce pražskými volbami. Bez doporučení, se zdrojem u každého tvrzení.',
   })
 }

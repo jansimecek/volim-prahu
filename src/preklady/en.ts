@@ -12,6 +12,8 @@
 export const en = {
   htmlLang: 'en',
   smerCteni: 'ltr',
+  /** Locale pro Intl — formát data a čísel ve výsledcích vyhledávače. */
+  formatLocale: 'en-GB',
 
   meta: {
     nazevWebu: 'Volím Prahu',
@@ -30,6 +32,7 @@ export const en = {
     navigace: {
       index: 'Start here',
       'can-i-vote': 'Can I vote?',
+      'where-do-i-vote': 'Where do I vote?',
       'how-to-vote': 'How to vote',
       'what-is-decided': 'What you elect',
       'who-is-running': 'Who is running',
@@ -104,6 +107,12 @@ export const en = {
         nadpis: 'Can I vote?',
         popis:
           'The three conditions the law sets, why you almost certainly do not need to register, and what to do if you are missing from the list on election day.',
+      },
+      {
+        cil: 'where-do-i-vote',
+        nadpis: 'Where do I vote?',
+        popis:
+          'Type your registered address and get your precinct number and polling station. Nothing leaves your browser.',
       },
       {
         cil: 'how-to-vote',
@@ -295,7 +304,7 @@ export const en = {
       'At the polling station for the precinct covering the address where your residence is registered. This is not a choice. For municipal elections there is no absentee voter card, no postal voting and no way to vote at another station — so if you are away from Prague that weekend, you cannot vote in the municipal elections at all.',
     kdeNastroj: 'Find your precinct and polling station by address',
     kdeNastrojPopis:
-      'The finder on this site is in Czech, but you only need to type your street and house number — the result is an address, a map and your district.',
+      'You only need your street and house number; the result is your precinct, the polling station address and a map. Nothing is sent anywhere.',
     kdeOznameni:
       'The binding notice is the “Oznámení o době a místě konání voleb”, which every city district must publish on its official board at least 15 days before the election — by 24 September 2026.',
 
@@ -455,6 +464,139 @@ export const en = {
       'This page deliberately shows no opinion polling. Polls are shown only on the Czech pages, with their methodology, and not at all from 6 October until voting closes — a legal moratorium the site enforces technically.',
   },
 
+  /**
+   * Vyhledávač adresa → okrsek. Je to jediný nástroj webu, který cizinci
+   * odpoví na otázku „kam mám v sobotu jít", takže musí fungovat v jeho
+   * jazyce celý — včetně stavů, kdy nic nenajde. Hlášku „ulici jsme
+   * nenašli" v češtině nepřečte ten, kdo česky neumí, a odejde
+   * s dojmem, že je nástroj rozbitý.
+   */
+  /**
+   * Texty pro sdílení. Oddělené od textů na stránce schválně: úvodní
+   * odstavec je psaný pro čtenáře, který už na stránce je, a jako popisek
+   * v odkazu se utne v půlce věty. Sociální sítě ukazují kolem 150 znaků,
+   * vyhledávače podobně — `popis` se do toho musí vejít celý.
+   *
+   * `titulek` je to, co stojí na kartě velkým. Rozhoduje, jestli na odkaz
+   * ve facebookové skupině někdo klikne, takže je to otázka čtenáře, ne
+   * název rubriky.
+   */
+  sdileni: {
+    alt: 'Volím Prahu — a guide to the 2026 Prague elections in English',
+    index: {
+      titulek: 'Can you vote in Prague this October?',
+      podtitul: 'Tens of thousands of residents can — and most of them do not know it.',
+      popis:
+        'Who can vote in Prague’s municipal elections on 9–10 October 2026, where and how to vote — in English. Czech and EU citizens are eligible.',
+    },
+    'can-i-vote': {
+      titulek: 'Can I vote?',
+      podtitul: 'Czech and EU citizens vote in the municipal elections. Check your own case.',
+      popis:
+        'Three questions to check whether you can vote in Prague’s 2026 municipal elections, with the law behind every answer.',
+    },
+    'where-do-i-vote': {
+      titulek: 'Where do I vote?',
+      podtitul: 'Type your address, get your precinct and your polling station.',
+      popis:
+        'Find your Prague electoral precinct and polling station by address. Nothing you type leaves your browser.',
+    },
+    'how-to-vote': {
+      titulek: 'How to vote in Prague',
+      podtitul: 'Opening hours, the ID you need, and how a Czech ballot actually works.',
+      popis:
+        'Opening hours, which identity document to bring, and how to mark a Czech municipal ballot — you have as many votes as there are seats.',
+    },
+    'what-is-decided': {
+      titulek: 'What are you electing?',
+      podtitul: 'Prague has two tiers of government. They decide different things.',
+      popis:
+        'Prague elects a city assembly and 57 district assemblies. What each one decides, and why that changes how you read a campaign promise.',
+    },
+    'who-is-running': {
+      titulek: 'Who is running in Prague',
+      podtitul: 'Parties standing for the city assembly, with their drawn ballot numbers.',
+      popis:
+        'The parties standing for the Prague city assembly in 2026, their drawn ballot numbers and their lead candidates.',
+    },
+  },
+
+  vyhledavac: {
+    ulice: 'Street',
+    ulicePlaceholder: 'for example Partyzánská',
+    cisloDomu: 'Number',
+    cisloPlaceholder: '18/23',
+    odeslat: 'Find my precinct',
+    napovedaCisla:
+      'Either number from the plaque on the building works — the descriptive one or the orientation one. Accents do not matter.',
+    navrhyUlic: 'Street suggestions',
+    vicekrat: '{pocet}× in Prague',
+
+    indexChyba: 'The street list could not be loaded. Try reloading the page.',
+    hleda: 'Searching…',
+    chyba: 'The data could not be loaded. Please try again.',
+    uliceNenalezena:
+      'We could not find the street {ulice} in Prague. Try picking it from the suggestions — the name has to match in full. For addresses without a street name (Hradčany, Malá Strana), enter the name of the cadastral area.',
+    cisloNenalezeno:
+      'The street {ulice} is in {casti}, but the address register does not know number {cislo} there. Try the other number from the plaque — buildings in Prague carry both a descriptive and an orientation number.',
+    viceAdres: 'Your entry matches {pocet} addresses — pick yours by the full number.',
+
+    volebniOkrsek: 'Electoral precinct',
+    bezbarierova: 'step-free access',
+    zdroj: 'source',
+    mistnostNeznamaUvod:
+      'We do not know the polling station for this precinct yet. It will be published by ',
+    uredniDeska: 'the official board of {mc}',
+    mistnostNeznamaLhuta: ' no later than 24 September 2026.',
+
+    naAdrese: 'The polling station is at your own address.',
+    vzdusnouCarou: 'About {vzdalenost} from your address as the crow flies.',
+    jednotkaM: 'm',
+    jednotkaKm: 'km',
+
+    kdoKandiduje: 'Who is standing in {mc}',
+    registrAdres: 'ČÚZK address register as of {datum}',
+
+    zdrojeMistnosti: {
+      'oznameni-2026':
+        'From the city district’s own 2026 election notice — precinct seat taken from the official board',
+      'drivejsi-volby': 'From an earlier election — may still change before 24 September 2026',
+      ruian: 'A city district note in the RÚIAN register — not a notice for 2026',
+    },
+
+    mapa: {
+      popisek: 'Map of electoral precinct {okrsek}',
+      chyba: 'The map could not be loaded. The link below opens your address instead.',
+      nacita: 'Loading the map… · ',
+      legenda:
+        'The red outline is precinct {okrsek} per RÚIAN, the white dot is your address',
+      legendaMistnost: ', the red square is the polling station',
+      osm: 'open in OpenStreetMap',
+      autori: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    },
+  },
+
+  whereDoIVote: {
+    h1: 'Where do I vote?',
+    perex:
+      'Your polling station is decided by the address where your residence is registered — you cannot choose it and you cannot vote anywhere else. Enter that address and this will tell you your precinct number and, where the city district has already published it, the polling station itself.',
+    nastrojNadpis: 'Find your precinct and polling station',
+    nastrojPopis:
+      'Precinct numbers come from the ČÚZK address register, which the city districts keep up to date; polling station addresses come from the notices published on their official boards. What you type stays in your browser — nothing is sent anywhere.',
+    pokryti:
+      'We know the polling station for {sMistnosti} of {celkem} precincts{podle2026}.',
+    pokryti2026: ', {pocet} of them from 2026 election documents',
+    oficialniNastroj: 'Official tool: Kudy k volbám (IPR Praha)',
+    lhutaNadpis: 'If your precinct has no polling station yet',
+    lhutaText:
+      'Every city district must publish its notice of the time and place of the election on its official board at least 15 days beforehand — by 24 September 2026. Until then, some precincts show the address from an earlier election, clearly marked as such, and a few show none at all.',
+    dalsiNadpis: 'Before you go',
+    dalsi: [
+      { cil: 'can-i-vote', text: 'Check whether you are entitled to vote at all' },
+      { cil: 'how-to-vote', text: 'What to bring, and how to mark the ballot' },
+    ],
+  },
+
   citace: {
     prelozeno: 'Translated',
     zobrazitOriginal: 'Show the Czech original',
@@ -467,16 +609,19 @@ export const en = {
  * Minimální tvar, který si vynucuje jen to, co se používá strukturálně
  * (kódy stavů, klíče podstránek). Zbytek kontroluje odvozený typ `Preklad`.
  */
+type Podstranka = 'can-i-vote' | 'where-do-i-vote' | 'how-to-vote' | 'what-is-decided' | 'who-is-running'
+
 type PrekladTvar = {
   htmlLang: string
   smerCteni: 'ltr' | 'rtl'
+  formatLocale: string
+  whereDoIVote: {
+    dalsi: readonly { cil: Podstranka; text: string }[]
+    [k: string]: unknown
+  }
   index: {
     odpovedi: readonly { stav: 'ano' | 'ne'; obcanstvi: string; zaver: string; detail: string }[]
-    rozcestnik: readonly {
-      cil: 'can-i-vote' | 'how-to-vote' | 'what-is-decided' | 'who-is-running'
-      nadpis: string
-      popis: string
-    }[]
+    rozcestnik: readonly { cil: Podstranka; nadpis: string; popis: string }[]
     [k: string]: unknown
   }
   canIVote: {
