@@ -126,3 +126,11 @@ export function cizojazycneVarianty(
   for (const j of JAZYKY) mapa[j] = `/${j}${zbytek}`
   return mapa
 }
+
+/**
+ * Locale ve tvaru, jaký chce Open Graph (`og:locale`). Liší se od `htmlLang`
+ * podtržítkem a regionem — sociální sítě jiný tvar ignorují.
+ */
+export const OG_LOCALE: Record<Jazyk, string> = { en: 'en_GB', uk: 'uk_UA' }
+
+export const OG_LOCALE_CESKY = 'cs_CZ'

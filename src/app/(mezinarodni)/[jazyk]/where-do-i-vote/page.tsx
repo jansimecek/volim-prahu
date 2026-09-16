@@ -22,7 +22,7 @@ export async function generateMetadata({
   const t = preklad(jazyk)
   return {
     title: t.whereDoIVote.h1,
-    description: t.whereDoIVote.perex,
+    description: t.sdileni['where-do-i-vote'].popis,
     alternates: { languages: jazykoveVarianty(`/${jazyk}/where-do-i-vote`) },
   }
 }

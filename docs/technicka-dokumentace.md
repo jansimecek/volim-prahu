@@ -70,6 +70,30 @@ Důsledky, na které se přijde až při buildu:
   layoutu. Titulek je proto přímo v JSX, React 19 ho vytáhne do hlavičky.
 - `sitemap.ts`, `robots.ts`, `icon.svg` a `api/` zůstávají mimo skupiny.
 
+**Náhledové karty pro sdílení** kreslí `next/og` za běhu ze stejných
+design tokenů jako web (`src/components/NahledovyObrazek.tsx`). Karta má
+**každá stránka vlastní**, ne jedna celá sekce: odkaz se sdílí po jedné
+konkrétní stránce a šest odkazů se stejnou kartou nedá příjemci důvod
+kliknout zrovna na tenhle. Vede na ní název stránky, ne název webu.
+
+- Texty jsou v `sdileni` ve slovníku jazyka, odděleně od textů na stránce.
+  Úvodní odstavec je psaný pro čtenáře, který už na stránce je, a jako
+  popisek odkazu se utne v půlce věty. `popis` proto drží do 160 znaků
+  a hlídá to test spolu s délkou titulku a podtitulu.
+- `alt` musí být v jazyce karty, a statický export by byl pro obě verze
+  stejný — proto `generateImageMetadata`, které dostane `params`.
+- Vlastní písmo se nenahrává. Záložní rodina `ImageResponse` vykreslí
+  cyrilici i českou diakritiku ověřeně; stahovat Bricolage při buildu by
+  znamenalo síťový požadavek v nasazení kvůli jednomu obrázku a cyrilici
+  Bricolage stejně nemá.
+- E2e hlídá, že karta doopravdy vrátí PNG a že je adresa absolutní —
+  robot sociální sítě čte značku mimo kontext stránky a relativní cestu
+  si nedoplní. Rozbitá karta se jinak pozná až tím, že odkaz ve skupině
+  vypadá jako prázdný rámeček.
+
+`og:locale` nese jazyk stránky a `og:locale:alternate` obě zbylé verze,
+aby jazykové mutace nevypadaly jako tři samostatné weby.
+
 **Vyhledávač okrsku je sdílená komponenta.** `VyhledavacOkrsku`
 a `MapaOkrsku` obsluhují českou i obě cizojazyčné stránky; texty berou
 prop `texty` a formát čísel a data prop `locale`. Čeština není výchozí

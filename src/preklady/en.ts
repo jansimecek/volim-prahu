@@ -471,6 +471,56 @@ export const en = {
    * nenašli" v češtině nepřečte ten, kdo česky neumí, a odejde
    * s dojmem, že je nástroj rozbitý.
    */
+  /**
+   * Texty pro sdílení. Oddělené od textů na stránce schválně: úvodní
+   * odstavec je psaný pro čtenáře, který už na stránce je, a jako popisek
+   * v odkazu se utne v půlce věty. Sociální sítě ukazují kolem 150 znaků,
+   * vyhledávače podobně — `popis` se do toho musí vejít celý.
+   *
+   * `titulek` je to, co stojí na kartě velkým. Rozhoduje, jestli na odkaz
+   * ve facebookové skupině někdo klikne, takže je to otázka čtenáře, ne
+   * název rubriky.
+   */
+  sdileni: {
+    alt: 'Volím Prahu — a guide to the 2026 Prague elections in English',
+    index: {
+      titulek: 'Can you vote in Prague this October?',
+      podtitul: 'Tens of thousands of residents can — and most of them do not know it.',
+      popis:
+        'Who can vote in Prague’s municipal elections on 9–10 October 2026, where and how to vote — in English. Czech and EU citizens are eligible.',
+    },
+    'can-i-vote': {
+      titulek: 'Can I vote?',
+      podtitul: 'Czech and EU citizens vote in the municipal elections. Check your own case.',
+      popis:
+        'Three questions to check whether you can vote in Prague’s 2026 municipal elections, with the law behind every answer.',
+    },
+    'where-do-i-vote': {
+      titulek: 'Where do I vote?',
+      podtitul: 'Type your address, get your precinct and your polling station.',
+      popis:
+        'Find your Prague electoral precinct and polling station by address. Nothing you type leaves your browser.',
+    },
+    'how-to-vote': {
+      titulek: 'How to vote in Prague',
+      podtitul: 'Opening hours, the ID you need, and how a Czech ballot actually works.',
+      popis:
+        'Opening hours, which identity document to bring, and how to mark a Czech municipal ballot — you have as many votes as there are seats.',
+    },
+    'what-is-decided': {
+      titulek: 'What are you electing?',
+      podtitul: 'Prague has two tiers of government. They decide different things.',
+      popis:
+        'Prague elects a city assembly and 57 district assemblies. What each one decides, and why that changes how you read a campaign promise.',
+    },
+    'who-is-running': {
+      titulek: 'Who is running in Prague',
+      podtitul: 'Parties standing for the city assembly, with their drawn ballot numbers.',
+      popis:
+        'The parties standing for the Prague city assembly in 2026, their drawn ballot numbers and their lead candidates.',
+    },
+  },
+
   vyhledavac: {
     ulice: 'Street',
     ulicePlaceholder: 'for example Partyzánská',

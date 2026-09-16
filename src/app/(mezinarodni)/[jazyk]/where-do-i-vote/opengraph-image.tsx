@@ -13,7 +13,7 @@ export function generateImageMetadata({ params }: { params: { jazyk: string } })
   return [
     {
       id: 'karta',
-      alt: textyKarty(params.jazyk, 'index').alt,
+      alt: textyKarty(params.jazyk, 'where-do-i-vote').alt,
       size: VELIKOST,
       contentType: TYP_OBSAHU,
     },
@@ -22,5 +22,5 @@ export function generateImageMetadata({ params }: { params: { jazyk: string } })
 
 export default async function Karta({ params }: { params: Promise<{ jazyk: string }> }) {
   const { jazyk } = await params
-  return nahledovyObrazek(textyKarty(jazyk, 'index'))
+  return nahledovyObrazek(textyKarty(jazyk, 'where-do-i-vote'))
 }

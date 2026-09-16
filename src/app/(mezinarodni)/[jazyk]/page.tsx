@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { jazyk } = await params
   if (!jeJazyk(jazyk)) return {}
   const t = preklad(jazyk)
-  return { title: t.index.h1, description: t.meta.popisSekce }
+  return { title: t.index.h1, description: t.sdileni.index.popis }
 }
 
 export default async function Rozcestnik({ params }: { params: Promise<{ jazyk: string }> }) {

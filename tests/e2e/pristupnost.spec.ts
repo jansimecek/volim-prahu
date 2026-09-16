@@ -160,3 +160,59 @@ test('ukrajinský vyhledávač vysvětlí ukrajinsky, že ulici nezná', async (
   // Nedosazená značka by znamenala, že se šablona rozešla s voláním.
   await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)
 })
+
+/**
+ * Náhledová karta pro sdílení. Testuje se obojí, co může tiše selhat:
+ * že každá stránka má vlastní obrázek (ne jeden na celou sekci) a že
+ * se doopravdy vykreslí. Karta, která vrátí 500, se pozná až tím, že
+ * odkaz ve facebookové skupině vypadá jako prázdný rámeček.
+ */
+test('každá cizojazyčná stránka má vlastní náhledovou kartu', async ({ page, request }) => {
+  const adresy = new Map<string, string>()
+
+  for (const cesta of [
+    '/en',
+    '/en/can-i-vote',
+    '/en/where-do-i-vote',
+    '/uk',
+    '/uk/can-i-vote',
+    '/uk/where-do-i-vote',
+  ]) {
+    await page.goto(cesta)
+    const obrazek = await page.locator('meta[property="og:image"]').getAttribute('content')
+    expect(obrazek, `${cesta} nemá og:image`).toBeTruthy()
+
+    // Adresa musí být absolutní: robot sociální sítě čte značku mimo
+    // kontext stránky a relativní cestu si nedoplní.
+    expect(obrazek, `og:image u ${cesta} není absolutní`).toMatch(/^https?:\/\//)
+    adresy.set(cesta, obrazek!)
+
+    // Kreslí se ale z běžícího buildu, ne z produkce, na kterou adresa míří.
+    const odpoved = await request.get(new URL(obrazek!).pathname + new URL(obrazek!).search)
+    expect(odpoved.status(), `karta pro ${cesta}`).toBe(200)
+    expect(odpoved.headers()['content-type']).toContain('image/png')
+  }
+
+  // Šest stránek, šest různých karet.
+  expect(new Set(adresy.values()).size).toBe(adresy.size)
+})
+
+test('karta a popisek jsou v jazyce stránky', async ({ page }) => {
+  await page.goto('/uk/where-do-i-vote')
+  await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+    'content',
+    /[Ѐ-ӿ]/,
+  )
+  await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'uk_UA')
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+    'content',
+    /[Ѐ-ӿ]/,
+  )
+
+  await page.goto('/en/where-do-i-vote')
+  await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'en_GB')
+  await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+    'content',
+    /English/,
+  )
+})

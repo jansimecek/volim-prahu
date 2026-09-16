@@ -21,7 +21,7 @@ export async function generateMetadata({
   const t = preklad(jazyk)
   return {
     title: t.howToVote.h1,
-    description: t.howToVote.perex,
+    description: t.sdileni['how-to-vote'].popis,
     alternates: { languages: jazykoveVarianty(`/${jazyk}/how-to-vote`) },
   }
 }

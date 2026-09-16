@@ -106,6 +106,51 @@ describe('jazykové verze', () => {
   })
 })
 
+/**
+ * Texty pro sdílení. Karta i popisek odkazu mají tvrdé limity, které se
+ * nedají vyzkoušet jinak než změřením: sociální sítě popisek utnou kolem
+ * 150 znaků a vyhledávače podobně, a dlouhý titulek se na kartě ořízne,
+ * protože se zmenšuje jen do určité velikosti.
+ *
+ * Utnutá věta uprostřed je u odkazu, který se sdílí do skupiny cizinců,
+ * dražší než jinde — je to jediné, co o webu uvidí, než se rozhodnou
+ * kliknout.
+ */
+describe('texty pro sdílení', () => {
+  const KLICE = ['index', ...PODSTRANKY] as const
+
+  it('existují pro každou stránku v obou jazycích', () => {
+    for (const jazyk of JAZYKY) {
+      for (const klic of KLICE) {
+        const karta = PREKLADY[jazyk].sdileni[klic]
+        expect(karta, `${klic} v ${jazyk}`).toBeDefined()
+        expect(karta.titulek.length).toBeGreaterThan(0)
+        expect(karta.podtitul.length).toBeGreaterThan(0)
+        expect(karta.popis.length).toBeGreaterThan(0)
+      }
+      expect(PREKLADY[jazyk].sdileni.alt.length).toBeGreaterThan(0)
+    }
+  })
+
+  it('se vejdou do popisku odkazu i na kartu', () => {
+    for (const jazyk of JAZYKY) {
+      for (const klic of KLICE) {
+        const { titulek, podtitul, popis } = PREKLADY[jazyk].sdileni[klic]
+        expect(popis.length, `popis ${klic}/${jazyk} je moc dlouhý`).toBeLessThanOrEqual(160)
+        expect(titulek.length, `titulek ${klic}/${jazyk} se na kartu nevejde`).toBeLessThanOrEqual(64)
+        expect(podtitul.length, `podtitul ${klic}/${jazyk} je moc dlouhý`).toBeLessThanOrEqual(90)
+      }
+    }
+  })
+
+  it('nesou v altu jazyk, ve kterém karta je', () => {
+    // Anglický alt na ukrajinské kartě je to, co tu bylo předtím, a pro
+    // odečítač i pro vyhledávač je to špatná informace o obsahu obrázku.
+    expect(PREKLADY.en.sdileni.alt).not.toBe(PREKLADY.uk.sdileni.alt)
+    expect(PREKLADY.uk.sdileni.alt).toMatch(/[\u0400-\u04FF]/)
+  })
+})
+
 describe('rozpoznání jazyka v adrese', () => {
   it('bere jen podporované kódy', () => {
     expect(jeJazyk('en')).toBe(true)
