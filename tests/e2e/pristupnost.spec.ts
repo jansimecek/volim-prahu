@@ -167,7 +167,7 @@ test('ukrajinský vyhledávač vysvětlí ukrajinsky, že ulici nezná', async (
  * se doopravdy vykreslí. Karta, která vrátí 500, se pozná až tím, že
  * odkaz ve facebookové skupině vypadá jako prázdný rámeček.
  */
-test('každá cizojazyčná stránka má vlastní náhledovou kartu', async ({ page, request }) => {
+test('nejsdílenější stránky mají vlastní náhledovou kartu', async ({ page, request }) => {
   const adresy = new Map<string, string>()
 
   for (const cesta of [
@@ -177,6 +177,10 @@ test('každá cizojazyčná stránka má vlastní náhledovou kartu', async ({ p
     '/uk',
     '/uk/can-i-vote',
     '/uk/where-do-i-vote',
+    // České stránky, které se sdílejí nejvíc: vyhledávač okrsku
+    // a kandidátky na magistrát.
+    '/kde-volim',
+    '/praha',
   ]) {
     await page.goto(cesta)
     const obrazek = await page.locator('meta[property="og:image"]').getAttribute('content')
@@ -193,9 +197,11 @@ test('každá cizojazyčná stránka má vlastní náhledovou kartu', async ({ p
     expect(odpoved.headers()['content-type']).toContain('image/png')
   }
 
-  // Šest stránek, šest různých karet.
+  // Kolik stránek, tolik různých karet — žádná nesmí spadnout zpátky
+  // na obecný obrázek celého webu.
   expect(new Set(adresy.values()).size).toBe(adresy.size)
 })
+
 
 test('karta a popisek jsou v jazyce stránky', async ({ page }) => {
   await page.goto('/uk/where-do-i-vote')

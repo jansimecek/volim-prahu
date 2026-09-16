@@ -71,10 +71,16 @@ Důsledky, na které se přijde až při buildu:
 - `sitemap.ts`, `robots.ts`, `icon.svg` a `api/` zůstávají mimo skupiny.
 
 **Náhledové karty pro sdílení** kreslí `next/og` za běhu ze stejných
-design tokenů jako web (`src/components/NahledovyObrazek.tsx`). Karta má
-**každá stránka vlastní**, ne jedna celá sekce: odkaz se sdílí po jedné
-konkrétní stránce a šest odkazů se stejnou kartou nedá příjemci důvod
-kliknout zrovna na tenhle. Vede na ní název stránky, ne název webu.
+design tokenů jako web (`src/components/NahledovyObrazek.tsx`). Vlastní
+kartu má každá cizojazyčná stránka a z českých ty nejsdílenější —
+`/kde-volim` a `/praha`. Odkaz se sdílí po jedné konkrétní stránce
+a několik odkazů se stejnou kartou nedá příjemci důvod kliknout zrovna
+na tenhle. Vede na ní název stránky, ne název webu. Zbytek českých
+stránek sdílí obecnou kartu ze `(cesky)/opengraph-image.tsx`.
+
+Čísla na kartě se berou z obsahu, ne z ručně psané věty: `/praha` si počet
+kandidátek vytáhne ze `strany` a počet mandátů z číselníku. Obrázek si
+při korektuře nikdo neprohlíží, takže staré číslo by v něm zůstalo.
 
 - Texty jsou v `sdileni` ve slovníku jazyka, odděleně od textů na stránce.
   Úvodní odstavec je psaný pro čtenáře, který už na stránce je, a jako
