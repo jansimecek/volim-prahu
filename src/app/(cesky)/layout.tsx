@@ -2,11 +2,13 @@ import type { Metadata, Route } from 'next'
 import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import Link from 'next/link'
 import { HlavniNavigace } from '@/components/HlavniNavigace'
+import { PrepinacJazyka } from '@/components/PrepinacJazyka'
 import { Mereni } from '@/components/Mereni'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { JAZYKY, POPIS_JAZYKA } from '@/lib/jazyky'
 import { KONTAKT_EMAIL, ZAKLAD_WEBU } from '@/lib/web'
 import { PruhRezimu } from '@/components/PruhRezimu'
-import '../styles/globals.css'
+import '../../styles/globals.css'
 
 /**
  * Fonty se hostují lokálně přes next/font. `latin-ext` je povinná subsada —
@@ -43,6 +45,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
     types: { 'application/rss+xml': '/aktualne/feed.xml' },
+    // Jazykové varianty rozcestníku. Jednotlivé stránky si `languages`
+    // přepisují samy tam, kde cizojazyčný protějšek existuje.
+    languages: { 'x-default': '/', cs: '/', en: '/en', uk: '/uk' },
   },
   openGraph: {
     type: 'website',
@@ -134,6 +139,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Volím&nbsp;Prahu
             </Link>
             <HlavniNavigace polozky={NAVIGACE} />
+            {/* Přepínač jazyků je v hlavičce, ne v patičce: cizinec, který
+                česky nečte, se na konec stránky neproscrolluje — vzdá to
+                dřív. Názvy jazyků jsou v nich samých, ne přeložené. */}
+            <div className="ms-auto">
+              <PrepinacJazyka />
+            </div>
           </div>
         </header>
 
@@ -166,6 +177,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               ))}
             </nav>
+            {/* Cizojazyčné verze i v patičce, a se zdůvodněním: český čtenář
+                je nejčastější cesta, jak se odkaz dostane k sousedovi nebo
+                kolegovi, který o svém volebním právu neví. */}
+            <div className="mt-8 border-t border-linka pt-6">
+              <p className="popisek-uredni">Pro voliče, kteří nečtou česky</p>
+              <p className="mt-2 max-w-prose">
+                Občané jiných států EU s pobytem v Praze mají v komunálních volbách
+                stejné volební právo jako Češi a většina z nich o tom neví. Kdo smí
+                volit, kde a jak, je vysvětlené i{' '}
+                {JAZYKY.map((j, i) => (
+                  <span key={j}>
+                    {i > 0 && ' a '}
+                    <Link href={`/${j}`} className="odkaz-akcent" hrefLang={j} lang={j}>
+                      {POPIS_JAZYKA[j].vlastni}
+                    </Link>
+                  </span>
+                ))}
+                .
+              </p>
+            </div>
             <p className="popisek-uredni mt-6">
               Zdroj dat o kandidátech a výsledcích:{' '}
               <a href="https://volby.gov.cz/opendata/opendata.htm" className="underline">

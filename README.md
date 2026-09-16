@@ -25,6 +25,32 @@ a jestli se stihne za čtyři roky.
   57 městských částí, termín voleb do kalendáře a vysvětlení, proč u komunálních
   voleb neexistuje voličský průkaz.
 
+### Pro voliče, kteří nečtou česky
+
+Občan jiného státu EU přihlášený k pobytu v Praze má v komunálních volbách
+**stejné volební právo jako Čech** — volí zastupitelstvo města i své městské
+části. Většina z nich o tom neví, protože úřady informace o volbách vydávají
+skoro výhradně česky. Od 1. ledna 2026 navíc nemusí nikam podávat žádost:
+dodatek stálého seznamu voličů zanikl a centrální seznam se plní ze
+základních registrů sám. Příručky, které pořád mluví o lhůtě pro zápis,
+popisují právo před volební reformou.
+
+- **[Can you vote in Prague?](https://www.volimprahu.cz/en)** — anglicky.
+- **[Чи можете ви голосувати у Празі?](https://www.volimprahu.cz/uk)** — ukrajinsky.
+
+Obě verze mají [test způsobilosti](https://www.volimprahu.cz/en/can-i-vote)
+(tři otázky, odpověď se počítá v prohlížeči a nikam se neodesílá), vysvětlení
+[jak se označuje hlasovací lístek](https://www.volimprahu.cz/en/how-to-vote),
+[co která úroveň samosprávy rozhoduje](https://www.volimprahu.cz/en/what-is-decided)
+a [kdo kandiduje](https://www.volimprahu.cz/en/who-is-running) s vylosovanými
+čísly. U každého právního tvrzení je odkaz na konkrétní paragraf.
+
+Přeložená je jen tahle část. Profily kandidátů, programy a jejich hodnocení
+zůstávají česky — a stránky to říkají nahoře, ne drobným písmem dole.
+Ukrajinská verze rovnou píše, že **občanství mimo EU volební právo v obci
+nezakládá**, takže většina ukrajinských držitelů pobytu v těchhle volbách
+volit nesmí. Falešná naděje by byla horší než jasné ne.
+
 ### Kandidáti a programy
 
 - **[Magistrát](https://www.volimprahu.cz/praha)** — 24 volebních stran
@@ -107,7 +133,12 @@ Podrobně na stránce [Jak hodnotíme](https://www.volimprahu.cz/jak-hodnotime).
   prohlížeč. Návštěvnost se měří bez cookies a signál Global Privacy Control
   nebo Do Not Track se respektuje. Podrobnosti jsou v [zásadách ochrany
   osobních údajů](https://www.volimprahu.cz/ochrana-udaju).
-- **Přístupnost.** Web se automaticky testuje proti WCAG 2.2 AA.
+- **Přístupnost.** Web se automaticky testuje proti WCAG 2.2 AA, včetně
+  anglických a ukrajinských stránek — každá z nich deklaruje svůj vlastní
+  jazyk, takže ji odečítač obrazovky přečte správnou výslovností.
+- **Překlady.** Cizojazyčnou část píše člověk, ne překladač. Doslovné citace
+  politiků se nepřekládají vůbec: přeložená citace už není citace ověřená
+  proti zdroji.
 
 ## Odkud jsou data
 

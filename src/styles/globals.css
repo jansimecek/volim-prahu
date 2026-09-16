@@ -259,6 +259,32 @@
     color: var(--color-seda-uredni);
   }
 
+  /*
+   * Verdikt volební způsobilosti v cizojazyčné verzi.
+   *
+   * Zelená a červená tu neznamenají „dobře / špatně" ani verdikt o pravdě —
+   * říkají „zákon vám to právo dává / nedává", což je fakt jako doložené
+   * splnění závazku. Stejně jako u něj barva nikdy nestojí sama: u každého
+   * závěru je značka ✓ nebo ✕ a celá věta, protože červená a okr pro
+   * deuteranopii prakticky splývají.
+   */
+  .zpusobilost-ano {
+    color: var(--color-splneno);
+  }
+  .zpusobilost-ne {
+    color: var(--color-praha);
+  }
+
+  /*
+   * Bricolage nemá cyriliku, takže by ukrajinské nadpisy spadly na systémový
+   * bezpatkový fallback a stránka by měla dvojí písmo. Source Serif cyriliku
+   * má a v sekci se stejně sází veškerý běžný text — tohle jen srovná
+   * nadpisy do téhož písma.
+   */
+  [lang='uk'] {
+    --font-display: var(--font-source-serif), Georgia, 'Times New Roman', serif;
+  }
+
   /* Barevný pruh u buňky v infografice. Nese tutéž informaci jako značka. */
   .plneni-pruh-splneno {
     border-color: var(--color-splneno);

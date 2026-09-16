@@ -32,6 +32,7 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 | `pnpm import:okrsky` | Import volebních okrsků Prahy z ČÚZK (adresy → okrsek, hranice) |
 | `pnpm nacvik` | Nácvik volební noci proti datům 2022 |
 | `pnpm gen:mc` | Doplní chybějící skelety městských částí |
+| `pnpm preloz --jazyk en --vzor '<glob>'` | Strojový překlad obsahu přes DeepL (vyžaduje `DEEPL_API_KEY`, `--nasucho` nic neodesílá) |
 
 ## Jak je repo rozdělené
 
@@ -42,6 +43,62 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
   by ruční zásah přepsal.
 - **`scripts/`** — ETL a generátory, spouští se ručně a výsledek se commituje.
 - **`src/`** — routy, komponenty, hodnotící logika.
+- **`src/preklady/`** — ručně psaný text cizojazyčné sekce. Není to
+  „řetězce v kódu": je to obsah, jen s typovou kontrolou navrch.
+
+## Cizojazyčná sekce
+
+Web má dvě jazykové verze pro voliče, kteří nečtou česky: `/en` a `/uk`.
+Nejsou to překlady celého webu — je v nich to, co rozhoduje o účasti
+(kdo smí volit, kde, kdy, jak se označuje lístek, co se vlastně volí)
+a odkazy do české verze na zbytek.
+
+**Proč jsou routy ve skupinách.** `src/app/` nemá vlastní `layout.tsx`;
+místo něj jsou dva kořenové layouty, `(cesky)/layout.tsx`
+a `(mezinarodni)/[jazyk]/layout.tsx`. Next umí víc kořenových layoutů jen
+tehdy, když nad nimi žádný nestojí, a bez toho by anglická stránka nesla
+`<html lang="cs">` — to je porušení WCAG 3.1.1, ne kosmetická vada.
+Skupiny se v adresách neprojeví, takže české cesty zůstaly beze změny.
+
+Důsledky, na které se přijde až při buildu:
+
+- `opengraph-image.tsx` a `not-found.tsx` potřebuje **každá skupina
+  zvlášť**; kořenový soubor v `src/app/` se na stránky uvnitř skupin
+  nevztahuje.
+- `src/app/not-found.tsx` (adresa mimo obě skupiny) si musí přinést
+  vlastní `<html>`, `<body>` i `<title>` — metadata Next skládá jen uvnitř
+  layoutu. Titulek je proto přímo v JSX, React 19 ho vytáhne do hlavičky.
+- `sitemap.ts`, `robots.ts`, `icon.svg` a `api/` zůstávají mimo skupiny.
+
+**Kde je text.** V `src/preklady/en.ts` a `uk.ts`. Typ `Preklad` se
+odvozuje z anglické verze (`typeof en`), takže ukrajinská neprojde `tsc`,
+dokud nemá všechny klíče. Co typ neuhlídá — délku seznamů, prázdné
+řetězce a zástupné značky `{…}` — hlídá `tests/preklady.test.ts`.
+Čísla (počty mandátů) se do vět dosazují z číselníku, ne opisují do
+každého jazyka: ručně psaný rozsah se od číselníku rozešel hned napoprvé.
+
+**Test volební způsobilosti** na `/[jazyk]/can-i-vote` je jediné místo na
+webu, kde se z údajů o člověku skládá odpověď „smíte / nesmíte".
+Vyhodnocení je oddělené od komponenty (`vyhodnot()` v
+`src/components/TestZpusobilosti.tsx`), aby šlo otestovat bez vykreslování,
+a pokryté testem pro všech osmnáct kombinací. Nic se neodesílá a nikam
+neukládá — u dotazu na pobytový status cizince je to podmínka, ne bonus.
+
+**Právní podklad** je § 4 odst. 1 zákona č. 491/2001 Sb.: volit smí občan
+ČR s trvalým pobytem v obci a občan jiného státu, kterému to přiznává
+mezinárodní smlouva. Jediná taková smlouva pokrývá občany EU, takže
+občanství mimo EU volební právo v obci nezakládá bez ohledu na délku
+pobytu. Zápis do seznamu voličů se od 1. 1. 2026 **nepodává**: dodatek
+stálého seznamu zanikl a § 23 zákona č. 88/2024 Sb. zavedl jediný
+centrální seznam plněný ze základních registrů. Příručky pro cizince,
+které pořád mluví o dodatku a o lhůtě, popisují právo před reformou.
+
+**Strojový překlad** (`pnpm preloz`) je nástroj na rozšíření sekce o další
+obsah, ne na přeložení webu. Doslovné citace politiků, hodnocení
+proveditelnosti a odkazy na paragrafy přeskakuje záměrně — přeložená
+citace není doslovná citace a web má zásadu, že citace je ověřená proti
+zdroji. Výstup nese ve frontmatteru `strojovyPreklad: true` a je určený
+k redakční kontrole, ne k přímému publikování.
 
 ## Import dat z ČSÚ
 
@@ -224,9 +281,16 @@ testy, nácvik volební noci, build, e2e a audit přístupnosti):
   v sobotu 10. 10. ve 14:00. Rozhoduje jediná funkce `smiZobrazitPruzkum`
   v `src/lib/moratorium.ts`. Návrh je fail-closed: kdyby v něm chybělo datum
   `MORATORIUM_OD` nebo citace `PRAVNI_OPORA`, `BlokPruzkumu` by nepustil ven nic.
-- Přístupnost hlídá axe se sadou pravidel WCAG 2.2 AA nad dvanácti trasami
-  (`tests/e2e/pristupnost.spec.ts`). Lighthouse staví své skóre přístupnosti
-  na témže nástroji.
+- Přístupnost hlídá axe se sadou pravidel WCAG 2.2 AA nad všemi klíčovými
+  trasami včetně anglických a ukrajinských (`tests/e2e/pristupnost.spec.ts`).
+  Lighthouse staví své skóre přístupnosti na témže nástroji. Zvlášť se měří,
+  že `<html lang>` sedí s jazykem stránky — to axe na statické stránce
+  nepozná, a přitom je to celý důvod, proč má cizojazyčná sekce vlastní
+  kořenový layout.
+- Obě jazykové verze musí mít shodnou strukturu, žádný prázdný řetězec
+  a tytéž zástupné značky (`tests/preklady.test.ts`). Kladný závěr testu
+  způsobilosti smí padnout jen tam, kde ho zákon dává — hlídá to zvlášť,
+  aby překlep ve stavu nepustil ven „ano" pro občanství mimo EU.
 - Kalkulačka mandátů na `/koalice` počítá podle § 45 zákona č. 491/2001 Sb.
   Drží ji `tests/mandaty.test.ts` proti oficiálnímu rozdělení mandátů z roku 2022
   ve všech 58 pražských zastupitelstvech a `pnpm nacvik` totéž proti živým datům ČSÚ.

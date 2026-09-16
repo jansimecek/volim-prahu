@@ -27,7 +27,8 @@
     "nacvik": "tsx scripts/nacvik-volebni-noc.ts",
     "import:senat": "tsx scripts/import-senat.ts",
     "import:okrsky": "tsx scripts/import-okrsky.ts",
-    "obrazek": "tsx scripts/nahraj-obrazek.ts"
+    "obrazek": "tsx scripts/nahraj-obrazek.ts",
+    "preloz": "tsx scripts/preloz.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

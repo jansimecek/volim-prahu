@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { programy, stranky, strany } from '#content'
 import { jeSPruzkumem, publikovane } from '@/lib/aktuality'
 import { kandidatka, vsechnyKandidatky } from '@/lib/kandidatky'
+import { JAZYKY, PODSTRANKY } from '@/lib/jazyky'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
 import { absolutni } from '@/lib/web'
@@ -32,6 +33,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolutni('/rozhovory'), changeFrequency: 'weekly', priority: 0.5 },
     { url: absolutni('/vysledky'), changeFrequency: 'weekly', priority: 0.6 },
   ]
+
+  /**
+   * Cizojazyčná sekce. Pro voliče z EU s pobytem v Praze je to jediná
+   * stránka na celém webu, která mu odpoví na otázku, jestli vůbec smí —
+   * takže musí být v sitemapě, ne jen za přepínačem v hlavičce. Priorita
+   * odpovídá /kde-volim: je to táž informace pro jinou skupinu čtenářů.
+   */
+  const cizojazycne: Polozka[] = JAZYKY.flatMap((jazyk) => [
+    { url: absolutni(`/${jazyk}`), changeFrequency: 'weekly' as const, priority: 0.9 },
+    ...PODSTRANKY.map((s) => ({
+      url: absolutni(`/${jazyk}/${s}`),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+  ])
 
   const referencni: Polozka[] = stranky
     .filter((s) => !['kde-volim'].includes(s.slug))
@@ -90,5 +106,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }))
 
-  return [...staticke, ...referencni, ...mestskeCasti, ...subjekty, ...senat, ...aktuality, ...kandidati]
+  return [...staticke, ...cizojazycne, ...referencni, ...mestskeCasti, ...subjekty, ...senat, ...aktuality, ...kandidati]
 }
