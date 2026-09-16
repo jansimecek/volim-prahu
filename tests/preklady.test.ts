@@ -1,8 +1,17 @@
 import { describe, expect, it } from 'vitest'
-import { JAZYKY, ceskyProtejsek, jazykoveVarianty, jeJazyk } from '../src/lib/jazyky'
-import { dosad } from '../src/lib/mandatyPrehled'
+import {
+  JAZYKY,
+  PODSTRANKY,
+  ceskyProtejsek,
+  cizojazycnyProtejsek,
+  jazykoveVarianty,
+  jeJazyk,
+} from '../src/lib/jazyky'
+import { dosad } from '../src/lib/sablony'
 import { PREKLADY } from '../src/preklady'
 import { dalsiOtazka, vyhodnot } from '../src/components/TestZpusobilosti'
+import { popisVzdalenosti } from '../src/components/VyhledavacOkrsku'
+import { VYHLEDAVAC_CESKY } from '../src/preklady/vyhledavacCesky'
 
 /**
  * Překlad je obsah, ne řetězce v kódu — a platí pro něj stejné pravidlo
@@ -124,11 +133,29 @@ describe('hreflang', () => {
    * Kdyby se česká stránka přejmenovala, ukáže to tenhle test dřív než
    * čtenář, který se z ukrajinské verze proklikne na 404.
    */
+  /**
+   * Dvojice musí platit oběma směry. Kdyby přepínač vedl z `/kde-volim`
+   * jinam, než kam ukazuje hreflang, poslal by čtenáře na stránku, kterou
+   * vyhledávač za překlad nepovažuje.
+   */
+  it('doslovné dvojice si odpovídají oběma směry', () => {
+    for (const cesky of ['/kde-volim', '/kdo-o-cem-rozhoduje', '/praha']) {
+      const podstranka = cizojazycnyProtejsek(cesky)
+      expect(podstranka, `${cesky} nemá protějšek`).not.toBeNull()
+      expect(PODSTRANKY).toContain(podstranka)
+      expect(ceskyProtejsek(`/${podstranka}`)).toBe(cesky)
+    }
+  })
+
+  it('stránka bez doslovného protějšku posílá na rozcestník jazyka', () => {
+    expect(cizojazycnyProtejsek('/')).toBeNull()
+    expect(cizojazycnyProtejsek('/temata')).toBeNull()
+  })
+
   it('míří jen na české cesty, které web má', () => {
     const ceske = new Set(['/', '/kde-volim', '/kdo-o-cem-rozhoduje', '/praha'])
-    for (const zbytek of ['', '/can-i-vote', '/how-to-vote', '/what-is-decided', '/who-is-running']) {
-      expect(ceske).toContain(ceskyProtejsek(zbytek))
-    }
+    for (const p of PODSTRANKY) expect(ceske).toContain(ceskyProtejsek(`/${p}`))
+    expect(ceske).toContain(ceskyProtejsek(''))
   })
 })
 
@@ -139,6 +166,67 @@ describe('hreflang', () => {
  * „smíte / nesmíte". Spletená podmínka tady znamená, že web buď někoho
  * pošle k urně zbytečně, nebo — hůř — odradí voliče, který volit smí.
  */
+/**
+ * Vyhledávač okrsku je jediná komponenta, kterou sdílí česká a cizojazyčná
+ * verze. Čeština v něm proto není výchozí zadrátovaný text, ale slovník
+ * stejného tvaru jako překlady — a musí projít stejnými kontrolami, jinak
+ * by se dalo přidat pole do angličtiny a nechat český web s `undefined`.
+ */
+describe('vyhledávač okrsku ve všech jazycích', () => {
+  const vsechny = { cs: VYHLEDAVAC_CESKY, ...Object.fromEntries(JAZYKY.map((j) => [j, PREKLADY[j].vyhledavac])) }
+
+  it('má českou variantu ve stejném tvaru jako překlady', () => {
+    const referencni = new Map<string, string>()
+    projdi(PREKLADY.en.vyhledavac, '', (cesta, hodnota) => referencni.set(cesta, tvar(hodnota)))
+
+    for (const [jazyk, texty] of Object.entries(vsechny)) {
+      const rozdily: string[] = []
+      projdi(texty, '', (cesta, hodnota) => {
+        if (referencni.get(cesta) !== tvar(hodnota)) rozdily.push(cesta)
+      })
+      expect(rozdily, `tvar vyhledávače v ${jazyk}`).toEqual([])
+    }
+  })
+
+  it('zná popis u všech typů zdroje volební místnosti', () => {
+    // Kdyby přibyl typ zdroje a některý jazyk ho neměl, spadl by výsledek
+    // vyhledávání na `undefined` místo vysvětlení, odkud adresa je.
+    for (const [jazyk, texty] of Object.entries(vsechny)) {
+      for (const typ of ['oznameni-2026', 'drivejsi-volby', 'ruian'] as const) {
+        expect(texty.zdrojeMistnosti[typ], `${typ} v ${jazyk}`).toBeTruthy()
+      }
+    }
+  })
+
+  it('popisuje vzdálenost v jazyce stránky a nezaokrouhluje na metry', () => {
+    const en = PREKLADY.en.vyhledavac
+    expect(popisVzdalenosti(20, en, 'en-GB')).toBe(en.naAdrese)
+    expect(popisVzdalenosti(430, en, 'en-GB')).toContain('450 m')
+    expect(popisVzdalenosti(1340, en, 'en-GB')).toContain('1.3 km')
+
+    const cs = VYHLEDAVAC_CESKY
+    expect(popisVzdalenosti(1340, cs, 'cs-CZ')).toContain('1,3 km')
+    expect(popisVzdalenosti(430, cs, 'cs-CZ')).toBe('Vzdušnou čarou asi 450 m od vaší adresy.')
+  })
+
+  it('nenechá v hláškách nedosazenou značku', () => {
+    for (const [jazyk, texty] of Object.entries(vsechny)) {
+      const hotove = [
+        dosad(texty.uliceNenalezena, { ulice: 'X' }),
+        dosad(texty.cisloNenalezeno, { ulice: 'X', casti: 'Y', cislo: '1' }),
+        dosad(texty.viceAdres, { pocet: 2 }),
+        dosad(texty.uredniDeska, { mc: 'Praha 7' }),
+        dosad(texty.kdoKandiduje, { mc: 'Praha 7' }),
+        dosad(texty.registrAdres, { datum: '1. 1. 2026' }),
+        dosad(texty.vicekrat, { pocet: 3 }),
+        dosad(texty.mapa.popisek, { okrsek: 1 }),
+        dosad(texty.mapa.legenda, { okrsek: 1 }),
+      ]
+      for (const text of hotove) expect(text, jazyk).not.toMatch(/\{\w+\}/)
+    }
+  })
+})
+
 describe('test volební způsobilosti', () => {
   it('občan ČR s pražským pobytem a plnoletostí volí', () => {
     expect(vyhodnot('cz', 'ano', 'ano')).toBe('czPlny')

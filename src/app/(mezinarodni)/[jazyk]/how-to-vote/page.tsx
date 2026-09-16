@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ZdrojeZakonu } from '@/components/ZdrojeZakonu'
 import { JAZYKY, jazykoveVarianty, jeJazyk } from '@/lib/jazyky'
-import { dosad, pocetMandatu } from '@/lib/mandatyPrehled'
+import { pocetMandatu } from '@/lib/mandatyPrehled'
+import { dosad } from '@/lib/sablony'
 import { preklad } from '@/preklady'
 
 export function generateStaticParams() {
@@ -56,11 +57,8 @@ export default async function HowToVote({ params }: { params: Promise<{ jazyk: s
           {s.kdeNadpis}
         </h2>
         <p className="mt-3 max-w-prose">{s.kdeText}</p>
-        {/* Vyhledávač okrsku je česky, ale zadává se do něj adresa a vypadne
-            z něj adresa a mapa — to je použitelné i bez češtiny. Odkaz proto
-            vede přímo tam, jen s upozorněním, do jakého jazyka klikáte. */}
         <p className="mt-4">
-          <Link href="/kde-volim" className="odkaz-akcent text-lg" hrefLang="cs">
+          <Link href={`/${jazyk}/where-do-i-vote`} className="odkaz-akcent text-lg">
             {s.kdeNastroj}
           </Link>
         </p>

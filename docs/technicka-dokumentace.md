@@ -50,7 +50,7 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 
 Web má dvě jazykové verze pro voliče, kteří nečtou česky: `/en` a `/uk`.
 Nejsou to překlady celého webu — je v nich to, co rozhoduje o účasti
-(kdo smí volit, kde, kdy, jak se označuje lístek, co se vlastně volí)
+(kdo smí volit, **kde**, kdy, jak se označuje lístek, co se vlastně volí)
 a odkazy do české verze na zbytek.
 
 **Proč jsou routy ve skupinách.** `src/app/` nemá vlastní `layout.tsx`;
@@ -69,6 +69,29 @@ Důsledky, na které se přijde až při buildu:
   vlastní `<html>`, `<body>` i `<title>` — metadata Next skládá jen uvnitř
   layoutu. Titulek je proto přímo v JSX, React 19 ho vytáhne do hlavičky.
 - `sitemap.ts`, `robots.ts`, `icon.svg` a `api/` zůstávají mimo skupiny.
+
+**Vyhledávač okrsku je sdílená komponenta.** `VyhledavacOkrsku`
+a `MapaOkrsku` obsluhují českou i obě cizojazyčné stránky; texty berou
+prop `texty` a formát čísel a data prop `locale`. Čeština není výchozí
+zadrátovaný text, ale `src/preklady/vyhledavacCesky.ts` ve stejném tvaru
+jako překlady (`Preklad['vyhledavac']`), takže přidaný řetězec
+v angličtině shodí `tsc`, dokud ho nemá i čeština.
+
+Přeložit se musely i stavy, kdy vyhledávač nic nenajde — právě ty
+rozhodují. Hláška „ulici jsme nenašli" v češtině čtenáři, který česky
+neumí, neřekne, jestli udělal překlep, nebo je nástroj rozbitý.
+Nepřekládají se naopak názvy ulic, městských částí a volebních místností:
+jsou to jména míst, která musí člověk poznat na ceduli.
+
+`dosad()` kvůli tomu sedí v `src/lib/sablony.ts` bez závislostí. Ve
+`mandatyPrehled.ts`, kde vzniklo, by do klientského balíku přitáhlo
+`node:fs` — ten soubor čte číselník ze souborového systému.
+
+**Přepínač jazyků** vede z české stránky na její doslovný protějšek tam,
+kde existuje (`/kde-volim` → `/en/where-do-i-vote`), jinak na rozcestník
+jazyka. Dvojice jsou v `PARY` v `src/lib/jazyky.ts` a ze stejného zdroje
+se odvozuje i hreflang, takže se nemůžou rozejít — test to hlídá oběma
+směry.
 
 **Kde je text.** V `src/preklady/en.ts` a `uk.ts`. Typ `Preklad` se
 odvozuje z anglické verze (`typeof en`), takže ukrajinská neprojde `tsc`,
