@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Route } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { MojeVolby } from '@/components/MojeVolby'
 import { VyhledavacOkrsku } from '@/components/VyhledavacOkrsku'
 import { JAZYKY, jazykoveVarianty, jeJazyk } from '@/lib/jazyky'
 import { pokrytiMistnosti } from '@/lib/mistnosti'
@@ -82,6 +83,23 @@ export default async function WhereDoIVote({ params }: { params: Promise<{ jazyk
             {s.oficialniNastroj}
           </a>
         </p>
+      </section>
+
+      {/* Podle polohy až za vyhledávačem: adresa je spolehlivější odpověď
+          (okrsek se řídí trvalým pobytem, ne tím, kde člověk zrovna stojí)
+          a nevyžaduje povolení, které spousta lidí nedá. */}
+      <section aria-labelledby="poloha">
+        <h2 id="poloha" className="text-2xl">
+          {s.polohaNadpis}
+        </h2>
+        <p className="mt-3 max-w-prose">{s.polohaPopis}</p>
+        <div className="mt-5">
+          <MojeVolby
+            texty={t.mojeVolby}
+            locale={t.formatLocale}
+            odkazNaAdresu={`/${jazyk}/where-do-i-vote` as Route}
+          />
+        </div>
       </section>
 
       <section aria-labelledby="lhuta">

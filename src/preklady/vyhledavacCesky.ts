@@ -12,6 +12,17 @@ import type { Preklad } from './typy'
  * Doslovné znění je totožné s tím, co na `/kde-volim` stálo předtím —
  * přesun do slovníku nic nepřepsal.
  */
+/**
+ * Odkud web zná adresu volební místnosti. Sdílené s widgetem podle polohy:
+ * obojí zobrazuje tutéž místnost a dvě znění téhož by se rozešla.
+ */
+export const ZDROJE_MISTNOSTI_CESKY = {
+  'oznameni-2026':
+    'Podle dokumentu městské části k volbám 2026 — sídlo okrsku z úřední desky',
+  'drivejsi-volby': 'Údaj z dřívějších voleb — do 24. 9. 2026 se může změnit',
+  ruian: 'Poznámka městské části v registru RÚIAN — není to oznámení pro rok 2026',
+}
+
 export const VYHLEDAVAC_CESKY: Preklad['vyhledavac'] = {
   ulice: 'Ulice',
   ulicePlaceholder: 'například Partyzánská',
@@ -47,12 +58,7 @@ export const VYHLEDAVAC_CESKY: Preklad['vyhledavac'] = {
   kdoKandiduje: 'Kdo kandiduje v části {mc}',
   registrAdres: 'registr adres ČÚZK k {datum}',
 
-  zdrojeMistnosti: {
-    'oznameni-2026':
-      'Podle dokumentu městské části k volbám 2026 — sídlo okrsku z úřední desky',
-    'drivejsi-volby': 'Údaj z dřívějších voleb — do 24. 9. 2026 se může změnit',
-    ruian: 'Poznámka městské části v registru RÚIAN — není to oznámení pro rok 2026',
-  },
+  zdrojeMistnosti: ZDROJE_MISTNOSTI_CESKY,
 
   mapa: {
     popisek: 'Mapa volebního okrsku {okrsek}',

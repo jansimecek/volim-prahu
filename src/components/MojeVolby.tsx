@@ -6,8 +6,11 @@ import { useState } from 'react'
 import type { PrehledProPolohu } from '@/app/api/okrsky/prehled/route'
 import type { InfoMestskeCasti } from '@/app/api/okrsky/[slug]/info/route'
 import { bodVGeometrii, vzdalenostPriblizne, type Geometrie, type Pozice } from '@/lib/geometrie'
-import { POPIS_ZDROJE } from '@/lib/mistnostiTypy'
 import { vzdalenostMetru } from '@/lib/geokodovani'
+import { dosad } from '@/lib/sablony'
+import type { Preklad } from '@/preklady'
+import { LOCALE_CESKY } from '@/preklady/vyhledavacCesky'
+import { MOJE_VOLBY_CESKY } from '@/preklady/mojeVolbyCesky'
 
 /**
  * „Moje volby" na titulní straně: z polohy prohlížeče se určí okrsek a k němu
@@ -17,6 +20,11 @@ import { vzdalenostMetru } from '@/lib/geokodovani'
  * stáhnou se jen statické soubory: středy okrsků, hranice jedné až tří
  * městských částí a informace o té nalezené. Bez povolení polohy je tu odkaz
  * na vyhledávání podle adresy.
+ *
+ * Texty a formát čísel bere zvenčí, aby tentýž widget obsloužil českou
+ * titulní stranu i cizojazyčné stránky. Čeština je v `MOJE_VOLBY_CESKY`,
+ * ve stejném tvaru jako překlady. Názvy městských částí, volebních
+ * místností a senátních obvodů zůstávají české — jsou to jména míst.
  */
 
 type Hranice = { features: { properties: { cislo: number; mestskaCast: string }; geometry: Geometrie }[] }
@@ -53,7 +61,11 @@ function ziskejPolohu(): Promise<Pozice> {
  * postupně stahovat jejich hranice a hledat polygon, ve kterém bod leží.
  * Tři části stačí i na trojmezí; dál je bod nejspíš mimo Prahu.
  */
-async function najdiOkrsek(poloha: Pozice, hlaseni: (krok: string) => void): Promise<Nalez | null> {
+async function najdiOkrsek(
+  poloha: Pozice,
+  hlaseni: (krok: string) => void,
+  texty: Preklad['mojeVolby'],
+): Promise<Nalez | null> {
   const prehled = await stahni<PrehledProPolohu>('/api/okrsky/prehled')
   const nejblizsi = new Map<string, number>()
   for (const [, mc, lon, lat] of prehled.okrsky) {
@@ -64,7 +76,7 @@ async function najdiOkrsek(poloha: Pozice, hlaseni: (krok: string) => void): Pro
   if ((kandidati[0]?.[1] ?? Infinity) > 5000) return null
 
   for (const [mc] of kandidati) {
-    hlaseni(`Hledám v hranicích okrsků…`)
+    hlaseni(texty.hledani.hranice)
     const hranice = await stahni<Hranice>(`/api/okrsky/${mc}/hranice`)
     const okrsek = hranice.features.find((f) => bodVGeometrii(poloha, f.geometry))
     if (okrsek) {
@@ -75,12 +87,26 @@ async function najdiOkrsek(poloha: Pozice, hlaseni: (krok: string) => void): Pro
   return null
 }
 
-function popisVzdalenosti(metru: number): string {
-  if (metru < 1000) return `asi ${Math.max(50, Math.round(metru / 50) * 50)} m`
-  return `asi ${(Math.round(metru / 100) / 10).toLocaleString('cs-CZ')} km`
+export function popisVzdalenosti(
+  metru: number,
+  texty: Preklad['mojeVolby'],
+  locale: string,
+): string {
+  return metru < 1000
+    ? `${Math.max(50, Math.round(metru / 50) * 50)} ${texty.jednotkaM}`
+    : `${(Math.round(metru / 100) / 10).toLocaleString(locale)} ${texty.jednotkaKm}`
 }
 
-export function MojeVolby() {
+export function MojeVolby({
+  texty = MOJE_VOLBY_CESKY,
+  locale = LOCALE_CESKY,
+  odkazNaAdresu = '/kde-volim',
+}: {
+  texty?: Preklad['mojeVolby']
+  locale?: string
+  /** Kam vede „zadat adresu". V cizojazyčné verzi na vlastní vyhledávač. */
+  odkazNaAdresu?: Route
+} = {}) {
   const [stav, setStav] = useState<Stav>({ typ: 'klid' })
 
   async function zjisti() {
@@ -88,7 +114,7 @@ export function MojeVolby() {
       setStav({ typ: 'nepodporovano' })
       return
     }
-    setStav({ typ: 'hleda', krok: 'Čekám na povolení polohy…' })
+    setStav({ typ: 'hleda', krok: texty.hledani.povoleni })
     let poloha: Pozice
     try {
       poloha = await ziskejPolohu()
@@ -97,8 +123,8 @@ export function MojeVolby() {
       return
     }
     try {
-      setStav({ typ: 'hleda', krok: 'Určuji okrsek…' })
-      const nalez = await najdiOkrsek(poloha, (krok) => setStav({ typ: 'hleda', krok }))
+      setStav({ typ: 'hleda', krok: texty.hledani.okrsek })
+      const nalez = await najdiOkrsek(poloha, (krok) => setStav({ typ: 'hleda', krok }), texty)
       setStav(nalez ? { typ: 'nalezeno', nalez } : { typ: 'mimo-prahu' })
     } catch {
       setStav({ typ: 'chyba' })
@@ -115,10 +141,10 @@ export function MojeVolby() {
             disabled={stav.typ === 'hleda'}
             className="border border-praha bg-praha px-5 py-2.5 font-display text-base font-semibold text-papir disabled:opacity-60"
           >
-            {stav.typ === 'hleda' ? stav.krok : 'Zjistit podle mojí polohy'}
+            {stav.typ === 'hleda' ? stav.krok : texty.tlacitko}
           </button>
-          <Link href="/kde-volim" className="odkaz-akcent">
-            Nebo zadat adresu
+          <Link href={odkazNaAdresu} className="odkaz-akcent">
+            {texty.neboAdresa}
           </Link>
         </div>
       )}
@@ -126,32 +152,49 @@ export function MojeVolby() {
       <div aria-live="polite" className="mt-4">
         {stav.typ === 'odmitnuto' && (
           <p className="max-w-prose">
-            Bez povolení polohy to nejde, a je to v pořádku — okrsek najdete{' '}
-            <Link href="/kde-volim" className="odkaz-akcent">
-              podle adresy
+            {texty.odmitnuto}{' '}
+            <Link href={odkazNaAdresu} className="odkaz-akcent">
+              {texty.odmitnutoOdkaz}
             </Link>
-            .
           </p>
         )}
-        {stav.typ === 'nepodporovano' && <p>Prohlížeč polohu neumí. Zkuste vyhledání podle adresy.</p>}
-        {stav.typ === 'chyba' && <p>Polohu se nepodařilo určit. Zkuste to znovu, nebo zadejte adresu.</p>}
+        {stav.typ === 'nepodporovano' && <p className="max-w-prose">{texty.nepodporovano}</p>}
+        {stav.typ === 'chyba' && <p className="max-w-prose">{texty.chyba}</p>}
         {stav.typ === 'mimo-prahu' && (
           <p className="max-w-prose">
-            Tahle poloha neleží v žádném pražském okrsku. Pokud jste teď mimo Prahu, zadejte
-            adresu trvalého pobytu{' '}
-            <Link href="/kde-volim" className="odkaz-akcent">
-              ve vyhledávači
+            {texty.mimoPrahu}{' '}
+            <Link href={odkazNaAdresu} className="odkaz-akcent">
+              {texty.mimoPrahuOdkaz}
             </Link>
-            .
           </p>
         )}
-        {stav.typ === 'nalezeno' && <Vysledek nalez={stav.nalez} znovu={() => setStav({ typ: 'klid' })} />}
+        {stav.typ === 'nalezeno' && (
+          <Vysledek
+            nalez={stav.nalez}
+            znovu={() => setStav({ typ: 'klid' })}
+            texty={texty}
+            locale={locale}
+            odkazNaAdresu={odkazNaAdresu}
+          />
+        )}
       </div>
     </div>
   )
 }
 
-function Vysledek({ nalez, znovu }: { nalez: Nalez; znovu: () => void }) {
+function Vysledek({
+  nalez,
+  znovu,
+  texty,
+  locale,
+  odkazNaAdresu,
+}: {
+  nalez: Nalez
+  znovu: () => void
+  texty: Preklad['mojeVolby']
+  locale: string
+  odkazNaAdresu: Route
+}) {
   const { okrsek, info, poloha } = nalez
   const mistnost = info.mistnosti[okrsek]
   const urlMC = `/mestska-cast/${info.mestskaCast}` as Route
@@ -162,76 +205,78 @@ function Vysledek({ nalez, znovu }: { nalez: Nalez; znovu: () => void }) {
   return (
     <div className="grid gap-px border border-inkoust bg-linka-silna md:grid-cols-2">
       <div className="bg-papir p-5">
-        <p className="popisek-uredni">Vaše poloha leží v části</p>
-        <p className="mt-1 font-display text-2xl font-semibold">{info.nazev}</p>
-        <p className="mt-1 text-sm">
-          Volební okrsek <span className="font-mono">{okrsek}</span>. Volí se tu jen podle
-          trvalého pobytu — pokud bydlíte jinde, platí vaše adresa, ne tohle místo.
+        <p className="popisek-uredni">{texty.polohaLeziV}</p>
+        {/* Název městské části je jméno místa, ne text k překladu. */}
+        <p className="mt-1 font-display text-2xl font-semibold" lang="cs">
+          {info.nazev}
         </p>
+        <p className="mt-1 text-sm">{dosad(texty.okrsekVeta, { okrsek })}</p>
         <p className="mt-3">
-          <Link href={urlMC} className="odkaz-akcent">
-            Kandidátky do zastupitelstva vaší městské části
-            {info.pocetStran > 0 && ` (${info.pocetStran} stran)`}
+          <Link href={urlMC} className="odkaz-akcent" hrefLang="cs">
+            {texty.kandidatkyMC}
+            {info.pocetStran > 0 && ` ${dosad(texty.pocetStran, { pocet: info.pocetStran })}`}
           </Link>
         </p>
         <p className="mt-1">
-          <Link href="/praha" className="odkaz-akcent">
-            Kandidátky na magistrát (volí celá Praha)
+          <Link href="/praha" className="odkaz-akcent" hrefLang="cs">
+            {texty.kandidatkyMagistrat}
           </Link>
         </p>
       </div>
 
       <div className="bg-papir p-5">
-        <p className="popisek-uredni">Senát</p>
+        <p className="popisek-uredni">{texty.senatNadpis}</p>
         {info.senat.stav === 'nevoli' && (
           <p className="mt-1">
-            Ve vaší části se letos <strong>senátor nevolí</strong>. Senátní lístek nedostanete.
+            {/* Zvýrazněná je celá věta, ne půlka: kolem <strong> uprostřed
+                věty se nedá skládat text v jazyce s jiným slovosledem. */}
+            <strong>{texty.senatNevoliHlavni}</strong> {texty.senatNevoliDoplnek}
           </p>
         )}
-        {info.senat.stav === 'voli' && (
+        {info.senat.stav !== 'nevoli' && (
           <p className="mt-1">
-            Volíte i senátora v obvodu č. {info.senat.cislo} ({info.senat.nazev}).{' '}
-            <Link href={`/senat/${info.senat.slug}` as Route} className="odkaz-akcent">
-              Kandidáti do Senátu
-            </Link>
-          </p>
-        )}
-        {info.senat.stav === 'castecne' && (
-          <p className="mt-1">
-            Část území volí senátora v obvodu č. {info.senat.cislo} ({info.senat.nazev}):{' '}
-            {info.senat.popis}.{' '}
-            <Link href={`/senat/${info.senat.slug}` as Route} className="odkaz-akcent">
-              Kandidáti do Senátu
+            {dosad(
+              info.senat.stav === 'voli' ? texty.senatVoli : texty.senatCastecne,
+              {
+                cislo: info.senat.cislo,
+                nazev: info.senat.nazev,
+                popis: info.senat.stav === 'castecne' ? info.senat.popis : '',
+              },
+            )}{' '}
+            <Link href={`/senat/${info.senat.slug}` as Route} className="odkaz-akcent" hrefLang="cs">
+              {texty.kandidatiSenatu}
             </Link>
           </p>
         )}
       </div>
 
       <div className="bg-papir p-5 md:col-span-2">
-        <p className="popisek-uredni">Volební místnost okrsku {okrsek}</p>
+        <p className="popisek-uredni">{dosad(texty.mistnostOkrsku, { okrsek })}</p>
         {mistnost ? (
           <>
-            <p className="mt-1">
+            <p className="mt-1" lang="cs">
               <strong>{mistnost.nazev}</strong>
               {mistnost.adresa !== mistnost.nazev && <>, {mistnost.adresa}</>}
               {vzdalenost !== undefined && (
-                <span className="text-sm"> · {popisVzdalenosti(vzdalenost)} od vaší polohy</span>
+                <span className="text-sm" lang={undefined}>
+                  {' · '}
+                  {dosad(texty.odVasiPolohy, {
+                    vzdalenost: popisVzdalenosti(vzdalenost, texty, locale),
+                  })}
+                </span>
               )}
             </p>
-            <p className="popisek-uredni mt-2">{POPIS_ZDROJE[mistnost.zdroj.typ]}</p>
+            <p className="popisek-uredni mt-2">{texty.zdrojeMistnosti[mistnost.zdroj.typ]}</p>
           </>
         ) : (
-          <p className="mt-1">
-            Adresu místnosti pro tento okrsek zatím neznáme. Zveřejní ji úřední deska
-            nejpozději 24. září 2026.
-          </p>
+          <p className="mt-1 max-w-prose">{texty.mistnostNeznama}</p>
         )}
         <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-          <Link href="/kde-volim" className="odkaz-akcent">
-            Mapa okrsku a hledání podle adresy
+          <Link href={odkazNaAdresu} className="odkaz-akcent">
+            {texty.mapaAHledani}
           </Link>
           <button type="button" onClick={znovu} className="odkaz-akcent">
-            Zjistit znovu
+            {texty.znovu}
           </button>
         </p>
       </div>

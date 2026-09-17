@@ -41,8 +41,8 @@ popisují právo před volební reformou.
 Obě verze mají [test způsobilosti](https://www.volimprahu.cz/en/can-i-vote)
 (tři otázky, odpověď se počítá v prohlížeči a nikam se neodesílá),
 [vyhledávač volebního okrsku a místnosti podle adresy](https://www.volimprahu.cz/en/where-do-i-vote)
-— tentýž nástroj jako na české stránce, včetně mapy a hlášek, když adresa
-nenajde —, vysvětlení
+i určení okrsku podle polohy — tytéž nástroje jako na české stránce,
+včetně mapy a hlášek, když se adresa nenajde —, vysvětlení
 [jak se označuje hlasovací lístek](https://www.volimprahu.cz/en/how-to-vote),
 [co která úroveň samosprávy rozhoduje](https://www.volimprahu.cz/en/what-is-decided)
 a [kdo kandiduje](https://www.volimprahu.cz/en/who-is-running) s vylosovanými
