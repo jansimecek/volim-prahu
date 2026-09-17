@@ -37,6 +37,9 @@ popisují právo před volební reformou.
 
 - **[Can you vote in Prague?](https://www.volimprahu.cz/en)** — anglicky.
 - **[Чи можете ви голосувати у Празі?](https://www.volimprahu.cz/uk)** — ukrajinsky.
+- **[Môžete v Prahe voliť?](https://www.volimprahu.cz/sk)** — slovensky. Slováci
+  jsou největší skupina občanů EU s pobytem v Praze, takže je za touhle verzí
+  nejvíc lidí, kteří opravdu volit smějí.
 
 Obě verze mají [test způsobilosti](https://www.volimprahu.cz/en/can-i-vote)
 (tři otázky, odpověď se počítá v prohlížeči a nikam se neodesílá),

@@ -178,6 +178,34 @@
     border-bottom-color: var(--color-praha);
   }
 
+  /*
+   * Odkaz v přepínači jazyků.
+   *
+   * Na rozdíl od zbytku navigace bez verzálek a prostrkání: názvy jazyků
+   * jsou vlastní jména a „УКРАЇНСЬКА" verzálkami křičí. Hlavně se ale
+   * čtveřice jazyků s vlajkami vejde na telefonu na jeden řádek místo
+   * dvou — a v hlavičce je každý řádek znát.
+   */
+  .odkaz-jazyk {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-inkoust);
+    text-decoration: none;
+    padding-block: 0.4rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .odkaz-jazyk:hover {
+    border-bottom-color: var(--color-linka-silna);
+  }
+
+  .odkaz-jazyk[aria-current] {
+    border-bottom-color: var(--color-praha);
+  }
+
   /* Drobečková navigace. Odděluje se znakem, ne obrázkem, a ten je skrytý AT. */
   .drobecky {
     font-family: var(--font-mono);

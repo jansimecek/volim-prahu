@@ -36,6 +36,7 @@ export const uk: Preklad = {
 
   chrome: {
     preskocit: 'Перейти до змісту',
+    menuTlacitko: 'Меню',
     hlavniNavigace: 'Головна навігація',
     patickaNavigace: 'Нижнє меню',
     prepinacJazyka: 'Мова',

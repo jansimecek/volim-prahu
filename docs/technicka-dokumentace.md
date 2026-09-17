@@ -48,7 +48,9 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 
 ## Cizojazyčná sekce
 
-Web má dvě jazykové verze pro voliče, kteří nečtou česky: `/en` a `/uk`.
+Web má tři jazykové verze pro voliče, kteří nečtou česky: `/en`, `/uk`
+a `/sk`. Slováci jsou největší skupina občanů EU s pobytem v Praze, tedy
+ta, za kterou je nejvíc lidí, kteří skutečně volit smějí.
 Nejsou to překlady celého webu — je v nich to, co rozhoduje o účasti
 (kdo smí volit, **kde**, kdy, jak se označuje lístek, co se vlastně volí)
 a odkazy do české verze na zbytek.
@@ -100,6 +102,35 @@ při korektuře nikdo neprohlíží, takže staré číslo by v něm zůstalo.
 `og:locale` nese jazyk stránky a `og:locale:alternate` obě zbylé verze,
 aby jazykové mutace nevypadaly jako tři samostatné weby.
 
+**Jazyková předpona v cestě** se odstraňuje funkcí `odstranJazyk()`
+odvozenou ze seznamu `JAZYKY`, ne ručně psaným regexem. Před přidáním
+slovenštiny byl regex `(en|uk)` na třech místech a `/sk/…` by se tiše
+nerozpoznalo — přepínač by ze slovenské stránky vedl na rozcestník místo
+na překlad téže stránky a navigace by neoznačila aktivní položku. Test
+prochází všechny jazyky ze seznamu, takže další přibývá bez zásahu.
+
+**Menu na úzké obrazovce.** Deset odkazů v mono verzálkách zabíralo
+s přepínačem jazyků zhruba 40 % první obrazovky telefonu, než začal obsah,
+a většina návštěv přijde z telefonu. Od `sm` dolů je seznam za tlačítkem
+(`aria-expanded`, `aria-controls`, zavírá Escape i kliknutí na odkaz),
+od `sm` výš je tlačítko `display: none`, takže není ani v přístupnostním
+stromu. Zavírá se v `onClick` odkazu, ne efektem na změnu cesty: efekt,
+který volá `setState`, je kaskádový render a eslint ho zakazuje — a kliknutí
+navíc zabere i u odkazu na tutéž stránku, kde se cesta nezmění.
+
+Schovaný seznam je `display: none`, takže jeho odkazy nejsou v přístupnostním
+stromu a `getByRole('link')` je nenajde. E2e testy, které ověřují dosažitelnost
+z hlavní navigace, proto volají `otevriNavigaci()` z `tests/e2e/pomocnici.ts` —
+projdou tutéž cestu jako čtenář na telefonu.
+
+**Přepínač jazyků zůstává vidět vždycky**, i se zavřeným menu. Je to jediná
+cesta, jak se cizinec k překladu dostane; schovat ho za tlačítko „Menu"
+by znamenalo schovat ho právě před tím, kdo to slovo nepřečte. Vlajky jsou
+u názvů proto, že se hledají očima rychleji než slovo. U angličtiny je
+vlajka EU, ne britská: angličtina tu nezastupuje stát, ale dorozumívací
+jazyk — a zároveň přesně tu skupinu, které volební právo v obci vzniká.
+Vlajka je pro odečítač skrytá a název jazyka stojí vedle ní.
+
 **Vyhledávač okrsku a widget podle polohy jsou sdílené komponenty.**
 `VyhledavacOkrsku`, `MapaOkrsku` a `MojeVolby` obsluhují českou i obě
 cizojazyčné stránky; texty berou prop `texty` a formát čísel a data prop
@@ -136,7 +167,7 @@ jazyka. Dvojice jsou v `PARY` v `src/lib/jazyky.ts` a ze stejného zdroje
 se odvozuje i hreflang, takže se nemůžou rozejít — test to hlídá oběma
 směry.
 
-**Kde je text.** V `src/preklady/en.ts` a `uk.ts`. Typ `Preklad` se
+**Kde je text.** V `src/preklady/en.ts`, `uk.ts` a `sk.ts`. Typ `Preklad` se
 odvozuje z anglické verze (`typeof en`), takže ukrajinská neprojde `tsc`,
 dokud nemá všechny klíče. Co typ neuhlídá — délku seznamů, prázdné
 řetězce a zástupné značky `{…}` — hlídá `tests/preklady.test.ts`.

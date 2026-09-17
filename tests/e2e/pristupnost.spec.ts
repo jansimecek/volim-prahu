@@ -40,6 +40,9 @@ const TRASY = [
   { cesta: '/uk/can-i-vote', nazev: 'ukrajinsky: smím volit' },
   { cesta: '/uk/what-is-decided', nazev: 'ukrajinsky: co se volí' },
   { cesta: '/uk/where-do-i-vote', nazev: 'ukrajinsky: kde volím' },
+  { cesta: '/sk', nazev: 'slovenský rozcestník' },
+  { cesta: '/sk/can-i-vote', nazev: 'slovensky: smím volit' },
+  { cesta: '/sk/where-do-i-vote', nazev: 'slovensky: kde volím' },
 ]
 
 for (const { cesta, nazev } of TRASY) {
@@ -83,6 +86,8 @@ for (const { cesta, jazyk } of [
   { cesta: '/uk', jazyk: 'uk' },
   { cesta: '/uk/how-to-vote', jazyk: 'uk' },
   { cesta: '/uk/where-do-i-vote', jazyk: 'uk' },
+  { cesta: '/sk', jazyk: 'sk' },
+  { cesta: '/sk/how-to-vote', jazyk: 'sk' },
 ]) {
   test(`${cesta} deklaruje jazyk ${jazyk}`, async ({ page }) => {
     await page.goto(cesta)
@@ -181,6 +186,8 @@ test('nejsdílenější stránky mají vlastní náhledovou kartu', async ({ pag
     // a kandidátky na magistrát.
     '/kde-volim',
     '/praha',
+    '/sk',
+    '/sk/can-i-vote',
   ]) {
     await page.goto(cesta)
     const obrazek = await page.locator('meta[property="og:image"]').getAttribute('content')
@@ -277,4 +284,88 @@ test('karta a popisek jsou v jazyce stránky', async ({ page }) => {
     'content',
     /English/,
   )
+})
+
+/**
+ * Menu na úzké obrazovce. Deset odkazů v mono verzálkách zabíralo
+ * na telefonu s přepínačem jazyků zhruba 40 % první obrazovky, než začal
+ * obsah — a většina návštěv přijde z telefonu.
+ *
+ * Testuje se to, co se dá rozbít potichu: že je seznam zpočátku schovaný,
+ * že ho tlačítko otevře, že se po přechodu na jinou stránku zase zavře
+ * a že na desktopu tlačítko vůbec není.
+ */
+test.describe('mobilní menu', () => {
+  test.use({ viewport: { width: 375, height: 812 } })
+
+  test('rozbalí a zase zavře hlavní navigaci', async ({ page }) => {
+    await page.goto('/')
+    const tlacitko = page.getByRole('button', { name: 'Menu' })
+    const odkaz = page
+      .getByRole('navigation', { name: 'Hlavní navigace' })
+      .getByRole('link', { name: 'Magistrát' })
+
+    await expect(tlacitko).toHaveAttribute('aria-expanded', 'false')
+    await expect(odkaz).toBeHidden()
+
+    await tlacitko.click()
+    await expect(tlacitko).toHaveAttribute('aria-expanded', 'true')
+    await expect(odkaz).toBeVisible()
+
+    // Po přechodu nemá menu zůstat rozbalené přes obsah, kvůli kterému se klikalo.
+    await odkaz.click()
+    await expect(page).toHaveURL(/\/praha$/)
+    await expect(page.getByRole('button', { name: 'Menu' })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    )
+  })
+
+  test('zavírá se klávesou Escape', async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('button', { name: 'Menu' }).click()
+    await expect(
+      page.getByRole('navigation', { name: 'Hlavní navigace' }).getByRole('link', { name: 'Magistrát' }),
+    ).toBeVisible()
+
+    await page.keyboard.press('Escape')
+    await expect(page.getByRole('button', { name: 'Menu' })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    )
+  })
+
+  test('přepínač jazyků zůstává vidět i se zavřeným menu', async ({ page }) => {
+    // Přepínač je jediná cesta, jak se cizinec k překladu dostane. Schovat
+    // ho do menu by znamenalo schovat ho před tím, kdo neumí přečíst „Menu“.
+    await page.goto('/')
+    // Scopováno na přepínač: „English" je i v patičce, v odstavci pro
+    // české čtenáře, kteří odkaz posílají dál.
+    const prepinac = page.getByRole('navigation', { name: /Language/ })
+    await expect(prepinac.getByRole('link', { name: 'English' })).toBeVisible()
+    await expect(prepinac.getByRole('link', { name: 'Slovenčina' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Menu' })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    )
+  })
+})
+
+test('na širokém okně je navigace vidět a tlačítko menu nikde', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 })
+  await page.goto('/')
+  await expect(
+    page.getByRole('navigation', { name: 'Hlavní navigace' }).getByRole('link', { name: 'Magistrát' }),
+  ).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Menu' })).toBeHidden()
+})
+
+test('slovenský vyhledávač najde okrsek a hlásí se slovensky', async ({ page }) => {
+  await page.goto('/sk/where-do-i-vote')
+  await page.getByRole('combobox', { name: 'Ulica' }).fill('partyzanska')
+  await page.getByRole('textbox', { name: 'Číslo' }).fill('23')
+  await page.getByRole('button', { name: 'Nájsť okrsok' }).click()
+
+  await expect(page.getByText('Volebný okrsok 7001')).toBeVisible()
+  await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)
 })
