@@ -2,10 +2,13 @@ import { describe, expect, it } from 'vitest'
 import {
   JAZYKY,
   PODSTRANKY,
+  POPIS_JAZYKA,
+  VLAJKA_CESKY,
   ceskyProtejsek,
   cizojazycnyProtejsek,
   jazykoveVarianty,
   jeJazyk,
+  odstranJazyk,
 } from '../src/lib/jazyky'
 import { dosad } from '../src/lib/sablony'
 import { PREKLADY, type Preklad } from '../src/preklady'
@@ -220,6 +223,51 @@ describe('rozpoznání jazyka v adrese', () => {
     expect(jeJazyk('uk')).toBe(true)
     expect(jeJazyk('cs')).toBe(false)
     expect(jeJazyk('de')).toBe(false)
+  })
+})
+
+/**
+ * Vlajky v přepínači jazyků. Vlajka je jediná věc, kterou čtenář v cizím
+ * jazyce pozná dřív, než začne číst, takže chybějící nebo prohozená je
+ * dražší než překlep v textu.
+ */
+/**
+ * Odstranění jazykové předpony z cesty. Dřív to byl regex `(en|uk)` na
+ * třech místech; při přidání slovenštiny by se `/sk/...` tiše nerozpoznalo
+ * a přepínač by z ní vedl na rozcestník místo na překlad téže stránky.
+ */
+describe('jazyková předpona v cestě', () => {
+  it('se odstraní u každého podporovaného jazyka', () => {
+    for (const j of JAZYKY) {
+      expect(odstranJazyk(`/${j}`)).toBe('')
+      expect(odstranJazyk(`/${j}/can-i-vote`)).toBe('/can-i-vote')
+    }
+  })
+
+  it('nechá české cesty být', () => {
+    expect(odstranJazyk('/')).toBe('/')
+    expect(odstranJazyk('/kde-volim')).toBe('/kde-volim')
+    expect(odstranJazyk('/praha/strana/spolu-pro-prahu')).toBe('/praha/strana/spolu-pro-prahu')
+  })
+
+  it('nesplete si českou cestu s jazykem', () => {
+    // `/senat` začíná jinak než jakýkoli jazykový kód, ale kdyby někdo
+    // přidal jazyk, jehož kód se kryje s existující cestou, ukáže to tohle.
+    for (const j of JAZYKY) expect(['senat', 'praha', 'temata']).not.toContain(j)
+  })
+})
+
+describe('vlajky jazyků', () => {
+  it('má každý jazyk vlastní vlajku', () => {
+    const vlajky = JAZYKY.map((j) => POPIS_JAZYKA[j].vlajka)
+    expect(vlajky.every((v) => v.length > 0)).toBe(true)
+    expect(new Set([...vlajky, VLAJKA_CESKY]).size).toBe(vlajky.length + 1)
+  })
+
+  it('má angličtina vlajku EU, ne státní', () => {
+    // Angličtina tu nezastupuje stát, ale dorozumívací jazyk — a zároveň
+    // přesně tu skupinu, které volební právo v obci vzniká.
+    expect(POPIS_JAZYKA.en.vlajka).toBe('🇪🇺')
   })
 })
 

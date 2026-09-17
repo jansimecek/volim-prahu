@@ -14,7 +14,7 @@
  * strojový překlad doslovné citace už doslovná citace není.
  */
 
-export const JAZYKY = ['en', 'uk'] as const
+export const JAZYKY = ['en', 'uk', 'sk'] as const
 
 export type Jazyk = (typeof JAZYKY)[number]
 
@@ -23,13 +23,32 @@ export function jeJazyk(hodnota: string): hodnota is Jazyk {
 }
 
 /**
+ * Cesta bez jazykové předpony: `/uk/can-i-vote` → `/can-i-vote`.
+ *
+ * Odvozuje se ze seznamu jazyků, ne z ručně psaného regexu. Při přidání
+ * slovenštiny byl ten regex na třech místech a `/sk/...` by se tiše
+ * nerozpoznalo — přepínač by z ní vedl na rozcestník místo na překlad.
+ */
+export function odstranJazyk(cesta: string): string {
+  const shoda = cesta.match(/^\/([^/]+)(\/.*)?$/)
+  return shoda && jeJazyk(shoda[1] ?? '') ? (shoda[2] ?? '') : cesta
+}
+
+/**
  * Popis jazyka. `vlastni` je název jazyka v něm samém — přepínač jazyků
  * musí být čitelný pro toho, kdo aktuální jazyk stránky neumí.
  */
-export const POPIS_JAZYKA: Record<Jazyk, { vlastni: string; cesky: string; htmlLang: string }> = {
-  en: { vlastni: 'English', cesky: 'anglicky', htmlLang: 'en' },
-  uk: { vlastni: 'Українська', cesky: 'ukrajinsky', htmlLang: 'uk' },
+export const POPIS_JAZYKA: Record<
+  Jazyk,
+  { vlastni: string; cesky: string; htmlLang: string; vlajka: string }
+> = {
+  en: { vlastni: 'English', cesky: 'anglicky', htmlLang: 'en', vlajka: '🇪🇺' },
+  uk: { vlastni: 'Українська', cesky: 'ukrajinsky', htmlLang: 'uk', vlajka: '🇺🇦' },
+  sk: { vlastni: 'Slovenčina', cesky: 'slovensky', htmlLang: 'sk', vlajka: '🇸🇰' },
 }
+
+/** Vlajka české verze. Není v `POPIS_JAZYKA`, protože čeština není překlad. */
+export const VLAJKA_CESKY = '🇨🇿'
 
 /** Podstránky cizojazyčné verze. Slugy jsou anglické ve všech jazycích. */
 export const PODSTRANKY = [
@@ -60,7 +79,7 @@ export const ZDROJ_POCTU_CIZINCU = {
  * než neúplný překlad do třetího jazyka.
  */
 export function jazykoveVarianty(cesta: string): Record<string, string> {
-  const zbytek = cesta.replace(/^\/(en|uk)(?=\/|$)/, '')
+  const zbytek = odstranJazyk(cesta)
   const cesky = ceskyProtejsek(zbytek)
   const mapa: Record<string, string> = { 'x-default': cesky, cs: cesky }
   for (const j of JAZYKY) mapa[j] = `/${j}${zbytek}`
@@ -131,6 +150,6 @@ export function cizojazycneVarianty(
  * Locale ve tvaru, jaký chce Open Graph (`og:locale`). Liší se od `htmlLang`
  * podtržítkem a regionem — sociální sítě jiný tvar ignorují.
  */
-export const OG_LOCALE: Record<Jazyk, string> = { en: 'en_GB', uk: 'uk_UA' }
+export const OG_LOCALE: Record<Jazyk, string> = { en: 'en_GB', uk: 'uk_UA', sk: 'sk_SK' }
 
 export const OG_LOCALE_CESKY = 'cs_CZ'

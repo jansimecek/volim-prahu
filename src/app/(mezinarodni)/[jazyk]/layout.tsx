@@ -122,7 +122,11 @@ export default async function MezinarodniLayout({
             <Link href={`/${jazyk}`} className="font-display text-lg font-semibold no-underline">
               Volím&nbsp;Prahu
             </Link>
-            <HlavniNavigace polozky={navigace} popisek={t.chrome.hlavniNavigace} />
+            <HlavniNavigace
+              polozky={navigace}
+              popisek={t.chrome.hlavniNavigace}
+              popisekTlacitka={t.chrome.menuTlacitko}
+            />
             <div className="ms-auto">
               <PrepinacJazyka aktualni={jazyk} />
             </div>

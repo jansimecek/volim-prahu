@@ -36,6 +36,7 @@ export const en = {
 
   chrome: {
     preskocit: 'Skip to content',
+    menuTlacitko: 'Menu',
     hlavniNavigace: 'Main navigation',
     patickaNavigace: 'Footer',
     prepinacJazyka: 'Language',

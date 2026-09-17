@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { otevriNavigaci } from './pomocnici'
 
 test('rozcestník nabídne obě úrovně samosprávy', async ({ page }) => {
   await page.goto('/')
@@ -24,6 +25,7 @@ test('titulní strana zjistí okrsek z polohy', async ({ page, context }) => {
 
 test('plnění slibů je v hlavní navigaci', async ({ page }) => {
   await page.goto('/')
+  await otevriNavigaci(page)
   await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Plnění slibů').click()
   await expect(page).toHaveURL(/\/minule-obdobi$/)
 })
@@ -62,6 +64,7 @@ test('stránka městské části vypisuje kandidující subjekty', async ({ page
 
 test('metodika je dosažitelná z hlavní navigace', async ({ page }) => {
   await page.goto('/')
+  await otevriNavigaci(page)
   await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Metodika').click()
   await expect(page).toHaveURL(/\/jak-hodnotime$/)
   await expect(page.getByRole('heading', { name: 'Přehled stavů' })).toBeVisible()
@@ -125,6 +128,7 @@ test('každá stránka má funkční přeskočení na obsah', async ({ page }) =
 
 test('navigace ukazuje, na které stránce čtenář je', async ({ page }) => {
   await page.goto('/praha')
+  await otevriNavigaci(page)
   const navigace = page.getByRole('navigation', { name: 'Hlavní navigace' })
   await expect(navigace.getByRole('link', { name: 'Magistrát' })).toHaveAttribute(
     'aria-current',
@@ -133,6 +137,7 @@ test('navigace ukazuje, na které stránce čtenář je', async ({ page }) => {
   // Stav „jsem tady" musí platit i o úroveň hlouběji, jinak se čtenář
   // na profilu strany ztratí ze sekce.
   await page.goto('/praha/strana/ano-2011')
+  await otevriNavigaci(page)
   await expect(navigace.getByRole('link', { name: 'Magistrát' })).toHaveAttribute(
     'aria-current',
     'page',
