@@ -65,6 +65,12 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
 - **[Městské části](https://www.volimprahu.cz/mestska-cast)** — všech 57
   zastupitelstev městských částí: počet mandátů, kandidující subjekty, vedení
   radnice a místní témata.
+- **Kandidáti do 40 let** — na každé kandidátní listině, na magistrát i do
+  městských částí, mají kandidáti mladší 40 let u věku značku a listinu jde
+  zúžit jen na ně; čísla přitom zůstávají ta z hlasovacího lístku. Věk je
+  z registru kandidátů ČSÚ a značka je údaj, ne doporučení. V senátních
+  obvodech se neobjeví: zvolen do Senátu může být jen ten, kdo dosáhl 40 let
+  (čl. 19 odst. 2 Ústavy).
 - **[Senát](https://www.volimprahu.cz/senat)** — tři pražské senátní obvody,
   ve kterých se letos volí, a přehled, kdo senátní lístek dostane a kdo ne.
 - **[Témata](https://www.volimprahu.cz/temata)** — co lídři řekli o bydlení,
