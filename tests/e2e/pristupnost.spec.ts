@@ -96,7 +96,7 @@ test('filtr podle věku zúží kandidátku a nechá ji přístupnou', async ({ 
 
 /**
  * Číslování na kandidátce není pořadí řádků, ale pozice na hlasovacím lístku.
- * Kdyby filtr čísla přepočítal, poslal by voliče kroužkovat jiné jméno.
+ * Kdyby filtr čísla přepočítal, poslal by voliče křížkovat jiné jméno.
  */
 test('zúžená kandidátka si nechává čísla z hlasovacího lístku', async ({ page }) => {
   await page.goto('/praha/strana/praha-sobe')
