@@ -4,6 +4,9 @@ import { useMemo, useState } from 'react'
 import { PrepinacRazeni } from '@/components/PrepinacRazeni'
 import { POPISEK_RAZENI, dostupneKlice, serad, type KlicRazeni } from '@/lib/razeni'
 import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
+import { FiltrKandidatky } from '@/components/FiltrKandidatky'
+import { BunkaVeku, VysvetlivkaVeku } from '@/components/VekKandidata'
+import { jeMladyKandidat } from '@/lib/vekKandidata'
 
 export type RadekKandidata = {
   slug: string
@@ -54,6 +57,15 @@ export function KandidatiSenatu({ kandidati }: { kandidati: RadekKandidata[] }) 
 
   const serazeni = useMemo(() => serad(polozky, ucinny), [polozky, ucinny])
 
+  /**
+   * Do Senátu může být podle čl. 19 odst. 2 Ústavy zvolen jen občan, který
+   * dosáhl věku 40 let. Mladší kandidát se v obvodu objevit nemůže, takže
+   * filtr ani značka u věku tady v praxi nikdy nenaskočí — a přesně proto se
+   * počet bere z dat a ne natvrdo. Kdyby v registru někdo takový byl, ukáže
+   * se, místo aby ho tabulka mlčky srovnala s ostatními.
+   */
+  const mladych = useMemo(() => kandidati.filter((k) => jeMladyKandidat(k.vek)).length, [kandidati])
+
   return (
     <div>
       <PrepinacRazeni klice={klice} klic={ucinny} naZmenu={setKlic} popisky={POPISKY} />
@@ -63,30 +75,38 @@ export function KandidatiSenatu({ kandidati }: { kandidati: RadekKandidata[] }) 
         {(POPISKY[ucinny as keyof typeof POPISKY] ?? POPISEK_RAZENI[ucinny]).toLowerCase()}.
       </p>
 
-      <PosuvnaTabulka popisek="Kandidáti do Senátu" trida="mt-5">
-        <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
-          <thead>
-            <tr className="border-b border-inkoust">
-              <th className="popisek-uredni py-2 pr-3 text-right">#</th>
-              <th className="popisek-uredni py-2 pr-3">Jméno</th>
-              <th className="popisek-uredni py-2 pr-3 text-right">Věk</th>
-              <th className="popisek-uredni py-2 pr-3">Navrhla</th>
-              <th className="popisek-uredni py-2">Povolání</th>
-            </tr>
-          </thead>
-          <tbody>
-            {serazeni.map((k) => (
-              <tr key={k.slug} className="border-b border-linka-silna align-top">
-                <td className="py-2 pr-3 text-right font-mono">{k.cislo ?? '—'}</td>
-                <td className="py-2 pr-3">{k.celeJmeno}</td>
-                <td className="py-2 pr-3 text-right font-mono">{k.vek}</td>
-                <td className="py-2 pr-3">{k.volebniStrana || '—'}</td>
-                <td className="py-2">{k.povolani || '—'}</td>
+      <FiltrKandidatky mladych={mladych} celkem={kandidati.length}>
+        <PosuvnaTabulka popisek="Kandidáti do Senátu" trida="mt-5">
+          <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-inkoust">
+                <th className="popisek-uredni py-2 pr-3 text-right">#</th>
+                <th className="popisek-uredni py-2 pr-3">Jméno</th>
+                <th className="popisek-uredni py-2 pr-3 text-right">Věk</th>
+                <th className="popisek-uredni py-2 pr-3">Navrhla</th>
+                <th className="popisek-uredni py-2">Povolání</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </PosuvnaTabulka>
+            </thead>
+            <tbody>
+              {serazeni.map((k) => (
+                <tr
+                  key={k.slug}
+                  data-mlady={jeMladyKandidat(k.vek) ? 'ano' : 'ne'}
+                  className="border-b border-linka-silna align-top"
+                >
+                  <td className="py-2 pr-3 text-right font-mono">{k.cislo ?? '—'}</td>
+                  <td className="py-2 pr-3">{k.celeJmeno}</td>
+                  <BunkaVeku vek={k.vek} />
+                  <td className="py-2 pr-3">{k.volebniStrana || '—'}</td>
+                  <td className="py-2">{k.povolani || '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </PosuvnaTabulka>
+      </FiltrKandidatky>
+
+      {mladych > 0 && <VysvetlivkaVeku />}
     </div>
   )
 }

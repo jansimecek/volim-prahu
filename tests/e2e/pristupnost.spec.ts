@@ -12,6 +12,7 @@ const TRASY = [
   { cesta: '/mestska-cast/praha-7', nazev: 'městská část' },
   { cesta: '/kandidat/portlik-tomas', nazev: 'profil kandidáta' },
   { cesta: '/praha/strana/spojena-levice-pro-prahu/program', nazev: 'program s hodnocením' },
+  { cesta: '/praha/strana/praha-sobe', nazev: 'kandidátka s filtrem podle věku' },
   { cesta: '/temata', nazev: 'srovnání témat' },
   { cesta: '/kdo-o-cem-rozhoduje', nazev: 'kompetenční matice' },
   { cesta: '/rozpoctovy-ramec', nazev: 'rozpočtový rámec' },
@@ -64,6 +65,51 @@ for (const { cesta, nazev } of TRASY) {
     expect(vysledek.violations).toEqual([])
   })
 }
+
+/**
+ * Zúžená kandidátka zůstává přístupná i použitelná.
+ *
+ * Filtr schovává řádky přes CSS, takže se nedá spolehnout na to, že si toho
+ * odečítač obrazovky všimne sám — proto je u něj živá oblast. A schované
+ * řádky nesmějí zůstat v pořadí čtení, jinak by odečítač předčítal kandidáty,
+ * které čtenář odfiltroval.
+ */
+test('filtr podle věku zúží kandidátku a nechá ji přístupnou', async ({ page }) => {
+  await page.goto('/praha/strana/praha-sobe')
+
+  const radky = page.locator('tbody tr')
+  const vsech = await radky.count()
+  const mladych = await page.locator('tr[data-mlady="ano"]').count()
+  expect(mladych).toBeGreaterThan(0)
+  expect(mladych).toBeLessThan(vsech)
+
+  await page.getByText(/Jen do 40 let/).click()
+
+  await expect(radky.filter({ visible: true })).toHaveCount(mladych)
+  await expect(page.locator('tr[data-mlady="ne"]').first()).toBeHidden()
+
+  const vysledek = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+    .analyze()
+  expect(vysledek.violations).toEqual([])
+})
+
+/**
+ * Číslování na kandidátce není pořadí řádků, ale pozice na hlasovacím lístku.
+ * Kdyby filtr čísla přepočítal, poslal by voliče kroužkovat jiné jméno.
+ */
+test('zúžená kandidátka si nechává čísla z hlasovacího lístku', async ({ page }) => {
+  await page.goto('/praha/strana/praha-sobe')
+  await page.getByText(/Jen do 40 let/).click()
+
+  const cisla = await page
+    .locator('tbody tr:visible td:first-child')
+    .allInnerTexts()
+  // Dvojka na listině je ročník, který mez nesplňuje, takže po zúžení
+  // musí druhé číslo ve sloupci přeskočit — ne být „2".
+  expect(cisla[0]).toBe('1')
+  expect(cisla[1]).not.toBe('2')
+})
 
 test('rozbalené hodnocení zůstává přístupné', async ({ page }) => {
   await page.goto('/praha/strana/spojena-levice-pro-prahu/program')
