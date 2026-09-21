@@ -58,6 +58,11 @@ export function jeSkrtnutyKandidat(prijmeni: string, jmeno: string): boolean {
 export const POPIS_NEPLATNE_KANDIDATURY =
   'Český statistický úřad ji v registru kandidátů vede jako neplatnou. Tak se do registru promítá vzdání se kandidatury nebo odvolání kandidáta volební stranou; který z důvodů nastal, registr neuvádí.'
 
+/*
+ * Mez věku kandidáta, značka a vysvětlivka bydlí ve `vekKandidata.ts` —
+ * tenhle modul sahá na `node:fs`, a filtr v tabulce běží na klientu.
+ */
+
 export type Kandidatka = {
   zastupitelstvo: { kod: string; nazev: string; slug: string; mandaty: number }
   sada: string

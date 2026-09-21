@@ -313,6 +313,22 @@
     --font-display: var(--font-source-serif), Georgia, 'Times New Roman', serif;
   }
 
+  /*
+   * Zúžení kandidátky na kandidáty pod mezí věku.
+   *
+   * Řádky schovává CSS, ne JavaScript. Kandidátky se renderují na serveru ve
+   * stovkách výpisů — 58 zastupitelstev, 330 volebních stran — a kdyby o každém
+   * řádku rozhodoval klient, musel by každý řádek přes hranici serveru
+   * a klienta putovat zvlášť. Takhle projde jedna třída na obalu a řádky
+   * zůstanou tam, kde vznikly.
+   *
+   * Bez JavaScriptu třída nikdy nenaskočí, takže je vidět celá listina —
+   * chybí filtr, ne obsah. To je ten stav, který nikoho nevynechává.
+   */
+  .jen-mladi-kandidati tr[data-mlady='ne'] {
+    display: none;
+  }
+
   /* Barevný pruh u buňky v infografice. Nese tutéž informaci jako značka. */
   .plneni-pruh-splneno {
     border-color: var(--color-splneno);
