@@ -1,0 +1,14 @@
+# Zdroj: Oznámení o době a místě konání voleb, ÚMČ Praha-Přední Kopanina, č. j. MCPPK 00819/2026 ze dne 16. 9. 2026 (tajemník úřadu), vyvěšeno 16. 9. 2026.
+# Městská část má jediný okrsek 45001. Oznámení dál popisuje zápis občanů EU do „dodatku stálého seznamu voličů“ s lhůtou 7. 10.;
+# dodatek od 1. 1. 2026 neexistuje (§ 23 zákona č. 88/2024 Sb., jediný seznam ze základních registrů), proto z oznámení přebíráme jen místnost.
+mestskaCast: praha-predni-kopanina
+overeno: 2026-09-22
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb, ÚMČ Praha-Přední Kopanina"
+  url: "https://housing.espis.mepnet.cz/eDeskaPKopanina/download.jsp?idPriloha=22402"
+  vyveseno: 2026-09-16
+mistnosti:
+  - nazev: "Úřad městské části Praha-Přední Kopanina"
+    adresa: "Hokešovo náměstí 193"
+    okrsky: [45001]

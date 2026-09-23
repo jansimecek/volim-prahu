@@ -12,6 +12,9 @@
 # ověřené proti textu zdroje.
 # Výroky ze zdrojů `echo-portlik`, `f24-hlavacek`, `pd-summit` a
 # `ctk-pirati-kampan` přibyly 15. 9. 2026, ověřené v surovém textu zdroje.
+# Výroky ze zdrojů `echo-energetika`, `prahain-scheinherr`, `ctk-parkovani`,
+# `novinky-duel-bezpecnost`, `novinky-duel-miliardy` a `pd-kampus` přibyly
+# 22. 9. 2026, ověřené v surovém textu zdroje.
 overeno: 2026-08-27
 
 zdroje:
@@ -141,6 +144,42 @@ zdroje:
     datum: 2026-09-15
     typ: redakcni
     url: "https://www.forum24.cz/kandidat-na-primatora-hlavacek-chci-aby-praha-mela-vltavskou-filharmonii"
+  - id: echo-energetika
+    medium: "Echo24"
+    nazev: "„Praha má obrovský nevyužitý potenciál na střechách.“ Jak chtějí pražští lídři řešit energetiku?"
+    datum: 2026-09-16
+    typ: redakcni
+    url: "https://www.echo24.cz/a/HvmpR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-energetika-obnovitelne-zdroje"
+  - id: prahain-scheinherr
+    medium: "PrahaIN.cz"
+    nazev: "Scheinherr: Vládní strany jsou pro mě no-go. Budu první primátor pro dopravu"
+    datum: 2026-09-16
+    typ: redakcni
+    url: "https://www.prahain.cz/politika/scheinherr-vladni-strany-jsou-pro-me-nogo-budu-prvni-primator-pro-dopravu-28638.html"
+  - id: ctk-parkovani
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Pražská koalice se v tomto období nedohodla na cenách MHD ani parkování"
+    datum: 2026-09-20
+    typ: redakcni
+    url: "https://www.prazskypatriot.cz/prazska-koalice-se-v-tomto-obdobi-nedohodla-na-cenach-mhd-ani-parkovani/"
+  - id: novinky-duel-bezpecnost
+    medium: "Novinky.cz"
+    nazev: "Hušbauer chce v Praze zakázat noční prodej alkoholu. S Portlíkem se přeli o bezpečnost"
+    datum: 2026-09-20
+    typ: redakcni
+    url: "https://www.novinky.cz/clanek/podcasty-politalk-husbauer-chce-v-praze-zakazat-nocni-prodej-alkoholu-s-portlikem-se-preli-o-bezpecnost-40598442"
+  - id: novinky-duel-miliardy
+    medium: "Novinky.cz"
+    nazev: "Našetřeno, nebo neproinvestováno? Portlík a Hušbauer se přeli o 200 miliardách na účtu Prahy"
+    datum: 2026-09-21
+    typ: redakcni
+    url: "https://www.novinky.cz/clanek/volby-komunalni-nasetreno-nebo-neproinvestovano-portlik-a-husbauer-se-preli-o-200-miliardach-na-uctu-prahy-40598462"
+  - id: pd-kampus
+    medium: "Pražský deník"
+    nazev: "Po nemocnici i superškola. ANO navrhuje kampus pro tisíce středoškoláků"
+    datum: 2026-09-21
+    typ: redakcni
+    url: "https://prazsky.denik.cz/komunalni-volby/po-nemocnici-i-superskola-ano-navrhuje-kampus-pro-tisice-stredoskolaku/"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -206,6 +245,32 @@ osoby:
         kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje kritizoval dosavadní tempo investic města."
         zdroj: pd-summit
         poznamka: "Výše prostředků na účtech města je tvrzení kandidáta."
+      - tema: "Doprava a parkování"
+        citace: "Jedno rezidentní oprávnění má Pražanům přes den umožnit parkovat bez dalšího poplatku i mimo jejich městskou část, večer a v noci však musí mít přednost místní rezidenti"
+        kontext: "Odpověď v anketě ČTK mezi lídry kandidátek o reformě parkování."
+        zdroj: ctk-parkovani
+      - tema: "Bezpečnost"
+        citace: "Potřebujeme nabrat strážníky"
+        kontext: "V předvolebním duelu Novinek s Tomášem Portlíkem o bezpečnosti; strážníky chce město podle něj motivovat například dostupným bydlením."
+        zdroj: novinky-duel-bezpecnost
+      - tema: "Bezpečnost"
+        citace: "Já nic neslibuju, já říkám řešení, které by tomu pomohlo"
+        kontext: "V témže duelu na dotaz Novinek k návrhu, aby se alkohol po desáté večer prodával jen v barech a restauracích, ne ve večerkách. Připustil, že by to vyžadovalo změnu zákona a spolupráci se státem."
+        zdroj: novinky-duel-bezpecnost
+        poznamka: "Samotný návrh popisují Novinky vlastními slovy, ne citací. Omezit prodej alkoholu podle denní doby Praha sama nemůže; jak uvádí i kandidát, šlo by to jen změnou zákona."
+      - tema: "Rozpočet a investice"
+        citace: "Já říkám, že to není našetřeno, je to neproinvestováno. Jsou to peníze, které patří Pražanům"
+        kontext: "V předvolebním duelu Novinek reagoval na Portlíkův argument, že peníze na účtech města jsou potřeba na velké stavby."
+        zdroj: novinky-duel-miliardy
+      - tema: "Školství"
+        citace: "I kdybychom vybudovali kapacitu pro 6 000 míst, tak lavice nebudou prázdné"
+        kontext: "V předvolebním podcastu Pražského deníku o návrhu velkého středoškolského kampusu, který by Praha stavěla se Středočeským krajem a státem. Lokalitu neuvedl."
+        zdroj: pd-kampus
+      - tema: "Energetika"
+        citace: "Energetika města má být především praktická: nižší účty pro město i pro lidi."
+        pokracovani: " To znamená pokračovat v osazování městských střech, škol, úřadů a dalších budov, fotovoltaikou…"
+        kontext: "Odpověď v anketě Echa24 o energetické strategii Prahy na příští dekádu."
+        zdroj: echo-energetika
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana
@@ -245,6 +310,11 @@ osoby:
         citace: "Stavět chceme tam, kde vedou koleje"
         kontext: "V debatě kandidátů na Summitu dostupného bydlení a stavebního rozvoje shrnula princip pirátského plánu tří nových čtvrtí navázaných na prodloužení linek metra."
         zdroj: pd-summit
+      - tema: "Doprava a parkování"
+        citace: "Nastavíme férovou parkovací politiku: zavedeme dynamické parkovací poplatky podle reálné poptávky a schválíme celoměstskou parkovací reformu"
+        pokracovani: ", podpoříme výstavbu etážových parkovacích domů na sídlištích a účelové vázání výnosů z parkování výhradně zpět do oprav silnic a rozvoje MHD"
+        kontext: "Odpověď v anketě ČTK mezi lídry kandidátek o reformě parkování."
+        zdroj: ctk-parkovani
   - osobaSlug: komrskova-jana
     jmeno: "Jana Komrsková"
     subjekt: jsme-praha
@@ -266,6 +336,15 @@ osoby:
         citace: "Chceme změnu v dopravě a méně ideologie na našich silnicích. K tomu chceme dostavbu městského okruhu"
         kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje."
         zdroj: pd-summit
+      - tema: "Doprava a parkování"
+        citace: "Pražan pohybující se mezi bydlištěm, prací a rodinou nesmí pokaždé řešit jinou zónu a další poplatek."
+        pokracovani: " Podpoříme parkovací domy i inteligentní systémy, které řidiče navedou na volné místo"
+        kontext: "Odpověď v anketě ČTK o reformě parkování; podle ČTK chce jednu celopražskou parkovací zónu."
+        zdroj: ctk-parkovani
+      - tema: "Energetika"
+        citace: "Každý projekt ale musí mít jasnou ekonomickou návratnost. Praha nemá utrácet miliardy za symbolická gesta."
+        kontext: "Odpověď v anketě Echa24 o energetice; prostor pro vlastní obnovitelné zdroje vidí na střechách městských budov, škol, dep a parkovacích objektů."
+        zdroj: echo-energetika
   - osobaSlug: scheinherr-adam
     jmeno: "Adam Scheinherr"
     subjekt: praha-sobe
@@ -274,6 +353,19 @@ osoby:
         citace: "Airbnb problém je. V bytech se má bydlet, ne z nich dělat černé hotely. Praze ovšem chybí tisíce bytů, a to regulace Airbnb nevyřeší."
         kontext: "Odpověď v předvolební anketě, ve které se kandidáti na primátora vyjadřovali k dopadu krátkodobých pronájmů na centrum města."
         zdroj: cnn-airbnb
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Měli bychom krátkodobý pronájem omezit na 60 nocí v roce v bytech, které k tomu nejsou zkolaudovány."
+        kontext: "V rozhovoru pro PrahaIN.cz; bezprostředně předtím řekl, že stát musí městům dovolit, aby si krátkodobé pronájmy regulovala sama."
+        zdroj: prahain-scheinherr
+      - tema: "Doprava"
+        citace: "Pokud budu primátor, zahájím stavbu městského okruhu v příštím volebním období."
+        pokracovani: " Na to potřebujeme peníze."
+        kontext: "V témže rozhovoru na otázku po investicích a penězích na účtech města."
+        zdroj: prahain-scheinherr
+      - tema: "Energetika"
+        citace: "Každou korunu ušetřenou za energie může město dát do škol nebo dopravy."
+        kontext: "Odpověď v anketě Echa24 o energetice; strategií pro příští dekádu má být podle něj fotovoltaika na městském majetku, využití tepla z odpadní vody a úspory v budovách."
+        zdroj: echo-energetika
   - osobaSlug: laska-vaclav
     jmeno: "Václav Láska"
     subjekt: sen-pro-prahu
@@ -303,6 +395,10 @@ osoby:
         pokracovani: " Protože cokoliv, co začne město, to vždycky špatně skončí."
         kontext: "V rozhovoru vysvětluje, proč podle něj nemá sociální bydlení stavět město."
         zdroj: ip-urban
+      - tema: "Energetika"
+        citace: "Zásadně musí Praha rovněž urychlit umístění FVE na střechách městských a veřejných objektů ke snížení nákladů jejich provozu."
+        kontext: "Odpověď v anketě Echa24 o energetice. Chce také dokončit odkup zbývajícího podílu Veolie v teplárenství a jednat o odkupu zbývajícího podílu v PRE."
+        zdroj: echo-energetika
   - osobaSlug: vlcek-petr
     jmeno: "Petr Vlček"
     subjekt: spojena-levice-pro-prahu
@@ -371,6 +467,14 @@ osoby:
         citace: "Máme potenciál a chceme předběhnout západní města. Musíme ale nastartovat výstavbu a dát Pražanům to, co jim dlužíme"
         kontext: "V debatě kandidátů na primátora na Summitu dostupného bydlení a stavebního rozvoje."
         zdroj: pd-summit
+      - tema: "Doprava a parkování"
+        citace: "Chci prosadit parkovací reformu, která vrátí zónám placeného stání jejich původní účel – ochranu rezidentů. V rámci ní zavedeme dynamické ceny návštěvnického parkování v centru a na dalších místech, kde vzniká přetlak"
+        kontext: "Odpověď v anketě ČTK o reformě parkování. Podle ČTK chce také omezit krátkodobé parkování mimopražských v modrých zónách a zavést celopražskou parkovací kartu."
+        zdroj: ctk-parkovani
+      - tema: "Rozpočet a investice"
+        citace: "Ve chvíli, kdy má stavební povolení a zahájí, tak ty finanční prostředky z toho účtu budou velmi rychle mizet"
+        kontext: "V předvolebním duelu Novinek s Janem Hušbauerem o penězích na účtech města; podle něj jsou potřeba na metro D, vnitřní okruh a další velké stavby."
+        zdroj: novinky-duel-miliardy
   - osobaSlug: hlavacek-petr
     jmeno: "Petr Hlaváček"
     subjekt: starostove-a-nezavisli
@@ -406,6 +510,14 @@ osoby:
         citace: "Je potřeba najít rozumné řešení, i za cenu zvýšení ceny parkování, ale větší péče o veřejný prostor, např. výsadbu stromů."
         kontext: "V rozhovoru pro FORUM 24 odpovídal na otázku, jak by se v Praze mělo parkovat."
         zdroj: f24-hlavacek
+      - tema: "Doprava a parkování"
+        citace: "Parkování na ulicích je dnes v mnoha částech města velmi levné vzhledem k hodnotě veřejného prostoru a je namístě debatovat o úpravě systému i cen tak, aby byl spravedlivější vůči všem"
+        kontext: "Odpověď v anketě ČTK o reformě parkování. Podle ČTK jako jediný z lídrů naznačil možné zvýšení cen."
+        zdroj: ctk-parkovani
+      - tema: "Energetika"
+        citace: "Praha musí být v příštích letech energeticky odolnější a více soběstačná."
+        kontext: "Odpověď v anketě Echa24 o energetice. Jako příklad uvedl Energocentrum v Bubenči, které má využívat teplo z vyčištěných odpadních vod."
+        zdroj: echo-energetika
   - osobaSlug: dubsky-jiri
     jmeno: "Jiří Dubský"
     subjekt: ano-lepsi-cesko-s-mimozemstany

@@ -18,7 +18,7 @@
 # Odpovědi z ankety ČTK jsou písemné odpovědi lídrů otištěné pod jejich jménem,
 # proto jsou zapsané jako citace.
 
-overeno: 2026-09-15
+overeno: 2026-09-22
 
 zdroje:
   - id: pirati-strategie
@@ -86,6 +86,11 @@ zdroje:
     nazev: "Cenu MHD bych vrátil do roku 2015, Piráty na dopravě už si neumím představit, říká Portlík"
     datum: 2026-09-14
     url: "https://www.echo24.cz/a/HqEXb/rozhovor-domaci-komunalni-volby-tomas-portlik-ods-spolu-pro-prahu-piraty-na-doprave-si-neumim-predstavit"
+  - id: prahain-scheinherr-16-9
+    medium: "PrahaIN.cz"
+    nazev: "Scheinherr: Vládní strany jsou pro mě no-go. Budu první primátor pro dopravu"
+    datum: 2026-09-16
+    url: "https://www.prahain.cz/politika/scheinherr-vladni-strany-jsou-pro-me-nogo-budu-prvni-primator-pro-dopravu-28638.html"
 
 deklarace:
   - id: pirati-povolebni-strategie
@@ -185,6 +190,27 @@ deklarace:
       sobě, Pirátů a STAN, a nebrání se ani spolupráci se SPOLU. Vyloučil
       spolupráci s SPD, Motoristy a ANO.
     zdroje: [pp-anketa-ctk-12-9]
+
+  - id: praha-sobe-scheinherr-prahain
+    subjekt: praha-sobe
+    kdo: Adam Scheinherr, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-16
+    vylucuje: [spd-pro-prahu, motoriste-sobe, ano-2011]
+    pripousti: [starostove-a-nezavisli, ceska-piratska-strana, spolu-pro-prahu]
+    doklad: citace
+    citace: >-
+      Nevylučuji spolupráci s nikým z demokratického spektra: STAN, Piráti,
+      Spolu, všichni jsou pro mě přístupní. Odmítám SPD, Motoristy a hnutí ANO.
+    shrnuti: >-
+      V rozhovoru pro PrahaIN.cz zopakoval, že spolupráci s ANO, SPD a Motoristy
+      odmítá a že STAN, Piráti i SPOLU jsou pro něj přístupní. U ANO jako důvod
+      uvedl jeho vládu s SPD a Motoristy i působení ve vedení Prahy v letech
+      2014–2018.
+    poznamka: >-
+      Období 2014–2018 doplňujeme my: Scheinherr mluví o době primátorky
+      Adriany Krnáčové.
+    zdroje: [prahain-scheinherr-16-9]
 
   - id: motoriste-sovova-praha-sobe
     subjekt: motoriste-sobe

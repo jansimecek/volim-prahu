@@ -1,0 +1,59 @@
+# Zdroj: Oznámení o době a místě konání voleb do zastupitelstev obcí, starosta MČ Praha 18, vyvěšeno 15. 9. 2026.
+# Každý okrsek má v oznámení vlastní místnost (římská číslice = učebna ve stejné budově) a údaj o bezbariérovém přístupu.
+# Budova ZŠ a MŠ Tupolevova má podle oznámení adresu Dobratická 525.
+mestskaCast: praha-18
+overeno: 2026-09-22
+volby: komunalni-2026
+zdroj:
+  nazev: "Oznámení o době a místě konání voleb do ZMČ Praha 18 a ZHMP 2026, ÚMČ Praha 18"
+  url: "https://letnany.cz/file/4337532"
+  vyveseno: 2026-09-15
+mistnosti:
+  - nazev: "ÚMČ Praha 18"
+    adresa: "Bechyňská 639"
+    okrsky: [18001]
+    bezbarierova: true
+  - nazev: "ZŠ gen. Fr. Fajtla, DFC I."
+    adresa: "Rychnovská 139"
+    okrsky: [18002]
+    bezbarierova: false
+  - nazev: "ZŠ gen. Fr. Fajtla, DFC II."
+    adresa: "Rychnovská 139"
+    okrsky: [18003]
+    bezbarierova: false
+  - nazev: "ZŠ gen. Fr. Fajtla, DFC III."
+    adresa: "Rychnovská 139"
+    okrsky: [18004]
+    bezbarierova: false
+  - nazev: "ZŠ Fryčovická VI."
+    adresa: "Fryčovická 462"
+    okrsky: [18005]
+    bezbarierova: true
+  - nazev: "ZŠ Fryčovická I."
+    adresa: "Fryčovická 462"
+    okrsky: [18006]
+    bezbarierova: true
+  - nazev: "ZŠ Fryčovická II."
+    adresa: "Fryčovická 462"
+    okrsky: [18007]
+    bezbarierova: true
+  - nazev: "ZŠ Fryčovická III."
+    adresa: "Fryčovická 462"
+    okrsky: [18008]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ Tupolevova I."
+    adresa: "Dobratická 525"
+    okrsky: [18009]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ Tupolevova II."
+    adresa: "Dobratická 525"
+    okrsky: [18010]
+    bezbarierova: false
+  - nazev: "ZŠ a MŠ Tupolevova III."
+    adresa: "Dobratická 525"
+    okrsky: [18011]
+    bezbarierova: true
+  - nazev: "ZŠ a MŠ Tupolevova IV."
+    adresa: "Dobratická 525"
+    okrsky: [18012]
+    bezbarierova: false
