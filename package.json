@@ -27,6 +27,8 @@
     "nacvik": "tsx scripts/nacvik-volebni-noc.ts",
     "import:senat": "tsx scripts/import-senat.ts",
     "import:okrsky": "tsx scripts/import-okrsky.ts",
+    "import:zastavky": "tsx scripts/import-zastavky.ts",
+    "import:parkovani": "tsx scripts/import-parkovani.ts",
     "obrazek": "tsx scripts/nahraj-obrazek.ts",
     "preloz": "tsx scripts/preloz.ts"
   },

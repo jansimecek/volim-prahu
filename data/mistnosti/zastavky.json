@@ -1,0 +1,10720 @@
+{
+ "stazeno": "2026-09-23",
+ "zdroj": {
+  "nazev": "Pražská integrovaná doprava — seznam zastávek (otevřená data)",
+  "url": "https://data.pid.cz/stops/json/stops.json",
+  "generovano": "2026-09-23T03:52:11"
+ },
+ "mistnosti": [
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Dušní 886/19, Praha 1",
+   "zastavka": {
+    "nazev": "Nemocnice Na Františku",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "207",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Hellichova 457/3, Praha 1",
+   "zastavka": {
+    "nazev": "Tyršův dům",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Jindřišská 974/32, Praha 1",
+   "zastavka": {
+    "nazev": "Jindřišská",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Josefská 626/7, Praha 1",
+   "zastavka": {
+    "nazev": "Malostranské náměstí",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "194",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Klimentská 1550/38, Praha 1",
+   "zastavka": {
+    "nazev": "Petrské náměstí",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "194",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Malá Štupartská 977/8, Praha 1",
+   "zastavka": {
+    "nazev": "Masná",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "194",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Maltézské nám. 472/16, Praha 1",
+   "zastavka": {
+    "nazev": "Pražské Jezulátko",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Národní 1009/5, Praha 1",
+   "zastavka": {
+    "nazev": "Národní divadlo",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Opletalova 1441/19, Praha 1",
+   "zastavka": {
+    "nazev": "Hlavní nádraží",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     },
+     {
+      "nazev": "AE",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XS7",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Pohořelec 111/25, Praha 1",
+   "zastavka": {
+    "nazev": "Pohořelec",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Pštrossova 203/13, Praha 1",
+   "zastavka": {
+    "nazev": "Myslíkova",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Soukenická 1088/10, Praha 1",
+   "zastavka": {
+    "nazev": "Dlouhá třída",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "207",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Uhelný trh 425/4, Praha 1",
+   "zastavka": {
+    "nazev": "Můstek",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "B",
+      "typ": "metro"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Vodičkova 681/18, Praha 1",
+   "zastavka": {
+    "nazev": "Vodičkova",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-1",
+   "adresa": "Vodičkova 683/22, Praha 1",
+   "zastavka": {
+    "nazev": "Vodičkova",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Brigádníků 510/14, Praha 10",
+   "zastavka": {
+    "nazev": "Štěchovická",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Břečťanová 2919/6, Praha 10",
+   "zastavka": {
+    "nazev": "Poliklinika Zahradní Město",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Gutova 1987/39, Praha 10",
+   "zastavka": {
+    "nazev": "Strašnická",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "188",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Hostýnská 2100/2, Praha 10",
+   "zastavka": {
+    "nazev": "Hostýnská",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "133",
+      "typ": "bus"
+     },
+     {
+      "nazev": "188",
+      "typ": "bus"
+     },
+     {
+      "nazev": "199",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Jakutská 1210/2, Praha 10",
+   "zastavka": {
+    "nazev": "Volyňská",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "175",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Kodaňská 658/16, Praha 10",
+   "zastavka": {
+    "nazev": "Slovinská",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "101",
+      "typ": "bus"
+     },
+     {
+      "nazev": "135",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Nad Vodovodem 460/81, Praha 10",
+   "zastavka": {
+    "nazev": "Hostýnská",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "133",
+      "typ": "bus"
+     },
+     {
+      "nazev": "188",
+      "typ": "bus"
+     },
+     {
+      "nazev": "199",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Olešská 2222/18, Praha 10",
+   "zastavka": {
+    "nazev": "Sídliště Skalka",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "138",
+      "typ": "bus"
+     },
+     {
+      "nazev": "273",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Omská 1300/4, Praha 10",
+   "zastavka": {
+    "nazev": "Kubánské náměstí",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Rektorská 577, Praha 10",
+   "zastavka": {
+    "nazev": "Rektorská",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "155",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Švehlova 2900/12, Praha 10",
+   "zastavka": {
+    "nazev": "Centrum Zahradní Město",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "101",
+      "typ": "bus"
+     },
+     {
+      "nazev": "138",
+      "typ": "bus"
+     },
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "U Roháč. kasáren 1381/19, Praha 10",
+   "zastavka": {
+    "nazev": "Kavkazská",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "101",
+      "typ": "bus"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "U Vršovického nádraží 950/1, Praha 10",
+   "zastavka": {
+    "nazev": "Nádraží Vršovice",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "V Rybníčkách 1980/31, Praha 10",
+   "zastavka": {
+    "nazev": "V Rybníčkách",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "V Úžlabině 320/23, Praha 10",
+   "zastavka": {
+    "nazev": "Poliklinika Malešice",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "155",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Vladivostocká 1035/6, Praha 10",
+   "zastavka": {
+    "nazev": "Kubánské náměstí",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-10",
+   "adresa": "Voděradská 900/2, Praha 10",
+   "zastavka": {
+    "nazev": "Radošovická",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Blažimská 1781, Praha 11",
+   "zastavka": {
+    "nazev": "Knovízská",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "115",
+      "typ": "bus"
+     },
+     {
+      "nazev": "256",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Donovalská 1684, Praha 11",
+   "zastavka": {
+    "nazev": "Brodského",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "256",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Jírovcovo nám. 1782, Praha 11",
+   "zastavka": {
+    "nazev": "U Kunratického lesa",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "326",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "K Milíčovu 674, Praha 11",
+   "zastavka": {
+    "nazev": "Milíčov",
+    "metru": 310,
+    "linky": [
+     {
+      "nazev": "203",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Ke Kateřinkám 1400, Praha 11",
+   "zastavka": {
+    "nazev": "Zdiměřická",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "122",
+      "typ": "bus"
+     },
+     {
+      "nazev": "363",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Konstantinova 1500, Praha 11",
+   "zastavka": {
+    "nazev": "Metodějova",
+    "metru": 320,
+    "linky": [
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "213",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Kupeckého 576, Praha 11",
+   "zastavka": {
+    "nazev": "Háje",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "125",
+      "typ": "bus"
+     },
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "213",
+      "typ": "bus"
+     },
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "227",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "381",
+      "typ": "bus"
+     },
+     {
+      "nazev": "382",
+      "typ": "bus"
+     },
+     {
+      "nazev": "383",
+      "typ": "bus"
+     },
+     {
+      "nazev": "387",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     },
+     {
+      "nazev": "959",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Květnového vítězství 1554, Praha 11",
+   "zastavka": {
+    "nazev": "Brechtova",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Květnového vítězství 57, Praha 11",
+   "zastavka": {
+    "nazev": "Mokrá",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "256",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Mendelova 550, Praha 11",
+   "zastavka": {
+    "nazev": "Stachova",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "203",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Mikulova 1594, Praha 11",
+   "zastavka": {
+    "nazev": "Mikulova",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "125",
+      "typ": "bus"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-11",
+   "adresa": "Pošepného nám. 2022, Praha 11",
+   "zastavka": {
+    "nazev": "Dědinova",
+    "metru": 320,
+    "linky": [
+     {
+      "nazev": "135",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XC",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Angelovova 3183/15, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Modřanská rokle",
+    "metru": 340,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Darwinova 450/24, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Darwinova",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Generála Šišky 2375/6, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Radnice Praha 12",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Modřanská 1375/10a, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Modřanská škola",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "117",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Mráčkova 3090/2, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Labe",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "157",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "nám. Antonína Pecáka 37, Praha 4 – Točná",
+   "zastavka": {
+    "nazev": "Točná",
+    "metru": 10,
+    "linky": [
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "341",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Palmetová 2159/3, Praha 4 – Komořany",
+   "zastavka": {
+    "nazev": "Na Šabatce",
+    "metru": 290,
+    "linky": [
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Pertoldova 3346/10, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Pavelkova",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "190",
+      "typ": "bus"
+     },
+     {
+      "nazev": "277",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Pertoldova 3373/51, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Pavelkova",
+    "metru": 350,
+    "linky": [
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "190",
+      "typ": "bus"
+     },
+     {
+      "nazev": "277",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Písnická 760/11, Praha 4 – Kamýk",
+   "zastavka": {
+    "nazev": "Cílkova",
+    "metru": 290,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "189",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Podchýšská 109, Praha 4 – Cholupice",
+   "zastavka": {
+    "nazev": "Cholupické náměstí",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "277",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Rakovského 3136/1, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "U Libušského potoka",
+    "metru": 370,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Smolkova 565/8, Praha 4 – Kamýk",
+   "zastavka": {
+    "nazev": "Sídliště Libuš",
+    "metru": 320,
+    "linky": [
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "215",
+      "typ": "bus"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "U Domu služeb 1837/9, Praha 4 – Modřany",
+   "zastavka": {
+    "nazev": "Obchodní náměstí",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     },
+     {
+      "nazev": "341",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-12",
+   "adresa": "Zárubova 977/17, Praha 4 – Kamýk",
+   "zastavka": {
+    "nazev": "Sídliště Lhotka",
+    "metru": 320,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "157",
+      "typ": "bus"
+     },
+     {
+      "nazev": "189",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Brdičkova 1878/2",
+   "zastavka": {
+    "nazev": "Píškova",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "142",
+      "typ": "bus"
+     },
+     {
+      "nazev": "184",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Bronzová 2027/35",
+   "zastavka": {
+    "nazev": "Lužiny",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Fingerova 2186/17",
+   "zastavka": {
+    "nazev": "Ovčí hájek",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "142",
+      "typ": "bus"
+     },
+     {
+      "nazev": "184",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Chlupova 1800/6",
+   "zastavka": {
+    "nazev": "Amforová",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "174",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     },
+     {
+      "nazev": "301",
+      "typ": "bus"
+     },
+     {
+      "nazev": "352",
+      "typ": "bus"
+     },
+     {
+      "nazev": "902",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Janského 2189/18",
+   "zastavka": {
+    "nazev": "Malá Ohrada",
+    "metru": 310,
+    "linky": [
+     {
+      "nazev": "142",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "K Náplavce 173/19",
+   "zastavka": {
+    "nazev": "Třebonice",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "174",
+      "typ": "bus"
+     },
+     {
+      "nazev": "902",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Ke Koh-i-nooru 433/25",
+   "zastavka": {
+    "nazev": "Krematorium Motol",
+    "metru": 290,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "180",
+      "typ": "bus"
+     },
+     {
+      "nazev": "304",
+      "typ": "bus"
+     },
+     {
+      "nazev": "380",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Klausova 2450/2",
+   "zastavka": {
+    "nazev": "Velká Ohrada",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "142",
+      "typ": "bus"
+     },
+     {
+      "nazev": "184",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Kuncova 1580/1",
+   "zastavka": {
+    "nazev": "Lýskova",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Mezi Školami 2322/1",
+   "zastavka": {
+    "nazev": "Poliklinika Lípa",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "168",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Mládí 135/4",
+   "zastavka": {
+    "nazev": "Mládí",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "174",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     },
+     {
+      "nazev": "902",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Mohylová 1963/2",
+   "zastavka": {
+    "nazev": "Lužiny",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-13",
+   "adresa": "Trávníčkova 1744/4",
+   "zastavka": {
+    "nazev": "Luka",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "174",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     },
+     {
+      "nazev": "301",
+      "typ": "bus"
+     },
+     {
+      "nazev": "352",
+      "typ": "bus"
+     },
+     {
+      "nazev": "902",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Bratří Venclíků 1140/1, Černý Most, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Rajská zahrada",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "181",
+      "typ": "bus"
+     },
+     {
+      "nazev": "186",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Dygrýnova 1006/21, Černý Most, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Doležalova",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Hamerská 1307, Kyje, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Spolská",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Hloubětínská 700/24, Hloubětín, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Bazén Hloubětín",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "206",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Chvaletická 918/3, Hloubětín, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Sídliště Lehovec",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "206",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Mochovská 570/41, Hloubětín, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Sídliště Hloubětín",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "206",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "nám. Plukovníka Vlčka 686/11, Černý Most, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Kapitána Stránského",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Pilská 9, Hostavice, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Hostavice",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "206",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Rochovská 691/14, Hloubětín, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Lehovec",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "186",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     },
+     {
+      "nazev": "953",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Šimanovská 16, Kyje, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Kyje",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "181",
+      "typ": "bus"
+     },
+     {
+      "nazev": "206",
+      "typ": "bus"
+     },
+     {
+      "nazev": "259",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Tálínská 1312, Kyje, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Lánská",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "224",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Vybíralova 964/8, Černý Most, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Sídliště Černý Most",
+    "metru": 250,
+    "linky": [
+     {
+      "nazev": "223",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-14",
+   "adresa": "Za Černým mostem 362/3, Hloubětín, 198 00 Praha 14",
+   "zastavka": {
+    "nazev": "Hutě",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "186",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "953",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Holoubkovská 323, Praha 10 - Horní Měcholupy",
+   "zastavka": {
+    "nazev": "Holoubkovská",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "175",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Hornoměcholupská 873, Praha 10 - Hostivař",
+   "zastavka": {
+    "nazev": "K Lesoparku",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "254",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Kozinova 1000/1, Praha 10 - Hostivař",
+   "zastavka": {
+    "nazev": "Toulcův dvůr",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "254",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Křimická 314, Praha 10 - Horní Měcholupy",
+   "zastavka": {
+    "nazev": "Nádraží Horní Měcholupy",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "252",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Nad Přehradou 469, Praha 10 - Horní Měcholupy",
+   "zastavka": {
+    "nazev": "Livornská",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "125",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "252",
+      "typ": "bus"
+     },
+     {
+      "nazev": "254",
+      "typ": "bus"
+     },
+     {
+      "nazev": "270",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "U Branek 674/7, Praha 10 – Hostivař",
+   "zastavka": {
+    "nazev": "V Nových domcích",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "111",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-15",
+   "adresa": "Veronské nám. 391, Praha 10 - Horní Měcholupy",
+   "zastavka": {
+    "nazev": "Poliklinika Petrovice",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "125",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "252",
+      "typ": "bus"
+     },
+     {
+      "nazev": "254",
+      "typ": "bus"
+     },
+     {
+      "nazev": "270",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "K cementárně 1522/1c, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Safírová",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "Loučanská 1112/3, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Škola Radotín",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "261",
+      "typ": "bus"
+     },
+     {
+      "nazev": "269",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "nám. Sv. Petra a Pavla 102/4, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Škola Radotín",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "261",
+      "typ": "bus"
+     },
+     {
+      "nazev": "269",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "náměstí Osvoboditelů 1740/17, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Otínská",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "244",
+      "typ": "bus"
+     },
+     {
+      "nazev": "248",
+      "typ": "bus"
+     },
+     {
+      "nazev": "309",
+      "typ": "bus"
+     },
+     {
+      "nazev": "313",
+      "typ": "bus"
+     },
+     {
+      "nazev": "951",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "Štěrková 549/15, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Pod Lahovskou",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "245",
+      "typ": "bus"
+     },
+     {
+      "nazev": "269",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "U starého stadiónu 1585/9, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Otínská",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "244",
+      "typ": "bus"
+     },
+     {
+      "nazev": "248",
+      "typ": "bus"
+     },
+     {
+      "nazev": "309",
+      "typ": "bus"
+     },
+     {
+      "nazev": "313",
+      "typ": "bus"
+     },
+     {
+      "nazev": "951",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-16",
+   "adresa": "Vykoukových 622/2, Praha 5 – Radotín",
+   "zastavka": {
+    "nazev": "Ametystová",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "245",
+      "typ": "bus"
+     },
+     {
+      "nazev": "269",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-17",
+   "adresa": "Ke Kulturnímu domu 439/14",
+   "zastavka": {
+    "nazev": "Selských baterií",
+    "metru": 250,
+    "linky": [
+     {
+      "nazev": "164",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-17",
+   "adresa": "Laudova 1024/10",
+   "zastavka": {
+    "nazev": "Nevanova",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "164",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-17",
+   "adresa": "Socháňova 1139/19",
+   "zastavka": {
+    "nazev": "Slánská",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "180",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-17",
+   "adresa": "Španielova 1111/19",
+   "zastavka": {
+    "nazev": "Za Slánskou silnicí",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "214",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-17",
+   "adresa": "Žalanského 291/12b",
+   "zastavka": {
+    "nazev": "Radnice Řepy",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "214",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-18",
+   "adresa": "Bechyňská 639",
+   "zastavka": {
+    "nazev": "Radnice Letňany",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "158",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "278",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-18",
+   "adresa": "Dobratická 525",
+   "zastavka": {
+    "nazev": "Dobratická",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "58",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "110",
+      "typ": "bus"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "321",
+      "typ": "bus"
+     },
+     {
+      "nazev": "351",
+      "typ": "bus"
+     },
+     {
+      "nazev": "377",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-18",
+   "adresa": "Fryčovická 462",
+   "zastavka": {
+    "nazev": "Poliklinika Frýdecká",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "278",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-18",
+   "adresa": "Rychnovská 139",
+   "zastavka": {
+    "nazev": "Bludovická",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "278",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-19",
+   "adresa": "Albrechtická 732",
+   "zastavka": {
+    "nazev": "Sportovní centrum Kbely",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "159",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-19",
+   "adresa": "Mladoboleslavská 20",
+   "zastavka": {
+    "nazev": "Kbelský pivovar",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "185",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "302",
+      "typ": "bus"
+     },
+     {
+      "nazev": "375",
+      "typ": "bus"
+     },
+     {
+      "nazev": "376",
+      "typ": "bus"
+     },
+     {
+      "nazev": "378",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-19",
+   "adresa": "Mladoboleslavská 949",
+   "zastavka": {
+    "nazev": "U Vodojemu",
+    "metru": 280,
+    "linky": [
+     {
+      "nazev": "159",
+      "typ": "bus"
+     },
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "185",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "302",
+      "typ": "bus"
+     },
+     {
+      "nazev": "375",
+      "typ": "bus"
+     },
+     {
+      "nazev": "376",
+      "typ": "bus"
+     },
+     {
+      "nazev": "378",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-19",
+   "adresa": "Toužimská 244",
+   "zastavka": {
+    "nazev": "Bakovská",
+    "metru": 10,
+    "linky": [
+     {
+      "nazev": "159",
+      "typ": "bus"
+     },
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "185",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "302",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Belgická 29, Praha 2",
+   "zastavka": {
+    "nazev": "Náměstí Míru",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "135",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Botičská 1, Praha 2",
+   "zastavka": {
+    "nazev": "Albertov",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Jana Masaryka 21, Praha 2",
+   "zastavka": {
+    "nazev": "Zvonařka",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "13",
+      "typ": "tram"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Kladská 1, Praha 2",
+   "zastavka": {
+    "nazev": "Krymská",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "135",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Křesomyslova 724, Praha 2",
+   "zastavka": {
+    "nazev": "Divadlo Na Fidlovačce",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Londýnská 34, Praha 2",
+   "zastavka": {
+    "nazev": "Bruselská",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "13",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Na Smetance 1, Praha 2",
+   "zastavka": {
+    "nazev": "Na Smetance",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "135",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Resslova 10, Praha 2",
+   "zastavka": {
+    "nazev": "Karlovo náměstí",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "53",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "148",
+      "typ": "bus"
+     },
+     {
+      "nazev": "176",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Sázavská 5, Praha 2",
+   "zastavka": {
+    "nazev": "Jana Masaryka",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "135",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Štěpánská 8, Praha 2",
+   "zastavka": {
+    "nazev": "Ve Smečkách",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-2",
+   "adresa": "Vinohradská 38, Praha 2",
+   "zastavka": {
+    "nazev": "Vinohradská tržnice",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "13",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Bártlova 83, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Bártlova",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "353",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Chodovická 2250, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Chodovická",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "224",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Náchodská 754, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Vojická",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "303",
+      "typ": "bus"
+     },
+     {
+      "nazev": "344",
+      "typ": "bus"
+     },
+     {
+      "nazev": "353",
+      "typ": "bus"
+     },
+     {
+      "nazev": "354",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Ratibořická 1700, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Sídliště Horní Počernice",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "223",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Spojenců 1408, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Krahulčí",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "222",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Stoliňská 823, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Chvaly",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "222",
+      "typ": "bus"
+     },
+     {
+      "nazev": "223",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     },
+     {
+      "nazev": "303",
+      "typ": "bus"
+     },
+     {
+      "nazev": "344",
+      "typ": "bus"
+     },
+     {
+      "nazev": "353",
+      "typ": "bus"
+     },
+     {
+      "nazev": "354",
+      "typ": "bus"
+     },
+     {
+      "nazev": "398",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-20",
+   "adresa": "Votuzská 322, Praha 9 – Horní Počernice",
+   "zastavka": {
+    "nazev": "Komárovská",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "141",
+      "typ": "bus"
+     },
+     {
+      "nazev": "171",
+      "typ": "bus"
+     },
+     {
+      "nazev": "912",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Lišická 1502",
+   "zastavka": {
+    "nazev": "Sudějovická",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "211",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     },
+     {
+      "nazev": "391",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Polesná 1690",
+   "zastavka": {
+    "nazev": "Polesná",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "210",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Staroklánovická 260",
+   "zastavka": {
+    "nazev": "Hulická",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "210",
+      "typ": "bus"
+     },
+     {
+      "nazev": "211",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     },
+     {
+      "nazev": "303",
+      "typ": "bus"
+     },
+     {
+      "nazev": "391",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Staroújezdská 2300",
+   "zastavka": {
+    "nazev": "Újezd nad Lesy",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "210",
+      "typ": "bus"
+     },
+     {
+      "nazev": "211",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     },
+     {
+      "nazev": "303",
+      "typ": "bus"
+     },
+     {
+      "nazev": "391",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Žárovická 1653",
+   "zastavka": {
+    "nazev": "Sídliště Rohožník",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "211",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     },
+     {
+      "nazev": "391",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-21",
+   "adresa": "Živonínská 1630",
+   "zastavka": {
+    "nazev": "Rohožnická",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "211",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "264",
+      "typ": "bus"
+     },
+     {
+      "nazev": "391",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-22",
+   "adresa": "Hlívová č.p. 303/4",
+   "zastavka": {
+    "nazev": "Nové Pitkovice",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "272",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-22",
+   "adresa": "nám. bří Jandusů č.p. 2",
+   "zastavka": {
+    "nazev": "Uhříněves",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "227",
+      "typ": "bus"
+     },
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "272",
+      "typ": "bus"
+     },
+     {
+      "nazev": "364",
+      "typ": "bus"
+     },
+     {
+      "nazev": "366",
+      "typ": "bus"
+     },
+     {
+      "nazev": "381",
+      "typ": "bus"
+     },
+     {
+      "nazev": "382",
+      "typ": "bus"
+     },
+     {
+      "nazev": "383",
+      "typ": "bus"
+     },
+     {
+      "nazev": "387",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "959",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-22",
+   "adresa": "Nové náměstí č.p. 1440/2a",
+   "zastavka": {
+    "nazev": "Nové náměstí",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "227",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     },
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "272",
+      "typ": "bus"
+     },
+     {
+      "nazev": "325",
+      "typ": "bus"
+     },
+     {
+      "nazev": "364",
+      "typ": "bus"
+     },
+     {
+      "nazev": "366",
+      "typ": "bus"
+     },
+     {
+      "nazev": "381",
+      "typ": "bus"
+     },
+     {
+      "nazev": "382",
+      "typ": "bus"
+     },
+     {
+      "nazev": "383",
+      "typ": "bus"
+     },
+     {
+      "nazev": "387",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     },
+     {
+      "nazev": "959",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-22",
+   "adresa": "Pod Přehradou č.p. 18",
+   "zastavka": {
+    "nazev": "Hájek",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "366",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-22",
+   "adresa": "Vachkova č.p. 630",
+   "zastavka": {
+    "nazev": "Picassova",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "227",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     },
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "272",
+      "typ": "bus"
+     },
+     {
+      "nazev": "325",
+      "typ": "bus"
+     },
+     {
+      "nazev": "364",
+      "typ": "bus"
+     },
+     {
+      "nazev": "366",
+      "typ": "bus"
+     },
+     {
+      "nazev": "382",
+      "typ": "bus"
+     },
+     {
+      "nazev": "383",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "959",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "Jeseniova 2400/96, Praha 3",
+   "zastavka": {
+    "nazev": "Biskupcova",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "133",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "K Lučinám 2500/18, Praha 3",
+   "zastavka": {
+    "nazev": "Kněžská luka",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "146",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "Lupáčova 1200/1, Praha 3",
+   "zastavka": {
+    "nazev": "Olšanské náměstí",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "175",
+      "typ": "bus"
+     },
+     {
+      "nazev": "267",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "Nad Ohradou 1700/25, Praha 3",
+   "zastavka": {
+    "nazev": "Vozovna Žižkov",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "náměstí Jiřího z Lobkovic 121/22, Praha 3",
+   "zastavka": {
+    "nazev": "Olšanské hřbitovy",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "13",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "268",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "náměstí Jiřího z Poděbrad 1685/8, Praha 3",
+   "zastavka": {
+    "nazev": "Jiřího z Poděbrad",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "13",
+      "typ": "tram"
+     },
+     {
+      "nazev": "101",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "V Zahrádkách 1966/48, Praha 3",
+   "zastavka": {
+    "nazev": "Chmelnice",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "Vlkova 800/31, Praha 3",
+   "zastavka": {
+    "nazev": "Viktoria Žižkov",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "101",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-3",
+   "adresa": "Žerotínova 1100/36, Praha 3",
+   "zastavka": {
+    "nazev": "Černínova",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "133",
+      "typ": "bus"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "207",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Antala Staška 2059/80b, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Poliklinika Budějovická",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "121",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Bezová 1592/4, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "Branické náměstí",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Bítovská 1246/1, Michle, Praha 4",
+   "zastavka": {
+    "nazev": "Budějovická",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "118",
+      "typ": "bus"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "332",
+      "typ": "bus"
+     },
+     {
+      "nazev": "335",
+      "typ": "bus"
+     },
+     {
+      "nazev": "337",
+      "typ": "bus"
+     },
+     {
+      "nazev": "339",
+      "typ": "bus"
+     },
+     {
+      "nazev": "362",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     },
+     {
+      "nazev": "956",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     },
+     {
+      "nazev": "BB1",
+      "typ": "bus"
+     },
+     {
+      "nazev": "BB2",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XC",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Budějovická 680/17, Michle, Praha 4",
+   "zastavka": {
+    "nazev": "Poliklinika Budějovická",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "121",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Filosofská 1166/3, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "V Zátiší",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "121",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Horáčkova 1100/14, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Krčský hřbitov",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Hurbanova 1285/14, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Sídliště Krč",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "189",
+      "typ": "bus"
+     },
+     {
+      "nazev": "215",
+      "typ": "bus"
+     },
+     {
+      "nazev": "333",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Jánošíkova 1320/2, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "IKEM",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "138",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "332",
+      "typ": "bus"
+     },
+     {
+      "nazev": "335",
+      "typ": "bus"
+     },
+     {
+      "nazev": "337",
+      "typ": "bus"
+     },
+     {
+      "nazev": "339",
+      "typ": "bus"
+     },
+     {
+      "nazev": "362",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "956",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Jeremenkova 1003/66a, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "Pod Pekařkou",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "118",
+      "typ": "bus"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Jílovská 1100/16, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "Jílovská",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Jitřní 185/6, Hodkovičky, Praha 4",
+   "zastavka": {
+    "nazev": "Jitřní",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "106",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Jižní IV. 1750/10, Záběhlice, Praha 4",
+   "zastavka": {
+    "nazev": "Lešanská",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "135",
+      "typ": "bus"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "138",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "213",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "K Sídlišti 840/2, Podolí, Praha 4",
+   "zastavka": {
+    "nazev": "Nové Podolí",
+    "metru": 250,
+    "linky": [
+     {
+      "nazev": "118",
+      "typ": "bus"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Kukučínova 1150/3, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Zálesí",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "121",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "189",
+      "typ": "bus"
+     },
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "215",
+      "typ": "bus"
+     },
+     {
+      "nazev": "333",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Mendíků 1000/2, Michle, Praha 4",
+   "zastavka": {
+    "nazev": "Pod Jezerkou",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "11",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "188",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Chodovci 2700/54, Záběhlice, Praha 4",
+   "zastavka": {
+    "nazev": "Měchenická",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "138",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Líše 936/16, Michle, Praha 4",
+   "zastavka": {
+    "nazev": "Pekárenská",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "118",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Pankráci 420/54, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Pražského povstání",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XC",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Planině 1393/13, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Na Planině",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Větrově 1022/22, Lhotka, Praha 4",
+   "zastavka": {
+    "nazev": "Čechtická",
+    "metru": 300,
+    "linky": [
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Na Vítězné pláni 1160/1, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Palouček",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Nedvědovo náměstí 140/13, Podolí, Praha 4",
+   "zastavka": {
+    "nazev": "Podolská vodárna",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Ohradní 1366/49, Michle, Praha 4",
+   "zastavka": {
+    "nazev": "Ohradní",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "124",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Plamínkové 1593/2, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Pankrác",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "188",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XC",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Pod Krčským lesem 1300/25, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Ústav mateřství",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "138",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "335",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "956",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Poláčkova 1067/3, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Budějovická",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "118",
+      "typ": "bus"
+     },
+     {
+      "nazev": "124",
+      "typ": "bus"
+     },
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "332",
+      "typ": "bus"
+     },
+     {
+      "nazev": "335",
+      "typ": "bus"
+     },
+     {
+      "nazev": "337",
+      "typ": "bus"
+     },
+     {
+      "nazev": "339",
+      "typ": "bus"
+     },
+     {
+      "nazev": "362",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     },
+     {
+      "nazev": "956",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     },
+     {
+      "nazev": "BB1",
+      "typ": "bus"
+     },
+     {
+      "nazev": "BB2",
+      "typ": "bus"
+     },
+     {
+      "nazev": "XC",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Postupická 3150/4, Záběhlice, Praha 4",
+   "zastavka": {
+    "nazev": "Choceradská",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "135",
+      "typ": "bus"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "213",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Sdružení 1080/2a, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Sdružení",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "188",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Školní 700/5, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "U Staré pošty",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Táborská 122/19, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Palouček",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Táborská 421/45, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Nuselská radnice",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Táborská 500/30, Nusle, Praha 4",
+   "zastavka": {
+    "nazev": "Nuselská radnice",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "19",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Vrbova 1233/34, Braník, Praha 4",
+   "zastavka": {
+    "nazev": "Vrbova",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Vzdušná 564/8, Lhotka, Praha 4",
+   "zastavka": {
+    "nazev": "Novodvorská",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "106",
+      "typ": "bus"
+     },
+     {
+      "nazev": "117",
+      "typ": "bus"
+     },
+     {
+      "nazev": "121",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "150",
+      "typ": "bus"
+     },
+     {
+      "nazev": "196",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-4",
+   "adresa": "Zelený Pruh 1294/54, Krč, Praha 4",
+   "zastavka": {
+    "nazev": "Zemanka",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "134",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Beníškové 1258/1, Praha 5",
+   "zastavka": {
+    "nazev": "Karenova",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "123",
+      "typ": "bus"
+     },
+     {
+      "nazev": "253",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Drtinová 1861/1, Praha 5",
+   "zastavka": {
+    "nazev": "Kobrova",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "53",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "176",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Duškova 1094/7, Praha 5",
+   "zastavka": {
+    "nazev": "Bertramka",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Grafická 1060/13, Praha 5",
+   "zastavka": {
+    "nazev": "Holečkova",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "53",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "176",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Hlubočepská 90/40, Praha 5",
+   "zastavka": {
+    "nazev": "V Uličce",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "918",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Holečkova 668/38, Praha 5",
+   "zastavka": {
+    "nazev": "Zapova",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "53",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "176",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Chaplinovo nám. 615/1, Praha 5",
+   "zastavka": {
+    "nazev": "Chaplinovo náměstí",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "258",
+      "typ": "bus"
+     },
+     {
+      "nazev": "918",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X130",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Kořenského 760/10, Praha 5",
+   "zastavka": {
+    "nazev": "Arbesovo náměstí",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "53",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "176",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Křížová 1292/25, Praha 5",
+   "zastavka": {
+    "nazev": "Správa sociálního zabezpečení",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "231",
+      "typ": "bus"
+     },
+     {
+      "nazev": "232",
+      "typ": "bus"
+     },
+     {
+      "nazev": "271",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Kudrnova 235/1 a, Praha 5",
+   "zastavka": {
+    "nazev": "Hotel Golf",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Kurandové 669/8, Praha 5",
+   "zastavka": {
+    "nazev": "Högerova",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "170",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X130",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Na Popelce 1/18, Praha 5",
+   "zastavka": {
+    "nazev": "U Zvonu",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "153",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Na Zlíchově 254/19, Praha 5",
+   "zastavka": {
+    "nazev": "Zlíchov",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "21",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "128",
+      "typ": "bus"
+     },
+     {
+      "nazev": "258",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Nám. 14. října 1381/4, Praha 5",
+   "zastavka": {
+    "nazev": "Zborovská",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Nepomucká 139/1, Praha 5",
+   "zastavka": {
+    "nazev": "Pod Školou",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "123",
+      "typ": "bus"
+     },
+     {
+      "nazev": "253",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Peroutkova 1004/24, Praha 5",
+   "zastavka": {
+    "nazev": "Urbanova",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "52",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Podbělohorská 2185/1, Praha 5",
+   "zastavka": {
+    "nazev": "Klamovka",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "16",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     },
+     {
+      "nazev": "123",
+      "typ": "bus"
+     },
+     {
+      "nazev": "149",
+      "typ": "bus"
+     },
+     {
+      "nazev": "167",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "265",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Podbělohorská 720/26, Praha 5",
+   "zastavka": {
+    "nazev": "Nad Klamovkou",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "149",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "265",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Radlická 115/140, Praha 5",
+   "zastavka": {
+    "nazev": "Škola Radlice",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "4",
+      "typ": "tram"
+     },
+     {
+      "nazev": "153",
+      "typ": "bus"
+     },
+     {
+      "nazev": "271",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "U Santošky 1007/1, Praha 5",
+   "zastavka": {
+    "nazev": "Santoška",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "52",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "U Tyršovy školy 430/1, Praha 5",
+   "zastavka": {
+    "nazev": "Jinonice",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "52",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "149",
+      "typ": "bus"
+     },
+     {
+      "nazev": "219",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "U Železničního mostu 2629/4, Praha 5",
+   "zastavka": {
+    "nazev": "Na Knížecí",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "52",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "123",
+      "typ": "bus"
+     },
+     {
+      "nazev": "167",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "231",
+      "typ": "bus"
+     },
+     {
+      "nazev": "232",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "V Remízku 919/7, Praha 5",
+   "zastavka": {
+    "nazev": "Pražská čtvrť",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "170",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Výmolová 169/2, Praha 5",
+   "zastavka": {
+    "nazev": "Kutvirtova",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "153",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Weberova 1090/1, Praha 5",
+   "zastavka": {
+    "nazev": "Weberova",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "167",
+      "typ": "bus"
+     },
+     {
+      "nazev": "265",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-5",
+   "adresa": "Zborovská 621/45, Praha 5",
+   "zastavka": {
+    "nazev": "Újezd",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "9",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "15",
+      "typ": "tram"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "98",
+      "typ": "tram"
+     },
+     {
+      "nazev": "99",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Alžírská 680/26, Vokovice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Nad Tratí",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "218",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Antonína Čermáka 1022/6, Bubeneč, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Zelená",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "18",
+      "typ": "tram"
+     },
+     {
+      "nazev": "51",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "131",
+      "typ": "bus"
+     },
+     {
+      "nazev": "255",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Arabská 682/14, Vokovice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Sídliště Červený Vrch",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Bělohorská 162/174, Břevnov, 169 00 Praha 6",
+   "zastavka": {
+    "nazev": "Malý Břevnov",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     },
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "260",
+      "typ": "bus"
+     },
+     {
+      "nazev": "347",
+      "typ": "bus"
+     },
+     {
+      "nazev": "365",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Bělohorská 226/103, Břevnov, 169 00 Praha 6",
+   "zastavka": {
+    "nazev": "Břevnovská",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "180",
+      "typ": "bus"
+     },
+     {
+      "nazev": "902",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Bílá 1784/1, Dejvice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Studentský dům",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "108",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Evropská 330/33, Dejvice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Thákurova",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Heyrovského náměstí 1888/2, Břevnov, 162 00 Praha 6",
+   "zastavka": {
+    "nazev": "Sídliště Petřiny",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "168",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "260",
+      "typ": "bus"
+     },
+     {
+      "nazev": "280",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Janákova 2358/9, Dejvice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Sídliště Baba",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "216",
+      "typ": "bus"
+     },
+     {
+      "nazev": "255",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "K Brusce 208/5, Hradčany, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Královský letohrádek",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "K letišti 278/4a, Ruzyně, 161 00 Praha 6",
+   "zastavka": {
+    "nazev": "K Letišti",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "59",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "100",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "322",
+      "typ": "bus"
+     },
+     {
+      "nazev": "324",
+      "typ": "bus"
+     },
+     {
+      "nazev": "342",
+      "typ": "bus"
+     },
+     {
+      "nazev": "356",
+      "typ": "bus"
+     },
+     {
+      "nazev": "388",
+      "typ": "bus"
+     },
+     {
+      "nazev": "414",
+      "typ": "bus"
+     },
+     {
+      "nazev": "429",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Libocká 148/66, Liboc, 161 00 Praha 6",
+   "zastavka": {
+    "nazev": "Divoká Šárka",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "59",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "280",
+      "typ": "bus"
+     },
+     {
+      "nazev": "300",
+      "typ": "bus"
+     },
+     {
+      "nazev": "312",
+      "typ": "bus"
+     },
+     {
+      "nazev": "322",
+      "typ": "bus"
+     },
+     {
+      "nazev": "330",
+      "typ": "bus"
+     },
+     {
+      "nazev": "342",
+      "typ": "bus"
+     },
+     {
+      "nazev": "388",
+      "typ": "bus"
+     },
+     {
+      "nazev": "389",
+      "typ": "bus"
+     },
+     {
+      "nazev": "399",
+      "typ": "bus"
+     },
+     {
+      "nazev": "414",
+      "typ": "bus"
+     },
+     {
+      "nazev": "429",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Na dlouhém lánu 555/43, Vokovice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Kladenská",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "218",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Na okraji 305/43, Veleslavín, 162 00 Praha 6",
+   "zastavka": {
+    "nazev": "Na Okraji",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "260",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Nad alejí 1952/5, Břevnov, 162 00 Praha 6",
+   "zastavka": {
+    "nazev": "Petřiny",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "168",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "260",
+      "typ": "bus"
+     },
+     {
+      "nazev": "280",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "náměstí Českého povstání 511/6, Ruzyně, 161 00 Praha 6",
+   "zastavka": {
+    "nazev": "Ruzyňská škola",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "168",
+      "typ": "bus"
+     },
+     {
+      "nazev": "280",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "náměstí Svobody 930/2, Bubeneč, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Radnice Praha 6",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "108",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "náměstí Svobody 930/3, Bubeneč, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Radnice Praha 6",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "108",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Norbertov 126/1, Střešovice, 162 00 Praha 6",
+   "zastavka": {
+    "nazev": "Norbertov",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "216",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Parléřova 118/2, Hradčany, 169 00 Praha 6",
+   "zastavka": {
+    "nazev": "Pohořelec",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "23",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Pod Marjánkou 1900/2, Břevnov, 169 00 Praha 6",
+   "zastavka": {
+    "nazev": "Marjánka",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "22",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "97",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Sušická 1000/29, Dejvice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Hanspaulka",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "51",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "131",
+      "typ": "bus"
+     },
+     {
+      "nazev": "216",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Šantrochova 1800/2, Břevnov, 162 00 Praha 6",
+   "zastavka": {
+    "nazev": "Větrník",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "2",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "108",
+      "typ": "bus"
+     },
+     {
+      "nazev": "164",
+      "typ": "bus"
+     },
+     {
+      "nazev": "168",
+      "typ": "bus"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "260",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "U dělnického cvičiště 1100/1, Břevnov, 169 00 Praha 6",
+   "zastavka": {
+    "nazev": "Radimova",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "164",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "V Sedlci 41/20, Sedlec, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Sedlec",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "P1",
+      "typ": "ferry"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "V Šáreckém údolí 187/38, Dejvice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Žežulka",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "116",
+      "typ": "bus"
+     },
+     {
+      "nazev": "255",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Vokovická 32/3, Vokovice, 160 00 Praha 6",
+   "zastavka": {
+    "nazev": "Nádraží Veleslavín",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "A",
+      "typ": "metro"
+     },
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "59",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "218",
+      "typ": "bus"
+     },
+     {
+      "nazev": "300",
+      "typ": "bus"
+     },
+     {
+      "nazev": "312",
+      "typ": "bus"
+     },
+     {
+      "nazev": "322",
+      "typ": "bus"
+     },
+     {
+      "nazev": "330",
+      "typ": "bus"
+     },
+     {
+      "nazev": "342",
+      "typ": "bus"
+     },
+     {
+      "nazev": "388",
+      "typ": "bus"
+     },
+     {
+      "nazev": "389",
+      "typ": "bus"
+     },
+     {
+      "nazev": "399",
+      "typ": "bus"
+     },
+     {
+      "nazev": "414",
+      "typ": "bus"
+     },
+     {
+      "nazev": "429",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-6",
+   "adresa": "Žukovského 580/6, Liboc, 161 00 Praha 6",
+   "zastavka": {
+    "nazev": "Sídliště Na Dědině",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "20",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "191",
+      "typ": "bus"
+     },
+     {
+      "nazev": "225",
+      "typ": "bus"
+     },
+     {
+      "nazev": "280",
+      "typ": "bus"
+     },
+     {
+      "nazev": "910",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Františka Křížka 490/2, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "Nábřeží Kapitána Jaroše",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Korunovační 164/8, 170 00 Praha 7 - Bubeneč",
+   "zastavka": {
+    "nazev": "Korunovační",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Letohradská 370/1, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "Kamenická",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Ortenovo náměstí 1275/34, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "Ortenovo náměstí",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "5",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "X94",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Strossmayerovo náměstí 990/4, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "Strossmayerovo náměstí",
+    "metru": 70,
+    "linky": [
+     {
+      "nazev": "1",
+      "typ": "tram"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "6",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "25",
+      "typ": "tram"
+     },
+     {
+      "nazev": "26",
+      "typ": "tram"
+     },
+     {
+      "nazev": "91",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "96",
+      "typ": "tram"
+     },
+     {
+      "nazev": "156",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Tusarova 790/21, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "Osadní",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "156",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-7",
+   "adresa": "Umělecká 850/8, 170 00 Praha 7 - Holešovice",
+   "zastavka": {
+    "nazev": "OC Stromovka",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "156",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Bedřichovská 1/1960, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Štěpničná",
+    "metru": 320,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "103",
+      "typ": "bus"
+     },
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "368",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Burešova 14/1130, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Šimůnkova",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "251",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Dolákova 1/555, Praha 8 - Bohnice",
+   "zastavka": {
+    "nazev": "Sídliště Bohnice",
+    "metru": 450,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "200",
+      "typ": "bus"
+     },
+     {
+      "nazev": "236",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Frýdlantská 1/1350, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Třebenická",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "103",
+      "typ": "bus"
+     },
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "349",
+      "typ": "bus"
+     },
+     {
+      "nazev": "368",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "963",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Glowackého 6/555, Praha 8 - Troja",
+   "zastavka": {
+    "nazev": "Dunajecká",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "144",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Heydukova 5/359, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Palmovka",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "58",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X25",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X94",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Hlivická 1/400, Praha 8 - Bohnice",
+   "zastavka": {
+    "nazev": "Odra",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "200",
+      "typ": "bus"
+     },
+     {
+      "nazev": "202",
+      "typ": "bus"
+     },
+     {
+      "nazev": "235",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Hovorčovická 11/1281, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Písečná",
+    "metru": 290,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "144",
+      "typ": "bus"
+     },
+     {
+      "nazev": "145",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "200",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Chabařovická 4/1125, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Sídliště Ďáblice",
+    "metru": 250,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "103",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "348",
+      "typ": "bus"
+     },
+     {
+      "nazev": "368",
+      "typ": "bus"
+     },
+     {
+      "nazev": "369",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "963",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Karlínské nám. 7/316, Praha 8 - Karlín",
+   "zastavka": {
+    "nazev": "Křižíkova",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Klapkova 25/156, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Kobylisy",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "C",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "144",
+      "typ": "bus"
+     },
+     {
+      "nazev": "145",
+      "typ": "bus"
+     },
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "162",
+      "typ": "bus"
+     },
+     {
+      "nazev": "169",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "200",
+      "typ": "bus"
+     },
+     {
+      "nazev": "370",
+      "typ": "bus"
+     },
+     {
+      "nazev": "371",
+      "typ": "bus"
+     },
+     {
+      "nazev": "372",
+      "typ": "bus"
+     },
+     {
+      "nazev": "373",
+      "typ": "bus"
+     },
+     {
+      "nazev": "374",
+      "typ": "bus"
+     },
+     {
+      "nazev": "411",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "958",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Kollárova 5/271, Praha 8 - Karlín",
+   "zastavka": {
+    "nazev": "Křižíkova",
+    "metru": 240,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Krejčího 1/350, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Bulovka",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Libčická 10/658, Praha 8 - Čimice",
+   "zastavka": {
+    "nazev": "Přívorská",
+    "metru": 430,
+    "linky": [
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "251",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Lindnerova 3/517, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "U Kříže",
+    "metru": 170,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Lyčkovo nám. 6/460, Praha 8 - Karlín",
+   "zastavka": {
+    "nazev": "Urxova",
+    "metru": 260,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Na Bendovce 20/186, Praha 8 - Bohnice",
+   "zastavka": {
+    "nazev": "Staré Bohnice",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "236",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Na Šutce 28/440, Praha 8 - Troja",
+   "zastavka": {
+    "nazev": "Služská",
+    "metru": 280,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "145",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Nad Rokoskou 7/111, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Kuchyňka",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "905",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Pod Vodárenskou věží 1/1999, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Na Slovance",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "166",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Přemyšlenská 15/1102, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Sídliště Kobylisy",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "162",
+      "typ": "bus"
+     },
+     {
+      "nazev": "169",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Sokolovská 83/49, Praha 8 - Karlín",
+   "zastavka": {
+    "nazev": "Křižíkova",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Svídnická 1a/599, Praha 8 - Troja",
+   "zastavka": {
+    "nazev": "Poliklinika Mazurská",
+    "metru": 330,
+    "linky": [
+     {
+      "nazev": "144",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "202",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "U Libeňského zámku 1/3, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Libeňský zámek",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "58",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "U Školské zahrady 4/1030, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Střelničná",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "93",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Za Invalidovnou 3/579, Praha 8 - Karlín",
+   "zastavka": {
+    "nazev": "Invalidovna",
+    "metru": 300,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Zenklova 52/26, Praha 8 - Libeň",
+   "zastavka": {
+    "nazev": "Libeňský zámek",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "3",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "24",
+      "typ": "tram"
+     },
+     {
+      "nazev": "95",
+      "typ": "tram"
+     },
+     {
+      "nazev": "58",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X3",
+      "typ": "bus"
+     },
+     {
+      "nazev": "X95",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-8",
+   "adresa": "Žernosecká 3/1597, Praha 8 - Kobylisy",
+   "zastavka": {
+    "nazev": "Šimůnkova",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "102",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "251",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Čakovická 783/51, Praha 9",
+   "zastavka": {
+    "nazev": "Klíčovská",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Litvínovská 500/5, Praha 9",
+   "zastavka": {
+    "nazev": "Madlina",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Litvínovská 600/1, Praha 9",
+   "zastavka": {
+    "nazev": "Starý Prosek",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Lovosická 440/40, Praha 9",
+   "zastavka": {
+    "nazev": "Poliklinika Prosek",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "nám. Na Balabence 800/7, Praha 9",
+   "zastavka": {
+    "nazev": "Balabenka",
+    "metru": 140,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Novoborská 371/10, Praha 9",
+   "zastavka": {
+    "nazev": "Zásadská",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Novoborská 610/2, Praha 9",
+   "zastavka": {
+    "nazev": "Českolipská",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Novovysočanská 501/5, Praha 9",
+   "zastavka": {
+    "nazev": "Skloněná",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Pod Táborem 300/7, Praha 9",
+   "zastavka": {
+    "nazev": "Pod Táborem",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Poděbradská 179/1, Praha 9",
+   "zastavka": {
+    "nazev": "Nádraží Libeň",
+    "metru": 120,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "10",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Sokolovská 14/324, Praha 9",
+   "zastavka": {
+    "nazev": "Vysočanská",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     },
+     {
+      "nazev": "136",
+      "typ": "bus"
+     },
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "152",
+      "typ": "bus"
+     },
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "182",
+      "typ": "bus"
+     },
+     {
+      "nazev": "183",
+      "typ": "bus"
+     },
+     {
+      "nazev": "195",
+      "typ": "bus"
+     },
+     {
+      "nazev": "375",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Sokolovská 969/191, Praha 9",
+   "zastavka": {
+    "nazev": "Divadlo Gong",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Sousedíkova 1044/8, Praha 9",
+   "zastavka": {
+    "nazev": "U Elektry",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "7",
+      "typ": "tram"
+     },
+     {
+      "nazev": "8",
+      "typ": "tram"
+     },
+     {
+      "nazev": "94",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "Špitálská 789/4, Praha 9",
+   "zastavka": {
+    "nazev": "Špitálská",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "U Mateřské školy 355/2, Praha 9",
+   "zastavka": {
+    "nazev": "Starý Prosek",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "151",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-9",
+   "adresa": "U Svobodárny 1110/12, Praha 9",
+   "zastavka": {
+    "nazev": "Divadlo Gong",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "12",
+      "typ": "tram"
+     },
+     {
+      "nazev": "31",
+      "typ": "tram"
+     },
+     {
+      "nazev": "92",
+      "typ": "tram"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-bechovice",
+   "adresa": "Českobrodská 3, Praha 9 - Běchovice",
+   "zastavka": {
+    "nazev": "Běchovice",
+    "metru": 210,
+    "linky": [
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "262",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-bechovice",
+   "adresa": "Na Korunce 580, Praha 9 - Běchovice",
+   "zastavka": {
+    "nazev": "Nádraží Běchovice",
+    "metru": 600,
+    "linky": [
+     {
+      "nazev": "109",
+      "typ": "bus"
+     },
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "250",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-benice",
+   "adresa": "Květnového povstání 21, Praha 10",
+   "zastavka": {
+    "nazev": "Benice",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     },
+     {
+      "nazev": "325",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-brezineves",
+   "adresa": "Na Hlavní 14/41, 182 00 Praha 8 – Březiněves",
+   "zastavka": {
+    "nazev": "Březiněves",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "103",
+      "typ": "bus"
+     },
+     {
+      "nazev": "348",
+      "typ": "bus"
+     },
+     {
+      "nazev": "368",
+      "typ": "bus"
+     },
+     {
+      "nazev": "369",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "963",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-cakovice",
+   "adresa": "Jizerská 816, Čakovice",
+   "zastavka": {
+    "nazev": "Náměstí Jiřího Berana",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "202",
+      "typ": "bus"
+     },
+     {
+      "nazev": "257",
+      "typ": "bus"
+     },
+     {
+      "nazev": "275",
+      "typ": "trolleybus"
+     },
+     {
+      "nazev": "276",
+      "typ": "bus"
+     },
+     {
+      "nazev": "915",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-cakovice",
+   "adresa": "Na Kačence 401/6a, Miškovice",
+   "zastavka": {
+    "nazev": "Tuháňská",
+    "metru": 190,
+    "linky": [
+     {
+      "nazev": "321",
+      "typ": "bus"
+     },
+     {
+      "nazev": "377",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-cakovice",
+   "adresa": "Slaviborské nám. 20/1, Třeboradice",
+   "zastavka": {
+    "nazev": "Třeboradice",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "110",
+      "typ": "bus"
+     },
+     {
+      "nazev": "166",
+      "typ": "bus"
+     },
+     {
+      "nazev": "185",
+      "typ": "bus"
+     },
+     {
+      "nazev": "276",
+      "typ": "bus"
+     },
+     {
+      "nazev": "351",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dablice",
+   "adresa": "Ke kinu 159/7, 182 00 Praha-Ďáblice",
+   "zastavka": {
+    "nazev": "Na Štamberku",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "103",
+      "typ": "bus"
+     },
+     {
+      "nazev": "202",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dablice",
+   "adresa": "Osinalická 1104/13, 182 00 Praha-Ďáblice",
+   "zastavka": {
+    "nazev": "K Letňanům",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "348",
+      "typ": "bus"
+     },
+     {
+      "nazev": "368",
+      "typ": "bus"
+     },
+     {
+      "nazev": "369",
+      "typ": "bus"
+     },
+     {
+      "nazev": "963",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dolni-chabry",
+   "adresa": "Hrušovanské nám. 253/5, 184 00 Praha 8 – Dolní Chabry",
+   "zastavka": {
+    "nazev": "Osecká",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "162",
+      "typ": "bus"
+     },
+     {
+      "nazev": "169",
+      "typ": "bus"
+     },
+     {
+      "nazev": "202",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dolni-mecholupy",
+   "adresa": "Dolnoměcholupská 168/37, 111 01 Praha 10",
+   "zastavka": {
+    "nazev": "U Střediska",
+    "metru": 10,
+    "linky": [
+     {
+      "nazev": "111",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dolni-mecholupy",
+   "adresa": "Kutnohorská 36, 111 01 Praha 10",
+   "zastavka": {
+    "nazev": "Dolní Měcholupy",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "111",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "252",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     },
+     {
+      "nazev": "364",
+      "typ": "bus"
+     },
+     {
+      "nazev": "366",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dolni-pocernice",
+   "adresa": "Stará obec 10, Praha 9 – Dolní Počernice",
+   "zastavka": {
+    "nazev": "Stará obec",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "208",
+      "typ": "bus"
+     },
+     {
+      "nazev": "224",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dolni-pocernice",
+   "adresa": "Svatoňovická 587, Praha 9 – Dolní Počernice",
+   "zastavka": {
+    "nazev": "Svatoňovická",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-dubec",
+   "adresa": "Starodubečská 413/14, Praha-Dubeč",
+   "zastavka": {
+    "nazev": "Škola Dubeč",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "111",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-klanovice",
+   "adresa": "Slavětínská 200, 190 14 Praha-Klánovice",
+   "zastavka": {
+    "nazev": "Smržovská",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "212",
+      "typ": "bus"
+     },
+     {
+      "nazev": "221",
+      "typ": "bus"
+     },
+     {
+      "nazev": "303",
+      "typ": "bus"
+     },
+     {
+      "nazev": "343",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kolodeje",
+   "adresa": "K Jízdárně 9/20, 190 16 Praha-Koloděje",
+   "zastavka": {
+    "nazev": "Pod Oborou",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "111",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     },
+     {
+      "nazev": "329",
+      "typ": "bus"
+     },
+     {
+      "nazev": "908",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kolovraty",
+   "adresa": "Albíny Hochové 880/26a, 103 00 Praha 10",
+   "zastavka": {
+    "nazev": "Praha-Kolovraty",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "S9",
+      "typ": "train"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-kolovraty",
+   "adresa": "Do Kopečka 11, 103 00 Praha 10",
+   "zastavka": {
+    "nazev": "Lipany",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kolovraty",
+   "adresa": "Mírová 364/34, 103 00 Praha 10",
+   "zastavka": {
+    "nazev": "Tehovičky",
+    "metru": 80,
+    "linky": [
+     {
+      "nazev": "226",
+      "typ": "bus"
+     },
+     {
+      "nazev": "227",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kralovice",
+   "adresa": "K Nedvězí 66, Praha-Královice",
+   "zastavka": {
+    "nazev": "Královice",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "229",
+      "typ": "bus"
+     },
+     {
+      "nazev": "903",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kreslice",
+   "adresa": "Štychova 2/34, 104 00 Praha 10",
+   "zastavka": {
+    "nazev": "Křeslice",
+    "metru": 10,
+    "linky": [
+     {
+      "nazev": "122",
+      "typ": "bus"
+     },
+     {
+      "nazev": "126",
+      "typ": "bus"
+     },
+     {
+      "nazev": "270",
+      "typ": "bus"
+     },
+     {
+      "nazev": "272",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kunratice",
+   "adresa": "Jana Růžičky 1179, Praha 4 – Kunratice",
+   "zastavka": {
+    "nazev": "U Kunratického lesa",
+    "metru": 230,
+    "linky": [
+     {
+      "nazev": "177",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "326",
+      "typ": "bus"
+     },
+     {
+      "nazev": "911",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-kunratice",
+   "adresa": "Předškolní 420, Praha 4 – Kunratice",
+   "zastavka": {
+    "nazev": "U Tří svatých",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "114",
+      "typ": "bus"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "203",
+      "typ": "bus"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     },
+     {
+      "nazev": "332",
+      "typ": "bus"
+     },
+     {
+      "nazev": "335",
+      "typ": "bus"
+     },
+     {
+      "nazev": "337",
+      "typ": "bus"
+     },
+     {
+      "nazev": "339",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     },
+     {
+      "nazev": "956",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-libus",
+   "adresa": "K Lukám 664/1, Praha 4 - Libuš",
+   "zastavka": {
+    "nazev": "Mílová",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-libus",
+   "adresa": "Ladislava Coňka 40/3, Praha 4 - Písnice",
+   "zastavka": {
+    "nazev": "Ke Březině",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "333",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-libus",
+   "adresa": "Meteorologická 181/2, Praha 4 - Libuš",
+   "zastavka": {
+    "nazev": "Sídliště Libuš",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "17",
+      "typ": "tram"
+     },
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "215",
+      "typ": "bus"
+     },
+     {
+      "nazev": "274",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-libus",
+   "adresa": "Na Okruhu 395/1, Praha 4 - Písnice",
+   "zastavka": {
+    "nazev": "Sídliště Písnice",
+    "metru": 330,
+    "linky": [
+     {
+      "nazev": "113",
+      "typ": "bus"
+     },
+     {
+      "nazev": "197",
+      "typ": "bus"
+     },
+     {
+      "nazev": "333",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "913",
+      "typ": "bus"
+     },
+     {
+      "nazev": "960",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-lipence",
+   "adresa": "Černošická 168, Praha 5 - Lipence",
+   "zastavka": {
+    "nazev": "Škola Lipence",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "242",
+      "typ": "bus"
+     },
+     {
+      "nazev": "243",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-lochkov",
+   "adresa": "Za Ovčínem 1, Praha - Lochkov",
+   "zastavka": {
+    "nazev": "Lochkov",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "918",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-lysolaje",
+   "adresa": "Horní náměstí 424/10, Praha-Lysolaje",
+   "zastavka": {
+    "nazev": "Horní Lysolaje",
+    "metru": 110,
+    "linky": [
+     {
+      "nazev": "160",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-nebusice",
+   "adresa": "Nebušická 369, Praha-Nebušice",
+   "zastavka": {
+    "nazev": "Škola Nebušice",
+    "metru": 40,
+    "linky": [
+     {
+      "nazev": "161",
+      "typ": "bus"
+     },
+     {
+      "nazev": "312",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-nedvezi",
+   "adresa": "Únorová 15/3, Praha - Nedvězí",
+   "zastavka": {
+    "nazev": "Hájová",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "227",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-petrovice",
+   "adresa": "Edisonova 429/28, Praha 10",
+   "zastavka": {
+    "nazev": "Newtonova",
+    "metru": 350,
+    "linky": [
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "240",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-predni-kopanina",
+   "adresa": "Hokešovo náměstí 193",
+   "zastavka": {
+    "nazev": "Přední Kopanina",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "161",
+      "typ": "bus"
+     },
+     {
+      "nazev": "312",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-reporyje",
+   "adresa": "Od Školy čp. 596, Praha-Řeporyje",
+   "zastavka": {
+    "nazev": "Nádraží Řeporyje",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     },
+     {
+      "nazev": "266",
+      "typ": "bus"
+     },
+     {
+      "nazev": "301",
+      "typ": "bus"
+     },
+     {
+      "nazev": "352",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-reporyje",
+   "adresa": "Smíchovská čp. 96, Praha-Řeporyje",
+   "zastavka": {
+    "nazev": "Hlávkova",
+    "metru": 150,
+    "linky": [
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-satalice",
+   "adresa": "K Cihelně 137, Praha 9 - Satalice",
+   "zastavka": {
+    "nazev": "Satalice",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "186",
+      "typ": "bus"
+     },
+     {
+      "nazev": "201",
+      "typ": "bus"
+     },
+     {
+      "nazev": "209",
+      "typ": "bus"
+     },
+     {
+      "nazev": "396",
+      "typ": "bus"
+     },
+     {
+      "nazev": "953",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-seberov",
+   "adresa": "K Šeberovu 805, Praha 4 - Šeberov",
+   "zastavka": {
+    "nazev": "Hrnčíře",
+    "metru": 10,
+    "linky": [
+     {
+      "nazev": "326",
+      "typ": "bus"
+     },
+     {
+      "nazev": "327",
+      "typ": "bus"
+     },
+     {
+      "nazev": "331",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-seberov",
+   "adresa": "V Ladech 6, Praha 4 - Šeberov",
+   "zastavka": {
+    "nazev": "V Ladech",
+    "metru": 250,
+    "linky": [
+     {
+      "nazev": "154",
+      "typ": "bus"
+     },
+     {
+      "nazev": "326",
+      "typ": "bus"
+     },
+     {
+      "nazev": "327",
+      "typ": "bus"
+     },
+     {
+      "nazev": "331",
+      "typ": "bus"
+     },
+     {
+      "nazev": "357",
+      "typ": "bus"
+     },
+     {
+      "nazev": "901",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-slivenec",
+   "adresa": "K Lochkovu 6/2, Praha - Slivenec",
+   "zastavka": {
+    "nazev": "Radnice Slivenec",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "104",
+      "typ": "bus"
+     },
+     {
+      "nazev": "120",
+      "typ": "bus"
+     },
+     {
+      "nazev": "918",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-sterboholy",
+   "adresa": "U Školy 285, Praha 10 - Štěrboholy",
+   "zastavka": {
+    "nazev": "Štěrboholy",
+    "metru": 160,
+    "linky": [
+     {
+      "nazev": "163",
+      "typ": "bus"
+     },
+     {
+      "nazev": "204",
+      "typ": "bus"
+     },
+     {
+      "nazev": "208",
+      "typ": "bus"
+     },
+     {
+      "nazev": "228",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-suchdol",
+   "adresa": "Suchdolská 360, Praha-Suchdol",
+   "zastavka": {
+    "nazev": "Suchdol",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "107",
+      "typ": "bus"
+     },
+     {
+      "nazev": "160",
+      "typ": "bus"
+     },
+     {
+      "nazev": "359",
+      "typ": "bus"
+     },
+     {
+      "nazev": "409",
+      "typ": "bus"
+     },
+     {
+      "nazev": "909",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-troja",
+   "adresa": "Trojská 230/96, Praha 7",
+   "zastavka": {
+    "nazev": "Kazanka",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "112",
+      "typ": "bus"
+     },
+     {
+      "nazev": "234",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-ujezd",
+   "adresa": "Kateřinské náměstí 465/1",
+   "zastavka": {
+    "nazev": "Kateřinky",
+    "metru": 220,
+    "linky": [
+     {
+      "nazev": "122",
+      "typ": "bus"
+     },
+     {
+      "nazev": "363",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-ujezd",
+   "adresa": "Na Vojtěšce 188",
+   "zastavka": {
+    "nazev": "Ve Vilkách",
+    "metru": 100,
+    "linky": [
+     {
+      "nazev": "122",
+      "typ": "bus"
+     },
+     {
+      "nazev": "363",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-ujezd",
+   "adresa": "Vodnická 531/44",
+   "zastavka": {
+    "nazev": "Kateřinky",
+    "metru": 180,
+    "linky": [
+     {
+      "nazev": "122",
+      "typ": "bus"
+     },
+     {
+      "nazev": "363",
+      "typ": "bus"
+     },
+     {
+      "nazev": "906",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-velka-chuchle",
+   "adresa": "Starochuchelská 240, Praha-Velká Chuchle",
+   "zastavka": {
+    "nazev": "Škola Velká Chuchle",
+    "metru": 60,
+    "linky": [
+     {
+      "nazev": "104",
+      "typ": "bus"
+     },
+     {
+      "nazev": "172",
+      "typ": "bus"
+     },
+     {
+      "nazev": "261",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-velka-chuchle",
+   "adresa": "V Lázních 42/3, Praha-Malá Chuchle",
+   "zastavka": {
+    "nazev": "Malá Chuchle",
+    "metru": 200,
+    "linky": [
+     {
+      "nazev": "129",
+      "typ": "bus"
+     },
+     {
+      "nazev": "172",
+      "typ": "bus"
+     },
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "244",
+      "typ": "bus"
+     },
+     {
+      "nazev": "318",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "951",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-vinor",
+   "adresa": "Mladoboleslavská 551, Praha - Vinoř",
+   "zastavka": {
+    "nazev": "Vinořský hřbitov",
+    "metru": 20,
+    "linky": [
+     {
+      "nazev": "159",
+      "typ": "bus"
+     },
+     {
+      "nazev": "186",
+      "typ": "bus"
+     },
+     {
+      "nazev": "375",
+      "typ": "bus"
+     },
+     {
+      "nazev": "376",
+      "typ": "bus"
+     },
+     {
+      "nazev": "378",
+      "typ": "bus"
+     },
+     {
+      "nazev": "914",
+      "typ": "bus"
+     },
+     {
+      "nazev": "953",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zbraslav",
+   "adresa": "Hauptova 591, Praha-Zbraslav",
+   "zastavka": {
+    "nazev": "Elišky Přemyslovny",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "129",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "242",
+      "typ": "bus"
+     },
+     {
+      "nazev": "247",
+      "typ": "bus"
+     },
+     {
+      "nazev": "261",
+      "typ": "bus"
+     },
+     {
+      "nazev": "318",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zbraslav",
+   "adresa": "Nad Parkem 1180, Praha-Zbraslav",
+   "zastavka": {
+    "nazev": "U Včely",
+    "metru": 270,
+    "linky": [
+     {
+      "nazev": "129",
+      "typ": "bus"
+     },
+     {
+      "nazev": "139",
+      "typ": "bus"
+     },
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "242",
+      "typ": "bus"
+     },
+     {
+      "nazev": "247",
+      "typ": "bus"
+     },
+     {
+      "nazev": "261",
+      "typ": "bus"
+     },
+     {
+      "nazev": "318",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zbraslav",
+   "adresa": "Strakonická 125, Praha-Lahovice",
+   "zastavka": {
+    "nazev": "Lahovičky",
+    "metru": 130,
+    "linky": [
+     {
+      "nazev": "129",
+      "typ": "bus"
+     },
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "317",
+      "typ": "bus"
+     },
+     {
+      "nazev": "318",
+      "typ": "bus"
+     },
+     {
+      "nazev": "320",
+      "typ": "bus"
+     },
+     {
+      "nazev": "334",
+      "typ": "bus"
+     },
+     {
+      "nazev": "907",
+      "typ": "bus"
+     },
+     {
+      "nazev": "961",
+      "typ": "bus"
+     },
+     {
+      "nazev": "P6",
+      "typ": "ferry"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  },
+  {
+   "mestskaCast": "praha-zbraslav",
+   "adresa": "Žabovřeská 250, Praha-Zbraslav",
+   "zastavka": {
+    "nazev": "Kostrounek",
+    "metru": 50,
+    "linky": [
+     {
+      "nazev": "241",
+      "typ": "bus"
+     },
+     {
+      "nazev": "917",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zbraslav",
+   "adresa": "Žitavského 571, Praha-Zbraslav",
+   "zastavka": {
+    "nazev": "Na Plácku",
+    "metru": 280,
+    "linky": [
+     {
+      "nazev": "314",
+      "typ": "bus"
+     },
+     {
+      "nazev": "338",
+      "typ": "bus"
+     },
+     {
+      "nazev": "360",
+      "typ": "bus"
+     },
+     {
+      "nazev": "361",
+      "typ": "bus"
+     },
+     {
+      "nazev": "390",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zlicin",
+   "adresa": "Hostivická 95, Praha-Sobín",
+   "zastavka": {
+    "nazev": "Valtická",
+    "metru": 30,
+    "linky": [
+     {
+      "nazev": "214",
+      "typ": "bus"
+     },
+     {
+      "nazev": "279",
+      "typ": "bus"
+     },
+     {
+      "nazev": "306",
+      "typ": "bus"
+     },
+     {
+      "nazev": "957",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zlicin",
+   "adresa": "Křivatcová 416, Praha - Zličín",
+   "zastavka": {
+    "nazev": "Halenkovská",
+    "metru": 90,
+    "linky": [
+     {
+      "nazev": "180",
+      "typ": "bus"
+     },
+     {
+      "nazev": "214",
+      "typ": "bus"
+     },
+     {
+      "nazev": "279",
+      "typ": "bus"
+     },
+     {
+      "nazev": "306",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "952",
+      "typ": "bus"
+     },
+     {
+      "nazev": "957",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zlicin",
+   "adresa": "Míšovická 513/12, Praha - Zličín",
+   "zastavka": {
+    "nazev": "Nový Zličín",
+    "metru": 330,
+    "linky": [
+     {
+      "nazev": "249",
+      "typ": "bus"
+     }
+    ]
+   }
+  },
+  {
+   "mestskaCast": "praha-zlicin",
+   "adresa": "Nedašovská 328, Praha - Zličín",
+   "zastavka": {
+    "nazev": "Zličín",
+    "metru": 330,
+    "linky": [
+     {
+      "nazev": "B",
+      "typ": "metro"
+     },
+     {
+      "nazev": "100",
+      "typ": "bus"
+     },
+     {
+      "nazev": "130",
+      "typ": "bus"
+     },
+     {
+      "nazev": "180",
+      "typ": "bus"
+     },
+     {
+      "nazev": "246",
+      "typ": "bus"
+     },
+     {
+      "nazev": "249",
+      "typ": "bus"
+     },
+     {
+      "nazev": "304",
+      "typ": "bus"
+     },
+     {
+      "nazev": "305",
+      "typ": "bus"
+     },
+     {
+      "nazev": "306",
+      "typ": "bus"
+     },
+     {
+      "nazev": "307",
+      "typ": "bus"
+     },
+     {
+      "nazev": "308",
+      "typ": "bus"
+     },
+     {
+      "nazev": "309",
+      "typ": "bus"
+     },
+     {
+      "nazev": "310",
+      "typ": "bus"
+     },
+     {
+      "nazev": "311",
+      "typ": "bus"
+     },
+     {
+      "nazev": "324",
+      "typ": "bus"
+     },
+     {
+      "nazev": "336",
+      "typ": "bus"
+     },
+     {
+      "nazev": "347",
+      "typ": "bus"
+     },
+     {
+      "nazev": "358",
+      "typ": "bus"
+     },
+     {
+      "nazev": "380",
+      "typ": "bus"
+     },
+     {
+      "nazev": "384",
+      "typ": "bus"
+     },
+     {
+      "nazev": "386",
+      "typ": "bus"
+     },
+     {
+      "nazev": "404",
+      "typ": "bus"
+     },
+     {
+      "nazev": "415",
+      "typ": "bus"
+     },
+     {
+      "nazev": "417",
+      "typ": "bus"
+     },
+     {
+      "nazev": "904",
+      "typ": "bus"
+     },
+     {
+      "nazev": "952",
+      "typ": "bus"
+     },
+     {
+      "nazev": "957",
+      "typ": "bus"
+     }
+    ],
+    "bezbarierovaZastavka": true
+   }
+  }
+ ]
+}

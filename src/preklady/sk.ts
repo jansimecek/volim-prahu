@@ -539,6 +539,13 @@ export const sk: Preklad = {
 
     volebniOkrsek: 'Volebný okrsok',
     bezbarierova: 'bezbariérová',
+    zastavka: 'Najbližšia zastávka {nazev}, {vzdalenost} vzdušnou čiarou.',
+    zastavkaBezbarierova: 'bezbariérová zastávka',
+    zastavkaLinky: 'Idú odtiaľto: {linky}.',
+    parkovaniVZone: 'Miestnosť stojí v zóne plateného státia.',
+    parkovaniBlizko: 'Zóna plateného státia je asi {vzdalenost} od miestnosti.',
+    parkovaniTarif: 'Tarifa podľa mesta: {tarif}.',
+    parkovaniBezZony: 'V okolí do {okoli} nie je zóna plateného státia.',
     zdroj: 'zdroj',
     mistnostNeznamaUvod: 'Adresu volebnej miestnosti pre tento okrsok zatiaľ nepoznáme. Zverejní ju ',
     uredniDeska: 'úradná tabuľa {mc}',
@@ -603,6 +610,20 @@ export const sk: Preklad = {
       'Adresu miestnosti pre tento okrsok zatiaľ nepoznáme. Zverejní ju úradná tabuľa najneskôr 24. septembra 2026.',
     mapaAHledani: 'Mapa okrsku a hľadanie podľa adresy',
     znovu: 'Zistiť znovu',
+
+    zastavka: 'Najbližšia zastávka {nazev}, {vzdalenost} vzdušnou čiarou.',
+
+    zastavkaBezbarierova: 'bezbariérová zastávka',
+
+    zastavkaLinky: 'Idú odtiaľto: {linky}.',
+
+    parkovaniVZone: 'Miestnosť stojí v zóne plateného státia.',
+
+    parkovaniBlizko: 'Zóna plateného státia je asi {vzdalenost} od miestnosti.',
+
+    parkovaniTarif: 'Tarifa podľa mesta: {tarif}.',
+
+    parkovaniBezZony: 'V okolí do {okoli} nie je zóna plateného státia.',
 
     jednotkaM: 'm',
     jednotkaKm: 'km',

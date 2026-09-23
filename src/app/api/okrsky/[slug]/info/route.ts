@@ -3,6 +3,7 @@ import { polohaAdresyVPraze } from '@/lib/geokodovani'
 import { kandidatka } from '@/lib/kandidatky'
 import { mistnostiMestskeCasti, mistnostZPoznamky, type Mistnost } from '@/lib/mistnosti'
 import { MESTSKE_CASTI, mestskaCastPodleSlugu } from '@/lib/obsah'
+import { okoliParkovaniMetru } from '@/lib/parkovani'
 import { adresyMestskeCasti, okrskyMestskeCasti, type AdresyMestskeCasti } from '@/lib/okrsky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 
@@ -23,6 +24,8 @@ export type InfoMestskeCasti = {
   mandaty: number
   pocetStran: number
   mistnosti: Record<number, Mistnost>
+  /** Poloměr, ve kterém se u místnosti hledala zóna placeného stání. */
+  okoliParkovaniMetru: number
   senat:
     | { stav: 'voli'; cislo: number; nazev: string; slug: string }
     | { stav: 'castecne'; cislo: number; nazev: string; slug: string; popis: string }
@@ -63,6 +66,7 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
     mandaty: mc.mandaty,
     pocetStran: listina?.strany.length ?? 0,
     mistnosti,
+    okoliParkovaniMetru: okoliParkovaniMetru(),
     senat:
       senat.stav === 'nevoli'
         ? { stav: 'nevoli' }

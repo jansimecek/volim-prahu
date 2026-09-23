@@ -5,6 +5,8 @@ import type { Route } from 'next'
 import { useState } from 'react'
 import type { PrehledProPolohu } from '@/app/api/okrsky/prehled/route'
 import type { InfoMestskeCasti } from '@/app/api/okrsky/[slug]/info/route'
+import { Parkovani } from '@/components/Parkovani'
+import { Zastavka } from '@/components/Zastavka'
 import { bodVGeometrii, vzdalenostPriblizne, type Geometrie, type Pozice } from '@/lib/geometrie'
 import { vzdalenostMetru } from '@/lib/geokodovani'
 import { dosad } from '@/lib/sablony'
@@ -266,6 +268,16 @@ function Vysledek({
                 </span>
               )}
             </p>
+            {mistnost.zastavka && (
+              <Zastavka zastavka={mistnost.zastavka} texty={texty} locale={locale} />
+            )}
+            {mistnost.zona !== undefined && (
+              <Parkovani
+                zona={mistnost.zona}
+                okoliMetru={info.okoliParkovaniMetru}
+                texty={texty}
+              />
+            )}
             <p className="popisek-uredni mt-2">{texty.zdrojeMistnosti[mistnost.zdroj.typ]}</p>
           </>
         ) : (

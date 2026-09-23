@@ -556,6 +556,13 @@ export const en = {
 
     volebniOkrsek: 'Electoral precinct',
     bezbarierova: 'step-free access',
+    zastavka: 'Nearest stop {nazev}, {vzdalenost} as the crow flies.',
+    zastavkaBezbarierova: 'step-free stop',
+    zastavkaLinky: 'Lines: {linky}.',
+    parkovaniVZone: 'The polling station sits inside a paid parking zone.',
+    parkovaniBlizko: 'A paid parking zone starts about {vzdalenost} from the polling station.',
+    parkovaniTarif: 'City tariff: {tarif}.',
+    parkovaniBezZony: 'No paid parking zone within {okoli} of the polling station.',
     zdroj: 'source',
     mistnostNeznamaUvod:
       'We do not know the polling station for this precinct yet. It will be published by ',
@@ -630,6 +637,20 @@ export const en = {
       'We do not know the polling station for this precinct yet. The official board will publish it by 24 September 2026.',
     mapaAHledani: 'Map of the precinct and address search',
     znovu: 'Check again',
+
+    zastavka: 'Nearest stop {nazev}, {vzdalenost} as the crow flies.',
+
+    zastavkaBezbarierova: 'step-free stop',
+
+    zastavkaLinky: 'Lines: {linky}.',
+
+    parkovaniVZone: 'The polling station sits inside a paid parking zone.',
+
+    parkovaniBlizko: 'A paid parking zone starts about {vzdalenost} from the polling station.',
+
+    parkovaniTarif: 'City tariff: {tarif}.',
+
+    parkovaniBezZony: 'No paid parking zone within {okoli} of the polling station.',
 
     jednotkaM: 'm',
     jednotkaKm: 'km',
