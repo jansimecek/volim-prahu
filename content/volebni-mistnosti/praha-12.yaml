@@ -1,11 +1,12 @@
-# Zdroj: Oznámení o počtu a sídlech volebních okrsků, ÚMČ Praha 12 (starosta), č. j. P12 165293/2026 OSA, 24. 8. 2026
+# Zdroj: Oznámení o době a místě konání voleb do zastupitelstev obcí, ÚMČ Praha 12, vyvěšeno 16. 9. 2026
+# Místnosti i rozdělení okrsků jsou totožné s Oznámením o počtu a sídlech volebních okrsků z 24. 8. 2026; oznámení u okrsků 12013 a 12014 uvádí mateřskou školu WOLFRAM.
 mestskaCast: praha-12
-overeno: 2026-09-07
+overeno: 2026-09-22
 volby: komunalni-2026
 zdroj:
-  nazev: "Oznámení o počtu a sídlech volebních okrsků pro volby do zastupitelstev obcí 2026, ÚMČ Praha 12"
-  url: "https://www.praha12.cz/assets/File.ashx?id_org=80112&id_dokumenty=120371"
-  vyveseno: 2026-08-24
+  nazev: "Oznámení o době a místě konání voleb do Zastupitelstva městské části Praha 12, ÚMČ Praha 12"
+  url: "https://www.praha12.cz/assets/File.ashx?id_org=80112&id_dokumenty=120817"
+  vyveseno: 2026-09-16
 mistnosti:
   - nazev: "Základní škola profesora Švejcara v Praze 12"
     adresa: "Mráčkova 3090/2, Praha 4 – Modřany"
@@ -28,7 +29,7 @@ mistnosti:
   - nazev: "Základní škola a mateřská škola Na Beránku v Praze 12"
     adresa: "Pertoldova 3373/51, Praha 4 – Modřany"
     okrsky: [12009, 12010, 12011, 12012]
-  - nazev: "Základní škola a mateřská škola WOLFRAM v Praze 12"
+  - nazev: "Mateřská škola WOLFRAM v Praze 12"
     adresa: "Palmetová 2159/3, Praha 4 – Komořany"
     okrsky: [12013, 12014]
   - nazev: "Služebna Městské policie"

@@ -1,5 +1,5 @@
 {
-  "zkontrolovano": "2026-09-15",
+  "zkontrolovano": "2026-09-22",
   "stavy": [
     {
       "slug": "praha-1",
@@ -30,9 +30,14 @@
       "slug": "praha-12",
       "nazev": "Praha 12",
       "zdroj": "otevrena-data",
-      "stav": "ceka-se",
+      "stav": "oznameni-nalezeno",
       "urlDesky": "https://www.praha12.cz/uredni-deska/",
       "dalsiVolebni": [
+        {
+          "nazev": "Odvolání zapisovatelky a jmenování nové zapisovatelky okrskové volební komise č. 12037 ustavené na území  MČ Praha 12",
+          "url": "https://www.praha12.cz/odvolani-zapisovatelky-a-jmenovani-nove-zapisovatelky-okrskove-volebni-komise-c-12037-ustavene-na-uzemi-mc-praha-12/d-120740",
+          "vyveseno": "2026-09-15"
+        },
         {
           "nazev": "Pozvánka na povinné školení pro zapisovatele, předsedy a místopředsedy  okrskových volebních komisí",
           "url": "https://www.praha12.cz/pozvanka-na-povinne-skoleni-pro-zapisovatele-predsedy-a-mistopredsedy-okrskovych-volebnich-komisi/d-120671",
@@ -67,20 +72,20 @@
           "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem Sdružení nezávislých kandidátů - Radnice pro lidi",
           "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-sdruzeni-nezavislych-kandidatu-radnice-pro-lidi/d-120365",
           "vyveseno": "2026-08-21"
-        },
-        {
-          "nazev": "Rozhodnutí o registraci kandidátní listiny volební strany s názvem  SOUSEDÉ LIBUŠE A PÍSNICE - STAN, TOP 09 A NEZÁVISLÍ",
-          "url": "https://www.praha12.cz/rozhodnuti-o-registraci-kandidatni-listiny-volebni-strany-s-nazvem-sousede-libuse-a-pisnice-stan-top-09-a-nezavisli/d-120363",
-          "vyveseno": "2026-08-21"
         }
       ],
+      "oznameni": {
+        "nazev": "Oznámení o době a místě konání voleb do Zastupitelstva městské části Praha 12",
+        "url": "https://www.praha12.cz/oznameni-o-dobe-a-miste-konani-voleb-do-zastupitelstva-mestske-casti-praha-12/d-120816",
+        "vyveseno": "2026-09-16"
+      },
       "deskaDostupna": true
     },
     {
       "slug": "praha-13",
       "nazev": "Praha 13",
       "zdroj": "otevrena-data",
-      "stav": "ceka-se",
+      "stav": "oznameni-nalezeno",
       "urlDesky": "https://www.praha13.cz/uredni-deska/",
       "dalsiVolebni": [
         {
@@ -124,6 +129,11 @@
           "vyveseno": "2026-07-09"
         }
       ],
+      "oznameni": {
+        "nazev": "oznámení o místě a konání voleb",
+        "url": "https://eud.praha13.cz/pub/deska/17000002/edeska1/107037613",
+        "vyveseno": "2026-09-22"
+      },
       "deskaDostupna": true
     },
     {
@@ -235,6 +245,11 @@
       "dalsiVolebni": [
         {
           "nazev": "Volba do školské rady z řad zákonných zástupců nezletilých žáků",
+          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=49082",
+          "vyveseno": "2026-09-17"
+        },
+        {
+          "nazev": "Volba do školské rady z řad zákonných zástupců nezletilých žáků",
           "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=49008",
           "vyveseno": "2026-09-11"
         },
@@ -246,11 +261,6 @@
         {
           "nazev": "Pořadí volebních stran na hlasovacím lístku pro volby do Zastupitelstva MČ Praha-Zličín",
           "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48824",
-          "vyveseno": "2026-08-31"
-        },
-        {
-          "nazev": "Volba do školské rady z řad zákonných zástupců nezletilých žáků",
-          "url": "https://edeska.repy.cz/eDeskaDetail.jsp?detailId=48827",
           "vyveseno": "2026-08-31"
         },
         {
@@ -374,11 +384,6 @@
           "vyveseno": "2026-09-10"
         },
         {
-          "nazev": "Rozhodnutí + opatření - volební prezentace - nám. Barikád",
-          "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99214",
-          "vyveseno": "2026-09-02"
-        },
-        {
           "nazev": "Losování volebních čísel",
           "url": "https://www.praha3.cz/eDeska/eDeskaDetail.jsp?detailId=99196",
           "vyveseno": "2026-08-27"
@@ -415,9 +420,14 @@
       "slug": "praha-9",
       "nazev": "Praha 9",
       "zdroj": "otevrena-data",
-      "stav": "ceka-se",
+      "stav": "oznameni-nalezeno",
       "urlDesky": "https://www.praha9.cz/urad-a-samosprava/uredni-deska",
       "dalsiVolebni": [
+        {
+          "nazev": "Volby 2026 - Oznámení o době a místě konání voleb do Senátu Parlamentu České republiky",
+          "url": "https://www.praha9.cz/volby-2026-oznameni-o-dobe-a-miste-konani-voleb-do-senatu-parlamentu-ceske-republiky",
+          "vyveseno": "2026-09-17"
+        },
         {
           "nazev": "Volby 2026 - Oznámení o svolání prvního zasedání okrskových volebních komisí",
           "url": "https://www.praha9.cz/volby-2026-oznameni-o-svolani-prvniho-zasedani-okrskovych-volebnich-komisi",
@@ -452,13 +462,13 @@
           "nazev": "Volby 2026 - počty podpisů na peticích",
           "url": "https://www.praha9.cz/volby-2026-pocty-podpisu-na-peticich",
           "vyveseno": "2026-06-19"
-        },
-        {
-          "nazev": "VOLBY 2026 - stanovení počtu členů Zastupitelstva MČ Praha 9 pro volební období 2026-2030",
-          "url": "https://www.praha9.cz/volby-2026-stanoveni-poctu-clenu-zastupitelstva-mc-praha-9-pro-volebni-obdobi-2026-2030-0",
-          "vyveseno": "2026-06-15"
         }
       ],
+      "oznameni": {
+        "nazev": "Volby 2026 - Oznámení o době a místě konání voleb do zastupitelstev obcí",
+        "url": "https://www.praha9.cz/volby-2026-oznameni-o-dobe-a-miste-konani-voleb-do-zastupitelstev-obci",
+        "vyveseno": "2026-09-17"
+      },
       "deskaDostupna": true
     },
     {

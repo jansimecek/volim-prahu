@@ -1,14 +1,61 @@
 # Postoje SPOLU pro Prahu (ODS + TOP 09) k okruhům srovnání.
 #
-# Subjekt má k 8. 9. 2026 jen priority, ne tematický program (viz profil),
-# proto jsou postoje z doložených výroků lídra Tomáše Portlíka. Zdroje jsou
-# totožné s content/vyroky-lidru.yaml, kde je i přesné znění citací.
+# Do 8. 9. 2026 měla koalice jen priority, proto byly postoje z výroků lídra
+# Tomáše Portlíka. 22. 9. 2026 je na spoluproprahu26.cz program o deseti
+# kapitolách; postoje jsou přepsané z jeho surového textu. Z výroků zůstává
+# jen cena MHD, o které program mlčí (slibuje jen „udržitelné financování“).
 
 subjekt: spolu-pro-prahu
 uroven: magistrat
-overeno: 2026-09-08
+overeno: 2026-09-22
 
 postoje:
+  - okruh: bydleni
+    shrnuti: "Podmínky pro 10 tisíc nových bytů ročně, byty staví soukromníci na městských pozemcích"
+    postoj: >-
+      Program chce nastavit podmínky tak, aby ročně mohlo vznikat 10 tisíc
+      nových bytů: zjednodušit povolování, prověřit výškové limity a stavět
+      na brownfieldech. Městské pozemky mají zastavět soukromí investoři,
+      kteří část bytů předají zpět Praze do nájemního fondu. Roli Pražské
+      developerské společnosti chce přehodnotit, slibuje byty pro klíčové
+      profese a „rozumnou“ regulaci Airbnb, ne omezování podnikání.
+    typZdroje: program
+    zdroj:
+      text: "Praha jako domov (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-jako-domov-a-13-ag-4/
+      datum: 2026-09-22
+    proveditelnost:
+      kompetence: castecne
+      rozpocet: pokryto
+      cas: presahuje
+    poznamka: >-
+      Kolik bytů skutečně vznikne, rozhodují investoři; město může upravit
+      plán a postupy, ne nařídit výstavbu. Hodnocení je u programu.
+
+  - okruh: doprava
+    shrnuti: "Metro D od Písnice po náměstí Míru, Městský okruh, radiály a reforma parkování"
+    postoj: >-
+      V příštím období chce zahájit práce na všech úsecích metra D od Písnice
+      po náměstí Míru, se státem uzavřít memorandum o spolufinancování
+      Městského okruhu, připravit tendr na Radlickou radiálu a stavbu
+      Břevnovské radiály a nový Libeňský most. Parkování: dynamické ceny pro
+      návštěvníky, omezit krátkodobé stání nerezidentů v modrých zónách
+      a celopražská parkovací karta. Uzavírky má koordinovat systém
+      s modelováním a umělou inteligencí.
+    typZdroje: program
+    zdroj:
+      text: "Praha průjezdná (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-prujezdna-a-10-ag-4/
+      datum: 2026-09-22
+    proveditelnost:
+      agenda: mhd
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Metro D, Městský okruh i radiály jsou stavby na víc volebních období
+      a program sám počítá s penězi od státu.
+
   - okruh: doprava
     shrnuti: "Priorita vnitřní i vnější okruh a metro D; otevřít debatu o zdražení MHD"
     postoj: >-
@@ -31,14 +78,63 @@ postoje:
       Městský okruh i metro D jsou stavby přes několik volebních období; ceny
       jízdného schvaluje rada, ale okruh a metro závisí i na státu.
 
-  - okruh: bydleni
-    shrnuti: "„Dát Praze tempo“ — rozjet bytovou výstavbu a klíčové investice"
+  - okruh: skolstvi
+    shrnuti: "Víc míst na středních školách a gymnáziích, jednat se Středočeským krajem a státem"
     postoj: >-
-      Na zahájení kampaně lídr shrnul priority slovy o tempu: má se rozjet bytová
-      výstavba, klíčové investice a zrychlit doprava zpomalená uzavírkami. Kolik
-      bytů, kdo je má stavět a za kolik, veřejné vyjádření neuvádí.
-    typZdroje: vyrok
+      Kapacity středních odborných škol a gymnázií chce zvyšovat rozšiřováním
+      budov i hledáním nevyužitých veřejných budov a komerčních pronájmů.
+      Se Středočeským krajem chce jednat o budování kapacit na okrajích
+      Prahy, po státu požaduje podporu. Nepedagogické pracovníky chce platit
+      z rozpočtu města, učitelům nabídnout i bydlení. Počet míst ani termín
+      program neuvádí.
+    typZdroje: program
     zdroj:
-      text: ODS a TOP 09 zahájily v Praze předvolební kampaň (Pražský patriot)
-      url: https://www.prazskypatriot.cz/ods-a-top-09-zahajily-v-praze-predvolebni-kampan-pred-komunalnimi-volbami-co-vzkazali-starostove-kandidatovi-na-primatora/
-      datum: 2026-05-02
+      text: "Praha vzdělaná (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-vzdelana-a-18-ag-4/
+      datum: 2026-09-22
+
+  - okruh: rozpocet
+    shrnuti: "Fiskální pravidlo s minimem investic, stát má spolufinancovat metro D a okruh"
+    postoj: >-
+      Program chce zavést fiskální pravidla, která pevně stanoví minimální
+      objem investic, a snižovat běžné výdaje. Od státu požaduje
+      spolufinancování metra D a Městského okruhu a změnu rozpočtového
+      určení daní podle počtu lidí, kteří se po Praze denně pohybují. Chce
+      zvýšit poplatek z ubytování na evropský průměr a odmítá DPH na MHD.
+    typZdroje: program
+    zdroj:
+      text: "Praha ekonomicky odpovědná (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-ekonomicky-odpovedna-a-16-ag-4/
+      datum: 2026-09-22
+    poznamka: >-
+      Rozpočtové určení daní, DPH i výši poplatku z ubytování určuje zákon;
+      město je může jen požadovat.
+
+  - okruh: prostredi
+    shrnuti: "Energocentrum na čistírně, park Soutok, protipovodňová opatření a 73 elektráren do 2030"
+    postoj: >-
+      Program chce dostavět energocentrum na Ústřední čistírně odpadních vod,
+      které má teplem z odpadních vod zásobovat až 200 tisíc Pražanů, do roku
+      2030 zprovoznit 73 fotovoltaik na vodohospodářských budovách, zahájit
+      stavbu příměstského parku Soutok a protipovodňového parku Maniny
+      a zvýšit mobilní zábrany na vybraných nábřežích o 20 cm nad úroveň
+      povodně 2002.
+    typZdroje: program
+    zdroj:
+      text: "Praha pro život (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-pro-zivot-a-15-ag-4/
+      datum: 2026-09-22
+
+  - okruh: socialni
+    shrnuti: "800 nových míst v domovech pro seniory, 150 v odlehčovacích službách, péče o duševní zdraví"
+    postoj: >-
+      Program slibuje 800 nových míst v domovech pro seniory a domovech se
+      zvláštním režimem, nejméně 150 míst v odlehčovacích službách
+      a pečovatelskou službu s 1 000 pracovníky. Chce postavit nové sídlo
+      záchranné služby, zkrátit čekání na péči o duševní zdraví a velká
+      zařízení pro lidi bez domova postupně nahradit sítí menších center.
+    typZdroje: program
+    zdroj:
+      text: "Praha pečující (program SPOLU pro Prahu)"
+      url: https://www.spoluproprahu26.cz/praha-pecujici-a-12-ag-4/
+      datum: 2026-09-22
