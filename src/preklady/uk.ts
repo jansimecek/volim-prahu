@@ -540,6 +540,13 @@ export const uk: Preklad = {
 
     volebniOkrsek: 'Виборча дільниця',
     bezbarierova: 'безбар’єрний доступ',
+    zastavka: 'Найближча зупинка {nazev}, {vzdalenost} по прямій.',
+    zastavkaBezbarierova: 'безбар’єрна зупинка',
+    zastavkaLinky: 'Маршрути: {linky}.',
+    parkovaniVZone: 'Виборче приміщення стоїть у зоні платного паркування.',
+    parkovaniBlizko: 'Зона платного паркування починається приблизно за {vzdalenost} від приміщення.',
+    parkovaniTarif: 'Тариф міста: {tarif}.',
+    parkovaniBezZony: 'У радіусі {okoli} зони платного паркування немає.',
     zdroj: 'джерело',
     mistnostNeznamaUvod:
       'Виборче приміщення для цієї дільниці нам поки невідоме. Його оприлюднить ',
@@ -607,6 +614,20 @@ export const uk: Preklad = {
       'Виборче приміщення для цієї дільниці нам поки невідоме. Офіційна дошка оприлюднить його до 24 вересня 2026 року.',
     mapaAHledani: 'Карта дільниці та пошук за адресою',
     znovu: 'Визначити ще раз',
+
+    zastavka: 'Найближча зупинка {nazev}, {vzdalenost} по прямій.',
+
+    zastavkaBezbarierova: 'безбар’єрна зупинка',
+
+    zastavkaLinky: 'Маршрути: {linky}.',
+
+    parkovaniVZone: 'Виборче приміщення стоїть у зоні платного паркування.',
+
+    parkovaniBlizko: 'Зона платного паркування починається приблизно за {vzdalenost} від приміщення.',
+
+    parkovaniTarif: 'Тариф міста: {tarif}.',
+
+    parkovaniBezZony: 'У радіусі {okoli} зони платного паркування немає.',
 
     jednotkaM: 'м',
     jednotkaKm: 'км',

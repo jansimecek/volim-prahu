@@ -8,6 +8,8 @@ import { vzdalenostMetru } from '@/lib/geokodovani'
 import type { Mistnost } from '@/lib/mistnostiTypy'
 import { najdiAdresu, normalizujUlici, type NalezenaAdresa } from '@/lib/okrskyHledani'
 import { dosad } from '@/lib/sablony'
+import { Parkovani } from '@/components/Parkovani'
+import { Zastavka } from '@/components/Zastavka'
 import type { Preklad } from '@/preklady'
 import { LOCALE_CESKY, VYHLEDAVAC_CESKY } from '@/preklady/vyhledavacCesky'
 
@@ -36,6 +38,7 @@ type Vysledek = NalezenaAdresa & {
   mestskaCast: string
   nazevMC: string
   mistnost?: Mistnost
+  okoliParkovaniMetru: number
   urlDesky?: string
   stazeno: string
 }
@@ -154,6 +157,7 @@ export function VyhledavacOkrsku({
           mestskaCast: cast.mestskaCast,
           nazevMC: cast.nazev,
           mistnost: cast.mistnosti[n.okrsek],
+          okoliParkovaniMetru: cast.okoliParkovaniMetru,
           urlDesky: cast.urlDesky,
           stazeno: cast.stazeno,
         })),
@@ -289,6 +293,16 @@ export function VyhledavacOkrsku({
                         )}
                       </p>
                       {v.mistnost.poznamka && <p className="mt-1 text-sm">{v.mistnost.poznamka}</p>}
+                      {v.mistnost.zastavka && (
+                        <Zastavka zastavka={v.mistnost.zastavka} texty={texty} locale={locale} />
+                      )}
+                      {v.mistnost.zona !== undefined && (
+                        <Parkovani
+                          zona={v.mistnost.zona}
+                          okoliMetru={v.okoliParkovaniMetru}
+                          texty={texty}
+                        />
+                      )}
                       {v.mistnost.poloha && (
                         <p className="mt-1 text-sm">
                           {popisVzdalenosti(

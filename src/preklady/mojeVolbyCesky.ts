@@ -53,6 +53,20 @@ export const MOJE_VOLBY_CESKY: Preklad['mojeVolby'] = {
   mapaAHledani: 'Mapa okrsku a hledání podle adresy',
   znovu: 'Zjistit znovu',
 
+  zastavka: 'Nejbližší zastávka {nazev}, {vzdalenost} vzdušnou čarou.',
+
+  zastavkaBezbarierova: 'bezbariérová zastávka',
+
+  zastavkaLinky: 'Jezdí odtud: {linky}.',
+
+  parkovaniVZone: 'Místnost stojí v zóně placeného stání.',
+
+  parkovaniBlizko: 'Zóna placeného stání je asi {vzdalenost} od místnosti.',
+
+  parkovaniTarif: 'Tarif podle města: {tarif}.',
+
+  parkovaniBezZony: 'V okolí do {okoli} není zóna placeného stání.',
+
   jednotkaM: 'm',
   jednotkaKm: 'km',
   zdrojeMistnosti: ZDROJE_MISTNOSTI_CESKY,

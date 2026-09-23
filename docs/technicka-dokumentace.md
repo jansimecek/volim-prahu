@@ -30,6 +30,8 @@ Node 22+, pnpm 11+. `pnpm dev` nejdřív zkompiluje obsah přes Velite, pak spus
 | `pnpm import:senat` | Import senátních kandidátů (sada se2026) |
 | `pnpm import:desky` | Sběr oznámení z úředních desek městských částí |
 | `pnpm import:okrsky` | Import volebních okrsků Prahy z ČÚZK (adresy → okrsek, hranice) |
+| `pnpm import:zastavky` | Nejbližší zastávka PID ke každé volební místnosti |
+| `pnpm import:parkovani` | Zóny placeného stání v okolí volebních místností |
 | `pnpm nacvik` | Nácvik volební noci proti datům 2022 |
 | `pnpm gen:mc` | Doplní chybějící skelety městských částí |
 | `pnpm preloz --jazyk en --vzor '<glob>'` | Strojový překlad obsahu přes DeepL (vyžaduje `DEEPL_API_KEY`, `--nasucho` nic neodesílá) |
@@ -324,6 +326,45 @@ Oznámení na úředních deskách sbírá `pnpm import:desky`: stahuje desky
 14 městských částí, které je publikují jako otevřená data, a hledá v nich
 oznámení o době a místě konání voleb. Adresy desek zbylých 43 částí jsou
 v `content/uredni-desky.yaml`.
+
+**Nejbližší zastávka** u místnosti je odvozený údaj, ne redakční text:
+`pnpm import:zastavky` vezme polohu místnosti (z `poloha` v YAML, jinak
+dohledanou z adresy) a najde k ní nejbližší zastávku v otevřených datech
+Pražské integrované dopravy (`data.pid.cz/stops/json/stops.json`). Výstup je
+`data/mistnosti/zastavky.json`, čte ho `src/lib/zastavky.ts` a
+`src/lib/mistnosti.ts` ho přilepí k místnosti.
+
+Tři věci, na kterých to stojí:
+
+- **Vzdálenost je vzdušnou čarou** a věta u ní to říká. Pěší trasa bývá delší
+  a přes kolejiště nebo svah i výrazně; routovací službu web nemá.
+- **Zastávky bez jediné linky se vynechávají.** V datech PID jsou i zastávky,
+  které se teprve staví nebo se nepoužívají (Harfa, Morseova) — poslat k nim
+  voliče by bylo horší než neuvést nic.
+- **Místnost bez polohy zastávku nedostane.** K 23. 9. 2026 je to jediná
+  (Bezdrevská 26 v Praze 14; registr adres pod tím číslem nic nemá).
+
+**Zóny placeného stání** doplňuje `pnpm import:parkovani` z datové sady
+„Zóny placeného stání vymezené tarifem" (otevřená data hl. m. Prahy,
+poskytovatel HMP-TSK, licence CC BY, 5 590 úseků). Hledá se nejbližší úsek do
+150 metrů od místnosti — zhruba blok domů, ne celá čtvrť. Výstup je
+`data/mistnosti/parkovani.json`.
+
+Tarif se přebírá **doslova** („Po-Pá 08:00-19:59 40Kč/hod“), protože je to
+citace ze zdroje, ne náš výklad: čtenář si z něj sám přečte, že v sobotu se
+na takovém místě neplatí. Web naopak nikde netvrdí, že je u místnosti volné
+místo — o tom data nic neříkají. Proto jsou v datech tři stavy a každý se
+zobrazuje jinak: zóna v okolí je, zóna v okolí není (`null`), a o místnosti
+nevíme nic (chybějící záznam, jediný případ je místnost bez polohy).
+
+K 23. 9. 2026 má zónu do 150 m 172 z 349 místností. Rozložení sedí s tím, kde
+zóny v Praze skutečně jsou: Praha 1, 2, 3, 7 a 10 celé, Praha 4, 5, 6, 8 a 9
+z velké části, Jižní Město, Praha 12, 14, 15 a okrajové části vůbec.
+
+Bezbariérovost místnosti je naopak redakční údaj z oznámení a doplnit ji jde
+jen tam, kde ji městská část uvádí — k 23. 9. 2026 u 40 z 358 místností
+(Praha 6, 16, 18, 22, Kunratice, Slivenec, Zbraslav). Data z aplikace IPR
+„Kudy k volbám" použitelná nejsou: její vrstvy jsou za tokenem, ne otevřené.
 
 ## ISR a cena cache na Vercelu
 

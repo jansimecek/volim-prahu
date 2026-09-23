@@ -57,6 +57,20 @@ export default function Stranka() {
           <a href="https://kudykvolbam.iprpraha.cz" className="odkaz-akcent" rel="noopener">
             Kudy k volbám (IPR Praha)
           </a>
+          {' · '}
+          nejbližší zastávka z{' '}
+          <a href="https://data.pid.cz/stops/json/stops.json" className="odkaz-akcent" rel="noopener">
+            otevřených dat PID
+          </a>
+          {' · '}
+          zóny placeného stání z{' '}
+          <a
+            href="https://opendata.geoportalpraha.cz/datasets/iprpraha::zóny-placeného-stání-vymezené-tarifem"
+            className="odkaz-akcent"
+            rel="noopener"
+          >
+            otevřených dat hl. m. Prahy
+          </a>
         </p>
       </section>
 

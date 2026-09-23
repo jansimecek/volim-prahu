@@ -3,6 +3,7 @@ import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { polohaAdresyVPraze } from '@/lib/geokodovani'
 import { mistnostiMestskeCasti, mistnostZPoznamky, type Mistnost } from '@/lib/mistnosti'
 import { MESTSKE_CASTI, mestskaCastPodleSlugu } from '@/lib/obsah'
+import { okoliParkovaniMetru } from '@/lib/parkovani'
 import { adresyMestskeCasti, okrskyMestskeCasti, type AdresyMestskeCasti } from '@/lib/okrsky'
 
 /**
@@ -23,6 +24,8 @@ export type OdpovedOkrsku = {
   ulice: AdresyMestskeCasti['ulice']
   /** Klíč je číslo okrsku. Chybí, když místnost neznáme z žádného zdroje. */
   mistnosti: Record<number, Mistnost>
+  /** Poloměr, ve kterém se u místnosti hledala zóna placeného stání. */
+  okoliParkovaniMetru: number
   urlDesky?: string
 }
 
@@ -60,6 +63,7 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
     stazeno: adresy.stazeno,
     ulice: adresy.ulice,
     mistnosti,
+    okoliParkovaniMetru: okoliParkovaniMetru(),
     ...(urlDesky ? { urlDesky } : {}),
   }
   return NextResponse.json(odpoved, {

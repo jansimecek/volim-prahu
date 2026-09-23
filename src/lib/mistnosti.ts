@@ -11,6 +11,8 @@ import { volebniMistnosti } from '#content'
 import { okrsekPodleCisla, type Okrsek } from './okrsky'
 
 import type { Mistnost } from './mistnostiTypy'
+import { zonaMistnosti } from './parkovani'
+import { zastavkaMistnosti } from './zastavky'
 
 export { POPIS_ZDROJE, type Mistnost, type TypZdrojeMistnosti } from './mistnostiTypy'
 
@@ -24,6 +26,14 @@ function mistnostiZeSouboru(soubor: SouborMistnosti): Mistnost[] {
     ...(m.bezbarierova !== undefined ? { bezbarierova: m.bezbarierova } : {}),
     ...(m.poznamka ? { poznamka: m.poznamka } : {}),
     ...(m.poloha ? { poloha: m.poloha } : {}),
+    ...(() => {
+      const z = zastavkaMistnosti(soubor.mestskaCast, m.adresa)
+      return z ? { zastavka: z } : {}
+    })(),
+    ...(() => {
+      const z = zonaMistnosti(soubor.mestskaCast, m.adresa)
+      return z !== undefined ? { zona: z } : {}
+    })(),
     zdroj: {
       typ: soubor.volby === 'komunalni-2026' ? 'oznameni-2026' : 'drivejsi-volby',
       nazev: soubor.zdroj.nazev,

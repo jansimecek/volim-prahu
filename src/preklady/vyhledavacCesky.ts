@@ -45,6 +45,13 @@ export const VYHLEDAVAC_CESKY: Preklad['vyhledavac'] = {
 
   volebniOkrsek: 'Volební okrsek',
   bezbarierova: 'bezbariérová',
+  zastavka: 'Nejbližší zastávka {nazev}, {vzdalenost} vzdušnou čarou.',
+  zastavkaBezbarierova: 'bezbariérová zastávka',
+  zastavkaLinky: 'Jezdí odtud: {linky}.',
+  parkovaniVZone: 'Místnost stojí v zóně placeného stání.',
+  parkovaniBlizko: 'Zóna placeného stání je asi {vzdalenost} od místnosti.',
+  parkovaniTarif: 'Tarif podle města: {tarif}.',
+  parkovaniBezZony: 'V okolí do {okoli} není zóna placeného stání.',
   zdroj: 'zdroj',
   mistnostNeznamaUvod: 'Adresu volební místnosti pro tento okrsek zatím neznáme. Zveřejní ji ',
   uredniDeska: 'úřední deska {mc}',
