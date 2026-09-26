@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolutni('/kde-volim'), changeFrequency: 'weekly', priority: 0.9 },
     { url: absolutni('/hlasovani'), changeFrequency: 'weekly', priority: 0.5 },
     { url: absolutni('/rozhovory'), changeFrequency: 'weekly', priority: 0.5 },
+    { url: absolutni('/debaty'), changeFrequency: 'daily', priority: 0.6 },
     { url: absolutni('/vysledky'), changeFrequency: 'weekly', priority: 0.6 },
   ]
 

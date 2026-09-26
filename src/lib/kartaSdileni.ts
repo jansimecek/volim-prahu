@@ -15,8 +15,6 @@ import type { Preklad } from '@/preklady'
  */
 export type KlicKarty = keyof Preklad['sdileni'] & string
 
-export const JAZYKY_KARET = JAZYKY
-
 export function parametryKarty() {
   return JAZYKY.map((jazyk) => ({ jazyk }))
 }

@@ -74,6 +74,7 @@ const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popise
     odkazy: [
       { href: '/praha', popisek: 'Magistrát a kandidátky' },
       { href: '/koalice', popisek: 'Kdo s kým po volbách' },
+      { href: '/debaty', popisek: 'Debaty kandidátů' },
       { href: '/mestska-cast', popisek: 'Městské části' },
       { href: '/senat', popisek: 'Senát' },
       { href: '/kde-volim', popisek: 'Kde a jak volím' },

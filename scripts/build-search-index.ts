@@ -109,6 +109,14 @@ for (const s of stranky) {
   zaznamy.push([s.title, s.popis, `/${s.slug}`, 'p'])
 }
 
+// Kalendář debat nemá redakční MDX, text stránky je v kódu.
+zaznamy.push([
+  'Debaty kandidátů na primátora',
+  'Kdy a kde se utkají kandidáti na pražského primátora v televizi, rozhlase a na webu.',
+  '/debaty',
+  'p',
+])
+
 /**
  * Aktuálně. Koncepty do indexu nepatří, stejně jako se nezobrazují na webu.
  *

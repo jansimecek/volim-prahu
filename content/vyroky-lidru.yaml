@@ -15,6 +15,9 @@
 # Výroky ze zdrojů `echo-energetika`, `prahain-scheinherr`, `ctk-parkovani`,
 # `novinky-duel-bezpecnost`, `novinky-duel-miliardy` a `pd-kampus` přibyly
 # 22. 9. 2026, ověřené v surovém textu zdroje.
+# Výroky ze zdrojů `echo-cyklistika`, `nova-duel`, `echo-hlavacek`,
+# `pd-debata-byty` a `pd-debata-mhd` přibyly 26. 9. 2026, ověřené v surovém
+# textu zdroje.
 overeno: 2026-08-27
 
 zdroje:
@@ -180,6 +183,36 @@ zdroje:
     datum: 2026-09-21
     typ: redakcni
     url: "https://prazsky.denik.cz/komunalni-volby/po-nemocnici-i-superskola-ano-navrhuje-kampus-pro-tisice-stredoskolaku/"
+  - id: echo-cyklistika
+    medium: "Echo24"
+    nazev: "Cyklistika je v Praze složitá, ale vítaná, shodují se pražští lídři. Kde chtějí budovat stezky?"
+    datum: 2026-09-20
+    typ: redakcni
+    url: "https://www.echo24.cz/a/HXEsZ/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-cyklistika-je-v-praze-vitana"
+  - id: nova-duel
+    medium: "TN.cz (TV Nova)"
+    nazev: "Duel z Prahy: Hušbauer chce zřídit koordinátora staveb, Portlík by zdokonalil software"
+    datum: 2026-09-23
+    typ: redakcni
+    url: "https://tn.nova.cz/zpravodajstvi/clanek/657474-kapacity-skol-doprava-a-parkovani-i-dostupne-bydleni-v-duelu-se-utkaji-kandidati-na-primatora-prahy"
+  - id: echo-hlavacek
+    medium: "Echo24"
+    nazev: "Hlaváček: Ceny parkování a MHD se musí upravit, bez metra S se rozvoj Prahy zastaví"
+    datum: 2026-09-24
+    typ: redakcni
+    url: "https://www.echo24.cz/a/HZnD5/zpravy-domaci-rozhovor-petr-hlavacek-kandidat-na-primatora-stan-metro-s-parkovani-mhd-ceny"
+  - id: pd-debata-byty
+    medium: "Pražský deník"
+    nazev: "Praha nevzkvétá, jak by mohla. Možná i stagnuje, zaznělo v primátorské debatě"
+    datum: 2026-09-25
+    typ: redakcni
+    url: "https://prazsky.denik.cz/komunalni-volby/komunalni-volby-2026-boj-o-prazskeho-primatora-denik/"
+  - id: pd-debata-mhd
+    medium: "Pražský deník"
+    nazev: "Volební debata Deníku: Roční kupón za 500. Za krach reformy parkování může Hřib"
+    datum: 2026-09-24
+    typ: redakcni
+    url: "https://prazsky.denik.cz/komunalni-volby/debata-deniku-litacka-za-500-krach-parkovani-hrib-volby/"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -271,6 +304,29 @@ osoby:
         pokracovani: " To znamená pokračovat v osazování městských střech, škol, úřadů a dalších budov, fotovoltaikou…"
         kontext: "Odpověď v anketě Echa24 o energetické strategii Prahy na příští dekádu."
         zdroj: echo-energetika
+      - tema: "Bydlení"
+        citace: "Já nechci slibovat číslo, protože když je budu střílet od boku jen proto, aby to dobře vypadalo, tak potom budu působit jako Piráti, kteří se ohánějí desetitisíci."
+        pokracovani: " Já chci, aby u každého projektu bylo jasné, kolik bytů vznikne, kdy začne stavba a kdy se lidé nastěhují."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září reagoval na plány ostatních kandidátů na výstavbu bytů."
+        zdroj: pd-debata-byty
+        poznamka: "Deník v témže článku píše, že se všichni kandidáti nakonec shodli na 40 tisících bytech za čtyři roky. Hušbauerova věta tomu odporuje, proto shodu na webu neuvádíme."
+      - tema: "Povolební spolupráce"
+        citace: "Já posledních sedm let vládnu na městské části Praha 4 s ODS a TOP 09 a funguje to."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září na otázku po možných koalicích; komunální politika se podle něj od celostátní liší."
+        zdroj: pd-debata-byty
+      - tema: "Doprava"
+        citace: "Až tam budeme sedět ve vedení města, tak zřídím koordinátora dopravních staveb."
+        kontext: "V duelu TV Nova s Tomášem Portlíkem popsal, co by v dopravě udělal jako první."
+        zdroj: nova-duel
+      - tema: "Bydlení"
+        citace: "K tomu bych využil soukromou sféru, kdy bych vyhlásil soutěž, kdo na těch našich městských pozemcích postaví nejvíce bytů a dá je do užívání Prahy"
+        pokracovani: ", nebo respektive dá je Praze, tak ten tu soutěž vyhraje"
+        kontext: "V témže duelu o tom, jak stavět na městských pozemcích."
+        zdroj: nova-duel
+      - tema: "Doprava a cyklistika"
+        citace: "Cyklisté si zaslouží oddělené stezky mimo silnice, podél Vltavy a po bývalých drážních tělesech, ne čáru mezi kamiony."
+        kontext: "Odpověď v anketě Echa24 o cyklistice; sám po Praze na kole nejezdí."
+        zdroj: echo-cyklistika
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana
@@ -315,6 +371,23 @@ osoby:
         pokracovani: ", podpoříme výstavbu etážových parkovacích domů na sídlištích a účelové vázání výnosů z parkování výhradně zpět do oprav silnic a rozvoje MHD"
         kontext: "Odpověď v anketě ČTK mezi lídry kandidátek o reformě parkování."
         zdroj: ctk-parkovani
+      - tema: "Bydlení"
+        citace: "Ale máme velký problém s nedostupností bydlení. A na to bychom se měli všichni společně zaměřit v příštím období."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září na úvodní otázku, jestli Praha vzkvétá; předtím připomněla, že je páté nejbohatší město EU."
+        zdroj: pd-debata-byty
+      - tema: "Povolební spolupráce"
+        citace: "Ale všichni víme, že o rozpočtu Prahy ve výši 120 miliard nebude rozhodovat pan Hušbauer, ale bude do toho mluvit Andrej Babiš"
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září; bezprostředně předtím o Hušbauerovi řekla, že si lidsky dokáže představit s ním spolupracovat, kdyby Prahu řídil. Hušbauer odpověděl, že Babiš je předseda vlády, ne Prahy."
+        zdroj: pd-debata-byty
+        poznamka: "Pirátská povolební strategie z 10. 8. spolupráci s ANO na magistrátu vylučuje."
+      - tema: "Doprava a cyklistika"
+        citace: "Klíčem k bezpečí pro všechny účastníky provozu je souvislá, oddělená cykloinfrastruktura tam, kde to dává smysl, a neustálé doplňování chybějících článků sítě."
+        kontext: "Odpověď v anketě Echa24 o cyklistice."
+        zdroj: echo-cyklistika
+      - tema: "Doprava a parkování"
+        citace: "Nedivím se Zdeňku Hřibovi, že to tak prosazoval, je to i součást programového prohlášení koalice, které podepsali i představitelé ODS"
+        kontext: "V debatě Deníku reagovala na Portlíkovo tvrzení, že reformu parkovacích zón zablokoval Zdeněk Hřib, když ji podmiňoval uzavřením centra."
+        zdroj: pd-debata-mhd
   - osobaSlug: komrskova-jana
     jmeno: "Jana Komrsková"
     subjekt: jsme-praha
@@ -345,6 +418,10 @@ osoby:
         citace: "Každý projekt ale musí mít jasnou ekonomickou návratnost. Praha nemá utrácet miliardy za symbolická gesta."
         kontext: "Odpověď v anketě Echa24 o energetice; prostor pro vlastní obnovitelné zdroje vidí na střechách městských budov, škol, dep a parkovacích objektů."
         zdroj: echo-energetika
+      - tema: "Doprava a cyklistika"
+        citace: "Cyklistika má být jednou z možností dopravy, nikoliv nástrojem k omezování ostatních druhů dopravy."
+        kontext: "Odpověď v anketě Echa24 o cyklistice; sama po Praze na kole nejezdí."
+        zdroj: echo-cyklistika
   - osobaSlug: scheinherr-adam
     jmeno: "Adam Scheinherr"
     subjekt: praha-sobe
@@ -366,6 +443,19 @@ osoby:
         citace: "Každou korunu ušetřenou za energie může město dát do škol nebo dopravy."
         kontext: "Odpověď v anketě Echa24 o energetice; strategií pro příští dekádu má být podle něj fotovoltaika na městském majetku, využití tepla z odpadní vody a úspory v budovách."
         zdroj: echo-energetika
+      - tema: "Doprava"
+        citace: "Praze ujíždí vlak, měla by se víc snažit, aby se připravovala pátá linka metra, aby metro D nebylo ve zpoždění"
+        pokracovani: ", aby se proměňovala veřejná prostranství, aby se sázelo více stromů…"
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září na úvodní otázku, jestli Praha vzkvétá."
+        zdroj: pd-debata-byty
+      - tema: "Povolební spolupráce"
+        citace: "Proto já nechci, aby ANO bylo v pražské vládě a aby skládalo koalici ať už s ODS nebo se STANem"
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září; spojení ANO s ODS by podle něj bylo pro Prahu pohromou."
+        zdroj: pd-debata-byty
+      - tema: "Doprava a cyklistika"
+        citace: "Kolo nemá být ideologie, ale normální možnost, jak se po městě pohybovat."
+        kontext: "Odpověď v anketě Echa24 o cyklistice; sám po městě na kole jezdí."
+        zdroj: echo-cyklistika
   - osobaSlug: laska-vaclav
     jmeno: "Václav Láska"
     subjekt: sen-pro-prahu
@@ -399,6 +489,19 @@ osoby:
         citace: "Zásadně musí Praha rovněž urychlit umístění FVE na střechách městských a veřejných objektů ke snížení nákladů jejich provozu."
         kontext: "Odpověď v anketě Echa24 o energetice. Chce také dokončit odkup zbývajícího podílu Veolie v teplárenství a jednat o odkupu zbývajícího podílu v PRE."
         zdroj: echo-energetika
+      - tema: "Doprava a MHD"
+        citace: "My chceme zavést lítačku za administrativní poplatek, v rozmezí 500 až 1000 korun."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září. Pro studenty a seniory nad 65 let by byl podle něj roční kupon zdarma; ostatní účastníci debaty návrh odmítli."
+        zdroj: pd-debata-byty
+        poznamka: "Druhý článek Deníku o téže debatě cituje větu mírně jinak: „Chceme zavést roční lítačku za administrativní poplatek, říkáme si v rozmezí 500 až 1000 korun“. Pražané nad 65 let jezdí MHD zdarma už dnes, jak v debatě sám dodal."
+      - tema: "Povolební spolupráce"
+        citace: "Takže SPD by rozhodně nešla do koalice s Piráty a s Prahou sobě"
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září, kam dorazil v její druhé půli."
+        zdroj: pd-debata-byty
+      - tema: "Doprava a cyklistika"
+        citace: "Prostor vidím ve vytváření vysutých cyklostezek podél Vltavy jako oddechovou a dedikovanou zónu pro kola."
+        kontext: "Odpověď v anketě Echa24 o cyklistice."
+        zdroj: echo-cyklistika
   - osobaSlug: vlcek-petr
     jmeno: "Petr Vlček"
     subjekt: spojena-levice-pro-prahu
@@ -475,6 +578,22 @@ osoby:
         citace: "Ve chvíli, kdy má stavební povolení a zahájí, tak ty finanční prostředky z toho účtu budou velmi rychle mizet"
         kontext: "V předvolebním duelu Novinek s Janem Hušbauerem o penězích na účtech města; podle něj jsou potřeba na metro D, vnitřní okruh a další velké stavby."
         zdroj: novinky-duel-miliardy
+      - tema: "Povolební spolupráce"
+        citace: "několikrát jsem se vyjádřil, že ke koalici s Janem Hušbauerem jsem skeptický, stejně tak jsem řekl, že by nám i Pražanům prospělo, kdybychom si s Piráty od sebe na chvíli odpočinuli."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září reagoval na Scheinherrovo varování před spojením ANO a ODS; dohodu s ANO podle svých slov nemá."
+        zdroj: pd-debata-byty
+      - tema: "Přímá volba primátora"
+        citace: "Změna systému nám nepomůže, neboť je spousta příkladů, kde to nefunguje."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září na otázku, jestli má být primátor volen přímo."
+        zdroj: pd-debata-byty
+      - tema: "Doprava a parkování"
+        citace: "Mluvím o zdražení těch dynamických cen, to znamená toho hodinového stání"
+        kontext: "V duelu TV Nova s Janem Hušbauerem; podle TN.cz by cena pro rezidenty zůstala stejná."
+        zdroj: nova-duel
+      - tema: "Doprava a cyklistika"
+        citace: "Praha nikdy nebude Amsterdam a ani by se jím neměla snažit stát. Kolo má ve městě své místo, ale především tam, kde pro něj existují bezpečné podmínky."
+        kontext: "Odpověď v anketě Echa24 o cyklistice."
+        zdroj: echo-cyklistika
   - osobaSlug: hlavacek-petr
     jmeno: "Petr Hlaváček"
     subjekt: starostove-a-nezavisli
@@ -518,6 +637,32 @@ osoby:
         citace: "Praha musí být v příštích letech energeticky odolnější a více soběstačná."
         kontext: "Odpověď v anketě Echa24 o energetice. Jako příklad uvedl Energocentrum v Bubenči, které má využívat teplo z vyčištěných odpadních vod."
         zdroj: echo-energetika
+      - tema: "Povolební spolupráce"
+        citace: "To, že nechceme do koalice s vládními stranami, je úplně přirozené, ale to neznamená, že nějakým způsobem nebudeme spolupracovat."
+        kontext: "V debatě Deníku kandidátů na primátora natočené 22. září v závěru o možných koalicích; jako příklad spolupráce uvedl výbor pro územní rozvoj, kde byly zastoupené všechny strany."
+        zdroj: pd-debata-byty
+        poznamka: "Vládu tvoří ANO, SPD a Motoristé. Jmenovitě je Hlaváček v debatě nevyloučil."
+      - tema: "Rozpočet a investice"
+        citace: "Já říkám, ať se pan Babiš stará o stát a my se postaráme o město. My z něj žádné peníze nedostaneme."
+        kontext: "V rozhovoru pro Echo24 reagoval na výroky premiéra a ministryně financí, že Praha sedí na miliardách a neumí je investovat."
+        zdroj: echo-hlavacek
+      - tema: "Doprava a MHD"
+        citace: "Dohodu jsme měli, že se to s ročním kuponem dostane na úroveň z roku 2015, plus nějaká inflace"
+        pokracovani: ", což je rozumný nástroj, máme ho nastavený u vodného. Z toho ale nakonec sešlo."
+        kontext: "V témže rozhovoru o tom, co se koalici v končícím období nepovedlo."
+        zdroj: echo-hlavacek
+      - tema: "Doprava a parkování"
+        citace: "Já bych držel základ debaty, že by šlo o zhruba dvojnásobek oproti dnešním cenám."
+        kontext: "V témže rozhovoru na otázku po ideálním řešení parkování; v téže odpovědi srovnává 1 200 korun, které lidé platí městu, se soukromým parkováním za 4 500 korun měsíčně."
+        zdroj: echo-hlavacek
+      - tema: "Doprava"
+        citace: "Mít představu, že Městský okruh něco zachrání, je naivní."
+        kontext: "V témže rozhovoru; klíčem jsou podle něj Železniční uzel Praha a metro S. Okruh je podle něj přesto potřeba dostavět."
+        zdroj: echo-hlavacek
+      - tema: "Doprava a cyklistika"
+        citace: "Naší prioritou tak je budování páteřní cyklistické sítě v podobě oddělených cyklostezek, například drážní promenády ve Vršovicích nebo Dejvicích."
+        kontext: "Odpověď v anketě Echa24 o cyklistice."
+        zdroj: echo-cyklistika
   - osobaSlug: dubsky-jiri
     jmeno: "Jiří Dubský"
     subjekt: ano-lepsi-cesko-s-mimozemstany

@@ -39,10 +39,6 @@ export const PRAVNI_OPORA: string | null =
  */
 export const MORATORIUM_DO = new Date('2026-10-10T14:00:00+02:00')
 
-/** Odkaz, kterým se dá lhůta ověřit bez znalosti Sbírky. */
-export const ZDROJ_LHUTY =
-  'https://archiv.mv.gov.cz/volby/soubor/prehled-terminu-a-lhut-pro-volby-do-zastupitelstev-obci-2026.aspx'
-
 export type StavMoratoria = 'neoveerno' | 'pred-moratoriem' | 'behem-moratoria' | 'po-volbach'
 
 export function stavMoratoria(ted: Date = new Date()): StavMoratoria {

@@ -18,7 +18,7 @@
 # Odpovědi z ankety ČTK jsou písemné odpovědi lídrů otištěné pod jejich jménem,
 # proto jsou zapsané jako citace.
 
-overeno: 2026-09-22
+overeno: 2026-09-26
 
 zdroje:
   - id: pirati-strategie
@@ -91,6 +91,11 @@ zdroje:
     nazev: "Scheinherr: Vládní strany jsou pro mě no-go. Budu první primátor pro dopravu"
     datum: 2026-09-16
     url: "https://www.prahain.cz/politika/scheinherr-vladni-strany-jsou-pro-me-nogo-budu-prvni-primator-pro-dopravu-28638.html"
+  - id: pd-debata-25-9
+    medium: "Pražský deník"
+    nazev: "Praha nevzkvétá, jak by mohla. Možná i stagnuje, zaznělo v primátorské debatě"
+    datum: 2026-09-25
+    url: "https://prazsky.denik.cz/komunalni-volby/komunalni-volby-2026-boj-o-prazskeho-primatora-denik/"
 
 deklarace:
   - id: pirati-povolebni-strategie
@@ -138,6 +143,28 @@ deklarace:
       SPD a Motoristy. ODS kandiduje na magistrát v koalici SPOLU pro Prahu
       s TOP 09.
     zdroje: [pp-anketa-ctk-12-9]
+
+  - id: pirati-nislerova-denik
+    subjekt: ceska-piratska-strana
+    kdo: Tereza Nislerová, lídryně kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-22
+    pripousti: [starostove-a-nezavisli, praha-sobe]
+    doklad: citace
+    citace: >-
+      Co se týče pana Hušbauera, lidsky ho mám ráda a kdyby Prahu řídil, tak si
+      i dokážu představit, že bych s ním spolupracovala. Ale všichni víme, že
+      o rozpočtu Prahy ve výši 120 miliard nebude rozhodovat pan Hušbauer, ale
+      bude do toho mluvit Andrej Babiš
+    shrnuti: >-
+      V debatě Deníku podle redakce potvrdila, že největší programovou shodu má
+      se STAN a Prahou sobě. O Hušbauerovi řekla, že by si spolupráci lidsky
+      dovedla představit, o rozpočtu Prahy by ale podle ní rozhodoval Andrej Babiš.
+    poznamka: >-
+      Shodu se STAN a Prahou sobě uvádí Deník vlastními slovy. Pirátská
+      povolební strategie z 10. 8. spolupráci s ANO dál vylučuje a Nislerová
+      ji v debatě neodvolala. Debata se natáčela 22. 9., článek vyšel 25. 9.
+    zdroje: [pd-debata-25-9]
 
   - id: praha-sobe-scheinherr-cerven
     subjekt: praha-sobe
@@ -211,6 +238,22 @@ deklarace:
       Období 2014–2018 doplňujeme my: Scheinherr mluví o době primátorky
       Adriany Krnáčové.
     zdroje: [prahain-scheinherr-16-9]
+
+  - id: praha-sobe-scheinherr-denik
+    subjekt: praha-sobe
+    kdo: Adam Scheinherr, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-22
+    vylucuje: [ano-2011]
+    doklad: citace
+    citace: >-
+      Proto já nechci, aby ANO bylo v pražské vládě a aby skládalo koalici ať
+      už s ODS nebo se STANem
+    shrnuti: >-
+      V debatě Deníku označil případné spojení ANO s ODS za pohromu pro Prahu
+      a zopakoval, že nechce ANO v pražské vládě v žádné sestavě.
+    poznamka: Debata se natáčela 22. 9., článek vyšel 25. 9.
+    zdroje: [pd-debata-25-9]
 
   - id: motoriste-sovova-praha-sobe
     subjekt: motoriste-sobe
@@ -288,6 +331,21 @@ deklarace:
       V anketě koalici s nikým výslovně nevylučuje. Koalici s Piráty a Prahou
       sobě výslovně vyloučil 5. 9. v rozhovoru pro CNN Prima News.
     zdroje: [pp-anketa-ctk-12-9]
+
+  - id: spd-urban-denik
+    subjekt: spd-pro-prahu
+    kdo: Milan Urban, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-22
+    vylucuje: [ceska-piratska-strana, praha-sobe]
+    doklad: citace
+    citace: Takže SPD by rozhodně nešla do koalice s Piráty a s Prahou sobě
+    shrnuti: >-
+      V debatě Deníku výslovně vyloučil koalici s Piráty a Prahou sobě; podle
+      něj se za posledních osm let v Praze dělaly nejhorší dopravní a sociální
+      experimenty.
+    poznamka: Debata se natáčela 22. 9., článek vyšel 25. 9.
+    zdroje: [pd-debata-25-9]
 
   - id: ano-husbauer-pirati
     subjekt: ano-2011
@@ -424,6 +482,23 @@ deklarace:
       Komunisté (KSČM a KSČ) kandidují na listině Spojená levice pro Prahu.
     zdroje: [cnn-partie-13-9, ctk-partie-13-9]
 
+  - id: spolu-portlik-denik
+    subjekt: spolu-pro-prahu
+    kdo: Tomáš Portlík, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-22
+    doklad: citace
+    citace: >-
+      několikrát jsem se vyjádřil, že ke koalici s Janem Hušbauerem jsem
+      skeptický, stejně tak jsem řekl, že by nám i Pražanům prospělo, kdybychom
+      si s Piráty od sebe na chvíli odpočinuli.
+    shrnuti: >-
+      V debatě Deníku odmítl, že by měl s ANO dohodu, a zopakoval, že je ke
+      koalici s Janem Hušbauerem skeptický a že by prospělo, kdyby si SPOLU
+      od Pirátů na čas odpočinulo. Nikoho výslovně nevyloučil.
+    poznamka: Debata se natáčela 22. 9., článek vyšel 25. 9.
+    zdroje: [pd-debata-25-9]
+
   - id: stan-hlavacek-anketa
     subjekt: starostove-a-nezavisli
     kdo: Petr Hlaváček, lídr kandidátky
@@ -461,3 +536,23 @@ deklarace:
       nevyloučil, není ale preferovanou variantou; přednost dává SPOLU.
     poznamka: Komunisté (KSČM a KSČ) kandidují na listině Spojená levice pro Prahu.
     zdroje: [ctk-partie-13-9, aktualne-rakusan-13-9]
+
+  - id: stan-hlavacek-denik
+    subjekt: starostove-a-nezavisli
+    kdo: Petr Hlaváček, lídr kandidátky
+    uroven: lidr-kandidatky
+    datum: 2026-09-22
+    vylucuje: [ano-2011, spd-pro-prahu, motoriste-sobe]
+    doklad: citace
+    citace: >-
+      To, že nechceme do koalice s vládními stranami, je úplně přirozené, ale
+      to neznamená, že nějakým způsobem nebudeme spolupracovat.
+    shrnuti: >-
+      V závěru debaty Deníku řekl, že STAN nechce do koalice s vládními
+      stranami, spolupracovat s nimi ale bude. Jako příklad uvedl výbor pro
+      územní rozvoj, kde byly zastoupené všechny strany.
+    poznamka: >-
+      Vládní strany jmenovitě neuvedl; vládu tvoří ANO, SPD a Motoristé.
+      V anketě ČTK z 12. 9. nikoho nevylučoval. Debata se natáčela 22. 9.,
+      článek vyšel 25. 9.
+    zdroje: [pd-debata-25-9]
