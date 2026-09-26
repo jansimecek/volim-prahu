@@ -32,10 +32,6 @@ export function mestskaCastPodleSlugu(slug: string) {
   return mestskeCasti.find((mc) => mc.slug === slug)
 }
 
-export function zastupitelstvoPodleSlugu(slug: string) {
-  return ZASTUPITELSTVA.find((z) => z.slug === slug)
-}
-
 export function strankaPodleSlugu(slug: string) {
   const stranka = stranky.find((s) => s.slug === slug)
   if (!stranka) throw new Error(`Chybí obsah stránky content/stranky/${slug}.mdx`)

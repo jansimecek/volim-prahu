@@ -100,6 +100,9 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
   [RSS](https://www.volimprahu.cz/aktualne/feed.xml).
 - **[Rozhovory](https://www.volimprahu.cz/rozhovory)** — rozhovory s lídry
   kandidátek v médiích: kdo, kde, kdy a o čem mluvil. Odkazy a anotace, ne přepisy.
+- **[Debaty](https://www.volimprahu.cz/debaty)** — kalendář debat kandidátů na
+  primátora ve velkých médiích: kdy, kde a kdo, podle ohlášení pořadatele,
+  u proběhlých odkaz na záznam.
 - **[Anketa](https://www.volimprahu.cz/hlasovani)** — nezávazná anonymní anketa
   čtenářů bez registrace. Není to průzkum; souhrn se zveřejní až po zavření
   volebních místností.
@@ -161,8 +164,9 @@ Podrobně na stránce [Jak hodnotíme](https://www.volimprahu.cz/jak-hodnotime).
 - **Volební místnosti** — oznámení na úředních deskách městských částí.
 - **Pravomoci a rozpočty** — zákon č. 131/2000 Sb., o hlavním městě Praze,
   Statut hl. m. Prahy a schválené rozpočty města a městských částí.
-- **Odkazy do veřejných rejstříků** — [Hlídač státu](https://www.hlidacstatu.cz),
-  jen u osob, u kterých byla shoda ručně ověřená.
+- **Odkazy do veřejných rejstříků** — u každého kandidáta odkaz na vyhledávání
+  v [Hlídači státu](https://www.hlidacstatu.cz). Data odtud nepřebíráme: bez data
+  narození nejde osobu spolehlivě ztotožnit.
 - **Mapové podklady** — [OpenStreetMap](https://www.openstreetmap.org).
 
 ## Data k dalšímu použití

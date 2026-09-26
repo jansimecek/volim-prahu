@@ -9,6 +9,8 @@ import { datumCesky } from '@/lib/cestina'
 import { cislo, strankaPodleSlugu } from '@/lib/obsah'
 import { pokrytiMistnosti } from '@/lib/mistnosti'
 import { prehledOkrsku } from '@/lib/okrsky'
+import { zdrojParkovani } from '@/lib/parkovani'
+import { zdrojZastavek } from '@/lib/zastavky'
 import { cizojazycneVarianty } from '@/lib/jazyky'
 
 const stranka = strankaPodleSlugu('kde-volim')
@@ -30,6 +32,10 @@ const SEKCE_STRANKY = [
 
 export default function Stranka() {
   const pokryti = pokrytiMistnosti(prehledOkrsku()?.okrsky ?? [])
+  // Odkazy na zdroje se berou z vygenerovaných dat, aby se nerozešly s tím,
+  // odkud import skutečně stahoval. Bez dat se zdroj ani údaj neukazují.
+  const zastavky = zdrojZastavek()
+  const parkovani = zdrojParkovani()
   return (
     <article className="space-y-10">
       <header className="max-w-prose">
@@ -57,20 +63,24 @@ export default function Stranka() {
           <a href="https://kudykvolbam.iprpraha.cz" className="odkaz-akcent" rel="noopener">
             Kudy k volbám (IPR Praha)
           </a>
-          {' · '}
-          nejbližší zastávka z{' '}
-          <a href="https://data.pid.cz/stops/json/stops.json" className="odkaz-akcent" rel="noopener">
-            otevřených dat PID
-          </a>
-          {' · '}
-          zóny placeného stání z{' '}
-          <a
-            href="https://opendata.geoportalpraha.cz/datasets/iprpraha::zóny-placeného-stání-vymezené-tarifem"
-            className="odkaz-akcent"
-            rel="noopener"
-          >
-            otevřených dat hl. m. Prahy
-          </a>
+          {zastavky && (
+            <>
+              {' · '}
+              nejbližší zastávka z{' '}
+              <a href={zastavky.url} className="odkaz-akcent" rel="noopener">
+                otevřených dat PID
+              </a>
+            </>
+          )}
+          {parkovani && (
+            <>
+              {' · '}
+              zóny placeného stání z{' '}
+              <a href={parkovani.url} className="odkaz-akcent" rel="noopener">
+                otevřených dat hl. m. Prahy
+              </a>
+            </>
+          )}
         </p>
       </section>
 

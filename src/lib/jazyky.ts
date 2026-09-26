@@ -62,16 +62,6 @@ export const PODSTRANKY = [
 export type Podstranka = (typeof PODSTRANKY)[number]
 
 /**
- * Odhad počtu cizinců s pobytem v Praze. Číslo je v textech jen jako řádová
- * orientace („tens of thousands"), nikdy jako přesný údaj — přesné číslo se
- * mění každý měsíc a web ho z otevřených dat průběžně nepřebírá.
- */
-export const ZDROJ_POCTU_CIZINCU = {
-  popis: 'Cizinci s pobytem v Praze podle statistik ČSÚ a MV ČR',
-  odkaz: 'https://csu.gov.cz/cizinci',
-} as const
-
-/**
  * Mapa hreflang pro jednu stránku cizojazyčné sekce.
  *
  * `x-default` míří na češtinu: je to jazyk, ve kterém web existuje celý,

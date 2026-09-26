@@ -20,7 +20,6 @@ export const KONEC_VOLEB = new Date('2026-10-10T14:00:00+02:00')
 export const VEKOVE_KATEGORIE = ['18-29', '30-44', '45-59', '60+'] as const
 export const UROVNE = ['magistrat', 'mestska-cast'] as const
 
-export type VekovaKategorie = (typeof VEKOVE_KATEGORIE)[number]
 export type Uroven = (typeof UROVNE)[number]
 
 /** Hlasovat lze jen dokud se volí. Po zavření uren je anketa uzavřená. */
@@ -49,6 +48,5 @@ export const schemaOdberu = z.object({
 })
 
 export type Hlas = z.infer<typeof schemaHlasu>
-export type Odber = z.infer<typeof schemaOdberu>
 
 export const COOKIE_HLASU = 'vp_hlasovano'

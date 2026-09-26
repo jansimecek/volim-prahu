@@ -245,7 +245,7 @@ function overKrizoveOdkazy() {
     }
   }
 
-  overOsobyRozhovoru(velite)
+  overOsoby(velite)
   overPostoje(velite, strany)
   overKoalice(velite, strany)
 }
@@ -301,19 +301,35 @@ function overPostoje(velite: string, strany: { slug: string; uroven: string }[])
 }
 
 /**
- * Rozhovor musí odkazovat na existující osobu z kandidátních listin.
+ * Rozhovor i účastník debaty musí odkazovat na existující osobu z kandidátních
+ * listin.
  *
  * Jméno se do obsahu nepíše, dopočítává se z dat ČSÚ — překlep ve slugu by
  * tedy neshodil build, jen by na stránce místo jména stál slug. Tomu brání
  * tahle kontrola.
  */
-function overOsobyRozhovoru(velite: string) {
-  if (!existsSync(join(velite, 'rozhovory.json'))) return
-  const rozhovory = JSON.parse(readFileSync(join(velite, 'rozhovory.json'), 'utf8')) as {
-    slug: string
-    osoba: string
-  }[]
-  if (rozhovory.length === 0) return
+function overOsoby(velite: string) {
+  const odkazy: { soubor: string; popis: string; osoba: string }[] = []
+  if (existsSync(join(velite, 'rozhovory.json'))) {
+    const rozhovory = JSON.parse(readFileSync(join(velite, 'rozhovory.json'), 'utf8')) as {
+      slug: string
+      osoba: string
+    }[]
+    for (const r of rozhovory) {
+      odkazy.push({ soubor: 'content/rozhovory/', popis: `Rozhovor "${r.slug}"`, osoba: r.osoba })
+    }
+  }
+  if (existsSync(join(velite, 'debaty.json'))) {
+    const data = JSON.parse(readFileSync(join(velite, 'debaty.json'), 'utf8')) as {
+      debaty: { id: string; ucastnici: string[] }[]
+    }
+    for (const d of data.debaty) {
+      for (const osoba of d.ucastnici) {
+        odkazy.push({ soubor: 'content/debaty.yaml', popis: `Debata "${d.id}"`, osoba })
+      }
+    }
+  }
+  if (odkazy.length === 0) return
 
   const adresar = join(KOREN, 'data/kandidatky')
   if (!existsSync(adresar)) return
@@ -325,12 +341,12 @@ function overOsobyRozhovoru(velite: string) {
     for (const strana of data.strany) for (const k of strana.kandidati) slugy.add(k.slug)
   }
 
-  for (const r of rozhovory) {
-    if (!slugy.has(r.osoba)) {
+  for (const o of odkazy) {
+    if (!slugy.has(o.osoba)) {
       nalezy.push({
-        soubor: 'content/rozhovory/',
+        soubor: o.soubor,
         radek: 0,
-        zprava: `Rozhovor "${r.slug}" odkazuje na osobu "${r.osoba}", která na žádné kandidátní listině není.`,
+        zprava: `${o.popis} odkazuje na osobu "${o.osoba}", která na žádné kandidátní listině není.`,
         tvrde: true,
       })
     }

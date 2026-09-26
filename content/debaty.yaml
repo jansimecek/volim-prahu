@@ -1,0 +1,110 @@
+# Kalendář debat kandidátů na pražského primátora ve velkých médiích.
+#
+# Zapisuje se jen debata, jejíž termín ohlásil pořadatel nebo ho uvádí článek
+# média, a vždy s odkazem na to ohlášení. Čas a místo se neodhadují: když je
+# pořadatel neuvedl, pole zůstane prázdné a web napíše, že čas zatím neznáme.
+#
+# `ucastnici` jsou slugy osob z kandidátních listin (jméno se bere z dat ČSÚ).
+# Prázdný seznam znamená, že složení pořadatel nezveřejnil — ne že nikdo
+# nepřijde. Kdo přijal pozvání, se píše podle ohlášení, ne podle toho, kdo
+# nakonec dorazil; rozdíl patří do `poznamka`.
+#
+# Debaty, u kterých médium ohlásilo jen období, ale ne den, jsou v `bezTerminu`.
+
+overeno: 2026-09-26
+
+debaty:
+  - id: summit-bydleni
+    nazev: "Předvolební debata kandidátů na primátora na Summitu dostupného bydlení"
+    poradatel: "Iniciativa pro dostupné bydlení se společnostmi CENTRAL GROUP a KPMG"
+    datum: 2026-09-09
+    kde: "Summit dostupného bydlení a stavebního rozvoje, přímý přenos na HN.cz"
+    zdroj:
+      text: "Živě: Předvolební debata kandidátů na primátora Prahy na Summitu dostupného bydlení a stavebního rozvoje (HN.cz)"
+      url: "https://domaci.hn.cz/c1-67927320-zive-predvolebni-debata-kandidatu-na-primatora-prahy-na-summitu-dostupneho-bydleni-a-stavebniho-rozvoje"
+    zaznam: "https://prazsky.denik.cz/komunalni-volby/kandidati-na-primatora-chteji-rozhybat-vystavbu-praha-ma-investovat-miliardy/"
+    poznamka: "Lídra STAN Petra Hlaváčka podle Pražského deníku zastoupil Pavel Dobeš. Úplné složení debaty jsme neověřili, proto ho neuvádíme."
+
+  - id: novinky-politalk
+    nazev: "Duel v podcastu PoliTalk"
+    poradatel: "Novinky.cz"
+    datum: 2026-09-20
+    kde: "Podcast a video na Novinky.cz"
+    ucastnici: [portlik-tomas, husbauer-jan]
+    zdroj:
+      text: "Hušbauer chce v Praze zakázat noční prodej alkoholu. S Portlíkem se přeli o bezpečnost (Novinky.cz)"
+      url: "https://www.novinky.cz/clanek/podcasty-politalk-husbauer-chce-v-praze-zakazat-nocni-prodej-alkoholu-s-portlikem-se-preli-o-bezpecnost-40598442"
+    zaznam: "https://www.novinky.cz/clanek/podcasty-politalk-husbauer-chce-v-praze-zakazat-nocni-prodej-alkoholu-s-portlikem-se-preli-o-bezpecnost-40598442"
+    poznamka: "Datum je den zveřejnění, kdy se duel natáčel, Novinky neuvádějí."
+
+  - id: denik-praha-hleda-primatora
+    nazev: "Praha hledá primátora"
+    poradatel: "Deník"
+    datum: 2026-09-22
+    kde: "Záznam na Deník.cz od 25. září"
+    ucastnici: [portlik-tomas, hlavacek-petr, husbauer-jan, nislerova-tereza, scheinherr-adam, urban-milan]
+    moderuje: "Kateřina Perknerová"
+    zdroj:
+      text: "Volební debata Deníku: Roční kupón za 500. Za krach reformy parkování může Hřib (Pražský deník)"
+      url: "https://prazsky.denik.cz/komunalni-volby/debata-deniku-litacka-za-500-krach-parkovani-hrib-volby/"
+    zaznam: "https://prazsky.denik.cz/komunalni-volby/komunalni-volby-2026-boj-o-prazskeho-primatora-denik/"
+    poznamka: "Datum je den natáčení. Milan Urban podle Deníku přišel až v průběhu natáčení."
+
+  - id: nova-naprimo-praha
+    nazev: "Napřímo: Chcete být primátorem? – Praha"
+    poradatel: "TV Nova"
+    datum: 2026-09-23
+    cas: "17:30"
+    kde: "TN Live"
+    ucastnici: [portlik-tomas, husbauer-jan]
+    moderuje: "Marek Bruna"
+    zdroj:
+      text: "Duely, superdebaty a speciální vysílání. TV Nova nabídne kompletní volební servis (TN.cz, 3. 9. 2026)"
+      url: "https://tn.nova.cz/zpravodajstvi/clanek/656017-duely-superdebaty-a-specialni-vysilani-tv-nova-nabidne-kompletni-volebni-servis"
+    zaznam: "https://tn.nova.cz/zpravodajstvi/clanek/657474-kapacity-skol-doprava-a-parkovani-i-dostupne-bydleni-v-duelu-se-utkaji-kandidati-na-primatora-prahy"
+
+  - id: ct24-praha
+    nazev: "Předvolební debata – Praha"
+    poradatel: "Česká televize"
+    datum: 2026-10-01
+    cas: "20:07"
+    kde: "ČT24 a iVysílání"
+    zdroj:
+      text: "Předvolební debata – Praha (iVysílání České televize)"
+      url: "https://www.ceskatelevize.cz/porady/17649426339-komunalni-a-senatni-volby-2026/226411033291001/"
+    poznamka: "Podle ČT diskuse hlavních kandidátů na primátora; jmenovité složení televize nezveřejnila. Poslední ze čtyř debat ČT o velkých městech."
+
+  - id: novinky-royal
+    nazev: "Předvolební debata osmi kandidátů na primátora"
+    poradatel: "Novinky.cz"
+    datum: 2026-10-05
+    cas: "18:00"
+    kde: "Divadlo Royal, Vinohrady"
+    ucastnici: [hlavacek-petr, husbauer-jan, portlik-tomas, nislerova-tereza, scheinherr-adam, sovova-klara, laska-vaclav, urban-milan]
+    moderuje: "Eva Mikulecká a Michael Rozsypal"
+    verejnost: "S publikem, diváci se mohou ptát. Vstupenky jsou podle Novinek vyprodané."
+    zdroj:
+      text: "Volby 2026: Novinky pořádají volební debatu pražských lídrů (Novinky.cz, 24. 9. 2026)"
+      url: "https://www.novinky.cz/clanek/volby-novinky-zvou-na-volebni-debatu-prazskych-lidru-40599301"
+
+  - id: nova-superdebata-praha
+    nazev: "Superdebata – Praha"
+    poradatel: "TV Nova"
+    datum: 2026-10-07
+    moderuje: "Bára Divišová"
+    zdroj:
+      text: "Duely, superdebaty a speciální vysílání. TV Nova nabídne kompletní volební servis (TN.cz, 3. 9. 2026)"
+      url: "https://tn.nova.cz/zpravodajstvi/clanek/656017-duely-superdebaty-a-specialni-vysilani-tv-nova-nabidne-kompletni-volebni-servis"
+    poznamka: "Nova zatím neoznámila čas, kanál ani složení; debata je poslední z pěti superdebat krajských měst."
+
+bezTerminu:
+  - poradatel: "CNN Prima NEWS"
+    text: "Ohlásila superdebatní týden se třemi velkými debatami 5., 6. a 7. října od 21:00. Zda a kdy v nich budou pražští kandidáti, zatím neuvedla."
+    zdroj:
+      text: "ČT a Nova dají předvolební debaty z regionů, Prima pozve kandidáty na primátory do studia (Médiář)"
+      url: "https://www.mediar.cz/ct-a-nova-daji-predvolebni-debaty-z-regionu-prima-pozve-kandidaty-na-primatory-do-studia/"
+  - poradatel: "Český rozhlas"
+    text: "Pražské komunální debaty připraví Radiožurnál a Český rozhlas Plus. Den a hodinu ohlášení jednoznačně neuvádí."
+    zdroj:
+      text: "Rozhlas zamíří s volebními debatami i do malých obcí, dá je Radiožurnál a Plus (Médiář)"
+      url: "https://www.mediar.cz/rozhlas-zamiri-s-volebnimi-debatami-i-do-malych-obci-da-je-radiozurnal-a-plus/"

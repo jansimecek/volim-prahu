@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server'
-import { polohaAdresyVPraze } from '@/lib/geokodovani'
 import { kandidatka } from '@/lib/kandidatky'
-import { mistnostiMestskeCasti, mistnostZPoznamky, type Mistnost } from '@/lib/mistnosti'
+import { mistnostiPoOkrscich, type Mistnost } from '@/lib/mistnosti'
 import { MESTSKE_CASTI, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { okoliParkovaniMetru } from '@/lib/parkovani'
-import { adresyMestskeCasti, okrskyMestskeCasti, type AdresyMestskeCasti } from '@/lib/okrsky'
+import { adresyMestskeCasti } from '@/lib/okrsky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 
 /**
@@ -38,25 +37,7 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
   const adresy = adresyMestskeCasti(slug)
   if (!mc || !adresy) return NextResponse.json({ chyba: 'Neznámá městská část.' }, { status: 404 })
 
-  const ostatni = MESTSKE_CASTI.filter((m) => m.slug !== slug)
-    .map((m) => adresyMestskeCasti(m.slug))
-    .filter((a): a is AdresyMestskeCasti => a !== null)
-  const sPolohou = (m: Mistnost): Mistnost => {
-    const poloha = m.poloha ?? polohaAdresyVPraze(m.adresa, adresy, ostatni, m.okrsky)
-    return poloha ? { ...m, poloha } : m
-  }
-  const mistnosti: Record<number, Mistnost> = {}
-  for (const m of mistnostiMestskeCasti(slug).map(sPolohou)) for (const o of m.okrsky) mistnosti[o] = m
-  for (const o of okrskyMestskeCasti(slug)) {
-    const zRuian = mistnostZPoznamky(o.poznamka)
-    if (!mistnosti[o.cislo] && zRuian) {
-      mistnosti[o.cislo] = sPolohou({
-        ...zRuian,
-        okrsky: [o.cislo],
-        zdroj: { typ: 'ruian', nazev: 'RÚIAN, poznámka správce okrsku', overeno: o.platiOd },
-      })
-    }
-  }
+  const mistnosti = mistnostiPoOkrscich(slug, adresy)
 
   const senat = senatniStavMestskeCasti(slug)
   const listina = kandidatka(slug)

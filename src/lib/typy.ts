@@ -11,14 +11,6 @@ export type HodnoceniSlibu = {
   reakce_subjektu?: { text: string; datum: string; odkaz?: string }
 }
 
-export type BodProgramu = {
-  id: string
-  slib: string
-  oblast?: string
-  citace_zdroje: string
-  hodnoceni?: HodnoceniSlibu
-}
-
 export type Zastupitelstvo = {
   kod: string
   nazev: string

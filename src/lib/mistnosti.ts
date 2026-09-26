@@ -8,9 +8,11 @@
  *    u každého okrsku. Bereme jako záložní zdroj s viditelnou nálepkou.
  */
 import { volebniMistnosti } from '#content'
-import { okrsekPodleCisla, type Okrsek } from './okrsky'
-
+import { polohaAdresyVPraze } from './geokodovani'
 import type { Mistnost } from './mistnostiTypy'
+import { MESTSKE_CASTI } from './obsah'
+import { adresyMestskeCasti, okrskyMestskeCasti, type Okrsek } from './okrsky'
+import type { AdresyMestskeCasti } from './okrskyHledani'
 import { zonaMistnosti } from './parkovani'
 import { zastavkaMistnosti } from './zastavky'
 
@@ -74,22 +76,29 @@ export function mistnostiMestskeCasti(slug: string): Mistnost[] {
 }
 
 /**
- * Místnost pro okrsek. Redakční obsah má přednost před poznámkou z RÚIAN,
- * a to i když je z minulých voleb — ten aspoň někdo ověřil proti oznámení.
+ * Místnosti městské části po okrscích, jak je vydávají obě API okrsků.
+ * Redakční obsah má přednost před poznámkou z RÚIAN, a to i když je
+ * z minulých voleb — ten aspoň někdo ověřil proti oznámení. Poloha
+ * z oznámení má přednost; jinak se adresa místnosti dohledá v registru
+ * části, pak v celé Praze.
  */
-export function mistnostProOkrsek(cislo: number): Mistnost | undefined {
-  const okrsek = okrsekPodleCisla(cislo)
-  if (!okrsek) return undefined
-  const redakcni = mistnostiMestskeCasti(okrsek.mestskaCast).find((m) => m.okrsky.includes(cislo))
-  return redakcni ?? mistnostZRuian(okrsek)
-}
+export function mistnostiPoOkrscich(slug: string, adresy: AdresyMestskeCasti): Record<number, Mistnost> {
+  const ostatni = MESTSKE_CASTI.filter((mc) => mc.slug !== slug)
+    .map((mc) => adresyMestskeCasti(mc.slug))
+    .filter((a): a is AdresyMestskeCasti => a !== null)
+  const sPolohou = (m: Mistnost): Mistnost => {
+    const poloha = m.poloha ?? polohaAdresyVPraze(m.adresa, adresy, ostatni, m.okrsky)
+    return poloha ? { ...m, poloha } : m
+  }
 
-/** Které okrsky městské části ještě nemají místnost z žádného zdroje. */
-export function okrskyBezMistnosti(slug: string, okrsky: Okrsek[]): number[] {
-  const pokryte = new Set(mistnostiMestskeCasti(slug).flatMap((m) => m.okrsky))
-  return okrsky
-    .filter((o) => o.mestskaCast === slug && !pokryte.has(o.cislo) && !mistnostZPoznamky(o.poznamka))
-    .map((o) => o.cislo)
+  const mistnosti: Record<number, Mistnost> = {}
+  for (const m of mistnostiMestskeCasti(slug).map(sPolohou)) for (const o of m.okrsky) mistnosti[o] = m
+  for (const o of okrskyMestskeCasti(slug)) {
+    if (mistnosti[o.cislo]) continue
+    const zRuian = mistnostZRuian(o)
+    if (zRuian) mistnosti[o.cislo] = sPolohou(zRuian)
+  }
+  return mistnosti
 }
 
 export type PokrytiMistnosti = {

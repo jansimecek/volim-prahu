@@ -95,8 +95,6 @@ const strany = defineCollection({
       programOvereno: s.isodate(),
       web: url.optional(),
       programUrl: url.optional(),
-      /** Vyplňuje se jen u ručně ověřených shod — viz content/hlidac-mapping.yaml. */
-      hlidacOsobaId: s.string().optional(),
       publikovano: s.boolean().default(false),
       content: s.mdx(),
     })
@@ -941,6 +939,67 @@ const volebniMistnosti = defineCollection({
     }),
 })
 
+/**
+ * Kalendář debat kandidátů na primátora ve velkých médiích.
+ *
+ * Termín, čas i místo se píšou jen podle ohlášení pořadatele nebo média.
+ * Čtenář podle kalendáře plánuje večer — debata s odhadnutým časem, která
+ * začne jindy, je horší než debata s poctivým „čas zatím neznáme".
+ */
+const zdrojDebaty = s.object({ text: s.string().min(1), url: url })
+
+const debaty = defineCollection({
+  name: 'Debaty',
+  pattern: 'debaty.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      debaty: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            nazev: s.string().min(1),
+            poradatel: s.string().min(1),
+            datum: s.isodate(),
+            /** Místní pražský čas začátku, jen když ho pořadatel ohlásil. */
+            cas: s
+              .string()
+              .regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Čas debaty se píše jako HH:MM v pražském čase.')
+              .optional(),
+            /** Stanice, web nebo sál. Chybí, dokud ho pořadatel neoznámí. */
+            kde: s.string().min(1).optional(),
+            /** Slugy osob z kandidátních listin; existenci hlídá `pnpm validate`. */
+            ucastnici: s.array(s.string().min(1)).default([]),
+            moderuje: s.string().min(1).optional(),
+            /** Jestli a jak se dá přijít osobně. */
+            verejnost: s.string().min(1).optional(),
+            zdroj: zdrojDebaty,
+            /** Záznam nebo článek o proběhlé debatě. */
+            zaznam: url.optional(),
+            poznamka: s.string().min(1).optional(),
+          }),
+        )
+        .min(1),
+      /** Debaty, u kterých médium ohlásilo jen období, ne den. */
+      bezTerminu: s
+        .array(s.object({ poradatel: s.string().min(1), text: s.string().min(1), zdroj: zdrojDebaty }))
+        .default([]),
+    })
+    .superRefine((data, ctx) => {
+      const videna = new Set<string>()
+      for (const d of data.debaty) {
+        if (videna.has(d.id)) {
+          ctx.addIssue({ code: 'custom', message: `Debata s id "${d.id}" je uvedená dvakrát.` })
+        }
+        videna.add(d.id)
+        if (new Set(d.ucastnici).size !== d.ucastnici.length) {
+          ctx.addIssue({ code: 'custom', message: `Debata "${d.id}" má některého účastníka uvedeného dvakrát.` })
+        }
+      }
+    }),
+})
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -966,5 +1025,6 @@ export default defineConfig({
     aktuality,
     volebniMistnosti,
     koalice,
+    debaty,
   },
 })
