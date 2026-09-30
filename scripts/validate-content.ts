@@ -52,6 +52,7 @@ const KONTROLOVAT_SLOVNIK = (soubor: string) =>
   soubor.startsWith('content/programy/') ||
   soubor.startsWith('content/aktualne/') ||
   soubor.startsWith('content/postoje/') ||
+  soubor === 'content/sporne-otazky.yaml' ||
   soubor === 'content/koalice.yaml'
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
@@ -248,6 +249,7 @@ function overKrizoveOdkazy() {
   overOsoby(velite)
   overPostoje(velite, strany)
   overKoalice(velite, strany)
+  overSporneOtazky(velite, strany)
 }
 
 /**
@@ -372,6 +374,31 @@ function overKoalice(velite: string, strany: { slug: string; uroven: string }[])
           soubor: 'content/koalice.yaml',
           radek: 0,
           zprava: `Vyjádření "${d.id}" odkazuje na subjekt "${slug}", který na magistrátu v content/strany neexistuje.`,
+          tvrde: true,
+        })
+      }
+    }
+  }
+}
+
+/**
+ * Zařazení na škále sporné otázky musí mířit na magistrátní subjekt. Překlep
+ * ve slugu by subjekt ze škály tiše vypustil a stránka by ho vedla jako
+ * nedoloženého — tedy jako by postoj neměl, přestože ho zapsaný má.
+ */
+function overSporneOtazky(velite: string, strany: { slug: string; uroven: string }[]) {
+  if (!existsSync(join(velite, 'sporneOtazky.json'))) return
+  const data = JSON.parse(readFileSync(join(velite, 'sporneOtazky.json'), 'utf8')) as {
+    otazky: { id: string; odpovedi: { subjekt: string }[] }[]
+  }
+  const magistrat = new Set(strany.filter((s) => s.uroven === 'magistrat').map((s) => s.slug))
+  for (const o of data.otazky) {
+    for (const a of o.odpovedi) {
+      if (!magistrat.has(a.subjekt)) {
+        nalezy.push({
+          soubor: 'content/sporne-otazky.yaml',
+          radek: 0,
+          zprava: `Otázka "${o.id}" odkazuje na subjekt "${a.subjekt}", který na magistrátu v content/strany neexistuje.`,
           tvrde: true,
         })
       }

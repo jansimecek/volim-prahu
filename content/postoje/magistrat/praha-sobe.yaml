@@ -3,10 +3,14 @@
 # Subjekt má program „Pro Prahu první poslední" (prahasobe.cz/volby2026,
 # hodnocený v content/programy). Tady jsou navíc doložené výroky lídra
 # Adama Scheinherra k okruhům, které program nepokrývá stejně konkrétně.
+#
+# Doplněno 30. 9. 2026: na stránce programu je odkaz na celý program v PDF
+# (soubor vytvořen 16. 9. 2026). Postoje z něj jsou porovnané se surovým
+# textem z pdftotext.
 
 subjekt: praha-sobe
 uroven: magistrat
-overeno: 2026-09-08
+overeno: 2026-09-30
 
 postoje:
   - okruh: bydleni
@@ -41,3 +45,90 @@ postoje:
       text: Propagace filharmonie za 120 milionů? Ostře kritizovaný tendr končí (Pražský deník)
       url: https://prazsky.denik.cz/zpravy_region/propagace-filharmonie-za-120-milionu-ostre-kritizovany-tendr-konci-20260603.html
       datum: 2026-06-03
+
+  - okruh: bydleni
+    shrnuti: "Zahájit přípravu 8 000 městských bytů, příspěvky developerů brát v bytech, nové byty financovat přes fond"
+    postoj: >-
+      Program chce, aby Praha přestala prodávat byty a pozemky a rozjela
+      vlastní výstavbu 8 000 městských bytů. Příspěvky developerů chce
+      vybírat v hotových bytech místo peněz, městskou výstavbu zlevnit
+      uvolněním parkovacích minim a financovat ji přes investiční fond,
+      dotace a bankovní úvěry. Vůči Airbnb slibuje přitvrdit.
+    typZdroje: program
+    zdroj:
+      text: Program Praha sobě pro volby 2026 (PDF)
+      url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+      datum: 2026-09-30
+    proveditelnost:
+      agenda: bytovy-fond
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Slib „odbrzdit přípravu“ 8 000 bytů v prvních sto dnech má na webu
+      vlastní hodnocení proveditelnosti. Hotové byty v tomto počtu jsou práce
+      na víc než jedno volební období.
+
+  - okruh: doprava
+    shrnuti: "Projektovat okružní metro O, odbrzdit Blanku II, Hloubětínský tunel a opravy mostů"
+    postoj: >-
+      Program slibuje začít pracovat na okružním metru O, odbrzdit další etapu
+      Městského okruhu (Blanka II) a spustit její geologický průzkum, postavit
+      Hloubětínský tunel a zkapacitnit Průmyslový polookruh. Rozjet chce
+      opravy Hlávkova, Mánesova a Čechova mostu a mezi Podbabou a Bohnicemi
+      vrátit do hry lanovku. Cenu jízdného ani parkovného program neřeší.
+    typZdroje: program
+    zdroj:
+      text: Program Praha sobě pro volby 2026 (PDF)
+      url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+      datum: 2026-09-30
+    proveditelnost:
+      agenda: mhd
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Projekční práce na metru O a geologický průzkum okruhu mají na webu
+      vlastní hodnocení proveditelnosti.
+
+  - okruh: skolstvi
+    shrnuti: "Nakoupit místa na soukromých středních školách pro rok 2027/28, stavět nové budovy"
+    postoj: >-
+      Program chce postavit nové budovy středních škol a do té doby nakoupit
+      místa pro pražské děti na soukromých školách, aby kapacity přibyly už
+      pro školní rok 2027/28. Slibuje investiční plán školství na deset let,
+      peníze pro městské části na základní a mateřské školy a dost míst pro
+      děti se speciálními potřebami.
+    typZdroje: program
+    zdroj:
+      text: Program Praha sobě pro volby 2026 (PDF)
+      url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+      datum: 2026-09-30
+    proveditelnost:
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Nákup míst na soukromých školách má na webu vlastní hodnocení. Program
+      tvrdí, že jednání se školami proběhla; ověřit to nemáme jak.
+
+  - okruh: rozpocet
+    shrnuti: "175 miliard na účtech investovat do dopravy, škol a bytů; fond průběžného financování"
+    postoj: >-
+      Podle programu má Praha na účtech 175 miliard korun, které leží ladem,
+      a ty chce investovat do dopravní infrastruktury, nových škol a výstavby
+      městských bytů. Fondem průběžného financování chce získat na projekty
+      s dlouhou návratností i velké investory.
+    typZdroje: program
+    zdroj:
+      text: Program Praha sobě pro volby 2026 (PDF)
+      url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+      datum: 2026-09-30
+    proveditelnost:
+      agenda: rozpocet-prahy
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Výše prostředků na účtech je tvrzení strany; rozpočtový rámec města
+      popisuje stránka /rozpoctovy-ramec.

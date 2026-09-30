@@ -33,6 +33,17 @@ export const TON_TRIDA: Record<Ton, string> = {
   nezname: 'razitko-nezname',
 }
 
+/**
+ * Značka nese stejnou informaci jako barva — barva sama nesmí být jediným
+ * nositelem významu (WCAG 1.4.1). Je to měrka naplnění, ne semafor.
+ */
+export const ZNACKA: Record<Ton, string> = {
+  prima: '●',
+  stredni: '◐',
+  prekazka: '○',
+  nezname: '–',
+}
+
 type StavPopis = { zkratka: string; popis: string; ton: Ton }
 
 export const POPIS_KOMPETENCE: Record<Kompetence, StavPopis> = {

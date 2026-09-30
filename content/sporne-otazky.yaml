@@ -1,0 +1,520 @@
+# Sporné otázky ke srovnání témat.
+#
+# Každá otázka je jedna osa: možnosti jdou od jednoho pólu k druhému a každý
+# subjekt stojí na nejvýš jednom místě. Zařazení je naše, proto u každého
+# stojí shrnutí, ze kterého je poznat, proč právě tam, a zdroj. Kdo tu
+# chybí, je na stránce uvedený jako „nedoloženo" — neznamená to, že je proti.
+#
+# Zdroje jsou buď už ověřené v content/postoje a content/vyroky-lidru.yaml,
+# nebo nové a ověřené 30. 9. 2026 v surovém textu (curl, text bez tagů):
+# ankety Echa24 o bydlení (19. 9.) a o Airbnb (7. 9.), program Pirátů
+# z program2026.praha.pirati.cz (verze 2026.09.19) a PDF programu Prahy sobě.
+#
+# Zásada pro zařazení: rozhoduje, co subjekt výslovně říká, ne kam „patří".
+# Když něco jen naznačuje, jde do prostřední možnosti a vysvětlí to shrnutí.
+
+overeno: 2026-09-30
+
+otazky:
+  - id: kupon-mhd
+    okruh: doprava
+    otazka: "Má zdražit roční kupon MHD pro Pražany, dnes 3 650 Kč?"
+    kontext: >-
+      Cenu kuponu schvaluje rada hlavního města, nikdo další k tomu souhlas
+      dávat nemusí. Doprava je přitom největší kapitola rozpočtu a zmrazená cena
+      při rostoucích nákladech znamená každý rok vyšší dotaci. Koalice
+      2022–2026 se na zdražení nedohodla.
+    moznosti:
+      - id: zlevnit
+        popis: Zlevnit
+      - id: nezdrazit
+        popis: Nezdražovat
+      - id: diskuse
+        popis: Nevylučuje, jen spolu s parkováním
+      - id: zdrazit
+        popis: Zdražit
+    odpovedi:
+      - subjekt: spd-pro-prahu
+        moznost: zlevnit
+        shrnuti: "Roční kupon za administrativní poplatek 500 až 1 000 Kč, studentům zdarma. Ostatní účastníci debaty návrh odmítli."
+        typZdroje: vyrok
+        zdroj:
+          text: Praha nevzkvétá, jak by mohla (Pražský deník, debata lídrů)
+          url: https://prazsky.denik.cz/komunalni-volby/komunalni-volby-2026-boj-o-prazskeho-primatora-denik/
+          datum: 2026-09-25
+      - subjekt: spojena-levice-pro-prahu
+        moznost: nezdrazit
+        shrnuti: "Program slibuje kupon nad 3 650 Kč nezdražit a výhledově připravit MHD zdarma, bez termínu."
+        typZdroje: program
+        zdroj:
+          text: Program Spojené levice pro Prahu, kapitola Doprava a MHD
+          url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+          datum: 2026-09-04
+      - subjekt: ano-2011
+        moznost: nezdrazit
+        shrnuti: "Lídr: roční kupon pro Pražany zdražovat nebudeme. Finance dopravního podniku chce řešit úsporami, o cenách pro návštěvníky se prý dá mluvit potom."
+        typZdroje: vyrok
+        zdroj:
+          text: Anketa Echa — zdraží po volbách MHD? (Echo24)
+          url: https://www.echo24.cz/a/Hnw5f/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-zdrazi-po-volbach-mhd
+          datum: 2026-08-12
+      - subjekt: ceska-piratska-strana
+        moznost: diskuse
+        shrnuti: "Lídryně se diskusi o nákladech MHD nebrání, ale zdražení jízdného bez změny parkování odmítá. Program cenu kuponu nezmiňuje."
+        typZdroje: vyrok
+        zdroj:
+          text: Anketa Echa — zdraží po volbách MHD? (Echo24)
+          url: https://www.echo24.cz/a/Hnw5f/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-zdrazi-po-volbach-mhd
+          datum: 2026-08-12
+      - subjekt: starostove-a-nezavisli
+        moznost: zdrazit
+        shrnuti: "Lídr označil za rozumnou dohodu z končícího období vrátit kupon na úroveň roku 2015 plus inflace, ze které sešlo."
+        typZdroje: vyrok
+        zdroj:
+          text: "Hlaváček: Ceny parkování a MHD se musí upravit (Echo24)"
+          url: https://www.echo24.cz/a/HZnD5/zpravy-domaci-rozhovor-petr-hlavacek-kandidat-na-primatora-stan-metro-s-parkovani-mhd-ceny
+          datum: 2026-09-24
+      - subjekt: spolu-pro-prahu
+        moznost: zdrazit
+        shrnuti: "Lídr by se vrátil k ceně z roku 2015, tedy 4 750 Kč. Program SPOLU cenu kuponu nezmiňuje."
+        typZdroje: vyrok
+        zdroj:
+          text: Rozhovor s Tomášem Portlíkem (Echo24)
+          url: https://www.echo24.cz/a/HqEXb/rozhovor-domaci-komunalni-volby-tomas-portlik-ods-spolu-pro-prahu-piraty-na-doprave-si-neumim-predstavit
+          datum: 2026-09-14
+
+  - id: parkovani
+    okruh: doprava
+    otazka: "Má zdražit parkování v modrých zónách?"
+    kontext: >-
+      Zóny placeného stání a ceník parkovného určuje magistrát nařízením.
+      Koalice 2022–2026 se na reformě neshodla. Spor je hlavně o to, jestli
+      má víc platit jen návštěvník, nebo i část rezidentů.
+    moznosti:
+      - id: sjednotit
+        popis: Sjednotit zóny, nepřidávat poplatky
+      - id: navstevnici
+        popis: Dráž jen krátkodobé stání návštěvníků
+      - id: zdrazit
+        popis: Zdražit i části rezidentů
+    odpovedi:
+      - subjekt: motoriste-sobe
+        moznost: sjednotit
+        shrnuti: "Jedna celopražská zóna: kdo se pohybuje mezi bydlištěm, prací a rodinou, nemá řešit další poplatek. K tomu parkovací domy."
+        typZdroje: vyrok
+        zdroj:
+          text: Pražská koalice se nedohodla na cenách MHD ani parkování (Pražský patriot / ČTK)
+          url: https://www.prazskypatriot.cz/prazska-koalice-se-v-tomto-obdobi-nedohodla-na-cenach-mhd-ani-parkovani/
+          datum: 2026-09-20
+      - subjekt: ano-2011
+        moznost: sjednotit
+        shrnuti: "Jedno rezidentní oprávnění má přes den platit bez dalšího poplatku i v jiných městských částech; večer mají přednost místní."
+        typZdroje: vyrok
+        zdroj:
+          text: Pražská koalice se nedohodla na cenách MHD ani parkování (Pražský patriot / ČTK)
+          url: https://www.prazskypatriot.cz/prazska-koalice-se-v-tomto-obdobi-nedohodla-na-cenach-mhd-ani-parkovani/
+          datum: 2026-09-20
+      - subjekt: spolu-pro-prahu
+        moznost: navstevnici
+        shrnuti: "Dynamické ceny hodinového stání pro návštěvníky, omezit krátkodobé stání mimopražských. Cena pro rezidenty má zůstat stejná."
+        typZdroje: vyrok
+        zdroj:
+          text: "Duel z Prahy: Hušbauer a Portlík (TN.cz)"
+          url: https://tn.nova.cz/zpravodajstvi/clanek/657474-kapacity-skol-doprava-a-parkovani-i-dostupne-bydleni-v-duelu-se-utkaji-kandidati-na-primatora-prahy
+          datum: 2026-09-23
+      - subjekt: ceska-piratska-strana
+        moznost: zdrazit
+        shrnuti: "Parkovné podle poptávky v každé lokalitě a parkování na druhé auto na byt klidně za trojnásobek, 3 600 Kč ročně."
+        typZdroje: vyrok
+        zdroj:
+          text: Pirátská kandidátka ukázala plán pro Prahu (e15)
+          url: https://www.e15.cz/domaci/politika/druhe-auto-za-trojnasobek-maximalni-dan-na-prazdne-domy-piratska-kandidatka-na-primatorku-ukazala-plan-pro-prahu-1435235
+          datum: 2026-08-27
+      - subjekt: starostove-a-nezavisli
+        moznost: zdrazit
+        shrnuti: "Lídr by jako základ debaty držel zhruba dvojnásobek dnešních cen; parkování na ulici je podle něj vzhledem k hodnotě prostoru levné."
+        typZdroje: vyrok
+        zdroj:
+          text: "Hlaváček: Ceny parkování a MHD se musí upravit (Echo24)"
+          url: https://www.echo24.cz/a/HZnD5/zpravy-domaci-rozhovor-petr-hlavacek-kandidat-na-primatora-stan-metro-s-parkovani-mhd-ceny
+          datum: 2026-09-24
+
+  - id: kdo-stavi-byty
+    okruh: bydleni
+    otazka: "Má nájemní byty stavět město samo, nebo soukromí investoři?"
+    kontext: >-
+      Praha má necelých 30 tisíc obecních bytů. Její Pražská developerská
+      společnost od roku 2020 připravuje projekty na městských pozemcích,
+      zatím bez dokončeného domu. Spor je o to, jestli ji posílit, nebo
+      pozemky nabídnout soukromým investorům výměnou za část bytů.
+    moznosti:
+      - id: mesto
+        popis: Hlavně město samo
+      - id: kombinace
+        popis: Město i soukromí investoři
+      - id: investori
+        popis: Soukromí investoři, město jen podmínky
+    odpovedi:
+      - subjekt: spojena-levice-pro-prahu
+        moznost: mesto
+        shrnuti: "Město má být aktivním developerem: masivní výstavba obecních a družstevních bytů za nákladové nájemné, výkup pozemků."
+        typZdroje: program
+        zdroj:
+          text: Program Spojené levice pro Prahu, kapitola Bydlení
+          url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+          datum: 2026-09-04
+      - subjekt: praha-sobe
+        moznost: mesto
+        shrnuti: "Do dvou let zahájit výstavbu nejméně 2 000 městských bytů na městských pozemcích, i s know-how developerů; příspěvky developerů brát v hotových bytech."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: sen-pro-prahu
+        moznost: kombinace
+        shrnuti: "Rozšířit městský bytový fond na deset procent a zároveň s investory vyjednat 10 až 30 % dostupných bytů v každém velkém projektu."
+        typZdroje: program
+        zdroj:
+          text: Program SEN pro Prahu — Dostupné bydlení
+          url: https://praha.senprocesko.cz/program/dostupne-bydleni
+          datum: 2026-09-14
+      - subjekt: ceska-piratska-strana
+        moznost: kombinace
+        shrnuti: "Masivní městská výstavba přes posílenou Pražskou developerskou společnost i zapojení soukromých firem, od kterých chce podíl dostupných bytů."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: starostove-a-nezavisli
+        moznost: kombinace
+        shrnuti: "Stavět má město přes Pražskou developerskou společnost i soukromí developeři, případně družstva. Developer podle lídra není nepřítel, ale partner."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: ano-2011
+        moznost: kombinace
+        shrnuti: "Rozběhnout stavby na městských pozemcích se soukromým sektorem, lídr věří městské výstavbě, družstvům i developerům s pravidly."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: spolu-pro-prahu
+        moznost: investori
+        shrnuti: "Městské pozemky mají zastavět soukromí investoři, kteří část bytů předají Praze. Roli Pražské developerské společnosti chce program přehodnotit."
+        typZdroje: program
+        zdroj:
+          text: "Praha jako domov (program SPOLU pro Prahu)"
+          url: https://www.spoluproprahu26.cz/praha-jako-domov-a-13-ag-4/
+          datum: 2026-09-22
+      - subjekt: motoriste-sobe
+        moznost: investori
+        shrnuti: "Úkolem města podle lídryně není přímo stavět, ale vytvářet podmínky; městské pozemky nabídnout v soutěžích na nájemní a družstevní bydlení."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: spd-pro-prahu
+        moznost: investori
+        shrnuti: "Lídr odmítá, aby sociální byty stavělo město. Navrhuje městské pozemky pro družstva a pro developery podmínky pro masovou výstavbu."
+        typZdroje: vyrok
+        zdroj:
+          text: Milan Urban (SPD) — mašinerie v Praze nehledá řešení (iportaL24.cz)
+          url: https://iportal24.cz/rozhovory/milan-urban-spd-masinerie-v-praze-nehleda-reseni-ale-raduje-se-z-kazdeho-problemu-vsichni/
+          datum: 2026-08-26
+        poznamka: >-
+          Družstva a podmínky pro developery jsou z ankety Echa24 z 19. září
+          2026, kde lídr navrhl i uvolnit až 3 000 prázdných obecních bytů.
+
+  - id: airbnb
+    okruh: bydleni
+    otazka: "Jak přísně omezit krátkodobé pronájmy typu Airbnb?"
+    kontext: >-
+      Samotný krátkodobý pronájem reguluje zákon, město ho zakázat ani omezit
+      počtem nocí nemůže. Může vymáhat kolaudaci bytů k bydlení a zvýšit
+      koeficient daně z nemovitých věcí. Na tom, že centrum nemá být jen pro
+      turisty, se lídři shodují; na nástrojích ne.
+    moznosti:
+      - id: omezit
+        popis: Omezit — limit nocí, registrace, vyšší daň
+      - id: pravidla
+        popis: Pravidla jen pro domy fungující jako hotely
+      - id: jako-hotely
+        popis: Srovnat s hotely, podnikání neomezovat
+      - id: nezasahovat
+        popis: Do soukromých bytů nezasahovat
+    odpovedi:
+      - subjekt: ano-2011
+        moznost: omezit
+        shrnuti: "Se státem prosadit povinnou registraci, limit dnů pro pronájem celého bytu a nejpřísnější režim v centru. Občasný pronájem vlastního bytu nevadí."
+        typZdroje: vyrok
+        zdroj:
+          text: Jak chtějí pražští lídři řešit Airbnb? (Echo24)
+          url: https://www.echo24.cz/a/H4mUM/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-reseni-airbnb-centrum-skanzen
+          datum: 2026-09-07
+      - subjekt: ceska-piratska-strana
+        moznost: omezit
+        shrnuti: "Několikanásobná daň z nemovitosti na domy, které celé slouží turistům, povinná data od platforem a víc pravomocí pro obce."
+        typZdroje: program
+        zdroj:
+          text: "Program Pirátů pro Prahu — Byty mají sloužit k bydlení"
+          url: https://program2026.praha.pirati.cz/program/bydleni/3/
+          datum: 2026-09-30
+      - subjekt: praha-sobe
+        moznost: omezit
+        shrnuti: "Omezit krátkodobý pronájem na 60 nocí v roce u bytů, které k tomu nejsou zkolaudované; k tomu musí stát městům dát pravomoc."
+        typZdroje: vyrok
+        zdroj:
+          text: "Scheinherr: Vládní strany jsou pro mě no-go (PrahaIN.cz)"
+          url: https://www.prahain.cz/politika/scheinherr-vladni-strany-jsou-pro-me-nogo-budu-prvni-primator-pro-dopravu-28638.html
+          datum: 2026-09-16
+      - subjekt: sen-pro-prahu
+        moznost: omezit
+        shrnuti: "Lídr chce, aby město vyžadovalo dodržování zákona: pronajímat byty zkolaudované k bydlení turistům je podle něj v rozporu se zákonem."
+        typZdroje: vyrok
+        zdroj:
+          text: Anketa kandidátů na primátora o krátkodobých pronájmech (CNN Prima News)
+          url: https://cnn.iprima.cz/praha-vs-airbnb-nici-nam-centrum-shoduji-se-kandidati-na-primatora-ano-hovori-i-o-limitu-dnu-519615
+          datum: 2026-08-23
+      - subjekt: spojena-levice-pro-prahu
+        moznost: omezit
+        shrnuti: "Přísná evidence krátkodobých pobytů, omezení Airbnb v bytovém fondu a poplatek na neobývané byty."
+        typZdroje: program
+        zdroj:
+          text: Program Spojené levice pro Prahu, kapitola Bydlení
+          url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+          datum: 2026-09-04
+      - subjekt: starostove-a-nezavisli
+        moznost: pravidla
+        shrnuti: "Jasná pravidla pro krátkodobé ubytování. Problémem podle lídra nejsou lidé, kteří občas pronajmou byt, ale bytové domy, ze kterých jsou fakticky hotely."
+        typZdroje: vyrok
+        zdroj:
+          text: Jak chtějí pražští lídři řešit Airbnb? (Echo24)
+          url: https://www.echo24.cz/a/H4mUM/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-reseni-airbnb-centrum-skanzen
+          datum: 2026-09-07
+      - subjekt: spolu-pro-prahu
+        moznost: jako-hotely
+        shrnuti: "Lídr nechce omezovat podnikání, podmínky krátkodobého ubytování má ale sjednotit s hotely. Program mluví o „rozumné“ regulaci."
+        typZdroje: vyrok
+        zdroj:
+          text: Jak chtějí pražští lídři řešit Airbnb? (Echo24)
+          url: https://www.echo24.cz/a/H4mUM/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-reseni-airbnb-centrum-skanzen
+          datum: 2026-09-07
+      - subjekt: motoriste-sobe
+        moznost: nezasahovat
+        shrnuti: "Do soukromého majetku, bytů ani domů nemá město lidem mluvit; kontrolovat má hluk, nepořádek a porušování pravidel."
+        typZdroje: vyrok
+        zdroj:
+          text: Jak chtějí pražští lídři řešit Airbnb? (Echo24)
+          url: https://www.echo24.cz/a/H4mUM/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-reseni-airbnb-centrum-skanzen
+          datum: 2026-09-07
+        poznamka: >-
+          SPD v téže anketě Airbnb kritizuje, ale regulaci označuje za věc
+          parlamentu a vlády a vlastní opatření nenavrhuje. Proto ji
+          nezařazujeme.
+
+  - id: mestsky-okruh
+    okruh: doprava
+    otazka: "Dostavět Městský okruh?"
+    kontext: >-
+      Chybějící severovýchodní část okruhu (Blanka II) staví Praha z vlastních
+      peněz, odhad je 113 miliard korun bez DPH a zprovoznění kolem roku 2042.
+      O rozpočtu rozhoduje zastupitelstvo, povolení vydává stavební úřad.
+    moznosti:
+      - id: dostavet
+        popis: Dostavět
+      - id: s-vyhradou
+        popis: Dostavět, ale klíčová je železnice
+      - id: nedostavet
+        popis: Nedostavovat
+    odpovedi:
+      - subjekt: ano-2011
+        moznost: dostavet
+        shrnuti: "Dostavbu okruhu a parkovací domy řadí lídr mezi nejdůležitější dopravní projekty."
+        typZdroje: vyrok
+        zdroj:
+          text: Zahájení pražské kampaně ANO v Uhříněvsi (Pražský deník / ČTK)
+          url: https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/
+          datum: 2026-09-13
+      - subjekt: spolu-pro-prahu
+        moznost: dostavet
+        shrnuti: "Program chce se státem uzavřít memorandum o spolufinancování Městského okruhu, lídr ho jmenuje mezi zásadními investicemi."
+        typZdroje: program
+        zdroj:
+          text: "Praha průjezdná (program SPOLU pro Prahu)"
+          url: https://www.spoluproprahu26.cz/praha-prujezdna-a-10-ag-4/
+          datum: 2026-09-22
+      - subjekt: praha-sobe
+        moznost: dostavet
+        shrnuti: "Program slibuje odbrzdit Blanku II a spustit geologický průzkum; lídr by jako primátor zahájil stavbu v příštím období."
+        typZdroje: program
+        zdroj:
+          text: Program Praha sobě pro volby 2026 (PDF)
+          url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+          datum: 2026-09-30
+      - subjekt: motoriste-sobe
+        moznost: dostavet
+        shrnuti: "Lídryně chce změnu v dopravě, méně ideologie na silnicích a dostavbu městského okruhu."
+        typZdroje: vyrok
+        zdroj:
+          text: Kandidáti na primátora chtějí rozhýbat výstavbu (Pražský deník, Summit bydlení)
+          url: https://prazsky.denik.cz/komunalni-volby/kandidati-na-primatora-chteji-rozhybat-vystavbu-praha-ma-investovat-miliardy/
+          datum: 2026-09-12
+      - subjekt: sen-pro-prahu
+        moznost: dostavet
+        shrnuti: "Program chce dokončit dostavbu silničních okruhů a odvést z Magistrály tranzit, aby z ní byl městský bulvár."
+        typZdroje: program
+        zdroj:
+          text: Program SEN pro Prahu — Doprava
+          url: https://praha.senprocesko.cz/program/doprava
+          datum: 2026-09-14
+      - subjekt: ceska-piratska-strana
+        moznost: dostavet
+        shrnuti: "Program chce připravit dokončení Městského okruhu mezi silničními stavbami, které mají zklidnit tranzit v obytných čtvrtích."
+        typZdroje: program
+        zdroj:
+          text: "Program Pirátů pro Prahu — Bezpečná silniční doprava"
+          url: https://program2026.praha.pirati.cz/program/doprava/3/
+          datum: 2026-09-30
+      - subjekt: starostove-a-nezavisli
+        moznost: s-vyhradou
+        shrnuti: "Program chce prosazovat dokončení Pražského i Městského okruhu, lídr ale považuje za naivní čekat, že okruh něco zachrání; klíčem je podle něj metro S."
+        typZdroje: vyrok
+        zdroj:
+          text: "Hlaváček: bez metra S se rozvoj Prahy zastaví (Echo24)"
+          url: https://www.echo24.cz/a/HZnD5/zpravy-domaci-rozhovor-petr-hlavacek-kandidat-na-primatora-stan-metro-s-parkovani-mhd-ceny
+          datum: 2026-09-24
+
+  - id: myto-centrum
+    okruh: doprava
+    otazka: "Zpoplatnit vjezd aut do centra?"
+    kontext: >-
+      Zákon o pozemních komunikacích zná mýtné jen na silnicích a dálnicích
+      určených státem, s výnosem pro Státní fond dopravní infrastruktury.
+      Obci dovoluje zpoplatnit stání (§ 23), ne vjezd. Mýto do centra by tedy
+      potřebovalo změnu zákona, kterou Praha sama neprosadí.
+    moznosti:
+      - id: ano
+        popis: Zavést, pilotně hned
+      - id: pozdeji
+        popis: Až po okruzích, nebo otevřít debatu
+      - id: ne
+        popis: Nezavádět
+    odpovedi:
+      - subjekt: sen-pro-prahu
+        moznost: ano
+        shrnuti: "Program chce zpoplatnit vjezd do historického centra ve špičce, pilotně na Starém Městě a Malé Straně."
+        typZdroje: program
+        zdroj:
+          text: Program SEN pro Prahu — Doprava
+          url: https://praha.senprocesko.cz/program/doprava
+          datum: 2026-09-14
+      - subjekt: spojena-levice-pro-prahu
+        moznost: pozdeji
+        shrnuti: "Mýto do centra ano, ale výslovně až po dokončení dálničního a městského okruhu."
+        typZdroje: program
+        zdroj:
+          text: Program Spojené levice pro Prahu, kapitola Doprava a MHD
+          url: https://spojenalevice.cz/kompletniprogram/program_spojena_levice_doplneny-1.pdf
+          datum: 2026-09-04
+      - subjekt: ceska-piratska-strana
+        moznost: pozdeji
+        shrnuti: "Program chce nízkoemisní zónu uvnitř Městského okruhu a o zpoplatnění vjezdu do centra „povede diskusi“."
+        typZdroje: program
+        zdroj:
+          text: "Program Pirátů pro Prahu — Čistá mobilita"
+          url: https://program2026.praha.pirati.cz/program/doprava/5/
+          datum: 2026-09-30
+
+  - id: metropolitni-plan
+    okruh: uzemni-plan
+    otazka: "Stavět na schváleném Metropolitním plánu, nebo ho měnit?"
+    kontext: >-
+      Nový územní plán schválilo zastupitelstvo 28. května 2026, 50 hlasy
+      z 65, a platí od 1. září. Změnit ho může jen zastupitelstvo a změna
+      trvá roky. Kdo chce „měnit“, nemusí chtít totéž: jedni chtějí stavět
+      výš, druzí sídliště nezahušťovat.
+    moznosti:
+      - id: stavet-na-nem
+        popis: Stavět na něm, převést do investic
+      - id: zmenit
+        popis: Změnit některé části
+      - id: proti
+        popis: Proti plánu (hlasování)
+    odpovedi:
+      - subjekt: starostove-a-nezavisli
+        moznost: stavet-na-nem
+        shrnuti: "Program staví na schváleném plánu a chce ho převést do harmonogramů a investic. Lídr jako náměstek plán připravoval."
+        typZdroje: program
+        zdroj:
+          text: Program STAN pro Zastupitelstvo hl. m. Prahy
+          url: https://www.starostove.cz/zastupitelstvo-hl-mesta-prahy
+          datum: 2026-09-14
+      - subjekt: spolu-pro-prahu
+        moznost: zmenit
+        shrnuti: "Směr výš: lídr chce v rámci úprav plánu otevřít debatu o výškových limitech tam, kde to dává urbanistický smysl."
+        typZdroje: vyrok
+        zdroj:
+          text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+          url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+          datum: 2026-09-19
+      - subjekt: sen-pro-prahu
+        moznost: zmenit
+        shrnuti: "Směr méně: program chce zásadně přehodnotit části plánu o sídlištích, odmítá jejich zahušťování a výškové stavby mezi paneláky."
+        typZdroje: program
+        zdroj:
+          text: Program SEN pro Prahu — Ochrana sídlišť
+          url: https://praha.senprocesko.cz/program/ochrana-sidlist
+          datum: 2026-09-14
+      - subjekt: jsme-praha
+        moznost: proti
+        shrnuti: "Lídryně Jana Komrsková byla jednou ze tří zastupitelů, kteří 28. května 2026 hlasovali proti vydání plánu."
+        typZdroje: hlasovani
+        zdroj:
+          text: Proti Metropolitnímu plánu byly jen tři zastupitelky (Pražský deník)
+          url: https://prazsky.denik.cz/zpravy_region/praha-se-dockala-noveho-uzemniho-planu-schvalili-ho-zastupitele-20260528.html
+          datum: 2026-05-28
+
+  - id: rezervy
+    okruh: rozpocet
+    otazka: "Jsou peníze na účtech města neproinvestované, nebo vázané na stavby?"
+    kontext: >-
+      Kandidáti uvádějí 175 až 200 miliard korun na účtech Prahy; číslo je
+      jejich tvrzení. Spor je o to, jestli jde o volné peníze, které se mají
+      rychle utratit, nebo o rezervu na metro D a okruh, která zmizí se
+      zahájením staveb.
+    moznosti:
+      - id: investovat
+        popis: Neproinvestované, utratit rychleji
+      - id: vazane
+        popis: Vázané na velké stavby
+    odpovedi:
+      - subjekt: ano-2011
+        moznost: investovat
+        shrnuti: "Lídr: peníze nejsou našetřené, ale neproinvestované a patří Pražanům."
+        typZdroje: vyrok
+        zdroj:
+          text: Našetřeno, nebo neproinvestováno? (Novinky.cz, duel Portlík–Hušbauer)
+          url: https://www.novinky.cz/clanek/volby-komunalni-nasetreno-nebo-neproinvestovano-portlik-a-husbauer-se-preli-o-200-miliardach-na-uctu-prahy-40598462
+          datum: 2026-09-21
+      - subjekt: praha-sobe
+        moznost: investovat
+        shrnuti: "Program: 175 miliard leží ladem a má jít do dopravy, nových škol a masivní výstavby městských bytů, i přes investiční fond."
+        typZdroje: program
+        zdroj:
+          text: Program Praha sobě pro volby 2026 (PDF)
+          url: https://prahasobe.cz/praha-sobe-volebni-program-2026.pdf
+          datum: 2026-09-30
+      - subjekt: spolu-pro-prahu
+        moznost: vazane
+        shrnuti: "Lídr: peníze jsou potřeba na metro D, vnitřní okruh a další stavby a se zahájením staveb z účtu rychle zmizí."
+        typZdroje: vyrok
+        zdroj:
+          text: Našetřeno, nebo neproinvestováno? (Novinky.cz, duel Portlík–Hušbauer)
+          url: https://www.novinky.cz/clanek/volby-komunalni-nasetreno-nebo-neproinvestovano-portlik-a-husbauer-se-preli-o-200-miliardach-na-uctu-prahy-40598462
+          datum: 2026-09-21

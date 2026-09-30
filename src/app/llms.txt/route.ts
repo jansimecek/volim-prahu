@@ -39,7 +39,7 @@ export function GET(): Response {
     `- [Magistrát: kandidátky do Zastupitelstva hl. m. Prahy](${absolutni('/praha')}): 24 volebních stran, lídři, vylosovaná čísla, řazení podle průzkumu.`,
     `- [Městské části](${absolutni('/mestska-cast')}): 57 zastupitelstev, kandidátky, vedení radnice, lokální témata.`,
     `- [Senát](${absolutni('/senat')}): tři pražské obvody, ve kterých se letos volí (21, 24, 27), a kde se senátor nevolí.`,
-    `- [Postoje k zásadním tématům](${absolutni('/temata')}): bydlení, doprava, územní plán, rozpočet, školství, prostředí, sociální oblast — po subjektech se zdroji.`,
+    `- [Postoje k zásadním tématům](${absolutni('/temata')}): sporné otázky se zařazením subjektů na škále, postoje k bydlení, dopravě, územnímu plánu, rozpočtu, školství, prostředí a sociální oblasti — vše se zdroji.`,
     `- [Jak hodnotíme](${absolutni('/jak-hodnotime')}): metodika čtyř os proveditelnosti a slovník stavů.`,
     `- [Kdo o čem rozhoduje](${absolutni('/kdo-o-cem-rozhoduje')}): kompetence magistrátu vs. městských částí s paragrafy.`,
     `- [Kdo s kým po volbách](${absolutni('/koalice')}): doložená vyjádření kandidátek o povolební spolupráci (usnesení, citace, nebo parafráze se zdrojem) a kalkulačka mandátů podle § 45 zákona o volbách do zastupitelstev obcí; bez předpovědí.`,

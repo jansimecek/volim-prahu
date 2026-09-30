@@ -1,11 +1,12 @@
 # Postoje SPD pro Prahu k okruhům srovnání.
 #
 # Ucelený pražský program k 8. 9. 2026 nedohledán (viz profil), postoje jsou
-# z doložených výroků lídra Milana Urbana.
+# z doložených výroků lídra Milana Urbana. Návrh ceny kuponu z debaty
+# Deníku přibyl 30. 9. 2026.
 
 subjekt: spd-pro-prahu
 uroven: magistrat
-overeno: 2026-09-08
+overeno: 2026-09-30
 
 postoje:
   - okruh: bydleni
@@ -58,3 +59,26 @@ postoje:
       text: Milan Urban (SPD) — mašinerie v Praze nehledá řešení (iportaL24.cz)
       url: https://iportal24.cz/rozhovory/milan-urban-spd-masinerie-v-praze-nehleda-reseni-ale-raduje-se-z-kazdeho-problemu-vsichni/
       datum: 2026-08-26
+
+  - okruh: doprava
+    shrnuti: "Roční kupon za administrativní poplatek 500 až 1 000 Kč, pro studenty zdarma"
+    postoj: >-
+      V debatě Deníku lídr navrhl roční kupon za administrativní poplatek
+      v rozmezí 500 až 1 000 korun, pro studenty zdarma. Ostatní účastníci
+      debaty návrh odmítli. Jak by město pokrylo výpadek tržeb, v článku
+      nezaznělo.
+    typZdroje: vyrok
+    zdroj:
+      text: Praha nevzkvétá, jak by mohla (Pražský deník, debata lídrů)
+      url: https://prazsky.denik.cz/komunalni-volby/komunalni-volby-2026-boj-o-prazskeho-primatora-denik/
+      datum: 2026-09-25
+    proveditelnost:
+      agenda: mhd
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Ceník PID schvaluje rada, rozhodnutí je tedy v pravomoci města. Doprava
+      je s 41,47 miliardy korun největší kapitolou rozpočtu; výrazné snížení
+      jízdného by znamenalo odpovídajícím způsobem vyšší dotaci a zdroj lídr
+      neuvedl. Pražané nad 65 let jezdí zdarma už dnes.

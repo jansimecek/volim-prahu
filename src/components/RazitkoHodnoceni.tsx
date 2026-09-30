@@ -6,20 +6,10 @@ import {
   POPIS_ROZPOCET,
   POPIS_ZAVER,
   TON_TRIDA,
+  ZNACKA,
   type Ton,
 } from '@/lib/hodnoceni'
 import type { HodnoceniSlibu } from '@/lib/typy'
-
-/**
- * Značka nese stejnou informaci jako barva — barva sama nesmí být jediným
- * nositelem významu (WCAG 1.4.1). Je to měrka naplnění, ne semafor.
- */
-const ZNACKA: Record<Ton, string> = {
-  prima: '●',
-  stredni: '◐',
-  prekazka: '○',
-  nezname: '–',
-}
 
 function Bunka({ popisek, zkratka, popis, ton }: { popisek: string; zkratka: string; popis: string; ton: Ton }) {
   return (

@@ -4,12 +4,23 @@ import { vyroky } from '#content'
 import { datumCesky, sPoctem } from '@/lib/cestina'
 import { POPIS_ZAVER } from '@/lib/hodnoceni'
 import { PostojeOkruhu } from '@/components/PostojeOkruhu'
-import { OKRUHY, bezPostoje, bezVyroku, postojeOkruhu, slibyOkruhu, vyrokyOkruhu } from '@/lib/temata'
+import { PrehledSpornychOtazek } from '@/components/PrehledSpornychOtazek'
+import { SkalaOtazky } from '@/components/SkalaOtazky'
+import {
+  OKRUHY,
+  OVERENO_SPORNE,
+  bezPostoje,
+  bezVyroku,
+  otazkyOkruhu,
+  postojeOkruhu,
+  slibyOkruhu,
+  vyrokyOkruhu,
+} from '@/lib/temata'
 
 export const metadata: Metadata = {
   title: 'Srovnání témat',
   description:
-    'Co lídři pražských kandidátek řekli o bydlení, dopravě, územním plánu, rozpočtu a školství — doslovné citace vedle sebe, s uvedeným zdrojem.',
+    'Kde se pražské kandidátky liší v bydlení, dopravě, územním plánu, rozpočtu a školství: sporné otázky na škále, postoje s hodnocením proveditelnosti a doslovné citace lídrů, vše se zdrojem.',
 }
 
 const POPIS_TYPU_ZDROJE: Record<string, string> = {
@@ -27,8 +38,11 @@ export default function StrankaTemat() {
         <p className="popisek-uredni">Srovnání</p>
         <h1 className="mt-2 text-4xl">Co lídři říkají k zásadním tématům</h1>
         <p className="mt-4">
-          Doslovné citace vedle sebe, u každé zdroj a datum. Nic neshrnujeme vlastními
-          slovy a nikoho nehodnotíme — čtete přesně to, co dotyčný řekl a kde.
+          Nahoře přehled otázek, ve kterých se kandidátky rozcházejí, u každého okruhu
+          pak postoje subjektů a doslovné citace lídrů. Výroky citujeme přesně, postoje
+          a zařazení na škále jsou naše shrnutí — u každého je zdroj a typ, tedy jestli
+          jde o program, výrok, nebo hlasování. Hodnotíme jen proveditelnost, ne kdo má
+          pravdu.
         </p>
         <p className="mt-4">
           <Link href="/rozhovory" className="odkaz-akcent">
@@ -44,6 +58,11 @@ export default function StrankaTemat() {
 
       <nav aria-label="Okruhy" className="border-y border-inkoust py-3">
         <ul className="flex flex-wrap gap-x-5 gap-y-1">
+          <li>
+            <a href="#kde-se-lisi" className="odkaz-navigace">
+              Kde se liší
+            </a>
+          </li>
           {OKRUHY.map((o) => (
             <li key={o.id}>
               <a href={`#${o.id}`} className="odkaz-navigace">
@@ -54,12 +73,30 @@ export default function StrankaTemat() {
         </ul>
       </nav>
 
+      <section id="kde-se-lisi" aria-labelledby="kde-se-lisi-nadpis" className="scroll-mt-20">
+        <h2 id="kde-se-lisi-nadpis" className="text-2xl">
+          Kde se liší
+        </h2>
+        <p className="mt-1 max-w-prose text-sm text-seda-uredni">
+          Každý řádek je jedna sporná otázka s vlastní škálou, plný kroužek ukazuje, kam
+          subjekt podle doloženého zdroje patří. Osy spolu nesouvisejí a nesčítají se:
+          levý pól u jízdného neznamená totéž co levý pól u parkování. Po kliknutí na
+          otázku uvidíte zdroj ke každému zařazení.
+        </p>
+        <PrehledSpornychOtazek />
+        <p className="popisek-uredni mt-3">
+          Zařazení ověřeno k {datumCesky(OVERENO_SPORNE)} · pomlčka = postoj nemáme
+          doložený, ne „proti“
+        </p>
+      </section>
+
       {OKRUHY.map((okruh) => {
         const vyrokyOk = vyrokyOkruhu(okruh)
         const sliby = slibyOkruhu(okruh)
         const chybi = bezVyroku(okruh)
         const postojeOk = postojeOkruhu(okruh)
         const bezPostojeOk = bezPostoje(okruh)
+        const otazky = otazkyOkruhu(okruh)
 
         return (
           <section key={okruh.id} id={okruh.id} className="scroll-mt-20">
@@ -72,9 +109,18 @@ export default function StrankaTemat() {
                 ` · ${sPoctem(sliby.length, 'hodnocený slib', 'hodnocené sliby', 'hodnocených slibů')}`}
             </p>
 
+            {otazky.length > 0 && (
+              <>
+                <h3 className="mt-6 text-lg">Kde se rozcházejí</h3>
+                {otazky.map((o) => (
+                  <SkalaOtazky key={o.id} otazka={o} />
+                ))}
+              </>
+            )}
+
             {postojeOk.length > 0 && (
               <>
-                <h3 className="mt-6 text-lg">Co k tomu subjekty říkají</h3>
+                <h3 className="mt-8 text-lg">Co k tomu subjekty říkají</h3>
                 <PostojeOkruhu postoje={postojeOk} chybi={bezPostojeOk} />
                 <h3 className="mt-8 text-lg">Doslovné výroky lídrů</h3>
               </>
