@@ -18,6 +18,8 @@
 # Výroky ze zdrojů `echo-cyklistika`, `nova-duel`, `echo-hlavacek`,
 # `pd-debata-byty` a `pd-debata-mhd` přibyly 26. 9. 2026, ověřené v surovém
 # textu zdroje.
+# Výroky ze zdrojů `echo-airbnb` a `echo-bydleni` přibyly 30. 9. 2026, ověřené
+# v surovém textu zdroje.
 overeno: 2026-08-27
 
 zdroje:
@@ -213,6 +215,18 @@ zdroje:
     datum: 2026-09-24
     typ: redakcni
     url: "https://prazsky.denik.cz/komunalni-volby/debata-deniku-litacka-za-500-krach-parkovani-hrib-volby/"
+  - id: echo-airbnb
+    medium: "Echo24"
+    nazev: "„Centrum Prahy nesmí být turistickou kulisou.“ Jak chtějí pražští lídři řešit Airbnb?"
+    datum: 2026-09-07
+    typ: redakcni
+    url: "https://www.echo24.cz/a/H4mUM/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-volby-reseni-airbnb-centrum-skanzen"
+  - id: echo-bydleni
+    medium: "Echo24"
+    nazev: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení"
+    datum: 2026-09-19
+    typ: redakcni
+    url: "https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri"
 
 osoby:
   - osobaSlug: husbauer-jan
@@ -327,6 +341,14 @@ osoby:
         citace: "Cyklisté si zaslouží oddělené stezky mimo silnice, podél Vltavy a po bývalých drážních tělesech, ne čáru mezi kamiony."
         kontext: "Odpověď v anketě Echa24 o cyklistice; sám po Praze na kole nejezdí."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Konkrétně: se státem dotáhneme zákonné zmocnění a zavedeme přísná pravidla pro krátkodobé pronájmy — povinnou registraci, limit dnů pro pronájem celého bytu a nejpřísnější režim právě v přetíženém centru."
+        kontext: "Odpověď v anketě Echa24 na otázku, co udělá pro to, aby v centru zase bydleli Pražané, a jaký má postoj k Airbnb. Občasný pronájem vlastního bytu mu podle téže odpovědi nevadí."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "A není to buď–anebo: věřím městské výstavbě, družstvům na městských pozemcích i soukromým developerům s pravidly."
+        kontext: "Závěr odpovědi v anketě Echa24 na otázku, zda věří spíš obecní výstavbě, družstvům, nebo uvolnění regulace pro developery."
+        zdroj: echo-bydleni
   - osobaSlug: nislerova-tereza
     jmeno: "Tereza Nislerová"
     subjekt: ceska-piratska-strana
@@ -388,6 +410,14 @@ osoby:
         citace: "Nedivím se Zdeňku Hřibovi, že to tak prosazoval, je to i součást programového prohlášení koalice, které podepsali i představitelé ODS"
         kontext: "V debatě Deníku reagovala na Portlíkovo tvrzení, že reformu parkovacích zón zablokoval Zdeněk Hřib, když ji podmiňoval uzavřením centra."
         zdroj: pd-debata-mhd
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Co se Airbnb týče, je to zásadní problém, který rozhodně chceme zkrotit."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; jako nástroje jmenuje vymáhání kolaudace, data od platforem a vyšší zdanění domů, které celé slouží turistům."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "Dostupné bydlení je pro nás absolutní prioritou, která si žádá kombinaci masivní městské výstavby i zapojení soukromých subjektů."
+        kontext: "Úvod odpovědi v anketě Echa24 o třech krocích k dostupnějšímu bydlení."
+        zdroj: echo-bydleni
   - osobaSlug: komrskova-jana
     jmeno: "Jana Komrsková"
     subjekt: jsme-praha
@@ -422,6 +452,14 @@ osoby:
         citace: "Cyklistika má být jednou z možností dopravy, nikoliv nástrojem k omezování ostatních druhů dopravy."
         kontext: "Odpověď v anketě Echa24 o cyklistice; sama po Praze na kole nejezdí."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Do soukromého majetku, bytů ani domů nemá město lidem mluvit. Pokud někdo příležitostně pronajímá svůj byt, je to jeho rozhodnutí."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; město má podle ní kontrolovat hluk, nepořádek a porušování pravidel."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "Úkolem města není přímo stavět ale vytvářet k tomu ideální podmínky."
+        kontext: "Odpověď v anketě Echa24 o dostupném bydlení; městské pozemky chce nabídnout v transparentních soutěžích na nájemní a družstevní bydlení."
+        zdroj: echo-bydleni
   - osobaSlug: scheinherr-adam
     jmeno: "Adam Scheinherr"
     subjekt: praha-sobe
@@ -456,6 +494,14 @@ osoby:
         citace: "Kolo nemá být ideologie, ale normální možnost, jak se po městě pohybovat."
         kontext: "Odpověď v anketě Echa24 o cyklistice; sám po městě na kole jezdí."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Praha si musí sama určit, kde a v jakém rozsahu jsou krátkodobé pronájmy přípustné."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; podle něj na to dnes Praha nemá zákonné nástroje a stát jí je odmítá dát."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "Za prvé do dvou let zahájím výstavbu městských bytů na pozemcích, které město vlastní a má připravené, bude se jednat min. o 2000 bytů."
+        kontext: "První ze tří kroků, které jmenoval v anketě Echa24 o dostupném bydlení; dalšími jsou zákon o krátkodobých pronájmech a investiční fond."
+        zdroj: echo-bydleni
   - osobaSlug: laska-vaclav
     jmeno: "Václav Láska"
     subjekt: sen-pro-prahu
@@ -502,6 +548,14 @@ osoby:
         citace: "Prostor vidím ve vytváření vysutých cyklostezek podél Vltavy jako oddechovou a dedikovanou zónu pro kola."
         kontext: "Odpověď v anketě Echa24 o cyklistice."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Airbnb Praze nic nepřináší. Oni snad ani pořádně nedaní. To je věc parlamentu a vlády."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; vlastní opatření města nenavrhl."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "V dlouhodobém horizontu chceme vytvořit pro developery tak výhodné prostředí, aby mohli provádět masovou výstavbu, nebát se mrakodrapů."
+        kontext: "Odpověď v anketě Echa24 o dostupném bydlení; ve střednědobém plánu chce městské pozemky pro družstevní výstavbu."
+        zdroj: echo-bydleni
   - osobaSlug: vlcek-petr
     jmeno: "Petr Vlček"
     subjekt: spojena-levice-pro-prahu
@@ -594,6 +648,14 @@ osoby:
         citace: "Praha nikdy nebude Amsterdam a ani by se jím neměla snažit stát. Kolo má ve městě své místo, ale především tam, kde pro něj existují bezpečné podmínky."
         kontext: "Odpověď v anketě Echa24 o cyklistice."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Co se týče Airbnb, nechci nijak omezovat podnikání."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; v téže odpovědi chce, aby se podmínky poskytování ubytování sjednotily s hotely."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "Nevěřím, že Praha bytovou krizi vyřeší sama vlastní výstavbou."
+        kontext: "Odpověď v anketě Echa24 o dostupném bydlení; prvním krokem má být zrychlení povolování a debata o výškových limitech."
+        zdroj: echo-bydleni
   - osobaSlug: hlavacek-petr
     jmeno: "Petr Hlaváček"
     subjekt: starostove-a-nezavisli
@@ -663,6 +725,14 @@ osoby:
         citace: "Naší prioritou tak je budování páteřní cyklistické sítě v podobě oddělených cyklostezek, například drážní promenády ve Vršovicích nebo Dejvicích."
         kontext: "Odpověď v anketě Echa24 o cyklistice."
         zdroj: echo-cyklistika
+      - tema: "Bydlení a krátkodobé pronájmy"
+        citace: "Problémem nejsou lidé, kteří příležitostně pronajímají svůj byt, ale situace, kdy se z bytových domů stávají fakticky hotely bez odpovídajících pravidel."
+        kontext: "Odpověď v anketě Echa24 o Airbnb; podporuje jasná pravidla pro krátkodobé ubytování."
+        zdroj: echo-airbnb
+      - tema: "Bydlení"
+        citace: "Potřebujeme stavět nové byty, mělo by stavět město i soukromí developeři."
+        kontext: "Odpověď v anketě Echa24 o dostupném bydlení; městskou výstavbu chce vést přes Pražskou developerskou společnost."
+        zdroj: echo-bydleni
   - osobaSlug: dubsky-jiri
     jmeno: "Jiří Dubský"
     subjekt: ano-lepsi-cesko-s-mimozemstany

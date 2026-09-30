@@ -3,11 +3,12 @@
 # Ucelený pražský program hnutí k 8. 9. 2026 nedohledán (viz profil), postoje
 # jsou z doložených výroků lídra Jana Hušbauera. Přesné citace jsou
 # v content/vyroky-lidru.yaml. Postoj k dopravě ze zahájení pražské kampaně
-# přibyl 14. 9. 2026.
+# přibyl 14. 9. 2026. Postoje z anket Echa24 o bydlení a Airbnb, ze
+# školského podcastu Deníku a z ankety ČTK o parkování přibyly 30. 9. 2026.
 
 subjekt: ano-2011
 uroven: magistrat
-overeno: 2026-09-08
+overeno: 2026-09-30
 
 postoje:
   - okruh: doprava
@@ -72,3 +73,58 @@ postoje:
       text: Zahájení pražské kampaně ANO v Uhříněvsi (Pražský deník / ČTK)
       url: https://prazsky.denik.cz/komunalni-volby/kampan-ano-v-hlavnim-meste-startuje-v-uhrinevsi-program-miri-na-dopravu-i-sport/
       datum: 2026-09-13
+
+  - okruh: bydleni
+    shrnuti: "Do dvou let první stavby na městských pozemcích se soukromým sektorem; Airbnb registrace a limit dnů"
+    postoj: >-
+      Lídr chce z projektů Pražské developerské společnosti do dvou let
+      udělat první stavby, se soukromým sektorem a městskými částmi, a měřit
+      výsledek podle předaných bytů. Věří městské výstavbě, družstvům na
+      městských pozemcích i developerům s pravidly. U krátkodobých pronájmů
+      chce se státem prosadit povinnou registraci a limit dnů pro celé byty.
+    typZdroje: vyrok
+    zdroj:
+      text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+      url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+      datum: 2026-09-19
+    poznamka: >-
+      Registrace a limit dnů jsou z ankety Echa24 o Airbnb ze 7. září 2026.
+      Obojí vyžaduje změnu zákona, jak lídr sám uvádí („se státem dotáhneme
+      zákonné zmocnění“). Cíl v počtu bytů lídr odmítá slibovat.
+
+  - okruh: skolstvi
+    shrnuti: "Velký středoškolský kampus se Středočeským krajem a státem, lokalita neurčená"
+    postoj: >-
+      Lídr navrhuje velký středoškolský kampus, který by Praha stavěla se
+      Středočeským krajem a státem; i kapacita pro 6 000 míst by se podle něj
+      zaplnila. Lokalitu neuvedl.
+    typZdroje: vyrok
+    zdroj:
+      text: Po nemocnici i superškola. ANO navrhuje kampus pro tisíce středoškoláků (Pražský deník)
+      url: https://prazsky.denik.cz/komunalni-volby/po-nemocnici-i-superskola-ano-navrhuje-kampus-pro-tisice-stredoskolaku/
+      datum: 2026-09-21
+    proveditelnost:
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+
+  - okruh: doprava
+    shrnuti: "Jedno rezidentní parkovací oprávnění pro celou Prahu přes den, bez dalšího poplatku"
+    postoj: >-
+      V anketě ČTK o reformě parkování lídr navrhl, aby jedno rezidentní
+      oprávnění umožnilo Pražanům přes den parkovat bez dalšího poplatku i
+      mimo jejich městskou část; večer a v noci mají mít přednost místní
+      rezidenti.
+    typZdroje: vyrok
+    zdroj:
+      text: Pražská koalice se nedohodla na cenách MHD ani parkování (Pražský patriot / ČTK)
+      url: https://www.prazskypatriot.cz/prazska-koalice-se-v-tomto-obdobi-nedohodla-na-cenach-mhd-ani-parkovani/
+      datum: 2026-09-20
+    proveditelnost:
+      agenda: parkovaci-zony
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+    poznamka: >-
+      Zóny vymezuje magistrát nařízením. Kolik by město ztratilo na
+      poplatcích, výrok neříká.

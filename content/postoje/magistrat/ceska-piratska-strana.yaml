@@ -15,10 +15,15 @@
 # je podle plánu teprve musí umožnit Sněmovna, a koleje v Karlíně, Troji a na
 # Palmovce jako slib, přitom o nich plán mluví jen jako o zvažovaných místech.
 # U zdroje se místo dne ověření zobrazovalo datum představení plánu.
+#
+# Doplněno 30. 9. 2026: kompletní program (program2026.praha.pirati.cz,
+# závazný od 9. 9., verze textu z 19. 9.) přidal postoje k dopravě, školství,
+# sociálním službám a životnímu prostředí. Každá věta je porovnaná se surovým
+# textem příslušné podstránky programu.
 
 subjekt: ceska-piratska-strana
 uroven: magistrat
-overeno: 2026-09-14
+overeno: 2026-09-30
 
 postoje:
   - okruh: bydleni
@@ -126,3 +131,94 @@ postoje:
       kompetence: v-pravomoci
       rozpocet: nejiste
       cas: do-4-let
+
+  - okruh: doprava
+    shrnuti: "Metro D z Písnice k Nádraží Krč s provozem od 2032, nové tramvajové tratě, připravit dokončení Městského okruhu"
+    postoj: >-
+      Program slibuje dokončit ražbu tunelů metra D z Písnice k Nádraží Krč
+      a hlídat zprovoznění prvního úseku v roce 2032, dokončit tramvajové
+      tratě do Malešic, na Jarov, na Nové Dvory a na Strahov a připravit
+      prodloužení metra do tří nových čtvrtí. Mezi silničními stavbami chce
+      připravit dokončení Městského okruhu, Radlickou radiálu a Hloubětínský
+      tunel.
+    typZdroje: program
+    zdroj:
+      text: Program Pirátů pro Prahu — Doprava
+      url: https://program2026.praha.pirati.cz/program/doprava/
+      datum: 2026-09-30
+    proveditelnost:
+      agenda: mhd
+      kompetence: castecne
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Rok 2032 pro první úsek metra D program jen „hlídá“, nesliboval ho
+      splnit ve volebním období.
+
+  - okruh: doprava
+    shrnuti: "Parkovné podle poptávky, víc modrých zón na sídlištích, nízkoemisní zóna a debata o mýtu do centra"
+    postoj: >-
+      V reformě parkování chce program nastavit poplatky podle poptávky
+      v jednotlivých lokalitách, rozšířit modré zóny do přetížených sídlišť,
+      opilotovat dostupné parkovací domy na sídlištích a výnosy vracet do
+      silnic, MHD a veřejného prostoru. Uvnitř Městského okruhu chce zavést
+      nízkoemisní zónu a o zpoplatnění vjezdu do centra vést diskusi. Cenu
+      jízdného program nezmiňuje.
+    typZdroje: program
+    zdroj:
+      text: Program Pirátů pro Prahu — Promyšlené parkování a Čistá mobilita
+      url: https://program2026.praha.pirati.cz/program/doprava/7/
+      datum: 2026-09-30
+    proveditelnost:
+      agenda: parkovaci-zony
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+
+  - okruh: skolstvi
+    shrnuti: "Nové střední školy na Hradčanské, Barrandově, Písnické a v Braníku, víc lyceí a gymnázií"
+    postoj: >-
+      Program slibuje prosadit nové středoškolské kapacity na Hradčanské, na
+      Barrandově, v Písnické a v Braníku, rozšířit hlavně lycea a čtyřletá
+      gymnázia i speciální vzdělávání a kofinancovat nové školy městských
+      částí. O společném financování chce jednat se Středočeským krajem
+      a ministerstvy.
+    typZdroje: program
+    zdroj:
+      text: Program Pirátů pro Prahu — Školství
+      url: https://program2026.praha.pirati.cz/program/skolstvi/1/
+      datum: 2026-09-30
+    proveditelnost:
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: presahuje
+    poznamka: >-
+      Program neuvádí počet nových míst ani termín. Střední školy zřizuje
+      magistrát, základní a mateřské městské části.
+
+  - okruh: socialni
+    shrnuti: "Přednost péči doma a terénním službám, Nemocnici Na Františku převést pod město"
+    postoj: >-
+      Program dává přednost péči v domácím prostředí a menším komunitním
+      zařízením, chce posílit terénní služby a podporu pečujících a nabídnout
+      sociálním pracovníkům obecní byty. Nemocnici Na Františku, kterou
+      provozuje Praha 1 a město ji dotuje, chce převést do správy hlavního
+      města.
+    typZdroje: program
+    zdroj:
+      text: Program Pirátů pro Prahu — Sociální politika a zdravotnictví
+      url: https://program2026.praha.pirati.cz/program/socialni/
+      datum: 2026-09-30
+
+  - okruh: prostredi
+    shrnuti: "Víc stromů a vody proti vedru, parky Trojská kotlina, Maniny, Soutok a Trojmezí, víc biopopelnic"
+    postoj: >-
+      Program chce pokračovat ve výsadbě stromů, zadržovat dešťovou vodu
+      a stavět pítka a mlžítka proti letním vedrům. Slibuje pokročit
+      s přípravou parků Trojská kotlina, Maniny, Soutok a Trojmezí
+      a rozšiřovat sběr bioodpadu a biopopelnice.
+    typZdroje: program
+    zdroj:
+      text: Program Pirátů pro Prahu — Životní prostředí
+      url: https://program2026.praha.pirati.cz/program/prostredi/
+      datum: 2026-09-30

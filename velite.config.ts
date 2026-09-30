@@ -669,6 +669,85 @@ const postoje = defineCollection({
 })
 
 /**
+ * Sporné otázky: kde se subjekty v okruhu liší, položené na jednu škálu.
+ *
+ * Tohle je jediné místo na webu, kde postoj subjektu sami zařazujeme — do
+ * jedné z možností, které otázka nabízí. Proto dvě pojistky. Možnosti jsou
+ * popsané tím, co subjekt dělat chce, ne přívlastkem („zdražit kupon", ne
+ * „odpovědný přístup"). A každé zařazení nese zdroj a vlastní shrnutí, ze
+ * kterého musí být zařazení poznat i bez kliknutí. Subjekt, který v datech
+ * není, je na stránce výslovně uvedený jako nedoložený, nikdy ne jako
+ * „proti".
+ */
+const sporneOtazky = defineCollection({
+  name: 'SporneOtazky',
+  pattern: 'sporne-otazky.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      otazky: s
+        .array(
+          s.object({
+            id: s.string().regex(/^[a-z0-9-]+$/),
+            okruh: s.enum(ID_OKRUHU),
+            otazka: s.string().min(1).max(120),
+            /** Proč je to sporné a kdo o tom rozhoduje. */
+            kontext: s.string().min(1).max(500),
+            /** Seřazené od jednoho pólu k druhému — pořadí je osa škály. */
+            moznosti: s
+              .array(s.object({ id: s.string().min(1), popis: s.string().min(1).max(60) }))
+              .min(2)
+              .max(4),
+            odpovedi: s
+              .array(
+                s.object({
+                  subjekt: s.string().min(1),
+                  moznost: s.string().min(1),
+                  /** Proč je subjekt zařazený právě sem, vlastními slovy. */
+                  shrnuti: s.string().min(1).max(220),
+                  typZdroje: s.enum(['program', 'vyrok', 'hlasovani']),
+                  zdroj: s.object({ text: s.string().min(1), url: url, datum: s.isodate() }),
+                  poznamka: s.string().min(1).optional(),
+                }),
+              )
+              .min(2),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const videne = new Set<string>()
+      for (const o of data.otazky) {
+        if (videne.has(o.id)) {
+          ctx.addIssue({ code: 'custom', message: `Sporná otázka "${o.id}" je v souboru dvakrát.` })
+        }
+        videne.add(o.id)
+
+        const moznosti = new Set(o.moznosti.map((m) => m.id))
+        const subjekty = new Set<string>()
+        for (const a of o.odpovedi) {
+          if (!moznosti.has(a.moznost)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Otázka "${o.id}": subjekt "${a.subjekt}" je zařazený do možnosti "${a.moznost}", kterou otázka nemá.`,
+            })
+          }
+          // Jeden subjekt, jedno místo na škále. Kdo má dva postoje, patří
+          // do té možnosti, kterou říká výslovněji, a zbytek do poznámky.
+          if (subjekty.has(a.subjekt)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `Otázka "${o.id}": subjekt "${a.subjekt}" je zařazený dvakrát.`,
+            })
+          }
+          subjekty.add(a.subjekt)
+        }
+      }
+    }),
+})
+
+/**
  * Doložená předvolební vyjádření o povolební spolupráci na magistrátu.
  *
  * Nejsnáz zkreslitelný obsah na webu: z „nevyloučil“ se v titulku stane
@@ -1022,6 +1101,7 @@ export default defineConfig({
     vyroky,
     pruzkumy,
     postoje,
+    sporneOtazky,
     aktuality,
     volebniMistnosti,
     koalice,

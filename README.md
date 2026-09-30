@@ -73,9 +73,11 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
   (čl. 19 odst. 2 Ústavy).
 - **[Senát](https://www.volimprahu.cz/senat)** — tři pražské senátní obvody,
   ve kterých se letos volí, a přehled, kdo senátní lístek dostane a kdo ne.
-- **[Témata](https://www.volimprahu.cz/temata)** — co lídři řekli o bydlení,
-  dopravě, územním plánu, rozpočtu, školství a dalších tématech. Doslovné citace
-  vedle sebe, u každé zdroj.
+- **[Témata](https://www.volimprahu.cz/temata)** — kde se kandidátky liší
+  v bydlení, dopravě, územním plánu, rozpočtu, školství a dalších tématech.
+  Přehled sporných otázek (jízdné, parkování, kdo má stavět byty, Airbnb,
+  Městský okruh…) s polohou každé strany na škále, postoje s hodnocením
+  proveditelnosti a doslovné citace lídrů. U každého zařazení je zdroj.
 - **Profily kandidátů** — každý kandidát má vlastní stránku s údaji z otevřených
   dat ČSÚ, u lídrů i s doloženými výroky z médií.
 

@@ -1,11 +1,12 @@
 # Postoje Motoristů sobě k okruhům srovnání.
 #
 # Ucelený pražský program k 8. 9. 2026 nedohledán (viz profil), postoj je
-# z doloženého výroku lídryně Kláry Sovové při jejím představení.
+# z doloženého výroku lídryně Kláry Sovové při jejím představení. Postoje
+# k parkování a bydlení z anket ČTK a Echa24 přibyly 30. 9. 2026.
 
 subjekt: motoriste-sobe
 uroven: magistrat
-overeno: 2026-09-08
+overeno: 2026-09-30
 
 postoje:
   - okruh: doprava
@@ -26,3 +27,37 @@ postoje:
     poznamka: >-
       Cyklopruhy na komunikacích ve správě města lze rušit rozhodnutím
       silničního správního úřadu; na státních silnicích je to věc státu.
+
+  - okruh: doprava
+    shrnuti: "Jedna celopražská parkovací zóna bez dalších poplatků, parkovací domy a navádění na volná místa"
+    postoj: >-
+      Pražan pohybující se mezi bydlištěm, prací a rodinou podle lídryně
+      nesmí pokaždé řešit jinou zónu a další poplatek; podle ČTK chce jednu
+      celopražskou parkovací zónu. Podpořit chce parkovací domy a systémy,
+      které řidiče navedou na volné místo.
+    typZdroje: vyrok
+    zdroj:
+      text: Pražská koalice se nedohodla na cenách MHD ani parkování (Pražský patriot / ČTK)
+      url: https://www.prazskypatriot.cz/prazska-koalice-se-v-tomto-obdobi-nedohodla-na-cenach-mhd-ani-parkovani/
+      datum: 2026-09-20
+    proveditelnost:
+      agenda: parkovaci-zony
+      kompetence: v-pravomoci
+      rozpocet: nejiste
+      cas: do-4-let
+
+  - okruh: bydleni
+    shrnuti: "Město nemá stavět samo; městské pozemky nabídnout v soutěžích na nájemní a družstevní bydlení"
+    postoj: >-
+      Úkolem města podle lídryně není přímo stavět, ale vytvářet podmínky:
+      stavební úřady mají developery podporovat, městské pozemky se mají
+      uvolnit pro dostupné nájemní a družstevní bydlení v transparentních
+      soutěžích se závaznými termíny. Regulaci Airbnb odmítá — do soukromých
+      bytů nemá město lidem mluvit.
+    typZdroje: vyrok
+    zdroj:
+      text: "Anketa: Jak chtějí pražští lídři řešit krizi bydlení (Echo24)"
+      url: https://www.echo24.cz/a/H69UR/zpravy-domaci-anketa-echa-kandidati-na-primatora-praha-reseni-krize-bydleni-druzstva-developeri
+      datum: 2026-09-19
+    poznamka: >-
+      Postoj k Airbnb je z ankety Echa24 ze 7. září 2026.

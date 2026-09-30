@@ -1,5 +1,12 @@
 import Link from 'next/link'
 import { datumCesky, sPoctem } from '@/lib/cestina'
+import {
+  POPIS_CAS,
+  POPIS_KOMPETENCE,
+  POPIS_ROZPOCET,
+  TON_TRIDA,
+  ZNACKA,
+} from '@/lib/hodnoceni'
 import type { PostojVOkruhu } from '@/lib/temata'
 
 /**
@@ -29,6 +36,44 @@ const POPIS_TYPU: Record<PostojVOkruhu['typZdroje'], { zkratka: string; popis: s
     popis:
       'Není to postoj subjektu. Odvodili jsme ho z jiných zdrojů a subjekt ho takto nikde neuvedl.',
   },
+}
+
+/**
+ * Tři osy proveditelnosti v jednom řádku. Bez historie a bez závěru, protože
+ * ty u postojů nevyplňujeme — závěr patří jen plnému hodnocení slibu na
+ * stránce programu. Tady jde o orientační upozornění, kdo o věci rozhoduje
+ * a jestli se stihne, ne o verdikt.
+ */
+function Proveditelnost({ p }: { p: NonNullable<PostojVOkruhu['proveditelnost']> }) {
+  const osy = [
+    { osa: 'Kompetence', ...POPIS_KOMPETENCE[p.kompetence] },
+    { osa: 'Rozpočet', ...POPIS_ROZPOCET[p.rozpocet] },
+    { osa: 'Čas', ...POPIS_CAS[p.cas] },
+  ]
+  return (
+    <div className="mt-3">
+      <p className="popisek-uredni">Naše hodnocení proveditelnosti</p>
+      <ul className="mt-1 flex flex-wrap gap-x-5 gap-y-1">
+        {osy.map((o) => (
+          <li key={o.osa} className={`razitko-hodnota ${TON_TRIDA[o.ton]}`} title={o.popis}>
+            <span className="znacka" aria-hidden="true">
+              {ZNACKA[o.ton]}
+            </span>
+            <span>
+              <span className="text-seda-uredni">{o.osa}:</span> {o.zkratka}
+            </span>
+          </li>
+        ))}
+        {p.agenda && (
+          <li className="razitko-hodnota">
+            <Link href={`/kdo-o-cem-rozhoduje#${p.agenda}`} className="underline">
+              kdo o tom rozhoduje
+            </Link>
+          </li>
+        )}
+      </ul>
+    </div>
+  )
 }
 
 type Props = {
@@ -83,6 +128,8 @@ export function PostojeOkruhu({ postoje, chybi }: Props) {
                   {typ.popis}
                 </p>
               )}
+
+              {p.proveditelnost && <Proveditelnost p={p.proveditelnost} />}
 
               {p.poznamka && (
                 <p className="mt-2 max-w-prose border-l-2 border-praha pl-4 text-sm">

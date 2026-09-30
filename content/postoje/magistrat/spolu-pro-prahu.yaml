@@ -4,10 +4,12 @@
 # Tomáše Portlíka. 22. 9. 2026 je na spoluproprahu26.cz program o deseti
 # kapitolách; postoje jsou přepsané z jeho surového textu. Z výroků zůstává
 # jen cena MHD, o které program mlčí (slibuje jen „udržitelné financování“).
+# 30. 9. 2026 opraveno: postoj k ceně MHD tvrdil, že lídr konkrétní částku
+# neslíbil, přitom v rozhovoru pro Echo24 14. 9. jmenoval 4 750 Kč.
 
 subjekt: spolu-pro-prahu
 uroven: magistrat
-overeno: 2026-09-22
+overeno: 2026-09-30
 
 postoje:
   - okruh: bydleni
@@ -57,26 +59,27 @@ postoje:
       a program sám počítá s penězi od státu.
 
   - okruh: doprava
-    shrnuti: "Priorita vnitřní i vnější okruh a metro D; otevřít debatu o zdražení MHD"
+    shrnuti: "Kupon vrátit na cenu z roku 2015, tedy 4 750 Kč; dráž hodinové parkování, rezidentům beze změny"
     postoj: >-
-      Lídr jmenuje jako zásadní investice vnitřní okruh, vnější okruh a metro D
-      a chce vyjednat spolupráci se státem na financování. Zároveň uvedl, že
-      koalice chtěla už v tomto období mluvit o reformě zón placeného stání
-      a o zdražení jízdného v MHD, ale koaliční partner to podmínil uzavřením
-      centra. Zdražení tedy nevylučuje, konkrétní částku nesliboval.
+      Lídr by roční kupon vrátil na úroveň roku 2015, tedy 4 750 korun, a uvedl,
+      že koalice chtěla už v tomto období mluvit o zdražení jízdného a reformě
+      zón placeného stání, ale koaliční partner to podmínil uzavřením centra.
+      V parkování chce zdražit dynamické ceny hodinového stání pro návštěvníky;
+      cena pro rezidenty má podle TN.cz zůstat stejná.
     typZdroje: vyrok
     zdroj:
-      text: Kandidát na primátora Tomáš Portlík — Chci Prahu, která bude stavět a růst (FORUM 24, přetisk na ods.cz)
-      url: https://www.ods.cz/clanek/28703-kandidat-na-primatora-tomas-portlik-chci-prahu-ktera-bude-stavet-a-rust
-      datum: 2026-08-18
+      text: Rozhovor s Tomášem Portlíkem (Echo24)
+      url: https://www.echo24.cz/a/HqEXb/rozhovor-domaci-komunalni-volby-tomas-portlik-ods-spolu-pro-prahu-piraty-na-doprave-si-neumim-predstavit
+      datum: 2026-09-14
     proveditelnost:
       agenda: mhd
-      kompetence: castecne
-      rozpocet: nejiste
-      cas: presahuje
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
     poznamka: >-
-      Městský okruh i metro D jsou stavby přes několik volebních období; ceny
-      jízdného schvaluje rada, ale okruh a metro závisí i na státu.
+      Ceník PID schvaluje rada, takže zdražení je v pravomoci města. Výrok
+      o parkování je z duelu TV Nova 23. 9. 2026 (TN.cz), o dřívějším záměru
+      koalice z rozhovoru pro FORUM 24 z 18. 8. 2026.
 
   - okruh: skolstvi
     shrnuti: "Víc míst na středních školách a gymnáziích, jednat se Středočeským krajem a státem"

@@ -1,5 +1,6 @@
-import { postoje, programy, strany, vyroky } from '#content'
+import { postoje, programy, sporneOtazky, strany, vyroky } from '#content'
 import { celeJmeno, lidr, stranaPodleKodu } from './kandidatky'
+import type { Cas, Kompetence, Rozpocet } from './hodnoceni'
 import type { IdOkruhu } from './okruhy'
 
 /**
@@ -37,6 +38,7 @@ export const OKRUHY: Okruh[] = [
       'Bydlení a veřejný prostor',
       'Bydlení a územní plán',
       'Bydlení, investice a doprava',
+      'Bydlení a investice',
     ],
   },
   {
@@ -45,8 +47,10 @@ export const OKRUHY: Okruh[] = [
     popis:
       'Cena jízdného, parkování, velké dopravní stavby. Rozsah městské hromadné dopravy schvaluje magistrát, městská část do něj nemluví.',
     stitky: [
+      'Doprava',
       'Doprava a MHD',
       'Doprava a parkování',
+      'Doprava a cyklistika',
       'Doprava a veřejný prostor',
       'Doprava a investice',
     ],
@@ -74,16 +78,17 @@ export const OKRUHY: Okruh[] = [
   },
   {
     id: 'prostredi',
-    nazev: 'Životní prostředí a odpady',
+    nazev: 'Životní prostředí a energetika',
     popis:
-      'Odpady, voda, zeleň. Systém nakládání s odpadem stanoví Praha vyhláškou, provoz řeší městské části.',
-    stitky: ['Odpady', 'Energie a voda'],
+      'Odpady, voda, zeleň a energie. Systém nakládání s odpadem stanoví Praha vyhláškou, provoz řeší městské části. U energetiky jde hlavně o střechy a budovy, které město vlastní.',
+    stitky: ['Odpady', 'Energie a voda', 'Energetika'],
   },
   {
     id: 'socialni',
-    nazev: 'Sociální a zdravotní služby',
-    popis: 'Sociální centra, péče o seniory, dostupnost zdravotní péče.',
-    stitky: ['Sociální a zdravotní služby'],
+    nazev: 'Sociální služby, zdraví a bezpečnost',
+    popis:
+      'Sociální centra, péče o seniory, dostupnost zdravotní péče a městská policie, kterou zřizuje magistrát. Státní policii ani prodej alkoholu město neřídí.',
+    stitky: ['Sociální a zdravotní služby', 'Bezpečnost'],
   },
 ]
 
@@ -162,6 +167,7 @@ export type PostojVOkruhu = {
   typZdroje: 'program' | 'vyrok' | 'hlasovani' | 'odvozeni'
   zdroj?: { text: string; url: string; datum: string }
   poznamka?: string
+  proveditelnost?: { agenda?: string; kompetence: Kompetence; rozpocet: Rozpocet; cas: Cas }
 }
 
 /**
@@ -186,6 +192,7 @@ export function postojeOkruhu(okruh: Okruh): PostojVOkruhu[] {
           typZdroje: p.typZdroje,
           zdroj: p.zdroj,
           poznamka: p.poznamka,
+          proveditelnost: p.proveditelnost,
         })),
     )
     .sort((a, b) => a.zkratkaStrany.localeCompare(b.zkratkaStrany, 'cs'))
@@ -199,3 +206,60 @@ export function bezPostoje(okruh: Okruh): { subjekt: string; zkratka: string }[]
     .map((s) => ({ subjekt: s.slug, zkratka: s.zkratka }))
     .sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs'))
 }
+
+export type SubjektSrovnani = { subjekt: string; zkratka: string }
+
+/**
+ * Subjekty, které mají aspoň jeden zapsaný postoj — tedy ty, o kterých ve
+ * srovnání vůbec něco víme. Tvoří sloupce přehledu sporných otázek; kdo
+ * nemá postoj k ničemu, by měl v přehledu jen prázdná pole.
+ */
+export function subjektySrovnani(): SubjektSrovnani[] {
+  const maji = new Set(postoje.filter((z) => z.uroven === 'magistrat').map((z) => z.subjekt))
+  return strany
+    .filter((s) => s.uroven === 'magistrat' && maji.has(s.slug))
+    .map((s) => ({ subjekt: s.slug, zkratka: s.zkratka }))
+    .sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs'))
+}
+
+export type SpornaOtazka = (typeof sporneOtazky.otazky)[number]
+
+export type OdpovedNaOtazku = SpornaOtazka['odpovedi'][number] & { zkratka: string }
+
+/**
+ * Sporná otázka rozložená na škálu: ke každé možnosti subjekty, které do ní
+ * patří, a zvlášť ti, o kterých nic nevíme.
+ *
+ * Nedoložení se počítají proti subjektům srovnání, ne proti všem
+ * kandidujícím — jinak by u každé otázky viselo patnáct jmen stran, o kterých
+ * nemáme zapsané vůbec nic, a skutečné mezery by v nich zanikly.
+ */
+export function skalaOtazky(otazka: SpornaOtazka) {
+  const zkratka = (slug: string) => strany.find((s) => s.slug === slug)?.zkratka ?? slug
+  const odpovedi: OdpovedNaOtazku[] = otazka.odpovedi.map((o) => ({ ...o, zkratka: zkratka(o.subjekt) }))
+  const zarazeni = new Set(odpovedi.map((o) => o.subjekt))
+  return {
+    moznosti: otazka.moznosti.map((m, poradi) => ({
+      ...m,
+      poradi,
+      odpovedi: odpovedi
+        .filter((o) => o.moznost === m.id)
+        .sort((a, b) => a.zkratka.localeCompare(b.zkratka, 'cs')),
+    })),
+    nedolozeno: subjektySrovnani().filter((s) => !zarazeni.has(s.subjekt)),
+  }
+}
+
+export function otazkyOkruhu(okruh: Okruh): SpornaOtazka[] {
+  return sporneOtazky.otazky.filter((o) => o.okruh === okruh.id)
+}
+
+export function vsechnyOtazky(): SpornaOtazka[] {
+  // Pořadí přehledu sleduje pořadí okruhů na stránce, ne pořadí v souboru.
+  const poradi = new Map(OKRUHY.map((o, i) => [o.id, i]))
+  return [...sporneOtazky.otazky].sort(
+    (a, b) => (poradi.get(a.okruh) ?? 0) - (poradi.get(b.okruh) ?? 0),
+  )
+}
+
+export const OVERENO_SPORNE = sporneOtazky.overeno

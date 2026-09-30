@@ -10,10 +10,13 @@
 # obsahuje; u Evropské investiční banky mluví o spolupráci při financování
 # městského bydlení, o úvěrech výslovně ne. Opravený je i výčet lokalit u bytů:
 # stavět se má v pěti, další čtyři se mají teprve připravovat.
+#
+# Doplněno 30. 9. 2026: postoj lídra k cenám MHD a parkování z rozhovoru
+# pro Echo24 (24. 9.) — program ceny neuvádí.
 
 subjekt: starostove-a-nezavisli
 uroven: magistrat
-overeno: 2026-09-14
+overeno: 2026-09-30
 
 postoje:
   - okruh: bydleni
@@ -182,3 +185,25 @@ postoje:
     poznamka: >-
       Slib zní prosazovat, ne postavit, a program neuvádí termín ani odhad
       nákladů.
+
+  - okruh: doprava
+    shrnuti: "Kupon zpět na úroveň roku 2015 plus inflace, parkování zhruba za dvojnásobek dnešních cen"
+    postoj: >-
+      Lídr označil za rozumnou dohodu z končícího období dostat roční kupon na
+      úroveň roku 2015 plus inflaci, ze které nakonec sešlo. U parkování by
+      jako základ debaty držel zhruba dvojnásobek dnešních cen. Městský okruh
+      je podle něj potřeba dostavět, klíčem k dopravě je ale železnice
+      a metro S.
+    typZdroje: vyrok
+    zdroj:
+      text: "Hlaváček: Ceny parkování a MHD se musí upravit, bez metra S se rozvoj Prahy zastaví (Echo24)"
+      url: https://www.echo24.cz/a/HZnD5/zpravy-domaci-rozhovor-petr-hlavacek-kandidat-na-primatora-stan-metro-s-parkovani-mhd-ceny
+      datum: 2026-09-24
+    proveditelnost:
+      agenda: parkovaci-zony
+      kompetence: v-pravomoci
+      rozpocet: pokryto
+      cas: do-4-let
+    poznamka: >-
+      Ceník PID schvaluje rada a ceny parkování magistrát nařízením, obojí je
+      v pravomoci města. Program STAN ceny jízdného ani parkovného neuvádí.
