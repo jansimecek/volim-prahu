@@ -97,6 +97,11 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
 
 ### Průběh voleb
 
+- **Odpočet a volební týden** na [titulní straně](https://www.volimprahu.cz) —
+  kolik zbývá do otevření volebních místností (během voleb do jejich uzavření)
+  a den po dni, co do voleb ještě přijde: debaty, lhůta pro hlasovací lístky,
+  začátek zákazu zveřejňování průzkumů, volební dny a případné druhé kolo
+  senátních voleb. Proběhlé dny z přehledu mizí samy.
 - **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy
   o průběhu voleb, každá se zdrojem. Odebírat je jde přes
   [RSS](https://www.volimprahu.cz/aktualne/feed.xml).

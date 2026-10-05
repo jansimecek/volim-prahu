@@ -11,7 +11,7 @@
 #
 # Debaty, u kterých médium ohlásilo jen období, ale ne den, jsou v `bezTerminu`.
 
-overeno: 2026-09-26
+overeno: 2026-10-05
 
 debaty:
   - id: summit-bydleni
@@ -69,10 +69,13 @@ debaty:
     datum: 2026-10-01
     cas: "20:07"
     kde: "ČT24 a iVysílání"
+    ucastnici: [hlavacek-petr, husbauer-jan, laska-vaclav, nislerova-tereza, portlik-tomas, scheinherr-adam, sovova-klara, urban-milan, vitek-jiri]
+    moderuje: "Martin Řezníček"
     zdroj:
       text: "Předvolební debata – Praha (iVysílání České televize)"
       url: "https://www.ceskatelevize.cz/porady/17649426339-komunalni-a-senatni-volby-2026/226411033291001/"
-    poznamka: "Podle ČT diskuse hlavních kandidátů na primátora; jmenovité složení televize nezveřejnila. Poslední ze čtyř debat ČT o velkých městech."
+    zaznam: "https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/ct-odvysila-debatu-kandidatu-na-primatora-prahy-378155"
+    poznamka: "Debata byla hlavně o bydlení. ČT podle svého článku pozvala zástupce deseti uskupení, protože sedmé až desáté místo ve volebním potenciálu bylo shodné. Uvádíme devět lídrů, které článek ČT24 jmenuje; desátého účastníka jsme neověřili."
 
   - id: novinky-royal
     nazev: "Předvolební debata osmi kandidátů na primátora"
