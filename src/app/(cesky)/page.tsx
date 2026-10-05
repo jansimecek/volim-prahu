@@ -15,6 +15,8 @@ import { MAGISTRAT, MESTSKE_CASTI } from '@/lib/obsah'
 import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
 import { vypisStran } from '@/lib/vypisStran'
 import { nejnovejsi } from '@/lib/aktuality'
+import { Odpocet } from '@/components/Odpocet'
+import { tentoTyden } from '@/lib/tentoTyden'
 
 export const metadata: Metadata = {
   description:
@@ -32,6 +34,7 @@ export default async function Rozcestnik() {
     (s) => s.programStav === 'jen-casti' || s.programStav === 'jen-priority',
   ).length
   const aktuality = await nejnovejsi(4)
+  const tyden = tentoTyden()
 
   return (
     <div className="space-y-12 sm:space-y-16">
@@ -88,6 +91,10 @@ export default async function Rozcestnik() {
             eDokladem. Voličský průkaz u komunálních voleb neexistuje.
           </Fakt>
         </dl>
+
+        <div className="mt-6">
+          <Odpocet />
+        </div>
       </section>
 
       <section aria-labelledby="moje-volby" className="border border-inkoust bg-papir p-5 sm:p-8">
@@ -103,6 +110,58 @@ export default async function Rozcestnik() {
           <MojeVolby />
         </div>
       </section>
+
+      {/* Volební týden den po dni. Proběhlé dny se nevypisují; po druhém
+          kole senátních voleb sekce zmizí sama. */}
+      {tyden.length > 0 && (
+        <section aria-labelledby="tento-tyden">
+          <h2 id="tento-tyden" className="text-2xl">
+            Do voleb: co vás čeká
+          </h2>
+          <p className="mt-2 max-w-prose">
+            Lhůty, debaty a volební dny pohromadě. U termínů je odkaz na zdroj nebo na stránku,
+            kde je to rozepsané.
+          </p>
+          <ol className="mt-5 border-t border-inkoust">
+            {tyden.map((d) => (
+              <li
+                key={d.den}
+                className="grid gap-2 border-b border-linka-silna py-4 sm:grid-cols-[12rem_1fr] sm:gap-6"
+              >
+                <p className="font-display text-lg font-semibold first-letter:uppercase">
+                  {d.popisek}
+                  {d.dnes && <span className="popisek-uredni ml-2 align-middle">dnes</span>}
+                </p>
+                <ul className="space-y-3">
+                  {d.udalosti.map((u) => (
+                    <li key={u.nadpis}>
+                      <p className="font-semibold">
+                        {u.cas && <span className="tabular-nums">{u.cas} · </span>}
+                        {u.nadpis}
+                      </p>
+                      <p className="mt-1 max-w-prose text-sm">{u.popis}</p>
+                      {(u.odkaz || u.zdroj) && (
+                        <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                          {u.odkaz && (
+                            <Link href={u.odkaz.href} className="odkaz-akcent inline-block py-1">
+                              {u.odkaz.text}
+                            </Link>
+                          )}
+                          {u.zdroj && (
+                            <a href={u.zdroj.url} className="odkaz-navigace inline-block py-1" rel="noopener">
+                              Zdroj: {u.zdroj.text}
+                            </a>
+                          )}
+                        </p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       {/* Lídři patří na titulní stranu — je to první věc, kterou volič hledá. */}
       {polozky.length > 0 && (
