@@ -2,6 +2,7 @@ import type { Metadata, Route } from 'next'
 import { Bricolage_Grotesque, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import Link from 'next/link'
 import { HlavniNavigace } from '@/components/HlavniNavigace'
+import { HledaniVHlavicce } from '@/components/HledaniVHlavicce'
 import { PrepinacJazyka } from '@/components/PrepinacJazyka'
 import { Mereni } from '@/components/Mereni'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
@@ -112,7 +113,19 @@ const NAVIGACE: readonly { href: Route; popisek: string }[] = [
   { href: '/kde-volim', popisek: 'Kde volím' },
   { href: '/hlasovani', popisek: 'Anketa' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
-  { href: '/hledani', popisek: 'Hledat' },
+]
+
+/**
+ * Do rozbaleného menu na telefonu navíc to, co je na desktopu jen
+ * v patičce. Na telefonu je patička čtyři obrazovky pod koncem obsahu.
+ */
+const NAVIGACE_DALSI: readonly { href: Route; popisek: string }[] = [
+  { href: '/koalice', popisek: 'Kdo s kým' },
+  { href: '/debaty', popisek: 'Debaty' },
+  { href: '/rozhovory', popisek: 'Rozhovory' },
+  { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo rozhoduje' },
+  { href: '/rozpoctovy-ramec', popisek: 'Rozpočet' },
+  { href: '/o-projektu', popisek: 'O projektu' },
 ]
 
 /**
@@ -134,20 +147,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
 
-        <header className="border-b border-inkoust">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-baseline gap-x-6 gap-y-2 px-4 py-3">
-            <Link href="/" className="font-display text-lg font-semibold no-underline">
+        {/* Na telefonu je přilepená jen horní lišta s logem, hledáním a menu —
+            tedy to, co je potřeba i z půlky dlouhé stránky. Přepínač jazyků je
+            pod ní a odjede s obsahem. Od `sm` výš je hlavička zase obyčejná. */}
+        <header className="sticky top-0 z-40 border-b border-inkoust bg-papir sm:static">
+          <div className="mx-auto flex max-w-5xl items-center gap-x-4 px-4 py-1 sm:flex-wrap sm:items-baseline sm:gap-x-6 sm:gap-y-2 sm:py-3">
+            <Link href="/" className="me-auto font-display text-lg font-semibold no-underline sm:me-0">
               Volím&nbsp;Prahu
             </Link>
-            <HlavniNavigace polozky={NAVIGACE} />
+            <HledaniVHlavicce />
+            <HlavniNavigace polozky={NAVIGACE} dalsi={NAVIGACE_DALSI} />
             {/* Přepínač jazyků je v hlavičce, ne v patičce: cizinec, který
                 česky nečte, se na konec stránky neproscrolluje — vzdá to
                 dřív. Názvy jazyků jsou v nich samých, ne přeložené. */}
-            <div className="ms-auto">
+            <div className="hidden sm:ms-auto sm:block">
               <PrepinacJazyka />
             </div>
           </div>
         </header>
+        <div className="border-b border-linka sm:hidden">
+          <div className="px-4">
+            <PrepinacJazyka skrytAktualni />
+          </div>
+        </div>
 
         <PruhRezimu />
 
@@ -219,6 +241,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Volím Prahu',
               url: ZAKLAD_WEBU,
               email: KONTAKT_EMAIL,
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${ZAKLAD_WEBU}/hledani?q={search_term_string}`,
+              },
+              'query-input': 'required name=search_term_string',
             },
           }}
         />

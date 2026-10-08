@@ -47,6 +47,11 @@ jobs:
         continue-on-error: true
         run: pnpm nacvik
 
+      - name: Vyhledávací rejstřík
+        # Na Vercelu ho staví `pnpm build`; tady se next build volá napřímo,
+        # a bez public/hledani.json by e2e testy hledání nic nenašly.
+        run: pnpm build:search
+
       - name: Build
         run: pnpm exec next build
 

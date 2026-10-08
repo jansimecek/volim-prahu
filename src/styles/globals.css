@@ -79,6 +79,16 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  /*
+   * Na telefonu je hlavička přilepená nahoře. Bez odsazení by skok na kotvu
+   * (z obsahu stránky, z vyhledávání) schoval nadpis cíle právě pod ni.
+   */
+  @media (width < 40rem) {
+    html {
+      scroll-padding-top: 3.5rem;
+    }
+  }
+
   body {
     background-color: var(--color-papir);
     color: var(--color-inkoust);
@@ -176,6 +186,67 @@
 
   .odkaz-navigace[aria-current='page'] {
     border-bottom-color: var(--color-praha);
+  }
+
+  /*
+   * Položka v rozbaleném menu na telefonu: celý řádek je dotykový cíl
+   * o výšce 44 px (doporučení Apple i Androidu, WCAG 2.5.5) a od sousedů
+   * ho dělí vlas. Stav „jsem tady" nese červená svislá linka — podtržení
+   * by se v mřížce ztratilo mezi vlasy. Od `sm` výš platí obyčejná
+   * vodorovná navigace výše.
+   */
+  @media (width < 40rem) {
+    .odkaz-navigace-panel {
+      display: flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding-inline-start: 0.625rem;
+      border-bottom: 1px solid var(--color-linka);
+      border-inline-start: 2px solid transparent;
+    }
+
+    .odkaz-navigace-panel:hover {
+      border-bottom-color: var(--color-linka);
+      background: var(--color-papir-tmavsi);
+    }
+
+    .odkaz-navigace-panel[aria-current='page'] {
+      border-bottom-color: var(--color-linka);
+      border-inline-start-color: var(--color-praha);
+      font-weight: 500;
+    }
+  }
+
+  /*
+   * Okno hledání. Na telefonu přes celou obrazovku — klávesnice zabere
+   * polovinu výšky a plovoucí okno by na výsledky nechalo pár řádků.
+   * Na širším okně je to karta u horního okraje, aby výsledky měly
+   * kam růst dolů.
+   */
+  .okno-hledani {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    background: var(--color-papir);
+    color: var(--color-inkoust);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .okno-hledani::backdrop {
+    background: rgb(22 28 36 / 0.45);
+  }
+
+  @media (width >= 40rem) {
+    .okno-hledani {
+      margin: 8vh auto auto;
+      width: min(40rem, calc(100% - 2rem));
+      height: auto;
+      max-height: 84vh;
+      border: 1px solid var(--color-inkoust);
+    }
   }
 
   /*

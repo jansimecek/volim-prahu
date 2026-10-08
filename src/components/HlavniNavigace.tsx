@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { Route } from 'next'
 import { odstranJazyk } from '@/lib/jazyky'
+
+type Polozka = { href: Route; popisek: string }
 
 /**
  * Hlavní navigace se stavem „jsem tady".
@@ -18,89 +20,114 @@ import { odstranJazyk } from '@/lib/jazyky'
  * čtyři — tedy zhruba 40 % první obrazovky dřív, než začal obsah. Většina
  * návštěv přitom přijde z telefonu. Od `sm` výš je seznam vidět pořád
  * a tlačítko zmizí z DOMu i z přístupnostního stromu.
+ *
+ * Rozbalené menu na telefonu je panel přes obsah, ne pruh, který obsah
+ * odsune: hlavička je přilepená k hornímu okraji, takže se menu otevírá
+ * i z půlky dlouhé kandidátky a čtenář po zavření zůstane, kde byl.
+ * Položky jsou ve dvou sloupcích s dotykovým cílem 44 px a pod nimi
+ * `dalsi` — odkazy, které jinak žijí jen v patičce.
  */
 export function HlavniNavigace({
   polozky,
+  dalsi = [],
   trida,
   popisek = 'Hlavní navigace',
   popisekTlacitka = 'Menu',
+  popisekDalsi = 'Další',
 }: {
-  polozky: readonly { href: Route; popisek: string }[]
+  polozky: readonly Polozka[]
+  /** Doplňkové odkazy jen do rozbaleného menu na telefonu. */
+  dalsi?: readonly Polozka[]
   trida?: string
   /** Popisek navigace pro odečítač. V cizojazyčné verzi musí být v jejím jazyce. */
   popisek?: string
   /** Popisek rozbalovacího tlačítka na úzké obrazovce. */
   popisekTlacitka?: string
+  popisekDalsi?: string
 }) {
   const cesta = usePathname()
   const [otevreno, setOtevreno] = useState(false)
   const id = useId()
+  const obal = useRef<HTMLElement>(null)
 
   // Escape zavírá stejně jako jinde v prohlížeči; bez toho je jediná cesta
-  // ven trefit se zpátky na tlačítko.
+  // ven trefit se zpátky na tlačítko. Klepnutí mimo panel taky — panel
+  // zakrývá obsah a čtenář čeká, že ho klepnutím vedle schová.
   useEffect(() => {
     if (!otevreno) return
     const naKlavesu = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOtevreno(false)
     }
+    const naKlepnuti = (e: PointerEvent) => {
+      if (!obal.current?.contains(e.target as Node)) setOtevreno(false)
+    }
     document.addEventListener('keydown', naKlavesu)
-    return () => document.removeEventListener('keydown', naKlavesu)
+    document.addEventListener('pointerdown', naKlepnuti)
+    return () => {
+      document.removeEventListener('keydown', naKlavesu)
+      document.removeEventListener('pointerdown', naKlepnuti)
+    }
   }, [otevreno])
 
+  function jeAktivni(href: Route) {
+    // Rozcestník sekce se shoduje jen přesně, ostatní i na podstránkách:
+    // z profilu strany má čtenář vidět, že je pořád v sekci Magistrát.
+    // `/en`, `/uk` a `/sk` jsou rozcestníky svých sekcí stejně jako `/`.
+    const jeRozcestnik = href === '/' || odstranJazyk(href) === ''
+    return jeRozcestnik ? cesta === href : cesta === href || cesta.startsWith(`${href}/`)
+  }
+
+  function odkaz(polozka: Polozka) {
+    const aktivni = jeAktivni(polozka.href)
+    return (
+      <li key={polozka.href}>
+        <Link
+          href={polozka.href}
+          aria-current={aktivni ? 'page' : undefined}
+          // Zavřít při kliknutí, ne až po změně cesty: čtenář by se
+          // jinak dostal na stránku zakrytou seznamem, kterým si ji
+          // právě otevřel. A funguje to i u odkazu na tutéž stránku,
+          // kde se cesta nezmění.
+          onClick={() => setOtevreno(false)}
+          className="odkaz-navigace odkaz-navigace-panel"
+        >
+          {polozka.popisek}
+        </Link>
+      </li>
+    )
+  }
+
   return (
-    <nav aria-label={popisek} className={trida}>
+    <nav ref={obal} aria-label={popisek} className={trida}>
       <button
         type="button"
         onClick={() => setOtevreno((o) => !o)}
         aria-expanded={otevreno}
         aria-controls={id}
-        className="odkaz-navigace flex items-center gap-2 sm:hidden"
+        className="odkaz-navigace flex min-h-11 items-center gap-2 sm:hidden"
       >
-        <span aria-hidden="true" className="font-mono text-base leading-none">
+        <span aria-hidden="true" className="w-4 text-center font-mono text-base leading-none">
           {otevreno ? '✕' : '☰'}
         </span>
         {popisekTlacitka}
       </button>
 
-      <ul
+      <div
         id={id}
-        /*
-         * Rozbalený seznam visí pod tlačítkem a drží se jeho levého okraje —
-         * čte se to jako panel patřící k tlačítku, ne jako část hlavičky,
-         * která se náhodou objevila. Svislá linka to říká i beze slov.
-         * Od `sm` výš je z toho zase obyčejná vodorovná navigace.
-         */
         className={`${
-          otevreno ? 'flex' : 'hidden'
-        } w-full flex-col border-s-2 border-linka-silna ps-4 sm:flex sm:w-auto sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-5 sm:border-s-0 sm:ps-0`}
+          otevreno ? 'block' : 'hidden'
+        } absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b border-inkoust bg-papir px-4 pt-2 pb-5 shadow-[0_12px_24px_-12px_rgb(22_28_36/0.35)] sm:static sm:block sm:max-h-none sm:overflow-visible sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
       >
-        {polozky.map((polozka) => {
-          // Rozcestník sekce se shoduje jen přesně, ostatní i na podstránkách:
-          // z profilu strany má čtenář vidět, že je pořád v sekci Magistrát.
-          // `/en`, `/uk` a `/sk` jsou rozcestníky svých sekcí stejně jako `/`.
-          const jeRozcestnik = polozka.href === '/' || odstranJazyk(polozka.href) === ''
-          const aktivni = jeRozcestnik
-            ? cesta === polozka.href
-            : cesta === polozka.href || cesta.startsWith(`${polozka.href}/`)
-
-          return (
-            <li key={polozka.href}>
-              <Link
-                href={polozka.href}
-                aria-current={aktivni ? 'page' : undefined}
-                // Zavřít při kliknutí, ne až po změně cesty: čtenář by se
-                // jinak dostal na stránku zakrytou seznamem, kterým si ji
-                // právě otevřel. A funguje to i u odkazu na tutéž stránku,
-                // kde se cesta nezmění.
-                onClick={() => setOtevreno(false)}
-                className="odkaz-navigace"
-              >
-                {polozka.popisek}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
+        <ul className="grid grid-cols-2 gap-x-4 sm:flex sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-5">
+          {polozky.map(odkaz)}
+        </ul>
+        {dalsi.length > 0 && (
+          <div className="mt-4 border-t border-linka pt-3 sm:hidden">
+            <p className="popisek-uredni">{popisekDalsi}</p>
+            <ul className="mt-1 grid grid-cols-2 gap-x-4">{dalsi.map(odkaz)}</ul>
+          </div>
+        )}
+      </div>
     </nav>
   )
 }

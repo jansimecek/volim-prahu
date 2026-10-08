@@ -91,8 +91,10 @@ export function KandidatiSenatu({ kandidati }: { kandidati: RadekKandidata[] }) 
               {serazeni.map((k) => (
                 <tr
                   key={k.slug}
+                  // Cíl odkazu z vyhledávání — kandidát do Senátu vlastní profil nemá.
+                  id={`kandidat-${k.slug}`}
                   data-mlady={jeMladyKandidat(k.vek) ? 'ano' : 'ne'}
-                  className="border-b border-linka-silna align-top"
+                  className="scroll-mt-20 border-b border-linka-silna align-top target:bg-papir-tmavsi"
                 >
                   <td className="py-2 pr-3 text-right font-mono">{k.cislo ?? '—'}</td>
                   <td className="py-2 pr-3">{k.celeJmeno}</td>

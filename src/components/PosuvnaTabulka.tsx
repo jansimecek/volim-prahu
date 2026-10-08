@@ -5,6 +5,11 @@
  * ne — do neinteraktivního divu se nedostane focus, takže část tabulky je
  * pro čtenáře na klávesnici nedosažitelná (WCAG 2.1.1, axe
  * `scrollable-region-focusable`). Proto tabindex a pojmenovaná oblast.
+ *
+ * `relative` není kosmetika: skryté popisky pro odečítač (`sr-only`) jsou
+ * absolutně pozicované, a bez pozicovaného předka se počítají vůči celé
+ * stránce, ne vůči posuvné oblasti. Široká tabulka pak roztáhla do stran
+ * celý dokument — na telefonu se dala posouvat vodorovně celá stránka.
  */
 export function PosuvnaTabulka({
   popisek,
@@ -20,7 +25,7 @@ export function PosuvnaTabulka({
       role="region"
       aria-label={popisek}
       tabIndex={0}
-      className={`overflow-x-auto${trida ? ` ${trida}` : ''}`}
+      className={`relative overflow-x-auto${trida ? ` ${trida}` : ''}`}
     >
       {children}
     </div>

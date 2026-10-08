@@ -290,10 +290,20 @@ test('rozhovory se objeví i na profilu kandidáta', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Rozhovory v médiích' })).toBeVisible()
 })
 
+/** Konec moratoria — uzavření volebních místností, viz src/lib/moratorium.ts. */
+const MORATORIUM_DO = new Date('2026-10-10T14:00:00+02:00')
+
 test('celostátní model se ukáže s výhradou a neřadí pražské kandidátky', async ({ page }) => {
-  await page.goto('/aktualne/kantar-snemovni-model-srpen-2026')
-  await expect(page.getByText('ANO')).not.toHaveCount(0)
-  await expect(page.getByText('Je to model voleb do Poslanecké sněmovny')).not.toHaveCount(0)
+  const odpoved = await page.goto('/aktualne/kantar-snemovni-model-srpen-2026')
+  const ted = new Date()
+  if (ted >= MORATORIUM_OD && ted < MORATORIUM_DO) {
+    // Během moratoria se čísla průzkumu nesmí zveřejnit vůbec, ani s výhradou —
+    // aktualita s průzkumem z webu zmizí celá (src/lib/aktuality.ts).
+    expect(odpoved?.status()).toBe(404)
+  } else {
+    await expect(page.getByText('ANO')).not.toHaveCount(0)
+    await expect(page.getByText('Je to model voleb do Poslanecké sněmovny')).not.toHaveCount(0)
+  }
 
   // Na stránce magistrátu se podle něj nesmí dát řadit — měří jiné strany.
   // Řazení, pokud se nabízí, musí vycházet z pražského průzkumu, ne z Kantaru.
