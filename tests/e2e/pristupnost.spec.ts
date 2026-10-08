@@ -397,6 +397,61 @@ test.describe('mobilní menu', () => {
   })
 })
 
+/**
+ * Hledání z hlavičky. Dřív bylo desátou položkou menu, tedy na telefonu
+ * dvě klepnutí a přechod na jinou stránku, než šlo začít psát.
+ */
+test.describe('hledání z hlavičky', () => {
+  test.use({ viewport: { width: 375, height: 812 } })
+
+  test('najde městskou část a po výběru okno zavře', async ({ page }) => {
+    await page.goto('/senat')
+    await page.getByRole('link', { name: 'Hledat' }).click()
+    const okno = page.getByRole('dialog', { name: 'Hledat na webu' })
+    await expect(okno).toBeVisible()
+
+    const pole = okno.getByRole('searchbox')
+    await expect(pole).toBeFocused()
+    await pole.fill('reporyje')
+    await okno.getByRole('link', { name: /Praha-Řeporyje/ }).first().click()
+
+    await expect(page).toHaveURL(/\/mestska-cast\/praha-reporyje$/)
+    await expect(okno).toBeHidden()
+  })
+
+  test('víceslovný dotaz hledá všechna slova a filtr zúží typ', async ({ page }) => {
+    await page.goto('/hledani?q=praha%205')
+    const vysledky = page.getByRole('main')
+    await expect(vysledky.getByRole('link', { name: /^Praha 5 městská část/ })).toBeVisible()
+
+    await vysledky.getByRole('button', { name: /^Senát/ }).click()
+    await expect(vysledky.getByRole('link', { name: /Senátní obvod 21/ })).toBeVisible()
+    await expect(vysledky.getByRole('link', { name: /^Praha 5 městská část/ })).toHaveCount(0)
+  })
+})
+
+test.describe('telefon bez vodorovného posouvání', () => {
+  test.use({ viewport: { width: 375, height: 812 } })
+
+  // Skryté popisky v široké tabulce dřív roztáhly celou stránku do strany.
+  for (const cesta of ['/', '/temata', '/senat/21-praha-5', '/hledani']) {
+    test(cesta, async ({ page }) => {
+      await page.goto(cesta)
+      const sirka = await page.evaluate(() => document.documentElement.scrollWidth)
+      expect(sirka).toBeLessThanOrEqual(375)
+    })
+  }
+})
+
+test('menu na telefonu nabízí i odkazy, které jinak žijí v patičce', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 })
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Menu' }).click()
+  const navigace = page.getByRole('navigation', { name: 'Hlavní navigace' })
+  await navigace.getByRole('link', { name: 'Kdo s kým' }).click()
+  await expect(page).toHaveURL(/\/koalice$/)
+})
+
 test('na širokém okně je navigace vidět a tlačítko menu nikde', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 })
   await page.goto('/')
@@ -404,6 +459,10 @@ test('na širokém okně je navigace vidět a tlačítko menu nikde', async ({ p
     page.getByRole('navigation', { name: 'Hlavní navigace' }).getByRole('link', { name: 'Magistrát' }),
   ).toBeVisible()
   await expect(page.getByRole('button', { name: 'Menu' })).toBeHidden()
+  // Doplňkové odkazy z mobilního menu jsou na desktopu v patičce, ne v hlavičce.
+  await expect(
+    page.getByRole('navigation', { name: 'Hlavní navigace' }).getByRole('link', { name: 'Kdo s kým' }),
+  ).toBeHidden()
 })
 
 test('slovenský vyhledávač najde okrsek a hlásí se slovensky', async ({ page }) => {

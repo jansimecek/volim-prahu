@@ -8,6 +8,7 @@
  */
 import { mkdirSync, readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
+import { ID_OKRUHU, type IdOkruhu } from '../src/lib/okruhy'
 
 const KOREN = join(__dirname, '..')
 
@@ -15,7 +16,12 @@ const KOREN = join(__dirname, '..')
  * Poziční pole místo objektů — u osmi tisíc položek ušetří názvy klíčů
  * zhruba polovinu velikosti souboru: [nazev, popis, url, typ].
  */
-type Zaznam = [nazev: string, popis: string, url: string, typ: 'k' | 's' | 'm' | 'p' | 'z' | 'r']
+type Zaznam = [
+  nazev: string,
+  popis: string,
+  url: string,
+  typ: 'k' | 's' | 'm' | 'o' | 'p' | 'z' | 'r',
+]
 
 const zaznamy: Zaznam[] = []
 
@@ -97,6 +103,75 @@ const ciselnik = JSON.parse(
 
 for (const z of ciselnik.zastupitelstva.filter((x) => !x.jeMagistrat)) {
   zaznamy.push([z.nazev, `Městská část · ${z.mandaty} mandátů`, `/mestska-cast/${z.slug}`, 'm'])
+}
+
+// Senátní obvody a jejich kandidáti. Kandidát do Senátu nemá vlastní profil,
+// odkaz vede na jeho řádek v tabulce obvodu.
+const obvody = JSON.parse(readFileSync(join(KOREN, '.velite/senat.json'), 'utf8')) as {
+  slug: string
+  cislo: number
+  nazev: string
+}[]
+for (const o of obvody) {
+  zaznamy.push([
+    `Senátní obvod ${o.cislo} – ${o.nazev}`,
+    'Senát · kdo kandiduje a které městské části v obvodu volí',
+    `/senat/${o.slug}`,
+    'o',
+  ])
+}
+const cestaSenat = join(KOREN, 'data/senat/kandidati.json')
+if (existsSync(cestaSenat)) {
+  const { kandidati } = JSON.parse(readFileSync(cestaSenat, 'utf8')) as {
+    kandidati: { obvod: number; cislo: number; slug: string; jmeno: string; prijmeni: string; volebniStrana: string }[]
+  }
+  for (const k of kandidati) {
+    const obvod = obvody.find((o) => o.cislo === k.obvod)
+    if (!obvod) continue
+    zaznamy.push([
+      `${k.jmeno} ${k.prijmeni}`,
+      [`Kandidát do Senátu · obvod ${obvod.cislo} ${obvod.nazev}`, k.volebniStrana]
+        .filter(Boolean)
+        .join(' · '),
+      // Stejný tvar kotvy jako v KandidatiSenatu, viz senat/[obvod]/page.tsx.
+      `/senat/${obvod.slug}#kandidat-${k.slug}-${k.cislo}`,
+      'k',
+    ])
+  }
+}
+
+// Rozcestníky sekcí — bez nich hledání „senát" nebo „anketa" nenašlo nic,
+// i když stránka existuje.
+const ROZCESTNIKY: [nazev: string, popis: string, url: string][] = [
+  ['Magistrát a kandidátky', 'Volební strany do Zastupitelstva hlavního města Prahy', '/praha'],
+  ['Městské části', 'Všech 57 městských částí, jejich kandidátky a volební místnosti', '/mestska-cast'],
+  ['Senát', 'Ve kterých obvodech se letos volí senátor a kdo kandiduje', '/senat'],
+  ['Témata', 'Postoje stran k bydlení, dopravě, rozpočtu a dalším sporným otázkám', '/temata'],
+  ['Aktuálně', 'Novinky z kampaně a z přípravy voleb', '/aktualne'],
+  ['Anketa čtenářů', 'Hlasování čtenářů o tom, co by měla příští rada řešit', '/hlasovani'],
+  ['Rozhovory s kandidáty', 'Rozhovory s lídry kandidátek v médiích', '/rozhovory'],
+]
+for (const [nazev, popis, url] of ROZCESTNIKY) zaznamy.push([nazev, popis, url, 'p'])
+
+// Okruhy srovnání témat. Názvy žijí v src/lib/temata.ts, který importuje
+// zkompilovaný obsah, takže se sem nedá natáhnout — opakují se tu ručně.
+// Typ Record<IdOkruhu, …> aspoň pohlídá, že žádný okruh nechybí.
+const OKRUHY_HLEDANI: Record<IdOkruhu, string> = {
+  bydleni: 'Bydlení',
+  doprava: 'Doprava a MHD',
+  'uzemni-plan': 'Územní plán a rozvoj',
+  rozpocet: 'Rozpočet a městské firmy',
+  skolstvi: 'Školství',
+  prostredi: 'Životní prostředí a energetika',
+  socialni: 'Sociální služby, zdraví a bezpečnost',
+}
+for (const id of ID_OKRUHU) {
+  zaznamy.push([
+    `Téma: ${OKRUHY_HLEDANI[id]}`,
+    'Co k tématu říkají kandidující strany a co z toho může město splnit',
+    `/temata#${id}`,
+    'p',
+  ])
 }
 
 // Redakční stránky

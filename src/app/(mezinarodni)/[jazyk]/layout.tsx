@@ -117,9 +117,14 @@ export default async function MezinarodniLayout({
           {t.chrome.preskocit}
         </a>
 
-        <header className="border-b border-inkoust">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-baseline gap-x-6 gap-y-2 px-4 py-3">
-            <Link href={`/${jazyk}`} className="font-display text-lg font-semibold no-underline">
+        {/* Stejně jako v české části: na telefonu přilepená jen lišta s menu,
+            přepínač jazyků odjede s obsahem. */}
+        <header className="sticky top-0 z-40 border-b border-inkoust bg-papir sm:static">
+          <div className="mx-auto flex max-w-5xl items-center gap-x-4 px-4 py-1 sm:flex-wrap sm:items-baseline sm:gap-x-6 sm:gap-y-2 sm:py-3">
+            <Link
+              href={`/${jazyk}`}
+              className="me-auto font-display text-lg font-semibold no-underline sm:me-0"
+            >
               Volím&nbsp;Prahu
             </Link>
             <HlavniNavigace
@@ -127,11 +132,16 @@ export default async function MezinarodniLayout({
               popisek={t.chrome.hlavniNavigace}
               popisekTlacitka={t.chrome.menuTlacitko}
             />
-            <div className="ms-auto">
+            <div className="hidden sm:ms-auto sm:block">
               <PrepinacJazyka aktualni={jazyk} />
             </div>
           </div>
         </header>
+        <div className="border-b border-linka sm:hidden">
+          <div className="px-4">
+            <PrepinacJazyka aktualni={jazyk} skrytAktualni />
+          </div>
+        </div>
 
         {/* Rozsah překladu patří nad obsah, ne do patičky: čtenář musí vědět,
             že za odkazem do zbytku webu bude čeština, dřív než tam klikne. */}

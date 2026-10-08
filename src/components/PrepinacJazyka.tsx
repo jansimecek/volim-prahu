@@ -39,7 +39,17 @@ import {
  * `hrefLang` na odkazu říká prohlížeči i vyhledávači, v jakém jazyce je
  * cíl; `lang` na textu říká odečítači, jak ho má vyslovit.
  */
-export function PrepinacJazyka({ aktualni }: { aktualni?: Jazyk }) {
+export function PrepinacJazyka({
+  aktualni,
+  skrytAktualni = false,
+}: {
+  aktualni?: Jazyk
+  /**
+   * Vynechat jazyk, ve kterém stránka je. Na telefonu se tak zbylé tři
+   * vejdou na jeden řádek — ten, kdo stránku čte, svůj jazyk nehledá.
+   */
+  skrytAktualni?: boolean
+}) {
   const cesta = usePathname()
   const zbytek = odstranJazyk(cesta)
   // Z české stránky, která má doslovný protějšek, vede přepínač rovnou na
@@ -74,6 +84,7 @@ export function PrepinacJazyka({ aktualni }: { aktualni?: Jazyk }) {
       <ul className="flex flex-wrap items-baseline gap-x-4 gap-y-0">
         {polozky.map((p) => {
           const zde = p.klic === (aktualni ?? 'cs')
+          if (zde && skrytAktualni) return null
           return (
             <li key={p.klic}>
               {zde ? (
