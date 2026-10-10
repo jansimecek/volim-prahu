@@ -37,8 +37,9 @@ export function VysledkyPrehled({ snapshot }: { snapshot: Snapshot }) {
         <p className="popisek-uredni">Stav dat</p>
         <p className="mt-1">
           Naposledy staženo{' '}
-          <time dateTime={snapshot.stazeno}>{bezpecnyCas(snapshot.stazeno)}</time>. Zdroj
-          vygeneroval data {formatujCasCSU(snapshot.generovano)}.
+          <time dateTime={snapshot.stazeno}>{bezpecnyCas(snapshot.stazeno)}</time>.{' '}
+          {snapshot.zdroj === 'volbyhned' ? 'ČSÚ (záložní web volbyhned.cz)' : 'ČSÚ'} vygeneroval
+          data {formatujCasCSU(snapshot.generovano)}.
           <StariSnapshotu stazeno={snapshot.stazeno} />
         </p>
         <p className="popisek-uredni mt-3">

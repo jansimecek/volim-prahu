@@ -457,6 +457,11 @@ Jak to funguje:
 - Když stahování selže, poslední dobrý snapshot se **nepřepisuje** a stránka
   ukáže starší data s viditelným časem. Nad 10 minut na to upozorní červeně.
 - `/vysledky` čte jen snapshot, s `revalidate = 30`.
+- Když volby.gov.cz místo XML vrací stránku o nedostupnosti (stalo se ve
+  volební noc 2026), endpoint sáhne po záložním JSONu z volbyhned.cz
+  (`src/lib/vysledkyVolbyhned.ts`) — 58 souborů, jeden na zastupitelstvo.
+  Formát není dokumentovaný, pole jsou poziční; nácvik ho měří proti stejným
+  výsledkům 2022 jako XML. Stránka u dat uvádí, ze kterého zdroje pocházejí.
 
 Sčítání spouští **GitHub Actions** (`.github/workflows/volebni-noc.yml`),
 ne Vercel Cron — Hobby umožňuje cron jen jednou denně, což ve volební noci

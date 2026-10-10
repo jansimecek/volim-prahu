@@ -1,0 +1,387 @@
+{
+ "id": "20220923/vysled/1100/554782.json",
+ "param": {
+  "typ": "VYSL_ZASTUP",
+  "datumvoleb": 20220923,
+  "kodzastup": 554782,
+  "cobvodu": 1,
+  "okres": 1100,
+  "okres_nuts": 1100
+ },
+ "generovano": "2026-10-07T10:02:08",
+ "popis": "Výsledek za zastupitelstvo obce",
+ "obecNazev": "Praha hl.m.",
+ "dz": 4,
+ "prehled": [
+  65,
+  1,
+  1123,
+  1123,
+  100,
+  911788,
+  400391,
+  43.91,
+  0,
+  399905,
+  0,
+  0,
+  23577957
+ ],
+ "zvoleno": true,
+ "vysledky": [
+  [
+   1,
+   "Svobodní",
+   281478,
+   1.19,
+   65,
+   23577957,
+   1.19,
+   0,
+   0,
+   false
+  ],
+  [
+   2,
+   "PRAHA NÁŠ DOMOV",
+   100579,
+   0.43,
+   65,
+   23577957,
+   0.42,
+   0,
+   0,
+   false
+  ],
+  [
+   3,
+   "Praha bez chaosu",
+   157626,
+   0.67,
+   64,
+   23215219.2,
+   0.67,
+   0,
+   0,
+   false
+  ],
+  [
+   4,
+   "PRAHA SOBĚ",
+   3472648,
+   14.73,
+   65,
+   23577957,
+   14.72,
+   11,
+   16.92,
+   true
+  ],
+  [
+   5,
+   "LEPŠÍ PRAHA PRO PRAŽANY",
+   207719,
+   0.88,
+   65,
+   23577957,
+   0.88,
+   0,
+   0,
+   false
+  ],
+  [
+   6,
+   "STAROSTOVÉ A NEZÁVISLÍ",
+   1831696,
+   7.77,
+   65,
+   23577957,
+   7.76,
+   5,
+   7.69,
+   true
+  ],
+  [
+   7,
+   "Volte Pr.Blok www.cibulka.net",
+   2071,
+   0.01,
+   1,
+   362737.8,
+   0.57,
+   0,
+   0,
+   false
+  ],
+  [
+   8,
+   "Česká pirátská strana",
+   4180324,
+   17.73,
+   65,
+   23577957,
+   17.72,
+   13,
+   20,
+   true
+  ],
+  [
+   9,
+   "Motoristé sobě",
+   540209,
+   2.29,
+   65,
+   23577957,
+   2.29,
+   0,
+   0,
+   false
+  ],
+  [
+   10,
+   "Přísaha s Patrioty",
+   195426,
+   0.83,
+   65,
+   23577957,
+   0.82,
+   0,
+   0,
+   false
+  ],
+  [
+   11,
+   "Za bezpečné ulice v Praze",
+   4709,
+   0.02,
+   13,
+   4715591.4,
+   0.09,
+   0,
+   0,
+   false
+  ],
+  [
+   12,
+   "Urza.cz: Nechceme vaše hlasy",
+   1002,
+   0,
+   1,
+   362737.8,
+   0.27,
+   0,
+   0,
+   false
+  ],
+  [
+   13,
+   "Komunistická str.Čech a Moravy",
+   347643,
+   1.47,
+   65,
+   23577957,
+   1.47,
+   0,
+   0,
+   false
+  ],
+  [
+   14,
+   "SPOLU pro Prahu",
+   5828523,
+   24.72,
+   65,
+   23577957,
+   24.72,
+   19,
+   29.23,
+   true
+  ],
+  [
+   15,
+   "Solidarita - ČSSD,Zel,Bud,Ide",
+   475968,
+   2.02,
+   65,
+   23577957,
+   2.01,
+   0,
+   0,
+   false
+  ],
+  [
+   16,
+   "SPD,Trik.,PES a nez. pro Prahu",
+   1218622,
+   5.17,
+   65,
+   23577957,
+   5.16,
+   3,
+   4.62,
+   true
+  ],
+  [
+   17,
+   "Společ.proti výst.v Prok.údolí",
+   71216,
+   0.3,
+   39,
+   14146774.2,
+   0.5,
+   0,
+   0,
+   false
+  ],
+  [
+   18,
+   "Volt",
+   4816,
+   0.02,
+   9,
+   3264640.2,
+   0.14,
+   0,
+   0,
+   false
+  ],
+  [
+   19,
+   "DOST",
+   1187,
+   0.01,
+   6,
+   2176426.8,
+   0.05,
+   0,
+   0,
+   false
+  ],
+  [
+   20,
+   "S.O.S. ZA PRÁVA ZVÍŘAT",
+   42216,
+   0.18,
+   21,
+   7617493.8,
+   0.55,
+   0,
+   0,
+   false
+  ],
+  [
+   21,
+   "ANO 2011",
+   4559782,
+   19.34,
+   65,
+   23577957,
+   19.33,
+   14,
+   21.54,
+   true
+  ],
+  [
+   22,
+   "Str.soukr. ČR, KČ, KS, KAN",
+   52497,
+   0.22,
+   65,
+   23577957,
+   0.22,
+   0,
+   0,
+   false
+  ]
+ ],
+ "plne_nazvy_stran": [
+  [
+   1,
+   "Svobodní"
+  ],
+  [
+   2,
+   "PRAHA NÁŠ DOMOV"
+  ],
+  [
+   3,
+   "Praha bez chaosu"
+  ],
+  [
+   4,
+   "PRAHA SOBĚ"
+  ],
+  [
+   5,
+   "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…"
+  ],
+  [
+   6,
+   "STAROSTOVÉ A NEZÁVISLÍ"
+  ],
+  [
+   7,
+   "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY"
+  ],
+  [
+   8,
+   "Česká pirátská strana"
+  ],
+  [
+   9,
+   "Motoristé sobě"
+  ],
+  [
+   10,
+   "Přísaha s Patrioty"
+  ],
+  [
+   11,
+   "Za bezpečné ulice v Praze"
+  ],
+  [
+   12,
+   "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou."
+  ],
+  [
+   13,
+   "Komunistická strana Čech a Moravy"
+  ],
+  [
+   14,
+   "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)"
+  ],
+  [
+   15,
+   "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů"
+  ],
+  [
+   16,
+   "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu"
+  ],
+  [
+   17,
+   "Společnost proti developerské výstavbě v Prokopském údolí"
+  ],
+  [
+   18,
+   "Volt"
+  ],
+  [
+   19,
+   "DOST"
+  ],
+  [
+   20,
+   "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK"
+  ],
+  [
+   21,
+   "ANO 2011"
+  ],
+  [
+   22,
+   "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků"
+  ]
+ ]
+}

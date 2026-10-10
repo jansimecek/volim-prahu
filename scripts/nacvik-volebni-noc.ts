@@ -13,6 +13,7 @@ import { join } from 'node:path'
 import { nactiSnapshot, stariMinut, ulozSnapshot } from '../src/lib/snapshot'
 import { rozdelMandaty } from '../src/lib/mandaty'
 import { celkovyPostup, stahniVysledky, type Snapshot } from '../src/lib/vysledky'
+import { stahniVysledkyVolbyhned } from '../src/lib/vysledkyVolbyhned'
 
 const KOREN = join(__dirname, '..')
 
@@ -38,39 +39,8 @@ function kontrola(popis: string, podminka: boolean, detail = ''): void {
   }
 }
 
-async function main() {
-  console.log('Nácvik volební noci proti datům kv2022\n')
-
-  /*
-   * Nácvik pracuje s výsledky roku 2022. Kdyby je zapsal do ostrého snapshotu,
-   * web by je ukázal jako průběžný stav voleb 2026 — a nic by na tom nebylo
-   * vidět, protože stáří snapshotu by bylo nula. Píšeme proto vždy do cíle
-   * `nacvik` a nad produkčním úložištěm odmítáme běžet úplně.
-   */
-  if (process.env.BLOB_READ_WRITE_TOKEN && !process.env.NACVIK_POVOL_BLOB) {
-    console.error(
-      'V prostředí je BLOB_READ_WRITE_TOKEN. Nácvik by mohl zasáhnout ostré úložiště.\n' +
-        'Spusť ho bez tokenu, nebo vědomě přes NACVIK_POVOL_BLOB=1.',
-    )
-    process.exit(1)
-  }
-
-  const ciselnik = JSON.parse(
-    readFileSync(join(KOREN, 'data/ciselniky/zastupitelstva.json'), 'utf8'),
-  ) as { zastupitelstva: { kod: string; slug: string }[] }
-  const slugPodleKodu = new Map(ciselnik.zastupitelstva.map((z) => [z.kod, z.slug]))
-
-  console.log('1. Stažení a parsování z ČSÚ')
-  const zacatek = Date.now()
-  let snapshot: Snapshot
-  try {
-    snapshot = await stahniVysledky(slugPodleKodu, 'kv2022', '20220923')
-  } catch (chyba) {
-    console.log(`  ✗ stažení selhalo: ${chyba instanceof Error ? chyba.message : chyba}`)
-    process.exit(1)
-  }
-  const trvani = Date.now() - zacatek
-  kontrola(`staženo a naparsováno za ${trvani} ms`, trvani < 45_000)
+/** Kontroly známých výsledků 2022 — stejné pro oba zdroje. */
+function zkontrolujSnapshot(snapshot: Snapshot): void {
   kontrola(
     `${snapshot.zastupitelstva.length} zastupitelstev`,
     snapshot.zastupitelstva.length === OCEKAVANO.zastupitelstev,
@@ -82,7 +52,8 @@ async function main() {
   const m = snapshot.zastupitelstva.find((z) => z.kod === '554782')
   if (!m) {
     console.log('  ✗ magistrát ve výsledcích chybí')
-    process.exit(1)
+    chyb++
+    return
   }
   kontrola(`${m.mandatuCelkem} mandátů`, m.mandatuCelkem === OCEKAVANO.magistrat.mandatuCelkem)
   kontrola(`${m.okrskyCelkem} okrsků`, m.okrskyCelkem === OCEKAVANO.magistrat.okrskyCelkem)
@@ -143,6 +114,63 @@ async function main() {
 
   const postup = celkovyPostup(snapshot)
   kontrola(`postup sčítání ${postup.procenta} %`, postup.procenta === 100)
+}
+
+async function main() {
+  console.log('Nácvik volební noci proti datům kv2022\n')
+
+  /*
+   * Nácvik pracuje s výsledky roku 2022. Kdyby je zapsal do ostrého snapshotu,
+   * web by je ukázal jako průběžný stav voleb 2026 — a nic by na tom nebylo
+   * vidět, protože stáří snapshotu by bylo nula. Píšeme proto vždy do cíle
+   * `nacvik` a nad produkčním úložištěm odmítáme běžet úplně.
+   */
+  if (process.env.BLOB_READ_WRITE_TOKEN && !process.env.NACVIK_POVOL_BLOB) {
+    console.error(
+      'V prostředí je BLOB_READ_WRITE_TOKEN. Nácvik by mohl zasáhnout ostré úložiště.\n' +
+        'Spusť ho bez tokenu, nebo vědomě přes NACVIK_POVOL_BLOB=1.',
+    )
+    process.exit(1)
+  }
+
+  const ciselnik = JSON.parse(
+    readFileSync(join(KOREN, 'data/ciselniky/zastupitelstva.json'), 'utf8'),
+  ) as { zastupitelstva: { kod: string; slug: string }[] }
+  const slugPodleKodu = new Map(ciselnik.zastupitelstva.map((z) => [z.kod, z.slug]))
+
+  /*
+   * Oba zdroje se měří proti stejným výsledkům. Nedostupný zdroj je jen
+   * varování — ve volební noc padá právě volby.gov.cz a CI kvůli tomu nesmí
+   * zčervenat. Data, která se stáhnou a nesedí, jsou ale chyba vždy.
+   */
+  const zdroje: { nazev: string; stahni: () => Promise<Snapshot> }[] = [
+    { nazev: 'XML z volby.gov.cz', stahni: () => stahniVysledky(slugPodleKodu, 'kv2022', '20220923') },
+    {
+      nazev: 'JSON z volbyhned.cz',
+      stahni: () => stahniVysledkyVolbyhned(slugPodleKodu, 'kv2022', '20220923'),
+    },
+  ]
+  let snapshot: Snapshot | undefined
+  for (const [i, zdroj] of zdroje.entries()) {
+    console.log(`${i === 0 ? '' : '\n'}=== Zdroj: ${zdroj.nazev} ===\n`)
+    console.log('1. Stažení a parsování')
+    const zacatek = Date.now()
+    let stazeny: Snapshot
+    try {
+      stazeny = await zdroj.stahni()
+    } catch (chyba) {
+      console.log(`  ⚠ zdroj nedostupný: ${chyba instanceof Error ? chyba.message : chyba}`)
+      continue
+    }
+    const trvani = Date.now() - zacatek
+    kontrola(`staženo a naparsováno za ${trvani} ms`, trvani < 45_000)
+    zkontrolujSnapshot(stazeny)
+    snapshot ??= stazeny
+  }
+  if (!snapshot) {
+    console.log('\n  ✗ nedostupný je ani jeden zdroj')
+    process.exit(1)
+  }
 
   console.log('\n4. Uložení a načtení snapshotu')
   await ulozSnapshot(snapshot, 'nacvik')
