@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import { ZASTUPITELSTVA } from '@/lib/obsah'
 import { ulozSnapshot } from '@/lib/snapshot'
-import { stahniVysledky } from '@/lib/vysledky'
+import { stahniVysledky, type Snapshot } from '@/lib/vysledky'
+import { stahniVysledkyVolbyhned } from '@/lib/vysledkyVolbyhned'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -12,6 +13,10 @@ export const maxDuration = 60
  *
  * Když stahování selže, NEPŘEPISUJEME poslední dobrý snapshot — stránka radši
  * ukáže starší data s viditelným časem než prázdno.
+ *
+ * Primární zdroj je hromadné XML z volby.gov.cz. Když ČSÚ pod náporem vrací
+ * stránku o nedostupnosti, sáhneme po JSONu z volbyhned.cz. XML má kratší
+ * timeout, aby na zálohu zbyl čas do limitu funkce.
  */
 export async function GET(request: Request) {
   const tajemstvi = process.env.CRON_SECRET
@@ -31,17 +36,25 @@ export async function GET(request: Request) {
 
   const slugPodleKodu = new Map(ZASTUPITELSTVA.map((z) => [z.kod, z.slug]))
 
+  let snapshot: Snapshot
   try {
-    const snapshot = await stahniVysledky(slugPodleKodu)
-    await ulozSnapshot(snapshot)
-    return NextResponse.json({
-      ulozeno: true,
-      generovano: snapshot.generovano,
-      zastupitelstev: snapshot.zastupitelstva.length,
-    })
-  } catch (chyba) {
-    // Podrobnost jde do serverového logu, ven jen tolik, kolik stačí k diagnóze.
-    console.error('[volebni-noc] stažení selhalo:', chyba)
-    return NextResponse.json({ ulozeno: false, chyba: 'Stažení z ČSÚ selhalo.' }, { status: 503 })
+    snapshot = await stahniVysledky(slugPodleKodu, undefined, undefined, 15_000)
+  } catch (chybaXml) {
+    console.warn('[volebni-noc] XML z volby.gov.cz selhalo, zkouším volbyhned.cz:', chybaXml)
+    try {
+      snapshot = await stahniVysledkyVolbyhned(slugPodleKodu)
+    } catch (chyba) {
+      // Podrobnost jde do serverového logu, ven jen tolik, kolik stačí k diagnóze.
+      console.error('[volebni-noc] stažení selhalo z obou zdrojů:', chyba)
+      return NextResponse.json({ ulozeno: false, chyba: 'Stažení z ČSÚ selhalo.' }, { status: 503 })
+    }
   }
+
+  await ulozSnapshot(snapshot)
+  return NextResponse.json({
+    ulozeno: true,
+    zdroj: snapshot.zdroj,
+    generovano: snapshot.generovano,
+    zastupitelstev: snapshot.zastupitelstva.length,
+  })
 }

@@ -53,6 +53,8 @@ export type Snapshot = {
   /** Kdy jsme je úspěšně stáhli. */
   stazeno: string
   sada: string
+  /** Odkud data jsou: hromadné XML ČSÚ, nebo záloha z volbyhned.cz. Starší snapshoty pole nemají. */
+  zdroj?: 'csu' | 'volbyhned'
   zastupitelstva: ZastupitelstvoVysledek[]
 }
 
@@ -135,6 +137,7 @@ export function parsujVysledky(
     generovano: String(koren.DATUM_CAS_GENEROVANI ?? ''),
     stazeno: new Date().toISOString(),
     sada,
+    zdroj: 'csu',
     zastupitelstva,
   }
 }
@@ -162,10 +165,11 @@ export async function stahniVysledky(
   slugPodleKodu: Map<string, string>,
   sada = SADA,
   datum = DATUM_VOLEB,
+  timeoutMs = 45_000,
 ): Promise<Snapshot> {
   const odpoved = await fetch(urlVysledku(sada, datum), {
     headers: { accept: 'application/xml, text/xml' },
-    signal: AbortSignal.timeout(45_000),
+    signal: AbortSignal.timeout(timeoutMs),
     cache: 'no-store',
   })
   if (!odpoved.ok) throw new Error(`ČSÚ vrátil HTTP ${odpoved.status}`)
