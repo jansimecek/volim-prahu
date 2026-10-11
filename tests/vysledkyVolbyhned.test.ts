@@ -66,3 +66,24 @@ describe('záložní zdroj volbyhned.cz', () => {
     )
   })
 })
+
+describe('zvolení zastupitelé ze záložního zdroje', () => {
+  const m = parsujZastupitelstvo(nacti('volbyhned-kv2022-magistrat.json'), '554782', 'magistrat')
+
+  it('u každé strany sedí počet zvolených s mandáty', () => {
+    for (const s of m.strany) expect(s.zvoleni?.length ?? 0).toBe(s.mandaty)
+  })
+
+  it('řadí zvolené podle pořadí zvolení', () => {
+    const spolu = m.strany[0]!
+    expect(spolu.zvoleni?.map((z) => z.poradiZvoleni)).toEqual(
+      Array.from({ length: 19 }, (_, i) => i + 1),
+    )
+    expect(spolu.zvoleni?.[0]?.jmeno).toMatch(/^Svoboda Bohuslav/)
+  })
+
+  it('během sčítání zvolené neuvádí', () => {
+    const p = parsujZastupitelstvo(nacti('volbyhned-kv2026-prubezne.json'), '554782', 'magistrat')
+    expect(p.strany.every((s) => s.zvoleni === undefined)).toBe(true)
+  })
+})

@@ -5,6 +5,7 @@ import {
   type Snapshot,
   type StranaVysledek,
   type ZastupitelstvoVysledek,
+  type Zvoleny,
 } from './vysledky'
 
 /**
@@ -54,6 +55,29 @@ const S = { cislo: 0, nazev: 1, hlasy: 2, procenta: 3, kandidatu: 4, mandaty: 7 
 
 const cislo = (v: unknown): number => (typeof v === 'number' && Number.isFinite(v) ? v : 0)
 
+/**
+ * Řádek kandidáta v `hlasy[číslo strany]`: [pořadí na listině, jméno, věk,
+ * přednostní hlasy, %, zvolen (true / false / null během sčítání), pořadí
+ * zvolení nebo náhradníka]. Ověřeno proti 2022: zvolených je přesně tolik,
+ * kolik má strana mandátů.
+ */
+const K = { poradi: 0, jmeno: 1, vek: 2, hlasy: 3, procenta: 4, zvolen: 5, poradiZvoleni: 6 } as const
+
+function zvoleniStrany(radky: unknown): Zvoleny[] {
+  if (!Array.isArray(radky)) return []
+  return radky
+    .filter((r): r is unknown[] => Array.isArray(r) && r[K.zvolen] === true)
+    .map((r) => ({
+      poradi: cislo(r[K.poradi]),
+      jmeno: String(r[K.jmeno] ?? ''),
+      vek: cislo(r[K.vek]),
+      hlasy: cislo(r[K.hlasy]),
+      procenta: cislo(r[K.procenta]),
+      poradiZvoleni: cislo(r[K.poradiZvoleni]),
+    }))
+    .sort((a, b) => a.poradiZvoleni - b.poradiZvoleni)
+}
+
 export function parsujZastupitelstvo(
   data: unknown,
   kod: string,
@@ -70,6 +94,8 @@ export function parsujZastupitelstvo(
   if (!Array.isArray(prehled) || prehled.length <= P.platneHlasy || !Array.isArray(vysledky)) {
     throw new Error(`Soubor volbyhned.cz pro ${kod} má neznámý tvar.`)
   }
+
+  const hlasyKandidatu = (d.hlasy && typeof d.hlasy === 'object' ? d.hlasy : {}) as Record<string, unknown>
 
   const plneNazvy = new Map<number, string>()
   if (Array.isArray(d.plne_nazvy_stran)) {
@@ -93,6 +119,7 @@ export function parsujZastupitelstvo(
         procenta: cislo(r[S.procenta]),
         kandidatu: cislo(r[S.kandidatu]),
         mandaty: cislo(r[S.mandaty]),
+        ...(d.zvoleno === true ? { zvoleni: zvoleniStrany(hlasyKandidatu[String(c)]) } : {}),
       }
     })
     .sort((a, b) => b.procenta - a.procenta)
