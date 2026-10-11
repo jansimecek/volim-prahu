@@ -498,6 +498,15 @@ Vyjednávání se zapisuje do `content/vyjednavani/<slug zastupitelstva>.yaml`:
 `memorandum`, `koalicni-smlouva`, `rozpad`, `zasedani`, `volba`) se zdroji,
 volitelně datum ustavujícího zasedání a zvolené vedení. Stav na webu se
 odvozuje z událostí (`src/lib/vyjednavani.ts`), nikdy se nezapisuje ručně.
+Lhůty ustavujících zasedání počítá `src/lib/terminy.ts` od dne, kdy Státní
+volební komise vyhlásí celkové výsledky — **ten den je potřeba ručně zapsat
+do `VYHLASENI_SVK`**, do té doby web ukazuje „zatím nevyhlášeno“.
+
+Pro vyhledávače a jazykové modely: `/llms.txt` propisuje aktuální stav
+vyjednávání ze stejných dat jako web, `/data/vyjednavani.json`
+a `/data/vysledky-2026.json` jsou statické JSON výstupy (s nasazením se
+obnoví samy) a `/vysledky` i `/koalice` nesou strukturovaná data `Dataset`.
+
 Výčet sestav s většinou počítá `minimalniKoalice` z konečných mandátů;
 vyloučení bere z událostí typu `vylouceni` a u magistrátu i z předvolebních
 deklarací.

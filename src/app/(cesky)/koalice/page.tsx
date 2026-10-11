@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { koalice } from '#content'
 import { DeklaraceKoalic } from '@/components/DeklaraceKoalic'
 import { Obsah } from '@/components/Obsah'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { absolutni } from '@/lib/web'
 import { VyjednavaniZastupitelstva } from '@/components/VyjednavaniZastupitelstva'
 import { MDXContent } from '@/components/mdx'
 import { datumCesky } from '@/lib/cestina'
@@ -11,6 +13,7 @@ import { vetsina } from '@/lib/koalice'
 import { nadpisyStranky } from '@/lib/nadpisy'
 import { strankaPodleSlugu } from '@/lib/obsah'
 import {
+  naposledyOvereno,
   jeSledovane,
   POPIS_STAVU,
   posledniUdalost,
@@ -34,6 +37,24 @@ export default function StrankaKoalic() {
 
   return (
     <article className="space-y-12">
+      <StrukturovanaData
+        data={{
+          '@type': 'WebPage',
+          name: stranka.title,
+          description: stranka.popis,
+          url: absolutni('/koalice'),
+          inLanguage: 'cs',
+          ...(naposledyOvereno() ? { dateModified: naposledyOvereno() } : {}),
+          mainEntity: {
+            '@type': 'Dataset',
+            name: 'Povolební vyjednávání v Praze 2026',
+            description: 'Doložené události vyjednávání o vedení magistrátu a městských částí se zdroji.',
+            distribution: [
+              { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: absolutni('/data/vyjednavani.json') },
+            ],
+          },
+        }}
+      />
       <header className="max-w-prose">
         <p className="popisek-uredni">Po volbách 2026</p>
         <h1 className="mt-2 text-4xl">{stranka.title}</h1>

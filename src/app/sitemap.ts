@@ -5,6 +5,7 @@ import { kandidatka, vsechnyKandidatky } from '@/lib/kandidatky'
 import { JAZYKY, PODSTRANKY } from '@/lib/jazyky'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
+import { naposledyOvereno, vyjednavaniZastupitelstva } from '@/lib/vyjednavani'
 import { absolutni } from '@/lib/web'
 
 /**
@@ -21,18 +22,24 @@ import { absolutni } from '@/lib/web'
 type Polozka = MetadataRoute.Sitemap[number]
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Datum z obsahu, ne z hodin — sitemapa zůstává deterministická.
+  const vyjednavaniZmeneno = naposledyOvereno()
+  const zmeneno = vyjednavaniZmeneno ? { lastModified: new Date(vyjednavaniZmeneno) } : {}
+
+  // Po volbách vedou výsledky a vyjednávání; předvolební průvodce je archiv kampaně.
   const staticke: Polozka[] = [
-    { url: absolutni('/'), changeFrequency: 'daily', priority: 1 },
-    { url: absolutni('/praha'), changeFrequency: 'daily', priority: 0.9 },
-    { url: absolutni('/mestska-cast'), changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolutni('/senat'), changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolutni('/temata'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: absolutni('/'), ...zmeneno, changeFrequency: 'daily', priority: 1 },
+    { url: absolutni('/koalice'), ...zmeneno, changeFrequency: 'daily', priority: 1 },
+    { url: absolutni('/vysledky'), lastModified: new Date('2026-10-11'), changeFrequency: 'monthly', priority: 0.9 },
     { url: absolutni('/aktualne'), changeFrequency: 'daily', priority: 0.8 },
-    { url: absolutni('/kde-volim'), changeFrequency: 'weekly', priority: 0.9 },
-    { url: absolutni('/hlasovani'), changeFrequency: 'weekly', priority: 0.5 },
-    { url: absolutni('/rozhovory'), changeFrequency: 'weekly', priority: 0.5 },
-    { url: absolutni('/debaty'), changeFrequency: 'daily', priority: 0.6 },
-    { url: absolutni('/vysledky'), changeFrequency: 'weekly', priority: 0.6 },
+    { url: absolutni('/mestska-cast'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: absolutni('/praha'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: absolutni('/senat'), changeFrequency: 'weekly', priority: 0.7 },
+    { url: absolutni('/temata'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: absolutni('/kde-volim'), changeFrequency: 'monthly', priority: 0.4 },
+    { url: absolutni('/hlasovani'), changeFrequency: 'monthly', priority: 0.3 },
+    { url: absolutni('/rozhovory'), changeFrequency: 'monthly', priority: 0.5 },
+    { url: absolutni('/debaty'), changeFrequency: 'monthly', priority: 0.4 },
   ]
 
   /**
@@ -51,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ])
 
   const referencni: Polozka[] = stranky
-    .filter((s) => !['kde-volim'].includes(s.slug))
+    .filter((s) => !['kde-volim', 'koalice'].includes(s.slug))
     .map((s) => ({
       url: absolutni(`/${s.slug}`),
       lastModified: new Date(s.aktualizovano),
@@ -59,11 +66,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }))
 
-  const mestskeCasti: Polozka[] = MESTSKE_CASTI.map((mc) => ({
-    url: absolutni(`/mestska-cast/${mc.slug}`),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }))
+  const mestskeCasti: Polozka[] = MESTSKE_CASTI.map((mc) => {
+    const overeno = vyjednavaniZastupitelstva(mc.slug)?.overeno
+    return {
+      url: absolutni(`/mestska-cast/${mc.slug}`),
+      ...(overeno ? { lastModified: new Date(overeno) } : {}),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    }
+  })
 
   const subjekty: Polozka[] = strany
     .filter((s) => s.uroven === 'magistrat')

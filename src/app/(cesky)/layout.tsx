@@ -36,11 +36,11 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Volím Prahu — volební průvodce 2026',
+    default: 'Volím Prahu — kdo vede Prahu a městské části',
     template: '%s — Volím Prahu',
   },
   description:
-    'Kdo kandiduje do vašeho zastupitelstva, co slibuje a co z toho daná úroveň pražské samosprávy vůbec může splnit. Komunální a senátní volby 9.–10. října 2026.',
+    'Nezávislé sledování pražské politiky: konečné výsledky komunálních voleb 2026, kdo s kým jedná o vedení magistrátu a 57 městských částí, a co slibovali. Každé tvrzení se zdrojem.',
   metadataBase: new URL(ZAKLAD_WEBU),
   // Kanonická adresa každé stránky = její vlastní cesta na www doméně.
   alternates: {
@@ -242,7 +242,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             url: ZAKLAD_WEBU,
             inLanguage: 'cs',
             description:
-              'Nezávislý volební průvodce pro komunální a senátní volby v Praze 9.–10. října 2026.',
+              'Nezávislé sledování pražské politiky: výsledky komunálních voleb 2026, povolební vyjednávání o vedení magistrátu a městských částí, programy a jejich proveditelnost. Každé tvrzení se zdrojem.',
             publisher: {
               '@type': 'Organization',
               name: 'Volím Prahu',
