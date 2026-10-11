@@ -29,6 +29,21 @@ export type StranaVysledek = {
   procenta: number
   kandidatu: number
   mandaty: number
+  /** Zvolení zastupitelé v pořadí zvolení. Posílá jen záložní zdroj a jen po sečtení. */
+  zvoleni?: Zvoleny[]
+}
+
+export type Zvoleny = {
+  /** Pořadí na kandidátní listině — s kódem a číslem strany tvoří id kandidáta. */
+  poradi: number
+  /** Jméno, jak ho uvádí ČSÚ: „Příjmení Jméno Tituly“. */
+  jmeno: string
+  vek: number
+  /** Přednostní hlasy. */
+  hlasy: number
+  procenta: number
+  /** Pořadí, v jakém kandidát mandát získal (přednostní hlasy mají přednost). */
+  poradiZvoleni: number
 }
 
 export type ZastupitelstvoVysledek = {

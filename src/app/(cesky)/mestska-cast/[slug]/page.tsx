@@ -10,6 +10,8 @@ import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
 import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
+import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
+import { vysledekZastupitelstva } from '@/lib/konecneVysledky'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   if (!mc) return {}
   return {
     title: mc.nazev,
-    description: `Volby do zastupitelstva ${mc.nazev} 2026: ${mc.mandaty} mandátů, kandidující subjekty a místní témata.`,
+    description: `Volby do zastupitelstva ${mc.nazev} 2026: výsledky, rozdělení ${mc.mandaty} mandátů, zvolení zastupitelé a kandidátní listiny.`,
   }
 }
 
@@ -36,6 +38,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   const senat = senatniStavMestskeCasti(slug)
   const deska = stavMestskeCasti(slug)
   const listina = kandidatka(slug)
+  const vysledek = vysledekZastupitelstva(slug)
   // Neplatné kandidatury podle registru ČSÚ se do počtu nepočítají.
   const kandidatuCelkem =
     listina?.strany.reduce((n, s) => n + s.kandidati.filter((k) => !k.neplatny).length, 0) ?? 0
@@ -60,6 +63,13 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         <Udaj popisek="Obyvatel" hodnota={cislo(zastupitelstvo.pocetObyvatel)} />
         <Udaj popisek="Kód ČSÚ" hodnota={mc.kodZastupitelstva} />
       </dl>
+
+      {vysledek && (
+        <section id="vysledky" className="space-y-4">
+          <h2 className="text-3xl">Výsledky voleb 2026</h2>
+          <VysledekZastupitelstva z={vysledek} nadpisovaUroven="h3" />
+        </section>
+      )}
 
       {/* Jestli tady člověk dostane i senátní lístek, se jinde zjišťuje těžko. */}
       <section className="max-w-prose border-l-2 border-praha pl-5">
@@ -152,7 +162,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
       )}
 
       <section className="border-t border-linka pt-6">
-        <h2 className="text-2xl">Kandidující subjekty</h2>
+        <h2 className="text-2xl">Kandidátní listiny</h2>
         {!listina || listina.strany.length === 0 ? (
           <p className="mt-3 max-w-prose">
             Pro tuhle městskou část nemáme kandidátní listiny k dispozici.
@@ -160,7 +170,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         ) : (
           <>
             <p className="mt-3 max-w-prose">
-              O {cislo(mc.mandaty)} mandátů se uchází {listina.strany.length}{' '}
+              O {cislo(mc.mandaty)} mandátů se ucházelo {listina.strany.length}{' '}
               {listina.strany.length === 1 ? 'volební strana' : 'volebních stran'} s celkem{' '}
               {cislo(kandidatuCelkem)} kandidáty.{' '}
               {listina.strany.some((s) => s.vylosovano)
