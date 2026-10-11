@@ -91,33 +91,27 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
   dokumentů.
 - **[Plnění slibů](https://www.volimprahu.cz/minule-obdobi)** — co slíbila
   současná rada v programovém prohlášení a kolik z toho jde vůbec ověřit.
-- **[Kdo s kým po volbách](https://www.volimprahu.cz/koalice)** — doložená
-  vyjádření kandidátek o povolební spolupráci a kalkulačka mandátů podle § 45
-  zákona o volbách do zastupitelstev obcí. Bez předpovědí.
 
-### Průběh voleb
+### Po volbách
 
-- **Odpočet a volební týden** na [titulní straně](https://www.volimprahu.cz) —
-  kolik zbývá do otevření volebních místností (během voleb do jejich uzavření)
-  a den po dni, co do voleb ještě přijde: debaty, lhůta pro hlasovací lístky,
-  začátek zákazu zveřejňování průzkumů, volební dny a případné druhé kolo
-  senátních voleb. Proběhlé dny z přehledu mizí samy.
-- **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy
-  o průběhu voleb, každá se zdrojem. Odebírat je jde přes
+- **[Výsledky](https://www.volimprahu.cz/vysledky)** — konečné výsledky všech
+  58 pražských zastupitelstev z dat ČSÚ: rozdělení mandátů s hranicí většiny,
+  hlasy stran a zvolení zastupitelé v pořadí, v jakém mandát získali.
+- **[Vyjednávání a koalice](https://www.volimprahu.cz/koalice)** — kdo s kým
+  jedná o vedení magistrátu a městských částí. Jen doložené události (jednání,
+  vyloučení, memoranda, koaliční smlouvy, volby vedení), u každé zdroj a typ
+  doložení. Stav se neodhaduje, plyne z poslední doložené události. K tomu
+  nejmenší sestavy s většinou z konečných mandátů a možnost sestavit si
+  vlastní — bez předpovědí, u sestav jen doložená vyloučení. Magistrát a Prahu
+  1–22 sledujeme podrobně, menší části, když o nich píšou média.
+- **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy,
+  každá se zdrojem. Odebírat je jde přes
   [RSS](https://www.volimprahu.cz/aktualne/feed.xml).
-- **[Rozhovory](https://www.volimprahu.cz/rozhovory)** — rozhovory s lídry
-  kandidátek v médiích: kdo, kde, kdy a o čem mluvil. Odkazy a anotace, ne přepisy.
-- **[Debaty](https://www.volimprahu.cz/debaty)** — kalendář debat kandidátů na
-  primátora ve velkých médiích: kdy, kde a kdo, podle ohlášení pořadatele,
-  u proběhlých odkaz na záznam.
-- **[Anketa](https://www.volimprahu.cz/hlasovani)** — nezávazná anonymní anketa
-  čtenářů bez registrace. Není to průzkum; souhrn se zveřejní až po zavření
-  volebních místností.
-- **[Výsledky](https://www.volimprahu.cz/vysledky)** — ve volební noci průběžné
-  výsledky voleb do zastupitelstva Prahy i městských částí z otevřených dat ČSÚ.
 
-Od 13. října 2026 je web archivem: obsah zůstává dostupný kvůli dohledatelnosti,
-s upozorněním, že už není návodem, jak volit.
+Předvolební obsah — kandidátky, programy a jejich hodnocení, témata, debaty,
+rozhovory a anketa — zůstává dostupný jako archiv kampaně. Hodí se k porovnání
+s tím, na čem se nové vedení dohodne. Pruh nad obsahem říká, že nic z něj už
+není návod, jak volit.
 
 ## Jak web hodnotí sliby
 

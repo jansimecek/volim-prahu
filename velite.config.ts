@@ -840,6 +840,112 @@ const koalice = defineCollection({
  * tvrzení o volbách musí mít dohledatelný zdroj. Výjimku mají jen provozní
  * poznámky o samotném webu, kde jsme zdrojem my.
  */
+/**
+ * Povolební vyjednávání: jeden soubor na zastupitelstvo (content/vyjednavani/<slug>.yaml).
+ *
+ * Stejná pravidla doložení jako u předvolebních deklarací: každá událost má
+ * zdroj a říká, jestli jde o dokument, citaci, nebo parafrázi médií. Stav
+ * jednání se neodhaduje — vyplývá z poslední doložené události.
+ * Slugy subjektů jsou slugy volebních stran z kandidátky daného zastupitelstva
+ * (data/kandidatky/<slug>.json); hlídá je `pnpm validate`.
+ */
+export const TYPY_UDALOSTI = [
+  'vyjadreni',
+  'jednani',
+  'vylouceni',
+  'memorandum',
+  'koalicni-smlouva',
+  'rozpad',
+  'zasedani',
+  'volba',
+] as const
+
+const vyjednavani = defineCollection({
+  name: 'Vyjednavani',
+  pattern: 'vyjednavani/*.yaml',
+  schema: s
+    .object({
+      /** Slug zastupitelstva z číselníku (magistrat, praha-7, …). */
+      zastupitelstvo: s.string().min(1),
+      overeno: s.isodate(),
+      /** Den ustavujícího zasedání, jakmile ho dosavadní vedení svolá. */
+      ustavujiciZasedani: s
+        .object({ datum: s.isodate(), zdroj: s.string().min(1) })
+        .optional(),
+      /** Zvolené vedení po ustavujícím zasedání. */
+      vedeni: s
+        .array(
+          s.object({
+            funkce: s.string().min(1),
+            jmeno: s.string().min(1),
+            subjekt: s.string().min(1),
+            zdroj: s.string().min(1),
+          }),
+        )
+        .default([]),
+      zdroje: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            medium: s.string().min(1),
+            nazev: s.string().min(1),
+            datum: s.isodate(),
+            url: url,
+          }),
+        )
+        .default([]),
+      udalosti: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            datum: s.isodate(),
+            typ: s.enum(TYPY_UDALOSTI),
+            /** Kdo událost udělal nebo kdo jedná. */
+            subjekty: s.array(s.string().min(1)).min(1),
+            /** U memoranda, smlouvy a jednání: sestava, o které je řeč. */
+            sestava: s.array(s.string().min(1)).default([]),
+            /** U vyloučení: s kým spolupráci vylučuje. */
+            vylucuje: s.array(s.string().min(1)).default([]),
+            kdo: s.string().min(1).optional(),
+            doklad: s.enum(['dokument', 'usneseni', 'citace', 'parafraze']),
+            citace: s.string().min(1).optional(),
+            shrnuti: s.string().min(1).max(400),
+            zdroje: s.array(s.string().min(1)).min(1),
+          }),
+        )
+        .default([]),
+    })
+    .superRefine((data, ctx) => {
+      const zdroje = new Set(data.zdroje.map((z) => z.id))
+      const videna = new Set<string>()
+      const odkaz = (id: string, kde: string) => {
+        if (!zdroje.has(id)) ctx.addIssue({ code: 'custom', message: `${kde} odkazuje na neexistující zdroj "${id}".` })
+      }
+      for (const u of data.udalosti) {
+        if (videna.has(u.id)) ctx.addIssue({ code: 'custom', message: `Událost "${u.id}" je uvedená dvakrát.` })
+        videna.add(u.id)
+        for (const z of u.zdroje) odkaz(z, `Událost "${u.id}"`)
+        if (u.doklad === 'citace' && !u.citace) {
+          ctx.addIssue({ code: 'custom', message: `Událost "${u.id}" je doložená citací, ale citace chybí.` })
+        }
+        if (u.doklad === 'parafraze' && u.citace) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Událost "${u.id}" je parafráze médií, a proto nesmí nést citaci — vypadala by jako přímá řeč.`,
+          })
+        }
+        if (u.typ === 'vylouceni' && u.vylucuje.length === 0) {
+          ctx.addIssue({ code: 'custom', message: `Vyloučení "${u.id}" neříká, koho vylučuje.` })
+        }
+        if ((u.typ === 'memorandum' || u.typ === 'koalicni-smlouva') && u.sestava.length < 1) {
+          ctx.addIssue({ code: 'custom', message: `Dohoda "${u.id}" nemá uvedenou sestavu.` })
+        }
+      }
+      if (data.ustavujiciZasedani) odkaz(data.ustavujiciZasedani.zdroj, 'Ustavující zasedání')
+      for (const v of data.vedeni) odkaz(v.zdroj, `Funkce "${v.funkce}"`)
+    }),
+})
+
 const aktuality = defineCollection({
   name: 'Aktualita',
   pattern: 'aktualne/**/*.mdx',
@@ -1089,6 +1195,7 @@ export default defineConfig({
     clean: true,
   },
   collections: {
+    vyjednavani,
     mestskeCasti,
     strany,
     programy,
