@@ -111,6 +111,9 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
 - **Data ke stažení** — [stav vyjednávání](https://www.volimprahu.cz/data/vyjednavani.json)
   a [konečné výsledky](https://www.volimprahu.cz/data/vysledky-2026.json) jako
   JSON pro novináře, výzkumníky i jazykové modely.
+- **[Senát](https://www.volimprahu.cz/senat)** — druhé kolo 16.–17. října ve
+  třech pražských obvodech: kdo s kým se utká, výsledky prvního kola a jak se ve
+  druhém kole volí (kdy, kdo smí, kde se berou lístky), vše podle zákona.
 - **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy,
   každá se zdrojem. Odebírat je jde přes
   [RSS](https://www.volimprahu.cz/aktualne/feed.xml).

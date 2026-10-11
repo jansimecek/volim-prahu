@@ -379,3 +379,14 @@ test('skládání koalice sečte konečné mandáty magistrátu a ukáže větš
   await expect(skladani.getByText('34 mandátů')).toBeVisible()
   await expect(skladani.getByText(/většina, rezerva 1/)).toBeVisible()
 })
+
+test('senát ukazuje souboje druhého kola a výsledky prvního', async ({ page }) => {
+  await page.goto('/senat')
+  await expect(page.getByRole('heading', { name: 'Kdo s kým' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Jak se volí ve druhém kole' })).toBeVisible()
+  await page.goto('/senat/27-praha-1')
+  // 1. kolo: Padevět 49,64 %, Jan Čižinský 27,74 % (ČSÚ, ověřeno proti ČT24).
+  await expect(page.getByRole('heading', { name: /Druhé kolo: .*Padevět – Jan Čižinský/ })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Výsledky prvního kola' })).toBeVisible()
+  await expect(page.getByText('postupuje do 2. kola')).toHaveCount(2)
+})

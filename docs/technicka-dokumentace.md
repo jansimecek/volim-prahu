@@ -498,6 +498,11 @@ Vyjednávání se zapisuje do `content/vyjednavani/<slug zastupitelstva>.yaml`:
 `memorandum`, `koalicni-smlouva`, `rozpad`, `zasedani`, `volba`) se zdroji,
 volitelně datum ustavujícího zasedání a zvolené vedení. Stav na webu se
 odvozuje z událostí (`src/lib/vyjednavani.ts`), nikdy se nezapisuje ručně.
+Výsledky Senátu bere `pnpm import:senat-vysledky` z téhož zdroje
+(`appdata/senat/20261009/vysled/obvod/<č.>.json`) do `data/senat/vysledky.json`.
+Po druhém kole aplikace přepne `nastaveni.KOLO` na 2 a skript zápis odmítne,
+dokud se formát druhého kola neověří a nedoplní.
+
 Lhůty ustavujících zasedání počítá `src/lib/terminy.ts` od dne, kdy Státní
 volební komise vyhlásí celkové výsledky — **ten den je potřeba ručně zapsat
 do `VYHLASENI_SVK`**, do té doby web ukazuje „zatím nevyhlášeno“.

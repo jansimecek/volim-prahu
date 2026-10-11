@@ -25,6 +25,7 @@
     "import:desky": "tsx scripts/import-uredni-desky.ts",
     "nacvik": "tsx scripts/nacvik-volebni-noc.ts",
     "import:senat": "tsx scripts/import-senat.ts",
+    "import:senat-vysledky": "tsx scripts/import-senat-vysledky.ts",
     "import:okrsky": "tsx scripts/import-okrsky.ts",
     "import:zastavky": "tsx scripts/import-zastavky.ts",
     "import:parkovani": "tsx scripts/import-parkovani.ts",

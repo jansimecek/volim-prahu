@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { POPIS_REZIMU, rezimWebu } from '@/lib/rezim'
+import { DRUHE_KOLO_SENATU } from '@/lib/terminy'
 
 /**
  * Pruh nad obsahem, který říká, v jaké fázi voleb se čtenář nachází.
@@ -12,6 +13,8 @@ export function PruhRezimu() {
   if (!popis) return null
 
   const poVolbach = rezim === 'vyjednavani'
+  const dnes = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Prague' })
+  const senatJeste = poVolbach && dnes <= DRUHE_KOLO_SENATU.do
 
   return (
     <div className={`border-b ${poVolbach ? 'border-praha bg-papir-tmavsi' : 'border-linka'}`}>
@@ -28,6 +31,11 @@ export function PruhRezimu() {
             {poVolbach && (
               <Link href="/koalice" className="odkaz-akcent">
                 Vyjednávání
+              </Link>
+            )}
+            {senatJeste && (
+              <Link href="/senat" className="odkaz-akcent">
+                Senát: 2. kolo 16.–17. 10.
               </Link>
             )}
           </span>

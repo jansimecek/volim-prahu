@@ -1,0 +1,212 @@
+{
+ "zdroj": "Český statistický úřad, prezentační aplikace volbyhned.cz",
+ "obvody": [
+  {
+   "cislo": 21,
+   "nazev": "Praha 5",
+   "kolo1": {
+    "generovano": "2026-10-11T07:21:12",
+    "okrskyCelkem": 139,
+    "zapsaniVolici": 101780,
+    "vydaneObalky": 46218,
+    "ucastProcenta": 45.41,
+    "platneHlasy": 44877,
+    "kandidati": [
+     {
+      "cislo": 3,
+      "jmeno": "Láska Václav Mgr.",
+      "navrhujici": "SEN 21",
+      "hlasy": 14606,
+      "procenta": 32.54
+     },
+     {
+      "cislo": 6,
+      "jmeno": "Sáblík Radko Ing.",
+      "navrhujici": "KDUČSL+ODS+STAN",
+      "hlasy": 12162,
+      "procenta": 27.1
+     },
+     {
+      "cislo": 2,
+      "jmeno": "Šarapatka Zdeněk PaedDr. Ph.D.",
+      "navrhujici": "Piráti+TOP+LES",
+      "hlasy": 8866,
+      "procenta": 19.75
+     },
+     {
+      "cislo": 1,
+      "jmeno": "Brož Lubomír Ing.",
+      "navrhujici": "ANO",
+      "hlasy": 6030,
+      "procenta": 13.43
+     },
+     {
+      "cislo": 5,
+      "jmeno": "Spirov Pavel Ing. Ph.D.",
+      "navrhujici": "SPD",
+      "hlasy": 2084,
+      "procenta": 4.64
+     },
+     {
+      "cislo": 7,
+      "jmeno": "Prokšanová Petra Mgr.",
+      "navrhujici": "KSČM",
+      "hlasy": 711,
+      "procenta": 1.58
+     },
+     {
+      "cislo": 4,
+      "jmeno": "Augustín Ľubomír",
+      "navrhujici": "PŘÍSAHA",
+      "hlasy": 418,
+      "procenta": 0.93
+     }
+    ],
+    "postupuji": [
+     3,
+     6
+    ],
+    "zvolen": null
+   },
+   "kolo2": null
+  },
+  {
+   "cislo": 24,
+   "nazev": "Praha 9",
+   "kolo1": {
+    "generovano": "2026-10-11T06:34:47",
+    "okrskyCelkem": 101,
+    "zapsaniVolici": 98465,
+    "vydaneObalky": 44078,
+    "ucastProcenta": 44.77,
+    "platneHlasy": 41353,
+    "kandidati": [
+     {
+      "cislo": 2,
+      "jmeno": "Smoljak David",
+      "navrhujici": "KDUZelSTANPiTOP",
+      "hlasy": 20232,
+      "procenta": 48.92
+     },
+     {
+      "cislo": 5,
+      "jmeno": "Pecková Dagmar",
+      "navrhujici": "ODS",
+      "hlasy": 9539,
+      "procenta": 23.06
+     },
+     {
+      "cislo": 4,
+      "jmeno": "Žalud Radek  DiS.",
+      "navrhujici": "ANO",
+      "hlasy": 6080,
+      "procenta": 14.7
+     },
+     {
+      "cislo": 3,
+      "jmeno": "Laube Bedřich Bc.",
+      "navrhujici": "Svo+SPD+Tri+PRO",
+      "hlasy": 3346,
+      "procenta": 8.09
+     },
+     {
+      "cislo": 1,
+      "jmeno": "Batyiová Darina",
+      "navrhujici": "Kruh",
+      "hlasy": 2156,
+      "procenta": 5.21
+     }
+    ],
+    "postupuji": [
+     2,
+     5
+    ],
+    "zvolen": null
+   },
+   "kolo2": null
+  },
+  {
+   "cislo": 27,
+   "nazev": "Praha 1",
+   "kolo1": {
+    "generovano": "2026-10-11T04:48:27",
+    "okrskyCelkem": 92,
+    "zapsaniVolici": 78672,
+    "vydaneObalky": 36568,
+    "ucastProcenta": 46.48,
+    "platneHlasy": 35406,
+    "kandidati": [
+     {
+      "cislo": 7,
+      "jmeno": "Padevět Jiří PhDr.",
+      "navrhujici": "ODSSTANPirátTOP",
+      "hlasy": 17576,
+      "procenta": 49.64
+     },
+     {
+      "cislo": 8,
+      "jmeno": "Čižinský Jan",
+      "navrhujici": "KDU+Zel+PHASOBĚ",
+      "hlasy": 9824,
+      "procenta": 27.74
+     },
+     {
+      "cislo": 5,
+      "jmeno": "Dudra Ján doc. MUDr. Ph.D.,MPH",
+      "navrhujici": "ANO",
+      "hlasy": 4329,
+      "procenta": 12.22
+     },
+     {
+      "cislo": 2,
+      "jmeno": "Čižinský Pavel Mgr.",
+      "navrhujici": "Levice",
+      "hlasy": 1028,
+      "procenta": 2.9
+     },
+     {
+      "cislo": 6,
+      "jmeno": "Pešek Jiří Pavel Ing.",
+      "navrhujici": "Švýcarská dem.",
+      "hlasy": 929,
+      "procenta": 2.62
+     },
+     {
+      "cislo": 1,
+      "jmeno": "Morštadt Jiří Dipl. Ing.",
+      "navrhujici": "Generace",
+      "hlasy": 597,
+      "procenta": 1.68
+     },
+     {
+      "cislo": 4,
+      "jmeno": "Ryvola Vojtěch Ing.",
+      "navrhujici": "GEN",
+      "hlasy": 490,
+      "procenta": 1.38
+     },
+     {
+      "cislo": 3,
+      "jmeno": "Štern Jan Ing.",
+      "navrhujici": "TEAM",
+      "hlasy": 347,
+      "procenta": 0.98
+     },
+     {
+      "cislo": 9,
+      "jmeno": "Kolman Vladimír Ing. Ph.D., MBA",
+      "navrhujici": "SOCDEM",
+      "hlasy": 286,
+      "procenta": 0.8
+     }
+    ],
+    "postupuji": [
+     7,
+     8
+    ],
+    "zvolen": null
+   },
+   "kolo2": null
+  }
+ ]
+}
