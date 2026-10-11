@@ -10,7 +10,7 @@
  */
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { nactiSnapshot, stariMinut, ulozSnapshot } from '../src/lib/snapshot'
+import { maBlob, nactiSnapshot, stariMinut, ulozSnapshot } from '../src/lib/snapshot'
 import { rozdelMandaty } from '../src/lib/mandaty'
 import { celkovyPostup, stahniVysledky, type Snapshot } from '../src/lib/vysledky'
 import { stahniVysledkyVolbyhned } from '../src/lib/vysledkyVolbyhned'
@@ -125,9 +125,9 @@ async function main() {
    * vidět, protože stáří snapshotu by bylo nula. Píšeme proto vždy do cíle
    * `nacvik` a nad produkčním úložištěm odmítáme běžet úplně.
    */
-  if (process.env.BLOB_READ_WRITE_TOKEN && !process.env.NACVIK_POVOL_BLOB) {
+  if (maBlob() && !process.env.NACVIK_POVOL_BLOB) {
     console.error(
-      'V prostředí je BLOB_READ_WRITE_TOKEN. Nácvik by mohl zasáhnout ostré úložiště.\n' +
+      'V prostředí je Blob úložiště (BLOB_READ_WRITE_TOKEN nebo BLOB_STORE_ID). Nácvik by mohl zasáhnout ostré úložiště.\n' +
         'Spusť ho bez tokenu, nebo vědomě přes NACVIK_POVOL_BLOB=1.',
     )
     process.exit(1)
