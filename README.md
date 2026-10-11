@@ -104,6 +104,13 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
   nejmenší sestavy s většinou z konečných mandátů a možnost sestavit si
   vlastní — bez předpovědí, u sestav jen doložená vyloučení. Magistrát a Prahu
   1–22 sledujeme podrobně, menší části, když o nich píšou média.
+- **[Titulní strana](https://www.volimprahu.cz)** — stav na jeden pohled: jak je
+  na tom magistrát, kolik městských částí je v kterém stavu jednání, termíny
+  (druhé kolo Senátu, lhůty ustavujících zasedání) a poslední zprávy
+  z vyjednávání napříč všemi zastupitelstvy.
+- **Data ke stažení** — [stav vyjednávání](https://www.volimprahu.cz/data/vyjednavani.json)
+  a [konečné výsledky](https://www.volimprahu.cz/data/vysledky-2026.json) jako
+  JSON pro novináře, výzkumníky i jazykové modely.
 - **[Aktuálně](https://www.volimprahu.cz/aktualne)** — krátké datované zprávy,
   každá se zdrojem. Odebírat je jde přes
   [RSS](https://www.volimprahu.cz/aktualne/feed.xml).

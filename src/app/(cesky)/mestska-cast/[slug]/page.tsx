@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   const mc = mestskaCastPodleSlugu(slug)
   if (!mc) return {}
   return {
-    title: mc.nazev,
+    title: `${mc.nazev}: výsledky voleb 2026 a kdo povede radnici`,
     description: `Volby do zastupitelstva ${mc.nazev} 2026: výsledky, rozdělení ${mc.mandaty} mandátů, zvolení zastupitelé a kandidátní listiny.`,
   }
 }

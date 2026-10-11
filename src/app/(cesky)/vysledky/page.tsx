@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StrukturovanaData } from '@/components/StrukturovanaData'
 import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
+import { absolutni } from '@/lib/web'
 import { KONECNE_VYSLEDKY, stranySMandaty } from '@/lib/konecneVysledky'
 import { formatujCasCSU, KOD_MAGISTRATU } from '@/lib/vysledky'
 
 export const metadata: Metadata = {
-  title: 'Výsledky',
+  title: 'Výsledky komunálních voleb 2026 v Praze',
   description:
     'Konečné výsledky voleb do Zastupitelstva hlavního města Prahy a zastupitelstev 57 městských částí 2026: mandáty, zvolení zastupitelé, účast.',
 }
@@ -25,6 +27,22 @@ export default function StrankaVysledku() {
 
   return (
     <div className="space-y-12">
+      <StrukturovanaData
+        data={{
+          '@type': 'Dataset',
+          name: 'Konečné výsledky komunálních voleb 2026 v Praze',
+          description:
+            'Hlasy, procenta a mandáty volebních stran a zvolení zastupitelé ve všech 58 pražských zastupitelstvech (magistrát a 57 městských částí), volby 9.–10. 10. 2026.',
+          url: absolutni('/vysledky'),
+          inLanguage: 'cs',
+          temporalCoverage: '2026-10-09/2026-10-10',
+          spatialCoverage: { '@type': 'Place', name: 'Hlavní město Praha' },
+          creator: { '@type': 'GovernmentOrganization', name: 'Český statistický úřad', url: 'https://csu.gov.cz' },
+          distribution: [
+            { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: absolutni('/data/vysledky-2026.json') },
+          ],
+        }}
+      />
       <header className="max-w-prose">
         <p className="popisek-uredni">Volby 9.–10. října 2026 · sečteno</p>
         <h1 className="mt-2 text-4xl">Výsledky</h1>

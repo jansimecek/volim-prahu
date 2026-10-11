@@ -122,3 +122,31 @@ export function vylouceniProKoalice(slug: string): {
   }
   return [...podleDvojice.values()].map((v) => ({ kdo: v.kdo, koho: v.koho, href: odkaz(v), kdy: v.kdy }))
 }
+
+/** Událost spolu se zastupitelstvem, kde se stala — pro souhrnné přehledy. */
+export type UdalostSMistem = Udalost & { zastupitelstvo: string }
+
+/** Všechny doložené události napříč zastupitelstvy, od nejnovější. */
+export function vsechnyUdalosti(): UdalostSMistem[] {
+  return vyjednavani
+    .flatMap((v) => v.udalosti.map((u) => ({ ...u, zastupitelstvo: v.zastupitelstvo })))
+    .sort((a, b) => b.datum.localeCompare(a.datum) || a.zastupitelstvo.localeCompare(b.zastupitelstvo))
+}
+
+/** Kdy jsme vyjednávání naposledy ověřovali — nejnovější `overeno` ze všech souborů. */
+export function naposledyOvereno(): string | undefined {
+  return vyjednavani.map((v) => v.overeno).sort().at(-1)
+}
+
+/** Kolik zastupitelstev je v kterém stavu. */
+export function pocetPodleStavu(slugy: readonly string[]): Record<Stav, number> {
+  const pocty: Record<Stav, number> = {
+    'bez-zprav': 0,
+    jednani: 0,
+    memorandum: 0,
+    'koalicni-smlouva': 0,
+    'zvoleno-vedeni': 0,
+  }
+  for (const slug of slugy) pocty[stavVyjednavani(vyjednavaniZastupitelstva(slug))]++
+  return pocty
+}
