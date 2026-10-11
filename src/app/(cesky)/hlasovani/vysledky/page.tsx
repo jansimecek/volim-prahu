@@ -8,7 +8,13 @@ export const metadata: Metadata = {
   description: 'Souhrn ankety čtenářů, zveřejněný po zavření volebních místností.',
 }
 
-export const revalidate = 300
+/**
+ * Po zavření místností čte stránka úložiště ankety. Kdyby se předgenerovala
+ * při buildu, shodil by každý build bez POSTGRES_URL (CI, náhledy) — proto se
+ * vykresluje až na požadavek. Chybějící úložiště v produkci tak dál selže
+ * nahlas, jen ne při sestavení.
+ */
+export const dynamic = 'force-dynamic'
 
 const formatDatumu = new Intl.DateTimeFormat('cs-CZ', {
   dateStyle: 'long',
