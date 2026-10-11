@@ -50,7 +50,23 @@ export async function GET(request: Request) {
     }
   }
 
-  await ulozSnapshot(snapshot)
+  try {
+    await ulozSnapshot(snapshot)
+  } catch (chyba) {
+    // Endpoint je za CRON_SECRET, takže zprávu úložiště vidí jen workflow —
+    // bez ní by se selhání dalo diagnostikovat jen z logů Vercelu.
+    console.error('[volebni-noc] uložení snapshotu selhalo:', chyba)
+    return NextResponse.json(
+      {
+        ulozeno: false,
+        chyba: 'Uložení snapshotu selhalo.',
+        detail: chyba instanceof Error ? chyba.message : String(chyba),
+        blob: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
+      },
+      { status: 503 },
+    )
+  }
+
   return NextResponse.json({
     ulozeno: true,
     zdroj: snapshot.zdroj,
