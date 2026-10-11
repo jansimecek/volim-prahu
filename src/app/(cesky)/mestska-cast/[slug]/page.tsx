@@ -11,6 +11,7 @@ import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
 import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
 import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
+import { VyjednavaniZastupitelstva } from '@/components/VyjednavaniZastupitelstva'
 import { vysledekZastupitelstva } from '@/lib/konecneVysledky'
 
 type Parametry = { params: Promise<{ slug: string }> }
@@ -68,6 +69,20 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         <section id="vysledky" className="space-y-4">
           <h2 className="text-3xl">Výsledky voleb 2026</h2>
           <VysledekZastupitelstva z={vysledek} nadpisovaUroven="h3" />
+        </section>
+      )}
+
+      {vysledek && (
+        <section id="vyjednavani" className="scroll-mt-20 space-y-4">
+          <h2 className="text-3xl">Vyjednávání o vedení</h2>
+          <p className="max-w-prose">
+            Starostu a radu zvolí {cislo(vysledek.mandatuCelkem)} nových zastupitelů na ustavujícím
+            zasedání.{' '}
+            <Link href="/koalice#mestske-casti" className="odkaz-akcent">
+              Přehled všech městských částí
+            </Link>
+          </p>
+          <VyjednavaniZastupitelstva z={vysledek} nadpis="h3" />
         </section>
       )}
 

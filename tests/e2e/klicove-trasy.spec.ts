@@ -62,9 +62,12 @@ test('stránka městské části vypisuje kandidátní listiny', async ({ page }
   await expect(page.getByText(/volebních stran s celkem/)).toBeVisible()
 })
 
-test('stránka městské části ukazuje výsledky', async ({ page }) => {
+test('stránka městské části ukazuje výsledky a vyjednávání', async ({ page }) => {
   await page.goto('/mestska-cast/praha-7')
   await expect(page.getByRole('heading', { name: 'Výsledky voleb 2026' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Vyjednávání o vedení' })).toBeVisible()
+  // V Praze 7 má PRAHA 7 SOBĚ 18 z 29 mandátů, tedy většinu sama.
+  await expect(page.getByText(/má sama 18 mandátů z 29/)).toBeVisible()
 })
 
 test('metodika je dosažitelná z hlavní navigace', async ({ page }) => {
