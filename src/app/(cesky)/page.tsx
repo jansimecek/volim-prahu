@@ -1,213 +1,194 @@
-import type { Metadata } from 'next'
+import type { Metadata, Route } from 'next'
 import Link from 'next/link'
-import type { ReactNode } from 'react'
-import { programy } from '#content'
-import { DlazdiceStrany } from '@/components/DlazdiceStrany'
-import { RazenySeznam } from '@/components/RazenySeznam'
 import { Aktualita } from '@/components/Aktualita'
 import { MojeVolby } from '@/components/MojeVolby'
-import { VyzvaAnketa } from '@/components/VyzvaAnketa'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
-import { absolutni } from '@/lib/web'
-import { sPoctem, sklonuj } from '@/lib/cestina'
-import { kandidatka } from '@/lib/kandidatky'
-import { MAGISTRAT, MESTSKE_CASTI } from '@/lib/obsah'
-import { duvodBezPruzkumu, puvodPruzkumu, zdrojePoznamky } from '@/lib/pruzkumy'
-import { vypisStran } from '@/lib/vypisStran'
 import { nejnovejsi } from '@/lib/aktuality'
-import { Odpocet } from '@/components/Odpocet'
-import { tentoTyden } from '@/lib/tentoTyden'
+import { datumCesky } from '@/lib/cestina'
+import { KONECNE_VYSLEDKY, stranySMandaty } from '@/lib/konecneVysledky'
+import { vetsina } from '@/lib/koalice'
+import {
+  jeSledovane,
+  nazevSubjektu,
+  POPIS_STAVU,
+  posledniUdalost,
+  stavVyjednavani,
+  vyjednavaniZastupitelstva,
+} from '@/lib/vyjednavani'
+import { KOD_MAGISTRATU } from '@/lib/vysledky'
+import { absolutni } from '@/lib/web'
 
 export const metadata: Metadata = {
   description:
-    'Lídři všech 24 kandidátek do zastupitelstva Prahy, srovnání jejich postojů k bydlení, dopravě a územnímu plánu a hodnocení, co z jejich slibů daná úroveň samosprávy vůbec může splnit. Volby 9.–10. října 2026.',
+    'Po komunálních volbách 2026: konečné výsledky všech 58 pražských zastupitelstev, kdo s kým jedná o vedení Prahy a městských částí, se zdrojem u každé zprávy, a sestavy, které mají většinu.',
 }
 
+const procenta = new Intl.NumberFormat('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+
 export default async function Rozcestnik() {
-  const listina = kandidatka('magistrat')
-  const { polozky, pruzkum } = await vypisStran('magistrat')
-  const kandidatuCelkem =
-    listina?.strany.reduce((n, s) => n + s.kandidati.filter((k) => !k.neplatny).length, 0) ?? 0
-  const hodnoceno = programy.reduce((n, p) => n + p.body.filter((b) => b.hodnoceni).length, 0)
-  const sProgramem = polozky.filter((s) => s.programStav === 'zverejnen').length
-  const sCastiProgramu = polozky.filter(
-    (s) => s.programStav === 'jen-casti' || s.programStav === 'jen-priority',
-  ).length
+  const vysledky = KONECNE_VYSLEDKY.zastupitelstva
+  const magistrat = vysledky.find((z) => z.kod === KOD_MAGISTRATU)!
+  const vyjednavaniMagistratu = vyjednavaniZastupitelstva('magistrat')
+  const posledniMagistrat = [...(vyjednavaniMagistratu?.udalosti ?? [])]
+    .sort((a, b) => b.datum.localeCompare(a.datum))
+    .slice(0, 4)
+  const casti = vysledky
+    .filter((z) => z.kod !== KOD_MAGISTRATU && jeSledovane(z.slug))
+    .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs', { numeric: true }))
+  const sVetsinouJedne = casti.filter((z) => {
+    const prvni = stranySMandaty(z)[0]
+    return prvni !== undefined && prvni.mandaty >= vetsina(z.mandatuCelkem)
+  }).length
   const aktuality = await nejnovejsi(4)
-  const tyden = tentoTyden()
 
   return (
     <div className="space-y-12 sm:space-y-16">
       <StrukturovanaData
         data={{
-          '@type': 'Event',
-          name: 'Komunální a senátní volby v Praze 2026',
+          '@type': 'WebPage',
+          name: 'Volím Prahu — po volbách 2026',
           description:
-            'Volby do zastupitelstev městských částí a Zastupitelstva hl. m. Prahy, ve třech obvodech i do Senátu. Pátek 14–22 h, sobota 8–14 h.',
-          startDate: '2026-10-09T14:00:00+02:00',
-          endDate: '2026-10-10T14:00:00+02:00',
-          eventStatus: 'https://schema.org/EventScheduled',
-          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-          location: { '@type': 'City', name: 'Praha', address: { '@type': 'PostalAddress', addressLocality: 'Praha', addressCountry: 'CZ' } },
-          organizer: { '@type': 'GovernmentOrganization', name: 'Ministerstvo vnitra ČR', url: 'https://mv.gov.cz/volby-referenda' },
-          url: absolutni('/kde-volim'),
+            'Konečné výsledky komunálních voleb 2026 v Praze a sledování povolebního vyjednávání o vedení města a městských částí.',
+          url: absolutni('/'),
         }}
       />
+
       <section>
-        <p className="popisek-uredni">Komunální a senátní volby · 9.–10. října 2026</p>
+        <p className="popisek-uredni">Po komunálních volbách · 9.–10. října 2026</p>
         <h1 className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl">
-          Co vaši kandidáti slibují — a co z toho jejich úroveň samosprávy vůbec může splnit
+          Kdo povede Prahu a vaši městskou část
         </h1>
-        {/* Úvod říká „u hodnocených slibů“, ne „u každého“: hodnocení má jen
-            menšina slibů a titulní strana nesmí tvrdit víc než zbytek webu. */}
         <p className="mt-5 max-w-prose text-lg">
-          V Praze se volí dvě úrovně samosprávy: zastupitelstvo celého města a zastupitelstvo
-          městské části. Slib, který zvládne magistrát, bývá pro městskou část mimo pravomoc.
-          U hodnocených slibů ukazujeme, kdo o věci rozhoduje, jestli jsou na ni peníze
-          a jestli se stihne za čtyři roky.
+          Sečteno je všech 58 pražských zastupitelstev. Primátora, starosty a rady teď zvolí nově
+          zvolení zastupitelé — a k tomu potřebují většinu. Zapisujeme, kdo s kým jedná, vždy se
+          zdrojem a s rozlišením, jestli jde o dokument, citaci, nebo parafrázi médií.
         </p>
         <p className="mt-4 flex flex-wrap gap-x-6 gap-y-1">
-          <Link href="/temata" className="odkaz-akcent">
-            Srovnání zásadních témat
+          <Link href="/vysledky" className="odkaz-akcent">
+            Konečné výsledky
           </Link>
-          <Link href="/jak-hodnotime" className="odkaz-akcent">
-            Jak hodnotíme
+          <Link href="/koalice" className="odkaz-akcent">
+            Vyjednávání a koalice
           </Link>
         </p>
-
-        {/* Tři otázky, se kterými volič na web přichází nejčastěji. Údaje jsou
-            tytéž jako na /kde-volim, kde jsou rozepsané i se zdroji. */}
-        <dl className="mt-8 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
-          <Fakt popisek="Kdy">
-            <span className="block">Pátek 9.&nbsp;října, 14–22&nbsp;h</span>
-            <span className="block">Sobota 10.&nbsp;října, 8–14&nbsp;h</span>
-          </Fakt>
-          <Fakt popisek="Co volíte">
-            Zastupitelstvo Prahy a zastupitelstvo své městské části. Ve třech obvodech
-            i senátora.
-          </Fakt>
-          <Fakt popisek="Kde">
-            Ve svém okrsku podle trvalého pobytu, s občanským průkazem, pasem nebo
-            eDokladem. Voličský průkaz u komunálních voleb neexistuje.
-          </Fakt>
-        </dl>
-
-        <div className="mt-6">
-          <Odpocet />
-        </div>
       </section>
 
-      <section aria-labelledby="moje-volby" className="border border-inkoust bg-papir p-5 sm:p-8">
-        <p className="popisek-uredni">Moje volby</p>
-        <h2 id="moje-volby" className="mt-1 text-2xl">
-          Kde a koho budu volit?
+      <section aria-labelledby="magistrat" className="border border-inkoust bg-papir p-5 sm:p-8">
+        <p className="popisek-uredni">Magistrát · 65 zastupitelů · většina {vetsina(magistrat.mandatuCelkem)}</p>
+        <h2 id="magistrat" className="mt-1 text-2xl">
+          {POPIS_STAVU[stavVyjednavani(vyjednavaniMagistratu)]}
+        </h2>
+        <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
+          {stranySMandaty(magistrat).map((s) => (
+            <li key={s.cislo}>
+              {s.nazev} <span className="font-mono">{s.mandaty}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="popisek-uredni mt-2">účast {procenta.format(magistrat.ucastProcenta)} %</p>
+
+        {posledniMagistrat.length > 0 && (
+          <ol className="mt-6 border-t border-linka-silna">
+            {posledniMagistrat.map((u) => (
+              <li key={u.id} className="border-b border-linka-silna py-3">
+                <p className="popisek-uredni">
+                  {datumCesky(u.datum)} · {u.subjekty.map((s) => nazevSubjektu(magistrat, s)).join(', ')}
+                </p>
+                <p className="mt-1 max-w-prose">{u.shrnuti}</p>
+              </li>
+            ))}
+          </ol>
+        )}
+        <p className="mt-4">
+          <Link href="/koalice#magistrat" className="odkaz-akcent">
+            Celá časová osa a sestavy s většinou
+          </Link>
+        </p>
+      </section>
+
+      <section aria-labelledby="casti">
+        <h2 id="casti" className="text-2xl">
+          Městské části
         </h2>
         <p className="mt-2 max-w-prose">
-          Podle polohy zjistíme váš okrsek a k němu městskou část, kandidátky, jestli volíte
-          i senátora a kde je volební místnost. Poloha zůstane ve vašem prohlížeči.
+          Vedení vznikne dohodou, pokud nemá jedna strana sama většinu — to se z 22 velkých částí
+          stalo v {sVetsinouJedne}. U každé části najdete výsledky, zvolené zastupitele a doložené
+          zprávy o vyjednávání.
+        </p>
+        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
+          {casti.map((z) => {
+            const prvni = stranySMandaty(z)[0]
+            const v = vyjednavaniZastupitelstva(z.slug)
+            const posledni = posledniUdalost(v)
+            return (
+              <li key={z.kod} className="bg-papir">
+                <Link
+                  href={`/mestska-cast/${z.slug}#vyjednavani`}
+                  className="group block h-full p-3 no-underline hover:bg-papir-tmavsi"
+                >
+                  <span className="font-display font-medium group-hover:underline">{z.nazev}</span>
+                  {prvni && (
+                    <span className="mt-1 block text-sm">
+                      {prvni.nazev} {prvni.mandaty}/{z.mandatuCelkem}
+                      {prvni.mandaty >= vetsina(z.mandatuCelkem) && ' · sama většina'}
+                    </span>
+                  )}
+                  <span className="popisek-uredni mt-1 block">
+                    {POPIS_STAVU[stavVyjednavani(v)]}
+                    {posledni && ` · ${datumCesky(posledni.datum)}`}
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+        <p className="mt-3">
+          <Link href="/koalice#mestske-casti" className="odkaz-akcent">
+            Všech 57 městských částí
+          </Link>
+        </p>
+      </section>
+
+      <section aria-labelledby="moje-cast" className="border border-inkoust bg-papir p-5 sm:p-8">
+        <p className="popisek-uredni">Moje městská část</p>
+        <h2 id="moje-cast" className="mt-1 text-2xl">
+          Kam patřím?
+        </h2>
+        <p className="mt-2 max-w-prose">
+          Podle polohy zjistíme váš okrsek, městskou část a jestli se u vás ve druhém kole volí
+          senátor. Poloha zůstane ve vašem prohlížeči.
         </p>
         <div className="mt-5">
           <MojeVolby />
         </div>
       </section>
 
-      {/* Volební týden den po dni. Proběhlé dny se nevypisují; po druhém
-          kole senátních voleb sekce zmizí sama. */}
-      {tyden.length > 0 && (
-        <section aria-labelledby="tento-tyden">
-          <h2 id="tento-tyden" className="text-2xl">
-            Do voleb: co vás čeká
-          </h2>
-          <p className="mt-2 max-w-prose">
-            Lhůty, debaty a volební dny pohromadě. U termínů je odkaz na zdroj nebo na stránku,
-            kde je to rozepsané.
-          </p>
-          <ol className="mt-5 border-t border-inkoust">
-            {tyden.map((d) => (
-              <li
-                key={d.den}
-                className="grid gap-2 border-b border-linka-silna py-4 sm:grid-cols-[12rem_1fr] sm:gap-6"
-              >
-                <p className="font-display text-lg font-semibold first-letter:uppercase">
-                  {d.popisek}
-                  {d.dnes && <span className="popisek-uredni ml-2 align-middle">dnes</span>}
-                </p>
-                <ul className="space-y-3">
-                  {d.udalosti.map((u) => (
-                    <li key={u.nadpis}>
-                      <p className="font-semibold">
-                        {u.cas && <span className="tabular-nums">{u.cas} · </span>}
-                        {u.nadpis}
-                      </p>
-                      <p className="mt-1 max-w-prose text-sm">{u.popis}</p>
-                      {(u.odkaz || u.zdroj) && (
-                        <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                          {u.odkaz && (
-                            <Link href={u.odkaz.href} className="odkaz-akcent inline-block py-1">
-                              {u.odkaz.text}
-                            </Link>
-                          )}
-                          {u.zdroj && (
-                            <a href={u.zdroj.url} className="odkaz-navigace inline-block py-1" rel="noopener">
-                              Zdroj: {u.zdroj.text}
-                            </a>
-                          )}
-                        </p>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-
-      {/* Lídři patří na titulní stranu — je to první věc, kterou volič hledá. */}
-      {polozky.length > 0 && (
-        <section aria-labelledby="lidri">
-          <h2 id="lidri" className="text-2xl">
-            Kdo vede kandidátky na magistrát
-          </h2>
-          <p className="mt-2 max-w-prose">
-            Do Zastupitelstva hl. m. Prahy ({MAGISTRAT.mandaty} mandátů){' '}
-            {sklonuj(polozky.length, 'kandiduje', 'kandidují', 'kandiduje')}{' '}
-            {sPoctem(polozky.length, 'volební strana', 'volební strany', 'volebních stran')} s{' '}
-            {sPoctem(kandidatuCelkem, 'kandidátem', 'kandidáty', 'kandidáty')}. Program
-            zveřejnil{sklonuj(sProgramem, 'a', 'y', 'o')} {sProgramem} z nich
-            {sCastiProgramu > 0 &&
-              `, ${sPoctem(sCastiProgramu, 'další kandidátka', 'další kandidátky', 'dalších kandidátek')} jen části nebo priority`}
-            . Hodnotíme zatím {sPoctem(hodnoceno, 'slib', 'sliby', 'slibů')}.
-          </p>
-
-          <RazenySeznam
-            polozky={polozky.map((strana) => ({
-              slug: strana.slug,
-              nazev: strana.zkratka,
-              cislo: strana.cislo,
-              procenta: strana.procenta,
-              obsah: <DlazdiceStrany strana={strana} kompaktni />,
-            }))}
-            tridaSeznamu="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3"
-            popisSeznamu="Lídři kandidátek na magistrát"
-            jednotka={['volební strana', 'volební strany', 'volebních stran']}
-            pruzkumPuvod={pruzkum ? puvodPruzkumu(pruzkum) : undefined}
-            pruzkumOdkaz={pruzkum?.url}
-            duvodBezPruzkumu={duvodBezPruzkumu('magistrat')}
-            zdrojeDuvodu={zdrojePoznamky()}
-          />
-
-          <p className="mt-4 max-w-prose text-sm">
-            Lídr je první jméno na kandidátní listině podle otevřených dat ČSÚ. Povolání
-            lídrů, celé listiny a vysvětlení, proč má hodnocení jen část stran, jsou na
-            stránce{' '}
-            <Link href="/praha" className="odkaz-akcent">
-              Magistrát
-            </Link>
-            .
-          </p>
-        </section>
-      )}
+      {/* Druhé kolo senátních voleb je týden po komunálních, ve třech pražských obvodech. */}
+      <section aria-labelledby="senat" className="max-w-prose border-l-2 border-praha pl-5">
+        <h2 id="senat" className="text-2xl">
+          Druhé kolo senátních voleb 16.–17. října
+        </h2>
+        <p className="mt-2">
+          Ve třech pražských obvodech se o senátora rozhodne až ve druhém kole: v obvodu Praha 1
+          Jiří Padevět (za STAN) proti Janu Čižinskému (Praha sobě), v obvodu Praha 5 Václav Láska
+          (SEN 21) proti Radku Sáblíkovi (ODS) a v obvodu Praha 9 David Smoljak (za STAN) proti
+          Dagmar Peckové (za ODS).
+        </p>
+        <p className="popisek-uredni mt-2">
+          Zdroj:{' '}
+          <a
+            href="https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/v-praze-vede-stan-druhe-je-spolu-pro-prahu-378045"
+            className="underline"
+            rel="noopener"
+          >
+            ČT24, 10. 10. 2026
+          </a>{' '}
+          ·{' '}
+          <Link href="/senat" className="underline">
+            senátní obvody
+          </Link>
+        </p>
+      </section>
 
       {aktuality.length > 0 && (
         <section aria-labelledby="aktuality">
@@ -229,60 +210,53 @@ export default async function Rozcestnik() {
         </section>
       )}
 
-      <VyzvaAnketa />
-
-      <section aria-labelledby="kam-dal">
-        <h2 id="kam-dal" className="text-2xl">
-          Kam dál
+      <section aria-labelledby="archiv">
+        <h2 id="archiv" className="text-2xl">
+          Archiv kampaně
         </h2>
+        <p className="mt-2 max-w-prose text-seda-uredni">
+          Co kandidátky slibovaly a jak jsme to hodnotili. Hodí se k porovnání s tím, na čem se
+          nové vedení dohodne.
+        </p>
         <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           <Rozcestka
-            href="/mestska-cast"
-            popisek="Moje čtvrť"
-            nadpis="Městské části"
-            popis={`${MESTSKE_CASTI.length} samostatných zastupitelstev. Školky, veřejná zeleň, místní zakázky, svěřené byty.`}
-          />
-          <Rozcestka
-            href="/senat"
-            popisek="Souběžně"
-            nadpis="Senát"
-            popis="Volí se jen ve třech z deseti pražských obvodů. Většina Pražanů senátní lístek nedostane."
-          />
-          <Rozcestka
-            href="/koalice"
-            popisek="Po volbách"
-            nadpis="Kdo s kým po volbách"
-            popis="Doložená vyjádření o povolební spolupráci a kalkulačka mandátů. Bez předpovědí."
+            href="/praha"
+            popisek="Magistrát"
+            nadpis="Kandidátky a programy"
+            popis="Lídři všech 24 kandidátek, jejich programy a hodnocení, co z nich magistrát může splnit."
           />
           <Rozcestka
             href="/temata"
             popisek="Srovnání"
             nadpis="Témata"
-            popis="Postoje kandidátek k bydlení, dopravě a územnímu plánu vedle sebe, u každého zdroj."
-          />
-          <Rozcestka
-            href="/kdo-o-cem-rozhoduje"
-            popisek="Podklad"
-            nadpis="Kdo o čem rozhoduje"
-            popis="Sedmnáct agend a u každé odkaz na paragraf. Parkovací zóny nejsou na radnici, ale na magistrátu."
+            popis="Postoje k bydlení, dopravě a územnímu plánu vedle sebe, u každého zdroj."
           />
           <Rozcestka
             href="/minule-obdobi"
             popisek="Podklad"
             nadpis="Plnění slibů"
-            popis="Co slíbila současná rada v programovém prohlášení a kolik z toho jde vůbec ověřit."
+            popis="Co slíbila odcházející rada v programovém prohlášení a kolik z toho jde ověřit."
+          />
+          <Rozcestka
+            href="/kdo-o-cem-rozhoduje"
+            popisek="Podklad"
+            nadpis="Kdo o čem rozhoduje"
+            popis="Sedmnáct agend a u každé odkaz na paragraf. Hodí se při čtení koaličních smluv."
+          />
+          <Rozcestka
+            href="/debaty"
+            popisek="Kampaň"
+            nadpis="Debaty kandidátů"
+            popis="Přehled předvolebních debat lídrů pražských kandidátek."
+          />
+          <Rozcestka
+            href="/senat"
+            popisek="Souběžně"
+            nadpis="Senát"
+            popis="Senátní volby ve třech pražských obvodech."
           />
         </ul>
       </section>
-    </div>
-  )
-}
-
-function Fakt({ popisek, children }: { popisek: string; children: ReactNode }) {
-  return (
-    <div className="bg-papir p-4">
-      <dt className="popisek-uredni">{popisek}</dt>
-      <dd className="mt-1">{children}</dd>
     </div>
   )
 }
@@ -293,7 +267,7 @@ function Rozcestka({
   nadpis,
   popis,
 }: {
-  href: '/mestska-cast' | '/senat' | '/koalice' | '/temata' | '/kdo-o-cem-rozhoduje' | '/minule-obdobi'
+  href: Route
   popisek: string
   nadpis: string
   popis: string

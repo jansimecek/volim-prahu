@@ -48,7 +48,7 @@ export function DeklaraceKoalic() {
     <section aria-labelledby="deklarace" className="space-y-6">
       <div className="max-w-prose">
         <h2 id="deklarace" className="scroll-mt-20 text-2xl">
-          Kdo koho vyloučil
+          Co kdo řekl před volbami
         </h2>
         <p className="mt-3">
           U každého vyjádření je, kdo ho řekl, kdy, jak je doložené a odkaz na zdroj. Vyjádření

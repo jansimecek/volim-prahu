@@ -429,10 +429,12 @@ testy, nácvik volební noci, build, e2e a audit přístupnosti):
   a tytéž zástupné značky (`tests/preklady.test.ts`). Kladný závěr testu
   způsobilosti smí padnout jen tam, kde ho zákon dává — hlídá to zvlášť,
   aby překlep ve stavu nepustil ven „ano" pro občanství mimo EU.
-- Kalkulačka mandátů na `/koalice` počítá podle § 45 zákona č. 491/2001 Sb.
-  Drží ji `tests/mandaty.test.ts` proti oficiálnímu rozdělení mandátů z roku 2022
-  ve všech 58 pražských zastupitelstvech a `pnpm nacvik` totéž proti živým datům ČSÚ.
-  Vyjádření o koalicích v `content/koalice.yaml` nesmí jako parafráze nést citaci.
+- Přepočet mandátů podle § 45 zákona č. 491/2001 Sb. (`src/lib/mandaty.ts`)
+  drží `tests/mandaty.test.ts` proti oficiálnímu rozdělení z roku 2022 ve všech
+  58 pražských zastupitelstvech a `pnpm nacvik` totéž proti živým datům ČSÚ.
+  Vyjádření o koalicích v `content/koalice.yaml` ani události vyjednávání
+  v `content/vyjednavani/` nesmí jako parafráze nést citaci. Slugy subjektů ve
+  vyjednávání musí existovat na kandidátce daného zastupitelstva (`pnpm validate`).
 - Výsledky ankety nelze vydat před zavřením volebních místností. Rozhoduje
   o tom jediná funkce, kterou volá API i stránka, a test hlídá, že se okno
   hlasování a okno výsledků nikdy nepřekryjí (`tests/hlasovani.test.ts`).
@@ -474,8 +476,31 @@ Nácvik nikdy nepíše do ostrého snapshotu — má vlastní cíl a nad produk�
 stav voleb 2026.
 
 Web se sám přepíná mezi režimy podle času (`src/lib/rezim.ts`): před volbami,
-volební dny, sčítání a od 13. 10. **archiv**. V archivním režimu je nad obsahem
-pruh, který říká, že volby proběhly a nic z webu už není návod, jak volit.
+volební dny, sčítání a od konce sčítání (11. 10. 8:35) **vyjednávání**. Po
+volbách je nad obsahem pruh, který říká, že volby proběhly a předvolební obsah
+je archiv kampaně.
+
+## Po volbách
+
+Konečné výsledky jsou v repozitáři (`data/vysledky/kv2026.json`), ne na Blobu:
+
+```bash
+pnpm import:vysledky
+```
+
+Import stáhne JSON prezentační aplikace ČSÚ pro všech 58 zastupitelstev
+a zapíše ho jen tehdy, když je všechno sečtené a sedí mandáty i počty zvolených.
+Zvolení zastupitelé se napojují na profily kandidátů přes id
+`kód zastupitelstva-číslo strany-pořadí na listině`.
+
+Vyjednávání se zapisuje do `content/vyjednavani/<slug zastupitelstva>.yaml`:
+časová osa doložených událostí (`vyjadreni`, `jednani`, `vylouceni`,
+`memorandum`, `koalicni-smlouva`, `rozpad`, `zasedani`, `volba`) se zdroji,
+volitelně datum ustavujícího zasedání a zvolené vedení. Stav na webu se
+odvozuje z událostí (`src/lib/vyjednavani.ts`), nikdy se nezapisuje ručně.
+Výčet sestav s většinou počítá `minimalniKoalice` z konečných mandátů;
+vyloučení bere z událostí typu `vylouceni` a u magistrátu i z předvolebních
+deklarací.
 
 ## Konfigurace v produkci
 

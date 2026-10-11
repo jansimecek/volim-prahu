@@ -53,7 +53,8 @@ const KONTROLOVAT_SLOVNIK = (soubor: string) =>
   soubor.startsWith('content/aktualne/') ||
   soubor.startsWith('content/postoje/') ||
   soubor === 'content/sporne-otazky.yaml' ||
-  soubor === 'content/koalice.yaml'
+  soubor === 'content/koalice.yaml' ||
+  soubor.startsWith('content/vyjednavani/')
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 
@@ -249,6 +250,7 @@ function overKrizoveOdkazy() {
   overOsoby(velite)
   overPostoje(velite, strany)
   overKoalice(velite, strany)
+  overVyjednavani(velite)
   overSporneOtazky(velite, strany)
 }
 
@@ -374,6 +376,50 @@ function overKoalice(velite: string, strany: { slug: string; uroven: string }[])
           soubor: 'content/koalice.yaml',
           radek: 0,
           zprava: `Vyjádření "${d.id}" odkazuje na subjekt "${slug}", který na magistrátu v content/strany neexistuje.`,
+          tvrde: true,
+        })
+      }
+    }
+  }
+}
+
+/**
+ * Vyjednávání se zapisuje slugy volebních stran z kandidátky daného
+ * zastupitelstva. Překlep by subjekt z časové osy i z výčtu koalic tiše
+ * vypustil, a soubor pro neexistující zastupitelstvo by se nikde nezobrazil.
+ */
+function overVyjednavani(velite: string) {
+  if (!existsSync(join(velite, 'vyjednavani.json'))) return
+  const data = JSON.parse(readFileSync(join(velite, 'vyjednavani.json'), 'utf8')) as {
+    zastupitelstvo: string
+    vedeni: { subjekt: string }[]
+    udalosti: { id: string; subjekty: string[]; sestava: string[]; vylucuje: string[] }[]
+  }[]
+  const videna = new Set<string>()
+  for (const v of data) {
+    const soubor = `content/vyjednavani/${v.zastupitelstvo}.yaml`
+    if (videna.has(v.zastupitelstvo)) {
+      nalezy.push({ soubor, radek: 0, zprava: `Zastupitelstvo "${v.zastupitelstvo}" má víc souborů.`, tvrde: true })
+    }
+    videna.add(v.zastupitelstvo)
+    const cesta = join('data/kandidatky', `${v.zastupitelstvo}.json`)
+    if (!existsSync(cesta)) {
+      nalezy.push({ soubor, radek: 0, zprava: `Zastupitelstvo "${v.zastupitelstvo}" nemá kandidátku.`, tvrde: true })
+      continue
+    }
+    const slugy = new Set(
+      (JSON.parse(readFileSync(cesta, 'utf8')) as { strany: { slug: string }[] }).strany.map((s) => s.slug),
+    )
+    const odkazy = [
+      ...v.udalosti.flatMap((u) => [...u.subjekty, ...u.sestava, ...u.vylucuje].map((slug) => ({ slug, kde: `Událost "${u.id}"` }))),
+      ...v.vedeni.map((f) => ({ slug: f.subjekt, kde: 'Vedení' })),
+    ]
+    for (const { slug, kde } of odkazy) {
+      if (!slugy.has(slug)) {
+        nalezy.push({
+          soubor,
+          radek: 0,
+          zprava: `${kde} odkazuje na subjekt "${slug}", který na kandidátce ${v.zastupitelstvo} není.`,
           tvrde: true,
         })
       }

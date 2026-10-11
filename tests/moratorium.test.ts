@@ -68,18 +68,20 @@ describe('moratorium na předvolební průzkumy', () => {
 
 describe('režim webu', () => {
   it('se přepíná podle času, ne podle toho, jestli si na to někdo vzpomene', async () => {
-    const { rezimWebu, jeArchiv } = await import('../src/lib/rezim')
+    const { rezimWebu, jePoVolbach } = await import('../src/lib/rezim')
     expect(rezimWebu(new Date('2026-09-01T12:00:00+02:00'))).toBe('pred-volbami')
     expect(rezimWebu(new Date('2026-10-09T18:00:00+02:00'))).toBe('volebni-dny')
     expect(rezimWebu(new Date('2026-10-10T18:00:00+02:00'))).toBe('scitani')
-    expect(rezimWebu(new Date('2026-10-20T12:00:00+02:00'))).toBe('archiv')
-    expect(jeArchiv(new Date('2026-10-20T12:00:00+02:00'))).toBe(true)
-    expect(jeArchiv(new Date('2026-09-01T12:00:00+02:00'))).toBe(false)
+    expect(rezimWebu(new Date('2026-10-11T08:00:00+02:00'))).toBe('scitani')
+    expect(rezimWebu(new Date('2026-10-11T09:00:00+02:00'))).toBe('vyjednavani')
+    expect(rezimWebu(new Date('2026-11-20T12:00:00+01:00'))).toBe('vyjednavani')
+    expect(jePoVolbach(new Date('2026-10-20T12:00:00+02:00'))).toBe(true)
+    expect(jePoVolbach(new Date('2026-09-01T12:00:00+02:00'))).toBe(false)
   })
 
-  it('v archivu je vždy vysvětlení, proč je to archiv', async () => {
+  it('po volbách pruh říká, že předvolební obsah je archiv kampaně', async () => {
     const { POPIS_REZIMU } = await import('../src/lib/rezim')
-    expect(POPIS_REZIMU.archiv).toContain('archiv')
+    expect(POPIS_REZIMU.vyjednavani).toContain('archiv kampaně')
     expect(POPIS_REZIMU['pred-volbami']).toBeNull()
   })
 })

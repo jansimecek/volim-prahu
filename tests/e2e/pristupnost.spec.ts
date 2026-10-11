@@ -24,7 +24,7 @@ const TRASY = [
   { cesta: '/hlasovani', nazev: 'anketa' },
   { cesta: '/aktualne', nazev: 'aktuality' },
   { cesta: '/rozhovory', nazev: 'rozhovory s kandidáty' },
-  { cesta: '/koalice', nazev: 'koalice a kalkulačka mandátů' },
+  { cesta: '/koalice', nazev: 'vyjednávání a koalice' },
   { cesta: '/aktualne/kantar-snemovni-model-srpen-2026', nazev: 'aktualita s tabulkou průzkumu' },
   { cesta: '/aktualne/moratorium-na-pruzkumy-2026', nazev: 'jedna aktualita' },
   { cesta: '/mestska-cast/praha-22', nazev: 'městská část s přepínačem řazení' },
@@ -448,8 +448,8 @@ test('menu na telefonu nabízí i odkazy, které jinak žijí v patičce', async
   await page.goto('/')
   await page.getByRole('button', { name: 'Menu' }).click()
   const navigace = page.getByRole('navigation', { name: 'Hlavní navigace' })
-  await navigace.getByRole('link', { name: 'Kdo s kým' }).click()
-  await expect(page).toHaveURL(/\/koalice$/)
+  await navigace.getByRole('link', { name: 'Debaty' }).click()
+  await expect(page).toHaveURL(/\/debaty$/)
 })
 
 test('na širokém okně je navigace vidět a tlačítko menu nikde', async ({ page }) => {

@@ -71,14 +71,20 @@ export const metadata: Metadata = {
  */
 const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popisek: string }[] }[] = [
   {
-    nadpis: 'Průvodce',
+    nadpis: 'Po volbách',
     odkazy: [
-      { href: '/praha', popisek: 'Magistrát a kandidátky' },
-      { href: '/koalice', popisek: 'Kdo s kým po volbách' },
-      { href: '/debaty', popisek: 'Debaty kandidátů' },
+      { href: '/vysledky', popisek: 'Konečné výsledky' },
+      { href: '/koalice', popisek: 'Vyjednávání a koalice' },
       { href: '/mestska-cast', popisek: 'Městské části' },
       { href: '/senat', popisek: 'Senát' },
-      { href: '/kde-volim', popisek: 'Kde a jak volím' },
+    ],
+  },
+  {
+    nadpis: 'Archiv kampaně',
+    odkazy: [
+      { href: '/praha', popisek: 'Magistrát a kandidátky' },
+      { href: '/debaty', popisek: 'Debaty kandidátů' },
+      { href: '/kde-volim', popisek: 'Kde a jak se volilo' },
       { href: '/hlasovani', popisek: 'Anketa čtenářů' },
     ],
   },
@@ -104,14 +110,14 @@ const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popise
 ]
 
 const NAVIGACE: readonly { href: Route; popisek: string }[] = [
+  { href: '/vysledky', popisek: 'Výsledky' },
+  { href: '/koalice', popisek: 'Vyjednávání' },
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
   { href: '/senat', popisek: 'Senát' },
   { href: '/temata', popisek: 'Témata' },
   { href: '/minule-obdobi', popisek: 'Plnění slibů' },
   { href: '/aktualne', popisek: 'Aktuálně' },
-  { href: '/kde-volim', popisek: 'Kde volím' },
-  { href: '/hlasovani', popisek: 'Anketa' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
 ]
 
@@ -120,8 +126,9 @@ const NAVIGACE: readonly { href: Route; popisek: string }[] = [
  * v patičce. Na telefonu je patička čtyři obrazovky pod koncem obsahu.
  */
 const NAVIGACE_DALSI: readonly { href: Route; popisek: string }[] = [
-  { href: '/koalice', popisek: 'Kdo s kým' },
   { href: '/debaty', popisek: 'Debaty' },
+  { href: '/kde-volim', popisek: 'Kde se volilo' },
+  { href: '/hlasovani', popisek: 'Anketa' },
   { href: '/rozhovory', popisek: 'Rozhovory' },
   { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo rozhoduje' },
   { href: '/rozpoctovy-ramec', popisek: 'Rozpočet' },
@@ -130,7 +137,7 @@ const NAVIGACE_DALSI: readonly { href: Route; popisek: string }[] = [
 
 /**
  * Fáze voleb i moratorium na průzkumy se odvozují od času. Kdyby se stránky
- * zabetonovaly do buildu, přepnul by se web do archivního režimu až při
+ * zabetonovaly do buildu, přepnul by se web do povolebního režimu až při
  * příštím nasazení — tedy nejspíš nikdy. Patnáct minut je dost jemné na
  * volební víkend a dost hrubé, aby to nic nestálo.
  */

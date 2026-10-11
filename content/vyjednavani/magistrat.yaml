@@ -1,0 +1,178 @@
+# Povolební vyjednávání o vedení hlavního města Prahy.
+#
+# Výsledek: STAN 17, SPOLU 17, Praha sobě 13, ANO 11, Piráti 7 (většina 33).
+# Zapisuje se jen doložené; citace jsou ověřené v surovém textu zdroje.
+# Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
+
+zastupitelstvo: magistrat
+overeno: 2026-10-11
+
+zdroje:
+  - id: ct24-10-10
+    medium: "ČT24"
+    nazev: "V hlavním městě vyhrál STAN, druhé je SPOLU pro Prahu"
+    datum: 2026-10-10
+    url: "https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/v-praze-vede-stan-druhe-je-spolu-pro-prahu-378045"
+  - id: pd-10-10
+    medium: "Pražský deník"
+    nazev: "Vyjednávání v Praze začalo. STAN a SPOLU mají většinu, lídři už se spojili"
+    datum: 2026-10-10
+    url: "https://prazsky.denik.cz/komunalni-volby/volby-vyjednavani-v-praze-zacalo-stan-spolu-koalice-portlik-hlavacek/"
+  - id: denikn-10-10
+    medium: "Deník N"
+    nazev: "Předseda Prahy sobě Adam Scheinherr se zítra sejde s lídrem Spolu pro Prahu Tomášem Portlíkem a nejspíš v pondělí s jedničkou pražské kandidátky hnutí STAN Petrem Hlaváčkem"
+    datum: 2026-10-10
+    url: "https://denikn.cz/minuta/2214413"
+  - id: echo-10-10
+    medium: "Echo24"
+    nazev: "Novým pražským primátorem bude zřejmě Hlaváček, tuší to i Portlík. ANO bude ze hry"
+    datum: 2026-10-10
+    url: "https://www.echo24.cz/a/HbajB/zpravy-domaci-komunalni-volby-praha-koalice-vitez-stan-ods-praha-sobe-varovani-babis-hnuti-ano"
+  - id: cnn-11-10
+    medium: "CNN Prima NEWS"
+    nazev: "Jak může vypadat nová pražská koalice? STAN si může vybírat, Piráti jako horký brambor"
+    datum: 2026-10-11
+    url: "https://cnn.iprima.cz/jak-muze-vypadat-nova-prazska-koalice-stan-si-muze-vybirat-pirati-jako-horky-brambor-524099"
+  - id: ctk-11-10
+    medium: "České noviny (ČTK)"
+    nazev: "Volby v Praze vyhrál STAN, má 17 mandátů, druhé je Spolu"
+    datum: 2026-10-11
+    url: "https://www.ceskenoviny.cz/zpravy/v-praze-budou-o-koalici-jednat-stan-spolu-praha-sobe-a-pirati/2885958"
+
+udalosti:
+  - id: stan-jedna-se-tremi
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Určitě se sejdeme se Spolu, Prahou sobě a Piráty. Budeme jednat
+      o jejich prioritách.
+    shrnuti: >-
+      Vítězné STAN chce o koalici jednat se SPOLU, Prahou sobě a Piráty,
+      přednost dostane SPOLU. Podle ČT24 Hlaváček dodal, že širokou koalici
+      „asi nemůžeme vyloučit, ale je to věc nějakého jednání“.
+    zdroje: [cnn-11-10, ct24-10-10, pd-10-10]
+
+  - id: stan-vylucuje-ano
+    datum: 2026-10-10
+    typ: vylouceni
+    subjekty: [starostove-a-nezavisli]
+    vylucuje: [ano-2011]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      Hlaváček na volební tiskové konferenci vyloučil spolupráci s hnutím ANO,
+      stejně jako už před volbami.
+    zdroje: [ct24-10-10, echo-10-10]
+
+  - id: rakusan-ne-dvoubarevna
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Vít Rakušan, předseda STAN (celostátní vedení)
+    doklad: parafraze
+    shrnuti: >-
+      Předseda hnutí podle CNN Prima NEWS řekl, že si nepřeje křehkou
+      dvoubarevnou koalici — tedy jen STAN a SPOLU, které by měly 34 mandátů,
+      jen o jeden víc, než je většina.
+    zdroje: [cnn-11-10]
+
+  - id: hlavacek-portlik-telefon
+    datum: 2026-10-10
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: Petr Hlaváček a Tomáš Portlík
+    doklad: parafraze
+    shrnuti: >-
+      Lídři STAN a SPOLU si ještě během sčítání zavolali a domluvili se, že se
+      sejdou nejpozději v pondělí 12. 10. První schůzka má být o programových
+      prioritách STAN.
+    zdroje: [pd-10-10, ct24-10-10]
+
+  - id: spolu-primator-vitezi
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu]
+    kdo: Tomáš Portlík, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Sluší se a patří slyšet tu vítězovu představu, pak teprve se budeme
+      odvíjet dál.
+    shrnuti: >-
+      Portlík uznal nárok vítězného STAN na post primátora. SPOLU je podle něj
+      otevřené různým gescím, sám zmínil finance nebo dopravu.
+    zdroje: [ct24-10-10, pd-10-10]
+
+  - id: spolu-vylucuje-ano
+    datum: 2026-10-10
+    typ: vylouceni
+    subjekty: [spolu-pro-prahu]
+    vylucuje: [ano-2011]
+    kdo: Tomáš Portlík, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Pražané jasně rozdali karty, myslím, že je vyloučitelné, že bude
+      v koalici ANO.
+    shrnuti: >-
+      SPOLU po sečtení většiny okrsků vyloučilo koalici s ANO.
+    zdroje: [ct24-10-10, pd-10-10]
+
+  - id: spolu-pirati-praha-sobe
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu]
+    kdo: Tomáš Portlík, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Že bychom si od Pirátů rádi odpočinuli, stále platí.
+    shrnuti: >-
+      Portlík zopakoval, že SPOLU nechce pokračovat v koalici s Piráty.
+      Skeptický byl i k Praze sobě: „Ať jsem fér, tak ani nevím, jak by to
+      vypadalo čtyři roky v koalici s Prahou sobě.“ Spolupráci s nimi ale
+      nevyloučil.
+    zdroje: [cnn-11-10, ct24-10-10]
+
+  - id: praha-sobe-jedna-se-spolu
+    datum: 2026-10-10
+    typ: jednani
+    subjekty: [praha-sobe, spolu-pro-prahu]
+    kdo: Adam Scheinherr, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      Scheinherr se měl v neděli 11. 10. sejít s Portlíkem a nejspíš v pondělí
+      s Hlaváčkem. Praha sobě chce gesci dopravy a novou radu do listopadového
+      zasedání zastupitelstva. Za jednu z variant označil koalici se SPOLU,
+      STAN a Piráty.
+    zdroje: [denikn-10-10, ct24-10-10, cnn-11-10]
+
+  - id: pirati-mestotvorna
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [ceska-piratska-strana]
+    sestava: [starostove-a-nezavisli, praha-sobe, ceska-piratska-strana]
+    kdo: Tereza Nislerová, lídryně kandidátky
+    doklad: citace
+    citace: >-
+      Je důležité, že v tuto chvíli je možné sestavit ‚městotvornou‘ koalici,
+      ke které jsme vyzývali, a která by byla složená na platformě STAN, Prahy
+      sobě a Pirátů.
+    shrnuti: >-
+      Piráti chtějí koalici se STAN a Prahou sobě (38 mandátů). V neděli
+      11. 10. měli ustavit klub a vyjednávací strategii; jako první se obrátí
+      na STAN a Prahu sobě.
+    zdroje: [cnn-11-10, ct24-10-10]
+
+  - id: ano-bez-piratu
+    datum: 2026-10-10
+    typ: vylouceni
+    subjekty: [ano-2011]
+    vylucuje: [ceska-piratska-strana]
+    kdo: Jan Hušbauer, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      ANO je podle Hušbauera připravené jednat se všemi kromě Pirátů. K jednání
+      ho ale zatím nikdo neoslovil a STAN i SPOLU koalici s ANO vyloučily.
+    zdroje: [ct24-10-10]

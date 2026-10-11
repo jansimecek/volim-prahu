@@ -347,7 +347,7 @@ test('stránky mají kanonickou adresu, náhledový obrázek a strukturovaná da
   await expect(page.locator('meta[property="og:image"]')).toHaveCount(1)
   const typy = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(typy.some((t) => t.includes('"@type":"WebSite"'))).toBeTruthy()
-  expect(typy.some((t) => t.includes('"@type":"Event"'))).toBeTruthy()
+  expect(typy.some((t) => t.includes('"@type":"WebPage"'))).toBeTruthy()
 
   await page.goto('/kandidat/portlik-tomas')
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -366,12 +366,13 @@ test('stránky mají kanonickou adresu, náhledový obrázek a strukturovaná da
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
 })
 
-test('kalkulačka mandátů přepočte procenta a ukáže sestavy s většinou', async ({ page }) => {
+test('skládání koalice sečte konečné mandáty magistrátu a ukáže většinu', async ({ page }) => {
   await page.goto('/koalice')
-  await expect(page.getByRole('heading', { name: 'Kalkulačka mandátů' })).toBeVisible()
-  await page.getByLabel('SPOLU', { exact: true }).fill('60')
-  await page.getByLabel('STAN', { exact: true }).fill('40')
-  await expect(page.getByText('Rozděleno 65 z 65 mandátů')).toBeVisible()
-  // 60 : 40 dává podle d'Hondta 39 : 26, takže většinu má SPOLU samo.
-  await expect(page.getByRole('listitem').filter({ hasText: '39 mandátů' })).toHaveText(/SPOLU/)
+  await expect(page.getByRole('heading', { name: 'Nejmenší sestavy s většinou' }).first()).toBeVisible()
+  const skladani = page.getByRole('group', { name: 'Sestavte si koalici' }).first()
+  await skladani.getByLabel(/STAROSTOVÉ A NEZÁVISLÍ/).check()
+  await skladani.getByLabel(/SPOLU pro Prahu/).check()
+  // STAN 17 + SPOLU 17 = 34 z 65, většina je 33.
+  await expect(skladani.getByText('34 mandátů')).toBeVisible()
+  await expect(skladani.getByText(/většina, rezerva 1/)).toBeVisible()
 })
