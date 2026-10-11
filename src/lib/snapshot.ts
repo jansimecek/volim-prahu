@@ -28,8 +28,13 @@ const SOUBORY: Record<Cil, string> = {
   nacvik: join(process.cwd(), 'data/snapshots/nacvik.json'),
 }
 
-function maBlob(): boolean {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN)
+/**
+ * Blob se ověřuje buď tokenem, nebo — u storů připojených novějším způsobem —
+ * přes Vercel OIDC, kdy Vercel do funkce posílá jen `BLOB_STORE_ID`.
+ * SDK si zvolí samo; tady jen poznáváme, že úložiště existuje.
+ */
+export function maBlob(): boolean {
+  return Boolean(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID)
 }
 
 type Pristup = 'public' | 'private'

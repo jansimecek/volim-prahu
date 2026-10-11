@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { ZASTUPITELSTVA } from '@/lib/obsah'
-import { ulozSnapshot } from '@/lib/snapshot'
+import { maBlob, ulozSnapshot } from '@/lib/snapshot'
 import { stahniVysledky, type Snapshot } from '@/lib/vysledky'
 import { stahniVysledkyVolbyhned } from '@/lib/vysledkyVolbyhned'
 
@@ -61,7 +61,9 @@ export async function GET(request: Request) {
         ulozeno: false,
         chyba: 'Uložení snapshotu selhalo.',
         detail: chyba instanceof Error ? chyba.message : String(chyba),
-        blob: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
+        blob: maBlob(),
+        // Jen NÁZVY proměnných, nikdy hodnoty — prozradí, jak Vercel store připojil.
+        promenneBlob: Object.keys(process.env).filter((k) => /BLOB|READ_WRITE_TOKEN|STORE_ID/i.test(k)),
       },
       { status: 503 },
     )
