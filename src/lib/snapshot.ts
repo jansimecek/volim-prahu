@@ -32,18 +32,43 @@ function maBlob(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN)
 }
 
+type Pristup = 'public' | 'private'
+let znamyPristup: Pristup | undefined
+
+/**
+ * Blob store je buď veřejný, nebo privátní a typ se volí při jeho založení
+ * ve Vercelu — kód ho dopředu nezná. Operaci zkusíme nejdřív jako veřejnou
+ * a když ji store odmítne kvůli typu přístupu, zopakujeme ji jako privátní.
+ * Zjištěný typ si pamatujeme po dobu života instance funkce.
+ */
+async function sPristupem<T>(operace: (pristup: Pristup) => Promise<T>): Promise<T> {
+  if (znamyPristup) return operace(znamyPristup)
+  try {
+    const vysledek = await operace('public')
+    znamyPristup = 'public'
+    return vysledek
+  } catch (chyba) {
+    if (!(chyba instanceof Error) || !/private|access|forbidden|403/i.test(chyba.message)) throw chyba
+    const vysledek = await operace('private')
+    znamyPristup = 'private'
+    return vysledek
+  }
+}
+
 export async function ulozSnapshot(snapshot: Snapshot, cil: Cil = 'ostry'): Promise<void> {
   const telo = JSON.stringify(snapshot)
 
   if (maBlob()) {
     const { put } = await import('@vercel/blob')
-    await put(NAZVY[cil], telo, {
-      access: 'public',
-      contentType: 'application/json',
-      addRandomSuffix: false,
-      allowOverwrite: true,
-      cacheControlMaxAge: 0,
-    })
+    await sPristupem((access) =>
+      put(NAZVY[cil], telo, {
+        access,
+        contentType: 'application/json',
+        addRandomSuffix: false,
+        allowOverwrite: true,
+        cacheControlMaxAge: 0,
+      }),
+    )
     return
   }
 
@@ -65,18 +90,18 @@ function jeSnapshot(data: unknown): data is Snapshot {
  */
 export async function nactiSnapshot(cil: Cil = 'ostry'): Promise<Snapshot | null> {
   if (maBlob()) {
-    const { head } = await import('@vercel/blob')
-    let url: string
+    const { get } = await import('@vercel/blob')
+    let odpoved: Awaited<ReturnType<typeof get>>
     try {
-      url = (await head(NAZVY[cil])).url
+      odpoved = await sPristupem((access) => get(NAZVY[cil], { access, useCache: false }))
     } catch (chyba) {
       // Blob ještě nevznikl — legitimní stav před prvním během cronu.
       if (chyba instanceof Error && /not found|404/i.test(chyba.message)) return null
       throw chyba
     }
-    const odpoved = await fetch(url, { cache: 'no-store' })
-    if (!odpoved.ok) throw new Error(`Snapshot se nepodařilo načíst: HTTP ${odpoved.status}`)
-    const data: unknown = await odpoved.json()
+    if (!odpoved) return null
+    if (odpoved.statusCode !== 200) throw new Error(`Snapshot se nepodařilo načíst: HTTP ${odpoved.statusCode}`)
+    const data: unknown = await new Response(odpoved.stream).json()
     if (!jeSnapshot(data)) throw new Error('Uložený snapshot má neplatný tvar.')
     return data
   }
