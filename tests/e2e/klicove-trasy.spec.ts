@@ -56,10 +56,15 @@ test('stránka městské části ukazuje údaje z číselníku ČSÚ', async ({ 
   await expect(mandaty).toHaveText('29')
 })
 
-test('stránka městské části vypisuje kandidující subjekty', async ({ page }) => {
+test('stránka městské části vypisuje kandidátní listiny', async ({ page }) => {
   await page.goto('/mestska-cast/praha-7')
-  await expect(page.getByRole('heading', { name: 'Kandidující subjekty' })).toBeVisible()
-  await expect(page.getByText(/uchází se .* volebních stran|volebních stran s celkem/)).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Kandidátní listiny' })).toBeVisible()
+  await expect(page.getByText(/volebních stran s celkem/)).toBeVisible()
+})
+
+test('stránka městské části ukazuje výsledky', async ({ page }) => {
+  await page.goto('/mestska-cast/praha-7')
+  await expect(page.getByRole('heading', { name: 'Výsledky voleb 2026' })).toBeVisible()
 })
 
 test('metodika je dosažitelná z hlavní navigace', async ({ page }) => {
@@ -179,15 +184,16 @@ test('výpis stran jde přeřadit podle vylosovaného čísla', async ({ page })
 
 /**
  * Od 8. 9. 2026 existuje pražský průzkum s doloženou metodikou (Median pro
- * PrahaIN.cz), takže se řazení nabízí. Od 6. 10. 2026 ho schová moratorium
- * a test musí čekat opak — jinak by v den moratoria spadl.
+ * PrahaIN.cz), takže se řazení nabízí. Od 6. 10. 2026 do uzavření místností
+ * 10. 10. ve 14:00 ho schová moratorium — test musí v tu dobu čekat opak.
  */
 const MORATORIUM_OD = new Date('2026-10-06T00:00:00+02:00')
 
-test('řazení podle průzkumu se nabízí, dokud neplatí moratorium', async ({ page }) => {
+test('řazení podle průzkumu se nabízí mimo moratorium', async ({ page }) => {
   await page.goto('/praha')
   const prepinac = page.getByRole('radio', { name: 'Podle posledního průzkumu' })
-  if (new Date() >= MORATORIUM_OD) {
+  const ted = new Date()
+  if (ted >= MORATORIUM_OD && ted < MORATORIUM_DO) {
     await expect(prepinac).toHaveCount(0)
     await expect(page.getByText('Bez řazení podle průzkumu')).toBeVisible()
   } else {
