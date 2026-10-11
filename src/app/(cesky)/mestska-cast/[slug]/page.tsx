@@ -10,6 +10,7 @@ import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
 import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
+import { soubojDruhehoKola } from '@/lib/senatVysledky'
 import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
 import { VyjednavaniZastupitelstva } from '@/components/VyjednavaniZastupitelstva'
 import { vysledekZastupitelstva } from '@/lib/konecneVysledky'
@@ -37,6 +38,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   if (!mc || !zastupitelstvo) notFound()
 
   const senat = senatniStavMestskeCasti(slug)
+  const souboj = senat.stav === 'nevoli' ? [] : soubojDruhehoKola(senat.obvod.cislo)
   const deska = stavMestskeCasti(slug)
   const listina = kandidatka(slug)
   const vysledek = vysledekZastupitelstva(slug)
@@ -88,10 +90,10 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
 
       {/* Jestli tady člověk dostane i senátní lístek, se jinde zjišťuje těžko. */}
       <section className="max-w-prose border-l-2 border-praha pl-5">
-        <h2 className="text-2xl">Senátní volby 2026</h2>
+        <h2 className="text-2xl">Senát</h2>
         {senat.stav === 'voli' && (
           <p className="mt-2">
-            Kromě zastupitelstev tady volíte i senátora — spadáte do{' '}
+            Tahle část patří do senátního{' '}
             <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
               obvodu č. {senat.obvod.cislo} ({senat.obvod.nazev})
             </Link>
@@ -108,14 +110,23 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
             nevolí — rozhoduje adresa, ne příslušnost k městské části.
           </p>
         )}
+        {souboj.length === 2 && (
+          <p className="mt-2">
+            <strong>Druhé kolo 16.–17. října:</strong> utkají se {souboj[0]!.celeJmeno} a {souboj[1]!.celeJmeno}.
+            Lístky dostanete až ve volební místnosti, zastupitelstva se už nevolí.{' '}
+            <Link href="/senat" className="odkaz-akcent">
+              Jak se ve druhém kole volí
+            </Link>
+          </p>
+        )}
         {senat.stav === 'nevoli' && (
           <p className="mt-1">
             Senátora tady letos nevolíte. Senát se obměňuje po třetinách a{' '}
             <Link href="/senat" className="odkaz-akcent">
               obvod, do kterého tahle část patří
             </Link>
-            , přijde na řadu až v dalších letech. Ve volební místnosti dostanete jen
-            lístky pro zastupitelstvo města a městské části.
+            , přijde na řadu až v dalších letech. Druhé kolo senátních voleb 16.–17. října
+            se tu proto nekoná.
           </p>
         )}
       </section>

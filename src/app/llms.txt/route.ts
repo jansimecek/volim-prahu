@@ -2,6 +2,7 @@ import { programy, strany } from '#content'
 import { publikovane } from '@/lib/aktuality'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
+import { soubojDruhehoKola } from '@/lib/senatVysledky'
 import { KONTAKT_EMAIL, ZAKLAD_WEBU, absolutni } from '@/lib/web'
 import { datumCesky } from '@/lib/cestina'
 import { KONECNE_VYSLEDKY, stranySMandaty } from '@/lib/konecneVysledky'
@@ -82,6 +83,13 @@ export function GET(): Response {
     '- U programů se hodnotí proveditelnost (kompetence, rozpočet, čas, historie), nikdy pravdivost výroků.',
     '- Výsledky, kandidáti a mandáty jsou z dat Českého statistického úřadu; okrsky z RÚIAN (ČÚZK).',
     `- Hlavní jazyk webu je čeština. Kontakt: ${KONTAKT_EMAIL}. Provozuje Jan Šimek jako nezávislý projekt, viz ${absolutni('/o-projektu')}.`,
+    '',
+    '## Senát: druhé kolo 16.–17. října 2026',
+    `Ve všech třech pražských obvodech rozhodne druhé kolo (pátek 14–22 h, sobota 8–14 h; lístky jen ve volební místnosti; volí jen občané ČR). Přehled a pravidla: ${absolutni('/senat')}`,
+    ...OBVODY.map((o) => {
+      const dvojice = soubojDruhehoKola(o.cislo)
+      return `- [Obvod č. ${o.cislo} ${o.nazev}](${absolutni(`/senat/${o.slug}`)}): ${dvojice.map((r) => `${r.celeJmeno} (${r.kandidat?.volebniStrana ?? r.navrhujici}, 1. kolo ${r.procenta.toLocaleString('cs-CZ')} %)`).join(' – ')}`
+    }),
     '',
     '## Klíčové stránky',
     `- [Kdo povede Prahu — přehled](${absolutni('/')}): stav vyjednávání na magistrátu a v Praze 1–22, poslední zprávy, termíny.`,
