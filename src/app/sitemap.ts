@@ -35,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolutni('/mestska-cast'), changeFrequency: 'weekly', priority: 0.8 },
     { url: absolutni('/praha'), changeFrequency: 'monthly', priority: 0.7 },
     { url: absolutni('/senat'), changeFrequency: 'daily', priority: 0.9 },
-    { url: absolutni('/senat'), changeFrequency: 'weekly', priority: 0.7 },
     { url: absolutni('/temata'), changeFrequency: 'monthly', priority: 0.6 },
     { url: absolutni('/kde-volim'), changeFrequency: 'monthly', priority: 0.4 },
     { url: absolutni('/hlasovani'), changeFrequency: 'monthly', priority: 0.3 },
