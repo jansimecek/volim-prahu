@@ -38,6 +38,26 @@ zdroje:
     nazev: "Volby v Praze vyhrál STAN, má 17 mandátů, druhé je Spolu"
     datum: 2026-10-11
     url: "https://www.ceskenoviny.cz/zpravy/v-praze-budou-o-koalici-jednat-stan-spolu-praha-sobe-a-pirati/2885958"
+  - id: prahain-10-10
+    medium: "PrahaIN.cz"
+    nazev: "Kupka odmítá koalici ODS s ANO v Praze. Portlík ji nevylučuje"
+    datum: 2026-10-10
+    url: "https://www.prahain.cz/politika/kupka-odmita-koalici-ods-s-ano-v-praze-portlik-ji-nevylucuje-28945.html"
+  - id: pd-scheinherr-10-10
+    medium: "Pražský deník"
+    nazev: "Scheinherr vypíchl vítězství Prahy sobě v baštách ODS, s tou chce teď jednat"
+    datum: 2026-10-10
+    url: "https://prazsky.denik.cz/komunalni-volby/scheinherr-vypichl-vitezstvi-prahy-sobe-v-bastach-ods-s-tou-chce-ted-jednat/"
+  - id: e15-11-10
+    medium: "e15.cz"
+    nazev: "Praha překreslila politickou mapu. Vítěz voleb se vrátil z odepsaných, Piráti zůstali stranou"
+    datum: 2026-10-11
+    url: "https://www.e15.cz/vysledky-voleb-a-referend/komunalni-volby/praha-prekreslila-politickou-mapu-vitez-voleb-se-vratil-z-odepsanych-pirati-zustali-stranou-1436441"
+  - id: prahain-11-10
+    medium: "PrahaIN.cz"
+    nazev: "Těsná většina, nebo širší koalice? STAN stojí v Praze před zásadní volbou"
+    datum: 2026-10-11
+    url: "https://www.prahain.cz/politika/tesna-vetsina-nebo-sirsi-koalice-stan-stoji-v-praze-pred-zasadni-volbou-28968.html"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -50,10 +70,11 @@ udalosti:
       Určitě se sejdeme se Spolu, Prahou sobě a Piráty. Budeme jednat
       o jejich prioritách.
     shrnuti: >-
-      Vítězné STAN chce o koalici jednat se SPOLU, Prahou sobě a Piráty,
-      přednost dostane SPOLU. Podle ČT24 Hlaváček dodal, že širokou koalici
-      „asi nemůžeme vyloučit, ale je to věc nějakého jednání“.
-    zdroje: [cnn-11-10, ct24-10-10, pd-10-10]
+      Vítězné STAN chce o koalici jednat podle pořadí ve volbách: nejdřív se
+      SPOLU, pak s Prahou sobě a nakonec s Piráty. Podle ČT24 Hlaváček dodal,
+      že širokou koalici „asi nemůžeme vyloučit, ale je to věc nějakého
+      jednání“.
+    zdroje: [cnn-11-10, ct24-10-10, pd-10-10, prahain-11-10]
 
   - id: stan-vylucuje-ano
     datum: 2026-10-10
@@ -106,19 +127,36 @@ udalosti:
       otevřené různým gescím, sám zmínil finance nebo dopravu.
     zdroje: [ct24-10-10, pd-10-10]
 
-  - id: spolu-vylucuje-ano
+  - id: portlik-nevylucuje-varianty
     datum: 2026-10-10
-    typ: vylouceni
+    typ: vyjadreni
     subjekty: [spolu-pro-prahu]
-    vylucuje: [ano-2011]
+    kdo: Tomáš Portlík, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Úvahy o koalicích jsou předčasné, ale nevylučuji různé varianty.
+    shrnuti: >-
+      Na tiskové konferenci ODS během sčítání Portlík na přímý dotaz odmítl
+      spolupráci s ANO vyloučit; první schůzku chce mít se STAN. Předseda ODS
+      Martin Kupka koalici s ANO naopak odmítl: podle něj bude „možné
+      uspořádat funkčně jiné koalice“.
+    zdroje: [prahain-10-10]
+
+  - id: spolu-k-ano
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu]
     kdo: Tomáš Portlík, lídr kandidátky
     doklad: citace
     citace: >-
       Pražané jasně rozdali karty, myslím, že je vyloučitelné, že bude
       v koalici ANO.
     shrnuti: >-
-      SPOLU po sečtení většiny okrsků vyloučilo koalici s ANO.
-    zdroje: [ct24-10-10, pd-10-10]
+      Později večer, s víc sečtenými okrsky, Portlík koalici s ANO označil za
+      vyloučitelnou. K úvahám, že by SPOLU mohlo za primátorský post jít s ANO,
+      řekl: „Takové spekulace jsou zbytečné, bude možné sestavit jiné funkční
+      koalice.“ Výslovné vyloučení to není, proto ho výčet sestav nevyznačuje.
+    zdroje: [ct24-10-10, e15-11-10]
 
   - id: spolu-pirati-praha-sobe
     datum: 2026-10-10
@@ -176,3 +214,32 @@ udalosti:
       ANO je podle Hušbauera připravené jednat se všemi kromě Pirátů. K jednání
       ho ale zatím nikdo neoslovil a STAN i SPOLU koalici s ANO vyloučily.
     zdroje: [ct24-10-10]
+
+  - id: rakusan-ods-a-pirati
+    datum: 2026-10-11
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Vít Rakušan, předseda STAN (celostátní vedení)
+    doklad: citace
+    citace: >-
+      Možná si nebudeme muset vybírat mezi ODS a Piráty. Ještě před volbami
+      jsem odmítal, abychom vyloučili koalici se Spolu.
+    shrnuti: >-
+      Předseda hnutí k tomu, jestli STAN půjde se SPOLU, nebo s Prahou sobě
+      a Piráty (38 mandátů). Piráti druhou variantu dlouhodobě preferují.
+    zdroje: [prahain-11-10]
+
+  - id: praha-sobe-proti-dvojkoalici
+    datum: 2026-10-10
+    typ: vyjadreni
+    subjekty: [praha-sobe]
+    kdo: Adam Scheinherr, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Nebylo by to dobré pro Prahu.
+    shrnuti: >-
+      Scheinherr o koalici jen STAN a SPOLU, která by měla 34 mandátů. Byla by
+      podle něj „velice nestabilní“. Praha sobě se chce k oběma přidat; sestava
+      STAN, SPOLU a Praha sobě by měla 47 mandátů.
+    zdroje: [pd-scheinherr-10-10, prahain-11-10]
+
