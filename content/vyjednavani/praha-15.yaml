@@ -1,0 +1,28 @@
+# Povolební vyjednávání — praha-15. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-15
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha3-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Vládnout sami nechtějí: TOP 09 a STAN v Praze 3 i přes většinu jednají o koalici"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/vladnout-sami-nechteji-top-09-a-stan-v-praze-3-i-pres-vetsinu-jednaji-o-koalici/"
+
+udalosti:
+  - id: patnactka-stan-pirati
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [patnactka-nas-domov]
+    sestava: [patnactka-nas-domov, starostove-a-nezavisli, pirati-a-praha-15-sobe]
+    kdo: Marcel Pencák, lídr Patnáctky náš domov
+    doklad: citace
+    citace: >-
+      Patnáctka náš domov bude jednat o případné koalici se subjekty, které
+      před volbami deklarovaly zájem o změnu poměrů na radnici, tedy se
+      Starosty a Piráty/Prahou 15 sobě.
+    shrnuti: >-
+      Patnáctka náš domov má v Praze 15 většinu sama (16 z 31), přesto chce
+      jednat o koalici se STAN a s Piráty a Prahou 15 sobě.
+    zdroje: [pd-praha3-12-10]

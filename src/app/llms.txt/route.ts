@@ -65,7 +65,7 @@ export function GET(): Response {
     '> Nezávislé sledování pražské politiky. Po komunálních volbách 9.–10. října 2026 zapisuje, kdo s kým jedná o vedení hlavního města Prahy a 57 městských částí, kdo podepsal koaliční dohodu a koho zastupitelé zvolili — jen doložené, se zdrojem u každé zprávy. Obsahuje i konečné výsledky voleb a archiv předvolební kampaně (programy a hodnocení jejich proveditelnosti). Web nikomu nefandí a nic nepředpovídá.',
     '',
     `## Aktuální stav${overeno ? ` (ověřeno ${datumCesky(overeno)})` : ''}`,
-    'Primátora, starosty a rady volí nově zvolená zastupitelstva nadpoloviční většinou na ustavujícím zasedání. Stav vyjednávání níže plyne z poslední doložené události (memorandum, koaliční smlouva, volba vedení); „probíhají jednání“ znamená, že o jednání víme, ne že je dohoda blízko.',
+    'Primátora, starosty a rady volí nově zvolená zastupitelstva nadpoloviční většinou na ustavujícím zasedání. Stav vyjednávání níže plyne z poslední doložené události (ohlášená dohoda, memorandum, koaliční smlouva, volba vedení); „probíhají jednání“ znamená, že o jednání víme, ne že je dohoda blízko. „Ohlášená dohoda“ je veřejně oznámená shoda na sestavě, zatím bez podepsaného dokumentu.',
     lhuty
       ? `Státní volební komise vyhlásila výsledky ${lhuty.vyhlaseno}; návrhy soudu do ${lhuty.navrhSouduDo}, ustavující zasedání nejpozději ${lhuty.zasedaniNejpozdeji} (pokud žádný návrh nepadne).`
       : 'Státní volební komise celkové výsledky zatím nevyhlásila; od vyhlášení běží 10 dní na návrhy soudu a pak 15 dní na ustavující zasedání (§ 61 zák. 131/2000 Sb., § 91 zák. 128/2000 Sb.).',

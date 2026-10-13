@@ -49,7 +49,7 @@ export function GET(): Response {
   return Response.json(
     {
       popis:
-        'Povolební vyjednávání o vedení hlavního města Prahy a městských částí po komunálních volbách 2026. Zapisuje se jen doložené; stav plyne z poslední doložené události (memorandum, koaliční smlouva, volba vedení), nikdy z odhadu.',
+        'Povolební vyjednávání o vedení hlavního města Prahy a městských částí po komunálních volbách 2026. Zapisuje se jen doložené; stav plyne z poslední doložené události (ohlášená dohoda bez podpisu, memorandum, koaliční smlouva, volba vedení), nikdy z odhadu.',
       stranka: absolutni('/koalice'),
       lhuty: lhutyUstavujichZasedani(),
       zastupitelstva,

@@ -1,0 +1,29 @@
+# Povolební vyjednávání — praha-5. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-5
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha5-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha 5 sobě jedná se všemi kromě ANO. Na koalici z roku 2022 nemá dost hlasů"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-5-sobe-jedna-se-vsemi-krome-ano-na-koalici-z-roku-2022-nema-dost-hlasu/"
+
+udalosti:
+  - id: praha-5-sobe-oslovila-stan
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [praha-5-sobe, starostove-a-nezavisli]
+    kdo: Radka Šimková, lídryně Prahy 5 sobě
+    doklad: citace
+    citace: >-
+      Jako vítězové voleb jsme povolební vyjednávání zahájili již v noci ze
+      soboty na neděli, kdy jsme oslovili STAN. V současné době jednání
+      probíhají i s dalšími stranami vyjma ANO.
+    shrnuti: >-
+      Koalice z roku 2022 (Praha 5 sobě, Piráti, SEN) by tentokrát většinu
+      neměla. Starosta Lukáš Herold (ODS), jehož dosavadní koalice ODS, ANO,
+      TOP 09 a STAN by většinu měla: „V tuto chvíli je třeba počkat, s čím
+      přijde Praha 5 Sobě.“
+    zdroje: [pd-praha5-12-10]

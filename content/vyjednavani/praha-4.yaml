@@ -1,0 +1,28 @@
+# Povolební vyjednávání — praha-4. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-4
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha4-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Prahu 4 patrně opět povede stejná koalice. Jedná vítězné Spolu s hnutím ANO"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/prahu-4-patrne-opet-povede-stejna-koalice-jedna-vitezne-spolu-s-hnutim-ano/"
+
+udalosti:
+  - id: spolu-ano-pokracovani
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [spolu-pro-prahu-4, ano-2011]
+    sestava: [spolu-pro-prahu-4, ano-2011]
+    kdo: Ondřej Kubín, starosta a lídr SPOLU (ODS)
+    doklad: citace
+    citace: >-
+      Vzhledem k rozdělaným projektům, úspěšné spolupráci a i počtu mandátů,
+      které nám voliči ve volbách přidělili, dává smysl pokračovat ve stávající
+      koalici, proto jsme již prvotní jednání zahájili.
+    shrnuti: >-
+      Vítězné SPOLU jedná s ANO o pokračování koalice z uplynulých čtyř let.
+      Měla by 24 mandátů z 45, těsnou většinu.
+    zdroje: [pd-praha4-12-10]

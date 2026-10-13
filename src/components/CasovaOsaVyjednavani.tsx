@@ -6,6 +6,7 @@ const POPIS_TYPU: Record<Udalost['typ'], string> = {
   vyjadreni: 'vyjádření',
   jednani: 'jednání',
   vylouceni: 'vyloučení spolupráce',
+  dohoda: 'ohlášená dohoda',
   memorandum: 'memorandum',
   'koalicni-smlouva': 'koaliční smlouva',
   rozpad: 'konec jednání nebo dohody',

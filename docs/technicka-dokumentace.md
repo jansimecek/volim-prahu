@@ -495,7 +495,7 @@ Zvolení zastupitelé se napojují na profily kandidátů přes id
 
 Vyjednávání se zapisuje do `content/vyjednavani/<slug zastupitelstva>.yaml`:
 časová osa doložených událostí (`vyjadreni`, `jednani`, `vylouceni`,
-`memorandum`, `koalicni-smlouva`, `rozpad`, `zasedani`, `volba`) se zdroji,
+`dohoda`, `memorandum`, `koalicni-smlouva`, `rozpad`, `zasedani`, `volba`) se zdroji,
 volitelně datum ustavujícího zasedání a zvolené vedení. Stav na webu se
 odvozuje z událostí (`src/lib/vyjednavani.ts`), nikdy se nezapisuje ručně.
 Výsledky Senátu bere `pnpm import:senat-vysledky` z téhož zdroje

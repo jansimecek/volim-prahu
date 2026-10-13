@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-7. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-7
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha7-11-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Volby v Praze 7 ovládla Praha 7 sobě. Jednání o koalici zahájí s Piráty a STAN"
+    datum: 2026-10-11
+    url: "https://prazsky.denik.cz/komunalni-volby/volby-v-praze-7-ovladla-praha-7-sobe-jednani-o-koalici-zahaji-s-piraty-a-stan/"
+
+udalosti:
+  - id: praha-7-sobe-pirati-stan
+    datum: 2026-10-11
+    typ: jednani
+    subjekty: [praha-7-sobe, pirati-a-starostove]
+    sestava: [praha-7-sobe, pirati-a-starostove]
+    kdo: Jan Čižinský, lídr a dosavadní starosta
+    doklad: citace
+    citace: >-
+      Budeme v Praze 7 jednat o koalici s Piráty a STAN.
+    shrnuti: >-
+      Praha 7 sobě má většinu sama (18 z 29), přesto chce jednat s Piráty
+      a STAN. Stejně postupovala i v roce 2022; tehdy se nedohodli a vládla
+      sama. Partneři podle Čižinského „pro dva zastupitele“ chtěli dva radní.
+    zdroje: [pd-praha7-11-10]

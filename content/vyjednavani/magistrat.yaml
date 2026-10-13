@@ -5,7 +5,7 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-11
+overeno: 2026-10-13
 
 zdroje:
   - id: ct24-10-10
@@ -58,6 +58,26 @@ zdroje:
     nazev: "Těsná většina, nebo širší koalice? STAN stojí v Praze před zásadní volbou"
     datum: 2026-10-11
     url: "https://www.prahain.cz/politika/tesna-vetsina-nebo-sirsi-koalice-stan-stoji-v-praze-pred-zasadni-volbou-28968.html"
+  - id: pd-biskup-11-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Předsedou klubu STAN v Praze je Biskup, týmy začnou o koalici jednat v pondělí"
+    datum: 2026-10-11
+    url: "https://prazsky.denik.cz/komunalni-volby/predsedou-klubu-stan-v-praze-je-biskup-tymy-zacnou-o-koalici-jednat-v-pondeli/"
+  - id: pd-dvojspolek-12-10
+    medium: "Pražský deník"
+    nazev: "Dvojspolek, trojdohoda – nebo něco víc? Politici jednají o pražské koalici"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/dvojspolek-trojdohoda-nebo-neco-vic-politici-jednaji-o-prazske-koalici/"
+  - id: pd-pilire-13-10
+    medium: "Pražský deník"
+    nazev: "Dva pilíře pražské koalice se zdají jisté, do party může přibýt někdo třetí"
+    datum: 2026-10-13
+    url: "https://prazsky.denik.cz/komunalni-volby/dva-pilire-prazske-koalice-se-zdaji-jiste-do-party-muze-pribyt-nekdo-treti/"
+  - id: prahain-13-10
+    medium: "PrahaIN.cz"
+    nazev: "„Nepravděpodobné.“ Hlaváček zhatil pirátský sen o „městotvorné“ koalici"
+    datum: 2026-10-13
+    url: "https://www.prahain.cz/politika/nepravdepodobne-hlavacek-zhatil-piratsky-sen-o-mestotvorne-koalici-28985.html"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -242,4 +262,116 @@ udalosti:
       podle něj „velice nestabilní“. Praha sobě se chce k oběma přidat; sestava
       STAN, SPOLU a Praha sobě by měla 47 mandátů.
     zdroje: [pd-scheinherr-10-10, prahain-11-10]
+
+  - id: stan-klub-a-gesce
+    datum: 2026-10-11
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      STAN chce post primátora a gesce územního rozvoje, školství, životního
+      prostředí a ideálně financí; dopravu si dovede představit u SPOLU nebo
+      třetího partnera. Hlaváček se v neděli krátce sešel s Portlíkem. Klub
+      STAN vede Michal Biskup. Dohodu chce Hlaváček v listopadu.
+    zdroje: [pd-biskup-11-10]
+
+  - id: stan-spolu-prvni-jednani
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: vyjednávací týmy STAN a SPOLU
+    doklad: citace
+    citace: >-
+      Gesce budeme probírat v dalším kole.
+    shrnuti: >-
+      První oficiální jednání týmů STAN a SPOLU v pondělí večer na magistrátu.
+      Šlo o úvodní konzultace, mimo jiné o tom, jestli přizvat dalšího
+      partnera. Programové priority mají týmy probírat znovu ve čtvrtek
+      a v pátek. Hlaváček zmínil i zdražení jízdného a parkování.
+    zdroje: [pd-pilire-13-10, prahain-13-10]
+
+  - id: portlik-pirati-nespolehlivi
+    datum: 2026-10-12
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu]
+    kdo: Tomáš Portlík, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      Portlík považuje Piráty za nespolehlivé partnery — v uplynulém období
+      podle něj hlasovali s opozicí i u územního plánu. Dvojkoalici STAN
+      a SPOLU má za dostačující. Podle PrahaIN zmínil jakousi gentlemanskou
+      dohodu, podle níž si strany ponechají dosavadní gesce.
+    zdroje: [pd-dvojspolek-12-10, pd-pilire-13-10, prahain-13-10]
+
+  - id: praha-sobe-krome-ano
+    datum: 2026-10-12
+    typ: vylouceni
+    subjekty: [praha-sobe]
+    vylucuje: [ano-2011]
+    kdo: Ondřej Chlupáček, mluvčí
+    doklad: parafraze
+    shrnuti: >-
+      Praha sobě je otevřená jednat s každým kromě ANO. „Cílem je programově
+      podobná koalice, kde bude fungovat spolupráce nad společnou vizí pro
+      město,“ řekl mluvčí. Vyjednávací tým vedou Adam Scheinherr a Jan
+      Čižinský.
+    zdroje: [pd-dvojspolek-12-10]
+
+  - id: pirati-micek-u-viteze
+    datum: 2026-10-11
+    typ: vyjadreni
+    subjekty: [ceska-piratska-strana]
+    sestava: [starostove-a-nezavisli, praha-sobe, ceska-piratska-strana]
+    kdo: Tereza Nislerová, lídryně kandidátky
+    doklad: citace
+    citace: >-
+      Dohoda na společném programu takové koalice, která se osvědčila již
+      v minulosti a prověřila ji řada krizí, by netrvala dlouho. Míček je nyní
+      na straně vítěze voleb, s nímž jsme připraveni jednat.
+    shrnuti: >-
+      Piráti dál prosazují koalici STAN, Prahy sobě a Pirátů (37 mandátů).
+    zdroje: [prahain-13-10]
+
+  - id: stan-praha-sobe-a-pirati
+    datum: 2026-10-13
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, praha-sobe, ceska-piratska-strana]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: parafraze
+    shrnuti: >-
+      STAN jedná dopoledne s Prahou sobě a odpoledne s Piráty. SPOLU se
+      s oběma sejde odděleně. Podle Pražského deníku mají jednání upřesnit,
+      jestli bude koalice dvoj-, troj-, nebo čtyřčlenná.
+    zdroje: [prahain-13-10, pd-pilire-13-10]
+
+  - id: hlavacek-bez-spolu-nepravdepodobne
+    datum: 2026-10-13
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Matematicky to není vyloučené, ale myslím, že je to dost
+      nepravděpodobné.
+    shrnuti: >-
+      Hlaváček o koalici STAN, Prahy sobě a Pirátů bez SPOLU. Už v pondělí ji
+      označil za „velmi nepravděpodobnou“. Koalice jen se SPOLU by podle něj
+      byla křehká, čtyřkoalice široká, ale možná ne funkční.
+    zdroje: [prahain-13-10, pd-dvojspolek-12-10, pd-biskup-11-10]
+
+  - id: ano-jen-kontrolni-funkce
+    datum: 2026-10-13
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: Petr Hlaváček (STAN), Alexandra Udženija (ODS)
+    doklad: citace
+    citace: >-
+      Kontrolní výbor patří prioritně opozici.
+    shrnuti: >-
+      Hlaváček se s ANO sejde „ze slušnosti“, ne kvůli koalici — nejspíš
+      půjde o kontrolní funkce. Schůzku s ANO potvrdila i předsedkyně pražské
+      ODS Udženija; o vstupu ANO do koalice podle ní nemůže být řeč.
+    zdroje: [prahain-13-10, pd-pilire-13-10]
 

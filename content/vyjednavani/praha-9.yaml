@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-9. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-9
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha9-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Zůstane Portlík starostou Prahy 9? Rozhodne se po uzavření koalice na magistrátu"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/zustane-portlik-starostou-prahy-9-rozhodne-se-po-uzavreni-koalice-na-magistratu/"
+
+udalosti:
+  - id: portlik-praha9-neobejde
+    datum: 2026-10-12
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu-9-ods-a-top-09-s-podporou-nestraniku]
+    kdo: Tomáš Portlík, starosta a lídr SPOLU
+    doklad: citace
+    citace: >-
+      Jednání o koalici teprve začínají. Nicméně volební výsledek přes 42
+      procent nám dává jistotu, že nás při nich nikdo neobejde.
+    shrnuti: >-
+      SPOLU má v Praze 9 15 mandátů z 33. Jestli Portlík zůstane starostou,
+      rozhodne až vyjednávání na magistrátu: „kumulovat funkce určitě nebudu“.
+      Dosud vedla radnici koalice ODS, TOP 09, Prahy 9 sobě a STAN.
+    zdroje: [pd-praha9-12-10]

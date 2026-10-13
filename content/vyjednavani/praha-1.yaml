@@ -1,0 +1,28 @@
+# Povolební vyjednávání — praha-1. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-1
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha1-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha 1 sobě začala jednat o koalici s TOP 09 a Piráty, promluví ale se všemi"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-1-sobe-zacala-jednat-o-koalici-s-top-09-a-piraty-promluvi-ale-se-vsemi/"
+
+udalosti:
+  - id: praha-1-sobe-top-pirati
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [praha-1-sobe, top-09-srdce-prahy, pirati-a-nezavisli-pro-prahu-1]
+    sestava: [praha-1-sobe, top-09-srdce-prahy, pirati-a-nezavisli-pro-prahu-1]
+    kdo: Pavel Marc, lídr Prahy 1 sobě
+    doklad: citace
+    citace: >-
+      Nejbližší programovou shodu vidíme s TOP 09 a Piráty, s nimiž jsme se už
+      o víkendu sešli.
+    shrnuti: >-
+      Vítězná Praha 1 sobě se o víkendu sešla s TOP 09 a Piráty; tahle trojice
+      by měla 14 mandátů z 27, tedy přesně většinu. Jednat chce se všemi
+      zvolenými uskupeními.
+    zdroje: [pd-praha1-12-10]
