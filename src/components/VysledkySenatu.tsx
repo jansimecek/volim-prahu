@@ -1,4 +1,5 @@
 import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
+import { nazevStranySenat } from '@/lib/senatKandidati'
 import { radkyKola, type Kolo } from '@/lib/senatVysledky'
 
 const cislo = new Intl.NumberFormat('cs-CZ')
@@ -29,7 +30,7 @@ export function VysledkySenatu({ cisloObvodu, kolo }: { cisloObvodu: number; kol
                   {r.celeJmeno}
                   {r.postupuje && <span className="popisek-uredni block text-praha">postupuje do 2. kola</span>}
                 </td>
-                <td className="py-2 pr-3">{r.kandidat?.volebniStrana ?? r.navrhujici}</td>
+                <td className="py-2 pr-3">{nazevStranySenat(r.kandidat?.volebniStrana ?? r.navrhujici)}</td>
                 <td className="py-2 pr-3 text-right font-mono">{cislo.format(r.hlasy)}</td>
                 <td className="py-2 text-right font-mono whitespace-nowrap">{procenta.format(r.procenta)} %</td>
               </tr>

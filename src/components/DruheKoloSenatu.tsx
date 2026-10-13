@@ -25,7 +25,8 @@ export function DruheKoloSenatu() {
         </Bod>
         <Bod nadpis="Kdo může volit">
           Občan ČR s trvalým pobytem v jednom ze tří obvodů, kterému bude nejpozději v sobotu
-          17. října 18 let. Nezáleží na tom, jestli jste volili v prvním kole. Občané jiných zemí
+          17. října 18 let. V Praze 2 a Praze 6 patří do obvodu jen část území — rozhoduje
+          adresa, ne městská část. Nezáleží na tom, jestli jste volili v prvním kole. Občané jiných zemí
           EU senátora nevolí — to je rozdíl oproti komunálním volbám.
         </Bod>
         <Bod nadpis="Hlasovací lístky">
