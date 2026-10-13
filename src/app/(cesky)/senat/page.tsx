@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DruheKoloSenatu } from '@/components/DruheKoloSenatu'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { sPoctem } from '@/lib/cestina'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY, pocetDotcenychMC, senatniStavMestskeCasti } from '@/lib/senat'
+import { nazevStranySenat } from '@/lib/senatKandidati'
 import { soubojDruhehoKola, vysledkyObvodu } from '@/lib/senatVysledky'
 import { DRUHE_KOLO_SENATU } from '@/lib/terminy'
 import { absolutni } from '@/lib/web'
@@ -74,7 +76,7 @@ export default function StrankaSenatu() {
                       <span key={r.cislo} className="block">
                         <span className="block font-medium">{r.celeJmeno}</span>
                         <span className="block text-sm">
-                          {r.kandidat?.volebniStrana ?? r.navrhujici} · 1. kolo{' '}
+                          {nazevStranySenat(r.kandidat?.volebniStrana ?? r.navrhujici)} · 1. kolo{' '}
                           <span className="font-mono">{procenta.format(r.procenta)} %</span>
                         </span>
                       </span>
@@ -124,10 +126,9 @@ export default function StrankaSenatu() {
                 <span className="popisek-uredni">Obvod č. {obvod.cislo}</span>
                 <span className="mt-1 block font-display text-xl font-semibold">{obvod.nazev}</span>
                 <span className="mt-2 block text-sm">
-                  {obvod.mestskeCasti.length}{' '}
-                  {obvod.mestskeCasti.length === 1 ? 'městská část' : 'městských částí'}
+                  {sPoctem(obvod.mestskeCasti.length, 'městská část', 'městské části', 'městských částí')}
                   {obvod.mestskeCastiCastecne.length > 0 &&
-                    ` + části dalších ${obvod.mestskeCastiCastecne.length}`}
+                    ` + část území dalších ${obvod.mestskeCastiCastecne.length}`}
                 </span>
                 <span className="popisek-uredni mt-2 block">dosavadní senátor {obvod.senator}</span>
               </Link>

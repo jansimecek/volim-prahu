@@ -9,7 +9,7 @@ import { soubojDruhehoKola, vysledkyObvodu } from '@/lib/senatVysledky'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
-import { celeJmenoSenat, kandidatiObvodu, obhajuje, sadaSenat } from '@/lib/senatKandidati'
+import { celeJmenoSenat, kandidatiObvodu, nazevStranySenat, obhajuje, sadaSenat } from '@/lib/senatKandidati'
 
 type Parametry = { params: Promise<{ obvod: string }> }
 
@@ -63,7 +63,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
           </dd>
         </div>
         <div className="bg-papir p-3">
-          <dt className="popisek-uredni">Kandidátů</dt>
+          <dt className="popisek-uredni">Kandidátů v 1. kole</dt>
           <dd className="mt-1 font-mono text-lg">
             {kandidati.length > 0 ? kandidati.length : '—'}
           </dd>
@@ -84,7 +84,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
               <li key={r.cislo}>
                 <p className="font-display text-lg font-medium">{r.celeJmeno}</p>
                 <p className="text-sm">
-                  {r.kandidat?.volebniStrana ?? r.navrhujici}
+                  {nazevStranySenat(r.kandidat?.volebniStrana ?? r.navrhujici)}
                   {r.kandidat?.povolani && ` · ${r.kandidat.povolani}`}
                 </p>
                 <p className="popisek-uredni mt-1">
@@ -133,11 +133,8 @@ export default async function StrankaObvodu({ params }: Parametry) {
         <section>
           <h2 className="text-2xl">Kandidáti prvního kola</h2>
           <p className="mt-1 max-w-prose text-sm text-seda-uredni">
-            {kandidati.some((k) => k.cislo)
-              ? 'Výchozí pořadí je podle vylosovaných čísel na hlasovacím lístku, tedy tak, jak kandidáty uvidíte ve volební místnosti.'
-              : 'Čísla na hlasovacím lístku zatím vylosovaná nebyla, pořadí je proto podle příjmení.'}{' '}
-            Zvolen je ten, kdo v prvním kole získá nadpoloviční většinu; jinak se koná
-            druhé kolo mezi dvěma nejúspěšnějšími.
+            Takhle byli kandidáti na hlasovacím lístku v prvním kole, s vylosovanými čísly. Ve
+            druhém kole jsou na lístku jen dva postupující — viz výše.
           </p>
           <KandidatiSenatu
             kandidati={kandidati.map((k) => ({
@@ -147,7 +144,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
               prijmeni: k.prijmeni,
               celeJmeno: celeJmenoSenat(k),
               vek: k.vek,
-              volebniStrana: k.volebniStrana,
+              volebniStrana: nazevStranySenat(k.volebniStrana),
               povolani: k.povolani,
             }))}
           />
