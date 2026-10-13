@@ -21,19 +21,27 @@ export function vyjednavaniZastupitelstva(slug: string): Vyjednavani | undefined
   return vyjednavani.find((v) => v.zastupitelstvo === slug)
 }
 
-export type Stav = 'bez-zprav' | 'jednani' | 'memorandum' | 'koalicni-smlouva' | 'zvoleno-vedeni'
+export type Stav = 'bez-zprav' | 'jednani' | 'dohoda' | 'memorandum' | 'koalicni-smlouva' | 'zvoleno-vedeni'
 
 export const POPIS_STAVU: Record<Stav, string> = {
   'bez-zprav': 'Zatím bez doložených zpráv',
   jednani: 'Probíhají jednání',
+  dohoda: 'Ohlášená dohoda',
   memorandum: 'Podepsané memorandum',
   'koalicni-smlouva': 'Podepsaná koaliční smlouva',
   'zvoleno-vedeni': 'Zvolené vedení',
 }
 
+/** Pořadí stavů od nejméně po nejvíc dotažený. */
+const PORADI: Stav[] = ['bez-zprav', 'jednani', 'dohoda', 'memorandum', 'koalicni-smlouva', 'zvoleno-vedeni']
+const vyssi = (a: Stav, b: Stav): Stav => (PORADI.indexOf(a) >= PORADI.indexOf(b) ? a : b)
+
 /**
  * Stav se neodhaduje, plyne z doložených událostí: nejdál dotažený krok,
  * který nevystřídal pozdější rozpad. Rozpad vrací stav zpátky na jednání.
+ *
+ * „Dohoda“ je veřejně ohlášená shoda na sestavě bez podepsaného dokumentu —
+ * víc než jednání, míň než memorandum.
  */
 export function stavVyjednavani(v: Vyjednavani | undefined): Stav {
   if (!v) return 'bez-zprav'
@@ -42,18 +50,17 @@ export function stavVyjednavani(v: Vyjednavani | undefined): Stav {
   let stav: Stav = serazene.length > 0 ? 'jednani' : 'bez-zprav'
   for (const u of serazene) {
     if (u.typ === 'rozpad') stav = 'jednani'
-    else if (u.typ === 'koalicni-smlouva') stav = 'koalicni-smlouva'
-    else if (u.typ === 'memorandum' && stav !== 'koalicni-smlouva') stav = 'memorandum'
+    else if (u.typ === 'dohoda' || u.typ === 'memorandum' || u.typ === 'koalicni-smlouva') stav = vyssi(stav, u.typ)
     else if (u.typ === 'volba') stav = 'zvoleno-vedeni'
   }
   return stav
 }
 
-/** Poslední doložená sestava (memorandum nebo smlouva), pokud nějaká je. */
+/** Poslední doložená sestava (ohlášená dohoda, memorandum nebo smlouva), pokud nějaká je. */
 export function dohodnutaSestava(v: Vyjednavani | undefined): string[] | undefined {
   if (!v) return undefined
   const dohody = v.udalosti
-    .filter((u) => u.typ === 'memorandum' || u.typ === 'koalicni-smlouva' || u.typ === 'rozpad')
+    .filter((u) => u.typ === 'dohoda' || u.typ === 'memorandum' || u.typ === 'koalicni-smlouva' || u.typ === 'rozpad')
     .sort((a, b) => a.datum.localeCompare(b.datum))
   const posledni = dohody.at(-1)
   return posledni && posledni.typ !== 'rozpad' ? posledni.sestava : undefined
@@ -143,6 +150,7 @@ export function pocetPodleStavu(slugy: readonly string[]): Record<Stav, number> 
   const pocty: Record<Stav, number> = {
     'bez-zprav': 0,
     jednani: 0,
+    dohoda: 0,
     memorandum: 0,
     'koalicni-smlouva': 0,
     'zvoleno-vedeni': 0,

@@ -29,9 +29,11 @@ const kontrolovatOdkazy = process.argv.includes('--odkazy')
 const hranice = (jadro: string) => new RegExp(`(?<!\\p{L})(?:${jadro})(?!\\p{L})`, 'iu')
 
 const ZAKAZANY_SLOVNIK = [
-  hranice('lež|lži|lží|lžou|lže|lhal\\w*|lživ\\w*'),
-  hranice('podvod\\w*'),
-  hranice('nepravd\\w*'),
+  // \p{L}*, ne \w*: \w je jen ASCII, takže „nepravdivé“ nebo „podvodné“ by prošly.
+  hranice('lež|lži|lží|lžou|lže|lhal\\p{L}*|lživ\\p{L}*'),
+  hranice('podvod\\p{L}*'),
+  // „Nepravděpodobný“ s pravdivostí nesouvisí, a v URL a slugu se píše bez diakritiky.
+  hranice('nepravd(?![eě]podob)\\p{L}*'),
 ]
 
 /**

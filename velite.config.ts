@@ -853,6 +853,7 @@ export const TYPY_UDALOSTI = [
   'vyjadreni',
   'jednani',
   'vylouceni',
+  'dohoda',
   'memorandum',
   'koalicni-smlouva',
   'rozpad',
@@ -937,7 +938,7 @@ const vyjednavani = defineCollection({
         if (u.typ === 'vylouceni' && u.vylucuje.length === 0) {
           ctx.addIssue({ code: 'custom', message: `Vyloučení "${u.id}" neříká, koho vylučuje.` })
         }
-        if ((u.typ === 'memorandum' || u.typ === 'koalicni-smlouva') && u.sestava.length < 1) {
+        if ((u.typ === 'dohoda' || u.typ === 'memorandum' || u.typ === 'koalicni-smlouva') && u.sestava.length < 1) {
           ctx.addIssue({ code: 'custom', message: `Dohoda "${u.id}" nemá uvedenou sestavu.` })
         }
       }

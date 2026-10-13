@@ -1,0 +1,29 @@
+# Povolební vyjednávání — praha-3. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-3
+overeno: 2026-10-13
+
+zdroje:
+  - id: pd-praha3-12-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Vládnout sami nechtějí: TOP 09 a STAN v Praze 3 i přes většinu jednají o koalici"
+    datum: 2026-10-12
+    url: "https://prazsky.denik.cz/komunalni-volby/vladnout-sami-nechteji-top-09-a-stan-v-praze-3-i-pres-vetsinu-jednaji-o-koalici/"
+
+udalosti:
+  - id: top-stan-hledaji-partnera
+    datum: 2026-10-12
+    typ: jednani
+    subjekty: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    sestava: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    kdo: Michal Vronský, lídr a dosavadní starosta (TOP 09)
+    doklad: citace
+    citace: >-
+      V nově ustanoveném zastupitelském klubu TOP 09 a Starostové jsme se
+      domluvili, že budeme hledat koaličního partnera a že jako první povedeme
+      jednání s koalicí vedenou Editou Janečkovou.
+    shrnuti: >-
+      TOP 09 se STAN mají v Praze 3 většinu sami (18 z 35), přesto hledají
+      partnera. Jako první jednají s kandidátkou Pirátů a Prahy 3 sobě, kterou
+      vedla Edita Janečková.
+    zdroje: [pd-praha3-12-10]

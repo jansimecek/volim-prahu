@@ -1,0 +1,35 @@
+# Povolební vyjednávání — praha-6. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-6
+overeno: 2026-10-13
+
+zdroje:
+  - id: drbna-praha6-12-10
+    medium: "Pražská Drbna"
+    nazev: "Vítězný STAN se v Praze 6 dohodl na koalici. Stárka nahradí na postu starosty Prokop"
+    datum: 2026-10-12
+    url: "https://prazska.drbna.cz/praha-6/902735-vitezny-stan-se-v-praze-6-dohodl-na-koalici-starka-nahradi-na-postu-starosty-prokop.html"
+  - id: pd-praha6-11-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Výsledky voleb v Praze 6 přinesly rychlou dohodu koalice. Prokop bude starostou"
+    datum: 2026-10-11
+    url: "https://prazsky.denik.cz/komunalni-volby/vysledky-voleb-v-praze-6-prinesly-rychlou-dohodu-koalice-prokop-bude-starostou/"
+
+udalosti:
+  - id: dohoda-stan-ps6-ods
+    datum: 2026-10-11
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli, praha-6-sobe, ods-a-kdu-csl]
+    sestava: [starostove-a-nezavisli, praha-6-sobe, ods-a-kdu-csl]
+    kdo: Petr Prokop a Jan Lacina (STAN)
+    doklad: citace
+    citace: >-
+      Věřím, že jsme vyjednali koalici, která bude stabilní a naváže na
+      dosavadní práci rady. Budu starosta Prahy 6 a upřímně se na tu práci
+      těším.
+    shrnuti: >-
+      STAN, Praha 6 sobě a ODS s KDU-ČSL se v neděli dohodli na pokračování
+      koalice (32 mandátů z 45). Starostou má být Petr Prokop (STAN) místo
+      Jakuba Stárka (ODS). Nic podepsaného zatím není: „Rozdělení křesel
+      musejí ještě potvrdit zastupitelské kluby,“ řekl Lacina.
+    zdroje: [drbna-praha6-12-10, pd-praha6-11-10]

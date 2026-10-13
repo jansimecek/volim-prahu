@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const procenta = new Intl.NumberFormat('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
 /** Pořadí stavů od nejdál dotaženého — tak se čtou počty v přehledu. */
-const PORADI_STAVU: Stav[] = ['zvoleno-vedeni', 'koalicni-smlouva', 'memorandum', 'jednani', 'bez-zprav']
+const PORADI_STAVU: Stav[] = ['zvoleno-vedeni', 'koalicni-smlouva', 'memorandum', 'dohoda', 'jednani', 'bez-zprav']
 
 export default async function Rozcestnik() {
   const vysledky = KONECNE_VYSLEDKY.zastupitelstva
