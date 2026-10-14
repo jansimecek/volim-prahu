@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-11. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-11
+overeno: 2026-10-14
+
+zdroje:
+  - id: pd-praha11-14-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Hnutí ANO v Praze 11 zahájilo koaliční jednání, vyjednávat chce se všemi"
+    datum: 2026-10-14
+    url: "https://prazsky.denik.cz/komunalni-volby/hnuti-ano-v-praze-11-zahajilo-koalicni-jednani-vyjednavat-chce-se-vsemi/"
+
+udalosti:
+  - id: ano-jedna-se-vsemi
+    datum: 2026-10-14
+    typ: jednani
+    subjekty: [ano-2011]
+    kdo: Petr Sýkora, lídr ANO
+    doklad: citace
+    citace: >-
+      Pokud se shodneme na plnění programu, tak bychom šli s kýmkoliv,
+      nepreferuji vůbec nikoho.
+    shrnuti: >-
+      Vítězné ANO (8 mandátů z 35) oslovilo všechny strany v zastupitelstvu
+      a vůči žádné se předem nevymezuje. Sýkora nevyloučil, že by se stal
+      starostou; rozhodnou koaliční jednání.
+    zdroje: [pd-praha11-14-10]

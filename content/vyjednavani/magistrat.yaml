@@ -5,7 +5,7 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-13
+overeno: 2026-10-14
 
 zdroje:
   - id: ct24-10-10
@@ -78,6 +78,21 @@ zdroje:
     nazev: "„Nepravděpodobné.“ Hlaváček zhatil pirátský sen o „městotvorné“ koalici"
     datum: 2026-10-13
     url: "https://www.prahain.cz/politika/nepravdepodobne-hlavacek-zhatil-piratsky-sen-o-mestotvorne-koalici-28985.html"
+  - id: pd-stan-ps-13-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Povolební vyjednávání v Praze: zástupci STAN a Prahy sobě řešili spolupráci"
+    datum: 2026-10-13
+    url: "https://prazsky.denik.cz/komunalni-volby/povolebni-vyjednavani-v-praze-zastupci-stan-a-prahy-sobe-resili-spolupraci/"
+  - id: pd-pristi-tyden-13-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Lídr STAN Hlaváček chce příští týden představit podobu nové koalice v Praze"
+    datum: 2026-10-13
+    url: "https://prazsky.denik.cz/komunalni-volby/lidr-stan-hlavacek-chce-pristi-tyden-predstavit-podobu-nove-koalice-v-praze/"
+  - id: drbna-pristi-tyden-13-10
+    medium: "Pražská Drbna (ČTK)"
+    nazev: "Hlaváček chce pražskou koalici představit příští týden"
+    datum: 2026-10-13
+    url: "https://prazska.drbna.cz/politika/902930-hlavacek-chce-prazskou-koalici-predstavit-pristi-tyden.html"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -374,4 +389,54 @@ udalosti:
       půjde o kontrolní funkce. Schůzku s ANO potvrdila i předsedkyně pražské
       ODS Udženija; o vstupu ANO do koalice podle ní nemůže být řeč.
     zdroje: [prahain-13-10, pd-pilire-13-10]
+
+  - id: stan-praha-sobe-ramec
+    datum: 2026-10-13
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, praha-sobe]
+    kdo: Petr Hlaváček a Adam Scheinherr
+    doklad: citace
+    citace: >-
+      Řekli jsme si takový základní rámec případné spolupráce. Probírali jsme
+      i gesce, ne personálně, ale zhruba ten zájem.
+    shrnuti: >-
+      Scheinherr by preferoval koalici STAN, Prahy sobě a Pirátů: „Vnímáme, že
+      je tam největší programová shoda a že by ta koalice měla nejméně hádek.“
+      Do dvojkoalice jen se SPOLU se STAN podle Hlaváčka příliš nechce: „Ale
+      nemůžeme to v tuto chvíli vyloučit.“ Další schůzka koncem týdne nebo
+      začátkem příštího.
+    zdroje: [pd-stan-ps-13-10]
+
+  - id: stan-pirati-ramec
+    datum: 2026-10-13
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, ceska-piratska-strana]
+    kdo: Petr Hlaváček a Tereza Nislerová
+    doklad: citace
+    citace: >-
+      Velmi podobně jsme probrali rámec případné spolupráce, bavili jsme se
+      o gescích, ne personálně, a máme nějakou rámcovou představu, co by si
+      kolegové Piráti představovali.
+    shrnuti: >-
+      Pro Piráty je podle Nislerové zásadní městská bytová výstavba; na té by
+      se podle Hlaváčka dalo dohodnout. V opozici by Piráti chtěli prosazovat
+      své priority a nastavovat koalici zrcadlo. Další schůzka v pátek nebo
+      v pondělí.
+    zdroje: [pd-pristi-tyden-13-10, drbna-pristi-tyden-13-10]
+
+  - id: stan-format-pristi-tyden
+    datum: 2026-10-13
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Příští týden bychom chtěli představit rámec spolupráce a jít do většího
+      detailu.
+    shrnuti: >-
+      Po schůzkách se všemi partnery chce STAN oznámit, o jakém formátu
+      koalice bude jednat dál. Se SPOLU se tým znovu sejde ve čtvrtek 15. 10.
+      Ve hře je podle ČTK hlavně dvojkoalice STAN a SPOLU, případně doplněná
+      o Prahu sobě, Piráty, nebo obě uskupení.
+    zdroje: [pd-pristi-tyden-13-10, drbna-pristi-tyden-13-10]
 

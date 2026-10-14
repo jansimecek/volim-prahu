@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-6. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-6
-overeno: 2026-10-13
+overeno: 2026-10-14
 
 zdroje:
   - id: drbna-praha6-12-10
@@ -14,6 +14,16 @@ zdroje:
     nazev: "Výsledky voleb v Praze 6 přinesly rychlou dohodu koalice. Prokop bude starostou"
     datum: 2026-10-11
     url: "https://prazsky.denik.cz/komunalni-volby/vysledky-voleb-v-praze-6-prinesly-rychlou-dohodu-koalice-prokop-bude-starostou/"
+  - id: pd-praha6-memorandum-13-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 6 bude vládnout dosavadní koalice, strany už podepsaly memorandum"
+    datum: 2026-10-13
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-6-bude-vladnout-dosavadni-koalice-strany-uz-podepsaly-memorandum/"
+  - id: drbna-praha6-14-10
+    medium: "Pražská Drbna"
+    nazev: "Vítězná koalice si v Praze 6 chválí neútočnou kampaň, chce zlepšit komunikaci s veřejností"
+    datum: 2026-10-14
+    url: "https://prazska.drbna.cz/praha-6/903017-vitezna-koalice-si-v-praze-6-chvali-neutocnou-kampan-chce-zlepsit-komunikaci-s-verejnosti.html"
 
 udalosti:
   - id: dohoda-stan-ps6-ods
@@ -33,3 +43,19 @@ udalosti:
       Jakuba Stárka (ODS). Nic podepsaného zatím není: „Rozdělení křesel
       musejí ještě potvrdit zastupitelské kluby,“ řekl Lacina.
     zdroje: [drbna-praha6-12-10, pd-praha6-11-10]
+
+  - id: memorandum-stan-ps6-ods
+    datum: 2026-10-13
+    typ: memorandum
+    subjekty: [starostove-a-nezavisli, praha-6-sobe, ods-a-kdu-csl]
+    sestava: [starostove-a-nezavisli, praha-6-sobe, ods-a-kdu-csl]
+    kdo: zástupci STAN, Prahy 6 sobě a ODS s KDU-ČSL
+    doklad: parafraze
+    shrnuti: >-
+      V úterý podepsali memorandum o koaliční spolupráci; kluby s dohodou
+      souhlasily. Starostou má být Petr Prokop (STAN), statutární
+      místostarostkou Mariana Čapková (Praha 6 sobě), místostarosty Jakub
+      Stárek a Václav Kožený (ODS), Petr Palacký (Zelení) a Jan Lacina (STAN).
+      Koaliční smlouvu chtějí podepsat do listopadového zasedání.
+    zdroje: [pd-praha6-memorandum-13-10, drbna-praha6-14-10]
+
