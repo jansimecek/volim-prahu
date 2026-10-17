@@ -245,6 +245,7 @@ function Vysledek({
                 popis: info.senat.stav === 'castecne' ? info.senat.popis : '',
               },
             )}{' '}
+            {info.senat.senator && <>{dosad(texty.senatZvolen, { senator: info.senat.senator })} </>}
             <Link href={`/senat/${info.senat.slug}` as Route} className="odkaz-akcent" hrefLang="cs">
               {texty.kandidatiSenatu}
             </Link>

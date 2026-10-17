@@ -5,6 +5,7 @@ import { MESTSKE_CASTI, mestskaCastPodleSlugu } from '@/lib/obsah'
 import { okoliParkovaniMetru } from '@/lib/parkovani'
 import { adresyMestskeCasti } from '@/lib/okrsky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
+import { vysledekDruhehoKola } from '@/lib/senatVysledky'
 
 /**
  * Co potřebuje titulní strana, když zná okrsek z polohy: název části,
@@ -26,8 +27,8 @@ export type InfoMestskeCasti = {
   /** Poloměr, ve kterém se u místnosti hledala zóna placeného stání. */
   okoliParkovaniMetru: number
   senat:
-    | { stav: 'voli'; cislo: number; nazev: string; slug: string }
-    | { stav: 'castecne'; cislo: number; nazev: string; slug: string; popis: string }
+    | { stav: 'voli'; cislo: number; nazev: string; slug: string; senator: string | null }
+    | { stav: 'castecne'; cislo: number; nazev: string; slug: string; popis: string; senator: string | null }
     | { stav: 'nevoli' }
 }
 
@@ -40,6 +41,9 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
   const mistnosti = mistnostiPoOkrscich(slug, adresy)
 
   const senat = senatniStavMestskeCasti(slug)
+  // Zvolený senátor, jakmile je druhé kolo sečtené; do té doby null.
+  const senator =
+    senat.stav === 'nevoli' ? null : (vysledekDruhehoKola(senat.obvod.cislo)?.zvoleny.celeJmeno ?? null)
   const listina = kandidatka(slug)
   const odpoved: InfoMestskeCasti = {
     mestskaCast: slug,
@@ -52,8 +56,15 @@ export async function GET(_zadost: Request, { params }: { params: Promise<{ slug
       senat.stav === 'nevoli'
         ? { stav: 'nevoli' }
         : senat.stav === 'voli'
-          ? { stav: 'voli', cislo: senat.obvod.cislo, nazev: senat.obvod.nazev, slug: senat.obvod.slug }
-          : { stav: 'castecne', cislo: senat.obvod.cislo, nazev: senat.obvod.nazev, slug: senat.obvod.slug, popis: senat.popis },
+          ? { stav: 'voli', cislo: senat.obvod.cislo, nazev: senat.obvod.nazev, slug: senat.obvod.slug, senator }
+          : {
+              stav: 'castecne',
+              cislo: senat.obvod.cislo,
+              nazev: senat.obvod.nazev,
+              slug: senat.obvod.slug,
+              popis: senat.popis,
+              senator,
+            },
   }
   return NextResponse.json(odpoved, {
     headers: { 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400' },

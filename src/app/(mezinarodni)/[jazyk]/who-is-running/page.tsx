@@ -5,6 +5,8 @@ import { programy, strany } from '#content'
 import { PosuvnaTabulka } from '@/components/PosuvnaTabulka'
 import { JAZYKY, jazykoveVarianty, jeJazyk } from '@/lib/jazyky'
 import { celeJmeno, lidr, platniKandidati, stranaPodleKodu } from '@/lib/kandidatky'
+import { OBVODY } from '@/lib/senat'
+import { vysledekDruhehoKola } from '@/lib/senatVysledky'
 import { serazene } from '@/lib/strany'
 import { preklad } from '@/preklady'
 
@@ -153,6 +155,22 @@ export default async function WhoIsRunning({ params }: { params: Promise<{ jazyk
           {s.senatNadpis}
         </h2>
         <p className="mt-3 max-w-prose">{s.senatText}</p>
+        {/* Jména zvolených z výsledků, ne z překladu: obvod a jméno se
+            nepřekládají a text se nemusí měnit v každém jazyce zvlášť. */}
+        <ul className="mt-3 space-y-1">
+          {OBVODY.map((obvod) => {
+            const v = vysledekDruhehoKola(obvod.cislo)
+            if (!v) return null
+            return (
+              <li key={obvod.cislo} lang="cs">
+                <Link href={`/senat/${obvod.slug}`} className="odkaz-akcent" hrefLang="cs">
+                  {obvod.nazev}
+                </Link>
+                : <strong>{v.zvoleny.celeJmeno}</strong>
+              </li>
+            )
+          })}
+        </ul>
         <p className="mt-4">
           <Link href="/senat" className="odkaz-akcent" hrefLang="cs">
             {s.senatOdkaz}

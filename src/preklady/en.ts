@@ -267,7 +267,7 @@ export const en = {
 
     senatNadpis: 'The Senate election is different',
     senatText:
-      'Three of Prague’s Senate constituencies are contested in 2026. Only Czech citizens aged 18 and over vote in the Senate election — EU citizenship does not extend to it, because the treaty that grants the municipal vote covers municipal elections only. If you are an EU citizen you will simply be handed two ballots instead of three.',
+      'Three of Prague’s Senate constituencies held elections in October 2026. Only Czech citizens aged 18 and over could vote in them — EU citizenship does not extend to Senate elections, because the treaty that grants the municipal vote covers municipal elections only. EU citizens were handed two ballots instead of three.',
 
     zdrojeNadpis: 'Sources',
     zdroje: [
@@ -376,7 +376,7 @@ export const en = {
 
     senatNadpis: 'The Senate ballot',
     senatText:
-      'The Senate ballot is different in kind: one candidate, one cross, single-member constituency, two rounds. If no candidate passes 50 % in the first round, the top two meet again a week later, on 16–17 October 2026. Only Czech citizens receive this ballot. A Senate voter card does exist, but it is valid only within the constituency where you are on the roll — it does not let you vote anywhere in the country.',
+      'The Senate ballot was different in kind: one candidate, one cross, single-member constituency, two rounds. No candidate passed 50 % in the first round in any of the three Prague constituencies, so the top two met again a week later, on 16–17 October 2026. Only Czech citizens received this ballot. A Senate voter card was valid only within the constituency where the voter was on the roll — it did not allow voting anywhere in the country.',
 
     pomocNadpis: 'If you cannot get to the polling station',
     pomocText:
@@ -440,8 +440,8 @@ export const en = {
 
     senatNadpis: 'The Senate',
     senatText:
-      'The Senate is the upper house of the national parliament, not a Prague body. Three of Prague’s constituencies are contested in 2026, so some Prague voters get a third ballot and some do not. Senators vote on national legislation and constitutional changes; they do not decide anything about the city.',
-    senatOdkaz: 'The three Prague constituencies',
+      'The Senate is the upper house of the national parliament, not a Prague body. Three of Prague’s constituencies held Senate elections in October 2026, so some Prague voters got a third ballot and some did not. Senators vote on national legislation and constitutional changes; they do not decide anything about the city.',
+    senatOdkaz: 'Results in the three Prague constituencies',
 
     rozpocetNadpis: 'The money',
     rozpocetText:
@@ -467,10 +467,10 @@ export const en = {
     mcText:
       'Each of the 57 city districts has its own ballot with its own set of parties — usually a mix of the national parties and purely local groups. The Czech page for each district lists who is standing there, how many seats are being filled and who currently runs the town hall.',
     mcOdkaz: 'All 57 city districts',
-    senatNadpis: 'Senate candidates',
+    senatNadpis: 'Senate: who was elected',
     senatText:
-      'Three Prague constituencies elect a senator in 2026. Only Czech citizens vote in this election.',
-    senatOdkaz: 'Senate constituencies and candidates',
+      'Three Prague constituencies elected a senator in October 2026; in all three the result was decided in the second round on 16–17 October. Only Czech citizens could vote in this election.',
+    senatOdkaz: 'Senate results and candidates',
     dataPoznamka:
       'Candidate lists come from the Czech Statistical Office open data set kv2026, without manual edits.',
     pruzkumyPoznamka:
@@ -624,12 +624,13 @@ export const en = {
     kandidatkyMagistrat: 'Parties standing for the city assembly (all of Prague votes)',
 
     senatNadpis: 'Senate',
-    senatNevoliHlavni: 'No senator is elected in your city district this year.',
-    senatNevoliDoplnek: 'You will not be given a Senate ballot.',
-    senatVoli: 'You also elect a senator in constituency {cislo} ({nazev}).',
+    senatNevoliHlavni: 'No senator was elected in your city district this year.',
+    senatNevoliDoplnek: 'A third of the Senate is renewed every two years.',
+    senatVoli: 'A senator was elected here in October 2026, in constituency {cislo} ({nazev}).',
     senatCastecne:
-      'Part of this district elects a senator in constituency {cislo} ({nazev}): {popis}.',
-    kandidatiSenatu: 'Senate candidates',
+      'Part of this district elected a senator in October 2026, in constituency {cislo} ({nazev}): {popis}.',
+    senatZvolen: 'Elected in the second round: {senator}.',
+    kandidatiSenatu: 'Senate election results',
 
     mistnostOkrsku: 'Polling station for precinct {okrsek}',
     odVasiPolohy: '{vzdalenost} from where you are',

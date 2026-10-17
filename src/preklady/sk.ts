@@ -267,7 +267,7 @@ export const sk: Preklad = {
 
     senatNadpis: 'Voľby do Senátu sú iná vec',
     senatText:
-      'V roku 2026 sa volí v troch pražských senátnych obvodoch. Vo voľbách do Senátu hlasujú len občania Českej republiky od 18 rokov — občianstvo EÚ sa na ne nevzťahuje, pretože zmluva, ktorá priznáva volebné právo v obci, sa týka len komunálnych volieb. Ak ste občan Slovenska, dostanete jednoducho dva lístky namiesto troch.',
+      'V októbri 2026 sa volilo v troch pražských senátnych obvodoch. Vo voľbách do Senátu mohli hlasovať len občania Českej republiky od 18 rokov — občianstvo EÚ sa na ne nevzťahuje, pretože zmluva, ktorá priznáva volebné právo v obci, sa týka len komunálnych volieb. Občania Slovenska a ďalších krajín EÚ dostali dva lístky namiesto troch.',
 
     zdrojeNadpis: 'Zdroje',
     zdroje: [
@@ -376,7 +376,7 @@ export const sk: Preklad = {
 
     senatNadpis: 'Senátny lístok',
     senatText:
-      'Senátny lístok je principiálne iný: jeden kandidát, jeden krížik, jednomandátový obvod, dve kolá. Ak v prvom kole nikto neprekročí 50 %, dvaja najlepší sa o týždeň stretnú znovu, 16.–17. októbra 2026. Tento lístok dostanú len občania ČR. Senátny voličský preukaz existuje, ale platí len v rámci obvodu, kde je volič zapísaný — neumožňuje voliť kdekoľvek v krajine.',
+      'Senátny lístok bol principiálne iný: jeden kandidát, jeden krížik, jednomandátový obvod, dve kolá. V žiadnom z troch pražských obvodov nikto v prvom kole neprekročil 50 %, takže dvaja najlepší sa o týždeň stretli znovu, 16.–17. októbra 2026. Tento lístok dostali len občania ČR. Senátny voličský preukaz platil len v rámci obvodu, kde bol volič zapísaný — neumožňoval voliť kdekoľvek v krajine.',
 
     pomocNadpis: 'Ak sa do volebnej miestnosti nedostanete',
     pomocText:
@@ -440,8 +440,8 @@ export const sk: Preklad = {
 
     senatNadpis: 'Senát',
     senatText:
-      'Senát je horná komora celoštátneho parlamentu, nie pražský orgán. V roku 2026 sa volí v troch pražských obvodoch, takže časť pražských voličov dostane tretí lístok a časť nie. Senátori hlasujú o celoštátnych zákonoch a ústavných zmenách; o meste nerozhodujú nič.',
-    senatOdkaz: 'Tri pražské senátne obvody',
+      'Senát je horná komora celoštátneho parlamentu, nie pražský orgán. V októbri 2026 sa volilo v troch pražských obvodoch, takže časť pražských voličov dostala tretí lístok a časť nie. Senátori hlasujú o celoštátnych zákonoch a ústavných zmenách; o meste nerozhodujú nič.',
+    senatOdkaz: 'Výsledky v troch pražských obvodoch',
 
     rozpocetNadpis: 'Peniaze',
     rozpocetText:
@@ -467,10 +467,10 @@ export const sk: Preklad = {
     mcText:
       'Každá z 57 mestských častí má vlastný lístok s vlastnou zostavou strán — zvyčajne mix celoštátnych strán a čisto miestnych združení. Česká stránka každej mestskej časti ukazuje, kto tam kandiduje, koľko mandátov sa rozdeľuje a kto radnicu vedie teraz.',
     mcOdkaz: 'Všetkých 57 mestských častí',
-    senatNadpis: 'Kandidáti do Senátu',
+    senatNadpis: 'Senát: kto bol zvolený',
     senatText:
-      'V roku 2026 volia senátora tri pražské obvody. V týchto voľbách hlasujú len občania Českej republiky.',
-    senatOdkaz: 'Senátne obvody a kandidáti',
+      'Tri pražské obvody volili senátora v októbri 2026; vo všetkých troch rozhodlo až druhé kolo 16.–17. októbra. V týchto voľbách mohli hlasovať len občania Českej republiky.',
+    senatOdkaz: 'Výsledky volieb do Senátu a kandidáti',
     dataPoznamka:
       'Kandidátne listiny pochádzajú z otvorených dát Českého štatistického úradu (sada kv2026), bez ručných úprav.',
     pruzkumyPoznamka:
@@ -598,11 +598,12 @@ export const sk: Preklad = {
     kandidatkyMagistrat: 'Kandidátky do zastupiteľstva mesta (volí celá Praha)',
 
     senatNadpis: 'Senát',
-    senatNevoliHlavni: 'Vo vašej mestskej časti sa tento rok senátor nevolí.',
-    senatNevoliDoplnek: 'Senátny lístok nedostanete.',
-    senatVoli: 'Volíte aj senátora v obvode č. {cislo} ({nazev}).',
-    senatCastecne: 'Časť územia volí senátora v obvode č. {cislo} ({nazev}): {popis}.',
-    kandidatiSenatu: 'Kandidáti do Senátu',
+    senatNevoliHlavni: 'Vo vašej mestskej časti sa tento rok senátor nevolil.',
+    senatNevoliDoplnek: 'Senát sa obmieňa po tretinách.',
+    senatVoli: 'V októbri 2026 sa tu volil senátor v obvode č. {cislo} ({nazev}).',
+    senatCastecne: 'Časť územia volila v októbri 2026 senátora v obvode č. {cislo} ({nazev}): {popis}.',
+    senatZvolen: 'Zvolený v druhom kole: {senator}.',
+    kandidatiSenatu: 'Výsledky volieb do Senátu',
 
     mistnostOkrsku: 'Volebná miestnosť okrsku {okrsek}',
     odVasiPolohy: '{vzdalenost} od miesta, kde ste',

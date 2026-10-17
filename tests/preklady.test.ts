@@ -209,6 +209,7 @@ describe('widget podle polohy ve všech jazycích', () => {
         dosad(texty.pocetStran, { pocet: 12 }),
         dosad(texty.senatVoli, { cislo: 24, nazev: 'Praha 9' }),
         dosad(texty.senatCastecne, { cislo: 24, nazev: 'Praha 9', popis: 'Kateřinky' }),
+        dosad(texty.senatZvolen, { senator: 'Mgr. Václav Láska' }),
         dosad(texty.mistnostOkrsku, { okrsek: 7001 }),
         dosad(texty.odVasiPolohy, { vzdalenost: '450 m' }),
       ]
