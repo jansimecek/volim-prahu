@@ -68,7 +68,32 @@
     ],
     "zvolen": null
    },
-   "kolo2": null
+   "kolo2": {
+    "generovano": "2026-10-17T16:17:02",
+    "okrskyCelkem": 139,
+    "zapsaniVolici": 101664,
+    "vydaneObalky": 23060,
+    "ucastProcenta": 22.68,
+    "platneHlasy": 22935,
+    "kandidati": [
+     {
+      "cislo": 3,
+      "jmeno": "Láska Václav Mgr.",
+      "navrhujici": "SEN 21",
+      "hlasy": 12205,
+      "procenta": 53.21
+     },
+     {
+      "cislo": 6,
+      "jmeno": "Sáblík Radko Ing.",
+      "navrhujici": "KDUČSL+ODS+STAN",
+      "hlasy": 10730,
+      "procenta": 46.78
+     }
+    ],
+    "postupuji": [],
+    "zvolen": 3
+   }
   },
   {
    "cislo": 24,
@@ -123,7 +148,32 @@
     ],
     "zvolen": null
    },
-   "kolo2": null
+   "kolo2": {
+    "generovano": "2026-10-17T18:17:27",
+    "okrskyCelkem": 101,
+    "zapsaniVolici": 98360,
+    "vydaneObalky": 18903,
+    "ucastProcenta": 19.22,
+    "platneHlasy": 18720,
+    "kandidati": [
+     {
+      "cislo": 2,
+      "jmeno": "Smoljak David",
+      "navrhujici": "KDUZelSTANPiTOP",
+      "hlasy": 14739,
+      "procenta": 78.73
+     },
+     {
+      "cislo": 5,
+      "jmeno": "Pecková Dagmar",
+      "navrhujici": "ODS",
+      "hlasy": 3981,
+      "procenta": 21.26
+     }
+    ],
+    "postupuji": [],
+    "zvolen": 2
+   }
   },
   {
    "cislo": 27,
@@ -206,7 +256,32 @@
     ],
     "zvolen": null
    },
-   "kolo2": null
+   "kolo2": {
+    "generovano": "2026-10-17T16:37:12",
+    "okrskyCelkem": 92,
+    "zapsaniVolici": 78611,
+    "vydaneObalky": 19995,
+    "ucastProcenta": 25.44,
+    "platneHlasy": 19815,
+    "kandidati": [
+     {
+      "cislo": 7,
+      "jmeno": "Padevět Jiří PhDr.",
+      "navrhujici": "ODSSTANPirátTOP",
+      "hlasy": 13207,
+      "procenta": 66.65
+     },
+     {
+      "cislo": 8,
+      "jmeno": "Čižinský Jan",
+      "navrhujici": "KDU+Zel+PHASOBĚ",
+      "hlasy": 6608,
+      "procenta": 33.34
+     }
+    ],
+    "postupuji": [],
+    "zvolen": 7
+   }
   }
  ]
 }

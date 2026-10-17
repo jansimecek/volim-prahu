@@ -5,7 +5,7 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-14
+overeno: 2026-10-17
 
 zdroje:
   - id: ct24-10-10
@@ -93,6 +93,16 @@ zdroje:
     nazev: "Hlaváček chce pražskou koalici představit příští týden"
     datum: 2026-10-13
     url: "https://prazska.drbna.cz/politika/902930-hlavacek-chce-prazskou-koalici-predstavit-pristi-tyden.html"
+  - id: pd-finance-15-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "STAN a SPOLU se v Praze shodly na dopravě a bydlení. Spor zůstává o finance"
+    datum: 2026-10-15
+    url: "https://prazsky.denik.cz/komunalni-volby/hlavacek-pokracuje-v-jednani-o-prazske-koalici-znovu-se-sesel-s-portlikem/"
+  - id: ctk-prehled-16-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Povolební vyjednávání v Praze pokračují, jasno je v některých městských částech"
+    datum: 2026-10-16
+    url: "https://www.ceskenoviny.cz/zpravy/povolebni-vyjednavani-v-praze-pokracuji-jasno-je-v-nekterych-mestskych-castech/2888712"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -440,3 +450,50 @@ udalosti:
       o Prahu sobě, Piráty, nebo obě uskupení.
     zdroje: [pd-pristi-tyden-13-10, drbna-pristi-tyden-13-10]
 
+  - id: stan-spolu-program-finance
+    datum: 2026-10-15
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: Petr Hlaváček (STAN) a Tomáš Portlík (SPOLU)
+    doklad: citace
+    citace: >-
+      Máme shodu v tom, co se má stavět, dopravní infrastruktura, školství
+      a bydlení.
+    shrnuti: >-
+      Druhé jednání STAN a SPOLU, tentokrát o programu. Sporná je gesce
+      financí: „V čem máme nejasnost, je, kdo drží finance,“ řekl Hlaváček.
+      Podle Portlíka si obě strany chtějí nechat dosavadní gesce — STAN územní
+      rozvoj a školství, SPOLU infrastrukturu, sociální věci a zdravotnictví.
+      O dopravě rozhodne i případný třetí partner.
+    zdroje: [pd-finance-15-10, ctk-prehled-16-10]
+
+  - id: spolu-bez-tretiho
+    datum: 2026-10-15
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu]
+    kdo: Tomáš Portlík, lídr SPOLU
+    doklad: citace
+    citace: >-
+      My k tomu nevidíme důvod, my jsme se vyjádřili jasně, že je pro nás
+      preferovaná varianta koalice SPOLU a STAN.
+    shrnuti: >-
+      SPOLU se s Prahou sobě ani s Piráty znovu scházet nehodlá. O přizvání
+      třetího partnera má podle Portlíka rozhodnout STAN jako vítěz voleb.
+    zdroje: [pd-finance-15-10]
+
+  - id: stan-nabidka-pondeli
+    datum: 2026-10-15
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Myslím, že vám brzy řekneme, jestli směřujeme ke dvojkolejné nebo
+      trojkolejné verzi.
+    shrnuti: >-
+      Hlaváček se přiklání k širší koalici než jen se SPOLU (34 hlasů z 65).
+      Začátkem příštího týdne STAN znovu jedná s Piráty a s Prahou sobě: „My
+      přijdeme s nějakou nabídkou a uvidíme, jak kolegové budou reagovat.“
+      Koaliční smlouvu chce mít podepsanou v listopadu.
+    zdroje: [pd-finance-15-10, ctk-prehled-16-10]

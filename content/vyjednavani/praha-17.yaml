@@ -1,0 +1,29 @@
+# Povolební vyjednávání — praha-17. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-17
+overeno: 2026-10-17
+
+zdroje:
+  - id: pd-praha17-16-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Dohodnuto: V Praze 17 vznikne koalice Řepských sousedů a STAN"
+    datum: 2026-10-16
+    url: "https://prazsky.denik.cz/komunalni-volby/dohodnuto-v-praze-17-vznikne-koalice-repskych-sousedu-a-stan/"
+
+udalosti:
+  - id: dohoda-repsti-sousede-stan
+    datum: 2026-10-16
+    typ: dohoda
+    subjekty: [repsti-sousede, starostove-a-nezavisli]
+    sestava: [repsti-sousede, starostove-a-nezavisli]
+    kdo: Lukáš Pokorný, lídr Řepských sousedů
+    doklad: citace
+    citace: >-
+      Jako kolegy do vznikající rady jsme si vybrali nově zvolené zastupitele
+      za místní sdružení STAN, kteří nám za současné situace nejlépe umožní
+      plnit sliby, které jsme před volbami dali.
+    shrnuti: >-
+      Vítězní Řepští sousedé (9 mandátů) se dohodli se STAN (4), dohromady
+      mají 13 z 23. Obě strany začaly připravovat koaliční smlouvu. Radnici
+      dosud vedla koalice ODS, ANO a Řep sobě.
+    zdroje: [pd-praha17-16-10]

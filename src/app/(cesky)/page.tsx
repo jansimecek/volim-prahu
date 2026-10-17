@@ -316,7 +316,7 @@ export default async function Rozcestnik() {
             nadpis="Debaty kandidátů"
             popis="Přehled předvolebních debat lídrů pražských kandidátek."
           />
-          <Rozcestka href="/senat" popisek="Souběžně" nadpis="Senát" popis="Senátní volby ve třech pražských obvodech." />
+          <Rozcestka href="/senat" popisek="Souběžně" nadpis="Senát" popis="Zvolení senátoři a výsledky ve třech pražských obvodech." />
         </ul>
       </section>
     </div>

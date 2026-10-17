@@ -98,8 +98,8 @@ export default function Stranka() {
         </dl>
         <p className="mt-4">
           Volí se do zastupitelstev městských částí a Zastupitelstva hlavního města Prahy,
-          ve třech senátních obvodech i do Senátu. Případné druhé kolo senátních voleb
-          připadá na 16. a 17. října 2026.
+          ve třech senátních obvodech i do Senátu. Druhé kolo senátních voleb proběhlo
+          16. a 17. října 2026.
         </p>
         <div className="mt-5">
           <PridatDoKalendare />

@@ -53,17 +53,3 @@ export function nazevStranySenat(nazev: string): string {
 export function celeJmenoSenat(k: KandidatSenat): string {
   return [k.titulPred, k.jmeno, k.prijmeni, k.titulZa].filter(Boolean).join(' ').trim()
 }
-
-/**
- * Obhajuje stávající senátor mandát? Odvozeno z kandidátní listiny, ne
- * z domněnky — porovnáváme příjmení a křestní jméno proti seznamu ČSÚ.
- */
-export function obhajuje(cisloObvodu: number, jmenoSenatora: string): boolean | null {
-  const kandidati = kandidatiObvodu(cisloObvodu)
-  if (kandidati.length === 0) return null
-  const hledane = jmenoSenatora.toLowerCase().split(/\s+/).filter(Boolean)
-  return kandidati.some((k) => {
-    const cele = `${k.jmeno} ${k.prijmeni}`.toLowerCase()
-    return hledane.every((cast) => cele.includes(cast))
-  })
-}
