@@ -31,7 +31,7 @@ export const en = {
     nazevWebu: 'Volím Prahu',
     podtitul: 'Prague elections 2026',
     popisSekce:
-      'Who can vote in Prague’s municipal elections on 9–10 October 2026, where and how to vote, and what the city and district assemblies actually decide.',
+      'Who can vote in Prague’s municipal elections, how the vote on 9–10 October 2026 worked, and what the city and district assemblies actually decide.',
   },
 
   chrome: {
@@ -57,6 +57,11 @@ export const en = {
     pravniZaklad: 'Legal basis',
     aktualizovano: 'Last checked',
     kontakt: 'Found a mistake? Write to',
+    poVolbachPopisek: 'After the elections',
+    poVolbachText:
+      'The municipal elections of 9–10 October 2026 are over, and the Senate run-offs in three Prague constituencies were decided on 16–17 October. This section stays online as the pre-election guide — nothing in it is instructions for voting any more. Results and the talks on who will lead Prague and its districts are followed on the Czech pages.',
+    poVolbachVysledky: 'Results',
+    poVolbachVyjednavani: 'Coalition talks',
   },
 
   spolecne: {
@@ -70,7 +75,7 @@ export const en = {
 
   index: {
     nadpisek: 'Municipal and Senate elections · 9–10 October 2026',
-    h1: 'Can you vote in Prague this October?',
+    h1: 'Who can vote in Prague’s municipal elections?',
     perex:
       'Tens of thousands of people who live in Prague hold a foreign passport, and some of them have the right to vote here without knowing it. Czech authorities publish election information almost entirely in Czech. This page is the short answer; the rest of this section is the detail.',
     odpovediNadpis: 'The short answer depends on your citizenship',
@@ -80,7 +85,7 @@ export const en = {
         obcanstvi: 'Czech citizenship',
         zaver: 'Yes — you vote on every ballot you are given.',
         detail:
-          'You elect the Prague city assembly and the assembly of your city district. In three of Prague’s Senate constituencies you also receive a Senate ballot this year.',
+          'You elect the Prague city assembly and the assembly of your city district. In 2026, voters in three of Prague’s Senate constituencies also received a Senate ballot.',
       },
       {
         stav: 'ano',
@@ -497,10 +502,10 @@ export const en = {
   sdileni: {
     alt: 'Volím Prahu — a guide to the 2026 Prague elections in English',
     index: {
-      titulek: 'Can you vote in Prague this October?',
+      titulek: 'Who can vote in Prague’s municipal elections?',
       podtitul: 'Tens of thousands of residents can — and most of them do not know it.',
       popis:
-        'Who can vote in Prague’s municipal elections on 9–10 October 2026, where and how to vote — in English. Czech and EU citizens are eligible.',
+        'Who can vote in Prague’s municipal elections and how the vote on 9–10 October 2026 worked — in English. Czech and EU citizens are eligible.',
     },
     'can-i-vote': {
       titulek: 'Can I vote?',

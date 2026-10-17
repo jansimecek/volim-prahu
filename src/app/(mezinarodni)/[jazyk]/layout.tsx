@@ -6,6 +6,7 @@ import { HlavniNavigace } from '@/components/HlavniNavigace'
 import { Mereni } from '@/components/Mereni'
 import { PrepinacJazyka } from '@/components/PrepinacJazyka'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { jePoVolbach } from '@/lib/rezim'
 import { JAZYKY, OG_LOCALE, OG_LOCALE_CESKY, jazykoveVarianty, jeJazyk, PODSTRANKY } from '@/lib/jazyky'
 import { preklad } from '@/preklady'
 import { KONTAKT_EMAIL, ZAKLAD_WEBU, absolutni } from '@/lib/web'
@@ -155,6 +156,27 @@ export default async function MezinarodniLayout({
             </p>
           </div>
         </div>
+
+        {/* Totéž co pruh režimu v české části: po volbách je to nejdůležitější
+            věta na stránce, jinak by průvodce v přítomném čase radil, jak
+            volit ve volbách, které proběhly. Výsledky a vyjednávání jsou
+            jen česky, proto hrefLang. */}
+        {jePoVolbach() && (
+          <div className="border-b border-praha bg-papir-tmavsi">
+            <div className="mx-auto flex max-w-5xl flex-wrap items-baseline gap-x-4 gap-y-1 px-4 py-2 text-sm">
+              <span className="popisek-uredni text-praha">{t.chrome.poVolbachPopisek}</span>
+              <span className="max-w-prose">{t.chrome.poVolbachText}</span>
+              <span className="flex gap-4">
+                <Link href="/vysledky" className="odkaz-akcent" hrefLang="cs">
+                  {t.chrome.poVolbachVysledky}
+                </Link>
+                <Link href="/koalice" className="odkaz-akcent" hrefLang="cs">
+                  {t.chrome.poVolbachVyjednavani}
+                </Link>
+              </span>
+            </div>
+          </div>
+        )}
 
         <main id="obsah" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
           {children}

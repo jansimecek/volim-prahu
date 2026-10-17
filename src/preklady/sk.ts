@@ -30,7 +30,7 @@ export const sk: Preklad = {
     nazevWebu: 'Volím Prahu',
     podtitul: 'Voľby v Prahe 2026',
     popisSekce:
-      'Kto môže voliť v komunálnych voľbách v Prahe 9.–10. októbra 2026, kde a ako voliť a o čom v skutočnosti rozhoduje magistrát a o čom mestská časť.',
+      'Kto môže voliť v komunálnych voľbách v Prahe, ako prebiehali voľby 9.–10. októbra 2026 a o čom v skutočnosti rozhoduje magistrát a o čom mestská časť.',
   },
 
   chrome: {
@@ -56,6 +56,11 @@ export const sk: Preklad = {
     pravniZaklad: 'Právny základ',
     aktualizovano: 'Overené',
     kontakt: 'Našli ste chybu? Napíšte na',
+    poVolbachPopisek: 'Po voľbách',
+    poVolbachText:
+      'Komunálne voľby 9.–10. októbra 2026 sa skončili a druhé kolo senátnych volieb v troch pražských obvodoch rozhodlo 16.–17. októbra. Táto časť zostáva online ako predvolebný sprievodca — nič v nej už nie je návod, ako voliť. Výsledky a rokovania o tom, kto povedie Prahu a mestské časti, sledujeme na českých stránkach.',
+    poVolbachVysledky: 'Výsledky',
+    poVolbachVyjednavani: 'Rokovania o koalíciách',
   },
 
   spolecne: {
@@ -69,7 +74,7 @@ export const sk: Preklad = {
 
   index: {
     nadpisek: 'Komunálne a senátne voľby · 9.–10. októbra 2026',
-    h1: 'Môžete v Prahe tento október voliť?',
+    h1: 'Kto môže voliť v komunálnych voľbách v Prahe?',
     perex:
       'V Prahe žijú desaťtisíce ľudí s cudzím pasom a časť z nich má volebné právo, hoci o tom nevie. České úrady vydávajú informácie o voľbách takmer výhradne po česky. Táto stránka je krátka odpoveď; zvyšok sekcie sú podrobnosti.',
     odpovediNadpis: 'Krátka odpoveď závisí od vášho občianstva',
@@ -86,7 +91,7 @@ export const sk: Preklad = {
         obcanstvi: 'Občianstvo Českej republiky',
         zaver: 'Áno — volíte na každom lístku, ktorý dostanete.',
         detail:
-          'Volíte zastupiteľstvo hlavného mesta a zastupiteľstvo svojej mestskej časti. V troch pražských senátnych obvodoch dostanete tento rok aj senátny lístok.',
+          'Volíte zastupiteľstvo hlavného mesta a zastupiteľstvo svojej mestskej časti. V roku 2026 dostali voliči v troch pražských senátnych obvodoch aj senátny lístok.',
       },
       {
         stav: 'ne',
@@ -480,10 +485,10 @@ export const sk: Preklad = {
   sdileni: {
     alt: 'Volím Prahu — sprievodca pražskými voľbami 2026 po slovensky',
     index: {
-      titulek: 'Môžete v Prahe tento október voliť?',
+      titulek: 'Kto môže voliť v komunálnych voľbách v Prahe?',
       podtitul: 'Slováci s pobytom v Prahe áno — a väčšina z nich o tom nevie.',
       popis:
-        'Kto môže voliť v komunálnych voľbách v Prahe 9.–10. októbra 2026, kde a ako — po slovensky. Občania SR a ďalších krajín EÚ volebné právo majú.',
+        'Kto môže voliť v komunálnych voľbách v Prahe a ako prebiehali voľby 9.–10. októbra 2026 — po slovensky. Občania SR a ďalších krajín EÚ volebné právo majú.',
     },
     'can-i-vote': {
       titulek: 'Môžem voliť?',
