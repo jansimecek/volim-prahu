@@ -40,11 +40,12 @@ export const MOJE_VOLBY_CESKY: Preklad['mojeVolby'] = {
   kandidatkyMagistrat: 'Kandidátky na magistrát (volí celá Praha)',
 
   senatNadpis: 'Senát',
-  senatNevoliHlavni: 'Ve vaší části se letos senátor nevolí.',
-  senatNevoliDoplnek: 'Senátní lístek nedostanete.',
-  senatVoli: 'Volíte i senátora v obvodu č. {cislo} ({nazev}).',
-  senatCastecne: 'Část území volí senátora v obvodu č. {cislo} ({nazev}): {popis}.',
-  kandidatiSenatu: 'Kandidáti do Senátu',
+  senatNevoliHlavni: 'Ve vaší části se letos senátor nevolil.',
+  senatNevoliDoplnek: 'Senát se obměňuje po třetinách.',
+  senatVoli: 'V říjnu 2026 se tu volil senátor v obvodu č. {cislo} ({nazev}).',
+  senatCastecne: 'Část území volila v říjnu 2026 senátora v obvodu č. {cislo} ({nazev}): {popis}.',
+  senatZvolen: 'Zvolen ve druhém kole: {senator}.',
+  kandidatiSenatu: 'Výsledky voleb do Senátu',
 
   mistnostOkrsku: 'Volební místnost okrsku {okrsek}',
   odVasiPolohy: '{vzdalenost} od vaší polohy',

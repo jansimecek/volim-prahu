@@ -14,6 +14,7 @@ import { vysledekDruhehoKola } from '@/lib/senatVysledky'
 import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
 import { VyjednavaniZastupitelstva } from '@/components/VyjednavaniZastupitelstva'
 import { vysledekZastupitelstva } from '@/lib/konecneVysledky'
+import { jePoVolbach } from '@/lib/rezim'
 
 type Parametry = { params: Promise<{ slug: string }> }
 
@@ -132,8 +133,10 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
         )}
       </section>
 
-      {/* Kde přesně se v téhle části volí — závazné je oznámení na úřední desce. */}
-      {deska && (
+      {/* Kde přesně se v téhle části volí — závazné je oznámení na úřední desce.
+          Po volbách to není k ničemu: oznámení i lhůta k jeho vyvěšení patří
+          k volbám, které už proběhly. */}
+      {deska && !jePoVolbach() && (
         <section className="max-w-prose border-l-2 border-praha pl-5">
           <h2 className="text-2xl">Kde se tady volí</h2>
           {deska.oznameni ? (
