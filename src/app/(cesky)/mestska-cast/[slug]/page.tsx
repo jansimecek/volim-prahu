@@ -10,7 +10,7 @@ import { SeznamKandidatu } from '@/components/SeznamKandidatu'
 import { celeJmeno, kandidatka, lidr } from '@/lib/kandidatky'
 import { odkazNaDesku, stavMestskeCasti } from '@/lib/desky'
 import { senatniStavMestskeCasti } from '@/lib/senat'
-import { soubojDruhehoKola } from '@/lib/senatVysledky'
+import { vysledekDruhehoKola } from '@/lib/senatVysledky'
 import { VysledekZastupitelstva } from '@/components/VysledekZastupitelstva'
 import { VyjednavaniZastupitelstva } from '@/components/VyjednavaniZastupitelstva'
 import { vysledekZastupitelstva } from '@/lib/konecneVysledky'
@@ -38,7 +38,7 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
   if (!mc || !zastupitelstvo) notFound()
 
   const senat = senatniStavMestskeCasti(slug)
-  const souboj = senat.stav === 'nevoli' ? [] : soubojDruhehoKola(senat.obvod.cislo)
+  const druheKolo = senat.stav === 'nevoli' ? null : vysledekDruhehoKola(senat.obvod.cislo)
   const deska = stavMestskeCasti(slug)
   const listina = kandidatka(slug)
   const vysledek = vysledekZastupitelstva(slug)
@@ -106,27 +106,28 @@ export default async function StrankaMestskeCasti({ params }: Parametry) {
             <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
               obvodu č. {senat.obvod.cislo} ({senat.obvod.nazev})
             </Link>
-            , kde se letos volí, patří {senat.popis}. Ve zbytku území se senátor letos
-            nevolí — rozhoduje adresa, ne příslušnost k městské části.
+            , kde se letos volilo, patří {senat.popis}. Ve zbytku území se senátor letos
+            nevolil — rozhoduje adresa, ne příslušnost k městské části.
           </p>
         )}
-        {souboj.length === 2 && (
+        {druheKolo && senat.stav !== 'nevoli' && (
           <p className="mt-2">
-            <strong>Druhé kolo 16.–17. října:</strong> utkají se {souboj[0]!.celeJmeno} a {souboj[1]!.celeJmeno}.
-            Lístky dostanete až ve volební místnosti, zastupitelstva se už nevolí.{' '}
-            <Link href="/senat" className="odkaz-akcent">
-              Jak se ve druhém kole volí
+            <strong>Zvolen ve druhém kole:</strong> {druheKolo.zvoleny.celeJmeno} (
+            {druheKolo.zvoleny.procenta.toLocaleString('cs-CZ', { minimumFractionDigits: 2 })} %), proti{' '}
+            {druheKolo.souper.celeJmeno} (
+            {druheKolo.souper.procenta.toLocaleString('cs-CZ', { minimumFractionDigits: 2 })} %).{' '}
+            <Link href={`/senat/${senat.obvod.slug}`} className="odkaz-akcent">
+              Výsledky obou kol
             </Link>
           </p>
         )}
         {senat.stav === 'nevoli' && (
           <p className="mt-1">
-            Senátora tady letos nevolíte. Senát se obměňuje po třetinách a{' '}
+            Senátor se tady letos nevolil. Senát se obměňuje po třetinách a{' '}
             <Link href="/senat" className="odkaz-akcent">
               obvod, do kterého tahle část patří
             </Link>
-            , přijde na řadu až v dalších letech. Druhé kolo senátních voleb 16.–17. října
-            se tu proto nekoná.
+            , přijde na řadu až v dalších letech.
           </p>
         )}
       </section>

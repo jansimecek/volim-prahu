@@ -5,7 +5,7 @@ import { radkyKola, type Kolo } from '@/lib/senatVysledky'
 const cislo = new Intl.NumberFormat('cs-CZ')
 const procenta = new Intl.NumberFormat('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
-/** Výsledky jednoho kola senátních voleb v obvodu. Postupující jsou vyznačení. */
+/** Výsledky jednoho kola senátních voleb v obvodu. Postupující a zvolený jsou vyznačení. */
 export function VysledkySenatu({ cisloObvodu, kolo }: { cisloObvodu: number; kolo: Kolo }) {
   const radky = radkyKola(cisloObvodu, kolo)
   return (
@@ -25,10 +25,11 @@ export function VysledkySenatu({ cisloObvodu, kolo }: { cisloObvodu: number; kol
           </thead>
           <tbody>
             {radky.map((r) => (
-              <tr key={r.cislo} className={`border-b border-linka-silna ${r.postupuje ? 'font-medium' : ''}`}>
+              <tr key={r.cislo} className={`border-b border-linka-silna ${r.postupuje || r.zvolen ? 'font-medium' : ''}`}>
                 <td className="py-2 pr-3">
                   {r.celeJmeno}
                   {r.postupuje && <span className="popisek-uredni block text-praha">postupuje do 2. kola</span>}
+                  {r.zvolen && <span className="popisek-uredni block text-praha">zvolen senátorem</span>}
                 </td>
                 <td className="py-2 pr-3">{nazevStranySenat(r.kandidat?.volebniStrana ?? r.navrhujici)}</td>
                 <td className="py-2 pr-3 text-right font-mono">{cislo.format(r.hlasy)}</td>

@@ -2,14 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Drobecky } from '@/components/Drobecky'
-import { DruheKoloSenatu } from '@/components/DruheKoloSenatu'
 import { KandidatiSenatu } from '@/components/KandidatiSenatu'
 import { VysledkySenatu } from '@/components/VysledkySenatu'
-import { soubojDruhehoKola, vysledkyObvodu } from '@/lib/senatVysledky'
+import { vysledekDruhehoKola, vysledkyObvodu } from '@/lib/senatVysledky'
 import { MDXContent } from '@/components/mdx'
 import { MESTSKE_CASTI } from '@/lib/obsah'
 import { OBVODY } from '@/lib/senat'
-import { celeJmenoSenat, kandidatiObvodu, nazevStranySenat, obhajuje, sadaSenat } from '@/lib/senatKandidati'
+import { celeJmenoSenat, kandidatiObvodu, nazevStranySenat, sadaSenat } from '@/lib/senatKandidati'
 
 type Parametry = { params: Promise<{ obvod: string }> }
 
@@ -22,8 +21,8 @@ export async function generateMetadata({ params }: Parametry): Promise<Metadata>
   const obvod = OBVODY.find((o) => o.slug === slug)
   if (!obvod) return {}
   return {
-    title: `Senátní obvod č. ${obvod.cislo} ${obvod.nazev}: druhé kolo 2026`,
-    description: `Druhé kolo senátních voleb v obvodu č. ${obvod.cislo} (${obvod.nazev}) 16.–17. října 2026: kdo postoupil, výsledky prvního kola, které městské části do obvodu patří a jak se volí.`,
+    title: `Senátní obvod č. ${obvod.cislo} ${obvod.nazev}: výsledky 2026`,
+    description: `Senátní volby 2026 v obvodu č. ${obvod.cislo} (${obvod.nazev}): kdo vyhrál druhé kolo 16.–17. října, výsledky obou kol a které městské části do obvodu patří.`,
   }
 }
 
@@ -34,9 +33,8 @@ export default async function StrankaObvodu({ params }: Parametry) {
 
   const nazevMC = (s: string) => MESTSKE_CASTI.find((mc) => mc.slug === s)?.nazev ?? s
   const kandidati = kandidatiObvodu(obvod.cislo)
-  const senatorObhajuje = obhajuje(obvod.cislo, obvod.senator)
   const vysledky = vysledkyObvodu(obvod.cislo)
-  const dvojice = soubojDruhehoKola(obvod.cislo)
+  const druheKolo = vysledekDruhehoKola(obvod.cislo)
 
   return (
     <div className="space-y-10">
@@ -55,7 +53,7 @@ export default async function StrankaObvodu({ params }: Parametry) {
 
       <dl className="grid grid-cols-1 gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
         <div className="bg-papir p-3">
-          <dt className="popisek-uredni">Mandát končí</dt>
+          <dt className="popisek-uredni">Dosavadní mandát</dt>
           <dd className="mt-1 font-mono">
             <a href={obvod.senatorZdroj} className="odkaz-akcent inline-block py-1" rel="noopener">
               {obvod.senator}
@@ -69,40 +67,30 @@ export default async function StrankaObvodu({ params }: Parametry) {
           </dd>
         </div>
         <div className="bg-papir p-3">
-          <dt className="popisek-uredni">Volí se</dt>
+          <dt className="popisek-uredni">Volilo se</dt>
           <dd className="mt-1 font-mono">1. kolo 9.–10. 10. · 2. kolo 16.–17. 10. 2026</dd>
         </div>
       </dl>
 
-      {dvojice.length === 2 && (
+      {druheKolo && (
         <section aria-labelledby="druhe-kolo" className="border-l-2 border-praha pl-5">
-          <h2 id="druhe-kolo" className="text-2xl">
-            Druhé kolo: {dvojice.map((r) => r.celeJmeno).join(' – ')}
+          <p className="popisek-uredni">Druhé kolo 16.–17. října 2026</p>
+          <h2 id="druhe-kolo" className="mt-1 text-2xl">
+            Zvolen {druheKolo.zvoleny.celeJmeno}
           </h2>
-          <ul className="mt-3 grid max-w-3xl gap-4 sm:grid-cols-2">
-            {dvojice.map((r) => (
-              <li key={r.cislo}>
-                <p className="font-display text-lg font-medium">{r.celeJmeno}</p>
-                <p className="text-sm">
-                  {nazevStranySenat(r.kandidat?.volebniStrana ?? r.navrhujici)}
-                  {r.kandidat?.povolani && ` · ${r.kandidat.povolani}`}
-                </p>
-                <p className="popisek-uredni mt-1">
-                  1. kolo: {r.procenta.toLocaleString('cs-CZ', { minimumFractionDigits: 2 })} %
-                </p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-3 max-w-prose text-sm">
-            Ve druhém kole vyhrává, kdo dostane víc hlasů. Výsledek prvního kola se nepřenáší.
+          <p className="mt-2 max-w-prose">
+            {nazevStranySenat(druheKolo.zvoleny.kandidat?.volebniStrana ?? druheKolo.zvoleny.navrhujici)}
           </p>
+          <div className="mt-4">
+            <VysledkySenatu cisloObvodu={obvod.cislo} kolo={druheKolo.kolo} />
+          </div>
         </section>
       )}
 
       {vysledky && (
         <section aria-labelledby="prvni-kolo">
           <h2 id="prvni-kolo" className="text-2xl">
-            Výsledky prvního kola
+            Výsledky prvního kola 9.–10. října
           </h2>
           <div className="mt-3">
             <VysledkySenatu cisloObvodu={obvod.cislo} kolo={vysledky.kolo1} />
@@ -113,28 +101,15 @@ export default async function StrankaObvodu({ params }: Parametry) {
         </section>
       )}
 
-      <DruheKoloSenatu />
-
       <div className="proza max-w-prose">
         <MDXContent code={obvod.content} />
       </div>
-
-      {senatorObhajuje !== null && (
-        <p className="max-w-prose border-l-2 border-praha pl-5">
-          <span className="popisek-uredni block">Obhajuje stávající senátor?</span>
-          {senatorObhajuje
-            ? `${obvod.senator} je na kandidátní listině a mandát obhajuje.`
-            : `${obvod.senator} mezi zaregistrovanými kandidáty není, mandát tedy neobhajuje.`}{' '}
-          Odvozeno z kandidátní listiny ČSÚ, ne z vyjádření dotčené osoby.
-        </p>
-      )}
 
       {kandidati.length > 0 && (
         <section>
           <h2 className="text-2xl">Kandidáti prvního kola</h2>
           <p className="mt-1 max-w-prose text-sm text-seda-uredni">
-            Takhle byli kandidáti na hlasovacím lístku v prvním kole, s vylosovanými čísly. Ve
-            druhém kole jsou na lístku jen dva postupující — viz výše.
+            Takhle byli kandidáti na hlasovacím lístku v prvním kole, s vylosovanými čísly.
           </p>
           <KandidatiSenatu
             kandidati={kandidati.map((k) => ({

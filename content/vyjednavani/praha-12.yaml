@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-12. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-12
+overeno: 2026-10-17
+
+zdroje:
+  - id: pd-prehled-15-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Po volbách se skládají koalice. Praha 10 má jasno, osmička nabízí post starosty"
+    datum: 2026-10-15
+    url: "https://prazsky.denik.cz/komunalni-volby/po-volbach-se-skladaji-koalice-praha-10-ma-jasno-osmicka-nabizi-post-starosty/"
+
+udalosti:
+  - id: ods-jedna-se-vsemi
+    datum: 2026-10-15
+    typ: jednani
+    subjekty: [obcanska-demokraticka-strana]
+    kdo: Vojtěch Kos (ODS), starosta
+    doklad: citace
+    citace: >-
+      V současné době probíhají jednání se všemi zástupci zvolených stran.
+      Výsledek zatím nemáme.
+    shrnuti: >-
+      Vítězná ODS (10 mandátů z 35) jedná se všemi stranami v zastupitelstvu.
+      Kos chce ve funkci starosty pokračovat. V minulém období vládla ODS
+      s TOP 09 a ANO; jestli spolupráce pokračuje, zatím není jasné.
+    zdroje: [pd-prehled-15-10]

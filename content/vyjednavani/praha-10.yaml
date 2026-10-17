@@ -1,0 +1,33 @@
+# Povolební vyjednávání — praha-10. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-10
+overeno: 2026-10-17
+
+zdroje:
+  - id: pd-praha10-15-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 10 vzniká koalice ODS, STAN s Vlastou a lidovci a Prahy 10 sobě"
+    datum: 2026-10-15
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-10-vznika-koalice-ods-stan-s-vlastou-a-lidovci-a-prahy-10-sobe/"
+  - id: pd-prehled-15-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Po volbách se skládají koalice. Praha 10 má jasno, osmička nabízí post starosty"
+    datum: 2026-10-15
+    url: "https://prazsky.denik.cz/komunalni-volby/po-volbach-se-skladaji-koalice-praha-10-ma-jasno-osmicka-nabizi-post-starosty/"
+
+udalosti:
+  - id: memorandum-ods-stan-ps10
+    datum: 2026-10-14
+    typ: memorandum
+    subjekty: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    sestava: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    kdo: David Kašpar (STAN), lídr kandidátky STAN, Vlasty a KDU-ČSL
+    doklad: citace
+    citace: >-
+      Bylo podepsáno memorandum mezi Společně pro Prahu 10, Starostové, Vlasta,
+      lidovci a Praha 10 sobě a Zelení.
+    shrnuti: >-
+      Memorandum podepsali ve středu, koalice má 24 mandátů z 45. Starostou
+      má zůstat Martin Valovič (ODS). Proti minulému období nahrazuje TOP 09
+      Praha 10 sobě se Zelenými. Strany teď připravují koaliční smlouvu.
+    zdroje: [pd-praha10-15-10, pd-prehled-15-10]

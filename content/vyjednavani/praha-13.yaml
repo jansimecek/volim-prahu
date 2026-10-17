@@ -1,0 +1,31 @@
+# Povolební vyjednávání — praha-13. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-13
+overeno: 2026-10-17
+
+zdroje:
+  - id: patriot-praha13-13-10
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Vítězná ODS chce v Praze 13 vytvořit koalici se STAN, Piráty, Zelenými, TOP 09 a KDU-ČSL"
+    datum: 2026-10-13
+    url: "https://www.prazskypatriot.cz/vitezna-ods-chce-v-praze-13-vytvorit-koalici-se-stan-piraty-zelenymi-top-09-a-kdu-csl/"
+  - id: ctk-prehled-16-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Povolební vyjednávání v Praze pokračují, jasno je v některých městských částech"
+    datum: 2026-10-16
+    url: "https://www.ceskenoviny.cz/zpravy/povolebni-vyjednavani-v-praze-pokracuji-jasno-je-v-nekterych-mestskych-castech/2888712"
+
+udalosti:
+  - id: memorandum-ods-stan-zp-top
+    datum: 2026-10-12
+    typ: memorandum
+    subjekty: [ods-s-podporou-nezavislych, starostove-a-nezavisli, zeleni-a-pirati-pro-13, spolecne-pro-prahu-13-top-09-a-kdu-csl]
+    sestava: [ods-s-podporou-nezavislych, starostove-a-nezavisli, zeleni-a-pirati-pro-13, spolecne-pro-prahu-13-top-09-a-kdu-csl]
+    kdo: mluvčí radnice Lucie Steinerová
+    doklad: parafraze
+    shrnuti: >-
+      V pondělí podepsali memorandum o spolupráci na období 2026–2030 ODS,
+      STAN, Zelení a Piráti pro 13 a TOP 09 s KDU-ČSL; mají 21 mandátů z 35.
+      Dosavadní koaliční partner ANO v novém vedení nebude. Kdo bude starostou,
+      zprávy neuvádějí; dosavadním starostou je David Vodrážka (ODS).
+    zdroje: [patriot-praha13-13-10, ctk-prehled-16-10]

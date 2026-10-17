@@ -31,6 +31,7 @@ export type RadekVysledku = KandidatVysledek & {
   kandidat: KandidatSenat | undefined
   celeJmeno: string
   postupuje: boolean
+  zvolen: boolean
 }
 
 /** Výsledky kola doplněné o kandidáty z kandidátní listiny, od nejvíc hlasů. */
@@ -43,12 +44,18 @@ export function radkyKola(cisloObvodu: number, kolo: Kolo): RadekVysledku[] {
       kandidat,
       celeJmeno: kandidat ? celeJmenoSenat(kandidat) : v.jmeno,
       postupuje: kolo.postupuji.includes(v.cislo),
+      zvolen: kolo.zvolen === v.cislo,
     }
   })
 }
 
-/** Dvojice do druhého kola, v pořadí podle prvního kola. */
-export function soubojDruhehoKola(cisloObvodu: number): RadekVysledku[] {
-  const v = vysledkyObvodu(cisloObvodu)
-  return v ? radkyKola(cisloObvodu, v.kolo1).filter((r) => r.postupuje) : []
+/** Výsledek druhého kola: zvolený senátor a jeho soupeř, nebo null, dokud kolo není sečtené. */
+export function vysledekDruhehoKola(cisloObvodu: number) {
+  const kolo = vysledkyObvodu(cisloObvodu)?.kolo2
+  if (!kolo) return null
+  const radky = radkyKola(cisloObvodu, kolo)
+  const zvoleny = radky.find((r) => r.zvolen)
+  const souper = radky.find((r) => !r.zvolen)
+  if (!zvoleny || !souper) return null
+  return { kolo, zvoleny, souper }
 }

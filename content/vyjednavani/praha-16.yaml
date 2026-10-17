@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-16. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-16
+overeno: 2026-10-17
+
+zdroje:
+  - id: pd-praha16-14-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 16 bude nadále vládnout ODS"
+    datum: 2026-10-14
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-16-bude-nadale-vladnout-ods/"
+
+udalosti:
+  - id: ods-sama-vetsina
+    datum: 2026-10-14
+    typ: dohoda
+    subjekty: [obcanska-demokraticka-strana-radotin]
+    sestava: [obcanska-demokraticka-strana-radotin]
+    kdo: Karel Hanzlík (ODS), starosta
+    doklad: citace
+    citace: >-
+      Myslím, že občané se jasně vyjádřili.
+    shrnuti: >-
+      ODS má v zastupitelstvu sama 10 mandátů z 15, radu proto opět složí jen
+      její zastupitelé. Pokud Hanzlík získá uvolněnou funkci na magistrátu,
+      chce v Radotíně zůstat jako místostarosta, ne jako starosta.
+    zdroje: [pd-praha16-14-10]
