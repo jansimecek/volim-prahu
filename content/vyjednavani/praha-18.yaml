@@ -1,0 +1,27 @@
+# Povolební vyjednávání — praha-18. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-18
+overeno: 2026-10-19
+
+zdroje:
+  - id: zl-18-10
+    medium: "Zdravé Letňany (web uskupení)"
+    nazev: "Povolební jednání"
+    datum: 2026-10-18
+    url: "https://www.zdraveletnany.cz/index.php?option=com_content&view=article&id=2277:povolebni-jednani&catid=8&Itemid=79"
+
+udalosti:
+  - id: zdrave-letnany-jedna-se-vsemi
+    datum: 2026-10-18
+    typ: jednani
+    subjekty: [zdrave-letnany-s-podporou-prahy-sobe-piratu-lidovcu-a-zelenych]
+    kdo: Zdravé Letňany na svém webu
+    doklad: citace
+    citace: >-
+      Během uplynulého týdne jsme jednali se zástupci všech subjektů, které se
+      dostaly do zastupitelstva.
+    shrnuti: >-
+      Vítězné Zdravé Letňany s podporou Prahy sobě, Pirátů, lidovců a Zelených
+      (7 z 23) jednaly se všemi zvolenými uskupeními a další týden se s nimi
+      budou scházet znovu. Partnera ani sestavu zatím neoznámily.
+    zdroje: [zl-18-10]
