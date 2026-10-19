@@ -285,7 +285,7 @@ test('widget podle polohy odpoví anglicky', async ({ page }) => {
   await expect(page.getByText('Electoral precinct 1012')).toBeVisible()
   await expect(page.getByText('Your location is in')).toBeVisible()
   await expect(page.getByRole('link', { name: /Parties standing in your city district/ })).toBeVisible()
-  await expect(page.getByText(/You also elect a senator in constituency 27/)).toBeVisible()
+  await expect(page.getByText(/A senator was elected here in October 2026, in constituency 27/)).toBeVisible()
   await expect(page.getByText(/from where you are/)).toBeVisible()
   // Nedosazená značka by znamenala, že se šablona rozešla s voláním.
   await expect(page.getByText(/\{\w+\}/)).toHaveCount(0)

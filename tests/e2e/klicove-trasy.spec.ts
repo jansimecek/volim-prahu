@@ -380,13 +380,15 @@ test('skládání koalice sečte konečné mandáty magistrátu a ukáže větš
   await expect(skladani.getByText(/většina, rezerva 1/)).toBeVisible()
 })
 
-test('senát ukazuje souboje druhého kola a výsledky prvního', async ({ page }) => {
+test('senát ukazuje zvolené senátory a výsledky obou kol', async ({ page }) => {
   await page.goto('/senat')
-  await expect(page.getByRole('heading', { name: 'Kdo s kým' })).toBeVisible()
-  await expect(page.getByRole('heading', { name: 'Jak se volí ve druhém kole' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Zvolení senátoři za Prahu' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Výsledky druhého kola' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Nový Senát a jeho předseda' })).toBeVisible()
   await page.goto('/senat/27-praha-1')
-  // 1. kolo: Padevět 49,64 %, Jan Čižinský 27,74 % (ČSÚ, ověřeno proti ČT24).
-  await expect(page.getByRole('heading', { name: /Druhé kolo: .*Padevět – Jan Čižinský/ })).toBeVisible()
-  await expect(page.getByRole('heading', { name: 'Výsledky prvního kola' })).toBeVisible()
+  // 2. kolo: Padevět 66,65 % : Jan Čižinský 33,34 % (ČSÚ, ověřeno proti Pražskému deníku).
+  await expect(page.getByRole('heading', { name: /Zvolen .*Padevět/ })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Výsledky prvního kola/ })).toBeVisible()
+  await expect(page.getByText('zvolen senátorem')).toHaveCount(1)
   await expect(page.getByText('postupuje do 2. kola')).toHaveCount(2)
 })
