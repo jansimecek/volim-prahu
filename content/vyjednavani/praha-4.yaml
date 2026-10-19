@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-4. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-4
-overeno: 2026-10-13
+overeno: 2026-10-19
 
 zdroje:
   - id: pd-praha4-12-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "Prahu 4 patrně opět povede stejná koalice. Jedná vítězné Spolu s hnutím ANO"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/prahu-4-patrne-opet-povede-stejna-koalice-jedna-vitezne-spolu-s-hnutim-ano/"
+  - id: pd-praha4-smlouva-19-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Zastupitelé Prahy 4 za ODS, TOP 09 a ANO podepsali koaliční smlouvu"
+    datum: 2026-10-19
+    url: "https://prazsky.denik.cz/komunalni-volby/zastupitele-prahy-4-za-ods-top-09-a-ano-podepsali-koalicni-smlouvu/"
 
 udalosti:
   - id: spolu-ano-pokracovani
@@ -26,3 +31,20 @@ udalosti:
       Vítězné SPOLU jedná s ANO o pokračování koalice z uplynulých čtyř let.
       Měla by 24 mandátů z 45, těsnou většinu.
     zdroje: [pd-praha4-12-10]
+
+  - id: spolu-ano-smlouva
+    datum: 2026-10-19
+    typ: koalicni-smlouva
+    subjekty: [spolu-pro-prahu-4, ano-2011]
+    sestava: [spolu-pro-prahu-4, ano-2011]
+    kdo: Ondřej Kubín (ODS) a Jan Hušbauer (ANO)
+    doklad: citace
+    citace: >-
+      Já budu mít v gesci finance, granty, bezpečnost, sport, IT
+      a digitalizaci.
+    shrnuti: >-
+      Lídři SPOLU a ANO podepsali v pondělí dopoledne koaliční smlouvu, 24 hlasů
+      ze 45. Starostou zůstane Kubín, gesce se nemění. Post prvního
+      místostarosty připadne ANO, patrně opět Ireně Michalcové (školství);
+      místostarostou bude i Hušbauer (investice).
+    zdroje: [pd-praha4-smlouva-19-10]
