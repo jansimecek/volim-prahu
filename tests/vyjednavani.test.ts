@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { dohodnutaSestava, stavVyjednavani, type Vyjednavani } from '../src/lib/vyjednavani'
+import { KONECNE_VYSLEDKY } from '../src/lib/konecneVysledky'
+import { dohodnutaSestava, rozlozeniMandatu, stavVyjednavani, type Vyjednavani } from '../src/lib/vyjednavani'
 
 /** Minimální soubor vyjednávání s danými událostmi. */
 function s(udalosti: { typ: string; datum: string; sestava?: string[] }[]): Vyjednavani {
@@ -61,5 +62,30 @@ describe('stav vyjednávání', () => {
         ]),
       ),
     ).toBe('koalicni-smlouva')
+  })
+})
+
+describe('rozložení mandátů', () => {
+  const z = (slug: string) => KONECNE_VYSLEDKY.zastupitelstva.find((x) => x.slug === slug)!
+
+  it('jediná kandidátka, samostatná většina a bez většiny podle výsledků 2026', () => {
+    expect(rozlozeniMandatu(z('praha-troja')).typ).toBe('jedina-kandidatka')
+    expect(rozlozeniMandatu(z('praha-7')).typ).toBe('samostatna-vetsina')
+    expect(rozlozeniMandatu(z('magistrat')).typ).toBe('bez-vetsiny')
+  })
+
+  it('v Praze je devět městských částí s jedinou kandidátkou', () => {
+    const jedine = KONECNE_VYSLEDKY.zastupitelstva.filter((x) => rozlozeniMandatu(x).typ === 'jedina-kandidatka')
+    expect(jedine.map((x) => x.slug).sort()).toEqual([
+      'praha-bechovice',
+      'praha-benice',
+      'praha-brezineves',
+      'praha-kralovice',
+      'praha-lochkov',
+      'praha-nedvezi',
+      'praha-predni-kopanina',
+      'praha-sterboholy',
+      'praha-troja',
+    ])
   })
 })

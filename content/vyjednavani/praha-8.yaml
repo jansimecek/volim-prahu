@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-8. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-8
-overeno: 2026-10-17
+overeno: 2026-10-19
 
 zdroje:
   - id: pd-prehled-15-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "Po volbách se skládají koalice. Praha 10 má jasno, osmička nabízí post starosty"
     datum: 2026-10-15
     url: "https://prazsky.denik.cz/komunalni-volby/po-volbach-se-skladaji-koalice-praha-10-ma-jasno-osmicka-nabizi-post-starosty/"
+  - id: 8zije-17-10
+    medium: "8žije (web uskupení)"
+    nazev: "Na funkci starosty nelpíme. Chceme koalici, která přinese Praze 8 změnu."
+    datum: 2026-10-17
+    url: "https://www.8zije.cz/aktuality/na-funkci-starosty-nelpime-chceme-koalici-ktera-prinese-praze-8-zmenu"
 
 udalosti:
   - id: 8zije-nabizi-starostu
@@ -27,3 +32,20 @@ udalosti:
       Tomáš Hřebík chce o dalším postupu nejdřív informovat partnery, ne
       média. Dohoda potvrzená není.
     zdroje: [pd-prehled-15-10]
+
+  - id: 8zije-nabidka-trva
+    datum: 2026-10-17
+    typ: vyjadreni
+    subjekty: [8zije-praha-sobe-a-zeleni]
+    sestava: [8zije-praha-sobe-a-zeleni, starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ceska-piratska-strana]
+    kdo: uskupení 8žije na svém webu
+    doklad: citace
+    citace: >-
+      Nabídka společné koalice je na stole již několik dnů. Věříme, že
+      Starostové a TOP 09 tuto příležitost využijí a společně s námi a Piráty
+      umožní vznik nového vedení Prahy 8.
+    shrnuti: >-
+      8žije opakuje nabídku koalice se STAN a TOP 09 a s Piráty (25 ze 45)
+      a připravenost vzdát se postu starosty. Odpověď STAN a TOP 09 zatím
+      zveřejněná není; podle 8žije jednání probíhají a výsledek není rozhodnutý.
+    zdroje: [8zije-17-10]

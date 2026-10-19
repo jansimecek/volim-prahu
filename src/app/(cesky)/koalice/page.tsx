@@ -17,6 +17,7 @@ import {
   jeSledovane,
   POPIS_STAVU,
   posledniUdalost,
+  rozlozeniMandatu,
   stavVyjednavani,
   vyjednavaniZastupitelstva,
 } from '@/lib/vyjednavani'
@@ -25,6 +26,11 @@ import { KOD_MAGISTRATU } from '@/lib/vysledky'
 const stranka = strankaPodleSlugu('koalice')
 
 export const metadata: Metadata = { title: stranka.title, description: stranka.popis }
+
+const POPIS_ROZLOZENI: Record<string, string | undefined> = {
+  'jedina-kandidatka': 'jediná kandidátka, bez koalice',
+  'samostatna-vetsina': 'jeden subjekt má sám většinu',
+}
 
 export default function StrankaKoalic() {
   const vysledky = KONECNE_VYSLEDKY.zastupitelstva
@@ -139,7 +145,13 @@ export default function StrankaKoalic() {
                 <Link href={`/mestska-cast/${z.slug}#vyjednavani`} className="odkaz-akcent">
                   {z.nazev}
                 </Link>
-                {v && <span className="popisek-uredni"> · {POPIS_STAVU[stavVyjednavani(v)]}</span>}
+                {v ? (
+                  <span className="popisek-uredni"> · {POPIS_STAVU[stavVyjednavani(v)]}</span>
+                ) : (
+                  POPIS_ROZLOZENI[rozlozeniMandatu(z).typ] && (
+                    <span className="popisek-uredni"> · {POPIS_ROZLOZENI[rozlozeniMandatu(z).typ]}</span>
+                  )
+                )}
               </li>
             )
           })}

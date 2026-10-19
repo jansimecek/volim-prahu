@@ -6,6 +6,7 @@ import {
   jeSledovane,
   nazevSubjektu,
   POPIS_STAVU,
+  rozlozeniMandatu,
   stavVyjednavani,
   subjektySMandaty,
   vylouceniProKoalice,
@@ -22,10 +23,25 @@ export function VyjednavaniZastupitelstva({ z, nadpis = 'h2' }: { z: Zastupitels
   const stav = stavVyjednavani(v)
   const sestava = dohodnutaSestava(v)
   const H = nadpis
+  const rozlozeni = rozlozeniMandatu(z)
   const tridaNadpisu = nadpis === 'h2' ? 'text-2xl' : 'text-xl'
 
   return (
     <div className="space-y-8">
+      {rozlozeni.typ === 'jedina-kandidatka' && (
+        <p className="max-w-prose border-l-2 border-praha pl-4">
+          Kandidovala jediná kandidátka, <strong>{rozlozeni.subjekt.nazev}</strong>, a obsadila všech{' '}
+          {z.mandatuCelkem} křesel. O koalici se tu nevyjednává: starostu a radu zvolí jen její
+          zastupitelé na ustavujícím zasedání.
+        </p>
+      )}
+      {rozlozeni.typ === 'samostatna-vetsina' && (
+        <p className="max-w-prose border-l-2 border-praha pl-4">
+          Kandidátka <strong>{rozlozeni.subjekt.nazev}</strong> má sama většinu ({rozlozeni.subjekt.mandaty} z{' '}
+          {z.mandatuCelkem}), vedení tedy může zvolit bez partnera. Jestli si přesto koaličního partnera
+          přibere, zapíšeme, až to bude doložené.
+        </p>
+      )}
       <dl className="grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-3">
         <div className="bg-papir p-3">
           <dt className="popisek-uredni">Stav</dt>
@@ -69,7 +85,9 @@ export function VyjednavaniZastupitelstva({ z, nadpis = 'h2' }: { z: Zastupitels
           </>
         ) : (
           <p className="mt-2 max-w-prose">
-            {jeSledovane(z.slug)
+            {rozlozeni.typ === 'jedina-kandidatka'
+              ? 'Jiná kandidátka v zastupitelstvu není, takže se nemá s kým jednat. Doplníme zvolené vedení po ustavujícím zasedání.'
+              : jeSledovane(z.slug)
               ? 'Zatím jsme o vyjednávání nenašli žádnou zprávu, kterou by šlo doložit. Doplňujeme průběžně.'
               : 'Vyjednávání v menších městských částech sledujeme, jen když o něm píšou média. Zatím jsme nic doloženého nenašli.'}
           </p>

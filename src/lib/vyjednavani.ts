@@ -158,3 +158,21 @@ export function pocetPodleStavu(slugy: readonly string[]): Record<Stav, number> 
   for (const slug of slugy) pocty[stavVyjednavani(vyjednavaniZastupitelstva(slug))]++
   return pocty
 }
+
+export type RozlozeniMandatu =
+  | { typ: 'jedina-kandidatka'; subjekt: SubjektSMandaty }
+  | { typ: 'samostatna-vetsina'; subjekt: SubjektSMandaty }
+  | { typ: 'bez-vetsiny' }
+
+/**
+ * Co plyne z mandátů samotných, bez odhadu, kdo se s kým dohodne: jediná
+ * kandidátka obsadila všechna křesla, nebo jeden subjekt má sám většinu.
+ * Stav vyjednávání tím nenahrazuje — ten dál plyne jen z doložených událostí.
+ */
+export function rozlozeniMandatu(z: ZastupitelstvoVysledek): RozlozeniMandatu {
+  const [prvni] = subjektySMandaty(z)
+  if (!prvni) return { typ: 'bez-vetsiny' }
+  if (z.strany.length === 1 && prvni.mandaty === z.mandatuCelkem) return { typ: 'jedina-kandidatka', subjekt: prvni }
+  if (prvni.mandaty > z.mandatuCelkem / 2) return { typ: 'samostatna-vetsina', subjekt: prvni }
+  return { typ: 'bez-vetsiny' }
+}
