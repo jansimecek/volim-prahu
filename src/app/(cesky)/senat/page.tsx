@@ -93,6 +93,50 @@ export default function StrankaSenatu() {
         </p>
       </section>
 
+      <section aria-labelledby="novy-senat" className="max-w-prose">
+        <h2 id="novy-senat" className="text-2xl">
+          Nový Senát a jeho předseda
+        </h2>
+        <p className="mt-3">
+          V celé republice se volilo 27 z 81 senátorů. Nejvíc mandátů získalo hnutí STAN, deset ze čtrnácti
+          kandidátů, ODS sedm (obhajovala pět) a KDU-ČSL obhájila všechny tři. Vládní ANO neprosadilo ani jednoho
+          ze třinácti kandidátů ve druhém kole a Piráti přišli o jedinou senátorku. Nejsilnějším klubem zůstává
+          společný klub ODS a TOP 09, podle propočtu ČT24 může mít 31 členů.
+        </p>
+        <p className="mt-3">
+          Klub SEN 21 a Piráti, do kterého patřil Václav Láska, zanikl, protože klesl pod minimální počet pěti
+          členů. Aby ho Láska obnovil, potřeboval by podle ČT24 další dva senátory.
+        </p>
+        <p className="mt-3">
+          <strong>První schůze nového Senátu má být 19. listopadu</strong> a na programu má mít i volbu předsedy.
+          Podle senátních zvyklostí připadá křeslo nejsilnějšímu klubu. Dosavadní předseda Miloš Vystrčil (ODS)
+          chce funkci obhájit: „Pokud nominaci obdržím, tak jsem připraven ji přijmout,“ řekl Deníku. Nominaci
+          klub zatím neoznámil.
+        </p>
+        <p className="mt-3">
+          Vystrčil volby hodnotí jako úspěch opozice. Zastal se poražených pražských kandidátů s podporou ODS, Dagmar
+          Peckové a Radka Sáblíka; Sáblíkův výsledek označil za „malé vítězství“. Na kritiku Senátu od premiéra
+          Andreje Babiše odpověděl, že ho na ustavující schůzi pozve.
+        </p>
+        <ul className="mt-3 space-y-1 text-sm">
+          <li>
+            <a href="https://ct24.ceskatelevize.cz/clanek/domaci/skoncilo-druhe-kolo-senatnich-voleb-komise-zacinaji-scitat-hlasy-378705" className="underline" rel="noopener">
+              Nejvíc senátorů získalo ve volbách hnutí STAN, ANO žádného (ČT24, 17. 10. 2026)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.denik.cz/senatni-volby/senat-jsme-jim-nedali-hlasi-ods-vystrcil-chce-v-cele-horni-komory-zustat/" className="underline" rel="noopener">
+              Senát jsme jim nedali, hlásí ODS. Vystrčil chce v čele horní komory zůstat (Deník.cz, 17. 10. 2026)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.newstream.cz/politika/toto-je-podana-ruka-vystrcil-zve-babise-do-senatu" className="underline" rel="noopener">
+              „Toto je podaná ruka.“ Vystrčil zve Babiše do Senátu (Newstream, 18. 10. 2026)
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <section className="max-w-prose border-l-2 border-praha pl-5">
         <h2 className="text-2xl">Kde se senátor volil</h2>
         <p className="mt-2">
