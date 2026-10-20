@@ -1,0 +1,29 @@
+# Povolební vyjednávání — praha-14. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-14
+overeno: 2026-10-20
+
+zdroje:
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+
+udalosti:
+  - id: dosavadni-koalice-jedna
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [ods-spolu-s-top-09-a-sousedy-pro-prahu-14, starostove-a-nezavisli, ano-2011, nase-ctrnactka]
+    sestava: [ods-spolu-s-top-09-a-sousedy-pro-prahu-14, starostove-a-nezavisli, ano-2011, nase-ctrnactka]
+    kdo: Jiří Zajac (ODS), starosta
+    doklad: citace
+    citace: >-
+      V současnosti probíhají jednání mezi všemi koaličními subjekty
+      o programových prioritách a rozdělení kompetencí.
+    shrnuti: >-
+      Vítězné spojení ODS a TOP 09 jedná s dosavadními partnery ANO, STAN
+      a Naší Čtrnáctkou; dohromady mají 27 z 31 mandátů. Jasno má být podle
+      Zajace do zasedání zastupitelstva 5. listopadu. Zajac chce post
+      starosty obhájit.
+    zdroje: [novinky-prehled-19-10]

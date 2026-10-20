@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-8. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-8
-overeno: 2026-10-19
+overeno: 2026-10-20
 
 zdroje:
   - id: pd-prehled-15-10
@@ -14,6 +14,11 @@ zdroje:
     nazev: "Na funkci starosty nelpíme. Chceme koalici, která přinese Praze 8 změnu."
     datum: 2026-10-17
     url: "https://www.8zije.cz/aktuality/na-funkci-starosty-nelpime-chceme-koalici-ktera-prinese-praze-8-zmenu"
+  - id: pd-praha8-19-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Strany v Praze 8 obešly vítězné uskupení 8žije, dohodly koalici bez něj"
+    datum: 2026-10-19
+    url: "https://prazsky.denik.cz/komunalni-volby/strany-v-praze-8-obesly-vitezne-uskupeni-8zije-dohodly-koalici-bez-nej/"
 
 udalosti:
   - id: 8zije-nabizi-starostu
@@ -49,3 +54,34 @@ udalosti:
       a připravenost vzdát se postu starosty. Odpověď STAN a TOP 09 zatím
       zveřejněná není; podle 8žije jednání probíhají a výsledek není rozhodnutý.
     zdroje: [8zije-17-10]
+
+  - id: dohoda-stan-top-ods-ano
+    datum: 2026-10-19
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl, ano-2011]
+    sestava: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl, ano-2011]
+    kdo: STAN a TOP 09 na facebooku; potvrdil lídr Tomáš Hřebík (STAN)
+    doklad: citace
+    citace: >-
+      Jednání s ostatními politickými subjekty tímto uzavíráme a nyní se
+      soustředíme na dosažení programové shody.
+    shrnuti: >-
+      Koalici sestavují STAN s TOP 09, ODS s lidovci a ANO, 25 hlasů ze 45;
+      starostou má být podle svých slov Hřebík. Vítězné 8žije v ní není.
+      Piráti mají koalici podporovat bez míst v radě, třeba za předsednictví
+      finančního výboru. Strany teď jednají o programovém prohlášení.
+    zdroje: [pd-praha8-19-10]
+
+  - id: 8zije-promarnena-prilezitost
+    datum: 2026-10-19
+    typ: vyjadreni
+    subjekty: [8zije-praha-sobe-a-zeleni]
+    kdo: Václav Stránský, lídr 8žije
+    doklad: citace
+    citace: >-
+      Je to promarněná příležitost pro celou Prahu 8.
+    shrnuti: >-
+      Vítězné 8žije (13 mandátů) kritizuje, že STAN s TOP 09 dal přednost
+      spolupráci s ANO před koalicí s vítězem voleb, přestože mu 8žije
+      nabízelo i post starosty.
+    zdroje: [pd-praha8-19-10]

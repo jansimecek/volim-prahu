@@ -1,0 +1,23 @@
+# Povolební vyjednávání — praha-21. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-21
+overeno: 2026-10-20
+
+zdroje:
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+
+udalosti:
+  - id: stan-ujezd-zije-sklada-koalici
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [starostove-a-nezavisli-ujezd-zije]
+    doklad: parafraze
+    shrnuti: >-
+      Vítězné STAN – Újezd žije (6 ze 17) se podle přehledu Novinek snaží
+      složit koalici s devíti hlasy. Bez Společně pro Újezd (ODS a TOP 09,
+      5 mandátů) by potřebovalo několik menších partnerů.
+    zdroje: [novinky-prehled-19-10]

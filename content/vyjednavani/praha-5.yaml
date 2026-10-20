@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-5. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-5
-overeno: 2026-10-13
+overeno: 2026-10-20
 
 zdroje:
   - id: pd-praha5-12-10
@@ -9,6 +9,16 @@ zdroje:
     nazev: "Praha 5 sobě jedná se všemi kromě ANO. Na koalici z roku 2022 nemá dost hlasů"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/praha-5-sobe-jedna-se-vsemi-krome-ano-na-koalici-z-roku-2022-nema-dost-hlasu/"
+  - id: pd-praha5-19-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha 5 sobě, která vyhrála volby v Praze 5, koalici patrně nesestaví"
+    datum: 2026-10-19
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-5-sobe-ktera-vyhrala-volby-v-praze-5-koalici-patrne-nesestavi/"
+  - id: pd-praha5-memorandum-20-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Koalici v Praze 5 vytvoří pět stran v čele s ODS, vítěz voleb v ní nebude"
+    datum: 2026-10-20
+    url: "https://prazsky.denik.cz/komunalni-volby/koalici-v-praze-5-vytvori-pet-stran-v-cele-s-ods-vitez-voleb-v-ni-nebude/"
 
 udalosti:
   - id: praha-5-sobe-oslovila-stan
@@ -27,3 +37,37 @@ udalosti:
       TOP 09 a STAN by většinu měla: „V tuto chvíli je třeba počkat, s čím
       přijde Praha 5 Sobě.“
     zdroje: [pd-praha5-12-10]
+
+  - id: stan-odmitl-praha-5-sobe
+    datum: 2026-10-19
+    typ: vyjadreni
+    subjekty: [praha-5-sobe]
+    kdo: Radka Šimková, lídryně Prahy 5 sobě
+    doklad: citace
+    citace: >-
+      Naším cílem bylo sestavit stabilní vedení s jasným programem. STAN ale
+      naši nabídku odmítl, včera (v neděli) nám oznámil sestavování koalice
+      bez vítěze voleb a rozhodl se pro spolupráci s ODS.
+    shrnuti: >-
+      Praha 5 sobě chtěla koalici se STAN, SEN a Piráty bez ODS a ANO a STAN
+      nabídla post starosty a dvě místa v radě. Zájem podle Šimkové neprojevila
+      ani TOP 09 s KDU-ČSL. Bez STAN taková koalice většinu nemá.
+    zdroje: [pd-praha5-19-10]
+
+  - id: memorandum-ods-stan-sen-top
+    datum: 2026-10-20
+    typ: memorandum
+    subjekty: [obcanska-demokraticka-strana, starostove-a-nezavisli, sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli, top-lidovci-a-nezavisli]
+    sestava: [obcanska-demokraticka-strana, starostove-a-nezavisli, sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli, top-lidovci-a-nezavisli]
+    kdo: Lukáš Herold, starosta a lídr ODS
+    doklad: citace
+    citace: >-
+      Chtěli jsme koalici s jejich účastí. Byla by to ODS, STAN, Praha 5 sobě
+      a dále by to mohli být Piráti nebo SEN. Praha 5 sobě nabídku rozmýšlela,
+      ale nepotvrdila ji.
+    shrnuti: >-
+      ODS, STAN, SEN a TOP 09 s KDU-ČSL podepsaly memorandum, 23 hlasů ze 41.
+      Vítězná Praha 5 sobě v koalici nebude. Strany teď připraví koaliční
+      smlouvu a rozdělí posty v radě. Šimková namítá, že STAN jí v pátek
+      nabídl koalici s ODS, a než ji stihla projednat, byla uzavřena jiná.
+    zdroje: [pd-praha5-memorandum-20-10]
