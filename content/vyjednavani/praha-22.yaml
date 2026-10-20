@@ -1,0 +1,23 @@
+# Povolební vyjednávání — praha-22. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-22
+overeno: 2026-10-20
+
+zdroje:
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+
+udalosti:
+  - id: stan-jedna
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [starostove-a-nezavisli]
+    doklad: parafraze
+    shrnuti: >-
+      Podle přehledu Novinek probíhají koaliční jednání. Vítězné STAN s lídrem
+      Ondřejem Lagnerem má 6 z 25 mandátů, do zastupitelstva se dostalo sedm
+      uskupení. Konkrétní sestava doložená není.
+    zdroje: [novinky-prehled-19-10]

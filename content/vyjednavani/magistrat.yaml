@@ -5,7 +5,7 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-19
+overeno: 2026-10-20
 
 zdroje:
   - id: ct24-10-10
@@ -103,6 +103,16 @@ zdroje:
     nazev: "Povolební vyjednávání v Praze pokračují, jasno je v některých městských částech"
     datum: 2026-10-16
     url: "https://www.ceskenoviny.cz/zpravy/povolebni-vyjednavani-v-praze-pokracuji-jasno-je-v-nekterych-mestskych-castech/2888712"
+  - id: pd-nabidka-piratum-19-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Koaliční jednání v Praze pokračují: STAN předložil Pirátům návrh"
+    datum: 2026-10-19
+    url: "https://prazsky.denik.cz/komunalni-volby/koalicni-jednani-v-praze-pokracuji-stan-predlozil-piratum-navrh/"
+  - id: ctk-praha-sobe-nabidka-20-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Praha sobě nabídla STAN většinu v radě a post primátora v koalici s Piráty"
+    datum: 2026-10-20
+    url: "https://www.ceskenoviny.cz/zpravy/praha-sobe-nabidla-stan-vetsinu-v-rade-a-post-primatora-v-koalici-s-piraty/2890525"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -497,3 +507,56 @@ udalosti:
       přijdeme s nějakou nabídkou a uvidíme, jak kolegové budou reagovat.“
       Koaliční smlouvu chce mít podepsanou v listopadu.
     zdroje: [pd-finance-15-10, ctk-prehled-16-10]
+
+  - id: stan-nabidka-piratum
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, ceska-piratska-strana]
+    kdo: Petr Hlaváček (STAN) a Tereza Nislerová (Piráti)
+    doklad: citace
+    citace: >-
+      Dopravu nyní vyžadovat nebudeme, přestože si myslím, že jsme ji věcně
+      posunuli dobrým směrem.
+    shrnuti: >-
+      STAN předložil Pirátům nabídku: místa v radě a předsednictví výborů.
+      Piráti odpoví do středečního večera; zásadní je pro ně gesce bydlení,
+      dopravu chtít nebudou (řekla Nislerová). STAN jedná ve středu s Prahou
+      sobě a ve čtvrtek se SPOLU. O koaličním formátu má být podle Hlaváčka
+      jasno v pátek, rozhodne i klub STAN.
+    zdroje: [pd-nabidka-piratum-19-10]
+
+  - id: hlavacek-trojkoalice-finance
+    datum: 2026-10-19
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Myslím, že bude jeden gesční radní a bude nějaká přátelská dohoda, že to
+      není všechno.
+    shrnuti: >-
+      Hlaváček zopakoval, že preferuje trojkoalici. K nevyřešené gesci financí
+      se SPOLU řekl, že zodpovědnost za hospodaření města by se měla nějak
+      rozdělit; po dohodě by ji STAN mohl přenechat partnerovi. Postup
+      konzultuje s předsedou STAN Rakušanem, pokyny od něj ale nedostává.
+    zdroje: [pd-nabidka-piratum-19-10]
+
+  - id: praha-sobe-nabizi-primatora
+    datum: 2026-10-20
+    typ: vyjadreni
+    subjekty: [praha-sobe]
+    sestava: [starostove-a-nezavisli, praha-sobe, ceska-piratska-strana]
+    kdo: Adam Scheinherr, předseda Prahy sobě (na facebooku)
+    doklad: citace
+    citace: >-
+      Koalice STAN, Praha sobě a Piráti je za nás koalicí s nejvyšším možným
+      programovým průnikem, což znamená nejméně hádek a funkční koalici pro
+      další čtyři roky, která bude schopna posouvat důležitá rozhodnutí
+      a doručovat výsledky pro naše město.
+    shrnuti: >-
+      Praha sobě nabídla STAN v koalici s Piráty (37 mandátů) post primátora
+      a šest z 11 míst v radě; sama by měla tři, Piráti dvě. Koalici STAN,
+      SPOLU a Prahy sobě nevylučuje, ale jen se zárukami k dopravě a městskému
+      bydlení. Ve středu odpoledne se schází s týmem STAN, který jí přednese
+      vlastní nabídku, a pak s Piráty.
+    zdroje: [ctk-praha-sobe-nabidka-20-10]

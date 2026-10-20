@@ -1,0 +1,25 @@
+# Povolební vyjednávání — praha-20. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-20
+overeno: 2026-10-20
+
+zdroje:
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+
+udalosti:
+  - id: spolu-jedna-se-vsemi
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [spolu-ods-a-top09-s-podporou-nezavislych-kandidatu-hornich-pocernic]
+    kdo: Petr Měšťan (ODS), starosta a lídr SPOLU
+    doklad: parafraze
+    shrnuti: >-
+      Vítězné SPOLU (7 z 25) jedná se všemi zvolenými uskupeními. Cílem je
+      podle přehledu Novinek navázat na dosavadní spolupráci se STAN, Šancí
+      pro Počernice a Počernicemi jinak. Výsledek má být znám do ustavujícího
+      zasedání.
+    zdroje: [novinky-prehled-19-10]

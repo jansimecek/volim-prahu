@@ -1,0 +1,23 @@
+# Povolební vyjednávání — praha-19. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-19
+overeno: 2026-10-20
+
+zdroje:
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+
+udalosti:
+  - id: kbely-nas-domov-jedna
+    datum: 2026-10-19
+    typ: jednani
+    subjekty: [sdruzeni-nezavislych-kandidatu-kbely-nas-domov]
+    doklad: parafraze
+    shrnuti: >-
+      Podle přehledu Novinek pokračují jednání. Vítězné Kbely náš domov má
+      9 z 19 mandátů, k většině mu stačí jeden partner. Konkrétní jednání
+      ani sestava doložené nejsou.
+    zdroje: [novinky-prehled-19-10]

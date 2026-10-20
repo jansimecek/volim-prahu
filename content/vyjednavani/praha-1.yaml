@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-1. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-1
-overeno: 2026-10-13
+overeno: 2026-10-20
 
 zdroje:
   - id: pd-praha1-12-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "Praha 1 sobě začala jednat o koalici s TOP 09 a Piráty, promluví ale se všemi"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/praha-1-sobe-zacala-jednat-o-koalici-s-top-09-a-piraty-promluvi-ale-se-vsemi/"
+  - id: novinky-prehled-19-10
+    medium: "Novinky.cz"
+    nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
+    datum: 2026-10-19
+    url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
 
 udalosti:
   - id: praha-1-sobe-top-pirati
@@ -26,3 +31,20 @@ udalosti:
       by měla 14 mandátů z 27, tedy přesně většinu. Jednat chce se všemi
       zvolenými uskupeními.
     zdroje: [pd-praha1-12-10]
+
+  - id: praha-1-sobe-memorandum-do-prazdnin
+    datum: 2026-10-19
+    typ: vyjadreni
+    subjekty: [praha-1-sobe]
+    kdo: Pavel Marc, lídr Prahy 1 sobě
+    doklad: citace
+    citace: >-
+      Stavíme na menším počtu spolehlivých partnerů, protože Praha 1 si
+      nemůže dovolit další čtyři roky neustálých koaličních hádek a zříkání
+      se zodpovědnosti.
+    shrnuti: >-
+      Praha 1 sobě chce memorandum o budoucí trojkoalici podepsat do
+      podzimních prázdnin; partnery Marc podle přehledu Novinek neupřesnil.
+      Post starosty má být podle něj vyústěním dohod, podstatnější je
+      složení funkční rady.
+    zdroje: [novinky-prehled-19-10]
