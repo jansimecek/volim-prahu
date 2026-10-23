@@ -253,6 +253,7 @@ function overKrizoveOdkazy() {
   overPostoje(velite, strany)
   overKoalice(velite, strany)
   overVyjednavani(velite)
+  overVyhled(velite)
   overSporneOtazky(velite, strany)
 }
 
@@ -426,6 +427,31 @@ function overVyjednavani(velite: string) {
         })
       }
     }
+  }
+}
+
+/**
+ * Plán ve výhledu stojí na doložené události. Odkaz na neexistující událost
+ * by stránka tiše vynechala — a s ním i jediný důvod, proč termín vypisujeme.
+ */
+function overVyhled(velite: string) {
+  if (!existsSync(join(velite, 'vyhled.json')) || !existsSync(join(velite, 'vyjednavani.json'))) return
+  const vyhled = JSON.parse(readFileSync(join(velite, 'vyhled.json'), 'utf8')) as {
+    polozky: { id: string; zastupitelstvo: string; udalost?: string }[]
+  }
+  const vyjednavani = JSON.parse(readFileSync(join(velite, 'vyjednavani.json'), 'utf8')) as {
+    zastupitelstvo: string
+    udalosti: { id: string }[]
+  }[]
+  for (const p of vyhled.polozky) {
+    if (p.zastupitelstvo === 'senat') continue
+    const v = vyjednavani.find((x) => x.zastupitelstvo === p.zastupitelstvo)
+    const chyba = !v
+      ? `míří na zastupitelstvo "${p.zastupitelstvo}", které nemá soubor vyjednávání`
+      : p.udalost && !v.udalosti.some((u) => u.id === p.udalost)
+        ? `odkazuje na událost "${p.udalost}", která v ${p.zastupitelstvo} není`
+        : undefined
+    if (chyba) nalezy.push({ soubor: 'content/vyhled.yaml', radek: 0, zprava: `Položka "${p.id}" ${chyba}.`, tvrde: true })
   }
 }
 

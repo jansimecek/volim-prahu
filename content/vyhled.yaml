@@ -1,0 +1,114 @@
+# Výhled: termíny a plány, které ještě nenastaly. Zobrazuje se na titulní straně.
+#
+# Žádné předpovědi. Zapisuje se jen to, co někdo doložitelně ohlásil; položka
+# odkazuje na událost ve vyjednávání (content/vyjednavani/<zastupitelstvo>.yaml),
+# kde je zdroj. Zákonné lhůty a svolaná ustavující zasedání se sem nepíšou —
+# počítají se z src/lib/terminy.ts a z pole ustavujiciZasedani.
+#
+# datum = nejbližší možný den; platiDo = do kdy to má nastat (podle toho se
+# řadí a pak položka zmizí). U přesného dne stačí datum.
+
+overeno: 2026-10-23
+
+polozky:
+  - id: magistrat-tymy-26-10
+    zastupitelstvo: magistrat
+    datum: 2026-10-26
+    nadpis: Jednání STAN, SPOLU a Prahy sobě o gescích
+    text: >-
+      Po jednání vyjednávacích týmů mají strany oznámit, jaké gesce připadnou
+      kterému uskupení.
+    udalost: dohoda-stan-spolu
+
+  - id: praha-22-jasno-do-konce-rijna
+    zastupitelstvo: praha-22
+    datum: 2026-10-24
+    platiDo: 2026-10-31
+    kdy: do konce října
+    nadpis: Jasno o koalici a starostovi
+    text: >-
+      STAN, OK22 s podporou Prahy sobě a Piráti chtějí mít jasno o koalici
+      a o tom, kdo bude starostou; hledají čtvrtého partnera.
+    udalost: dohoda-stan-ok22-pirati
+
+  - id: praha-5-ustavujici
+    zastupitelstvo: praha-5
+    datum: 2026-11-03
+    nadpis: Možné ustavující zasedání
+    text: >-
+      Termín zmínil starosta Lukáš Herold; zasedání zatím svolané není.
+    podminka: pokud se nikdo kvůli výsledku voleb neobrátí na soud
+    udalost: memorandum-ods-stan-sen-top
+
+  - id: praha-14-zasedani
+    zastupitelstvo: praha-14
+    datum: 2026-11-05
+    nadpis: Zasedání zastupitelstva
+    text: >-
+      Do té doby má být podle starosty Jiřího Zajace jasno o koalici
+      a rozdělení kompetencí.
+    udalost: dosavadni-koalice-jedna
+
+  - id: praha-6-smlouva
+    zastupitelstvo: praha-6
+    datum: 2026-10-24
+    platiDo: 2026-11-07
+    kdy: do listopadového zasedání
+    nadpis: Podpis koaliční smlouvy
+    text: >-
+      STAN, Praha 6 sobě a ODS s KDU-ČSL chtějí podepsat koaliční smlouvu;
+      starostou má být Petr Prokop (STAN).
+    udalost: memorandum-stan-ps6-ods
+
+  - id: praha-18-ustavujici
+    zastupitelstvo: praha-18
+    datum: 2026-11-01
+    platiDo: 2026-11-15
+    kdy: první polovina listopadu
+    nadpis: Ustavující zasedání
+    text: >-
+      Starostou má zůstat Zdeněk Kučera (ANO).
+    udalost: dohoda-ano-spolu-nas-domov
+
+  - id: senat-prvni-schuze
+    zastupitelstvo: senat
+    datum: 2026-11-19
+    nadpis: První schůze nového Senátu
+    text: >-
+      Na programu má být i volba předsedy.
+    zdroj:
+      text: "Deník.cz, 17. října 2026"
+      url: https://www.denik.cz/senatni-volby/senat-jsme-jim-nedali-hlasi-ods-vystrcil-chce-v-cele-horni-komory-zustat/
+
+  - id: praha-1-ustavujici
+    zastupitelstvo: praha-1
+    datum: 2026-11-01
+    platiDo: 2026-11-30
+    kdy: v listopadu
+    nadpis: Ustavující zasedání
+    text: >-
+      Starostkou má zůstat Terezie Radoměřská (TOP 09).
+    udalost: smlouva-pet-uskupeni
+
+  - id: magistrat-ustavujici
+    zastupitelstvo: magistrat
+    datum: 2026-11-01
+    platiDo: 2026-11-30
+    kdy: v listopadu
+    nadpis: Ustavující zasedání zastupitelstva města
+    text: >-
+      Nevznikne-li do té doby trojkoalice s Prahou sobě, povedou Prahu STAN
+      a SPOLU se 34 hlasy z 65.
+    udalost: dohoda-stan-spolu
+
+  - id: magistrat-treti-partner
+    zastupitelstvo: magistrat
+    datum: 2026-12-01
+    platiDo: 2026-12-31
+    kdy: v prosinci
+    nadpis: Případná dohoda s třetím partnerem
+    text: >-
+      Dohoda s třetím partnerem, se kterým by STAN a SPOLU jednaly i po
+      vzniku dvojkoalice. Termín je Hlaváčkův předpoklad.
+    podminka: pokud trojkoalice nevznikne do listopadového zasedání
+    udalost: dohoda-stan-spolu

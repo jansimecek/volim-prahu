@@ -4,11 +4,13 @@ import type { ReactNode } from 'react'
 import { Aktualita } from '@/components/Aktualita'
 import { MojeVolby } from '@/components/MojeVolby'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { mistoTerminu, Vyhled } from '@/components/Vyhled'
 import { nejnovejsi } from '@/lib/aktuality'
 import { datumCesky } from '@/lib/cestina'
 import { KONECNE_VYSLEDKY, stranySMandaty, vysledekZastupitelstva } from '@/lib/konecneVysledky'
 import { vetsina } from '@/lib/koalice'
-import { DRUHE_KOLO_SENATU, lhutyUstavujichZasedani } from '@/lib/terminy'
+import { lhutyUstavujichZasedani } from '@/lib/terminy'
+import { vyhledOd } from '@/lib/vyhled'
 import {
   dohodnutaSestava,
   jeSledovane,
@@ -53,7 +55,7 @@ export default async function Rozcestnik() {
   const overeno = naposledyOvereno()
   const lhuty = lhutyUstavujichZasedani()
   const dnes = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Prague' })
-  const senatJeste = dnes <= DRUHE_KOLO_SENATU.do
+  const terminy = vyhledOd(dnes)
   const aktuality = await nejnovejsi(4)
 
   return (
@@ -125,24 +127,14 @@ export default async function Rozcestnik() {
 
           <Karta popisek="Termíny">
             <ul className="space-y-3 text-sm">
-              {senatJeste && (
-                <li>
-                  <span className="font-medium">16.–17. října</span> — druhé kolo senátních voleb v
-                  obvodech Praha 1, 5 a 9
+              {terminy.slice(0, 3).map((t) => (
+                <li key={t.id}>
+                  <span className="font-medium">{t.kdy ?? datumCesky(t.datum)}</span> —{' '}
+                  {t.zastupitelstvo !== null && `${mistoTerminu(t).nazev}: `}
+                  {t.nadpis}
                 </li>
-              )}
-              {lhuty ? (
-                <>
-                  <li>
-                    <span className="font-medium">{datumCesky(lhuty.navrhSouduDo)}</span> — konec lhůty pro
-                    návrhy soudu na neplatnost voleb
-                  </li>
-                  <li>
-                    <span className="font-medium">do {datumCesky(lhuty.zasedaniNejpozdeji)}</span> — ustavující
-                    zasedání všech zastupitelstev, pokud žádný návrh nepadne
-                  </li>
-                </>
-              ) : (
+              ))}
+              {!lhuty && (
                 <li>
                   Státní volební komise výsledky zatím nevyhlásila. Od vyhlášení běží 10 dní na soudní
                   návrhy a pak 15 dní na ustavující zasedání.
@@ -150,13 +142,26 @@ export default async function Rozcestnik() {
               )}
             </ul>
             <p className="mt-3">
-              <Link href="/koalice" className="odkaz-akcent">
-                Jak se volí vedení
+              <Link href="#vyhled" className="odkaz-akcent">
+                Celý výhled
               </Link>
             </p>
           </Karta>
         </div>
       </section>
+
+      {terminy.length > 0 && (
+        <section aria-labelledby="vyhled" className="scroll-mt-20">
+          <h2 id="vyhled" className="text-2xl">
+            Co nás čeká
+          </h2>
+          <p className="mt-2 max-w-prose">
+            Jen termíny, které stanoví zákon nebo které strany ohlásily — nic z toho není náš odhad.
+            Plány se mohou změnit; u každého je zdroj a plná značka odlišuje pevné termíny od ohlášených.
+          </p>
+          <Vyhled terminy={terminy} />
+        </section>
+      )}
 
       <section aria-labelledby="zpravy">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">

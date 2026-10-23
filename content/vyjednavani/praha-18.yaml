@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-18. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-18
-overeno: 2026-10-20
+overeno: 2026-10-23
 
 zdroje:
   - id: zl-18-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "Povolební jednání"
     datum: 2026-10-18
     url: "https://www.zdraveletnany.cz/index.php?option=com_content&view=article&id=2277:povolebni-jednani&catid=8&Itemid=79"
+  - id: patriot-praha18-20-10
+    medium: "Pražský patriot"
+    nazev: "V Praze 18 se dohodla koalice, starostou bude dál Kučera z ANO"
+    datum: 2026-10-20
+    url: "https://www.prazskypatriot.cz/v-praze-18-se-dohodla-koalice-starostou-bude-dal-kucera-z-ano/"
 
 udalosti:
   - id: zdrave-letnany-jedna-se-vsemi
@@ -25,3 +30,36 @@ udalosti:
       (7 z 23) jednaly se všemi zvolenými uskupeními a další týden se s nimi
       budou scházet znovu. Partnera ani sestavu zatím neoznámily.
     zdroje: [zl-18-10]
+
+  - id: dohoda-ano-spolu-nas-domov
+    datum: 2026-10-20
+    typ: dohoda
+    subjekty: [ano-2011, spolu-pro-letnany, nas-domov-letnany]
+    sestava: [ano-2011, spolu-pro-letnany, nas-domov-letnany]
+    kdo: Zdeněk Kučera (ANO), starosta
+    doklad: citace
+    citace: >-
+      Dohodli jsme se na pokračování stávající koalice a já budu nadále
+      pokračovat ve funkci starosty Prahy 18.
+    shrnuti: >-
+      Dosavadní koalice ANO, SPOLU (ODS a TOP 09) a Náš domov Letňany
+      pokračuje, 12 hlasů z 23. Vítězné Zdravé Letňany jdou do opozice.
+      Posty v radě a gesce se budou řešit v dalších týdnech, ustavující
+      zasedání má být v první polovině listopadu.
+    zdroje: [patriot-praha18-20-10]
+
+  - id: zdrave-letnany-do-opozice
+    datum: 2026-10-20
+    typ: vyjadreni
+    subjekty: [zdrave-letnany-s-podporou-prahy-sobe-piratu-lidovcu-a-zelenych]
+    kdo: Zdravé Letňany na sociálních sítích
+    doklad: citace
+    citace: >-
+      Pro sestavení koalice změny jsme udělali maximum. Naší rolí tedy teď
+      bude poctivá a aktivní opoziční práce a to ještě ve větší intenzitě než
+      doposud.
+    shrnuti: >-
+      Vítězné Zdravé Letňany (7 mandátů) s ANO jednaly, k dohodě ale
+      nedošlo. Svůj program chtějí v opozici prosazovat s dalšími opozičními
+      uskupeními.
+    zdroje: [patriot-praha18-20-10]

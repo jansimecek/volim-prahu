@@ -947,6 +947,61 @@ const vyjednavani = defineCollection({
     }),
 })
 
+/**
+ * Výhled: termíny a plány, které ještě nenastaly (content/vyhled.yaml).
+ *
+ * Žádná předpověď. Každá položka je termín nebo plán, který někdo doložitelně
+ * ohlásil, a odkazuje na událost ve vyjednávání, kde je zdroj — nebo nese
+ * vlastní zdroj, když ve vyjednávání nemá kam patřit (Senát). Zákonné lhůty
+ * a svolaná ustavující zasedání se sem nepíšou, počítají se v src/lib/vyhled.ts.
+ */
+const vyhled = defineCollection({
+  name: 'Vyhled',
+  pattern: 'vyhled.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      polozky: s.array(
+        s.object({
+          id: s.string().min(1),
+          /** Slug zastupitelstva, nebo „senat“. */
+          zastupitelstvo: s.string().min(1),
+          /** Nejbližší den, kdy se to může stát; podle něj se řadí. */
+          datum: s.isodate(),
+          /** Nepřesný termín slovy („do konce října“); jinak se vypíše datum. */
+          kdy: s.string().min(1).optional(),
+          /** Do kdy položka platí, pak z výhledu zmizí. Bez něj platí do `datum`. */
+          platiDo: s.isodate().optional(),
+          /** Krátce, co se stane — vejde se do karty Termíny na titulní straně. */
+          nadpis: s.string().min(1).max(70),
+          text: s.string().min(1).max(240),
+          /** Podmínka, za které plán platí („pokud nevznikne trojkoalice“). */
+          podminka: s.string().min(1).optional(),
+          /** Id události ve vyjednávání téhož zastupitelstva, která plán dokládá. */
+          udalost: s.string().min(1).optional(),
+          zdroj: s.object({ text: s.string().min(1), url: url }).optional(),
+        }),
+      ),
+    })
+    .superRefine((data, ctx) => {
+      const videna = new Set<string>()
+      for (const p of data.polozky) {
+        if (videna.has(p.id)) ctx.addIssue({ code: 'custom', message: `Položka výhledu "${p.id}" je uvedená dvakrát.` })
+        videna.add(p.id)
+        if (!p.udalost === !p.zdroj) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Položka výhledu "${p.id}" musí mít buď odkaz na událost, nebo vlastní zdroj — právě jedno.`,
+          })
+        }
+        if (p.platiDo && p.platiDo < p.datum) {
+          ctx.addIssue({ code: 'custom', message: `Položka výhledu "${p.id}" platí do dne před svým datem.` })
+        }
+      }
+    }),
+})
+
 const aktuality = defineCollection({
   name: 'Aktualita',
   pattern: 'aktualne/**/*.mdx',
@@ -1197,6 +1252,7 @@ export default defineConfig({
   },
   collections: {
     vyjednavani,
+    vyhled,
     mestskeCasti,
     strany,
     programy,

@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-22. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-22
-overeno: 2026-10-20
+overeno: 2026-10-23
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
     datum: 2026-10-19
     url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+  - id: pd-praha22-20-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "STAN, OK22 a Piráti se v Praze 22 dohodli na koalici, hledají čtvrtého partnera"
+    datum: 2026-10-20
+    url: "https://prazsky.denik.cz/komunalni-volby/stan-ok22-a-pirati-se-v-praze-22-dohodli-na-koalici-hledaji-ctvrteho-partnera/"
 
 udalosti:
   - id: stan-jedna
@@ -21,3 +26,22 @@ udalosti:
       Ondřejem Lagnerem má 6 z 25 mandátů, do zastupitelstva se dostalo sedm
       uskupení. Konkrétní sestava doložená není.
     zdroje: [novinky-prehled-19-10]
+
+  - id: dohoda-stan-ok22-pirati
+    datum: 2026-10-20
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli, ok22-s-podporou-praha-sobe, ceska-piratska-strana]
+    sestava: [starostove-a-nezavisli, ok22-s-podporou-praha-sobe, ceska-piratska-strana]
+    kdo: Vojtěch Zelenka (STAN), bývalý starosta
+    doklad: citace
+    citace: >-
+      Základem budoucí koalice budou Starostové, OK22 s podporou Prahy sobě
+      a Piráti. Ti disponují 13 hlasy, což je těsná většina v zastupitelstvu.
+      Z tohoto důvodu hledáme ještě jednoho koaličního partnera, abychom měli
+      přesvědčivou většinu.
+    shrnuti: >-
+      STAN, OK22 s podporou Prahy sobě a Piráti se dohodli na základu
+      koalice, 13 hlasů z 25. Hledají čtvrtého partnera. Kandidáty na
+      starostu mají STAN i OK22; rozhodne podoba koalice. Jasno chtějí mít do
+      konce října.
+    zdroje: [pd-praha22-20-10]

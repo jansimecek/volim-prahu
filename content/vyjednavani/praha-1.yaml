@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-1. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-1
-overeno: 2026-10-20
+overeno: 2026-10-23
 
 zdroje:
   - id: pd-praha1-12-10
@@ -14,6 +14,11 @@ zdroje:
     nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
     datum: 2026-10-19
     url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+  - id: patriot-praha1-22-10
+    medium: "Pražský patriot"
+    nazev: "V Praze 1 se dohodla koalice pěti uskupení, starostkou bude dál Radoměřská z TOP 09"
+    datum: 2026-10-22
+    url: "https://www.prazskypatriot.cz/v-praze-1-se-dohodla-koalice-peti-uskupeni-starostkou-bude-dal-radomerska-z-top-09/"
 
 udalosti:
   - id: praha-1-sobe-top-pirati
@@ -48,3 +53,21 @@ udalosti:
       Post starosty má být podle něj vyústěním dohod, podstatnější je
       složení funkční rady.
     zdroje: [novinky-prehled-19-10]
+
+  - id: smlouva-pet-uskupeni
+    datum: 2026-10-21
+    typ: koalicni-smlouva
+    subjekty: [obcanska-demokraticka-strana, starostove-kdu-csl-s-podporou-iniciativy-obcanu-my-co-tady-zijeme, top-09-srdce-prahy, nase-praha-1-ano-2011-a-nezavisli-staromestska-lipa-sdruzeni-obcanu-a-pratel-stareho-mesta-a-josefova-v-praze-spolek, nezavisli-z-jednicky-kateriny-klasnove-a-davida-bodecka]
+    sestava: [obcanska-demokraticka-strana, starostove-kdu-csl-s-podporou-iniciativy-obcanu-my-co-tady-zijeme, top-09-srdce-prahy, nase-praha-1-ano-2011-a-nezavisli-staromestska-lipa-sdruzeni-obcanu-a-pratel-stareho-mesta-a-josefova-v-praze-spolek, nezavisli-z-jednicky-kateriny-klasnove-a-davida-bodecka]
+    kdo: Terezie Radoměřská (TOP 09) a zástupci dalších čtyř uskupení
+    doklad: citace
+    citace: >-
+      Jsem ráda, že se nám podařilo najít společnou řeč napříč pěti
+      uskupeními a dohodnout se na základech spolupráce pro další čtyři roky.
+    shrnuti: >-
+      ODS, Starostové s KDU-ČSL, TOP 09, Naše Praha 1 s ANO a Nezávislí
+      Kateřiny Klasnové podepsali ve středu večer koaliční smlouvu, 17 hlasů
+      z 27. Vítězná Praha 1 sobě v koalici není. Starostkou má zůstat
+      Radoměřská; Petr Hejma (STAN) se nároku na post starosty vzdal.
+      Ustavující zasedání má být v listopadu.
+    zdroje: [patriot-praha1-22-10]
