@@ -5,7 +5,7 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-20
+overeno: 2026-10-23
 
 zdroje:
   - id: ct24-10-10
@@ -113,6 +113,26 @@ zdroje:
     nazev: "Praha sobě nabídla STAN většinu v radě a post primátora v koalici s Piráty"
     datum: 2026-10-20
     url: "https://www.ceskenoviny.cz/zpravy/praha-sobe-nabidla-stan-vetsinu-v-rade-a-post-primatora-v-koalici-s-piraty/2890525"
+  - id: pd-ps-pirati-21-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha sobě a Piráti mají zájem o společnou koalici na magistrátu se STAN"
+    datum: 2026-10-21
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-sobe-a-pirati-maji-zajem-o-spolecnou-koalici-na-magistratu-se-stan/"
+  - id: pd-namluvy-21-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Námluvy STAN a Prahy sobě pokračují, čeká se na reakci Scheinherra a spol."
+    datum: 2026-10-21
+    url: "https://prazsky.denik.cz/komunalni-volby/namluvy-stan-a-prahy-sobe-pokracuji-ceka-se-na-reakci-scheinherra-a-spol/"
+  - id: ct24-22-10
+    medium: "ČT24"
+    nazev: "Pokud nebude trojkoalice do listopadu, bude Prahu řídit STAN a SPOLU"
+    datum: 2026-10-22
+    url: "https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/v-hlavnim-meste-asi-vznikne-koalice-stan-spolu-a-prahy-sobe-naznacil-hlavacek-378900"
+  - id: ctk-dvojkoalice-22-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Pokud nebude trojkoalice do listopadu, bude Prahu řídit koalice STAN a Spolu"
+    datum: 2026-10-22
+    url: "https://www.ceskenoviny.cz/zpravy/prazsky-klub-stan-ve-ctvrtek-prijme-doporuceni-k-magistratni-koalici/2891104"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -560,3 +580,85 @@ udalosti:
       bydlení. Ve středu odpoledne se schází s týmem STAN, který jí přednese
       vlastní nabídku, a pak s Piráty.
     zdroje: [ctk-praha-sobe-nabidka-20-10]
+
+  - id: praha-sobe-pirati-spolecny-navrh
+    datum: 2026-10-21
+    typ: jednani
+    subjekty: [praha-sobe, ceska-piratska-strana]
+    sestava: [starostove-a-nezavisli, praha-sobe, ceska-piratska-strana]
+    kdo: Adam Scheinherr (Praha sobě) a Tereza Nislerová (Piráti)
+    doklad: citace
+    citace: >-
+      Jednali jsme především o variantě takzvané městotvorné koalice, to
+      znamená šest pozic v radě pro STAN, tři pro Prahu sobě a dvě pro Piráty.
+      Shodli jsme se, že pro oba kluby je to ta preferovaná varianta, kterou
+      bychom chtěli prosazovat.
+    shrnuti: >-
+      Týmy Prahy sobě a Pirátů se shodly na společném návrhu koalice se STAN
+      a předaly ho STAN. Gesci financí by obě strany přenechaly STAN. Shodu
+      vidí mimo jiné v omezení vjezdu aut do centra, okružní lince metra,
+      posílení Pražské developerské společnosti a regulaci Airbnb.
+    zdroje: [pd-ps-pirati-21-10]
+
+  - id: stan-nabidka-praze-sobe
+    datum: 2026-10-21
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, praha-sobe]
+    kdo: Petr Hlaváček (STAN) a Adam Scheinherr (Praha sobě)
+    doklad: citace
+    citace: >-
+      Všechny verze, které jsou na stole, budeme zítra (ve čtvrtek) probírat
+      na klubu.
+    shrnuti: >-
+      STAN předložil Praze sobě nabídku na vstup do koalice se STAN a SPOLU:
+      místa v radě s předběžnými gescemi, předsednictví výborů a místa ve
+      městských firmách. Podrobnosti obě strany nekomentovaly. Odpovědi Prahy
+      sobě i Pirátů čekal STAN do středečního večera.
+    zdroje: [pd-namluvy-21-10]
+
+  - id: pirati-odmitli-praha-sobe-jedna
+    datum: 2026-10-22
+    typ: vyjadreni
+    subjekty: [ceska-piratska-strana, praha-sobe]
+    kdo: Petr Hlaváček (STAN) podle ČT24
+    doklad: parafraze
+    shrnuti: >-
+      Piráti nabídku na vstup do koalice se STAN a SPOLU odmítli. Chtěli dvě
+      místa v radě, STAN nabízel jedno; navýšení je podle Hlaváčka nemožné.
+      STAN s nimi chce jednat dál a nevylučuje, že Piráti postoj změní. Praha
+      sobě podle STAN odpověděla, že chce v jednáních pokračovat.
+    zdroje: [ct24-22-10]
+
+  - id: klub-stan-mestotvorna-na-vedomi
+    datum: 2026-10-22
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    kdo: Petr Hlaváček, lídr kandidátky
+    doklad: citace
+    citace: >-
+      Klub tento návrh vzal na vědomí. Je to pořád nějaká matematická
+      možnost.
+    shrnuti: >-
+      Hlaváček na otázku, zda klub STAN odmítl koalici s Prahou sobě
+      a Piráty bez SPOLU. Vyjednávací tým STAN má podle doporučení klubu
+      rozpracovat koalici se SPOLU a Prahou sobě. Vyjednávání do ledna jako
+      v minulém období podle Hlaváčka dopustit nelze.
+    zdroje: [ct24-22-10]
+
+  - id: dohoda-stan-spolu
+    datum: 2026-10-22
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: Petr Hlaváček (STAN) a Tomáš Portlík (SPOLU)
+    doklad: citace
+    citace: >-
+      Vycházíme z toho, že je potřeba udělat v listopadu zastupitelstvo. Praha
+      musí dál fungovat.
+    shrnuti: >-
+      Nevznikne-li do listopadového zastupitelstva trojkoalice s Prahou sobě,
+      povedou Prahu STAN a SPOLU (34 z 65) a o třetím partnerovi budou jednat
+      dál, podle Hlaváčka do prosince. Rada: STAN 5, SPOLU 4, Praha sobě 2
+      včetně dopravy; jinak 6 : 5. SPOLU už jedná společně se STAN. Týmy všech
+      tří se sejdou v pondělí 26. 10., pak mají oznámit gesce.
+    zdroje: [ctk-dvojkoalice-22-10, ct24-22-10]

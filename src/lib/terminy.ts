@@ -14,8 +14,11 @@
  * Den, kdy Státní volební komise vyhlásila celkové výsledky (sdělení ve
  * Sbírce zákonů), ve tvaru RRRR-MM-DD. Dokud je null, lhůty neukazujeme —
  * radši „zatím nevyhlášeno“ než vymyšlené datum.
+ *
+ * Sdělení č. 189/2026 Sb. ze dne 12. 10., ve Sbírce zpřístupněné 13. 10. 2026
+ * (https://www.e-sbirka.cz/sb/2026/189; faksimile ověřena 23. 10.).
  */
-export const VYHLASENI_SVK: string | null = null
+export const VYHLASENI_SVK: string | null = '2026-10-13'
 
 /** Druhé kolo senátních voleb ve třech pražských obvodech. */
 export const DRUHE_KOLO_SENATU = { od: '2026-10-16', do: '2026-10-17' } as const
