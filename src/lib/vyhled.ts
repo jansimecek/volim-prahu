@@ -11,14 +11,17 @@ import type { Vyjednavani } from './vyjednavani'
  * - ustavující zasedání, která dosavadní vedení svolalo (pole
  *   ustavujiciZasedani ve vyjednávání),
  * - ohlášené plány stran z content/vyhled.yaml, každý s odkazem na doloženou
- *   událost ve vyjednávání, nebo s vlastním zdrojem.
+ *   událost ve vyjednávání, nebo s vlastním zdrojem,
+ * - řízení u soudu o neplatnosti voleb z téhož souboru, doložená úřední deskou
+ *   soudu; kde běží, ustavující zasedání čeká na rozhodnutí.
  */
 
-export type DruhTerminu = 'lhuta' | 'svolano' | 'ohlaseno'
+export type DruhTerminu = 'lhuta' | 'svolano' | 'soud' | 'ohlaseno'
 
 export const POPIS_DRUHU: Record<DruhTerminu, string> = {
   lhuta: 'zákonná lhůta',
   svolano: 'svolané zasedání',
+  soud: 'řízení u soudu',
   ohlaseno: 'ohlášený plán',
 }
 
@@ -107,7 +110,7 @@ function ohlasenePlany(polozky: readonly PolozkaVyhledu[], data: readonly Vyjedn
     return [
       {
         id: p.id,
-        druh: 'ohlaseno' as const,
+        druh: p.druh,
         datum: den(p.datum),
         platiDo: den(p.platiDo ?? p.datum),
         kdy: p.kdy,
