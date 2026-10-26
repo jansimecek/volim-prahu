@@ -967,6 +967,11 @@ const vyhled = defineCollection({
           id: s.string().min(1),
           /** Slug zastupitelstva, nebo „senat“. */
           zastupitelstvo: s.string().min(1),
+          /**
+           * Ohlášený plán strany, nebo řízení u soudu (návrh na neplatnost voleb,
+           * který odkládá ustavující zasedání) — to doloží úřední deska soudu.
+           */
+          druh: s.enum(['ohlaseno', 'soud']).default('ohlaseno'),
           /** Nejbližší den, kdy se to může stát; podle něj se řadí. */
           datum: s.isodate(),
           /** Nepřesný termín slovy („do konce října“); jinak se vypíše datum. */
@@ -994,6 +999,9 @@ const vyhled = defineCollection({
             code: 'custom',
             message: `Položka výhledu "${p.id}" musí mít buď odkaz na událost, nebo vlastní zdroj — právě jedno.`,
           })
+        }
+        if (p.druh === 'soud' && !p.zdroj) {
+          ctx.addIssue({ code: 'custom', message: `Řízení u soudu "${p.id}" musí mít zdroj (úřední desku soudu).` })
         }
         if (p.platiDo && p.platiDo < p.datum) {
           ctx.addIssue({ code: 'custom', message: `Položka výhledu "${p.id}" platí do dne před svým datem.` })

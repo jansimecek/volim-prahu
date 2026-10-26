@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-13. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-13
-overeno: 2026-10-23
+overeno: 2026-10-25
 
 zdroje:
   - id: patriot-praha13-13-10
@@ -14,6 +14,11 @@ zdroje:
     nazev: "Povolební vyjednávání v Praze pokračují, jasno je v některých městských částech"
     datum: 2026-10-16
     url: "https://www.ceskenoviny.cz/zpravy/povolebni-vyjednavani-v-praze-pokracuji-jasno-je-v-nekterych-mestskych-castech/2888712"
+  - id: pd-praha13-23-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Prahu 13 povede koalice ODS, STAN, TOP 09 a KDU-ČSL"
+    datum: 2026-10-23
+    url: "https://prazsky.denik.cz/komunalni-volby/prahu-13-povede-koalice-ods-stan-top-09-a-kdu-csl/"
 
 udalosti:
   - id: memorandum-ods-stan-zp-top
@@ -29,3 +34,17 @@ udalosti:
       Dosavadní koaliční partner ANO v novém vedení nebude. Kdo bude starostou,
       zprávy neuvádějí; dosavadním starostou je David Vodrážka (ODS).
     zdroje: [patriot-praha13-13-10, ctk-prehled-16-10]
+
+  - id: smlouva-ods-stan-top
+    datum: 2026-10-23
+    typ: koalicni-smlouva
+    subjekty: [ods-s-podporou-nezavislych, starostove-a-nezavisli, spolecne-pro-prahu-13-top-09-a-kdu-csl]
+    sestava: [ods-s-podporou-nezavislych, starostove-a-nezavisli, spolecne-pro-prahu-13-top-09-a-kdu-csl]
+    kdo: mluvčí radnice Lucie Steinerová
+    doklad: parafraze
+    shrnuti: >-
+      ODS, STAN a TOP 09 s KDU-ČSL v pátek podepsaly koaliční smlouvu. Zelení
+      a Piráti pro 13, kteří memorandum podepsali, smlouvu nepodepsali. Do
+      klubu ODS přešla Barbora Bero, zvolená jako nezávislá za Zelené; koalice
+      tak má nejtěsnější možnou většinu, 18 hlasů z 35.
+    zdroje: [pd-praha13-23-10]

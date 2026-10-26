@@ -446,11 +446,13 @@ function overVyhled(velite: string) {
   for (const p of vyhled.polozky) {
     if (p.zastupitelstvo === 'senat') continue
     const v = vyjednavani.find((x) => x.zastupitelstvo === p.zastupitelstvo)
-    const chyba = !v
-      ? `míří na zastupitelstvo "${p.zastupitelstvo}", které nemá soubor vyjednávání`
-      : p.udalost && !v.udalosti.some((u) => u.id === p.udalost)
-        ? `odkazuje na událost "${p.udalost}", která v ${p.zastupitelstvo} není`
-        : undefined
+    const chyba = !existsSync(join('data/kandidatky', `${p.zastupitelstvo}.json`))
+      ? `míří na zastupitelstvo "${p.zastupitelstvo}", které neexistuje`
+      : p.udalost && !v
+        ? `odkazuje na událost, ale ${p.zastupitelstvo} nemá soubor vyjednávání`
+        : p.udalost && !v?.udalosti.some((u) => u.id === p.udalost)
+          ? `odkazuje na událost "${p.udalost}", která v ${p.zastupitelstvo} není`
+          : undefined
     if (chyba) nalezy.push({ soubor: 'content/vyhled.yaml', radek: 0, zprava: `Položka "${p.id}" ${chyba}.`, tvrde: true })
   }
 }

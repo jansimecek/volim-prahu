@@ -1,0 +1,44 @@
+# Povolební vyjednávání — praha-reporyje. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
+
+zastupitelstvo: praha-reporyje
+overeno: 2026-10-25
+
+zdroje:
+  - id: pd-reporyje-23-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Koaliční smlouvu v Řeporyjích uzavřely ODS, TOP 09 a ANO, vítěz skončí v opozici"
+    datum: 2026-10-23
+    url: "https://prazsky.denik.cz/komunalni-volby/koalicni-smlouvu-v-reporyjich-uzavrely-ods-top-09-a-ano-vitez-skonci-v-opozici/"
+
+udalosti:
+  - id: smlouva-ods-top-ano
+    datum: 2026-10-22
+    typ: koalicni-smlouva
+    subjekty: [obcanska-demokraticka-strana, top-09, ano-2011]
+    sestava: [obcanska-demokraticka-strana, top-09, ano-2011]
+    kdo: zástupci koalice na facebooku
+    doklad: citace
+    citace: >-
+      V Řeporyjích byla právě podepsána koaliční smlouva mezi ODS, TOP 09
+      a ANO. ODS obsadí post starostky, druhého místostarosty a tři místa
+      v radě.
+    shrnuti: >-
+      ODS, TOP 09 a ANO podepsaly ve čtvrtek večer koaliční smlouvu, 8 hlasů
+      z 15. Starostkou má být Lenka Fialová (ODS), druhým místostarostou její
+      bratr, bývalý starosta Pavel Novotný (ODS). Vítězné Přívětivé Řeporyje
+      (7 mandátů) jdou do opozice.
+    zdroje: [pd-reporyje-23-10]
+
+  - id: privetive-reporyje-opozice
+    datum: 2026-10-23
+    typ: vyjadreni
+    subjekty: [privetive-reporyje]
+    kdo: Přívětivé Řeporyje
+    doklad: citace
+    citace: >-
+      Lidé si přáli změnu, ale tato dohoda ji nepřináší. Ptejte se svých
+      zastupitelů, proč odmítli naši korektní a věcnou nabídku na spolupráci.
+    shrnuti: >-
+      Vítězné uskupení reagovalo na podpis koaliční smlouvy; podrobnosti
+      o jednáních chtělo zveřejnit v sobotu.
+    zdroje: [pd-reporyje-23-10]

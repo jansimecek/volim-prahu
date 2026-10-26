@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-8. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-8
-overeno: 2026-10-23
+overeno: 2026-10-25
 
 zdroje:
   - id: pd-prehled-15-10
@@ -19,6 +19,11 @@ zdroje:
     nazev: "Strany v Praze 8 obešly vítězné uskupení 8žije, dohodly koalici bez něj"
     datum: 2026-10-19
     url: "https://prazsky.denik.cz/komunalni-volby/strany-v-praze-8-obesly-vitezne-uskupeni-8zije-dohodly-koalici-bez-nej/"
+  - id: drbna-rakusan-23-10
+    medium: "Pražská Drbna (ČTK)"
+    nazev: "Rakušan s koalicí STAN a ANO v Praze 8 nesouhlasí, stále se podle něj ještě jedná"
+    datum: 2026-10-23
+    url: "https://prazska.drbna.cz/praha-8/903770-rakusan-s-koalici-stan-a-ano-v-praze-8-nesouhlasi-stale-se-podle-nej-jeste-jedna.html"
 
 udalosti:
   - id: 8zije-nabizi-starostu
@@ -85,3 +90,19 @@ udalosti:
       spolupráci s ANO před koalicí s vítězem voleb, přestože mu 8žije
       nabízelo i post starosty.
     zdroje: [pd-praha8-19-10]
+
+  - id: rakusan-nesouhlasi-s-ano
+    datum: 2026-10-23
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8]
+    kdo: Vít Rakušan, předseda STAN (celostátní vedení)
+    doklad: citace
+    citace: >-
+      Praha 8 mi vadí a samozřejmě jsem svůj názor našim představitelům na
+      Praze 8 řekl.
+    shrnuti: >-
+      Předseda STAN nesouhlasí s tím, že pražští spolustraníci jednají
+      o koalici s ANO bez vítězného 8žije. Koalice s ANO si nepřeje tam, kde
+      existuje alternativa. Dojednáno podle něj ještě není; ohlášenou dohodu
+      ale nikdo z jejích účastníků neodvolal.
+    zdroje: [drbna-rakusan-23-10]

@@ -32,6 +32,7 @@ const vyjednavani = [
 const plan = {
   id: 'plan',
   zastupitelstvo: 'praha-5',
+  druh: 'ohlaseno' as const,
   datum: '2026-10-24',
   platiDo: '2026-10-31',
   kdy: 'do konce října',
@@ -69,9 +70,9 @@ describe('výhled', () => {
     ])
   })
 
-  it('každý plán z content/vyhled.yaml má zdroj', () => {
-    // Bez zdroje by plán ze stránky tiše zmizel; tady je to vidět hned.
-    const vse = vyhledOd('2000-01-01').filter((x) => x.druh === 'ohlaseno')
+  it('každá položka z content/vyhled.yaml má zdroj', () => {
+    // Bez zdroje by položka ze stránky tiše zmizela; tady je to vidět hned.
+    const vse = vyhledOd('2000-01-01').filter((x) => x.druh === 'ohlaseno' || x.druh === 'soud')
     expect(vse.map((x) => x.id).sort()).toEqual(vyhled.polozky.map((p) => p.id).sort())
     for (const t of vse) expect(t.zdroj.url).toMatch(/^https:\/\//)
   })
