@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-9. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-9
-overeno: 2026-10-25
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: deska-praha9-29-10
+overeno: 2026-10-30
 
 zdroje:
   - id: pd-praha9-12-10
@@ -9,6 +12,11 @@ zdroje:
     nazev: "Zůstane Portlík starostou Prahy 9? Rozhodne se po uzavření koalice na magistrátu"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/zustane-portlik-starostou-prahy-9-rozhodne-se-po-uzavreni-koalice-na-magistratu/"
+  - id: deska-praha9-29-10
+    medium: "Úřední deska MČ Praha 9"
+    nazev: "Pozvánka na ustavující zasedání Zastupitelstva MČ Praha 9, dne 9. 11. 2026"
+    datum: 2026-10-29
+    url: "https://www.praha9.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva-mc-praha-9-dne-9-11-2026-0"
 
 udalosti:
   - id: portlik-praha9-neobejde

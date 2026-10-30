@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-4. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-4
-overeno: 2026-10-25
+ustavujiciZasedani:
+  datum: 2026-11-06
+  zdroj: deska-praha4-29-10
+overeno: 2026-10-30
 
 zdroje:
   - id: pd-praha4-12-10
@@ -14,6 +17,11 @@ zdroje:
     nazev: "Zastupitelé Prahy 4 za ODS, TOP 09 a ANO podepsali koaliční smlouvu"
     datum: 2026-10-19
     url: "https://prazsky.denik.cz/komunalni-volby/zastupitele-prahy-4-za-ods-top-09-a-ano-podepsali-koalicni-smlouvu/"
+  - id: deska-praha4-29-10
+    medium: "Úřední deska MČ Praha 4"
+    nazev: "Pozvánka na 1. ustavující ZMČ konané dne 6. 11. 2026"
+    datum: 2026-10-29
+    url: "https://cztedeskaext.praha4.cz/eDeska/eDeskaDetail.jsp?detailId=23901"
 
 udalosti:
   - id: spolu-ano-pokracovani

@@ -101,17 +101,22 @@ export default function StrankaSenatu() {
           V celé republice se volilo 27 z 81 senátorů. Nejvíc mandátů získalo hnutí STAN, deset ze čtrnácti
           kandidátů, ODS sedm (obhajovala pět) a KDU-ČSL obhájila všechny tři. Vládní ANO neprosadilo ani jednoho
           ze třinácti kandidátů ve druhém kole a Piráti přišli o jedinou senátorku. Nejsilnějším klubem zůstává
-          společný klub ODS a TOP 09, podle propočtu ČT24 může mít 31 členů.
+          společný klub ODS a TOP 09; jeho předseda Zdeněk Nytra 20. října potvrdil, že zůstane společný. Kolik
+          bude mít členů, zatím jasné není — podle Nytry se ještě rozhodují dva senátoři za Naše Česko. Další
+          kluby: Starostové s 18 členy a lidovci se 13.
         </p>
         <p className="mt-3">
-          Klub SEN 21 a Piráti, do kterého patřil Václav Láska, zanikl, protože klesl pod minimální počet pěti
-          členů. Aby ho Láska obnovil, potřeboval by podle ČT24 další dva senátory.
+          Klub SEN 21 a Piráti zanikl, protože klesl pod minimální počet pěti členů. Václav Láska 21. října
+          založil nový klub SEN 21 a nezávislých kandidátů, právě s pěti členy: vedle Lásky Martin Krsek, Přemysl
+          Rabas, nově zvolený Petr Kazík a pražská senátorka Hana Kordová Marvanová, která přešla z klubu ODS
+          a TOP 09.
         </p>
         <p className="mt-3">
-          <strong>První schůze nového Senátu má být 19. listopadu</strong> a na programu má mít i volbu předsedy.
-          Podle senátních zvyklostí připadá křeslo nejsilnějšímu klubu. Dosavadní předseda Miloš Vystrčil (ODS)
-          chce funkci obhájit: „Pokud nominaci obdržím, tak jsem připraven ji přijmout,“ řekl Deníku. Nominaci
-          klub zatím neoznámil.
+          <strong>První schůze Senátu v novém funkčním období je svolaná na 19. listopadu od 10 hodin.</strong>{' '}
+          Podle zveřejněného programu senátoři složí slib a volí předsedu a místopředsedy Senátu. Podle senátních
+          zvyklostí připadá křeslo předsedy nejsilnějšímu klubu. Klub ODS a TOP 09 do něj podle Nytry znovu
+          nominuje dosavadního předsedu Miloše Vystrčila (ODS), který funkci chce obhájit: „Pokud nominaci
+          obdržím, tak jsem připraven ji přijmout,“ řekl Deníku.
         </p>
         <p className="mt-3">
           Vystrčil volby hodnotí jako úspěch opozice. Zastal se poražených pražských kandidátů s podporou ODS, Dagmar
@@ -132,6 +137,21 @@ export default function StrankaSenatu() {
           <li>
             <a href="https://www.newstream.cz/politika/toto-je-podana-ruka-vystrcil-zve-babise-do-senatu" className="underline" rel="noopener">
               „Toto je podaná ruka.“ Vystrčil zve Babiše do Senátu (Newstream, 18. 10. 2026)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.seznamzpravy.cz/clanek/domaci-politika-ods-a-top-09-budou-nadale-pusobit-ve-spolecnem-klubu-uvedl-jeho-predseda-318348" className="underline" rel="noopener">
+              ODS a TOP 09 budou nadále působit ve společném klubu, uvedl jeho předseda (Seznam Zprávy / ČTK, 20. 10. 2026)
+            </a>
+          </li>
+          <li>
+            <a href="https://ct24.ceskatelevize.cz/clanek/domaci/v-senatu-vznikl-klub-sen-21-a-nezavislych-kandidatu-predsedou-bude-laska-378870" className="underline" rel="noopener">
+              V Senátu vznikl klub SEN 21 a nezávislých kandidátů, předsedou bude Láska (ČT24, 21. 10. 2026)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.senat.cz/xqw/xervlet/pssenat/prubeh?cid=pssenat_prubeh.pTabNavrhu.pageListFiltr&forEach.action=prubeh&forEach.value=7991" className="underline" rel="noopener">
+              Program 1. schůze Senátu v 16. funkčním období (senat.cz)
             </a>
           </li>
         </ul>

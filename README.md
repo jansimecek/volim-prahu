@@ -106,7 +106,9 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
   1–22 sledujeme podrobně, menší části, když o nich píšou média.
 - **[Titulní strana](https://www.volimprahu.cz)** — stav na jeden pohled: jak je
   na tom magistrát, kolik městských částí je v kterém stavu jednání, poslední
-  zprávy z vyjednávání napříč všemi zastupitelstvy a výhled **Co nás čeká**.
+  zprávy z vyjednávání napříč všemi zastupitelstvy, mapa všech 57 městských
+  částí podle stavu vyjednávání (s vítězem voleb a dohodnutou sestavou)
+  a výhled **Co nás čeká**.
   Ve výhledu jsou jen zákonné lhůty, svolaná zasedání a termíny, které strany
   ohlásily, každý se zdrojem. Žádný odhad, kdy se kde dohodnou.
 - **Data ke stažení** — [stav vyjednávání](https://www.volimprahu.cz/data/vyjednavani.json)

@@ -49,6 +49,9 @@ type PolozkaVyhledu = (typeof vyhled)['polozky'][number]
 /** Velite vydává data jako celé ISO časy; výhled počítá s dny. */
 const den = (iso: string) => iso.slice(0, 10)
 
+/** Sobota nebo neděle; poledne UTC, aby den neposunulo časové pásmo. */
+const naVikend = (iso: string) => [0, 6].includes(new Date(`${iso}T12:00:00Z`).getUTCDay())
+
 function terminyZeZakona(lhuty: Lhuty | null): Termin[] {
   if (!lhuty) return []
   return [
@@ -69,7 +72,11 @@ function terminyZeZakona(lhuty: Lhuty | null): Termin[] {
       platiDo: lhuty.zasedaniNejpozdeji,
       zastupitelstvo: null,
       nadpis: 'Nejzazší den pro ustavující zasedání',
-      text: 'Platí pro zastupitelstvo města i městských částí (u nich § 91 zákona o obcích), pokud nikdo nepodá návrh soudu.',
+      text:
+        'Platí pro zastupitelstvo města i městských částí (u nich § 91 zákona o obcích). Odkládá ho jen návrh soudu na neplatnost voleb nebo hlasování, ne návrh proti volbě jednotlivého kandidáta.' +
+        (naVikend(lhuty.zasedaniNejpozdeji)
+          ? ' Lhůta končí o víkendu; část zastupitelstev svolává zasedání až na nejbližší pracovní den.'
+          : ''),
       zdroj: { text: '§ 61 zák. č. 131/2000 Sb.', url: 'https://www.zakonyprolidi.cz/cs/2000-131#p61' },
     },
   ]
