@@ -119,7 +119,10 @@ export default async function Rozcestnik() {
             <p className="popisek-uredni mt-3">
               Ve {sVetsinouJedne} z {casti.length} má jedna strana většinu sama
             </p>
-            <p className="mt-3">
+            <p className="mt-3 flex flex-wrap gap-x-4">
+              <Link href="#mapa" className="odkaz-akcent">
+                Mapa
+              </Link>
               <Link href="/koalice#mestske-casti" className="odkaz-akcent">
                 Přehled městských částí
               </Link>
@@ -149,6 +152,18 @@ export default async function Rozcestnik() {
             </p>
           </Karta>
         </div>
+      </section>
+
+      {/* Mapa hned pod přehledem: dál na stránce ji čtenář přehlédl. */}
+      <section aria-labelledby="mapa" className="scroll-mt-20">
+        <h2 id="mapa" className="text-2xl">
+          Mapa městských částí
+        </h2>
+        <p className="mt-2 max-w-prose">
+          Kam došlo vyjednávání ve všech 57 částech. Barva vychází jen z doložených událostí — bez zpráv
+          neznamená, že se nejedná, ale že o jednání nemáme zdroj.
+        </p>
+        <MapaMestskychCasti />
       </section>
 
       {terminy.length > 0 && (
@@ -204,13 +219,7 @@ export default async function Rozcestnik() {
         <h2 id="casti" className="text-2xl">
           Městské části
         </h2>
-        <p className="mt-2 max-w-prose">
-          Kam došlo vyjednávání ve všech 57 částech. Barva vychází jen z doložených událostí — bez zpráv
-          neznamená, že se nejedná, ale že o jednání nemáme zdroj.
-        </p>
-        <MapaMestskychCasti />
-        <h3 className="mt-8 text-xl">Praha 1–22</h3>
-        <ul className="mt-3 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           {casti.map((z) => {
             const prvni = stranySMandaty(z)[0]
             const v = vyjednavaniZastupitelstva(z.slug)
