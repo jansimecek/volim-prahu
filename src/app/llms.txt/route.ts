@@ -95,7 +95,7 @@ export function GET(): Response {
         : 'výsledek druhého kola zatím není sečtený'
       return `- [Obvod č. ${o.cislo} ${o.nazev}](${absolutni(`/senat/${o.slug}`)}): ${popis}`
     }),
-    'První schůze nového Senátu má být 19. listopadu 2026 a na programu má mít volbu předsedy; dosavadní předseda Miloš Vystrčil (ODS) chce funkci obhájit, nominaci klubu ODS a TOP 09 zatím nemá.',
+    'První schůze Senátu v novém funkčním období je svolaná na 19. listopadu 2026 od 10 hodin; na programu je slib senátorů a volba předsedy a místopředsedů. Klub ODS a TOP 09 nominuje dosavadního předsedu Miloše Vystrčila (ODS). Václav Láska 21. října založil klub SEN 21 a nezávislých kandidátů s pěti členy.',
     '',
     '## Klíčové stránky',
     `- [Kdo povede Prahu — přehled](${absolutni('/')}): stav vyjednávání na magistrátu a v Praze 1–22, poslední zprávy, termíny.`,

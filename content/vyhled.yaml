@@ -5,25 +5,17 @@
 # kde je zdroj. Zákonné lhůty a svolaná ustavující zasedání se sem nepíšou —
 # počítají se z src/lib/terminy.ts a z pole ustavujiciZasedani.
 #
-# druh: soud = běžící řízení o neplatnosti voleb (§ 90 odst. 3 s. ř. s.: soud
-# rozhodne do 20 dnů od podání). Zdrojem je úřední deska Městského soudu
-# v Praze; po rozhodnutí položku smazat a zapsat termín zasedání.
+# druh: soud = řízení o neplatnosti voleb, kvůli kterému zastupitelstvo čeká
+# se zasedáním (§ 90 odst. 3 s. ř. s.: soud rozhodne do 20 dnů od podání).
+# Jen tam, kde to doloží zdroj: zasedání odkládá návrh na neplatnost voleb nebo
+# hlasování, ne návrh proti volbě jednoho kandidáta (§ 91 zák. o obcích).
 #
 # datum = nejbližší možný den; platiDo = do kdy to má nastat (podle toho se
 # řadí a pak položka zmizí). U přesného dne stačí datum.
 
-overeno: 2026-10-25
+overeno: 2026-10-30
 
 polozky:
-  - id: magistrat-tymy-26-10
-    zastupitelstvo: magistrat
-    datum: 2026-10-26
-    nadpis: Jednání STAN, SPOLU a Prahy sobě o gescích
-    text: >-
-      Po jednání vyjednávacích týmů mají strany oznámit, jaké gesce připadnou
-      kterému uskupení.
-    udalost: dohoda-stan-spolu
-
   - id: praha-22-jasno-do-konce-rijna
     zastupitelstvo: praha-22
     datum: 2026-10-24
@@ -70,10 +62,11 @@ polozky:
     datum: 2026-11-19
     nadpis: První schůze nového Senátu
     text: >-
-      Na programu má být i volba předsedy.
+      Schůze je svolaná od 10 hodin; senátoři složí slib a volí předsedu
+      a místopředsedy. Klub ODS a TOP 09 nominuje Miloše Vystrčila.
     zdroj:
-      text: "Deník.cz, 17. října 2026"
-      url: https://www.denik.cz/senatni-volby/senat-jsme-jim-nedali-hlasi-ods-vystrcil-chce-v-cele-horni-komory-zustat/
+      text: "Program schůze, senat.cz"
+      url: https://www.senat.cz/xqw/xervlet/pssenat/prubeh?cid=pssenat_prubeh.pTabNavrhu.pageListFiltr&forEach.action=prubeh&forEach.value=7991
 
   - id: praha-1-ustavujici
     zastupitelstvo: praha-1
@@ -84,17 +77,6 @@ polozky:
     text: >-
       Starostkou má zůstat Terezie Radoměřská (TOP 09).
     udalost: smlouva-pet-uskupeni
-
-  - id: magistrat-ustavujici
-    zastupitelstvo: magistrat
-    datum: 2026-11-01
-    platiDo: 2026-11-30
-    kdy: v listopadu
-    nadpis: Ustavující zasedání zastupitelstva města
-    text: >-
-      Nevznikne-li do té doby trojkoalice s Prahou sobě, povedou Prahu STAN
-      a SPOLU se 34 hlasy z 65.
-    udalost: dohoda-stan-spolu
 
   - id: magistrat-treti-partner
     zastupitelstvo: magistrat
@@ -108,93 +90,39 @@ polozky:
     podminka: pokud trojkoalice nevznikne do listopadového zasedání
     udalost: dohoda-stan-spolu
 
-  - id: soud-praha-1
-    zastupitelstvo: praha-1
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu na neplatnost voleb
+  - id: magistrat-oznameni-koalice
+    zastupitelstvo: magistrat
+    datum: 2026-11-09
+    platiDo: 2026-11-11
+    kdy: začátek týdne od 9. listopadu
+    nadpis: Hlaváček chce ohlásit výslednou koalici
     text: >-
-      Řízení sp. zn. 6 A 86/2026 (Volt Česko, neplatnost hlasování).
-    zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
+      Do konce předchozího týdne jednají tříčlenné pracovní skupiny STAN
+      a SPOLU s Prahou sobě i s Piráty. Dvoukoalice STAN a SPOLU je podle
+      Hlaváčka stále možná.
+    udalost: pirati-upravena-nabidka
 
-  - id: soud-praha-3
-    zastupitelstvo: praha-3
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrzích na neplatnost voleb
+  - id: magistrat-volba-vedeni
+    zastupitelstvo: magistrat
+    datum: 2026-11-12
+    nadpis: Pokračování ustavujícího zasedání, volba vedení města
     text: >-
-      Řízení sp. zn. 15 A 67/2026 (Strana zelených) a 6 A 84/2026.
+      Zasedání svolané na 5. listopadu se má po slibu zastupitelů přerušit do
+      12. listopadu, kdy už má být o koalici jasno.
     zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
-
-  - id: soud-praha-5
-    zastupitelstvo: praha-5
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu na neplatnost voleb
-    text: >-
-      Řízení sp. zn. 11 A 40/2026 (neplatnost volby kandidáta).
-    zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
-
-  - id: soud-praha-10
-    zastupitelstvo: praha-10
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrzích na neplatnost voleb
-    text: >-
-      Řízení sp. zn. 5 A 68, 5 A 71, 9 A 68, 9 A 70 a 18 A 54/2026.
-    zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
-
-  - id: soud-praha-11
-    zastupitelstvo: praha-11
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu na neplatnost voleb
-    text: >-
-      Řízení sp. zn. 11 A 38/2026 (Hnutí pro Prahu 11, volba Martina Sedekeho).
-    zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
+      text: "Pražský deník (ČTK), 30. října 2026"
+      url: https://prazsky.denik.cz/komunalni-volby/ustavujici-zastupitelstvo-prahy-se-sejde-5-listopadu-v-planu-je-ho-prerusit/
 
   - id: soud-praha-15
     zastupitelstvo: praha-15
     druh: soud
-    datum: 2026-10-26
+    datum: 2026-10-31
     platiDo: 2026-11-12
     kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu na neplatnost voleb
+    nadpis: Soud rozhodne o stížnostech na volby
     text: >-
-      Řízení sp. zn. 17 A 63/2026 (Patnáctka náš domov).
+      Ustavující zasedání bude podle Patnáctky náš domov až po rozhodnutí
+      soudu; jednu ze stížností podala sama PND (sp. zn. 17 A 63/2026).
     zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
-
-  - id: soud-praha-libus
-    zastupitelstvo: praha-libus
-    druh: soud
-    datum: 2026-10-26
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu na neplatnost voleb
-    text: >-
-      Řízení sp. zn. 7 A 89/2026 (neplatnost volby kandidátů).
-    zdroj:
-      text: "Úřední deska Městského soudu v Praze, 25. října 2026"
-      url: https://infodeska.gov.cz/eudpub/uredni-deska/organizace/201000
+      text: "Pražský deník (ČTK), 29. října 2026"
+      url: https://prazsky.denik.cz/komunalni-volby/v-praze-15-bude-vladnout-patnactka-nas-domov-s-piraty-a-prahou-sobe/

@@ -464,3 +464,23 @@
     color: var(--color-seda-uredni);
   }
 }
+
+/*
+ * Mapa městských částí: část pod myší se zesvětlí, s fokusem z klávesnice
+ * dostane rudý obrys (obrys samotného <a> se v SVG nevykreslí).
+ */
+.mapa-cast > path:first-child {
+  transition: filter 120ms;
+}
+.mapa-cast:hover > path:first-child {
+  filter: brightness(1.12);
+}
+.mapa-cast:focus {
+  outline: none;
+}
+.mapa-cast:focus-visible > path:first-child {
+  stroke: var(--color-praha);
+  stroke-width: 5;
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke;
+}

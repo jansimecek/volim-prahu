@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-15. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-15
-overeno: 2026-10-25
+overeno: 2026-10-30
 
 zdroje:
   - id: pd-praha3-12-10
@@ -9,6 +9,11 @@ zdroje:
     nazev: "Vládnout sami nechtějí: TOP 09 a STAN v Praze 3 i přes většinu jednají o koalici"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/vladnout-sami-nechteji-top-09-a-stan-v-praze-3-i-pres-vetsinu-jednaji-o-koalici/"
+  - id: pd-praha15-29-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 15 bude vládnout Patnáctka náš domov s Piráty a Prahou sobě"
+    datum: 2026-10-29
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-15-bude-vladnout-patnactka-nas-domov-s-piraty-a-prahou-sobe/"
 
 udalosti:
   - id: patnactka-stan-pirati
@@ -26,3 +31,20 @@ udalosti:
       Patnáctka náš domov má v Praze 15 většinu sama (16 z 31), přesto chce
       jednat o koalici se STAN a s Piráty a Prahou 15 sobě.
     zdroje: [pd-praha3-12-10]
+
+  - id: smlouva-pnd-pirati-ps15
+    datum: 2026-10-29
+    typ: koalicni-smlouva
+    subjekty: [patnactka-nas-domov, pirati-a-praha-15-sobe]
+    sestava: [patnactka-nas-domov, pirati-a-praha-15-sobe]
+    kdo: Patnáctka náš domov na facebooku
+    doklad: citace
+    citace: >-
+      Bez nutnosti ústupků jsme se shodli i na dalších programových tezích,
+      které následně přetavíme do podrobnějšího prohlášení rady.
+    shrnuti: >-
+      Vítězná Patnáctka náš domov, která má většinu sama, podepsala koaliční
+      smlouvu s Piráty a Prahou 15 sobě, 18 hlasů z 31. Starostou má být
+      Marcel Pencák. STAN účast v koalici podle PND odmítl. Ustavující
+      zasedání bude až po rozhodnutí soudu o stížnostech na volby.
+    zdroje: [pd-praha15-29-10]

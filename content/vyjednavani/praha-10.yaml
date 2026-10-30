@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-10. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-10
-overeno: 2026-10-25
+overeno: 2026-10-30
 
 zdroje:
   - id: pd-praha10-15-10
@@ -14,6 +14,11 @@ zdroje:
     nazev: "Po volbách se skládají koalice. Praha 10 má jasno, osmička nabízí post starosty"
     datum: 2026-10-15
     url: "https://prazsky.denik.cz/komunalni-volby/po-volbach-se-skladaji-koalice-praha-10-ma-jasno-osmicka-nabizi-post-starosty/"
+  - id: pd-praha10-27-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Koaliční smlouvu má i Praha 10, podepsaly ji ODS, STAN s Vlastou a Praha 10 sobě"
+    datum: 2026-10-27
+    url: "https://prazsky.denik.cz/komunalni-volby/koalicni-smlouvu-ma-i-praha-10-podepsaly-ji-ods-stan-s-vlastou-a-praha-10-sobe/"
 
 udalosti:
   - id: memorandum-ods-stan-ps10
@@ -31,3 +36,20 @@ udalosti:
       má zůstat Martin Valovič (ODS). Proti minulému období nahrazuje TOP 09
       Praha 10 sobě se Zelenými. Strany teď připravují koaliční smlouvu.
     zdroje: [pd-praha10-15-10, pd-prehled-15-10]
+
+  - id: smlouva-ods-stan-ps10
+    datum: 2026-10-27
+    typ: koalicni-smlouva
+    subjekty: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    sestava: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    kdo: Martin Valovič (ODS), starosta
+    doklad: citace
+    citace: >-
+      Při jednáních se ukázalo, že si rozumíme nejen v pohledu na budoucnost
+      Prahy 10, ale i lidsky.
+    shrnuti: >-
+      ODS, STAN s Vlastou a lidovci a Praha 10 sobě se Zelenými podepsaly
+      koaliční smlouvu, 24 hlasů ze 45. Devítičlenná rada: ODS 4, STAN 3,
+      Praha 10 sobě 2; starostou zůstává Valovič. Termín ustavujícího
+      zasedání zatím stanovený není.
+    zdroje: [pd-praha10-27-10]

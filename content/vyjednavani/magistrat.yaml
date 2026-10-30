@@ -5,7 +5,10 @@
 # Předvolební vyjádření o spolupráci jsou v content/koalice.yaml.
 
 zastupitelstvo: magistrat
-overeno: 2026-10-25
+ustavujiciZasedani:
+  datum: 2026-11-05
+  zdroj: pd-ustavujici-30-10
+overeno: 2026-10-30
 
 zdroje:
   - id: ct24-10-10
@@ -133,6 +136,26 @@ zdroje:
     nazev: "Pokud nebude trojkoalice do listopadu, bude Prahu řídit koalice STAN a Spolu"
     datum: 2026-10-22
     url: "https://www.ceskenoviny.cz/zpravy/prazsky-klub-stan-ve-ctvrtek-prijme-doporuceni-k-magistratni-koalici/2891104"
+  - id: ctk-gesce-26-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "STAN, Spolu a Praha Sobě řešily program a gesce, znovu se sejdou v úterý"
+    datum: 2026-10-26
+    url: "https://www.ceskenoviny.cz/zpravy/2893369"
+  - id: ctk-pracovni-skupiny-27-10
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "STAN a Spolu budou jednat o programu s Prahou sobě i Piráty"
+    datum: 2026-10-27
+    url: "https://www.ceskenoviny.cz/zpravy/stan-a-spolu-budou-dnes-dale-jednat-s-prahou-sobe-o-magistratni-koalici/2893550"
+  - id: pd-ps-dva-radni-27-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha sobě souhlasí se dvěma radními místo tří, koalici ale zatím nepotvrdila"
+    datum: 2026-10-27
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-sobe-souhlasi-se-dvema-radnimi-misto-tri-koalici-ale-zatim-nepotvrdila/"
+  - id: pd-ustavujici-30-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Ustavující zastupitelstvo Prahy se sejde 5. listopadu, v plánu je ho přerušit"
+    datum: 2026-10-30
+    url: "https://prazsky.denik.cz/komunalni-volby/ustavujici-zastupitelstvo-prahy-se-sejde-5-listopadu-v-planu-je-ho-prerusit/"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -662,3 +685,54 @@ udalosti:
       včetně dopravy; jinak 6 : 5. SPOLU už jedná společně se STAN. Týmy všech
       tří se sejdou v pondělí 26. 10., pak mají oznámit gesce.
     zdroje: [ctk-dvojkoalice-22-10, ct24-22-10]
+
+  - id: tri-strany-gesce
+    datum: 2026-10-26
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    kdo: Petr Hlaváček (STAN), Tomáš Portlík (SPOLU), Adam Scheinherr (Praha sobě)
+    doklad: citace
+    citace: >-
+      Myslím, že jednání běží rychle, myslel jsem si, že bude delší.
+    shrnuti: >-
+      První jednání tří stran o programu a gescích. STAN by měl územní rozvoj,
+      bydlení, životní prostředí, bezpečnost nebo IT; SPOLU finance,
+      infrastrukturu, sociální a zdravotní oblast či kulturu; Praha sobě
+      dopravu a majetek. Rada 5–4–2, primátorem Hlaváček. Portlík chce záruku,
+      že Praha sobě bude respektovat, na čem se SPOLU se STAN shodlo.
+    zdroje: [ctk-gesce-26-10]
+
+  - id: praha-sobe-dva-radni
+    datum: 2026-10-27
+    typ: vyjadreni
+    subjekty: [praha-sobe]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    kdo: Adam Scheinherr, předseda Prahy sobě
+    doklad: citace
+    citace: >-
+      Ještě jsme nedořešili nějaké oblasti, takže to zhodnocení provedeme, až
+      budeme vědět od Starostů konkrétní podmínky.
+    shrnuti: >-
+      Praha sobě souhlasí se dvěma místy v radě místo tří, s dopravou (tu by
+      převzal Scheinherr) a s majetkem. Podmínkou je, aby radní pro finance
+      neřídil městské firmy a projekty za gesčního radního. Vstup do koalice
+      zatím nepotvrdila, nabídku projedná klub.
+    zdroje: [pd-ps-dva-radni-27-10, ctk-pracovni-skupiny-27-10]
+
+  - id: pirati-upravena-nabidka
+    datum: 2026-10-27
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu, ceska-piratska-strana]
+    kdo: Tereza Nislerová (Piráti), Petr Hlaváček (STAN)
+    doklad: citace
+    citace: >-
+      Jsou tam nějaké pojistky a mechanismy, které by mohly zlepšit naše
+      postavení v budoucí koalici.
+    shrnuti: >-
+      STAN a SPOLU předložily Pirátům upravenou nabídku: dál jedno místo
+      v radě (majetek a bydlení), navíc předsednictví dalšího výboru. Piráti
+      se nevyjádřili. Do konce příštího týdne jednají tříčlenné pracovní
+      skupiny s Prahou sobě i Piráty; výsledek chce Hlaváček ohlásit začátkem
+      týdne od 9. 11. Dvoukoalice STAN a SPOLU je podle něj stále možná.
+    zdroje: [ctk-pracovni-skupiny-27-10]

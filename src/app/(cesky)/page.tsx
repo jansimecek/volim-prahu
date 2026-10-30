@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { Aktualita } from '@/components/Aktualita'
 import { MojeVolby } from '@/components/MojeVolby'
 import { StrukturovanaData } from '@/components/StrukturovanaData'
+import { MapaMestskychCasti } from '@/components/MapaMestskychCasti'
 import { mistoTerminu, Vyhled } from '@/components/Vyhled'
 import { nejnovejsi } from '@/lib/aktuality'
 import { datumCesky } from '@/lib/cestina'
@@ -203,7 +204,13 @@ export default async function Rozcestnik() {
         <h2 id="casti" className="text-2xl">
           Městské části
         </h2>
-        <ul className="mt-5 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
+        <p className="mt-2 max-w-prose">
+          Kam došlo vyjednávání ve všech 57 částech. Barva vychází jen z doložených událostí — bez zpráv
+          neznamená, že se nejedná, ale že o jednání nemáme zdroj.
+        </p>
+        <MapaMestskychCasti />
+        <h3 className="mt-8 text-xl">Praha 1–22</h3>
+        <ul className="mt-3 grid gap-px border border-inkoust bg-linka-silna sm:grid-cols-2 lg:grid-cols-3">
           {casti.map((z) => {
             const prvni = stranySMandaty(z)[0]
             const v = vyjednavaniZastupitelstva(z.slug)

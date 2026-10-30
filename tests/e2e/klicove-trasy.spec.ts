@@ -17,7 +17,9 @@ test('titulní strana zjistí okrsek z polohy', async ({ page, context }) => {
   await context.setGeolocation({ latitude: 50.099278, longitude: 14.485802 })
   await page.goto('/')
   await page.getByRole('button', { name: 'Zjistit podle mojí polohy' }).click()
-  await expect(page.getByText('Praha 9', { exact: true })).toBeVisible()
+  // Jen ve výsledku: „Praha 9“ je na titulní straně i v seznamu částí a ve výhledu.
+  const vysledek = page.locator('[aria-live="polite"]')
+  await expect(vysledek.getByText('Praha 9', { exact: true })).toBeVisible()
   await expect(page.getByText(/Volební okrsek 9001/)).toBeVisible()
   await expect(page.getByText(/obvodu č\. 24/)).toBeVisible()
   await expect(page.getByText(/Novovysočanská 501\/5/)).toBeVisible()
