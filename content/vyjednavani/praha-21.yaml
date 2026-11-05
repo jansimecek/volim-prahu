@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-21. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-21
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: pd-praha21-2-11
+overeno: 2026-11-05
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -9,6 +12,11 @@ zdroje:
     nazev: "PŘEHLEDNĚ: Skládání koalic v městských částech Prahy"
     datum: 2026-10-19
     url: "https://www.novinky.cz/clanek/volby-komunalni-prehledne-skladani-koalic-v-mestskych-castech-prahy-40603661"
+  - id: pd-praha21-2-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Koalici v Újezdu nad Lesy uzavřelo vítězné hnutí STAN s uskupením Újezd21"
+    datum: 2026-11-02
+    url: "https://prazsky.denik.cz/komunalni-volby/koalici-v-ujezdu-nad-lesy-uzavrelo-vitezne-hnuti-stan-s-uskupenim-ujezd21/"
 
 udalosti:
   - id: stan-ujezd-zije-sklada-koalici
@@ -21,3 +29,17 @@ udalosti:
       složit koalici s devíti hlasy. Bez Společně pro Újezd (ODS a TOP 09,
       5 mandátů) by potřebovalo několik menších partnerů.
     zdroje: [novinky-prehled-19-10]
+
+  - id: dohoda-stan-ujezd21
+    datum: 2026-11-02
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli-ujezd-zije, ujezd21]
+    sestava: [starostove-a-nezavisli-ujezd-zije, ujezd21]
+    kdo: Lucie Doležalová, lídryně STAN – Újezd žije
+    doklad: parafraze
+    shrnuti: >-
+      Vítězné STAN – Újezd žije uzavřelo koalici s uskupením Újezd21, 9 hlasů
+      ze 17. Starostkou má být Doležalová, rada má mít pět členů. ODS a TOP 09,
+      které dosud vedly radnici, jdou do opozice. Prioritou je podle ní
+      stabilizace školy po epidemii salmonelózy.
+    zdroje: [pd-praha21-2-11]

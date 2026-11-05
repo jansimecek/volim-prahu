@@ -8,7 +8,7 @@ zastupitelstvo: magistrat
 ustavujiciZasedani:
   datum: 2026-11-05
   zdroj: pd-ustavujici-30-10
-overeno: 2026-10-30
+overeno: 2026-11-05
 
 zdroje:
   - id: ct24-10-10
@@ -156,6 +156,16 @@ zdroje:
     nazev: "Ustavující zastupitelstvo Prahy se sejde 5. listopadu, v plánu je ho přerušit"
     datum: 2026-10-30
     url: "https://prazsky.denik.cz/komunalni-volby/ustavujici-zastupitelstvo-prahy-se-sejde-5-listopadu-v-planu-je-ho-prerusit/"
+  - id: pd-oznameni-3-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Výsledek jednání o koalici v Praze oznámí strany v úterý či ve středu"
+    datum: 2026-11-03
+    url: "https://prazsky.denik.cz/komunalni-volby/vysledek-jednani-o-koalici-v-praze-oznami-strany-v-utery-ci-ve-stredu/"
+  - id: ctk-slib-5-11
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Pražští zastupitelé přerušili ustavující schůzi, sejdou se znovu 19. listopadu"
+    datum: 2026-11-05
+    url: "https://www.ceskenoviny.cz/zpravy/prazsti-zastupitele-prerusili-ustavujici-schuzi-sejdou-se-znovu-19-listopadu/2897568"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -736,3 +746,31 @@ udalosti:
       skupiny s Prahou sobě i Piráty; výsledek chce Hlaváček ohlásit začátkem
       týdne od 9. 11. Dvoukoalice STAN a SPOLU je podle něj stále možná.
     zdroje: [ctk-pracovni-skupiny-27-10]
+
+  - id: vysledek-v-utery-ci-ve-stredu
+    datum: 2026-11-03
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu]
+    kdo: Petr Hlaváček (STAN) a Tomáš Portlík (SPOLU)
+    doklad: citace
+    citace: >-
+      V úterý, nebo ve středu všechny obeznámíme s výsledkem.
+    shrnuti: >-
+      Programové týmy (kolem 40 schůzek) skončí do neděle, v pondělí jednají
+      kluby STAN a SPOLU; výsledek mají strany oznámit 10. nebo 11. 11.
+      S Piráty jsou podle Hlaváčka jednání o něco dál než s Prahou sobě.
+      Ustavující zastupitelstvo chtějí přerušit do 19. listopadu.
+    zdroje: [pd-oznameni-3-11]
+
+  - id: slib-a-preruseni
+    datum: 2026-11-05
+    typ: zasedani
+    subjekty: [spolu-pro-prahu]
+    kdo: Alexandra Udženija, předsedkyně klubu SPOLU
+    doklad: parafraze
+    shrnuti: >-
+      Na ustavujícím zasedání zastupitelé složili slib a na návrh Udženija,
+      předem dohodnutý mezi kluby, zasedání přerušili do 19. listopadu.
+      Primátora ani radu nezvolili. Hana Třeštíková (Praha sobě) k 2. 11.
+      rezignovala na mandát, nahradil ji Jiří Knitl (Praha sobě).
+    zdroje: [ctk-slib-5-11]

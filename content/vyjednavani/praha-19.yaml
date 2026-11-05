@@ -1,10 +1,7 @@
 # Povolební vyjednávání — praha-19. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-19
-ustavujiciZasedani:
-  datum: 2026-11-09
-  zdroj: deska-praha19-29-10
-overeno: 2026-10-30
+overeno: 2026-11-05
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -17,6 +14,11 @@ zdroje:
     nazev: "Program 1. ustavujícího zasedání Zastupitelstva MČ Praha 19"
     datum: 2026-10-29
     url: "https://kbely.imunis.cz/edeska/detail?id=7506"
+  - id: web-praha19-4-11
+    medium: "Městská část Praha 19"
+    nazev: "Informace k ustavujícímu zasedání Zastupitelstva městské části Praha 19"
+    datum: 2026-11-04
+    url: "https://www.praha19.cz/informace-k-ustavujicimu-zasedani-zastupitelstva-mestske-casti-praha-19/"
 
 udalosti:
   - id: kbely-nas-domov-jedna

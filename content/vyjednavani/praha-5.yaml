@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-5. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-5
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: web-praha5-2-11
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-praha5-12-10
@@ -19,6 +22,11 @@ zdroje:
     nazev: "Koalici v Praze 5 vytvoří pět stran v čele s ODS, vítěz voleb v ní nebude"
     datum: 2026-10-20
     url: "https://prazsky.denik.cz/komunalni-volby/koalici-v-praze-5-vytvori-pet-stran-v-cele-s-ods-vitez-voleb-v-ni-nebude/"
+  - id: web-praha5-2-11
+    medium: "Městská část Praha 5"
+    nazev: "Pozvánka na ustavující zasedání zastupitelstva"
+    datum: 2026-11-02
+    url: "https://www.praha5.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva/"
 
 udalosti:
   - id: praha-5-sobe-oslovila-stan
