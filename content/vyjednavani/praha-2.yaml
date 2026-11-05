@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-2. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-2
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: pd-praha2-smlouva-5-11
+overeno: 2026-11-05
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -14,6 +17,11 @@ zdroje:
     nazev: "V Praze 2 zřejmě vznikne koalice Spolu, Prahy 2 sobě a Pirátů, STAN mimo hru"
     datum: 2026-10-27
     url: "https://prazsky.denik.cz/komunalni-volby/v-praze-2-zrejme-vznikne-koalice-spolu-prahy-2-sobe-a-piratu-stan-mimo-hru/"
+  - id: pd-praha2-smlouva-5-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 2 má koalice definitivu, starostou zřejmě zůstane Jan Korseska z ODS"
+    datum: 2026-11-05
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-2-ma-koalice-definitivu-starostou-zrejme-zustane-jan-korseska-z-ods/"
 
 udalosti:
   - id: spolu-jedna-se-stan
@@ -48,3 +56,20 @@ udalosti:
       nebude; ANO jde do opozice. Praha 2 sobě a Piráti tak po čtyřech letech
       v opozici míří do vedení.
     zdroje: [pd-praha2-27-10]
+
+  - id: smlouva-spolu-ps2-pirati
+    datum: 2026-11-04
+    typ: koalicni-smlouva
+    subjekty: [spolu-pro-prahu-2, praha-2-sobe, ceska-piratska-strana]
+    sestava: [spolu-pro-prahu-2, praha-2-sobe, ceska-piratska-strana]
+    kdo: SPOLU pro Prahu 2 na facebooku
+    doklad: citace
+    citace: >-
+      Jsme rádi, že se nám podařilo najít společnou cestu a dohodnout se na
+      spolupráci. Touto koalicí jsme vyslyšeli vůli voličů a vytvořili tak
+      dobrý základ pro další práci na Praze 2.
+    shrnuti: >-
+      SPOLU, Praha 2 sobě a Piráti ve středu podepsali koaliční smlouvu,
+      26 mandátů z 35. Starostou má zůstat Jan Korseska (ODS). Ustavující
+      zasedání bude v pondělí 9. 11.
+    zdroje: [pd-praha2-smlouva-5-11]

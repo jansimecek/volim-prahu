@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-7. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-7
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: web-praha7-pozvanka
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-praha7-11-10
@@ -9,6 +12,16 @@ zdroje:
     nazev: "Volby v Praze 7 ovládla Praha 7 sobě. Jednání o koalici zahájí s Piráty a STAN"
     datum: 2026-10-11
     url: "https://prazsky.denik.cz/komunalni-volby/volby-v-praze-7-ovladla-praha-7-sobe-jednani-o-koalici-zahaji-s-piraty-a-stan/"
+  - id: pd-praha7-3-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha 7 sobě bude i nadále řídit městskou část bez koaličního partnera"
+    datum: 2026-11-03
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-7-sobe-bude-i-nadale-ridit-mestskou-cast-bez-koalicniho-partnera/"
+  - id: web-praha7-pozvanka
+    medium: "Městská část Praha 7"
+    nazev: "Pozvánka na ustavující zasedání Zastupitelstva MČ Praha 7"
+    datum: 2026-11-02
+    url: "https://www.praha7.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva-mc-praha-7-2/"
 
 udalosti:
   - id: praha-7-sobe-pirati-stan
@@ -25,3 +38,17 @@ udalosti:
       a STAN. Stejně postupovala i v roce 2022; tehdy se nedohodli a vládla
       sama. Partneři podle Čižinského „pro dva zastupitele“ chtěli dva radní.
     zdroje: [pd-praha7-11-10]
+
+  - id: praha-7-sobe-sama
+    datum: 2026-11-03
+    typ: vyjadreni
+    subjekty: [praha-7-sobe]
+    kdo: Jan Čižinský, starosta a lídr Prahy 7 sobě
+    doklad: citace
+    citace: >-
+      V Praze 7 půjdeme (do rady) sami, Piráti a STAN nás budou kontrolovat.
+    shrnuti: >-
+      Praha 7 sobě bude stejně jako v minulém období vládnout bez
+      koaličního partnera; s Piráty a STAN se nedohodla. Opozice dostane
+      předsednictví kontrolního výboru. Radu volí zastupitelé 9. 11.
+    zdroje: [pd-praha7-3-11]

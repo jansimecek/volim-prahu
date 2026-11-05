@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-11. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-11
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: web-praha11-pozvanka
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-praha11-14-10
@@ -9,6 +12,11 @@ zdroje:
     nazev: "Hnutí ANO v Praze 11 zahájilo koaliční jednání, vyjednávat chce se všemi"
     datum: 2026-10-14
     url: "https://prazsky.denik.cz/komunalni-volby/hnuti-ano-v-praze-11-zahajilo-koalicni-jednani-vyjednavat-chce-se-vsemi/"
+  - id: web-praha11-pozvanka
+    medium: "Městská část Praha 11"
+    nazev: "Pozvánka na 1. ustavující zasedání členů Zastupitelstva MČ Prahy 11"
+    datum: 2026-11-02
+    url: "https://www.praha11.cz/cs/media/aktuality-z-prahy-11/pozvanka-na-1-ustavujici-zasedani-clenu-zastupitelstva-mc-prahy-11-1.html"
 
 udalosti:
   - id: ano-jedna-se-vsemi

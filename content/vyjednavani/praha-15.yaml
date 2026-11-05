@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-15. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-15
-overeno: 2026-10-30
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-praha3-12-10
@@ -14,6 +14,11 @@ zdroje:
     nazev: "V Praze 15 bude vládnout Patnáctka náš domov s Piráty a Prahou sobě"
     datum: 2026-10-29
     url: "https://prazsky.denik.cz/komunalni-volby/v-praze-15-bude-vladnout-patnactka-nas-domov-s-piraty-a-prahou-sobe/"
+  - id: drbna-praha15-soud-5-11
+    medium: "Pražská Drbna"
+    nazev: "Soud změnil v Praze 15 výsledek voleb, ANO přišlo o jednoho zastupitele"
+    datum: 2026-11-05
+    url: "https://prazska.drbna.cz/spolecnost/904988-soud-zmenil-v-praze-15-vysledek-voleb-ano-prislo-o-jednoho-zastupitele.html"
 
 udalosti:
   - id: patnactka-stan-pirati
@@ -48,3 +53,18 @@ udalosti:
       Marcel Pencák. STAN účast v koalici podle PND odmítl. Ustavující
       zasedání bude až po rozhodnutí soudu o stížnostech na volby.
     zdroje: [pd-praha15-29-10]
+
+  - id: soud-pnd-mandat-navic
+    datum: 2026-11-05
+    typ: vyjadreni
+    subjekty: [patnactka-nas-domov]
+    kdo: Patnáctka náš domov na svém webu
+    doklad: citace
+    citace: >-
+      Městský soud rozhodl, že naše stížnost na výsledky voleb v okrsku 15003
+      (Veronské náměstí) byla oprávněná.
+    shrnuti: >-
+      Soud podle PND připsal uskupení nezapočtené hlasy a jeden mandát navíc
+      na úkor ANO: PND má 17 z 31, ANO 3. Výsledky ČSÚ na tomto webu změnu
+      zatím neobsahují. Koalice s Piráty a Prahou 15 sobě má teď 19 hlasů.
+    zdroje: [drbna-praha15-soud-5-11]

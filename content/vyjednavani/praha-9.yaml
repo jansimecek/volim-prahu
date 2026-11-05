@@ -4,7 +4,7 @@ zastupitelstvo: praha-9
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: deska-praha9-29-10
-overeno: 2026-10-30
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-praha9-12-10
@@ -17,6 +17,11 @@ zdroje:
     nazev: "Pozvánka na ustavující zasedání Zastupitelstva MČ Praha 9, dne 9. 11. 2026"
     datum: 2026-10-29
     url: "https://www.praha9.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva-mc-praha-9-dne-9-11-2026-0"
+  - id: pd-praha9-5-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Jednání o koalici na Praze 9 váznou, zastupitelé zvolí vedení v prosinci"
+    datum: 2026-11-05
+    url: "https://prazsky.denik.cz/komunalni-volby/jednani-o-koalici-na-praze-9-vaznou-zastupitele-zvoli-vedeni-v-prosinci/"
 
 udalosti:
   - id: portlik-praha9-neobejde
@@ -33,3 +38,19 @@ udalosti:
       rozhodne až vyjednávání na magistrátu: „kumulovat funkce určitě nebudu“.
       Dosud vedla radnici koalice ODS, TOP 09, Prahy 9 sobě a STAN.
     zdroje: [pd-praha9-12-10]
+
+  - id: portlik-rada-v-prosinci
+    datum: 2026-11-05
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu-9-ods-a-top-09-s-podporou-nestraniku]
+    kdo: Tomáš Portlík, starosta a lídr SPOLU
+    doklad: citace
+    citace: >-
+      Chceme si partnera vybrat podle toho, jak dopadne město. Zbytečně to
+      netlačíme a nehoníme.
+    shrnuti: >-
+      SPOLU (15 z 33) koalici do ustavujícího zasedání 9. 11. mít nebude.
+      Zastupitelé složí slib a zasedání přeruší; novou radu chce Portlík
+      volit 15. prosince. Jestli zůstane starostou, záleží na jednáních na
+      magistrátu.
+    zdroje: [pd-praha9-5-11]

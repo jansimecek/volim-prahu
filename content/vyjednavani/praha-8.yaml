@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-8. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-8
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-11
+  zdroj: deska-praha8-4-11
+overeno: 2026-11-05
 
 zdroje:
   - id: pd-prehled-15-10
@@ -24,6 +27,11 @@ zdroje:
     nazev: "Rakušan s koalicí STAN a ANO v Praze 8 nesouhlasí, stále se podle něj ještě jedná"
     datum: 2026-10-23
     url: "https://prazska.drbna.cz/praha-8/903770-rakusan-s-koalici-stan-a-ano-v-praze-8-nesouhlasi-stale-se-podle-nej-jeste-jedna.html"
+  - id: deska-praha8-4-11
+    medium: "Úřední deska MČ Praha 8"
+    nazev: "Veřejné 1. (ustavující) zasedání Zastupitelstva městské části Praha 8"
+    datum: 2026-11-04
+    url: "https://www.praha8.cz/VEREJNE-1-USTAVUJICI-ZASEDANI-ZASTUPITELSTVA-MESTSKE-CASTI-PRAHA-8-2.html"
 
 udalosti:
   - id: 8zije-nabizi-starostu

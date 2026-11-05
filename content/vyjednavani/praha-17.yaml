@@ -1,7 +1,28 @@
 # Povolební vyjednávání — praha-17. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-17
-overeno: 2026-10-30
+ustavujiciZasedani:
+  datum: 2026-11-04
+  zdroj: pd-praha17-4-11
+overeno: 2026-11-05
+
+vedeni:
+  - funkce: starosta
+    jmeno: Lukáš Pokorný
+    subjekt: repsti-sousede
+    zdroj: pd-praha17-4-11
+  - funkce: místostarosta
+    jmeno: Ivo Jebousek
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha17-4-11
+  - funkce: místostarosta
+    jmeno: Jiří Krejzar
+    subjekt: repsti-sousede
+    zdroj: pd-praha17-4-11
+  - funkce: místostarosta (neuvolněný)
+    jmeno: Richard Přibyl
+    subjekt: repsti-sousede
+    zdroj: pd-praha17-4-11
 
 zdroje:
   - id: pd-praha17-16-10
@@ -9,6 +30,11 @@ zdroje:
     nazev: "Dohodnuto: V Praze 17 vznikne koalice Řepských sousedů a STAN"
     datum: 2026-10-16
     url: "https://prazsky.denik.cz/komunalni-volby/dohodnuto-v-praze-17-vznikne-koalice-repskych-sousedu-a-stan/"
+  - id: pd-praha17-4-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Novým starostou Prahy 17 byl zvolen Lukáš Pokorný z uskupení Řepští sousedé"
+    datum: 2026-11-04
+    url: "https://prazsky.denik.cz/komunalni-volby/novym-starostou-prahy-17-byl-zvolen-lukas-pokorny-z-uskupeni-repsti-sousede/"
 
 udalosti:
   - id: dohoda-repsti-sousede-stan
@@ -27,3 +53,18 @@ udalosti:
       mají 13 z 23. Obě strany začaly připravovat koaliční smlouvu. Radnici
       dosud vedla koalice ODS, ANO a Řep sobě.
     zdroje: [pd-praha17-16-10]
+
+  - id: volba-pokorny
+    datum: 2026-11-04
+    typ: volba
+    subjekty: [repsti-sousede, starostove-a-nezavisli]
+    kdo: Lukáš Pokorný (Řepští sousedé), starosta
+    doklad: citace
+    citace: >-
+      Velmi si toho vážím a vnímám to jako obrovský závazek. Budu starostou
+      všech občanů Řep bez ohledu na to, komu ve volbách dali svůj hlas.
+    shrnuti: >-
+      Zastupitelé zvolili starostou Lukáše Pokorného, lídra vítězných
+      Řepských sousedů; z 23 lístků bylo platných 14. Koalice Řepských sousedů
+      a STAN, ODS a ANO jdou do opozice. Zvoleni byli i tři místostarostové.
+    zdroje: [pd-praha17-4-11]

@@ -13,40 +13,9 @@
 # datum = nejbližší možný den; platiDo = do kdy to má nastat (podle toho se
 # řadí a pak položka zmizí). U přesného dne stačí datum.
 
-overeno: 2026-10-30
+overeno: 2026-11-05
 
 polozky:
-  - id: praha-22-jasno-do-konce-rijna
-    zastupitelstvo: praha-22
-    datum: 2026-10-24
-    platiDo: 2026-10-31
-    kdy: do konce října
-    nadpis: Jasno o koalici a starostovi
-    text: >-
-      STAN, OK22 s podporou Prahy sobě a Piráti chtějí mít jasno o koalici
-      a o tom, kdo bude starostou; hledají čtvrtého partnera.
-    udalost: dohoda-stan-ok22-pirati
-
-  - id: praha-14-zasedani
-    zastupitelstvo: praha-14
-    datum: 2026-11-05
-    nadpis: Zasedání zastupitelstva
-    text: >-
-      Do té doby má být podle starosty Jiřího Zajace jasno o koalici
-      a rozdělení kompetencí.
-    udalost: dosavadni-koalice-jedna
-
-  - id: praha-6-smlouva
-    zastupitelstvo: praha-6
-    datum: 2026-10-24
-    platiDo: 2026-11-07
-    kdy: do listopadového zasedání
-    nadpis: Podpis koaliční smlouvy
-    text: >-
-      STAN, Praha 6 sobě a ODS s KDU-ČSL chtějí podepsat koaliční smlouvu;
-      starostou má být Petr Prokop (STAN).
-    udalost: memorandum-stan-ps6-ods
-
   - id: praha-18-ustavujici
     zastupitelstvo: praha-18
     datum: 2026-11-01
@@ -92,37 +61,55 @@ polozky:
 
   - id: magistrat-oznameni-koalice
     zastupitelstvo: magistrat
-    datum: 2026-11-09
+    datum: 2026-11-10
     platiDo: 2026-11-11
-    kdy: začátek týdne od 9. listopadu
-    nadpis: Hlaváček chce ohlásit výslednou koalici
+    kdy: úterý nebo středa 10.–11. listopadu
+    nadpis: STAN a SPOLU oznámí, s kým povedou Prahu
     text: >-
-      Do konce předchozího týdne jednají tříčlenné pracovní skupiny STAN
-      a SPOLU s Prahou sobě i s Piráty. Dvoukoalice STAN a SPOLU je podle
-      Hlaváčka stále možná.
-    udalost: pirati-upravena-nabidka
+      Po programových schůzkách a jednání klubů STAN a SPOLU mají strany
+      oznámit, zda přiberou Praha sobě, Piráty, nebo půjdou do dvojkoalice.
+    udalost: vysledek-v-utery-ci-ve-stredu
 
   - id: magistrat-volba-vedeni
     zastupitelstvo: magistrat
-    datum: 2026-11-12
-    nadpis: Pokračování ustavujícího zasedání, volba vedení města
+    datum: 2026-11-19
+    nadpis: Pokračování ustavujícího zasedání, volba primátora a rady
     text: >-
-      Zasedání svolané na 5. listopadu se má po slibu zastupitelů přerušit do
-      12. listopadu, kdy už má být o koalici jasno.
-    zdroj:
-      text: "Pražský deník (ČTK), 30. října 2026"
-      url: https://prazsky.denik.cz/komunalni-volby/ustavujici-zastupitelstvo-prahy-se-sejde-5-listopadu-v-planu-je-ho-prerusit/
+      Zastupitelé 5. listopadu složili slib a zasedání přerušili do
+      19. listopadu.
+    udalost: slib-a-preruseni
 
-  - id: soud-praha-15
-    zastupitelstvo: praha-15
+  - id: praha-5-pokracovani
+    zastupitelstvo: praha-5
+    datum: 2026-11-24
+    nadpis: Pokračování ustavujícího zasedání
+    text: >-
+      Zasedání 9. listopadu se má po slibech přerušit, dokud neskončí řízení
+      o návrzích na neplatnost volby kandidáta; pokračovat má 24. listopadu.
+    zdroj:
+      text: "Městská část Praha 5, 2. listopadu 2026"
+      url: https://www.praha5.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva/
+
+  - id: praha-9-volba-rady
+    zastupitelstvo: praha-9
+    datum: 2026-12-15
+    nadpis: Volba rady městské části
+    text: >-
+      Zasedání 9. listopadu se má po slibu přerušit; SPOLU si partnera vybere
+      podle toho, jak dopadne magistrát.
+    udalost: portlik-rada-v-prosinci
+
+  - id: soud-praha-19
+    zastupitelstvo: praha-19
     druh: soud
-    datum: 2026-10-31
+    datum: 2026-11-06
     platiDo: 2026-11-12
     kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o stížnostech na volby
+    nadpis: Soud rozhodne o návrhu, zasedání do té doby nebude
     text: >-
-      Ustavující zasedání bude podle Patnáctky náš domov až po rozhodnutí
-      soudu; jednu ze stížností podala sama PND (sp. zn. 17 A 63/2026).
+      Soud posuzuje návrh sp. zn. 10 A 66/2026 jako návrh na neplatnost
+      hlasování, proto ustavující zasedání svolané na 9. listopadu se nekoná;
+      nový termín bude oznámen po rozhodnutí soudu.
     zdroj:
-      text: "Pražský deník (ČTK), 29. října 2026"
-      url: https://prazsky.denik.cz/komunalni-volby/v-praze-15-bude-vladnout-patnactka-nas-domov-s-piraty-a-prahou-sobe/
+      text: "Městská část Praha 19, 4. listopadu 2026"
+      url: https://www.praha19.cz/informace-k-ustavujicimu-zasedani-zastupitelstva-mestske-casti-praha-19/

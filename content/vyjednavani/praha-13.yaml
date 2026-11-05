@@ -4,7 +4,45 @@ zastupitelstvo: praha-13
 ustavujiciZasedani:
   datum: 2026-11-04
   zdroj: deska-praha13-27-10
-overeno: 2026-10-30
+overeno: 2026-11-05
+
+vedeni:
+  - funkce: starosta
+    jmeno: David Vodrážka
+    subjekt: ods-s-podporou-nezavislych
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: místostarosta
+    jmeno: Petr Zeman
+    subjekt: ods-s-podporou-nezavislych
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: místostarosta
+    jmeno: David Zelený
+    subjekt: ods-s-podporou-nezavislych
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: místostarosta
+    jmeno: Vojtěch Ludvík
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: místostarostka
+    jmeno: Ivana Todlová
+    subjekt: spolecne-pro-prahu-13-top-09-a-kdu-csl
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: radní
+    jmeno: Zbyněk Pastrňák
+    subjekt: ods-s-podporou-nezavislych
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: radní (za klub ODS)
+    jmeno: Barbora Bero
+    subjekt: zeleni-a-pirati-pro-13
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: radní
+    jmeno: Šárka Kuželová
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha13-vedeni-4-11
+  - funkce: radní
+    jmeno: Aleš Vícha
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha13-vedeni-4-11
 
 zdroje:
   - id: patriot-praha13-13-10
@@ -27,6 +65,11 @@ zdroje:
     nazev: "Informace o konání ustavujícího zasedání ZMČ Praha 13"
     datum: 2026-10-27
     url: "https://eud.praha13.cz/pub/deska/17000002/edeska1/107848283"
+  - id: web-praha13-vedeni-4-11
+    medium: "Městská část Praha 13"
+    nazev: "Nové zastupitelstvo Prahy 13 si zvolilo vedení, starostou bude opět David Vodrážka"
+    datum: 2026-11-04
+    url: "https://www.praha13.cz/nove-zastupitelstvo-prahy-13-si-zvolilo-vedeni-starostou-bude-opet-david-vodrazka/"
 
 udalosti:
   - id: memorandum-ods-stan-zp-top
@@ -56,3 +99,19 @@ udalosti:
       klubu ODS přešla Barbora Bero, zvolená jako nezávislá za Zelené; koalice
       tak má nejtěsnější možnou většinu, 18 hlasů z 35.
     zdroje: [pd-praha13-23-10]
+
+  - id: volba-vodrazka
+    datum: 2026-11-04
+    typ: volba
+    subjekty: [ods-s-podporou-nezavislych, starostove-a-nezavisli, spolecne-pro-prahu-13-top-09-a-kdu-csl]
+    kdo: David Vodrážka (ODS), starosta
+    doklad: citace
+    citace: >-
+      Výsledek voleb vnímám především jako závazek pokračovat v práci pro
+      Prahu 13.
+    shrnuti: >-
+      Ustavující zastupitelstvo zvolilo starostou posedmé Davida Vodrážku
+      (ODS). Rada: ODS 5 míst včetně Barbory Bero, zvolené za Zelené
+      a Piráty, STAN 3, TOP 09 a KDU-ČSL 1. Zastupitelé schválili i rozpočtové
+      provizorium na rok 2027.
+    zdroje: [web-praha13-vedeni-4-11]
