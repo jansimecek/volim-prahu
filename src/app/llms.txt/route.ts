@@ -46,6 +46,12 @@ export function GET(): Response {
     const v = vyjednavaniZastupitelstva(slug)
     const sestava = dohodnutaSestava(v)
     const posledni = posledniUdalost(v)
+    const ocekavana =
+      v?.ocekavanaRada && v.vedeni.length === 0
+        ? v.ocekavanaRada.clenove
+            .map((c) => `${c.jmeno} (${nazevSubjektu(z, c.subjekt)}, ${c.funkce}${c.gesce.length ? `: ${c.gesce.join(', ')}` : ''})`)
+            .join('; ')
+        : ''
     const odkaz = absolutni(slug === 'magistrat' ? '/koalice#magistrat' : `/mestska-cast/${slug}`)
     return [
       `- [${slug === 'magistrat' ? 'Magistrát (Zastupitelstvo hl. m. Prahy)' : z.nazev}](${odkaz}):`,
@@ -53,6 +59,7 @@ export function GET(): Response {
       `(většina ${vetsina(z.mandatuCelkem)} z ${z.mandatuCelkem}).`,
       `Stav: ${POPIS_STAVU[stavVyjednavani(v)]}.`,
       sestava ? `Dohodnutá sestava: ${sestava.map((s) => nazevSubjektu(z, s)).join(' + ')}.` : '',
+      ocekavana ? `Ohlášená rada před volbou: ${ocekavana}.` : '',
       posledni ? `Poslední doložená událost ${posledni.datum.slice(0, 10)}: ${posledni.shrnuti.replace(/\s+/g, ' ').trim()}` : '',
     ]
       .filter(Boolean)

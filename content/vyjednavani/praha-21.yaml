@@ -4,7 +4,29 @@ zastupitelstvo: praha-21
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: pd-praha21-2-11
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starostka
+    jmeno: Lucie Doležalová
+    subjekt: starostove-a-nezavisli-ujezd-zije
+    zdroj: pd-praha21-9-11
+  - funkce: místostarosta
+    jmeno: Jan Jackanič
+    subjekt: ujezd21
+    zdroj: pd-praha21-9-11
+  - funkce: místostarosta (nezávislý)
+    jmeno: Petr Kučera
+    subjekt: starostove-a-nezavisli-ujezd-zije
+    zdroj: pd-praha21-9-11
+  - funkce: radní
+    jmeno: Hana Cermonová
+    subjekt: starostove-a-nezavisli-ujezd-zije
+    zdroj: pd-praha21-9-11
+  - funkce: radní
+    jmeno: Marek Buchtel
+    subjekt: ujezd21
+    zdroj: pd-praha21-9-11
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -17,6 +39,11 @@ zdroje:
     nazev: "Koalici v Újezdu nad Lesy uzavřelo vítězné hnutí STAN s uskupením Újezd21"
     datum: 2026-11-02
     url: "https://prazsky.denik.cz/komunalni-volby/koalici-v-ujezdu-nad-lesy-uzavrelo-vitezne-hnuti-stan-s-uskupenim-ujezd21/"
+  - id: pd-praha21-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V čele Újezdu nad Lesy je Lucie Doležalová. Chce stabilizaci školy po salmonele"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/v-cele-ujezdu-nad-lesy-je-lucie-dolezalova-chce-stabilizaci-skoly-po-salmonele/"
 
 udalosti:
   - id: stan-ujezd-zije-sklada-koalici
@@ -43,3 +70,19 @@ udalosti:
       které dosud vedly radnici, jdou do opozice. Prioritou je podle ní
       stabilizace školy po epidemii salmonelózy.
     zdroje: [pd-praha21-2-11]
+
+  - id: volba-dolezalova
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [starostove-a-nezavisli-ujezd-zije, ujezd21]
+    kdo: Lucie Doležalová (STAN), starostka
+    doklad: citace
+    citace: >-
+      Mojí představou je vedení městské části založené na spolupráci,
+      otevřené komunikaci a vzájemném respektu.
+    shrnuti: >-
+      Starostkou zvolena Doležalová (13 ze 17 hlasů), vládne STAN s
+      Újezd21 (9 ze 17). Uvolněni jsou jen ona a Jackanič. Prioritou má
+      být stabilizace školy po epidemii salmonelózy; rada rozhodne i o
+      petici za odvolání ředitele. Gesce radních zdroj neuvádí.
+    zdroje: [pd-praha21-9-11]

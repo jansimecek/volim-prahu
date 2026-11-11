@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-12. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-12
-overeno: 2026-11-05
+ustavujiciZasedani:
+  datum: 2026-11-18
+  zdroj: web-praha12-pozvanka
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-prehled-15-10
@@ -9,6 +12,11 @@ zdroje:
     nazev: "Po volbách se skládají koalice. Praha 10 má jasno, osmička nabízí post starosty"
     datum: 2026-10-15
     url: "https://prazsky.denik.cz/komunalni-volby/po-volbach-se-skladaji-koalice-praha-10-ma-jasno-osmicka-nabizi-post-starosty/"
+  - id: web-praha12-pozvanka
+    medium: "Městská část Praha 12 (úřední deska)"
+    nazev: "Pozvánka na ustavující ZMČ 2026"
+    datum: 2026-11-11
+    url: "https://www.praha12.cz/pozvanka-ustavujici-zmc-2026/d-121725"
 
 udalosti:
   - id: ods-jedna-se-vsemi

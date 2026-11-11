@@ -4,7 +4,55 @@ zastupitelstvo: praha-6
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha6-smlouva-4-11
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Petr Prokop
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha6-9-11
+    gesce: [správa majetku]
+    zdrojGesci: web-praha6-smlouva-4-11
+  - funkce: statutární místostarostka
+    jmeno: Mariana Čapková
+    subjekt: praha-6-sobe
+    zdroj: pd-praha6-9-11
+    gesce: [školství]
+    zdrojGesci: web-praha6-smlouva-4-11
+  - funkce: místostarosta
+    jmeno: Jakub Stárek
+    subjekt: ods-a-kdu-csl
+    zdroj: pd-praha6-9-11
+    gesce: [územní rozvoj]
+    zdrojGesci: web-praha6-smlouva-4-11
+  - funkce: místostarosta
+    jmeno: Václav Kožený
+    subjekt: ods-a-kdu-csl
+    zdroj: pd-praha6-9-11
+  - funkce: místostarosta (Zelení)
+    jmeno: Petr Palacký
+    subjekt: praha-6-sobe
+    zdroj: pd-praha6-9-11
+  - funkce: místostarosta
+    jmeno: Jan Lacina
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha6-9-11
+    gesce: [kultura, sport, volný čas, bezpečnost, média]
+    zdrojGesci: web-praha6-smlouva-4-11
+  - funkce: radní
+    jmeno: Ondřej Matěj Hrubeš
+    subjekt: ods-a-kdu-csl
+    zdroj: pd-praha6-9-11
+  - funkce: radní
+    jmeno: Zdeněk Hlinský
+    subjekt: ods-a-kdu-csl
+    zdroj: pd-praha6-9-11
+  - funkce: radní
+    jmeno: Helena Krausová
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha6-9-11
+    gesce: [sociální oblast, zdravotnictví]
+    zdrojGesci: web-praha6-smlouva-4-11
 
 zdroje:
   - id: drbna-praha6-12-10
@@ -32,6 +80,11 @@ zdroje:
     nazev: "Koaliční partneři v Praze 6 podepsali smlouvu a představili rozdělení gescí"
     datum: 2026-11-04
     url: "https://www.praha6.cz/cs/zpravodajstvi/koalicni-partneri-v-praze-6-podepsali-smlouvu-a-predstavili-rozdeleni-gesci_80350.html"
+  - id: pd-praha6-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 6 se stal Petr Prokop (STAN), vystřídal Jakuba Stárka (ODS)"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-6-se-stal-petr-prokop-stan-vystridal-jakuba-starka-ods/"
 
 udalosti:
   - id: dohoda-stan-ps6-ods
@@ -83,3 +136,20 @@ udalosti:
       a Zelení 2, ODS a KDU-ČSL 4. Starostou má být Prokop, statutární
       místostarostkou Mariana Čapková. Vedení se volí 9. 11.
     zdroje: [web-praha6-smlouva-4-11]
+
+  - id: volba-prokop
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [starostove-a-nezavisli, praha-6-sobe, ods-a-kdu-csl]
+    kdo: Petr Prokop (STAN), starosta
+    doklad: citace
+    citace: >-
+      Za jednu ze svých osobních priorit považuji také zlepšení
+      komunikace s našimi občany.
+    shrnuti: >-
+      Starostou zvolen Petr Prokop (40 hlasů), dosavadní starosta Stárek
+      (ODS) je místostarostou. Rada 9 uvolněných: STAN 3, Praha 6 sobě a
+      Zelení 2, ODS a KDU-ČSL 4. Gesce rozdělila koalice už při
+      podpisu smlouvy 4. 11. Finanční výbor vede Pižl (Praha 6
+      sobě), kontrolní Soukal (ANO).
+    zdroje: [pd-praha6-9-11]

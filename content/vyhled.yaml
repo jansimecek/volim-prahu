@@ -13,19 +13,9 @@
 # datum = nejbližší možný den; platiDo = do kdy to má nastat (podle toho se
 # řadí a pak položka zmizí). U přesného dne stačí datum.
 
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 polozky:
-  - id: praha-18-ustavujici
-    zastupitelstvo: praha-18
-    datum: 2026-11-01
-    platiDo: 2026-11-15
-    kdy: první polovina listopadu
-    nadpis: Ustavující zasedání
-    text: >-
-      Starostou má zůstat Zdeněk Kučera (ANO).
-    udalost: dohoda-ano-spolu-nas-domov
-
   - id: senat-prvni-schuze
     zastupitelstvo: senat
     datum: 2026-11-19
@@ -47,58 +37,6 @@ polozky:
       Starostkou má zůstat Terezie Radoměřská (TOP 09).
     udalost: smlouva-pet-uskupeni
 
-  - id: magistrat-treti-partner
-    zastupitelstvo: magistrat
-    datum: 2026-12-01
-    platiDo: 2026-12-31
-    kdy: v prosinci
-    nadpis: Případná dohoda s třetím partnerem
-    text: >-
-      Dohoda s třetím partnerem, se kterým by STAN a SPOLU jednaly i po
-      vzniku dvojkoalice. Termín je Hlaváčkův předpoklad.
-    podminka: pokud trojkoalice nevznikne do listopadového zasedání
-    udalost: dohoda-stan-spolu
-
-  - id: magistrat-oznameni-koalice
-    zastupitelstvo: magistrat
-    datum: 2026-11-10
-    platiDo: 2026-11-11
-    kdy: úterý nebo středa 10.–11. listopadu
-    nadpis: STAN a SPOLU oznámí, s kým povedou Prahu
-    text: >-
-      Po programových schůzkách a jednání klubů STAN a SPOLU mají strany
-      oznámit, zda přiberou Praha sobě, Piráty, nebo půjdou do dvojkoalice.
-    udalost: vysledek-v-utery-ci-ve-stredu
-
-  - id: magistrat-volba-vedeni
-    zastupitelstvo: magistrat
-    datum: 2026-11-19
-    nadpis: Pokračování ustavujícího zasedání, volba primátora a rady
-    text: >-
-      Zastupitelé 5. listopadu složili slib a zasedání přerušili do
-      19. listopadu.
-    udalost: slib-a-preruseni
-
-  - id: praha-5-pokracovani
-    zastupitelstvo: praha-5
-    datum: 2026-11-24
-    nadpis: Pokračování ustavujícího zasedání
-    text: >-
-      Zasedání 9. listopadu se má po slibech přerušit, dokud neskončí řízení
-      o návrzích na neplatnost volby kandidáta; pokračovat má 24. listopadu.
-    zdroj:
-      text: "Městská část Praha 5, 2. listopadu 2026"
-      url: https://www.praha5.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva/
-
-  - id: praha-9-volba-rady
-    zastupitelstvo: praha-9
-    datum: 2026-12-15
-    nadpis: Volba rady městské části
-    text: >-
-      Zasedání 9. listopadu se má po slibu přerušit; SPOLU si partnera vybere
-      podle toho, jak dopadne magistrát.
-    udalost: portlik-rada-v-prosinci
-
   - id: soud-praha-19
     zastupitelstvo: praha-19
     druh: soud
@@ -113,3 +51,50 @@ polozky:
     zdroj:
       text: "Městská část Praha 19, 4. listopadu 2026"
       url: https://www.praha19.cz/informace-k-ustavujicimu-zasedani-zastupitelstva-mestske-casti-praha-19/
+
+  - id: magistrat-rada-a-smlouva
+    zastupitelstvo: magistrat
+    datum: 2026-11-18
+    nadpis: Koalice představí radu a má podepsat koaliční smlouvu
+    text: >-
+      STAN, SPOLU a Praha sobě oznámí personální složení jedenáctičlenné
+      rady; koaliční smlouvu chtějí mít podepsanou před volbou.
+    udalost: dohoda-stan-spolu-praha-sobe
+
+  - id: magistrat-volba-vedeni
+    zastupitelstvo: magistrat
+    datum: 2026-11-19
+    nadpis: Pokračování ustavujícího zasedání, volba primátora a rady
+    text: >-
+      Koalice STAN, SPOLU a Prahy sobě (47 z 65) má zvolit primátorem Petra
+      Hlaváčka a radu v poměru 5 : 4 : 2.
+    udalost: dohoda-stan-spolu-praha-sobe
+
+  - id: praha-5-pokracovani
+    zastupitelstvo: praha-5
+    datum: 2026-11-24
+    nadpis: Pokračování ustavujícího zasedání, volba rady
+    text: >-
+      Zastupitelé 9. listopadu složili slib a zasedání přerušili, dokud
+      neskončí řízení o žalobě na neplatnost volby kandidáta.
+    udalost: slib-a-preruseni-do-24-11
+
+  - id: praha-9-volba-rady
+    zastupitelstvo: praha-9
+    datum: 2026-12-15
+    nadpis: Volba rady městské části
+    text: >-
+      Zastupitelé 9. listopadu složili slib a zasedání přerušili; koalice
+      zatím nevznikla.
+    udalost: slib-a-preruseni-do-15-12
+
+  - id: praha-11-volba-vedeni
+    zastupitelstvo: praha-11
+    datum: 2026-12-01
+    platiDo: 2027-01-31
+    kdy: v prosinci, možná až v lednu
+    nadpis: Volba starosty a rady
+    text: >-
+      Volbu vedení zastupitelé 9. listopadu vyřadili z programu, koalice
+      zatím nevznikla.
+    udalost: volba-vyrazena-z-programu

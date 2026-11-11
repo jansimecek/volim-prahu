@@ -4,7 +4,47 @@ zastupitelstvo: praha-4
 ustavujiciZasedani:
   datum: 2026-11-06
   zdroj: deska-praha4-29-10
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Ondřej Kubín
+    subjekt: spolu-pro-prahu-4
+    zdroj: pd-praha4-6-11
+    gesce: [finance, sport, bezpečnost]
+  - funkce: 1. místostarostka
+    jmeno: Irena Michalcová
+    subjekt: ano-2011
+    zdroj: pd-praha4-6-11
+    gesce: [školství, rodinná politika]
+  - funkce: místostarosta (neuvolněný)
+    jmeno: Jan Hušbauer
+    subjekt: ano-2011
+    zdroj: pd-praha4-6-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Filip Vácha
+    subjekt: spolu-pro-prahu-4
+    zdroj: pd-praha4-6-11
+  - funkce: místostarosta
+    jmeno: Patrik Opa
+    subjekt: spolu-pro-prahu-4
+    zdroj: pd-praha4-6-11
+  - funkce: radní
+    jmeno: Jaroslav Míth
+    subjekt: spolu-pro-prahu-4
+    zdroj: pd-praha4-6-11
+  - funkce: radní
+    jmeno: Tomáš Hrdinka
+    subjekt: ano-2011
+    zdroj: pd-praha4-6-11
+  - funkce: radní
+    jmeno: Radek Lacko
+    subjekt: ano-2011
+    zdroj: pd-praha4-6-11
+  - funkce: radní (neuvolněný, TOP 09)
+    jmeno: Petr Opletal
+    subjekt: spolu-pro-prahu-4
+    zdroj: pd-praha4-6-11
 
 zdroje:
   - id: pd-praha4-12-10
@@ -22,6 +62,11 @@ zdroje:
     nazev: "Pozvánka na 1. ustavující ZMČ konané dne 6. 11. 2026"
     datum: 2026-10-29
     url: "https://cztedeskaext.praha4.cz/eDeska/eDeskaDetail.jsp?detailId=23901"
+  - id: pd-praha4-6-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 4 byl znovu zvolen Ondřej Kubín (ODS), radnici povede s ANO"
+    datum: 2026-11-06
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-4-byl-znovu-zvolen-ondrej-kubin-ods-radnici-povede-s-ano/"
 
 udalosti:
   - id: spolu-ano-pokracovani
@@ -56,3 +101,21 @@ udalosti:
       místostarosty připadne ANO, patrně opět Ireně Michalcové (školství);
       místostarostou bude i Hušbauer (investice).
     zdroje: [pd-praha4-smlouva-19-10]
+
+  - id: volba-kubin
+    datum: 2026-11-06
+    typ: volba
+    subjekty: [spolu-pro-prahu-4, ano-2011]
+    kdo: Ondřej Kubín (ODS), starosta
+    doklad: citace
+    citace: >-
+      Hospodaření městské části se za čtyři roky výrazně posunulo,
+      hospodaříme zodpovědně, vyrovnaně a nebojíme se investovat do
+      nových věcí.
+    shrnuti: >-
+      Starostou znovu zvolen Kubín (24 hlasů z 45), rada zůstává ve
+      stejném složení. Kubín se chce dál věnovat financím, sportu a
+      bezpečnosti a zřídit výbor pro bezpečnost; první místostarostka
+      Michalcová (ANO) povede školství a rodinnou politiku. Gesce
+      ostatních radních zdroj neuvádí.
+    zdroje: [pd-praha4-6-11]

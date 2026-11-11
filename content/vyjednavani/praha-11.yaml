@@ -4,7 +4,7 @@ zastupitelstvo: praha-11
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha11-pozvanka
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-praha11-14-10
@@ -17,6 +17,11 @@ zdroje:
     nazev: "Pozvánka na 1. ustavující zasedání členů Zastupitelstva MČ Prahy 11"
     datum: 2026-11-02
     url: "https://www.praha11.cz/cs/media/aktuality-z-prahy-11/pozvanka-na-1-ustavujici-zasedani-clenu-zastupitelstva-mc-prahy-11-1.html"
+  - id: patriot-praha11-9-11
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Zastupitelé nové vedení Prahy 11 nevolili. Znovu se sejdou v prosinci, možná až v lednu"
+    datum: 2026-11-09
+    url: "https://www.prazskypatriot.cz/zastupitele-prahy-11-na-ustavujicim-jednani-nove-vedeni-nevolili/"
 
 udalosti:
   - id: ano-jedna-se-vsemi
@@ -33,3 +38,19 @@ udalosti:
       a vůči žádné se předem nevymezuje. Sýkora nevyloučil, že by se stal
       starostou; rozhodnou koaliční jednání.
     zdroje: [pd-praha11-14-10]
+
+  - id: volba-vyrazena-z-programu
+    datum: 2026-11-09
+    typ: zasedani
+    subjekty: [spolu-pro-prahu-11]
+    kdo: Martin Sedeke (ODS), dosavadní starosta
+    doklad: citace
+    citace: >-
+      Není úplně jisté, že budeme mít prosincové zastupitelstvo.
+    shrnuti: >-
+      Zastupitelé složili slib a na Sedekeho návrh (31 z 35) vyřadili z
+      programu volbu starosty a rady — koalice zatím nevznikla. ANO
+      jedná se všemi pěti subjekty. Další zasedání bude v prosinci,
+      možná až v lednu; podle Sedekeho záleží i na tom, jak rozpočet
+      schválí magistrát.
+    zdroje: [patriot-praha11-9-11]

@@ -1,7 +1,42 @@
 # Povolební vyjednávání — praha-18. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-18
-overeno: 2026-11-05
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: pd-praha18-9-11
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Zdeněk Kučera
+    subjekt: ano-2011
+    zdroj: pd-praha18-9-11
+    gesce: [finance, školství, bezpečnost, územní rozvoj, příspěvkové organizace]
+  - funkce: 1. místostarosta
+    jmeno: Stanislav Nekolný
+    subjekt: ano-2011
+    zdroj: pd-praha18-9-11
+    gesce: [doprava, majetek, infrastruktura]
+  - funkce: místostarosta (ODS)
+    jmeno: Ondřej Lněnička
+    subjekt: spolu-pro-letnany
+    zdroj: pd-praha18-9-11
+    gesce: [legislativa, spolková činnost, průmyslové a administrativní zóny, výstaviště, brownfieldy]
+  - funkce: místostarostka (ODS)
+    jmeno: Iveta Lojková
+    subjekt: spolu-pro-letnany
+    zdroj: pd-praha18-9-11
+    gesce: [zdravotnictví, kultura]
+  - funkce: místostarosta
+    jmeno: David Červenka
+    subjekt: nas-domov-letnany
+    zdroj: pd-praha18-9-11
+    gesce: [životní prostředí, veřejný prostor]
+  - funkce: radní
+    jmeno: Helena Lukešová
+    subjekt: ano-2011
+    zdroj: pd-praha18-9-11
+    gesce: [sport, protikorupční politika, podpora podnikání, bytové a nebytové hospodářství]
 
 zdroje:
   - id: zl-18-10
@@ -14,6 +49,11 @@ zdroje:
     nazev: "V Praze 18 se dohodla koalice, starostou bude dál Kučera z ANO"
     datum: 2026-10-20
     url: "https://www.prazskypatriot.cz/v-praze-18-se-dohodla-koalice-starostou-bude-dal-kucera-z-ano/"
+  - id: pd-praha18-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 18 je potřetí Zdeněk Kučera (ANO), zvolili ho zastupitelé"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-18-je-potreti-zdenek-kucera-ano-zvolili-ho-zastupitele/"
 
 udalosti:
   - id: zdrave-letnany-jedna-se-vsemi
@@ -63,3 +103,16 @@ udalosti:
       nedošlo. Svůj program chtějí v opozici prosazovat s dalšími opozičními
       uskupeními.
     zdroje: [patriot-praha18-20-10]
+
+  - id: volba-kucera
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [ano-2011, spolu-pro-letnany, nas-domov-letnany]
+    kdo: zastupitelstvo Prahy 18
+    doklad: parafraze
+    shrnuti: >-
+      Starostou potřetí zvolen Zdeněk Kučera (ANO), 12 hlasů z 23. Vedou
+      ANO, Spolu (ODS, TOP 09) a Náš domov Letňany; vítězné Zdravé
+      Letňany jsou v opozici. Šestičlenná rada je celá uvolněná, gesce
+      rozdělila hned při volbě.
+    zdroje: [pd-praha18-9-11]

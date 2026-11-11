@@ -1,7 +1,10 @@
 # Povolební vyjednávání — praha-3. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-3
-overeno: 2026-11-05
+ustavujiciZasedani:
+  datum: 2026-11-18
+  zdroj: web-praha3-pozvanka
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-praha3-12-10
@@ -9,6 +12,16 @@ zdroje:
     nazev: "Vládnout sami nechtějí: TOP 09 a STAN v Praze 3 i přes většinu jednají o koalici"
     datum: 2026-10-12
     url: "https://prazsky.denik.cz/komunalni-volby/vladnout-sami-nechteji-top-09-a-stan-v-praze-3-i-pres-vetsinu-jednaji-o-koalici/"
+  - id: pd-praha3-10-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 3 budou zřejmě vládnout TOP 09 se STAN s Piráty a Prahou sobě"
+    datum: 2026-11-10
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-3-budou-zrejme-vladnout-top-09-se-stan-s-piraty-a-prahou-sobe/"
+  - id: web-praha3-pozvanka
+    medium: "Městská část Praha 3"
+    nazev: "Pozvánka na 1. ustavující zasedání Zastupitelstva městské části Praha 3"
+    datum: 2026-11-10
+    url: "https://www.praha3.cz/urad/dulezite-informace-z-mestske-casti/pozvanka-na-1-ustavujici-zasedani-zastupitelstva-mestske-casti-praha-3-n845978.htm"
 
 udalosti:
   - id: top-stan-hledaji-partnera
@@ -27,3 +40,19 @@ udalosti:
       partnera. Jako první jednají s kandidátkou Pirátů a Prahy 3 sobě, kterou
       vedla Edita Janečková.
     zdroje: [pd-praha3-12-10]
+
+  - id: dohoda-top-stan-pirati-ps3
+    datum: 2026-11-10
+    typ: dohoda
+    subjekty: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    sestava: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    kdo: Michal Vronský (TOP 09), starosta a lídr
+    doklad: citace
+    citace: >-
+      Koalice 24 zastupitelů z 35 bude dostatečně stabilní.
+    shrnuti: >-
+      TOP 09 a STAN, které mají samy většinu 18 z 35, podle Vronského
+      finalizují koalici s kandidátkou Pirátů, Prahy 3 sobě a Edity
+      Janečkové (6 mandátů). Potvrdit ji má ustavující zasedání 18.
+      listopadu; Vronský má zůstat starostou.
+    zdroje: [pd-praha3-10-11]

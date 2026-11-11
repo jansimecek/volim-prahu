@@ -66,6 +66,20 @@ export function dohodnutaSestava(v: Vyjednavani | undefined): string[] | undefin
   return posledni && posledni.typ !== 'rozpad' ? posledni.sestava : undefined
 }
 
+export type ClenRady = { funkce: string; jmeno: string; subjekt: string; gesce: string[] }
+
+/**
+ * Členové rady po subjektech, v pořadí podle počtu míst (pak podle prvního
+ * výskytu, tedy jak je zapsal zdroj). Pro přehled „kdo má co“ po stranách.
+ */
+export function radaPodleSubjektu<T extends ClenRady>(clenove: readonly T[]): { subjekt: string; clenove: T[] }[] {
+  const skupiny = new Map<string, T[]>()
+  for (const c of clenove) skupiny.set(c.subjekt, [...(skupiny.get(c.subjekt) ?? []), c])
+  return [...skupiny.entries()]
+    .map(([subjekt, cl]) => ({ subjekt, clenove: cl }))
+    .sort((a, b) => b.clenove.length - a.clenove.length)
+}
+
 export function posledniUdalost(v: Vyjednavani | undefined): Udalost | undefined {
   return v ? [...v.udalosti].sort((a, b) => b.datum.localeCompare(a.datum))[0] : undefined
 }
