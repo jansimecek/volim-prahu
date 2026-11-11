@@ -1,7 +1,28 @@
 # Povolební vyjednávání — praha-reporyje. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-reporyje
-overeno: 2026-11-05
+ustavujiciZasedani:
+  datum: 2026-11-09
+  zdroj: pd-reporyje-9-11
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starostka
+    jmeno: Lenka Fialová
+    subjekt: obcanska-demokraticka-strana
+    zdroj: pd-reporyje-9-11
+  - funkce: 1. místostarosta
+    jmeno: David Roznětinský
+    subjekt: top-09
+    zdroj: pd-reporyje-9-11
+  - funkce: 2. místostarosta
+    jmeno: Pavel Novotný
+    subjekt: obcanska-demokraticka-strana
+    zdroj: pd-reporyje-9-11
+  - funkce: místostarosta (neuvolněný)
+    jmeno: Radek Hubata
+    subjekt: ano-2011
+    zdroj: pd-reporyje-9-11
 
 zdroje:
   - id: pd-reporyje-23-10
@@ -9,6 +30,11 @@ zdroje:
     nazev: "Koaliční smlouvu v Řeporyjích uzavřely ODS, TOP 09 a ANO, vítěz skončí v opozici"
     datum: 2026-10-23
     url: "https://prazsky.denik.cz/komunalni-volby/koalicni-smlouvu-v-reporyjich-uzavrely-ods-top-09-a-ano-vitez-skonci-v-opozici/"
+  - id: pd-reporyje-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Novotný se v Řeporyjích vrací jako místostarosta, jeho sestra je starostkou"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/novotny-se-v-reporyjich-vraci-jako-mistostarosta-jeho-sestra-je-starostkou/"
 
 udalosti:
   - id: smlouva-ods-top-ano
@@ -42,3 +68,16 @@ udalosti:
       Vítězné uskupení reagovalo na podpis koaliční smlouvy; podrobnosti
       o jednáních chtělo zveřejnit v sobotu.
     zdroje: [pd-reporyje-23-10]
+
+  - id: volba-fialova
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [obcanska-demokraticka-strana, top-09, ano-2011]
+    kdo: zastupitelstvo Řeporyjí, podle facebooku městské části
+    doklad: parafraze
+    shrnuti: >-
+      Starostkou zvolena Lenka Fialová (ODS), sestra exstarosty Pavla
+      Novotného, který je druhým místostarostou. Novotný loni kvůli
+      odsouzení rezignoval a byl ve vězení. Koalice ODS, TOP 09 a ANO má
+      8 z 15; vítězné Přívětivé Řeporyje jsou v opozici.
+    zdroje: [pd-reporyje-9-11]

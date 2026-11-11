@@ -1,7 +1,7 @@
 # Povolební vyjednávání — praha-10. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-10
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-praha10-15-10
@@ -19,6 +19,11 @@ zdroje:
     nazev: "Koaliční smlouvu má i Praha 10, podepsaly ji ODS, STAN s Vlastou a Praha 10 sobě"
     datum: 2026-10-27
     url: "https://prazsky.denik.cz/komunalni-volby/koalicni-smlouvu-ma-i-praha-10-podepsaly-ji-ods-stan-s-vlastou-a-praha-10-sobe/"
+  - id: pd-praha10-soud-5-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Úspěšná stížnost na volby: Na desítce vypadla ze zastupitelstva Naše Praha 10"
+    datum: 2026-11-05
+    url: "https://prazsky.denik.cz/komunalni-volby/uspesna-stiznost-na-volby-na-desitce-vypadla-ze-zastupitelstva-nase-praha-10/"
 
 udalosti:
   - id: memorandum-ods-stan-ps10
@@ -53,3 +58,17 @@ udalosti:
       Praha 10 sobě 2; starostou zůstává Valovič. Termín ustavujícího
       zasedání zatím stanovený není.
     zdroje: [pd-praha10-27-10]
+
+  - id: soud-nase-praha-10-vypadla
+    datum: 2026-11-05
+    typ: vyjadreni
+    subjekty: [jsme-praha-10, spd-pro-prahu-10-s-podporou-pro-trikolory-prisahy-a-svobodnych]
+    kdo: Městský soud v Praze (usnesení v Infosoudu)
+    doklad: parafraze
+    shrnuti: >-
+      Soud na stížnost Jsme Praha 10 a SPD přepočítal okrsky: Naše Praha
+      10 měla v okrsku 10043 jen 15 hlasů, ne 165, a pod pětiprocentní
+      hranicí vypadla. Její dva mandáty připadly SPD a Jsme Praha 10.
+      Koalice ODS, STAN s Vlastou a lidovci a Prahy 10 sobě má dál 24 ze
+      45; starosta Valovič teď může svolat ustavující zasedání.
+    zdroje: [pd-praha10-soud-5-11]

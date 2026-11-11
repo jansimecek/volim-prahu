@@ -4,7 +4,29 @@ zastupitelstvo: praha-16
 ustavujiciZasedani:
   datum: 2026-11-04
   zdroj: web-praha16-4-11
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Karel Hanzlík
+    subjekt: obcanska-demokraticka-strana-radotin
+    zdroj: pd-praha16-6-11
+  - funkce: 1. místostarosta
+    jmeno: Miroslav Knotek
+    subjekt: obcanska-demokraticka-strana-radotin
+    zdroj: pd-praha16-6-11
+  - funkce: 2. místostarostka
+    jmeno: Jana Zdráhalová
+    subjekt: obcanska-demokraticka-strana-radotin
+    zdroj: pd-praha16-6-11
+  - funkce: radní
+    jmeno: Simona Baráková
+    subjekt: obcanska-demokraticka-strana-radotin
+    zdroj: pd-praha16-6-11
+  - funkce: radní
+    jmeno: Viktor Krištof
+    subjekt: obcanska-demokraticka-strana-radotin
+    zdroj: pd-praha16-6-11
 
 zdroje:
   - id: pd-praha16-14-10
@@ -17,6 +39,11 @@ zdroje:
     nazev: "1. ustavující zasedání Zastupitelstva městské části Praha 16"
     datum: 2026-11-02
     url: "https://www.praha16.eu/"
+  - id: pd-praha16-6-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 16 se pošesté stal Karel Hanzlík z ODS"
+    datum: 2026-11-06
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-16-se-poseste-stal-karel-hanzlik-z-ods/"
 
 udalosti:
   - id: ods-sama-vetsina
@@ -33,3 +60,16 @@ udalosti:
       její zastupitelé. Pokud Hanzlík získá uvolněnou funkci na magistrátu,
       chce v Radotíně zůstat jako místostarosta, ne jako starosta.
     zdroje: [pd-praha16-14-10]
+
+  - id: volba-hanzlik
+    datum: 2026-11-04
+    typ: volba
+    subjekty: [obcanska-demokraticka-strana-radotin]
+    kdo: zastupitelstvo Prahy 16
+    doklad: parafraze
+    shrnuti: >-
+      Starostou se pošesté stal Karel Hanzlík (ODS), ODS s 10 z 15
+      mandátů vládne sama a rada zůstává ve stejném složení. Finanční
+      výbor povede Lucie Malátová (KDU-ČSL) a kontrolní Samantha
+      Chvojková (STAN), obě za opoziční Společně pro Radotín.
+    zdroje: [pd-praha16-6-11]

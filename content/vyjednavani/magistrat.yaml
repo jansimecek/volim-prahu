@@ -8,7 +8,62 @@ zastupitelstvo: magistrat
 ustavujiciZasedani:
   datum: 2026-11-05
   zdroj: pd-ustavujici-30-10
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+# Kdo co povede podle ohlášení z 11. 11. Po volbě rady 19. 11. se přepíše do `vedeni`.
+ocekavanaRada:
+  zdroj: ctk-koalice-11-11
+  poznamka: >-
+    Rozdělení zveřejnil server iDNES.cz a převzala ho ČTK; Hlaváček na tiskové
+    konferenci řekl, že v zásadě odpovídá realitě. Oficiálně strany složení
+    rady oznámí 18. listopadu, zastupitelstvo ji zvolí 19. listopadu. Kdo
+    z radních bude náměstkem, zatím neuvedly. Pražská Drbna má u Dobeše
+    a Biskupa jiné dělení: IT a vědu u Dobeše, Biskupovi jen bezpečnost.
+  clenove:
+    - funkce: primátor
+      jmeno: Petr Hlaváček
+      subjekt: starostove-a-nezavisli
+      gesce: [územní rozvoj]
+    - funkce: člen rady
+      jmeno: Pavel Dobeš
+      subjekt: starostove-a-nezavisli
+      gesce: [smart city, zahraniční spolupráce, inovace, energetika]
+    - funkce: člen rady
+      jmeno: Michal Biskup
+      subjekt: starostove-a-nezavisli
+      gesce: [IT, bezpečnost]
+    - funkce: členka rady
+      jmeno: Hana Novotná
+      subjekt: starostove-a-nezavisli
+      gesce: [životní prostředí]
+    - funkce: člen rady
+      jmeno: Antonín Klecanda
+      subjekt: starostove-a-nezavisli
+      gesce: [školství, sport, volný čas]
+    - funkce: člen rady (ODS)
+      jmeno: Tomáš Portlík
+      subjekt: spolu-pro-prahu
+      gesce: [finance, majetkové účasti]
+    - funkce: členka rady (ODS)
+      jmeno: Alexandra Udženija
+      subjekt: spolu-pro-prahu
+      gesce: [sociální věci, zdravotnictví]
+    - funkce: člen rady (TOP 09)
+      jmeno: Michal Hroza
+      subjekt: spolu-pro-prahu
+      gesce: [infrastruktura]
+    - funkce: člen rady (TOP 09)
+      jmeno: Tomáš Slabihoudek
+      subjekt: spolu-pro-prahu
+      gesce: [kultura]
+    - funkce: člen rady
+      jmeno: Adam Scheinherr
+      subjekt: praha-sobe
+      gesce: [doprava]
+    - funkce: člen rady
+      jmeno: David Bouz
+      subjekt: praha-sobe
+      gesce: [majetek]
 
 zdroje:
   - id: ct24-10-10
@@ -166,6 +221,27 @@ zdroje:
     nazev: "Pražští zastupitelé přerušili ustavující schůzi, sejdou se znovu 19. listopadu"
     datum: 2026-11-05
     url: "https://www.ceskenoviny.cz/zpravy/prazsti-zastupitele-prerusili-ustavujici-schuzi-sejdou-se-znovu-19-listopadu/2897568"
+
+  - id: pd-posledni-jednani-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Rozhodne se? Kvůli koalici v Praze se sejdou zástupci STAN, Spolu a Pirátů"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/rozhodne-se-kvuli-koalici-v-praze-se-sejdou-zastupci-stan-spolu-a-piratu/"
+  - id: pd-klub-stan-10-11
+    medium: "Pražský deník"
+    nazev: "Nová pražská koalice odhaluje své obrysy: Třetím partnerem bude asi Praha sobě"
+    datum: 2026-11-10
+    url: "https://prazsky.denik.cz/komunalni-volby/nova-prazska-koalice-odhaluje-sve-obrysy-tretim-partnerem-bude-asi-praha-sobe/"
+  - id: ctk-koalice-11-11
+    medium: "ČeskéNoviny.cz (ČTK)"
+    nazev: "Praha má koalici STAN, Spolu a Prahy sobě, primátorem bude Hlaváček"
+    datum: 2026-11-11
+    url: "https://www.ceskenoviny.cz/zpravy/v-praze-vznikla-koalice-stan-spolu-a-prahy-sobe-primatorem-hlavacek/2895938"
+  - id: drbna-koalice-11-11
+    medium: "Pražská Drbna"
+    nazev: "Od stolu jsme odcházely jako poctivě naštvané obě strany. Koalice promluvila o vyjednávání"
+    datum: 2026-11-11
+    url: "https://prazska.drbna.cz/politika/905507-od-stolu-jsme-odchazeli-jako-poctive-nastvane-obe-strany-koalice-promluvila-o-vyjednavani.html"
 
 udalosti:
   - id: stan-jedna-se-tremi
@@ -774,3 +850,97 @@ udalosti:
       Primátora ani radu nezvolili. Hana Třeštíková (Praha sobě) k 2. 11.
       rezignovala na mandát, nahradil ji Jiří Knitl (Praha sobě).
     zdroje: [ctk-slib-5-11]
+
+  - id: posledni-jednani-s-pirati
+    datum: 2026-11-09
+    typ: jednani
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu, ceska-piratska-strana]
+    kdo: vyjednávací týmy STAN, SPOLU a Pirátů
+    doklad: parafraze
+    shrnuti: >-
+      Zřejmě poslední schůzka týmů před rozhodnutím o třetím partnerovi. Podle
+      dosavadních informací by Praha sobě dostala dvě místa v radě (doprava
+      a majetek), Piráti jedno (majetek a bydlení). S Piráty by STAN a SPOLU
+      měly po pěti radních, s Prahou sobě STAN pět a SPOLU čtyři.
+    zdroje: [pd-posledni-jednani-9-11]
+
+  - id: klub-stan-vybral-prahu-sobe
+    datum: 2026-11-10
+    typ: vyjadreni
+    subjekty: [starostove-a-nezavisli]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    kdo: Šárka Kuželová, mluvčí pražského STAN
+    doklad: citace
+    citace: >-
+      Hlasovali jsme pro vytvoření stabilní většinové koalice ve složení STAN,
+      Spolu a Praha sobě.
+    shrnuti: >-
+      Klub STAN v úterý rozhodl o třetím partnerovi: Praha sobě místo Pirátů.
+      Podle Deníku by se Praha sobě ujala dopravy, o kterou STAN ani SPOLU
+      nestály. Scheinherr složení nekomentoval, podrobnosti slíbil na středeční
+      tiskové konferenci.
+    zdroje: [pd-klub-stan-10-11]
+
+  - id: pirati-respektuji
+    datum: 2026-11-10
+    typ: vyjadreni
+    subjekty: [ceska-piratska-strana]
+    kdo: Tereza Nislerová, lídryně kandidátky
+    doklad: citace
+    citace: >-
+      Rozhodnutí Starostů respektujeme a bereme ho na vědomí.
+    shrnuti: >-
+      Piráti po osmi letech ve vedení města míří do opozice. Za nejlepší dál
+      považují koalici STAN, Prahy sobě a Pirátů. Podle kuloárních informací
+      rozhodla obava ODS i STAN z gesce dopravy; Piráti o ni neusilovali, za
+      hlavní problém Prahy mají bydlení.
+    zdroje: [pd-klub-stan-10-11, drbna-koalice-11-11]
+
+  - id: dohoda-stan-spolu-praha-sobe
+    datum: 2026-11-11
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    sestava: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+    kdo: Petr Hlaváček (STAN), Tomáš Portlík (SPOLU), Adam Scheinherr (Praha sobě)
+    doklad: citace
+    citace: >-
+      Myslím, že máme širokou, velmi dobře a profesionálně sestavenou koalici.
+    shrnuti: >-
+      Lídři oznámili koalici STAN, SPOLU a Prahy sobě: 47 z 65 hlasů,
+      primátorem Hlaváček. Rada 5 : 4 : 2. Složení rady strany oznámí
+      18. listopadu, do volby 19. listopadu chtějí podepsat koaliční smlouvu.
+      Hlaváček ohlásil změny ve vedení městských firem, hlavně v Pražských
+      službách. Rozdělení gescí je výše u očekávané rady.
+    zdroje: [ctk-koalice-11-11, drbna-koalice-11-11]
+
+  - id: parkovani-kompromis
+    datum: 2026-11-11
+    typ: vyjadreni
+    subjekty: [spolu-pro-prahu, praha-sobe]
+    kdo: Tomáš Portlík (SPOLU) a Adam Scheinherr (Praha sobě)
+    doklad: citace
+    citace: >-
+      Od stolu jsme, jak řekl klasik, prostě odcházeli jako poctivě naštvané
+      obě strany.
+    shrnuti: >-
+      Portlík o sporu o placené stání: Praha sobě ustoupila od nároků na cenu,
+      SPOLU od toho, že se zvedne. Scheinherr za hlavní označil shodu na
+      stavbách — nových tramvajových tratích, městském okruhu a Hloubětínském
+      tunelu. Podle Hlaváčka proběhlo asi 40 schůzek v osmi skupinách.
+    zdroje: [drbna-koalice-11-11, ctk-koalice-11-11]
+
+  - id: opozice-ano-a-pirati
+    datum: 2026-11-11
+    typ: vyjadreni
+    subjekty: [ano-2011, ceska-piratska-strana]
+    kdo: Jan Hušbauer (ANO), Tereza Nislerová (Piráti)
+    doklad: citace
+    citace: >-
+      Připravujeme stínovou radu, která bude systematicky kontrolovat práci
+      vedení města a přicházet s vlastními řešeními.
+    shrnuti: >-
+      ANO bude podle předsedy klubu Hušbauera důslednou opozicí; koalice šesti
+      politických subjektů mu připomíná spory minulého období. Piráti o předsednictví
+      kontrolního výboru usilovat nebudou — podle zvyklosti patří
+      nejsilnějšímu opozičnímu klubu, tedy ANO.
+    zdroje: [ctk-koalice-11-11]

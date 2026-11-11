@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { KONECNE_VYSLEDKY } from '../src/lib/konecneVysledky'
-import { dohodnutaSestava, rozlozeniMandatu, stavVyjednavani, type Vyjednavani } from '../src/lib/vyjednavani'
+import {
+  dohodnutaSestava,
+  radaPodleSubjektu,
+  rozlozeniMandatu,
+  stavVyjednavani,
+  type Vyjednavani,
+} from '../src/lib/vyjednavani'
 
 /** Minimální soubor vyjednávání s danými událostmi. */
 function s(udalosti: { typ: string; datum: string; sestava?: string[] }[]): Vyjednavani {
@@ -87,5 +93,19 @@ describe('rozložení mandátů', () => {
       'praha-sterboholy',
       'praha-troja',
     ])
+  })
+})
+
+describe('rada po stranách', () => {
+  const c = (jmeno: string, subjekt: string, gesce: string[] = []) => ({ funkce: 'radní', jmeno, subjekt, gesce })
+
+  it('seskupí členy po subjektech, víc míst dřív, uvnitř v pořadí zdroje', () => {
+    const skupiny = radaPodleSubjektu([c('A', 'x'), c('B', 'y'), c('C', 'y'), c('D', 'z'), c('E', 'y')])
+    expect(skupiny.map((s) => s.subjekt)).toEqual(['y', 'x', 'z'])
+    expect(skupiny[0]!.clenove.map((x) => x.jmeno)).toEqual(['B', 'C', 'E'])
+  })
+
+  it('stejný počet míst nechá v pořadí prvního výskytu', () => {
+    expect(radaPodleSubjektu([c('A', 'x'), c('B', 'y')]).map((s) => s.subjekt)).toEqual(['x', 'y'])
   })
 })

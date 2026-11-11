@@ -4,7 +4,53 @@ zastupitelstvo: praha-7
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha7-pozvanka
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Jan Čižinský
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+  - funkce: místostarostka (neuvolněná)
+    jmeno: Barbora Feret
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [územní rozvoj]
+  - funkce: místostarostka
+    jmeno: Hana Třeštíková
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [kultura]
+  - funkce: místostarostka
+    jmeno: Hana Šišková
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [školství]
+  - funkce: místostarosta
+    jmeno: Kamil Vavřinec Mareš
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [majetek]
+  - funkce: místostarosta
+    jmeno: Pavel Zelenka
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [doprava]
+  - funkce: radní
+    jmeno: Jiří Knitl
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [životní prostředí]
+  - funkce: radní
+    jmeno: Jakob Hurrle
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [sociální věci]
+  - funkce: radní
+    jmeno: Martin Tománek
+    subjekt: praha-7-sobe
+    zdroj: pd-praha7-9-11
+    gesce: [finance]
 
 zdroje:
   - id: pd-praha7-11-10
@@ -22,6 +68,11 @@ zdroje:
     nazev: "Pozvánka na ustavující zasedání Zastupitelstva MČ Praha 7"
     datum: 2026-11-02
     url: "https://www.praha7.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva-mc-praha-7-2/"
+  - id: pd-praha7-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 7 bude dál vládnout Jan Čižinský, starostou se stal už počtvrté"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-7-bude-dal-vladnout-jan-cizinsky-starostou-se-stal-uz-poctvrte/"
 
 udalosti:
   - id: praha-7-sobe-pirati-stan
@@ -52,3 +103,19 @@ udalosti:
       koaličního partnera; s Piráty a STAN se nedohodla. Opozice dostane
       předsednictví kontrolního výboru. Radu volí zastupitelé 9. 11.
     zdroje: [pd-praha7-3-11]
+
+  - id: volba-cizinsky
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [praha-7-sobe]
+    kdo: Jan Čižinský (Praha 7 sobě), starosta
+    doklad: citace
+    citace: >-
+      Rád bych, aby Praha 7 rozkvetla. Nejen přeneseně, ale konkrétně.
+    shrnuti: >-
+      Čižinský zvolen počtvrté (19 hlasů z 29). Praha 7 sobě vládne
+      sama, rada je skoro beze změny — místostarostkou pro územní rozvoj
+      je místo Lenky Burgerové Barbora Feret. Opozice volbu
+      nekomentovala. Čižinský chce navázat na stavbu školy a bytového
+      domu v Holešovicích.
+    zdroje: [pd-praha7-9-11]

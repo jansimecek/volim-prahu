@@ -38,6 +38,9 @@ export function GET(): Response {
       dohodnutaSestava: dohodnutaSestava(v) ?? null,
       ustavujiciZasedani: v?.ustavujiciZasedani?.datum ?? null,
       vedeni: v?.vedeni ?? [],
+      ocekavanaRada: v?.ocekavanaRada && v.vedeni.length === 0
+        ? { ...v.ocekavanaRada, zdroj: zdroje.get(v.ocekavanaRada.zdroj) ?? null }
+        : null,
       overeno: v?.overeno ?? null,
       udalosti: (v?.udalosti ?? [])
         .slice()
@@ -49,7 +52,7 @@ export function GET(): Response {
   return Response.json(
     {
       popis:
-        'Povolební vyjednávání o vedení hlavního města Prahy a městských částí po komunálních volbách 2026. Zapisuje se jen doložené; stav plyne z poslední doložené události (ohlášená dohoda bez podpisu, memorandum, koaliční smlouva, volba vedení), nikdy z odhadu.',
+        'Povolební vyjednávání o vedení hlavního města Prahy a městských částí po komunálních volbách 2026. Zapisuje se jen doložené; stav plyne z poslední doložené události (ohlášená dohoda bez podpisu, memorandum, koaliční smlouva, volba vedení), nikdy z odhadu. Gesce (oblasti, které radní řídí) jsou u zvoleného vedení jen tam, kde je zdroj jmenuje; ocekavanaRada je složení a gesce ohlášené před volbou.',
       stranka: absolutni('/koalice'),
       lhuty: lhutyUstavujichZasedani(),
       zastupitelstva,

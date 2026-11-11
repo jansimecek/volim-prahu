@@ -4,7 +4,42 @@ zastupitelstvo: praha-22
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha22-pozvanka
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starostka
+    jmeno: Jana Kabilová
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha22-9-11
+  - funkce: 1. místostarostka (neuvolněná)
+    jmeno: Zuzana Straková
+    subjekt: ok22-s-podporou-praha-sobe
+    zdroj: pd-praha22-9-11
+    gesce: [finance]
+  - funkce: místostarosta
+    jmeno: Jaromír Beránek
+    subjekt: ceska-piratska-strana
+    zdroj: pd-praha22-9-11
+    gesce: [majetek, bydlení, informatika]
+  - funkce: radní (do listopadu 2028)
+    jmeno: Martin Langmajer
+    subjekt: obcanska-demokraticka-strana
+    zdroj: pd-praha22-9-11
+  - funkce: radní
+    jmeno: Hana Vagenknechtová
+    subjekt: dvacetdvojka
+    zdroj: pd-praha22-9-11
+    gesce: [kultura, sociální oblast]
+  - funkce: radní
+    jmeno: Bohumil Fendrych
+    subjekt: starostove-a-nezavisli
+    zdroj: pd-praha22-9-11
+    gesce: [územní rozvoj, životní prostředí]
+  - funkce: radní (neuvolněný)
+    jmeno: Vít Urban
+    subjekt: ok22-s-podporou-praha-sobe
+    zdroj: pd-praha22-9-11
+    gesce: [doprava]
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -22,6 +57,11 @@ zdroje:
     nazev: "Ustavující zasedání Zastupitelstva městské části Praha 22"
     datum: 2026-11-03
     url: "https://www.praha22.cz/zpravy/informace-z-radnice/ustavujici-zasedani-zastupitelstva-mestske-casti-praha-22-7534cs.html"
+  - id: pd-praha22-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostkou Prahy 22 je Jana Kabilová (za STAN), vystřídala Tomáše Kaněru (ANO)"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/starostkou-prahy-22-je-jana-kabilova-za-stan-vystridala-tomase-kaneru-ano/"
 
 udalosti:
   - id: stan-jedna
@@ -53,3 +93,22 @@ udalosti:
       starostu mají STAN i OK22; rozhodne podoba koalice. Jasno chtějí mít do
       konce října.
     zdroje: [pd-praha22-20-10]
+
+  - id: volba-kabilova
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [starostove-a-nezavisli, ok22-s-podporou-praha-sobe, ceska-piratska-strana, obcanska-demokraticka-strana, dvacetdvojka]
+    kdo: místní organizace STAN na facebooku
+    doklad: citace
+    citace: >-
+      V zájmu hladkého dokončení školy jsme akceptovali variantu, aby
+      tuto investici dokončil Martin Langmajer z ODS, a to na základě
+      mandátu, který omezuje jeho působení v radě městské části na dva
+      roky do listopadu 2028.
+    shrnuti: >-
+      Starostkou zvolena Jana Kabilová (za STAN, 24 hlasů z 25),
+      vystřídala Kaněru (ANO). Koalice STAN, OK22, Pirátů, ODS a
+      DvacetDvojky má 19 z 25. Místostarostou je končící primátorův
+      náměstek pro dopravu Jaromír Beránek (Piráti); Langmajer (ODS)
+      zůstane v radě jen do dokončení ZŠ Romance.
+    zdroje: [pd-praha22-9-11]

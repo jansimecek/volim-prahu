@@ -4,7 +4,63 @@ zastupitelstvo: praha-2
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: pd-praha2-smlouva-5-11
-overeno: 2026-11-05
+overeno: 2026-11-11
+
+vedeni:
+  - funkce: starosta
+    jmeno: Jan Korseska
+    subjekt: spolu-pro-prahu-2
+    zdroj: pd-praha2-volba-9-11
+    gesce: [finance, investice]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: 1. místostarostka
+    jmeno: Jana Bašusová
+    subjekt: praha-2-sobe
+    zdroj: pd-praha2-volba-9-11
+    gesce: [životní prostředí, odpadové hospodářství, participace]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: místostarostka
+    jmeno: Lucie Pechová
+    subjekt: spolu-pro-prahu-2
+    zdroj: pd-praha2-volba-9-11
+    gesce: [sociální politika, zdravotnictví, bytová politika]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Tomáš Halva
+    subjekt: spolu-pro-prahu-2
+    zdroj: pd-praha2-volba-9-11
+    gesce: [informatika, bezpečnost, sport, podpora podnikání]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: místostarosta
+    jmeno: Jan Recman
+    subjekt: spolu-pro-prahu-2
+    zdroj: pd-praha2-volba-9-11
+    gesce: [územní rozvoj, výstavba, energetika]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: místostarosta
+    jmeno: Michal Tobrman
+    subjekt: praha-2-sobe
+    zdroj: pd-praha2-volba-9-11
+    gesce: [školství, volnočasové aktivity]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: místostarostka
+    jmeno: Magdalena Valdmanová
+    subjekt: ceska-piratska-strana
+    zdroj: pd-praha2-volba-9-11
+    gesce: [majetek]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: radní
+    jmeno: Jiří Mach
+    subjekt: praha-2-sobe
+    zdroj: pd-praha2-volba-9-11
+    gesce: [doprava, veřejný prostor]
+    zdrojGesci: patriot-praha2-gesce-10-11
+  - funkce: radní
+    jmeno: Ellen Anna Kovačíková
+    subjekt: ceska-piratska-strana
+    zdroj: pd-praha2-volba-9-11
+    gesce: [kultura]
+    zdrojGesci: patriot-praha2-gesce-10-11
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -22,6 +78,16 @@ zdroje:
     nazev: "V Praze 2 má koalice definitivu, starostou zřejmě zůstane Jan Korseska z ODS"
     datum: 2026-11-05
     url: "https://prazsky.denik.cz/komunalni-volby/v-praze-2-ma-koalice-definitivu-starostou-zrejme-zustane-jan-korseska-z-ods/"
+  - id: pd-praha2-volba-9-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 2 byl podruhé zvolen lídr Spolu pro Prahu 2 Jan Korseska"
+    datum: 2026-11-09
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-2-byl-podruhe-zvolen-lidr-spolu-pro-prahu-2-jan-korseska/"
+  - id: patriot-praha2-gesce-10-11
+    medium: "Pražský patriot"
+    nazev: "Nové vedení Prahy 2 poprvé zasedalo, rozdělilo si kompetence"
+    datum: 2026-11-10
+    url: "https://www.prazskypatriot.cz/nove-vedeni-prahy-2-poprve-zasedalo-rozdelilo-si-kompetence/"
 
 udalosti:
   - id: spolu-jedna-se-stan
@@ -73,3 +139,21 @@ udalosti:
       26 mandátů z 35. Starostou má zůstat Jan Korseska (ODS). Ustavující
       zasedání bude v pondělí 9. 11.
     zdroje: [pd-praha2-smlouva-5-11]
+
+  - id: volba-korseska
+    datum: 2026-11-09
+    typ: volba
+    subjekty: [spolu-pro-prahu-2, praha-2-sobe, ceska-piratska-strana]
+    kdo: Jan Korseska (ODS), starosta
+    doklad: citace
+    citace: >-
+      Jsem rád, že tady mohu stát jako nově zvolený starosta a slíbit
+      vám, že se budu snažit řídit Prahu 2 tak, aby si udržela svůj
+      vysoký životní standard pro své občany.
+    shrnuti: >-
+      Zastupitelstvo zvolilo podruhé starostou Jana Korsesku (27 z 34
+      hlasů). Rada 9 členů: Spolu 4, Praha 2 sobě 3, Piráti 2. Na první
+      schůzi 10. 11. si rada rozdělila gesce: dopravu po Halvovi (TOP
+      09) převzal Jiří Mach (Praha 2 sobě), životní prostředí po
+      Recmanovi Jana Bašusová.
+    zdroje: [pd-praha2-volba-9-11, patriot-praha2-gesce-10-11]

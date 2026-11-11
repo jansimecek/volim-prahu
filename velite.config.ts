@@ -881,9 +881,35 @@ const vyjednavani = defineCollection({
             jmeno: s.string().min(1),
             subjekt: s.string().min(1),
             zdroj: s.string().min(1),
+            /** Oblasti, které člen rady řídí — jen když je zdroj jmenuje. */
+            gesce: s.array(s.string().min(1)).default([]),
+            /** Gesce bývají rozdělené až na první schůzi rady, často s jiným zdrojem než volba. */
+            zdrojGesci: s.string().min(1).optional(),
           }),
         )
         .default([]),
+      /**
+       * Očekávané složení rady a gesce ještě před volbou: jen jak je ohlásily
+       * strany nebo jak je s jejich potvrzením napsala média. Žádný odhad —
+       * po volbě se stáhne a nahradí polem `vedeni`.
+       */
+      ocekavanaRada: s
+        .object({
+          zdroj: s.string().min(1),
+          /** Jak spolehlivé to je a kdy se má volit — vypíše se nad seznamem. */
+          poznamka: s.string().min(1).max(400),
+          clenove: s
+            .array(
+              s.object({
+                funkce: s.string().min(1),
+                jmeno: s.string().min(1),
+                subjekt: s.string().min(1),
+                gesce: s.array(s.string().min(1)).default([]),
+              }),
+            )
+            .min(1),
+        })
+        .optional(),
       zdroje: s
         .array(
           s.object({
@@ -943,7 +969,22 @@ const vyjednavani = defineCollection({
         }
       }
       if (data.ustavujiciZasedani) odkaz(data.ustavujiciZasedani.zdroj, 'Ustavující zasedání')
-      for (const v of data.vedeni) odkaz(v.zdroj, `Funkce "${v.funkce}"`)
+      for (const v of data.vedeni) {
+        odkaz(v.zdroj, `Funkce "${v.funkce}"`)
+        if (v.zdrojGesci) odkaz(v.zdrojGesci, `Gesce funkce "${v.funkce}"`)
+        if (v.zdrojGesci && v.gesce.length === 0) {
+          ctx.addIssue({ code: 'custom', message: `Funkce "${v.funkce}" (${v.jmeno}) má zdroj gescí, ale žádné gesce.` })
+        }
+      }
+      if (data.ocekavanaRada) {
+        odkaz(data.ocekavanaRada.zdroj, 'Očekávaná rada')
+        if (data.vedeni.length > 0) {
+          ctx.addIssue({
+            code: 'custom',
+            message: 'Vedení je zvolené, očekávaná rada už nemá co dělat — smaž ji a gesce přepiš do `vedeni`.',
+          })
+        }
+      }
     }),
 })
 

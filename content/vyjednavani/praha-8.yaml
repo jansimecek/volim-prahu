@@ -4,7 +4,7 @@ zastupitelstvo: praha-8
 ustavujiciZasedani:
   datum: 2026-11-11
   zdroj: deska-praha8-4-11
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-prehled-15-10
@@ -32,6 +32,16 @@ zdroje:
     nazev: "Veřejné 1. (ustavující) zasedání Zastupitelstva městské části Praha 8"
     datum: 2026-11-04
     url: "https://www.praha8.cz/VEREJNE-1-USTAVUJICI-ZASEDANI-ZASTUPITELSTVA-MESTSKE-CASTI-PRAHA-8-2.html"
+  - id: pd-praha8-10-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 8 zřejmě po velké kritice vznikne menšinová koalice bez hnutí ANO"
+    datum: 2026-11-10
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-8-zrejme-po-velke-kritice-vznikne-mensinova-koalice-bez-hnuti-ano/"
+  - id: echo-praha8-11-11
+    medium: "Echo24"
+    nazev: "STAN na Praze 8 se zalekl. ANO by mohlo podporovat starosty z opozice"
+    datum: 2026-11-11
+    url: "https://www.echo24.cz/a/Hr5Jf/zpravy-domov-praha-stan-ano-koalice-radnice-hrebik-rakusan-stransky-8zije-protest-zastupitelstvo"
 
 udalosti:
   - id: 8zije-nabizi-starostu
@@ -114,3 +124,21 @@ udalosti:
       existuje alternativa. Dojednáno podle něj ještě není; ohlášenou dohodu
       ale nikdo z jejích účastníků neodvolal.
     zdroje: [drbna-rakusan-23-10]
+
+  - id: mensinova-koalice-bez-ano
+    datum: 2026-11-10
+    typ: dohoda
+    subjekty: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl]
+    sestava: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl]
+    kdo: Tomáš Hřebík (STAN), lídr klubu STAN a TOP 09
+    doklad: citace
+    citace: >-
+      Koalice bude menšinová, budeme hledat podporu napříč včetně
+      Pirátů, kteří by měli finanční výbor a dvě komise.
+    shrnuti: >-
+      Po kritice předsedy STAN Rakušana i petice chce klub STAN a TOP 09
+      vládnout bez ANO, jen s ODS a lidovci: 18 hlasů ze 45. Starostou
+      má být Hřebík. Podle 8žije jde o návrat k modelu 2018–2022, kdy
+      menšinovou radu podporovalo ANO zvenčí. Volba je na zasedání 11.
+      listopadu.
+    zdroje: [pd-praha8-10-11, echo-praha8-11-11]

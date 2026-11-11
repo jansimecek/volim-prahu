@@ -4,7 +4,7 @@ zastupitelstvo: praha-9
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: deska-praha9-29-10
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-praha9-12-10
@@ -22,6 +22,11 @@ zdroje:
     nazev: "Jednání o koalici na Praze 9 váznou, zastupitelé zvolí vedení v prosinci"
     datum: 2026-11-05
     url: "https://prazsky.denik.cz/komunalni-volby/jednani-o-koalici-na-praze-9-vaznou-zastupitele-zvoli-vedeni-v-prosinci/"
+  - id: patriot-praha5-praha9-9-11
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Ustavující schůze zastupitelstev Prahy 5 a 9 byly přerušeny"
+    datum: 2026-11-09
+    url: "https://www.prazskypatriot.cz/ustavujici-schuze-zastupitelstev-prahy-5-a-9-byly-preruseny/"
 
 udalosti:
   - id: portlik-praha9-neobejde
@@ -54,3 +59,16 @@ udalosti:
       volit 15. prosince. Jestli zůstane starostou, záleží na jednáních na
       magistrátu.
     zdroje: [pd-praha9-5-11]
+
+  - id: slib-a-preruseni-do-15-12
+    datum: 2026-11-09
+    typ: zasedani
+    subjekty: [spolu-pro-prahu-9-ods-a-top-09-s-podporou-nestraniku]
+    kdo: Tomáš Portlík (ODS), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Zastupitelé složili slib a na Portlíkův návrh (32 z 33 hlasů)
+      přerušili zasedání do 15. prosince. Na koalici se strany zatím
+      neshodly. Portlík má podle očekávání zasednout v radě hlavního
+      města, takže není jasné, zda bude starostu obhajovat.
+    zdroje: [patriot-praha5-praha9-9-11]

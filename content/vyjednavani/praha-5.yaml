@@ -4,7 +4,7 @@ zastupitelstvo: praha-5
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha5-2-11
-overeno: 2026-11-05
+overeno: 2026-11-11
 
 zdroje:
   - id: pd-praha5-12-10
@@ -27,6 +27,16 @@ zdroje:
     nazev: "Pozvánka na ustavující zasedání zastupitelstva"
     datum: 2026-11-02
     url: "https://www.praha5.cz/pozvanka-na-ustavujici-zasedani-zastupitelstva/"
+  - id: patriot-praha5-praha9-9-11
+    medium: "Pražský patriot (ČTK)"
+    nazev: "Ustavující schůze zastupitelstev Prahy 5 a 9 byly přerušeny"
+    datum: 2026-11-09
+    url: "https://www.prazskypatriot.cz/ustavujici-schuze-zastupitelstev-prahy-5-a-9-byly-preruseny/"
+  - id: web-praha5-pokracovani-11-11
+    medium: "Městská část Praha 5"
+    nazev: "Ustavující zasedání bude pokračovat"
+    datum: 2026-11-11
+    url: "https://www.praha5.cz/ustavujici-zasedani-bude-pokracovat/"
 
 udalosti:
   - id: praha-5-sobe-oslovila-stan
@@ -79,3 +89,29 @@ udalosti:
       smlouvu a rozdělí posty v radě. Šimková namítá, že STAN jí v pátek
       nabídl koalici s ODS, a než ji stihla projednat, byla uzavřena jiná.
     zdroje: [pd-praha5-memorandum-20-10]
+
+  - id: smlouva-ods-stan-sen-top
+    datum: 2026-11-09
+    typ: koalicni-smlouva
+    subjekty: [obcanska-demokraticka-strana, starostove-a-nezavisli, sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli, top-lidovci-a-nezavisli]
+    sestava: [obcanska-demokraticka-strana, starostove-a-nezavisli, sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli, top-lidovci-a-nezavisli]
+    kdo: zastupitelé ODS, STAN, SEN, TOP 09 a KDU-ČSL
+    doklad: parafraze
+    shrnuti: >-
+      Zastupitelé ODS, STAN, SEN pro Prahu 5, TOP 09 a KDU-ČSL v den
+      ustavujícího zasedání podepsali koaliční smlouvu; koalice má 23
+      hlasů ze 41. Vítězná Praha 5 sobě (10 mandátů) zůstává v opozici.
+    zdroje: [patriot-praha5-praha9-9-11]
+
+  - id: slib-a-preruseni-do-24-11
+    datum: 2026-11-09
+    typ: zasedani
+    subjekty: [starostove-a-nezavisli]
+    kdo: David Dušek (STAN), místostarosta
+    doklad: parafraze
+    shrnuti: >-
+      Zastupitelé složili slib a na Duškův návrh zasedání přerušili do
+      24. listopadu. Vedení chce s volbou rady počkat na pravomocný
+      konec řízení o žalobě na neplatnost volby kandidáta; žaloba nemá
+      odkladný účinek, proto se zasedání konat muselo.
+    zdroje: [patriot-praha5-praha9-9-11, web-praha5-pokracovani-11-11]

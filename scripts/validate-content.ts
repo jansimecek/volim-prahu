@@ -396,6 +396,7 @@ function overVyjednavani(velite: string) {
   const data = JSON.parse(readFileSync(join(velite, 'vyjednavani.json'), 'utf8')) as {
     zastupitelstvo: string
     vedeni: { subjekt: string }[]
+    ocekavanaRada?: { clenove: { subjekt: string }[] }
     udalosti: { id: string; subjekty: string[]; sestava: string[]; vylucuje: string[] }[]
   }[]
   const videna = new Set<string>()
@@ -416,6 +417,7 @@ function overVyjednavani(velite: string) {
     const odkazy = [
       ...v.udalosti.flatMap((u) => [...u.subjekty, ...u.sestava, ...u.vylucuje].map((slug) => ({ slug, kde: `Událost "${u.id}"` }))),
       ...v.vedeni.map((f) => ({ slug: f.subjekt, kde: 'Vedení' })),
+      ...(v.ocekavanaRada?.clenove ?? []).map((f) => ({ slug: f.subjekt, kde: 'Očekávaná rada' })),
     ]
     for (const { slug, kde } of odkazy) {
       if (!slugy.has(slug)) {
