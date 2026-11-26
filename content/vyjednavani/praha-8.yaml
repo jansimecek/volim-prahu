@@ -4,7 +4,35 @@ zastupitelstvo: praha-8
 ustavujiciZasedani:
   datum: 2026-11-11
   zdroj: deska-praha8-4-11
-overeno: 2026-11-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (STAN)
+    jmeno: Tomáš Hřebík
+    subjekt: starostove-a-nezavisli-top-09-spolecne-pro-prahu-8
+    zdroj: pd-praha8-volba-11-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Martin Jedlička
+    subjekt: starostove-a-nezavisli-top-09-spolecne-pro-prahu-8
+    zdroj: pd-praha8-volba-11-11
+    gesce: [doprava, školství]
+    zdrojGesci: pd-praha8-volba-11-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Tomáš Slabihoudek
+    subjekt: starostove-a-nezavisli-top-09-spolecne-pro-prahu-8
+    zdroj: pd-praha8-volba-11-11
+    gesce: [finance, kultura]
+    zdrojGesci: pd-praha8-volba-11-11
+  - funkce: místostarosta (ODS)
+    jmeno: David Straka
+    subjekt: ods-s-podporou-kdu-csl
+    zdroj: pd-praha8-volba-11-11
+    gesce: [bezpečnost]
+    zdrojGesci: pd-praha8-volba-11-11
+  - funkce: radní (ODS)
+    jmeno: Vladimíra Ludková
+    subjekt: ods-s-podporou-kdu-csl
+    zdroj: pd-praha8-volba-11-11
 
 zdroje:
   - id: pd-prehled-15-10
@@ -42,6 +70,11 @@ zdroje:
     nazev: "STAN na Praze 8 se zalekl. ANO by mohlo podporovat starosty z opozice"
     datum: 2026-11-11
     url: "https://www.echo24.cz/a/Hr5Jf/zpravy-domov-praha-stan-ano-koalice-radnice-hrebik-rakusan-stransky-8zije-protest-zastupitelstvo"
+  - id: pd-praha8-volba-11-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 8 se stal Tomáš Hřebík (STAN), vede menšinovou koalici"
+    datum: 2026-11-11
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-8-se-stal-tomas-hrebik-stan-vede-mensinovou-koalici/"
 
 udalosti:
   - id: 8zije-nabizi-starostu
@@ -142,3 +175,18 @@ udalosti:
       menšinovou radu podporovalo ANO zvenčí. Volba je na zasedání 11.
       listopadu.
     zdroje: [pd-praha8-10-11, echo-praha8-11-11]
+
+  - id: volba-hrebik
+    datum: 2026-11-11
+    typ: volba
+    subjekty: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl]
+    sestava: [starostove-a-nezavisli-top-09-spolecne-pro-prahu-8, ods-s-podporou-kdu-csl]
+    kdo: Tomáš Hřebík (STAN), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou zvolen Hřebík (32 hlasů, i od ANO, Pirátů a Patriotů).
+      Menšinová koalice STAN, TOP 09, ODS a KDU-ČSL má 18 z 45; vítězné 8žije
+      s Prahou sobě a Zelenými je v opozici. Slabihoudek řekl, že místo
+      místostarosty opustí, stane-li se radním na magistrátu — to se stalo 19.
+      11.
+    zdroje: [pd-praha8-volba-11-11]

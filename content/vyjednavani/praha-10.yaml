@@ -1,7 +1,48 @@
 # Povolební vyjednávání — praha-10. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-10
-overeno: 2026-11-11
+ustavujiciZasedani:
+  datum: 2026-11-18
+  zdroj: pd-praha10-volba-18-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (ODS)
+    jmeno: Martin Valovič
+    subjekt: spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti
+    zdroj: pd-praha10-volba-18-11
+    gesce: [územní rozvoj, podnikání, bezpečnost]
+    zdrojGesci: pd-praha10-volba-18-11
+  - funkce: místostarosta (STAN)
+    jmeno: David Kašpar
+    subjekt: starostove-vlasta-a-lidovci
+    zdroj: pd-praha10-volba-18-11
+    gesce: [majetek, strategický plán, inovace]
+    zdrojGesci: pd-praha10-volba-18-11
+  - funkce: místostarosta (ODS)
+    jmeno: Pavel Šutka
+    subjekt: spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti
+    zdroj: pd-praha10-volba-18-11
+    gesce: [kultura, sport]
+    zdrojGesci: pd-praha10-volba-18-11
+  - funkce: místostarosta (ODS)
+    jmeno: Martin Čásenský
+    subjekt: spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti
+    zdroj: pd-praha10-volba-18-11
+    gesce: [finance, investice, městské společnosti]
+    zdrojGesci: pd-praha10-volba-18-11
+  - funkce: místostarosta (Vlasta)
+    jmeno: Milan Maršálek
+    subjekt: starostove-vlasta-a-lidovci
+    zdroj: pd-praha10-volba-18-11
+    gesce: [životní prostředí, energetika]
+    zdrojGesci: pd-praha10-volba-18-11
+  - funkce: místostarostka (Praha 10 sobě)
+    jmeno: Radka Jenka Šubířová
+    subjekt: praha-10-sobe
+    zdroj: pd-praha10-volba-18-11
+    gesce: [školství]
+    zdrojGesci: pd-praha10-volba-18-11
 
 zdroje:
   - id: pd-praha10-15-10
@@ -24,6 +65,11 @@ zdroje:
     nazev: "Úspěšná stížnost na volby: Na desítce vypadla ze zastupitelstva Naše Praha 10"
     datum: 2026-11-05
     url: "https://prazsky.denik.cz/komunalni-volby/uspesna-stiznost-na-volby-na-desitce-vypadla-ze-zastupitelstva-nase-praha-10/"
+  - id: pd-praha10-volba-18-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 10 je podruhé Martin Valovič (ODS), chce řešit i sídlo úřadu"
+    datum: 2026-11-18
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-10-je-podruhe-martin-valovic-ods-chce-resit-i-sidlo-uradu/"
 
 udalosti:
   - id: memorandum-ods-stan-ps10
@@ -72,3 +118,17 @@ udalosti:
       Koalice ODS, STAN s Vlastou a lidovci a Prahy 10 sobě má dál 24 ze
       45; starosta Valovič teď může svolat ustavující zasedání.
     zdroje: [pd-praha10-soud-5-11]
+
+  - id: volba-valovic
+    datum: 2026-11-18
+    typ: volba
+    subjekty: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    sestava: [spolecne-pro-prahu-10-nejlepsi-mesto-na-svete-ods-a-lokalni-osobnosti, starostove-vlasta-a-lidovci, praha-10-sobe]
+    kdo: Martin Valovič (ODS), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou podruhé zvolen Valovič (32 hlasů v tajné volbě); koalice ODS,
+      STAN s Vlastou a lidovci a Prahy 10 sobě se Zelenými má 24 z 45. Koalice
+      chce vyřešit sídlo úřadu — odkupem pronajaté budovy, nebo v projektu
+      Hagibor. Opozice (Jsme Praha 10) kritizovala, že starosta žije v Osnici.
+    zdroje: [pd-praha10-volba-18-11]

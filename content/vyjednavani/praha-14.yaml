@@ -4,7 +4,45 @@ zastupitelstvo: praha-14
 ustavujiciZasedani:
   datum: 2026-11-24
   zdroj: web-praha14-pozvanka
-overeno: 2026-11-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (ODS)
+    jmeno: Jiří Zajac
+    subjekt: ods-spolu-s-top-09-a-sousedy-pro-prahu-14
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: 1. místostarostka (ANO)
+    jmeno: Mária Ševčíková
+    subjekt: ano-2011
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: místostarostka (TOP 09)
+    jmeno: Irena Kolmanová
+    subjekt: ods-spolu-s-top-09-a-sousedy-pro-prahu-14
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: místostarosta (ANO)
+    jmeno: Karel Med
+    subjekt: ano-2011
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: radní (ODS)
+    jmeno: Josef Kutmon
+    subjekt: ods-spolu-s-top-09-a-sousedy-pro-prahu-14
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: radní (ODS)
+    jmeno: Žofie Splavcová
+    subjekt: ods-spolu-s-top-09-a-sousedy-pro-prahu-14
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: radní (ODS)
+    jmeno: Klára Holá
+    subjekt: ods-spolu-s-top-09-a-sousedy-pro-prahu-14
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: radní (ANO)
+    jmeno: Aneta Hejrovská
+    subjekt: ano-2011
+    zdroj: web-praha14-vedeni-25-11
+  - funkce: radní (ANO)
+    jmeno: Jan Adámek
+    subjekt: ano-2011
+    zdroj: web-praha14-vedeni-25-11
 
 zdroje:
   - id: novinky-prehled-19-10
@@ -17,6 +55,16 @@ zdroje:
     nazev: "Ustavující zasedání Zastupitelstva městské části Praha 14"
     datum: 2026-11-11
     url: "https://www.praha14.cz/zivot-na-praze-14/ustavujici-zasedani-zastupitelstva-mestske-casti-praha-14/"
+  - id: pd-praha14-smlouva-23-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 14 bude vládnout koalice Spolu a ANO, starostou zůstane Zajac z ODS"
+    datum: 2026-11-23
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-14-bude-vladnout-koalice-spolu-a-ano-starostou-zustane-zajac-z-ods/"
+  - id: web-praha14-vedeni-25-11
+    medium: "Městská část Praha 14"
+    nazev: "Městská část Praha 14 má nové vedení, starostou zůstal Jiří Zajac"
+    datum: 2026-11-25
+    url: "https://www.praha14.cz/zivot-na-praze-14/tz-14-2026-mestska-cast-praha-14-ma-nove-vedeni-starostou-zustal-jiri-zajac/"
 
 udalosti:
   - id: dosavadni-koalice-jedna
@@ -35,3 +83,27 @@ udalosti:
       Zajace do zasedání zastupitelstva 5. listopadu. Zajac chce post
       starosty obhájit.
     zdroje: [novinky-prehled-19-10]
+
+  - id: smlouva-spolu-ano
+    datum: 2026-11-22
+    typ: koalicni-smlouva
+    subjekty: [ods-spolu-s-top-09-a-sousedy-pro-prahu-14, ano-2011]
+    sestava: [ods-spolu-s-top-09-a-sousedy-pro-prahu-14, ano-2011]
+    kdo: Jiří Zajac (ODS), starosta
+    doklad: parafraze
+    shrnuti: >-
+      SPOLU (ODS s TOP 09) a ANO o víkendu 21.–22. 11. podepsaly koaliční smlouvu; mají
+      těsnou většinu 16 z 31. Proti minulému období ve vedení chybí STAN a
+      Naše Čtrnáctka.
+    zdroje: [pd-praha14-smlouva-23-11, web-praha14-vedeni-25-11]
+
+  - id: volba-zajac
+    datum: 2026-11-24
+    typ: volba
+    subjekty: [ods-spolu-s-top-09-a-sousedy-pro-prahu-14, ano-2011]
+    kdo: Jiří Zajac (ODS), starosta
+    doklad: dokument
+    shrnuti: >-
+      Starostou zůstává Zajac. Rada má devět členů: tři místostarosty a pět
+      uvolněných radních. Gesce rada rozdělí na některé z nejbližších schůzí.
+    zdroje: [web-praha14-vedeni-25-11]

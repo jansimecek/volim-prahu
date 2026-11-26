@@ -40,6 +40,7 @@ export default function StrankaKoalic() {
     .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs', { numeric: true }))
   const sledovane = casti.filter((z) => jeSledovane(z.slug))
   const ostatni = casti.filter((z) => !jeSledovane(z.slug))
+  const radaZvolena = vyjednavaniZastupitelstva('magistrat')?.udalosti.find((u) => u.typ === 'volba')
 
   return (
     <article className="space-y-12">
@@ -82,11 +83,24 @@ export default function StrankaKoalic() {
             {stranySMandaty(magistrat)
               .map((s) => `${s.nazev} ${s.mandaty}`)
               .join(' · ')}
-            . Primátora a radu zvolí 65 zastupitelů, většina je {vetsina(magistrat.mandatuCelkem)}.{' '}
+            .{' '}
+            {radaZvolena
+              ? `Primátora a radu zvolilo 65 zastupitelů ${datumCesky(radaZvolena.datum)}, většina je ${vetsina(magistrat.mandatuCelkem)}.`
+              : `Primátora a radu zvolí 65 zastupitelů, většina je ${vetsina(magistrat.mandatuCelkem)}.`}{' '}
             <Link href="/vysledky#magistrat" className="odkaz-akcent">
               Výsledky a zvolení zastupitelé
             </Link>
           </p>
+          {radaZvolena && (
+            <p className="flex flex-wrap gap-x-5">
+              <Link href="/rada" className="odkaz-akcent">
+                Rada, gesce a kdo za co odpovídá
+              </Link>
+              <Link href="/koalicni-smlouva" className="odkaz-akcent">
+                Koaliční smlouva 2026–2030
+              </Link>
+            </p>
+          )}
           <VyjednavaniZastupitelstva z={magistrat} nadpis="h3" />
         </section>
       )}

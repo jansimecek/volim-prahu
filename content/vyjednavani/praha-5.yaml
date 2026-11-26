@@ -4,7 +4,63 @@ zastupitelstvo: praha-5
 ustavujiciZasedani:
   datum: 2026-11-09
   zdroj: web-praha5-2-11
-overeno: 2026-11-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (STAN)
+    jmeno: David Dušek
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [strategické investice, bezpečnost a prevence kriminality, podpora podnikání, zahraniční vztahy]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: 1. zástupce starosty (ODS)
+    jmeno: Lukáš Herold
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [územní rozvoj, doprava]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: statutární místostarostka (SEN)
+    jmeno: Monika Shaw Salajová
+    subjekt: sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [školství]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (STAN)
+    jmeno: Jan Dobeš
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [sociální oblast, sociální bydlení]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (STAN)
+    jmeno: Yvetta Lizatović
+    subjekt: starostove-a-nezavisli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [kultura, investice, opravy ve školství]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (ODS)
+    jmeno: Olga Burianová
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [finance, strategické řízení, EU fondy a dotace]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (ODS)
+    jmeno: Kateřina Poláková
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [majetek]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (SEN)
+    jmeno: Milan Vrkoč
+    subjekt: sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [veřejný prostor, zeleň, životní prostředí]
+    zdrojGesci: web-praha5-vedeni-24-11
+  - funkce: radní (SEN)
+    jmeno: Lenka Mlynařík Habrnálová
+    subjekt: sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli
+    zdroj: web-praha5-vedeni-24-11
+    gesce: [dostupné bydlení, sport, spolkový život]
+    zdrojGesci: web-praha5-vedeni-24-11
 
 zdroje:
   - id: pd-praha5-12-10
@@ -37,6 +93,16 @@ zdroje:
     nazev: "Ustavující zasedání bude pokračovat"
     datum: 2026-11-11
     url: "https://www.praha5.cz/ustavujici-zasedani-bude-pokracovat/"
+  - id: web-praha5-vedeni-24-11
+    medium: "Městská část Praha 5"
+    nazev: "Praha 5 má nové vedení"
+    datum: 2026-11-24
+    url: "https://www.praha5.cz/praha-5-ma-nove-vedeni/"
+  - id: pd-praha5-volba-24-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 5 se stal David Dušek (STAN), vystřídá Lukáše Herolda (ODS)"
+    datum: 2026-11-24
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-5-se-stal-david-dusek-stan-vystrida-lukase-herolda-ods/"
 
 udalosti:
   - id: praha-5-sobe-oslovila-stan
@@ -115,3 +181,16 @@ udalosti:
       konec řízení o žalobě na neplatnost volby kandidáta; žaloba nemá
       odkladný účinek, proto se zasedání konat muselo.
     zdroje: [patriot-praha5-praha9-9-11, web-praha5-pokracovani-11-11]
+
+  - id: volba-dusek
+    datum: 2026-11-24
+    typ: volba
+    subjekty: [starostove-a-nezavisli, obcanska-demokraticka-strana, sen-pro-prahu-5-s-podporou-senatora-vaclava-lasky-a-spolecnosti-na-ochranu-prokopskeho-udoli, top-lidovci-a-nezavisli]
+    kdo: David Dušek (STAN), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou zvolen Dušek (27 hlasů), dosavadní starosta Herold (ODS) je 1.
+      zástupcem. Koalice STAN, ODS, SEN, TOP 09 a KDU-ČSL má 23 z 41; v
+      devítičlenné radě mají STAN, ODS a SEN po třech místech. Vítězná Praha 5
+      sobě je v opozici. Prioritou je prověřit novou radnici.
+    zdroje: [web-praha5-vedeni-24-11, pd-praha5-volba-24-11]

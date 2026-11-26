@@ -71,17 +71,19 @@ export const metadata: Metadata = {
  */
 const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popisek: string }[] }[] = [
   {
-    nadpis: 'Po volbách',
+    nadpis: 'Vedení města',
     odkazy: [
-      { href: '/vysledky', popisek: 'Konečné výsledky' },
+      { href: '/rada', popisek: 'Rada hlavního města' },
+      { href: '/koalicni-smlouva', popisek: 'Koaliční smlouva 2026–2030' },
       { href: '/koalice', popisek: 'Vyjednávání a koalice' },
       { href: '/mestska-cast', popisek: 'Městské části' },
-      { href: '/senat', popisek: 'Senát' },
     ],
   },
   {
-    nadpis: 'Archiv kampaně',
+    nadpis: 'Volby 2026',
     odkazy: [
+      { href: '/vysledky', popisek: 'Konečné výsledky' },
+      { href: '/senat', popisek: 'Senát' },
       { href: '/praha', popisek: 'Magistrát a kandidátky' },
       { href: '/debaty', popisek: 'Debaty kandidátů' },
       { href: '/kde-volim', popisek: 'Kde a jak se volilo' },
@@ -91,7 +93,7 @@ const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popise
   {
     nadpis: 'Podklady k hodnocení',
     odkazy: [
-      { href: '/minule-obdobi', popisek: 'Plnění slibů současné rady' },
+      { href: '/minule-obdobi', popisek: 'Plnění slibů rady 2022–2026' },
       { href: '/kdo-o-cem-rozhoduje', popisek: 'Kdo o čem rozhoduje' },
       { href: '/rozpoctovy-ramec', popisek: 'Kolik má Praha peněz' },
       { href: '/temata', popisek: 'Postoje k zásadním tématům' },
@@ -110,13 +112,14 @@ const PATICKA: readonly { nadpis: string; odkazy: readonly { href: Route; popise
 ]
 
 const NAVIGACE: readonly { href: Route; popisek: string }[] = [
-  { href: '/vysledky', popisek: 'Výsledky' },
+  { href: '/rada', popisek: 'Rada' },
+  { href: '/koalicni-smlouva', popisek: 'Smlouva' },
   { href: '/koalice', popisek: 'Vyjednávání' },
+  { href: '/vysledky', popisek: 'Výsledky' },
   { href: '/praha', popisek: 'Magistrát' },
   { href: '/mestska-cast', popisek: 'Městské části' },
   { href: '/senat', popisek: 'Senát' },
   { href: '/temata', popisek: 'Témata' },
-  { href: '/minule-obdobi', popisek: 'Plnění slibů' },
   { href: '/aktualne', popisek: 'Aktuálně' },
   { href: '/jak-hodnotime', popisek: 'Metodika' },
 ]
@@ -126,6 +129,7 @@ const NAVIGACE: readonly { href: Route; popisek: string }[] = [
  * v patičce. Na telefonu je patička čtyři obrazovky pod koncem obsahu.
  */
 const NAVIGACE_DALSI: readonly { href: Route; popisek: string }[] = [
+  { href: '/minule-obdobi', popisek: 'Rada 2022–2026' },
   { href: '/debaty', popisek: 'Debaty' },
   { href: '/kde-volim', popisek: 'Kde se volilo' },
   { href: '/hlasovani', popisek: 'Anketa' },

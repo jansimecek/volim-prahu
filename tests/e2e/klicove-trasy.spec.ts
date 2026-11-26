@@ -25,11 +25,32 @@ test('titulní strana zjistí okrsek z polohy', async ({ page, context }) => {
   await expect(page.getByText(/Novovysočanská 501\/5/)).toBeVisible()
 })
 
-test('plnění slibů je v hlavní navigaci', async ({ page }) => {
+test('rada a koaliční smlouva jsou v hlavní navigaci', async ({ page }) => {
   await page.goto('/')
   await otevriNavigaci(page)
-  await page.getByRole('navigation', { name: 'Hlavní navigace' }).getByText('Plnění slibů').click()
-  await expect(page).toHaveURL(/\/minule-obdobi$/)
+  const navigace = page.getByRole('navigation', { name: 'Hlavní navigace' })
+  await navigace.getByRole('link', { name: 'Smlouva', exact: true }).click()
+  await expect(page).toHaveURL(/\/koalicni-smlouva$/)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Koaliční smlouva 2026–2030')
+  await otevriNavigaci(page)
+  await navigace.getByRole('link', { name: 'Rada', exact: true }).click()
+  await expect(page).toHaveURL(/\/rada$/)
+})
+
+/**
+ * Smlouva i rada se skládají ze tří zdrojů (smlouva, vedení magistrátu,
+ * kandidátka). Odkaz z oddílu smlouvy na radního musí trefit jeho kartu
+ * a karta musí vést zpátky na oddíl.
+ */
+test('oddíl smlouvy a karta radního na sebe odkazují', async ({ page }) => {
+  await page.goto('/koalicni-smlouva')
+  const oddil = page.locator('#oddil-doprava')
+  await oddil.getByRole('link', { name: 'Adam Scheinherr' }).click()
+  await expect(page).toHaveURL(/\/rada#radni-adam-scheinherr$/)
+  const karta = page.locator('#radni-adam-scheinherr')
+  await expect(karta.getByText('náměstek primátora', { exact: true })).toBeVisible()
+  await karta.getByRole('link', { name: 'Doprava' }).click()
+  await expect(page).toHaveURL(/\/koalicni-smlouva#oddil-doprava$/)
 })
 
 /**

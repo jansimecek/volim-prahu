@@ -29,9 +29,9 @@ import { KOD_MAGISTRATU } from '@/lib/vysledky'
 import { absolutni } from '@/lib/web'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Volím Prahu — kdo povede Prahu po volbách 2026' },
+  title: { absolute: 'Volím Prahu — kdo vede Prahu 2026–2030' },
   description:
-    'Aktuální stav vyjednávání o vedení Prahy a 57 městských částí po komunálních volbách 2026: kdo s kým jedná, podepsané dohody, zvolení starostové, konečné výsledky a sestavy s většinou. Každá zpráva se zdrojem.',
+    'Kdo vede Prahu a 57 městských částí po komunálních volbách 2026: rada hlavního města a její gesce, koaliční smlouva a její plnění, vyjednávání a zvolení starostové. Každá zpráva se zdrojem.',
 }
 
 const procenta = new Intl.NumberFormat('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
@@ -44,6 +44,7 @@ export default async function Rozcestnik() {
   const magistrat = vysledky.find((z) => z.kod === KOD_MAGISTRATU)!
   const vMagistrat = vyjednavaniZastupitelstva('magistrat')
   const sestavaMagistratu = dohodnutaSestava(vMagistrat)
+  const primator = vMagistrat?.vedeni.find((f) => f.funkce.startsWith('primátor'))
   const casti = vysledky
     .filter((z) => z.kod !== KOD_MAGISTRATU && jeSledovane(z.slug))
     .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs', { numeric: true }))
@@ -64,9 +65,9 @@ export default async function Rozcestnik() {
       <StrukturovanaData
         data={{
           '@type': 'WebPage',
-          name: 'Kdo povede Prahu po volbách 2026',
+          name: 'Kdo vede Prahu 2026–2030',
           description:
-            'Aktuální stav povolebního vyjednávání o vedení hlavního města Prahy a městských částí, konečné výsledky komunálních voleb 2026.',
+            'Rada hlavního města Prahy, koaliční smlouva a vedení městských částí po komunálních volbách 2026, se zdrojem u každé zprávy.',
           url: absolutni('/'),
           inLanguage: 'cs',
           ...(overeno ? { dateModified: overeno } : {}),
@@ -81,10 +82,13 @@ export default async function Rozcestnik() {
         <p className="popisek-uredni">
           Po komunálních volbách 2026{overeno && <> · stav k {datumCesky(overeno)}</>}
         </p>
-        <h1 className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl">Kdo povede Prahu</h1>
+        <h1 className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl">
+          {primator ? 'Kdo vede Prahu' : 'Kdo povede Prahu'}
+        </h1>
         <p className="mt-4 max-w-prose text-lg">
-          Volby skončily, teď se jedná o vedení města a 57 městských částí. Zapisujeme jen doložené:
-          kdo s kým jedná, kdo co vyloučil, kdo podepsal dohodu a koho zastupitelé zvolili.
+          {primator
+            ? 'Hlavní město má novou radu a koaliční smlouvu. Sledujeme, co koalice slíbila a jak to plní, i vedení 57 městských částí. Zapisujeme jen doložené.'
+            : 'Volby skončily, teď se jedná o vedení města a 57 městských částí. Zapisujeme jen doložené: kdo s kým jedná, kdo co vyloučil, kdo podepsal dohodu a koho zastupitelé zvolili.'}
         </p>
 
         {/* Přehled na jeden pohled: tři otázky, se kterými sem čtenář přichází. */}
@@ -100,10 +104,26 @@ export default async function Rozcestnik() {
               <span className="popisek-uredni">Dohodnutá sestava</span>{' '}
               {sestavaMagistratu ? sestavaMagistratu.map((s) => nazevSubjektu(magistrat, s)).join(' + ') : 'zatím žádná'}
             </p>
-            <p className="mt-3">
-              <Link href="/koalice#magistrat" className="odkaz-akcent">
-                Časová osa a sestavy s většinou
-              </Link>
+            {primator && (
+              <p className="mt-2 text-sm">
+                <span className="popisek-uredni">Primátor</span> {primator.jmeno} · rada {vMagistrat!.vedeni.length} členů
+              </p>
+            )}
+            <p className="mt-3 flex flex-wrap gap-x-4">
+              {primator ? (
+                <>
+                  <Link href="/rada" className="odkaz-akcent">
+                    Rada a gesce
+                  </Link>
+                  <Link href="/koalicni-smlouva" className="odkaz-akcent">
+                    Koaliční smlouva
+                  </Link>
+                </>
+              ) : (
+                <Link href="/koalice#magistrat" className="odkaz-akcent">
+                  Časová osa a sestavy s většinou
+                </Link>
+              )}
             </p>
           </Karta>
 

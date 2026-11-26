@@ -7,6 +7,8 @@ import { KONTAKT_EMAIL, ZAKLAD_WEBU, absolutni } from '@/lib/web'
 import { datumCesky } from '@/lib/cestina'
 import { KONECNE_VYSLEDKY, stranySMandaty } from '@/lib/konecneVysledky'
 import { vetsina } from '@/lib/koalice'
+import { radaMagistratu } from '@/lib/rada'
+import { mereniSmlouvy, smlouva } from '@/lib/smlouva'
 import { lhutyUstavujichZasedani } from '@/lib/terminy'
 import {
   dohodnutaSestava,
@@ -38,6 +40,8 @@ export function GET(): Response {
   const aktuality = publikovane().slice(0, 10)
 
   const vysledky = KONECNE_VYSLEDKY.zastupitelstva
+  const magistratVysledek = vysledky.find((z) => z.slug === 'magistrat')!
+  const mereni = mereniSmlouvy()
 
   const overeno = naposledyOvereno()
   const lhuty = lhutyUstavujichZasedani()
@@ -69,9 +73,15 @@ export function GET(): Response {
   const radky = [
     '# Volím Prahu',
     '',
-    '> Nezávislé sledování pražské politiky. Po komunálních volbách 9.–10. října 2026 zapisuje, kdo s kým jedná o vedení hlavního města Prahy a 57 městských částí, kdo podepsal koaliční dohodu a koho zastupitelé zvolili — jen doložené, se zdrojem u každé zprávy. Obsahuje i konečné výsledky voleb a archiv předvolební kampaně (programy a hodnocení jejich proveditelnosti). Web nikomu nefandí a nic nepředpovídá.',
+    '> Nezávislé sledování pražské politiky po celé volební období 2026–2030. Zapisuje, kdo vede hlavní město a 57 městských částí, co koalice slíbily v koaliční smlouvě a jak to plní — jen doložené, se zdrojem u každé zprávy. Obsahuje i konečné výsledky voleb a archiv předvolební kampaně (programy a hodnocení jejich proveditelnosti). Web nikomu nefandí a nic nepředpovídá.',
     '',
-    `## Aktuální stav${overeno ? ` (ověřeno ${datumCesky(overeno)})` : ''}`,
+    '',
+    '## Vedení hlavního města 2026–2030',
+    `Rada zvolená 19. 11. 2026, koalice ${smlouva.dokument.strany.map((s) => nazevSubjektu(magistratVysledek, s)).join(', ')} (47 z 65). Funkce a gesce: ${absolutni('/rada')}`,
+    ...radaMagistratu().map((c) => `- ${c.jmeno} (${nazevSubjektu(magistratVysledek, c.subjekt)}), ${c.funkce}: ${c.gesce.join(', ')}.`),
+    `Koaliční smlouva podepsaná ${datumCesky(smlouva.dokument.podepsano)}; město zveřejnilo její programové priority (${mereni.celkem} závazků v ${smlouva.kapitoly.length} kapitolách, doslovně: ${absolutni('/koalicni-smlouva')}). Celé znění smlouvy zveřejněné není. Ze ${mereni.jedinecnych} závazků bez opakování ${mereni.sCislem} obsahuje číslo, ${mereni.sLetopoctem} letopočet a ${mereni.proverovacich} slibuje něco prověřit nebo analyzovat (strojové počty). Rozbor proveditelnosti a plnění přibývá průběžně; zatím má rozbor ${mereni.analyzovanych} závazků.`,
+    '',
+    `## Vyjednávání o vedení${overeno ? ` (ověřeno ${datumCesky(overeno)})` : ''}`,
     'Primátora, starosty a rady volí nově zvolená zastupitelstva nadpoloviční většinou na ustavujícím zasedání. Stav vyjednávání níže plyne z poslední doložené události (ohlášená dohoda, memorandum, koaliční smlouva, volba vedení); „probíhají jednání“ znamená, že o jednání víme, ne že je dohoda blízko. „Ohlášená dohoda“ je veřejně oznámená shoda na sestavě, zatím bez podepsaného dokumentu.',
     lhuty
       ? `Státní volební komise vyhlásila výsledky ${lhuty.vyhlaseno}; návrhy soudu do ${lhuty.navrhSouduDo}, ustavující zasedání nejpozději ${lhuty.zasedaniNejpozdeji} (pokud žádný návrh nepadne).`
@@ -102,21 +112,24 @@ export function GET(): Response {
         : 'výsledek druhého kola zatím není sečtený'
       return `- [Obvod č. ${o.cislo} ${o.nazev}](${absolutni(`/senat/${o.slug}`)}): ${popis}`
     }),
-    'První schůze Senátu v novém funkčním období je svolaná na 19. listopadu 2026 od 10 hodin; na programu je slib senátorů a volba předsedy a místopředsedů. Klub ODS a TOP 09 nominuje dosavadního předsedu Miloše Vystrčila (ODS). Václav Láska 21. října založil klub SEN 21 a nezávislých kandidátů s pěti členy.',
+    'První schůze Senátu v novém funkčním období byla svolaná na 19. listopadu 2026. Václav Láska 21. října založil klub SEN 21 a nezávislých kandidátů s pěti členy.',
     '',
     '## Klíčové stránky',
-    `- [Kdo povede Prahu — přehled](${absolutni('/')}): stav vyjednávání na magistrátu a v Praze 1–22, poslední zprávy, termíny.`,
+    `- [Kdo vede Prahu — přehled](${absolutni('/')}): vedení magistrátu a Prahy 1–22, poslední zprávy, termíny.`,
+    `- [Rada hlavního města](${absolutni('/rada')}): primátor, náměstci a radní 2026–2030, gesce, dřívější funkce a oddíly koaliční smlouvy, za které odpovídají.`,
+    `- [Koaliční smlouva 2026–2030](${absolutni('/koalicni-smlouva')}): všechny závazky z programových priorit smlouvy doslova, po kapitolách a radních, s rozborem proveditelnosti a plnění.`,
     `- [Vyjednávání a koalice](${absolutni('/koalice')}): časová osa doložených událostí, nejmenší sestavy s většinou, přehled městských částí, předvolební vyjádření o spolupráci.`,
     `- [Výsledky voleb 2026](${absolutni('/vysledky')}): konečné výsledky 58 zastupitelstev, mandáty a zvolení zastupitelé v pořadí zvolení.`,
     `- [Městské části](${absolutni('/mestska-cast')}): u každé výsledky, zvolení zastupitelé, vyjednávání a kandidátní listiny.`,
     `- [Aktuálně](${absolutni('/aktualne')}): datované zprávy se zdroji; RSS ${absolutni('/aktualne/feed.xml')}.`,
     `- [Kdo o čem rozhoduje](${absolutni('/kdo-o-cem-rozhoduje')}): kompetence magistrátu vs. městských částí s paragrafy.`,
     `- [Kolik má Praha peněz](${absolutni('/rozpoctovy-ramec')}): rozpočtový rámec a výhled.`,
-    `- [Plnění slibů rady 2023–2026](${absolutni('/minule-obdobi')}): ověřitelné závazky odcházející rady a jejich stav.`,
+    `- [Plnění slibů rady 2023–2026](${absolutni('/minule-obdobi')}): ověřitelné závazky předchozí rady a jejich stav.`,
     '',
     '## Strojově čitelná data (JSON, bez autentizace)',
     `- ${absolutni('/data/vyjednavani.json')}: stav vyjednávání ve všech 58 zastupitelstvech, mandáty, události se zdroji, zvolená vedení.`,
     `- ${absolutni('/data/vysledky-2026.json')}: konečné výsledky voleb 2026 včetně zvolených zastupitelů.`,
+    `- ${absolutni('/data/koalicni-smlouva.json')}: závazky koaliční smlouvy 2026–2030 doslova, radní podle gescí, strojové příznaky a rozbory.`,
     '',
     '## Archiv kampaně 2026',
     `- [Magistrát: kandidátky a programy](${absolutni('/praha')}), [postoje k tématům](${absolutni('/temata')}), [jak hodnotíme](${absolutni('/jak-hodnotime')}), [debaty](${absolutni('/debaty')}), [rozhovory](${absolutni('/rozhovory')}), [anketa čtenářů](${absolutni('/hlasovani')}), [kde se volilo](${absolutni('/kde-volim')}), [Senát](${absolutni('/senat')}).`,
