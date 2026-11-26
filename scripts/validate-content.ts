@@ -56,7 +56,9 @@ const KONTROLOVAT_SLOVNIK = (soubor: string) =>
   soubor.startsWith('content/postoje/') ||
   soubor === 'content/sporne-otazky.yaml' ||
   soubor === 'content/koalice.yaml' ||
-  soubor.startsWith('content/vyjednavani/')
+  soubor.startsWith('content/vyjednavani/') ||
+  soubor === 'content/koalicni-smlouva-2026-2030.yaml' ||
+  soubor === 'content/rada-hmp-2026-2030.yaml'
 
 type Nalez = { soubor: string; radek: number; zprava: string; tvrde: boolean }
 
@@ -254,6 +256,7 @@ function overKrizoveOdkazy() {
   overKoalice(velite, strany)
   overVyjednavani(velite)
   overVyhled(velite)
+  overSmlouvuARadu(velite)
   overSporneOtazky(velite, strany)
 }
 
@@ -482,6 +485,51 @@ function overSporneOtazky(velite: string, strany: { slug: string; uroven: string
       }
     }
   }
+}
+
+/**
+ * Koaliční smlouva i rada odkazují na lidi a subjekty jinde v obsahu. Funkce
+ * a gesce radních jsou jen ve `vedeni` magistrátu; kdyby se jméno v radě nebo
+ * u oddílu smlouvy od vedení rozešlo (překlep, výměna radního), stránka by
+ * člověka tiše vynechala nebo ukázala bez funkce.
+ */
+function overSmlouvuARadu(velite: string) {
+  const cesty = ['smlouva.json', 'rada.json', 'vyjednavani.json'].map((f) => join(velite, f))
+  if (!cesty.every((c) => existsSync(c))) return
+  const smlouva = JSON.parse(readFileSync(cesty[0]!, 'utf8')) as {
+    dokument: { strany: string[] }
+    kapitoly: { oddily: { id: string; radni: string[]; zavazky: { id: string; analyza?: { puvod: { subjekt: string }[] } }[] }[] }[]
+  }
+  const rada = JSON.parse(readFileSync(cesty[1]!, 'utf8')) as { clenove: { jmeno: string; kandidat: string }[] }
+  const magistrat = (JSON.parse(readFileSync(cesty[2]!, 'utf8')) as { zastupitelstvo: string; vedeni: { jmeno: string }[] }[]).find(
+    (v) => v.zastupitelstvo === 'magistrat',
+  )
+  const kandidatka = JSON.parse(readFileSync(join(KOREN, 'data/kandidatky/magistrat.json'), 'utf8')) as {
+    strany: { slug: string; kandidati: { slug: string; jmeno: string; prijmeni: string }[] }[]
+  }
+  const subjekty = new Set(kandidatka.strany.map((s) => s.slug))
+  const osoby = new Map(kandidatka.strany.flatMap((s) => s.kandidati.map((k) => [k.slug, `${k.jmeno} ${k.prijmeni}`] as const)))
+  const vedeni = new Set((magistrat?.vedeni ?? []).map((f) => f.jmeno))
+  const chyba = (soubor: string, zprava: string) => nalezy.push({ soubor, radek: 0, zprava, tvrde: true })
+
+  const S = 'content/koalicni-smlouva-2026-2030.yaml'
+  for (const slug of smlouva.dokument.strany) if (!subjekty.has(slug)) chyba(S, `Strana smlouvy "${slug}" není na kandidátce magistrátu.`)
+  for (const o of smlouva.kapitoly.flatMap((k) => k.oddily)) {
+    for (const jmeno of o.radni) if (!vedeni.has(jmeno)) chyba(S, `Oddíl "${o.id}" přiřazuje radního "${jmeno}", který ve vedení magistrátu není.`)
+    for (const z of o.zavazky)
+      for (const p of z.analyza?.puvod ?? [])
+        if (!subjekty.has(p.subjekt)) chyba(S, `Závazek "${z.id}" uvádí původ u subjektu "${p.subjekt}", který na magistrátu nekandidoval.`)
+  }
+
+  const R = 'content/rada-hmp-2026-2030.yaml'
+  const vRade = new Set(rada.clenove.map((c) => c.jmeno))
+  for (const c of rada.clenove) {
+    if (!vedeni.has(c.jmeno)) chyba(R, `"${c.jmeno}" není ve vedení magistrátu (content/vyjednavani/magistrat.yaml).`)
+    const osoba = osoby.get(c.kandidat)
+    if (!osoba) chyba(R, `Radní "${c.jmeno}" odkazuje na kandidáta "${c.kandidat}", který na kandidátce magistrátu není.`)
+    else if (osoba !== c.jmeno) chyba(R, `Slug "${c.kandidat}" patří kandidátovi ${osoba}, ne radnímu ${c.jmeno}.`)
+  }
+  for (const jmeno of vedeni) if (!vRade.has(jmeno)) chyba(R, `Člen vedení magistrátu "${jmeno}" v podkladu rady chybí.`)
 }
 
 async function main() {

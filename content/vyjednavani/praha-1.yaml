@@ -1,7 +1,66 @@
 # Povolební vyjednávání — praha-1. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-1
-overeno: 2026-11-11
+ustavujiciZasedani:
+  datum: 2026-11-19
+  zdroj: web-praha1-vedeni-20-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starostka (TOP 09)
+    jmeno: Terezie Radoměřská
+    subjekt: top-09-srdce-prahy
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [legislativa, vnější vztahy, krizové řízení, bezpečnost, participace, veřejné zakázky, školství]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: 1. místostarosta (ODS)
+    jmeno: Michal Müller
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [zdravotnictví, Nemocnice Na Františku, péče o seniory, zahraniční vztahy]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: místostarosta
+    jmeno: Petr Hejma
+    subjekt: starostove-kdu-csl-s-podporou-iniciativy-obcanu-my-co-tady-zijeme
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [územní rozvoj, strategický rozvoj, památková péče]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: místostarosta (ODS)
+    jmeno: Tomáš Heres
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [finance, majetek]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: místostarosta
+    jmeno: Petr Burgr
+    subjekt: starostove-kdu-csl-s-podporou-iniciativy-obcanu-my-co-tady-zijeme
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [kultura, spolky, sociální oblast]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Giancarlo Lamberti
+    subjekt: top-09-srdce-prahy
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [doprava, veřejný prostor, úklid a čistota, krátkodobé ubytování, investice]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: radní (ODS)
+    jmeno: Richard Bureš
+    subjekt: obcanska-demokraticka-strana
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [informatika, smart city]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: radní
+    jmeno: Karel Grabein Procházka
+    subjekt: nase-praha-1-ano-2011-a-nezavisli-staromestska-lipa-sdruzeni-obcanu-a-pratel-stareho-mesta-a-josefova-v-praze-spolek
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [obchod a služby, cestovní ruch, facility management]
+    zdrojGesci: web-praha1-vedeni-20-11
+  - funkce: radní
+    jmeno: Kateřina Klasnová
+    subjekt: nezavisli-z-jednicky-kateriny-klasnove-a-davida-bodecka
+    zdroj: web-praha1-vedeni-20-11
+    gesce: [životní prostředí, zeleň, hřiště, parky a sportoviště]
+    zdrojGesci: web-praha1-vedeni-20-11
 
 zdroje:
   - id: pd-praha1-12-10
@@ -19,6 +78,16 @@ zdroje:
     nazev: "V Praze 1 se dohodla koalice pěti uskupení, starostkou bude dál Radoměřská z TOP 09"
     datum: 2026-10-22
     url: "https://www.prazskypatriot.cz/v-praze-1-se-dohodla-koalice-peti-uskupeni-starostkou-bude-dal-radomerska-z-top-09/"
+  - id: web-praha1-vedeni-20-11
+    medium: "Městská část Praha 1"
+    nazev: "Praha 1 zvolila vedení radnice, starostkou zůstává Terezie Radoměřská"
+    datum: 2026-11-20
+    url: "https://www.praha1.cz/praha-1-zvolila-vedeni-radnice-starostkou-zustava-terezie-radomerska/"
+  - id: pd-praha1-volba-19-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "V Praze 1 vše při starém, starostkou se znovu stala Terezie Radoměřská (TOP 09)"
+    datum: 2026-11-19
+    url: "https://prazsky.denik.cz/komunalni-volby/v-praze-1-vse-pri-starem-starostkou-se-znovu-stala-terezie-radomerska-top-09/"
 
 udalosti:
   - id: praha-1-sobe-top-pirati
@@ -71,3 +140,18 @@ udalosti:
       Radoměřská; Petr Hejma (STAN) se nároku na post starosty vzdal.
       Ustavující zasedání má být v listopadu.
     zdroje: [patriot-praha1-22-10]
+
+  - id: volba-radomerska
+    datum: 2026-11-19
+    typ: volba
+    subjekty: [top-09-srdce-prahy, obcanska-demokraticka-strana, starostove-kdu-csl-s-podporou-iniciativy-obcanu-my-co-tady-zijeme, nase-praha-1-ano-2011-a-nezavisli-staromestska-lipa-sdruzeni-obcanu-a-pratel-stareho-mesta-a-josefova-v-praze-spolek, nezavisli-z-jednicky-kateriny-klasnove-a-davida-bodecka]
+    kdo: Terezie Radoměřská (TOP 09), starostka
+    doklad: citace
+    citace: >-
+      Jsem a dále hodlám být člověk, který spojuje více, než rozděluje.
+    shrnuti: >-
+      Starostkou podruhé zvolena Radoměřská; pět uskupení má 17 z 27 hlasů,
+      Praha 1 sobě a Piráti jsou v opozici. Rada má devět členů, z toho pět
+      místostarostů. Gesce jsou podle koaliční dohody, rada je měla potvrdit
+      na první schůzi. Kontrolní výbor vede Amália Počarovská (Praha 1 sobě).
+    zdroje: [web-praha1-vedeni-20-11, pd-praha1-volba-19-11]

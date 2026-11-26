@@ -1,7 +1,48 @@
 # Povolební vyjednávání — praha-15. Zapisuje se jen doložené; citace ověřené v surovém textu zdroje.
 
 zastupitelstvo: praha-15
-overeno: 2026-11-11
+ustavujiciZasedani:
+  datum: 2026-11-20
+  zdroj: pd-praha15-volba-20-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta
+    jmeno: Marcel Pencák
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: místostarostka
+    jmeno: Jana Brádková
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: místostarosta
+    jmeno: Zdeněk Edlman
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní
+    jmeno: Klára Krybusová
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní
+    jmeno: Milan Ducek
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní
+    jmeno: Ivana Lisnerová
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní
+    jmeno: Jan Veleba
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní
+    jmeno: Miroslav Hynšt
+    subjekt: patnactka-nas-domov
+    zdroj: pd-praha15-volba-20-11
+  - funkce: radní (neuvolněný, Praha sobě)
+    jmeno: Martin Schaefer
+    subjekt: pirati-a-praha-15-sobe
+    zdroj: pd-praha15-volba-20-11
 
 zdroje:
   - id: pd-praha3-12-10
@@ -19,6 +60,11 @@ zdroje:
     nazev: "Soud změnil v Praze 15 výsledek voleb, ANO přišlo o jednoho zastupitele"
     datum: 2026-11-05
     url: "https://prazska.drbna.cz/spolecnost/904988-soud-zmenil-v-praze-15-vysledek-voleb-ano-prislo-o-jednoho-zastupitele.html"
+  - id: pd-praha15-volba-20-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 15 je Marcel Pencák, s dalšími členy rady ho zvolili zastupitelé"
+    datum: 2026-11-20
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-15-je-marcel-pencak-s-dalsimi-cleny-rady-ho-zvolili-zastupitele/"
 
 udalosti:
   - id: patnactka-stan-pirati
@@ -68,3 +114,15 @@ udalosti:
       na úkor ANO: PND má 17 z 31, ANO 3. Výsledky ČSÚ na tomto webu změnu
       zatím neobsahují. Koalice s Piráty a Prahou 15 sobě má teď 19 hlasů.
     zdroje: [drbna-praha15-soud-5-11]
+
+  - id: volba-pencak
+    datum: 2026-11-20
+    typ: volba
+    subjekty: [patnactka-nas-domov, pirati-a-praha-15-sobe]
+    kdo: Marcel Pencák (Patnáctka náš domov), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou zvolen Pencák (26 hlasů), nahradil Michala Fischera (nez. za
+      ODS). Koalici tvoří Patnáctka náš domov (17 z 31) s Piráty a Prahou 15
+      sobě. STAN účast v koalici odmítl, volbu vedení ale podpořil.
+    zdroje: [pd-praha15-volba-20-11]

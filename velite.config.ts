@@ -8,6 +8,7 @@ import {
   ZAVER,
 } from './src/lib/hodnoceni'
 import { ID_OKRUHU } from './src/lib/okruhy'
+import { STAV_PLNENI } from './src/lib/smlouvaTypy'
 import ciselnikZastupitelstev from './data/ciselniky/zastupitelstva.json'
 
 /**
@@ -326,6 +327,158 @@ const plneni = defineCollection({
       })
     }
   }),
+})
+
+const odkazSeZdrojem = s.object({ text: s.string().min(1), url: url })
+
+/**
+ * Rozbor jednoho závazku koaliční smlouvy. Každá část je nepovinná, ale když
+ * je, musí mít zdroj — rozbor bez zdroje je názor. Proveditelnost se hodnotí
+ * stejným schématem jako sliby ve volebních programech, aby šlo obojí srovnat.
+ */
+const analyzaZavazku = s
+  .object({
+    overeno: s.isodate(),
+    hodnoceni: hodnoceni.optional(),
+    /** Ve kterém volebním programu 2026 slib stál (slug subjektu na magistrátu). */
+    puvod: s.array(s.object({ subjekt: s.string().min(1), citace_zdroje: url })).default([]),
+    plneni: s
+      .object({
+        stav: s.enum(STAV_PLNENI),
+        popis: s.string().min(1),
+        zdroje: s.array(odkazSeZdrojem).min(1),
+      })
+      .optional(),
+  })
+  .refine((a) => a.hodnoceni || a.puvod.length > 0 || a.plneni, {
+    message: 'Analýza závazku musí obsahovat aspoň hodnocení, původ, nebo plnění — jinak ji smaž.',
+  })
+
+/**
+ * Koaliční smlouva 2026–2030 (content/koalicni-smlouva-2026-2030.yaml).
+ *
+ * Znění závazků je doslovné z dokumentu, který zveřejnilo město. Struktura
+ * (kapitoly, oddíly) kopíruje dokument, aby šlo každý závazek dohledat
+ * v originále. Kdo za oddíl odpovídá v radě, je naše přiřazení podle gescí.
+ */
+const smlouva = defineCollection({
+  name: 'KoalicniSmlouva',
+  pattern: 'koalicni-smlouva-2026-2030.yaml',
+  single: true,
+  schema: s
+    .object({
+      dokument: s.object({
+        nazev: s.string().min(1),
+        podepsano: s.isodate(),
+        strany: s.array(s.string().min(1)).min(2),
+        zdrojPodpisu: odkazSeZdrojem,
+        zverejneno: s.object({
+          nazev: s.string().min(1),
+          url: url,
+          vydano: s.isodate(),
+          stran: s.number().int().positive(),
+        }),
+        /** Celé znění (práva a povinnosti stran) — dokud ho nikdo nezveřejní, false. */
+        plneZneniZverejneno: s.boolean(),
+        programoveProhlaseni: s.object({ slib: s.string().min(1), zdroj: odkazSeZdrojem }).optional(),
+      }),
+      overeno: s.isodate(),
+      kapitoly: s
+        .array(
+          s.object({
+            id: s.string().min(1),
+            nazev: s.string().min(1),
+            oddily: s
+              .array(
+                s.object({
+                  id: s.string().min(1),
+                  nazev: s.string().min(1),
+                  /** Jména radních z `vedeni` magistrátu; prázdné, když gesce není jednoznačná. */
+                  radni: s.array(s.string().min(1)).default([]),
+                  zavazky: s
+                    .array(
+                      s.object({
+                        id: s.string().regex(/^[a-z0-9-]+-\d{2}$/),
+                        zneni: s.string().min(1),
+                        /** Téměř doslovné opakování jiného závazku — do počtů jedinečných se nepočítá. */
+                        opakuje: s.string().min(1).optional(),
+                        /** Závazky, které tenhle rozvádějí nebo shrnují. */
+                        souvisi: s.array(s.string().min(1)).default([]),
+                        analyza: analyzaZavazku.optional(),
+                      }),
+                    )
+                    .min(1),
+                }),
+              )
+              .min(1),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const id = new Set<string>()
+      const oddily = new Set<string>()
+      for (const k of data.kapitoly) {
+        for (const o of k.oddily) {
+          if (oddily.has(o.id)) ctx.addIssue({ code: 'custom', message: `Oddíl "${o.id}" je uvedený dvakrát.` })
+          oddily.add(o.id)
+          for (const z of o.zavazky) {
+            if (id.has(z.id)) ctx.addIssue({ code: 'custom', message: `Závazek "${z.id}" je uvedený dvakrát.` })
+            id.add(z.id)
+          }
+        }
+      }
+      for (const k of data.kapitoly)
+        for (const o of k.oddily)
+          for (const z of o.zavazky)
+            for (const cil of [...(z.opakuje ? [z.opakuje] : []), ...z.souvisi])
+              if (!id.has(cil)) ctx.addIssue({ code: 'custom', message: `Závazek "${z.id}" odkazuje na neexistující "${cil}".` })
+    }),
+})
+
+/**
+ * Rada hlavního města 2026–2030 (content/rada-hmp-2026-2030.yaml) — co k radním
+ * patří nad rámec funkce a gescí. Ty jsou jen ve `vedeni` magistrátu, aby se
+ * při změně v radě nerozešly dvě kopie; shodu jmen hlídá `pnpm validate`.
+ */
+const rada = defineCollection({
+  name: 'RadaHmp',
+  pattern: 'rada-hmp-2026-2030.yaml',
+  single: true,
+  schema: s
+    .object({
+      overeno: s.isodate(),
+      zdroje: s
+        .array(s.object({ id: s.string().min(1), medium: s.string().min(1), nazev: s.string().min(1), datum: s.isodate(), url: url }))
+        .default([]),
+      clenove: s
+        .array(
+          s.object({
+            jmeno: s.string().min(1),
+            /** Slug osoby z kandidátky ČSÚ — odtud věk a povolání při kandidatuře. */
+            kandidat: s.string().min(1),
+            pusobeni: s.array(s.object({ text: s.string().min(1).max(240), zdroj: s.string().min(1) })).default([]),
+            analyza: s
+              .object({
+                overeno: s.isodate(),
+                shrnuti: s.string().min(120),
+                zdroje: s.array(odkazSeZdrojem).min(1),
+              })
+              .optional(),
+          }),
+        )
+        .min(1),
+    })
+    .superRefine((data, ctx) => {
+      const zdroje = new Set(data.zdroje.map((z) => z.id))
+      const jmena = new Set<string>()
+      for (const c of data.clenove) {
+        if (jmena.has(c.jmeno)) ctx.addIssue({ code: 'custom', message: `Radní "${c.jmeno}" je uvedený dvakrát.` })
+        jmena.add(c.jmeno)
+        for (const p of c.pusobeni)
+          if (!zdroje.has(p.zdroj)) ctx.addIssue({ code: 'custom', message: `Působení radního "${c.jmeno}" odkazuje na neexistující zdroj "${p.zdroj}".` })
+      }
+    }),
 })
 
 /**
@@ -1311,6 +1464,8 @@ export default defineConfig({
     kompetence,
     rozpocet,
     plneni,
+    smlouva,
+    rada,
     vyroky,
     pruzkumy,
     postoje,

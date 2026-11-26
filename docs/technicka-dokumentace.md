@@ -476,9 +476,10 @@ Nácvik nikdy nepíše do ostrého snapshotu — má vlastní cíl a nad produk�
 stav voleb 2026.
 
 Web se sám přepíná mezi režimy podle času (`src/lib/rezim.ts`): před volbami,
-volební dny, sčítání a od konce sčítání (11. 10. 8:35) **vyjednávání**. Po
-volbách je nad obsahem pruh, který říká, že volby proběhly a předvolební obsah
-je archiv kampaně.
+volební dny, sčítání, od konce sčítání (11. 10. 8:35) **vyjednávání** a od
+zvolení rady hlavního města (19. 11. 15:00) **volební období**. Po volbách je
+nad obsahem pruh, který říká, že volby proběhly a předvolební obsah je archiv
+kampaně; ve volebním období odkazuje na radu a koaliční smlouvu.
 
 ## Po volbách
 
@@ -511,6 +512,39 @@ Pro vyhledávače a jazykové modely: `/llms.txt` propisuje aktuální stav
 vyjednávání ze stejných dat jako web, `/data/vyjednavani.json`
 a `/data/vysledky-2026.json` jsou statické JSON výstupy (s nasazením se
 obnoví samy) a `/vysledky` i `/koalice` nesou strukturovaná data `Dataset`.
+
+### Rada a koaliční smlouva
+
+Vedení hlavního města se sleduje ve třech souborech, každý s jedinou
+odpovědností:
+
+- `content/vyjednavani/magistrat.yaml` — `vedeni`: kdo má jakou funkci
+  a gesce. Je to **jediné místo**, kde funkce a gesce jsou; při rekonstrukci
+  rady se mění tady.
+- `content/rada-hmp-2026-2030.yaml` — co k radnímu patří navíc: slug
+  z kandidátky ČSÚ (odtud věk a povolání), doložené dřívější funkce se
+  zdrojem a později `analyza`. `src/lib/rada.ts` to spojí s `vedeni`
+  a s oddíly smlouvy.
+- `content/koalicni-smlouva-2026-2030.yaml` — programové priority smlouvy
+  doslova, kapitola → oddíl → závazek. U oddílu `radni` (naše přiřazení
+  podle gescí). Každý závazek může dostat `analyza`: `hodnoceni` (stejné
+  schéma jako u slibů v programech), `puvod` (program, kde slib stál)
+  a `plneni` (stav ze `src/lib/smlouvaTypy.ts`, `bez-dokladu` není
+  `nesplneno`). `opakuje` vyřadí téměř doslovné opakování z počtů,
+  `souvisi` propojí shrnutí s rozpracováním.
+
+Text závazků vznikl strojově z PDF na praha.eu (`pdftotext -layout`, jedna
+odrážka = jeden závazek, spojené zalomení řádků) a byl porovnán slovo po
+slově s originálem. Test hlídá počet 137 a že ve znění nezůstaly stopy
+zalomení. Strojové příznaky (číslo, letopočet, prověřovací, podmíněný)
+počítá `src/lib/smlouva.ts` z textu za běhu, neukládají se.
+
+`pnpm validate` hlídá, že se jména v radě a u oddílů smlouvy shodují
+s `vedeni`, že slugy kandidátů existují a patří stejnému člověku a že
+původ závazku míří na subjekt, který na magistrátu kandidoval. Obě kolekce
+jsou v kontrole slovníku verdiktu.
+
+Stránky `/rada` a `/koalicni-smlouva`, data `/data/koalicni-smlouva.json`.
 
 Výčet sestav s většinou počítá `minimalniKoalice` z konečných mandátů;
 vyloučení bere z událostí typu `vylouceni` a u magistrátu i z předvolebních

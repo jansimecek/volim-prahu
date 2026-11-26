@@ -4,7 +4,61 @@ zastupitelstvo: praha-3
 ustavujiciZasedani:
   datum: 2026-11-18
   zdroj: web-praha3-pozvanka
-overeno: 2026-11-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (TOP 09)
+    jmeno: Michal Vronský
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+  - funkce: 1. místostarosta (STAN)
+    jmeno: Pavel Křeček
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [územní rozvoj, kultura, sport]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: místostarostka (nez. za Prahu sobě)
+    jmeno: Edita Janečková
+    subjekt: pirati-praha-3-sobe-a-edita-janeckova
+    zdroj: pd-praha3-volba-18-11
+    gesce: [sociální oblast, zdravotnictví, rodinná politika, dotační politika]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: místostarosta (TOP 09)
+    jmeno: Robert Pecka
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [majetek, investice, akciové společnosti, energetika]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: místostarostka (STAN)
+    jmeno: Zdena Štěpánková
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [bydlení]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: místostarosta (Praha sobě)
+    jmeno: Filip Málek
+    subjekt: pirati-praha-3-sobe-a-edita-janeckova
+    zdroj: pd-praha3-volba-18-11
+    gesce: [školství, IT]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: radní (STAN)
+    jmeno: Adam Trunečka
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [finance, strategické plánování]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: radní (TOP 09)
+    jmeno: Karel Vejvoda
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [doprava]
+    zdrojGesci: pd-praha3-volba-18-11
+  - funkce: radní (neuvolněný, TOP 09)
+    jmeno: Jiří Ptáček
+    subjekt: top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe
+    zdroj: pd-praha3-volba-18-11
+    gesce: [životní prostředí]
+    zdrojGesci: pd-praha3-volba-18-11
 
 zdroje:
   - id: pd-praha3-12-10
@@ -22,6 +76,11 @@ zdroje:
     nazev: "Pozvánka na 1. ustavující zasedání Zastupitelstva městské části Praha 3"
     datum: 2026-11-10
     url: "https://www.praha3.cz/urad/dulezite-informace-z-mestske-casti/pozvanka-na-1-ustavujici-zasedani-zastupitelstva-mestske-casti-praha-3-n845978.htm"
+  - id: pd-praha3-volba-18-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 3 je opět Michal Vronský (TOP 09), vzroste počet místostarostů"
+    datum: 2026-11-18
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-3-je-opet-michal-vronsky-top-09-vzroste-pocet-mistostarostu/"
 
 udalosti:
   - id: top-stan-hledaji-partnera
@@ -56,3 +115,18 @@ udalosti:
       Janečkové (6 mandátů). Potvrdit ji má ustavující zasedání 18.
       listopadu; Vronský má zůstat starostou.
     zdroje: [pd-praha3-10-11]
+
+  - id: volba-vronsky
+    datum: 2026-11-18
+    typ: volba
+    subjekty: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    sestava: [top-09-starostove-a-nezavisli-s-podporou-zizkov-nejen-sobe, pirati-praha-3-sobe-a-edita-janeckova]
+    kdo: Michal Vronský (TOP 09), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou podruhé zvolen Vronský (26 hlasů); koalice TOP 09 a STAN s
+      Piráty a Prahou 3 sobě má 24 z 35. Místostarostů je pět. Uvolnění budou
+      i předsedové nových výborů pro IT a inovace a pro životní prostředí.
+      Priority: kapacity škol, veřejný prostor, Nákladové nádraží Žižkov,
+      dostupné bydlení pro mladé rodiny.
+    zdroje: [pd-praha3-volba-18-11]

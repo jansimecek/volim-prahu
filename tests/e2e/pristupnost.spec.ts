@@ -17,6 +17,8 @@ const TRASY = [
   { cesta: '/kdo-o-cem-rozhoduje', nazev: 'kompetenční matice' },
   { cesta: '/rozpoctovy-ramec', nazev: 'rozpočtový rámec' },
   { cesta: '/minule-obdobi', nazev: 'plnění prohlášení rady' },
+  { cesta: '/koalicni-smlouva', nazev: 'koaliční smlouva' },
+  { cesta: '/rada', nazev: 'rada hlavního města' },
   { cesta: '/senat', nazev: 'senát' },
   { cesta: '/kde-volim', nazev: 'kde volím' },
   { cesta: '/hledani', nazev: 'hledání' },

@@ -1,0 +1,1217 @@
+# Koaliční smlouva STAN, SPOLU a Prahy sobě pro období 2026–2030.
+#
+# Text závazků je DOSLOVNĚ převzatý z dokumentu, který město zveřejnilo
+# 19. 11. 2026 (Programové priority z koaliční smlouvy, 16 stran, PDF na
+# praha.eu). Jedna odrážka dokumentu = jeden závazek; podbody „o“ jsou
+# samostatné závazky. Nadpisy kapitol a oddílů jsou z dokumentu, id jsou naše.
+# Do `zneni` se nesahá — oprava textu by z citace udělala parafrázi.
+#
+# Celé znění smlouvy (práva a povinnosti stran, rozdělení gescí, výbory)
+# zveřejněné není; ČTK ho měla k dispozici, město ho nevydalo.
+#
+# `radni` u oddílu: kdo za oblast v radě odpovídá. Je to naše přiřazení —
+# názvy kapitol odpovídají gescím, jak si je rada rozdělila 19. 11. (ČTK).
+# Kde to jednoznačné není, zůstává prázdné.
+#
+# Analýza závazku (`analyza`) se doplňuje průběžně a jen se zdrojem:
+#   - `hodnoceni` — proveditelnost ve stejném rámci jako u volebních programů
+#     (kompetence, rozpočet, čas, historie, závěr; metodika /jak-hodnotime),
+#   - `puvod` — ve kterém volebním programu 2026 slib stál,
+#   - `plneni` — průběžný stav; BEZ-DOKLADU NENÍ NESPLNĚNO.
+# Závazek bez `analyza` je neanalyzovaný, ne bezproblémový.
+
+dokument:
+  nazev: Koaliční smlouva o spolupráci v Zastupitelstvu hlavního města Prahy ve volebním období 2026–2030
+  podepsano: 2026-11-18
+  strany: [starostove-a-nezavisli, spolu-pro-prahu, praha-sobe]
+  zdrojPodpisu:
+    text: "STAN, SPOLU a Praha sobě podepsaly koaliční smlouvu v Praze (ČT24, 18. 11. 2026)"
+    url: https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/stan-spolu-a-praha-sobe-podepsaly-koalicni-smlouvu-v-praze-379711
+  zverejneno:
+    nazev: Programové priority z Koaliční smlouvy o spolupráci v Zastupitelstvu hlavního města Prahy ve volebním období 2026–2030
+    url: https://praha.eu/documents/d/praha/programove-priority-z-koalicni-smlouvy-2026-2030
+    vydano: 2026-11-19
+    stran: 16
+  plneZneniZverejneno: false
+  programoveProhlaseni:
+    slib: Rada do 100 dnů zveřejní podrobné programové prohlášení, které priority ze smlouvy rozvede.
+    zdroj:
+      text: "Praha má nové vedení, Svobodu vystřídal v roli primátora Hlaváček (ČTK, 19. 11. 2026)"
+      url: https://www.ceskenoviny.cz/zpravy/praha-ma-nove-vedeni-svobodu-vystridal-v-roli-primatora-hlavacek-/2903301
+overeno: 2026-11-26
+
+kapitoly:
+  - id: uzemni-rozvoj
+    nazev: Územní rozvoj, územní plán, veřejný prostor, bydlení
+    oddily:
+      - id: uzemni-rozvoj-priority
+        nazev: Priority
+        radni: [Petr Hlaváček]
+        zavazky:
+          - id: uzemni-rozvoj-priority-01
+            zneni: >-
+              Zajistit transparentní a udržitelný systém financování výstavby městských
+              bytů a zahájit přípravu alespoň 1000 bytů, s cílem začít výstavbu co
+              největšího počtu z nich do roku 2030. Transformovat Pražskou developerskou
+              společnost (dále jen PDS).
+          - id: uzemni-rozvoj-priority-02
+            zneni: >-
+              zajistit stabilitu Metropolitního plánu a naplňovat ho podrobnějšími plány a
+              významnými investicemi
+      - id: rozvojove-projekty
+        nazev: Rozvojové projekty
+        radni: [Petr Hlaváček]
+        zavazky:
+          - id: rozvojove-projekty-01
+            zneni: >-
+              Klíčové investiční akce hl. m. Prahy (např. Městský okruh, Metro D,
+              Smíchovský terminál, lokalita Hlavní nádraží, Vltavská filharmonie,
+              Nákladové nádraží Žižkov apod.) budou koordinovány přímo ze strany primátora
+              a jeho kanceláře.
+          - id: rozvojove-projekty-02
+            zneni: >-
+              Prioritou je zahájení výstavby Vltavské Filharmonie. Budeme usilovat o
+              zajištění spolufinancování státu a skrze donátory. Komplexní organizace
+              projektu bude probíhat nadále skrze PDS, pro provoz budovy bude zřízena
+              akciová společnost založená ve veřejném zájmu (a.s.), která bude
+              stoprocentně vlastněná Hlavním městem Prahou.
+          - id: rozvojove-projekty-03
+            zneni: >-
+              Mezi klíčové investice budou patřit také střední školy, ZŠ a sportovní
+              stavby.
+          - id: rozvojove-projekty-04
+            zneni: >-
+              Dále bude kladen důraz na stavby pro seniory a budování infrastruktury jako
+              přípravy pro stárnutí populace.
+      - id: bydleni
+        nazev: Bydlení
+        radni: [Petr Hlaváček]
+        zavazky:
+          - id: bydleni-01
+            zneni: >-
+              Provedeme reformu způsobu výstavby městských bytů tak, abychom byli schopni
+              stavět finančně udržitelným způsobem tisíce městských dostupných bytů.
+              Cestou k tomu je transformace PDS na akciovou společnost s právem stavby i
+              správy bytů. Společnost bude fungovat na těchto principech, které budou
+              prověřeny podrobnou právní a ekonomickou analýzou.
+          - id: bydleni-02
+            zneni: >-
+              Oddělíme hospodaření Společnosti PDS od dluhové bilance města – dluh
+              Společnosti se nebude propisovat do dluhového limitu hlavního města Prahy
+              (dále jen HMP). Vznikne tak nezávislá korporátní entita (ideálně a.s.) pod
+              kontrolou města s profesionalizovaným managementem a nezávislým hospodařením
+              společnosti.
+          - id: bydleni-03
+            zneni: >-
+              Prověříme možnosti zapojení dalších forem výstavby dostupného bydlení na
+              městských pozemcích, například prostřednictvím PPP projektů, družstevního
+              bydlení či nízkoziskových modelů (např. baugruppe), s cílem podpořit
+              sociálně vyváženou skladbu obyvatel.
+          - id: bydleni-04
+            zneni: >-
+              Prověříme vhodné organizační a majetkové uspořádání PDS s využitím principů
+              fungování soukromých společností, například holdingové struktury či
+              účelových projektových společností (SPV). Nastavení PDS umožní také přímé
+              zadávání výstavby ze strany hlavního města Prahy a městských částí tak, aby
+              dokončené byty mohly přecházet přímo do jejich vlastnictví.
+          - id: bydleni-05
+            zneni: >-
+              Společnost bude fungovat na povinném revolvingovém principu s cílem
+              dlouhodobě rozvíjet a obnovovat fond dostupného bydlení. Vytvořená hodnota
+              bude přednostně využívána k další výstavbě, správě a obnově bytového fondu.
+              Konkrétní pravidla reinvestování výnosů budou stanovena na základě
+              ekonomické analýzy s ohledem na finanční stabilitu společnosti. Hlavním
+              účelem společnosti nebude maximalizace zisku, ale dlouhodobé poskytování
+              dostupného bydlení za udržitelné nájemné.
+          - id: bydleni-06
+            zneni: >-
+              Změníme způsob správy městského bytového fondu a propojíme ho s Pražskou
+              developerskou společností. Do PDS bude vložen existující městský bytový fond
+              zajištění vlastních příjmů a cash-flow, posílení „bankability“. Městské
+              části mohou dobrovolně vložit i své byty. Citlivě zvážíme vztah k MČ, aby se
+              staly partnery.
+          - id: bydleni-07
+            zneni: >-
+              Zajistíme pozemky pro výstavbu dostupného bydlení, včetně těch, které jsou
+              svěřeny městským společnostem. Na PDS budou převedeny vybrané pozemky DPP,
+              dle již schváleného usnesení RHMP.
+          - id: bydleni-08
+            zneni: >-
+              Nastavíme rozumnou a vymahatelnou regulaci krátkodobého ubytování. Umožní-li
+              to zákonná úprava, přeneseme pravomoc na jednotlivé městské části, které si
+              samy určí konkrétní pravidla. V mezidobí, či při absenci zákonné úpravy,
+              umožníme městským částem v zákonem vymezeném rámci úpravu koeficientu daně z
+              nemovitých věcí u bytových domů využívaných pro krátkodobé ubytování.
+              Současně, umožní-li to zákonná úprava, navýšíme místní poplatek z pobytu na
+              úroveň běžnou západním evropským metropolím.
+          - id: bydleni-09
+            zneni: >-
+              Prověříme možnosti úpravy Pražských stavebních předpisů tak, aby požadavky
+              na minimální počet parkovacích stání u nové výstavby lépe odpovídaly
+              charakteru lokality, její dopravní dostupnosti a skutečným potřebám. Důraz
+              budeme klást především na aktualizaci přepočtové mapy.
+      - id: uzemni-planovani
+        nazev: Územní rozvoj – územní plánování
+        radni: [Petr Hlaváček]
+        zavazky:
+          - id: uzemni-planovani-01
+            zneni: >-
+              Zajistíme stabilitu Metropolitního plánu a jeho další vývoj. Zajistíme jeho
+              právní stabilitu tím, že budou zajištěny prostředky na jeho právní ochranu.
+              Rozběhneme systém rychlých a transparentních změn Metropolitního plánu. Bude
+              schválena připravovaná technická aktualizace Plánu.
+            souvisi: [uzemni-rozvoj-priority-02]
+          - id: uzemni-planovani-02
+            zneni: >-
+              Budeme pracovat na dalších podrobnějších dokumentacích a plánovacích
+              smlouvách, které plán naplní. Budeme podporovat intenzivní práci na územních
+              studiích a rozběhneme nové územní studie mj. Bohdalec – Slatiny. Rozběhneme
+              ve spolupráci s DPP koordinovanou studii obnovy stanic metra C mezi
+              Kačerovem a Hájemi a prověříme rozvoj v jejich okolí studiemi. Zahájíme
+              pořizování dvou pilotních regulačních plánů.
+          - id: uzemni-planovani-03
+            zneni: >-
+              Aktualizujeme Metodiku spoluúčasti investorů a budeme držet její základní
+              principy. Dle požadavků MČ dojde k úpravě výpočtu tarifů tak, aby
+              město/městské části mohly získat z navýšení HPP v Metropolitním plánu
+              prostředky ve vyšším tarifu. Mezi prioritní území k dojednání budou patřit
+              klíčové brownfieldy mj. v Bubnech, ve Vysočanech, na Bohdalci, v Letňanech
+              nebo na Zličíně. Mezi prioritní předměty plnění při jednání s investory
+              zahrneme i získání bytů jako formu spoluúčasti investorů.
+          - id: uzemni-planovani-04
+            zneni: >-
+              Město krátkých vzdáleností. Při plánování nových čtvrtí i proměnách
+              stávajících budeme usilovat
+          - id: uzemni-planovani-05
+            zneni: >-
+              to, aby lidé měli školy, obchody, základní služby, zeleň a zastávky veřejné
+              dopravy v pěší dostupnosti, zpravidla do 15 minut od bydliště.
+          - id: uzemni-planovani-06
+            zneni: >-
+              Budeme klást důraz na potřeby pražských sídlišť, péči o ně se budeme věnovat
+              v rámci VURM. S městskými částmi budeme projednávat priority obnovy
+              veřejných prostranství a občanské vybavenosti.
+          - id: uzemni-planovani-07
+            zneni: >-
+              Budeme usilovat o dokončení územní studie Metropolitního regionu, která
+              stanoví principy rozvoje školství, sportu a kultury i na okraji Prahy a za
+              městem.
+          - id: uzemni-planovani-08
+            zneni: >-
+              Začneme připravovat transformaci prostorů nad stanicemi metra pro novou
+              výstavbu primárně pro dostupné bydlení. Pro tuto výstavbu prověříme
+              potenciál v jednotlivých lokalitách a k nim vhodné ekonomické modely s
+              transparentním a férovým procesem.
+      - id: verejny-prostor
+        nazev: Veřejný prostor a mikromobilita
+        radni: [Hana Novotná]
+        zavazky:
+          - id: verejny-prostor-01
+            zneni: >-
+              Proběhne reforma správy a obnovy veřejného prostoru posílená přímou gescí v
+              RHMP a novou Komisí Rady hl. m. Prahy. Provedeme reorganizaci komisí RHMP a
+              to vznikem jedné komise pro veřejný prostor namísto úzce vyhraněných
+              sektorových.
+          - id: verejny-prostor-02
+            zneni: >-
+              Při stanovování cílů a úkolů pro vedení TSK bude kladen důraz na zajištění
+              veškerých úkolů týkajících se veřejného prostoru.
+      - id: cyklodoprava
+        nazev: Cyklodoprava
+        # Kapitola územního rozvoje, téma dopravy — gesci zdroje neurčují.
+        radni: []
+        zavazky:
+          - id: cyklodoprava-01
+            zneni: >-
+              Při přípravě koncepcí ulic nebudeme preferovat cyklopruhy, ale podpoříme
+              výškově a materiálově oddělené dánské pásy. Budou zaváděny cyklo-obousměrky.
+          - id: cyklodoprava-02
+            zneni: >-
+              Zároveň se zaměříme na velké investice do oddělených páteřních cyklostezek.
+              Zanalyzujeme kontinuitu sítě skrze vytvoření analytické mapy s chybějícími
+              částmi v rámci celého systému.
+      - id: obnova-verejneho-prostoru
+        nazev: Projekty obnovy a rozvoje veřejného prostoru
+        radni: [Hana Novotná]
+        zavazky:
+          - id: obnova-verejneho-prostoru-01
+            zneni: >-
+              Budou podporovány projekty obnovy veřejného prostoru náměstí a městských
+              tříd (zejména Karlovo náměstí, Mariánské náměstí, Náměstí Jana Palacha,
+              Malostranské náměstí, Na Knížecí, Seifertova, Vinohradská, Jana Želivského,
+              Bělohorská, Kampus Dejvice, Jarovská třída, hradební korzo, Smetanovo
+              nábřeží a další).
+          - id: obnova-verejneho-prostoru-02
+            zneni: >-
+              U významných projektů obnovy veřejného prostoru budeme využívat
+              architektonické soutěže s důrazem na kvalitní a jednoznačné zadání,
+              přiměřený investiční rámec a hospodárnost navrhovaných řešení. Při hodnocení
+              návrhů budeme zohledňovat architektonickou kvalitu, funkčnost,
+              proveditelnost a investiční i dlouhodobé provozní náklady.
+          - id: obnova-verejneho-prostoru-03
+            zneni: >-
+              Bude připraven projekt realizace rekonstrukce Sokolské, Legerovy, Žitné a
+              Ječné projekt rekonstrukce Těšnovské estakády a po dohodě s dotčenými
+              městskými částmi zahájen.
+          - id: obnova-verejneho-prostoru-04
+            zneni: >-
+              Do jednoho roku Institut plánování a rozvoje (dále jen IPR Praha) připraví
+              Studii komplexních dopravních a urbanistických opatření v rámci Pražské
+              památkové rezervace a v případě shody koaličních partnerů bude zahájena
+              jejich postupná realizace.
+  - id: finance
+    nazev: Finance, podpora podnikání, fondy
+    oddily:
+      - id: finance
+        nazev: Priority
+        radni: [Tomáš Portlík]
+        zavazky:
+          - id: finance-01
+            zneni: >-
+              Budeme předkládat Zastupitelstvu hl. m. Prahy návrhy na zdrojově vyrovnané
+              rozpočty, a to po celé volební období. Chceme intenzivně podporovat
+              investiční aktivitu Prahy, jeho příspěvkových organizací a městských částí.
+              Chceme usilovat o co nejvyšší podíl investičních výdajů na celkovém rozpočtu
+              města a jejich co nejvyšší míru čerpání. Budeme iniciovat partnerství se
+              státem při realizaci strategických investičních akcí s nadregionálním
+              významem. Budeme vyhledávat příležitosti kofinancování ze zahraničních
+              dotačních zdrojů, zejm. evropských strukturálních fondů.
+          - id: finance-02
+            zneni: >-
+              Připravíme závazný plán strategických investic. Rovněž budeme klást důraz na
+              financování projektové přípravy strategických investic.
+          - id: finance-03
+            zneni: >-
+              Budeme aktivně hájit pozici hlavního města v rámci tzv. rozpočtového určení
+              daní jako celku, tj. objemu příjmů rozpočtu. Chceme pokračovat v dlouhodobě
+              stabilním nastavení finančních vztahů mezi městem samotným a jeho městskými
+              částmi. Podnikneme kroky ke snížení deficitu vznikajícího v oblasti
+              financování výkonu přenesené působnosti státní správy.
+          - id: finance-04
+            zneni: >-
+              Zajistíme dodržování dlouhodobých finančních závazků města, které budou
+              spláceny řádně a včas, jako doposud. Reinvestujeme čisté výnosy z
+              podnikatelské činnosti města, a to i s využitím Fondu rozvoje dostupného
+              bydlení. Budeme navrhovat dluhové financování výhradně ve vazbě na realizaci
+              strategických investic nebo bytové výstavby. Nebudeme navrhovat poskytnutí
+              finančních záruk městským společnostem, jen s výjimkou kritických situací.
+          - id: finance-05
+            zneni: >-
+              Podpoříme obchodní společnosti s inovativním potenciálem a s místem
+              podnikání v Praze při prezentaci jejich výrobků a služeb v zahraničí. Budeme
+              na celostátní úroveň přenášet podněty na odstraňování nadbytečné byrokracie
+              a regulace. Nedílnou součástí spolupráce je propojení firem s výzkumem.
+              Důležitou roli v rozvoji služeb v Praze mají živnostníci, malý a střední
+              podnikatelé. Pro zlepšení jejich konkurenceschopnosti chceme podpořit úpravu
+              veřejného prostoru v okolí jejich provozoven. Maximální péči budeme věnovat
+              rekonstrukcím nebytových prostor ve vlastnictví Prahy, aby byly energeticky
+              udržitelné a moderní.
+  - id: zdravotnictvi-a-socialni
+    nazev: Zdravotnictví a sociální oblast, pohřebnictví
+    oddily:
+      - id: socialni-oblast
+        nazev: Sociální oblast
+        radni: [Alexandra Udženija]
+        zavazky:
+          - id: socialni-oblast-01
+            zneni: >-
+              V reakci na demografický vývoj, stárnutí populace a rostoucí potřebu
+              dostupné péče se zavazujeme každoročně navýšit prostředky hlavního města
+              Prahy o 100 mil. Kč na rozvoj krajské sítě sociálních služeb, zejména služeb
+              sociální péče a služeb pro ohrožené děti. Půjde o kumulativní navýšení
+              rozvojových prostředků oproti předchozímu roku, určené na vznik a provoz
+              nových kapacit nad rámec financování stávající sítě, zejména prostřednictvím
+              Doplňkové sítě HMP. Investiční výdaje budou řešeny samostatně. Rozvoj
+              ostatních služeb sociální prevence budeme rozpočtově vyhodnocovat a
+              projednávat každoročně podle aktuálních potřeb. Od státu budeme požadovat
+              odpovídající spolufinancování nových kapacit, úpravu směrného čísla pro
+              rozdělování dotací krajům a systémové řešení podmínek rozvoje pobytových
+              služeb.
+          - id: socialni-oblast-02
+            zneni: >-
+              Podpoříme realizaci a přípravu projektů hlavního města a městských částí pro
+              800 nových pobytových míst v domovech pro seniory a domovech se zvláštním
+              režimem na území Prahy. Část kapacit v průběhu volebního období skutečně
+              zprovozníme, například v již připravovaném projektu Palata; u dalších
+              zajistíme projektovou, majetkovou a investiční připravenost pro následnou
+              realizaci.
+          - id: socialni-oblast-03
+            zneni: >-
+              Vedle těchto pobytových kapacit rozšíříme stacionáře a další ambulantní a
+              terénní služby pro osoby s Alzheimerovou chorobou a dalšími formami demence.
+              Podpoříme neformální pečující a komunitní zapojení a dobrovolnictví seniorů.
+          - id: socialni-oblast-04
+            zneni: >-
+              Připravíme akční přílohu střednědobého plánu rozvoje sociálních služeb. Z
+              dat IPR, evidence poptávky a podnětů uživatelů, pečujících, poskytovatelů a
+              městských částí odvodíme konkrétní kapacity, termíny, odpovědnost a
+              financování. Každoročně zveřejníme, co bylo objednáno, financováno a
+              zprovozněno.
+          - id: socialni-oblast-05
+            zneni: >-
+              Kapacity osobní asistence budeme navyšovat tak, aby odpovídaly reálným
+              potřebám a poptávce klientů, a předvídatelně, tak aby poskytovatelé osobní
+              asistence mohli s dostatečným předstihem navyšovat své personální kapacity
+              (do roku 2030 zajistíme kapacitu nejméně 900 tisíc hodin osobní asistence
+              ročně).
+          - id: socialni-oblast-06
+            zneni: >-
+              Posílíme dostupnost pečovatelských služeb, včetně večerních hodin a víkendů,
+              terénních a ambulantních služeb a denních stacionářů. Podporu samostatného
+              bydlení osob se zdravotním postižením rozšíříme podle doložené poptávky. V
+              akční příloze stanovíme roční přírůstky a rozpočtové krytí s cílovou
+              kapacitou 100 úvazků do roku 2030.
+          - id: socialni-oblast-07
+            zneni: >-
+              Připravíme projekty až pro 150 nových pobytových míst a v akční příloze
+              určíme počet míst zprovozněných do roku 2030 i jejich provozní krytí.
+              Souběžně posílíme terénní odlehčení a podporu pečujících.
+          - id: socialni-oblast-08
+            zneni: >-
+              Uskutečníme celopražskou náborovou a informační kampaň pro pracovníky v
+              sociálních službách, podpoříme rekvalifikace, spolupráci se školami,
+              profesní rozvoj a stabilizaci zaměstnanců. Připravíme pilot náborových
+              příspěvků a zaměstnaneckého bydlení pro terénní péči a osobní asistenci.
+          - id: socialni-oblast-09
+            zneni: >-
+              Nové kapacity budeme plánovat s ohledem na skutečnou dostupnost personálu.
+              Městské části podpoříme vhodnými pobídkami k rozšiřování terénních a
+              ambulantních služeb sociální péče.
+          - id: socialni-oblast-10
+            zneni: >-
+              Ve spolupráci s městskými částmi budeme podporovat rozvoj sítě rodinných a
+              komunitních center jako míst včasné pomoci, prevence krizí, podpory
+              rodičovských kompetencí a mezigenerační spolupráce.
+          - id: socialni-oblast-11
+            zneni: >-
+              Budeme podporovat rozvoj dobrovolnických projektů.
+          - id: socialni-oblast-12
+            zneni: >-
+              Nové komunitní pobytové kapacity budeme vytvářet prioritně v Praze či v
+              jejím nejbližším okolí výkupem, rekonstrukcí i v projektech městského
+              nájemního bydlení. Stávající mimopražská zařízení nebudeme kapacitně
+              rozšiřovat s výjimkou Metropolitní oblasti. Přijmeme plán postupného útlumu
+              vybraných zařízení v návaznosti na dostupné pražské alternativy a
+              individuální potřeby a přání klientů. Zachováme kontinuitu a kvalitu péče.
+          - id: socialni-oblast-13
+            zneni: >-
+              Rozšíříme kapacity služeb pro ohrožené děti, zejména krizové pomoci,
+              zařízení pro děti vyžadující okamžitou pomoc, podpory pěstounských rodin a
+              návazných služeb pro mladé lidi odcházející z náhradní péče. Podle
+              doložených potřeb a dostupnosti personálu navýšíme specializované pobytové a
+              návazné kapacity pro osoby s poruchou autistického spektra a chováním
+              náročným na podporu. V akční příloze stanovíme cílové kapacity a návaznost
+              na pomoc rodinám.
+          - id: socialni-oblast-14
+            zneni: >-
+              Budeme dále rozvíjet příspěvkovou organizaci hlavního města Prahy Zahrada
+              pro duši a její činnost v oblasti péče o duševní zdraví, zejména dětí a
+              dospívajících. Podpoříme dostupnost odborné pomoci rodinám a osobám v
+              duševní krizi, včetně rozvoje odpovídajících ambulantních, komunitních a
+              návazných služeb. Podpoříme rozšíření centra duševního zdraví pro děti a
+              dospívající.
+          - id: socialni-oblast-15
+            zneni: >-
+              Podpoříme zprovoznění azylového domu v Tusarově ulici ve spolupráci s
+              Armádou spásy a se zajištěnou zdravotní a ošetřovatelskou péčí pro osoby bez
+              domova se zhoršeným zdravotním stavem.
+          - id: socialni-oblast-16
+            zneni: >-
+              S městskými částmi, poskytovateli a odbornou pracovní skupinou připravíme
+              rozšíření decentralizované nízkoprahové sítě do pěti lokalit. Mobilní tým,
+              případně upravený autobus pro materiální a hygienickou pomoc, doplní stálá
+              centra. Konkrétní rozmístění stanovíme podle potřeb jednotlivých lokalit,
+              dostupnosti vhodných prostor a dohody s městskými částmi. Posílíme prevenci
+              ztráty bydlení, asistenci v bydlení, kontaktní místa pro bydlení, terénní
+              práci a včasné zachycení rodin v krizi.
+      - id: zdravotnictvi
+        nazev: Zdravotnictví
+        radni: [Alexandra Udženija]
+        zavazky:
+          - id: zdravotnictvi-01
+            zneni: >-
+              Zasadíme se o rozvoj adiktologických služeb a péče o lidi se závislostmi.
+              Rozšíříme kontaktní a léčebné služby a připravíme specializovanou
+              adiktologickou službu pro děti a mládež.
+          - id: zdravotnictvi-02
+            zneni: >-
+              Posílíme terénní, ambulantní a domácí zdravotní péči ve spolupráci s
+              praktickými a dětskými lékaři a podpoříme rozvoj telemedicíny. Připravíme
+              postup pro rozvoj mobilní i lůžkové paliativní péče a s městskými částmi
+              vyhodnotíme potřebu asistentů prevence kriminality.
+          - id: zdravotnictvi-03
+            zneni: >-
+              Budeme aktivně jednat se státem o budoucí podobě pražské nemocniční sítě a
+              podmínkách případné výstavby nové velkokapacitní nemocnice. Budeme usilovat
+              o účelné využití nemovitostí uvolněných po případných změnách nemocničních
+              provozů pro zdravotní a sociální služby. Podpoříme koordinaci metropolitní
+              sítě zdravotních služeb a jednání o zapojení Nemocnice Na Františku do
+              celopražského systému.
+          - id: zdravotnictvi-04
+            zneni: >-
+              Budeme pokračovat v přípravě a realizaci nového moderního sídla Zdravotnické
+              záchranné služby hl. m. Prahy. Zachováme a podle personálních a finančních
+              možností rozšíříme dětské i dospělé lékařské a stomatologické pohotovosti.
+  - id: skolstvi-a-sport
+    nazev: Školství a sport
+    oddily:
+      - id: skolstvi
+        nazev: Školství
+        radni: [Antonín Klecanda]
+        zavazky:
+          - id: skolstvi-01
+            zneni: >-
+              Budeme rozvíjet moderní, bezpečné a dostupné školství pro 21. století, které
+              reaguje na demografický rozvoj hl. města Prahy a garantuje kvalitní
+              vzdělávání pro každé dítě. Školství chápeme jako klíčovou investici do
+              budoucnosti založenou na systémovém rozšiřování kapacit, důstojných
+              podmínkách pro učitele i ostatní školní profese, důrazu na duševní zdraví a
+              vytváření bezpečného prostředí ve všech školách.
+          - id: skolstvi-02
+            zneni: >-
+              Zabezpečíme systémové navyšování kapacit ve všech stupních vzdělávání, od
+              mateřských a základních přes všeobecná gymnázia a odborné střední školy až
+              po DDM a ZUŠ. Výstavbu nových škol umístíme přednostně do rozvojových území
+              a nových čtvrtí. Budeme motivovat a podporovat městské části k využití
+              volných kapacit základních škol pro vznik nových středoškolských tříd.
+              Zajistíme pravidelnou a úzkou koordinaci se Středočeským krajem tak, aby
+              rozvoj středních škol v hl. městě Praze i Středočeském kraji probíhal
+              efektivně a v partnerské shodě obou regionů. Podpoříme systémové rozšíření
+              školních poradenských pracovišť tak, aby byl školní psycholog dostupný pro
+              každého žáka. Jako okamžitou reakci na reálný fyzický nedostatek psychologů
+              zřídíme pod pedagogicko-psychologickými poradnami mobilní výjezdní krizové
+              týmy expertů určené pro operativní pomoc školám zřizovaným hl. městem Prahou
+              i městskými částmi v náročných situacích. Ke stipendiím na soukromých a
+              církevních školách zřídíme pracovní skupinu.
+          - id: skolstvi-03
+            zneni: >-
+              Zavedeme spravedlivý a předvídatelný systém odměňování i péče o zaměstnance
+              ve školství přímo z rozpočtu hl. města Prahy, a to postupným navýšením na
+              2,2 mld. Kč do roku 2030. Zajistíme flexibilní finanční podporu určenou
+              přímo pro školy s možností jejich vlastní volby (např. na dofinancování
+              nepedagogických pracovníků, posílení speciálních pedagogů, tandemovou výuku
+              nebo supervize). Pro stabilizaci počtu pedagogů a dalších školních profesí
+              vyčleníme městské byty přednostně pro oblast školství a zjednodušíme
+              podmínky pro jejich získání tak, abychom zajistili potřebné odborníky ve
+              všech pražských školách.
+          - id: skolstvi-04
+            zneni: >-
+              Zavádění moderních trendů podpoříme výrazným navýšením dotačních prostředků
+              na školní a rozvojové programy, které školám pomohou pružně reagovat na
+              aktuální výzvy a suplovat systémové nedostatky. Prohloubíme spolupráci s
+              vysokými školami v širokém spektru oblastí (od bezpečnosti až po akademickou
+              podporu) a rozšíříme systém pedagogických praxí. Tím pomůžeme pražským
+              školám cíleně řešit kritický nedostatek vyučujících s aprobací matematika,
+              fyzika, chemie nebo IT. Kompletně digitalizujeme administrativu, zápisy i
+              systém správy a rezervací městských pobytových zařízení tak, aby pražské
+              školy získaly přednostní právo jejich využití např. pro školy v přírodě,
+              adaptační pobyty apod.
+          - id: skolstvi-05
+            zneni: >-
+              Rozšíříme kapacity speciálních mateřských i základních škol, posílíme
+              podporu transformace dětských domovů zřizovaných hl. městem Prahou a
+              zaměříme se na systémové zpřístupňování školních i mimoškolních aktivit všem
+              dětem (zejm. ze sociálně znevýhodněného prostředí). Pro přirozenou integraci
+              dětí v místě bydliště budeme motivovat městské části k zřizování speciálních
+              tříd, což hl. město Praha podpoří cílenou dotací městským částem ve výši 1
+              mil. Kč na zřízení každé takové třídy. Dále zajistíme rozšiřování kapacit
+              samostatných speciálních škol (vč. majetkových směn) a speciální školství
+              propojíme s odlehčovacími službami pro komplexní péči o rodiny dětí se
+              specifickými potřebami.
+          - id: skolstvi-06
+            zneni: >-
+              Posílíme bezpečnostní prvky na školách. Ve spolupráci s odborníky nastavíme
+              krizové postupy a vytvoříme praktické metodiky pro řešení rizikových situací
+              tak, aby školy byly bezpečným a důvěryhodným prostředím pro žáky i učitele.
+      - id: sport
+        nazev: Podpora sportovní činnosti a rozvoje sportovní infrastruktury
+        radni: [Antonín Klecanda]
+        zavazky:
+          - id: sport-01
+            zneni: >-
+              Zásadním způsobem posílíme podporu technického zhodnocení i nové výstavby
+              moderní, dostupné sportovní infrastruktury s dostatečnou kapacitou pro
+              všechny věkové skupiny obyvatel. Sport budeme podporovat a rozvíjet jako
+              veřejnou službu, jako účinný nástroj sociální soudržnosti, prevence
+              rizikového chování a jako klíčovou součást zdravého životního stylu obyvatel
+              hl. města Prahy.
+          - id: sport-02
+            zneni: >-
+              Budeme i nadále rozvíjet systém podpory financování sportovní činnosti,
+              který staví na transparentnosti, předvídatelnosti, jasných pravidlech a
+              logických kritériích a na důsledné práci s ověřenými daty.
+          - id: sport-03
+            zneni: >-
+              Navýšíme prostředky na investice do rozvoje sportovní infrastruktury.
+              Finanční prostředky použijeme na technické zhodnocení i novou výstavbu,
+              dokončení a modernizaci stávajících sportovišť i výstavbu nových kapacit.
+          - id: sport-04
+            zneni: >-
+              Zefektivníme správu a provoz městských sportovišť a posílíme strategické
+              řízení sportu na základě analytických dat tak, aby městské investice
+              odpovídaly reálným demografickým potřebám jednotlivých městských částí i
+              spádovosti a kapacitním potřebám sportovních organizací systémově
+              pracujících s mládeží.
+          - id: sport-05
+            zneni: >-
+              Budeme pokračovat, tam kde je to vhodné, ve zpřístupňování školních
+              sportovišť veřejnosti mimo dobu výuky. Podpoříme rozšiřování školních
+              sportovních klubů, a kroužků pro odpolední aktivity dětí.
+          - id: sport-06
+            zneni: >-
+              Zachováme a budeme usilovat o rozšiřování programů zaměřených na zkvalitnění
+              tělesné výchovy na ZŠ a SŠ, včetně systémového zapojování kvalifikovaných
+              trenérů a sportovních odborníků přímo do výuky. Sport budeme rozvíjet jako
+              jeden z klíčových nástrojů prevence rizikového chování a ochrany fyzického i
+              duševního zdraví dětí a mládeže.
+          - id: sport-07
+            zneni: >-
+              Zajistíme aktivní roli hl. m. Prahy při pořádání významných mezinárodních
+              sportovních událostí, které mají vliv a dopad na rozvoj konkrétních
+              sportovních odvětví, motivaci dětí, mládeže a široké veřejnosti k zapojení
+              do sportovních aktivit.
+  - id: infrastruktura-a-zivotni-prostredi
+    nazev: Infrastruktura a technická vybavenost, životní prostředí
+    oddily:
+      - id: zivotni-prostredi
+        nazev: Životní prostředí
+        radni: [Hana Novotná]
+        zavazky:
+          - id: zivotni-prostredi-01
+            zneni: >-
+              Prověříme nastavení systému správy městské zeleně mezi hl. m. Praha a
+              městskými částmi tak, aby měly místní radnice větší dohled nad péčí o zeleň
+              nebo ji měly přímo ve správě. Budeme pokračovat v revitalizaci pražských
+              ostrovů a budeme usilovat o zpřístupnění dalších území a ploch podél Vltavy
+              s cílem jejich využití pro sport a volnočasové aktivity (např. ostrov
+              Štvanice, Císařský ostrov, Modřanské nábřeží). Zahájíme budování 4 velkých
+              metropolitních parků Soutok, Maniny, Trojská kotlina, Trojmezí. Budeme
+              pokračovat v revitalizaci pražských rybníků a nádrží – připravíme
+              revitalizaci rybníku Starák, rybníku Balounek a vybudujeme nový rybník U
+              Dubu na Cibulce. Využijeme vhodné studny a vodní zdroje na území hl. města
+              pro možné ochlazování okolního prostředí (jezírka, mokřady). Budeme
+              pokračovat v revitalizaci malých vodních toků např. revitalizací Motolského
+              potoka.
+          - id: zivotni-prostredi-02
+            zneni: >-
+              Posílíme svoz separovaného odpadu a rozšíříme pracovní dobu a kapacitu
+              sběrných dvorů na základě chytrých řešení přinášejících data o naplněnosti.
+              Chceme postupně zajistit, aby všechna separační hnízda umožňovala
+              multikomoditní sběr, tedy možnost třídit více druhů odpadů na jednom místě.
+              Dokončíme výstavbu moderní třídící stanice plastů. Budeme občany a firmy
+              motivovat k třídění a využívání maximálního množství bioodpadu ve formě
+              kompostování, bioplynových stanic s kogenerační funkcí, bioplynu pro pohon
+              aut aj. Podpoříme projekty a opatření proti vzniku zbytečných odpadů u
+              obyvatel ve formě re-use pointů, druhého života nábytku, oprav výrobků. Při
+              přípravě a realizaci městských staveb budeme tam, kde to bude technicky a
+              ekonomicky smysluplné, podporovat opětovné využívání stavebních materiálů a
+              prvků a předcházet zbytečnému vzniku stavebního odpadu.
+          - id: zivotni-prostredi-03
+            zneni: >-
+              U objektů v majetku města a městských organizací podpoříme postupnou změnu
+              energetických zdrojů na nízkoemisní, obnovitelné a decentralizované (tepelná
+              čerpadla, biometan, plyn v kogeneraci, fotovoltaika, využití odpadního
+              tepla).Posílíme energetický management zaměřený na úspory, využívání
+              nových, nízkoemisních technologií (solární panely na školách, na domovech
+              seniorů, na bytových/panelových domech v majetku hl. m., na parkovištích, na
+              vodohospodářské infrastruktuře).
+          - id: zivotni-prostredi-04
+            zneni: >-
+              Podpoříme další rozvoj zoologické a botanické zahrady i další rozvoj
+              Záchranné stanice hlavního města Prahy.
+          - id: zivotni-prostredi-05
+            zneni: >-
+              Podpoříme výsadbu stromů, výměnu povrchů za propustnější a další úpravy
+              zadržující vodu, zelené střechy a stěny, zazelenění výjezdů z tunelů a
+              instalování vodních prvků. Podpoříme fontány, pítka, mlžítka ve veřejném
+              prostoru, dobré hospodaření s dešťovou vodou a opatření ke zpomalení jejího
+              odtoku. Budeme pokračovat v citlivé rekonstrukci a revitalizaci veřejných
+              prostor, náměstí a bulvárů, aby se z nich stala příjemná a přívětivá místa
+              pro setkávání a pohyb po městě (např. dokončení rekultivace Karlova náměstí,
+              proměnu náměstí Bohumila Hrabala, dokončení komplexu zahrad na Petříně,
+              vybudování protipovodňového parku Maniny, parku u Čeňku a příprava městského
+              parku Soutok, apod.). Budeme pokračovat v naplňování schválených
+              strategických dokumentů v oblasti životního prostředí.
+      - id: infrastruktura
+        nazev: Infrastruktura
+        radni: [Michal Hroza]
+        zavazky:
+          - id: infrastruktura-01
+            zneni: >-
+              Budeme pokračovat v proměně Ústřední čistírny odpadních vod na Císařském
+              ostrově v energetické centrum a dokončíme kompletní rekonstrukci tzv.
+              Stávající vodní linky, aby Praha i v budoucnu při zvýšeném počtu obyvatel
+              plnila všechny národní i evropská pravidla týkající se odpadních vod. Budeme
+              pokračovat v přípravě realizace dalších etap dobudování ÚČOV (např. kalového
+              hospodářství).
+          - id: infrastruktura-02
+            zneni: >-
+              Budeme pokračovat v intenzifikaci pobočných čistíren odpadních vod, aby
+              jejich naplněná kapacita neblokovala další rozvoj Prahy v jejich spádových
+              oblastech.
+          - id: infrastruktura-03
+            zneni: >-
+              Dále zmenšíme neodkanalizovaná a nezásobená území v Praze systematickou
+              výstavbou nové kanalizace a vodohospodářské sítě. Dokončíme rekonstrukci
+              filtrační haly v Úpravně vody Želivka a tzv. odželezovnu v Úpravně vody
+              Káraný, připravíme realizaci nové kmenové stoky „B“.
+          - id: infrastruktura-04
+            zneni: >-
+              Budeme pokračovat v umisťování FVE na vodohospodářské budovy, do roku 2030
+              jich bude zprovozněno celkem 73.
+          - id: infrastruktura-05
+            zneni: >-
+              Zachráníme historickou Vinohradskou vodárnu její přestavbou na Hydropolis,
+              interaktivní vzdělávací centrum spojené se vznikem nového parku a veřejného
+              prostoru. Stejně budeme postupovat i u Staré čistírny v Bubenči, která je
+              také unikátní technickou památkou.
+          - id: infrastruktura-06
+            zneni: >-
+              Udržíme trend výrazného zvyšování prostředků na obnovu vodohospodářské sítě.
+              Tyto investice se nám vrátí nejen další úsporou čím dál vzácnější pitné
+              vody, ale také menším množstvím havárií na vodovodní síti a tedy menším
+              množstvím dopravních komplikací.
+          - id: infrastruktura-07
+            zneni: >-
+              Budeme pokračovat v modernizaci pražského veřejného osvětlení s ohledem
+              nejen na jeho úspornost a bezpečnost, ale i vstřícnost k životnímu prostředí
+              a komfortu Pražana.
+          - id: infrastruktura-08
+            zneni: >-
+              Dále budeme vyměňovat staré zastávky tzv. drátoskla za nové přístřešky a
+              doplňovat je tam, kde nejsou vůbec. Zároveň budeme pokračovat v jejich
+              digitalizaci pro lepší informovanost cestujících.
+          - id: infrastruktura-09
+            zneni: >-
+              Budeme pokračovat v budování sítě pomalého dobíjení především pomocí tzv.
+              EVR lamp, tedy lamp veřejného osvětlení připravených k osazení nabíjecí
+              stanicí pro elektromobily.
+          - id: infrastruktura-10
+            zneni: >-
+              Budeme pokračovat v budování protipovodňových opatření především zvýšením
+              kapacity protipovodňové čerpací stanice na Rokytce, dostavěním retenční
+              nádrže na stokové síti v Karlíně a zvýšením mobilních zátarasů na vybraných
+              pražských nábřežích na úroveň povodně v roce 2002 plus 20 cm rezervy.
+          - id: infrastruktura-11
+            zneni: >-
+              Sjednotíme digitální technické mapy a GIS aplikace jednotlivých městských
+              společností do jednoho systému, který výrazně přispěje k přehledu o sítích
+              dopravní a technické infrastruktury (voda, kanalizace, plyn, elektřina,
+              optické kabely atd.), ale také o dalších údajích, které jsou nezbytné pro
+              jejich řádnou správu a rozvoj. Součástí budou i informace o plánovaných
+              rekonstrukcích a dalších investičních akcích, což přispěje k lepší
+              koordinaci staveb na území města. Budeme podporovat spolupráci se soukromým
+              sektorem na rozvoji BIM a informačního modelu vystavěného prostředí
+              (digitální dvojče stavby a digitální dvojče území), který v budoucnu přinese
+              zefektivnění pro územní a strategické plánování, umisťování a povolování
+              staveb a v neposlední řadě i následnou efektivní správu budov a objektů ve
+              vlastnictví města a soukromých vlastníků.
+          - id: infrastruktura-12
+            zneni: >-
+              Budeme pokračovat v rozvoji technické infrastruktury především u
+              necentrálních městských částí se zaměřením na úpravy ulic, chodníků a
+              veřejných ploch, ale také na budování a opravy oddílné srážkové kanalizace.
+              Přívalové deště, které jsou stále častější, se na některých místech
+              projevují lokálními záplavami nebo poškozenými komunikacemi.
+          - id: infrastruktura-13
+            zneni: >-
+              Připravíme projekt nového kolektoru spojujícího stávající kolektory Centrum
+              a Hlávkův most, abychom v budoucnu umožnili napojení centra města na
+              vznikající energocentrum v Bubenči.
+  - id: bezpecnost-a-it
+    nazev: Bezpečnost, IT
+    oddily:
+      - id: bezpecnost
+        nazev: Bezpečnost
+        radni: [Michal Biskup]
+        zavazky:
+          - id: bezpecnost-01
+            zneni: >-
+              Ve spolupráci s profesionály z řad IZS, vysokými školami a městskými částmi
+              podpoříme vznik a rozvoj Centra bezpečí v Dubči a dalších vzdělávacích
+              kapacit po vzoru moderních evropských metropolí. Tyto areály budou sloužit
+              dětem, studentům i široké veřejnosti k výuce první pomoci, požární ochrany,
+              prevence rizikového chování, zvládání mimořádných situací, ochrany
+              obyvatelstva a krizové připravenosti. Zároveň poskytnou zázemí pro výcvik
+              příslušníků IZS, městské policie a dobrovolných hasičů.
+          - id: bezpecnost-02
+            zneni: >-
+              Průběžně budeme aktualizovat a testovat krizové a komunikační plány pro
+              případy povodní, rozsáhlých výpadků energií, mobilních sítí, internetu a
+              dalších mimořádných událostí. Modernizujeme systém varování obyvatel a
+              rozšíříme využívání digitálních nástrojů, včetně mobilních aplikací a SMS
+              notifikací. Budeme průběžně aktualizovat informační portály a zajistíme, aby
+              Praha dokázala rychle a srozumitelně komunikovat i v krizových podmínkách.
+          - id: bezpecnost-03
+            zneni: >-
+              Posílíme personální kapacity Městské policie. Budeme vytvářet podmínky pro
+              získání nových strážníků a dalších pracovníků IZS, včetně podpory bydlení a
+              dalších motivačních nástrojů. Současně navýšíme podporu dobrovolných hasičů,
+              jejich vybavení a odborné přípravy. Při modernizaci techniky profesionálních
+              složek zajistíme předávání použitelného vybavení jednotkám dobrovolných
+              hasičů.
+          - id: bezpecnost-04
+            zneni: >-
+              Budeme modernizovat a rozšiřovat městský kamerový systém v problémových a
+              exponovaných lokalitách. Podpoříme využití moderních analytických nástrojů
+              pro včasnou detekci mimořádných událostí, jako jsou požáry, nehody či jiné
+              krizové situace. Veškeré využívání technologií bude podléhat jasným
+              pravidlům, transparentní kontrole a respektu k soukromí obyvatel. Podpoříme
+              integraci lokálních kamerových systémů městských části do Městského
+              kamerového systému.
+          - id: bezpecnost-05
+            zneni: >-
+              Vytvoříme podmínky pro posílení výkonu služby městské policie v městských
+              částech a alokaci strážníků podle transparentních kritérií. Rozšíříme
+              činnost asistentů prevence kriminality, komunitních preventivních programů a
+              projektů zaměřených na bezpečnost ve veřejném prostoru. Podpoříme využívání
+              moderních nástrojů umožňujících občanům upozorňovat na místa, kde se necítí
+              bezpečně.
+          - id: bezpecnost-06
+            zneni: >-
+              Posílíme preventivní programy na školách zaměřené na závislosti,
+              kyberbezpečnost, šikanu, násilí a další psychosociální rizika. Budeme
+              podporovat včasnou pomoc dětem a mladým lidem ohroženým závislostmi a
+              posílíme dostupnost odborných služeb v oblasti adiktologie a duševního
+              zdraví.
+          - id: bezpecnost-07
+            zneni: >-
+              Vytvoříme systém podpory dobrovolníků připravených pomoci při krizových
+              situacích. Pražanům nabídneme bezplatné kurzy první pomoci, civilní ochrany,
+              krizové připravenosti a základních dovedností potřebných při mimořádných
+              událostech. Budeme pravidelně organizovat cvičení zaměřená na povodně,
+              blackouty, ochranu měkkých cílů a další krizové scénáře.
+          - id: bezpecnost-08
+            zneni: >-
+              Budeme investovat do modernizace krizové infrastruktury a ochrany
+              obyvatelstva. Zajistíme přehled o využitelnosti stávajících i
+              improvizovaných krytů, jejich postupnou modernizaci a lepší informovanost
+              veřejnosti o možnostech ochrany v krizových situacích. Budeme podporovat
+              začleňování prvků civilní ochrany do významných nových staveb a
+              developerských projektů.
+          - id: bezpecnost-09
+            zneni: >-
+              Posílíme kybernetickou bezpečnost hlavního města, městských částí a
+              městských organizací. Vybudujeme robustní systém ochrany kritických
+              informačních systémů, zavedeme pravidelné bezpečnostní audity, školení
+              zaměstnanců a posílíme schopnost města reagovat na kybernetické útoky jak na
+              celoměstské úrovni, tak i v jednotlivých městských částech.
+      - id: it
+        nazev: IT – informační technologie
+        radni: [Michal Biskup]
+        zavazky:
+          - id: it-01
+            zneni: >-
+              Dokončíme digitalizaci služeb města a zajistíme, aby občané mohli většinu
+              běžných agend vyřídit online jednoduše, bezpečně a bez nutnosti osobní
+              návštěvy úřadu.
+          - id: it-02
+            zneni: >-
+              Budeme systematicky propojovat informační systémy magistrátu, městských
+              částí a městských organizací tak, aby si veřejná správa předávala data
+              elektronicky a občané nemuseli opakovaně dokládat informace, které již
+              veřejná správa má k dispozici.
+          - id: it-03
+            zneni: >-
+              Vybudujeme plně redundantní druhé datové centrum hlavního města Prahy, které
+              umožní bezvýpadkový přechod kritických systémů v případě technické havárie,
+              kybernetického útoku nebo jiné krizové situace. Klíčové služby města musí
+              být dostupné i při mimořádných událostech.
+          - id: it-04
+            zneni: >-
+              Významně posílíme kybernetickou bezpečnost města i jeho organizací. Zvláštní
+              pozornost zaměříme na společnosti spravující kritickou infrastrukturu a
+              další klíčové subjekty, jejichž výpadek by mohl zásadně ohrozit fungování
+              metropole.
+          - id: it-05
+            zneni: >-
+              Zavedeme systematické bezpečnostní prověrky IT infrastruktury hlavního
+              města, městských částí i městských organizací prostřednictvím penetračních
+              testů a etického hackingu. Budeme aktivně vyhledávat a opravovat
+              zranitelnosti dříve, než je zneužijí kybernetičtí útočníci.
+          - id: it-06
+            zneni: >-
+              Pravidelně budeme prověřovat funkčnost plánů kontinuity provozu (Business
+              Continuity) a obnovy systémů (Disaster Recovery). Organizace města budou
+              nacvičovat postupy pro případy ransomware útoků, rozsáhlých výpadků energií,
+              telekomunikačních sítí, datových center nebo jiných krizových situací tak,
+              aby bylo možné co nejrychleji obnovit provoz a minimalizovat škody.
+          - id: it-07
+            zneni: >-
+              Pro městské části vytvoříme možnost dobrovolného využívání centrálně
+              provozovaných IT služeb hlavního města. Tento model umožní vyšší bezpečnost,
+              lepší dostupnost odborníků, úspory z rozsahu a snížení provozních nákladů.
+              Současně budeme dále rozvíjet městské digitální platformy a mobilní
+              aplikace, zejména Lítačku, tak aby občané mohli z jednoho místa využívat
+              stále širší spektrum služeb města.
+  - id: energetika-a-inovace
+    nazev: Energetika, inovace, smart city
+    oddily:
+      - id: energetika
+        nazev: Energetika
+        radni: [Pavel Dobeš]
+        zavazky:
+          - id: energetika-01
+            zneni: >-
+              Budeme nadále smysluplně investovat do rozvoje městské infrastruktury s
+              ohledem na její dlouhodobou udržitelnost, funkčnost a bezpečnost. Budeme
+              usilovat o zvýšení energetické odolnosti, soběstačnosti a energetické
+              bezpečnosti s ohledem na předcházení bezpečnostním rizikům a zvládání
+              krizových situací. Posílíme zásobování Prahy EE s ohledem na předcházení
+              výpadkům i blackoutu: ve spolupráci s ČEPS a PREdi podpoříme dokončení
+              čtvrté rozvodny kvůli poruchám přenosové soustavy a pro klíčové objekty
+              vybudujeme nové záložní zdroje včetně stabilizačních úložišť a chytrých
+              řešení pro ukládání energie a tepla.
+          - id: energetika-02
+            zneni: >-
+              Připravíme vznik Energocentra na ÚČOV a zajistíme vybudování rozvodů tepla.
+              Vyčleníme finance na podporu záměrů města a jeho městských částí na budování
+              fotovoltaických elektráren na střechách spravovaných budov a parkovišť.
+              Budeme spolupracovat s distribučními společnostmi na výstavbě a posílení
+              kapacity distribučních sítí, s cílem umožnit připojení nových zdrojů
+              elektrické energie. Otevřeme nejpozději do roku 2029 Pražské energetické
+              společenství pilotně i pro domácnosti a SVJ, malé firmy a městské
+              společnosti.
+          - id: energetika-03
+            zneni: >-
+              Prověříme efektivitu současného modelu nákupu elektrické energie, plynu a
+              tepla pro město a jeho organizace. V případě vyšší výhodnosti a zachování
+              dostupnosti a bezpečnosti budeme nakupovat skupinově elektrickou energii a
+              plyn přes burzu, cílem je zajištění nejvýhodnější ceny, při zachování
+              bezpečnosti a spolehlivosti dodávek. Podpoříme rozvoj elektromobility ve
+              třech pilířích. Na lampách veřejného osvětlení budeme pokračovat v osazování
+              sloupů pomalými dobíjecími stanicemi. Zároveň vytipujeme vhodné městské
+              pozemky pro vybudování středně rychlých i vysokorychlostních dobíjecích
+              hubů.
+          - id: energetika-04
+            zneni: >-
+              Budeme pokračovat ve Strategii teplárenství s cílem vyhnout se skokovému
+              zdražení tepla. Chceme využít nízkopotenciální teplo ze ZEVO Malešice pro
+              nově připravované lokality, stejně tak podporujeme projekt využití odpadu a
+              jeho transformace pro silniční a liniovou infrastrukturu. Budeme snižovat
+              energetickou náročnost objektů města a jeho organizací, mimo jiné přechodem
+              na nízkoemisní a obnovitelné zdroje, abychom zmírnili tlak rostoucích
+              nákladů na provozní rozpočty; digitální model města budeme využívat i pro
+              správu budov a plánování jejich renovací.
+          - id: energetika-05
+            zneni: >-
+              Budeme aktivním a odborným vlastníkem energetických společností s majetkovou
+              účastí HMP. Posílíme roli města v teplárenství: v souladu se Strategií
+              teplárenství do roku 2036 budeme usilovat
+          - id: energetika-06
+            zneni: >-
+              větší vliv města na rozvoj soustavy zásobování teplem, její investice a
+              transparentní tvorbu ceny tepla, včetně zásobování nově připravovaných
+              lokalit a dlouhodobých smluvních závazků s klíčovými dodavateli.
+      - id: inovace-a-smart-city
+        nazev: Inovace a smart city
+        radni: [Pavel Dobeš]
+        zavazky:
+          - id: inovace-a-smart-city-01
+            zneni: >-
+              Cílem je podpořit rozvoj inovací, špičkového univerzitního vzdělávání a
+              výzkumu, technologického transferu a vznik vysoce kvalifikovaných pracovních
+              míst. K tomu podpoříme vznik vědeckotechnického parku jako prostoru k
+              prolínání průmyslu, startupů, akademické sféry i vědeckých institucí, ale
+              také jako místa pro technické vzdělání a kroužky pro děti a mládež včetně
+              moderních dílen, výukových prostor a poslucháren. Součástí bude Prague
+              Mentor Network, která studentům, výzkumníkům a začínajícím firmám nabídne
+              mentory, právní podporu, prvotní financování a testování v reálných
+              podmínkách.
+          - id: inovace-a-smart-city-02
+            zneni: >-
+              Budeme podporovat průmyslem řízený, zakázkový aplikovaný výzkum. Rozšíříme
+              podporu kosmických aktivit, obranného průmyslu a technologií dvojího užití
+              (space/defence/dual-use), včetně AI, kybernetické bezpečnosti, autonomních
+              systémů a družicových aplikací. Praha bude systematicky rozvíjet spolupráci
+              průmyslu, startupů, vysokých škol a výzkumných organizací s EUSPA, ESA BIC
+              Prague, prg.ai. Ekonomickou diplomacii využijeme k přilákání globálních
+              firem, vysoce kvalifikovaných pracovníků a vědců, i na krátkodobé pobyty.
+              Podpoříme významné veletrhy a akce s mezinárodním přesahem v oblasti
+              digitalizace, vědy a inovací na území hl. m. Prahy, včetně každoročního
+              Prague Deep Tech Week. Založíme v Praze nový vlajkový event v jednom z oborů
+              RIS3 specializace s celoevropským dosahem.
+          - id: inovace-a-smart-city-03
+            zneni: >-
+              Vytvoříme digitální model města a dokončíme digitalizaci majetku a
+              infrastruktury města a městských společností. Ve spolupráci s ČEPS,
+              distribučními společnostmi a vlastníky rozvojových území budeme s předstihem
+              připravovat energetickou infrastrukturu a kapacitu sítí pro datová centra,
+              AI a vědeckotechnické areály, protože volná připojitelná kapacita je
+              podmínkou velkých technologických investic.
+          - id: inovace-a-smart-city-04
+            zneni: >-
+              Budeme podporovat a popularizovat inovace v městem vlastněných organizacích
+              a kultivovat inovační ekosystém, a to ve spolupráci s průmyslem a
+              akademickým sektorem s důrazem na malé a střední podniky. Pro zapojení
+              široké veřejnosti, zejména studentů středních a vysokých škol budeme dále
+              rozvíjet inovační maraton Nakopni Prahu. Otevřeme možnost spolupráce
+              akademické a vědecké sféry, vlády ČR a podnikatelské sféry v oblasti rozvoje
+              mikro (modulárních) reaktorů. Praha bude aktivním prvním zákazníkem inovací.
+              Budeme využívat předkomerční zadávání, pilotní projekty a testbedy v reálném
+              městském prostředí, aby inovativní řešení získala první referenci a mohla
+              být dále škálována. Zřídíme Pražský regulatorní sandbox a zjednodušíme
+              výběrová řízení, aby prvním odběratelem řešení od pražských startupů. Praha
+              půjde příkladem při snižování administrativní zátěže podpory výzkumu, vývoje
+              a inovací.
+  - id: doprava
+    nazev: Doprava
+    oddily:
+      - id: doprava
+        nazev: Doprava
+        radni: [Adam Scheinherr]
+        zavazky:
+          - id: doprava-01
+            zneni: >-
+              Doprava ve městě musí být efektivní, moderní, udržitelná a vyvážená.
+              Posílíme, zkvalitníme a zrychlíme MHD, která je pro nás jasnou prioritou.
+              Zasadíme se o přípravu a průběžnou výstavbu metra D ve všech úsecích.
+              Připravíme studii proveditelnosti „tangenciální“ kapacitní kolejové dopravy
+              („metro E“). Připravíme podmínky pro automatizaci metra C. Dokončíme
+              prověřovací studii lokality terminálu Zličín. Zprovozníme rozestavěné
+              tramvajové tratě. Budeme pokračovat v intenzivní přípravě tramvajových tratí
+              s prioritou vnitřního tramvajového okruhu. Podporujeme přípravu a výstavbu
+              dalších tramvajových spojení. Se zástupci Středočeského kraje prověříme
+              možnosti rozšíření tramvajové dopravy do metropolitního regionu. Budeme
+              spolupracovat na rozvoji železnice, včetně tratě na letiště a „metra S“.
+              Budeme aktivně spolupracovat se SŽ na zkapacitnění pražského uzlu, včetně
+              zaústění VRT a tratí směřujících do Prahy, aby bylo možné navýšit kapacitu
+              příměstské železnice. Budeme zlepšovat propojení městské a příměstské
+              veřejné dopravy. Cílem je model Metropolitního systému hromadné dopravy a
+              hledání synergie organizacích: ROPID Praha a IDSK Střední Čechy.
+          - id: doprava-02
+            zneni: >-
+              Budeme zkvalitňovat a vylepšovat silniční síť, včetně prací na dostavbě
+              Městského okruhu. Cílem je urychlit zahájení výstavby Hloubětínského tunelu
+              a zkapacitnění Průmyslového polookruhu. Pro samotnou realizaci Městského
+              okruhu budeme usilovat o finanční podporu státu. Chceme začít výstavbu
+              Radlické radiály a prověříme urychlení harmonogramu etapizace s cílem začít
+              výstavbou tunelu. Podpoříme změnu podmínek ve výběrových řízení, tak aby
+              došlo ke zrychlení přípravy a samotné výstavby. Máme zájem upravit podmínky
+              výběrových řízení tak, aby byla zakomponována povinnost: výstavby ve
+              dvousměnném provozu (tam kde to bude možné prověříme možnost výstavby až 24
+              hodin / 7 dnů v týdnu); zařazením hodnotícího kritéria doby výstavby;
+              nastavením parametrů pro zhotovitele, tak aby VŘ byla transparentní,
+              přehledná.
+          - id: doprava-03
+            zneni: >-
+              Při plánování a realizaci velkých dopravních staveb budeme dbát na
+              bezbariérovou prostupnost pro pěší a cyklisty (s důrazem na oddělené návrhy
+              realizace pro jednotlivé módy dopravy a stavbu nových propojení). Připravíme
+              a zkoordinujeme opravu povltavských mostů. Podporujeme dobudování Pražského
+              okruhu státem s aktivní účastí města na navazujících investicích města a
+              budeme spolupracovat při majetkoprávních úkonech.
+          - id: doprava-04
+            zneni: >-
+              Podpoříme budování náhrady kapacitních autobusových tras nízko a bezemisními
+              vozidly a modernizaci vozového parku tramvají. Urychlíme zavádění nových
+              technologií pro udržitelnou, efektivní a bezpečnou dopravu. Vytvoříme pozici
+              koordinátora výstavby/dopravy, včetně zavedení potřebného systému. Budeme
+              zavádět autonomní dopravní systémy a podporovat sdílenou mobilitu
+              (bike-sharing) včetně řešení jejich negativních dopadů. Prověříme možnost
+              zavedení mýta, nízko emisních zón, případně kamerového systému, zejména v
+              souladu s prioritizací městské hromadné dopravy. Preference veřejné dopravy
+              na křižovatkách a vyhrazených jízdních pruzích je pro nás prioritou.
+          - id: doprava-05
+            zneni: >-
+              Budeme dále zlepšovat podmínky pro chodce i cyklisty. Bezbariérový přístup
+              ke kvalitní pražské MHD budeme dál rozšiřovat a současně odstraňovat
+              zbytečné bariéry pěšího a cyklistického pohybu po městě tam, kde to je
+              účelné. Příprava a realizace cyklistické infrastruktury s důrazem na
+              vybudování páteřních cyklotras A1-A9 a promenád pro pěší a cyklisty (Drážní,
+              Povltavská, Kladenská). Chceme pokud možno realizovat infrastrukturu pro
+              cyklisty oddělenou od pěší a automobilové dopravy. Důležitá je pro nás
+              bezpečnost, budeme podporovat program BESIP a bezbariérovou úpravu přechodů
+              a zastávek MHD.
+          - id: doprava-06
+            zneni: >-
+              Aktualizujeme celoměstskou koncepci parkování ve věci parkovacích zón, P+R a
+              parkovacích a dopravních terminálů. Jsme připraveni na úpravu cen MHD a
+              parkování v ZPS, vč. zakotvení automatické valorizace. Zavést dynamické ceny
+              pro návštěvnické parkování a prověřit možnosti a podmínky pro parkovací
+              kartu (pro více zón placeného stání, případně celopražskou kartu ZPS).
+              Podpoříme přípravu nových, nebo rozšíření stávajících P+R, zejména u stanic
+              metra a železničních zastávek. Rovněž budeme spolupracovat na vybudování P+R
+              ve Středočeském kraji u vlakových nádraží. Budeme usilovat o dokončení,
+              resp. vznik nových moderních dopravních hubů: na Smíchově, Zahraním Městě, v
+              Letňanech (terminál Sever) a na Černém mostě, které propojí veřejnou,
+              individuální, pěší a cyklistickou dopravu.
+  - id: kultura
+    nazev: Kultura, cestovní ruch, památková péče, animal welfare
+    oddily:
+      - id: kultura
+        nazev: Kultura, cestovní ruch, památková péče, animal welfare
+        radni: [Tomáš Slabihoudek]
+        zavazky:
+          - id: kultura-01
+            zneni: >-
+              Započneme stavbu Vltavské filharmonie, kterou vnímáme jako vlajkovou loď
+              moderní pražské kultury. Vytvoříme zde celodenně živé centrum metropole a
+              propojíme ji s dalšími rozvojovými projekty. Zabezpečíme, aby budova
+              fungovala celodenně – ne výhradně pro večerní koncerty, ale i pro celodenní
+              vzdělávací, komunitní a společenské využití širokou veřejností.
+          - id: kultura-02
+            zneni: >-
+              Budeme dále investovat do kulturní infrastruktury, dokončíme klíčové
+              rekonstrukce a podpoříme rozvoj nových kulturních i kreativních center.
+              Dokončíme rekonstrukci Divadla na Vinohradech, obnovu Šlechtovy restaurace
+              ve Stromovce i revitalizaci podmostí Dvoreckého mostu. Budeme iniciovat
+              mezinárodní architektonickou soutěž na vznik nové budovy pro Muzeum hl.
+              města Prahy v oblasti Florence: Na stanici metra D Nové Dvory iniciujeme
+              vznik moderního kulturního multiprostoru. Budeme rovněž podporovat výstavbu
+              a rozvoj kreativní infrastruktury, zejména Kreativního hubu Orionka, Areálu
+              Kasáren Karlín, Nákladového nádraží Žižkov či kulturního centra ve 4.
+              kvadrantu na Vítězném náměstí. Budeme decentralizovat kulturní nabídku a
+              podporovat kulturu nejen v centru města. Podpoříme komunitní kulturu,
+              sousedské akce a kulturní centra v městských částech.
+          - id: kultura-03
+            zneni: >-
+              Budeme aktivně soutěžit o nejlepší světové akce – ať už kulturní, sportovní
+              či světové kongresové a odborné eventy – a posílíme postavení Prahy mezi
+              předními evropskými i světovými metropolemi. Cíleně podpoříme kandidaturu a
+              pořadatelství mezinárodních přehlídek, světových kongresů, veletrhů a akcí s
+              mezinárodním přesahem (včetně inovačních a technologických). Vytvoříme
+              systémové podmínky pro mezinárodní prezentaci a export pražské tvorby,
+              zviditelnění současného umění, mobilitu tvůrců i cílenou propagaci
+              vlajkových kulturních festivalů. Rozvineme udržitelný kulturní turismus s
+              důrazem na kvalitu a prosadíme výraznější využití výnosů z místního poplatku
+              z pobytu k přímému zpětnému investování do kulturní infrastruktury a
+              městského života. Zároveň se Praha stane řádným členem prestižní sítě World
+              Cities Culture Forum, což umožní sdílet data, analytické podklady a
+              osvědčené zkušenosti s řízením kultury od předních světových měst.
+          - id: kultura-04
+            zneni: >-
+              Zabezpečíme předvídatelné a transparentní financování kultury s postupným
+              navýšením dotační podpory až na 500 milionů Kč. Dotační podporu pro
+              nezávislou kulturu a živé umění v Praze navýšíme na 450 milionů Kč v prvním
+              roce, s jasným závazkem postupné gradace grantového systému na cílovou
+              částku 500 milionů Kč do roku 2028. Intenzivně budeme také podporovat
+              městská divadla, podpoříme kvalitu a prestiž kulturních institucí
+              zřizovaných hlavním městem.
+          - id: kultura-05
+            zneni: >-
+              Budeme aktivně podporovat kulturní a kreativní odvětví v souladu se
+              schválenou Strategií rozvoje kulturních a kreativních odvětví v hlavním
+              městě Praze a Kulturní politikou hlavního města Prahy 2022+. Připravíme
+              novou kulturní politiku hlavního města Prahy po roce 2030 v dialogu s
+              nejširším možným spektrem kulturních aktérů. Cílenou podporu zaměříme na
+              celou šíři kreativního sektoru – od architektury, designu, audiovize, filmu,
+              hudby a literatury přes herní průmysl, reklamu a scénická umění až po
+              kulturní dědictví a digitální tvorbu. Budeme rozvíjet otevřenou a
+              dlouhodobou spolupráci s církvemi při péči o kulturní a historické dědictví.
+  - id: majetek-a-legislativa
+    nazev: Majetek a legislativa
+    oddily:
+      - id: legislativa
+        nazev: Legislativa
+        radni: [Pavel Dobeš]
+        zavazky:
+          - id: legislativa-01
+            zneni: >-
+              Praha potřebuje srozumitelná a předvídatelná pravidla, která platí pro
+              všechny, nezvyšují zbytečnou byrokracii a důsledně se vymáhají.
+          - id: legislativa-02
+            zneni: >-
+              Zrevidujeme stávající vyhlášky a nařízení a budeme systematicky vyhodnocovat
+              jejich dopady na městské části, občany i podnikatelský sektor tak, aby nová
+              pravidla byla efektivní, dávala smysl a nezvyšovala zbytečnou
+              administrativní zátěž.
+          - id: legislativa-03
+            zneni: >-
+              Aktualizujeme Statut hlavního města Prahy a ve spolupráci s městskými částmi
+              zpřesníme kompetence mezi hl. m. Prahou a městskými částmi.
+          - id: legislativa-04
+            zneni: >-
+              Nastavíme rozumnou a vymahatelnou regulaci krátkodobého ubytování. Umožní-li
+              to zákonná úprava, přeneseme pravomoc na jednotlivé městské části, které si
+              samy určí konkrétní pravidla. V mezidobí, či při absenci zákonné úpravy,
+              umožníme městským částem v zákonem vymezeném rámci úpravu koeficientu daně z
+              nemovitých věcí u bytových domů využívaných pro krátkodobé ubytování,
+              umožní-li to zákonná úprava, navýšíme místní poplatek z pobytu na úroveň
+              běžnou západním evropským metropolím.
+            opakuje: bydleni-08
+          - id: legislativa-05
+            zneni: >-
+              U veřejných zakázek budeme v rámci hodnotících kritérií klást důraz mj. na
+              rychlost realizace a zaměříme se na jednoduchost zadávacího řízení, abychom
+              předešli komplikacím či průtahům při přezkumu ze strany ÚOHS. Tento přístup
+              budeme uplatňovat i v městských společnostech a u zakázek na inovativní
+              řešení budeme využívat předkomerční zadávání a inovační partnerství.
+          - id: legislativa-06
+            zneni: >-
+              Budeme pokračovat v uplatňování transparentních a předvídatelných pravidel
+              pro spolupráci města s investory a developery. Při vyjednávání o plánovacích
+              smlouvách budeme důsledně požadovat kontribuce na budování občanské
+              vybavenosti, školství, zeleně a technické infrastruktury a rovněž budeme
+              usilovat i o plnění formou převodu nových bytů a nebytových prostor do
+              městského fondu.
+      - id: majetek
+        nazev: Majetek
+        radni: [David Bouz]
+        zavazky:
+          - id: majetek-01
+            zneni: >-
+              Budeme prosazovat promyšlené, odpovědné a transparentní hospodaření s
+              majetkem města a zefektivníme řízení městských firem ve prospěch obyvatel
+              Prahy.
+          - id: majetek-02
+            zneni: >-
+              Zajistit transparentní a udržitelný systém financování výstavby městských
+              bytů a zahájíme přípravu alespoň 1000 bytů, s cílem začít výstavbu co
+              největšího počtu z nich do roku 2030. U stávajících budov ve vlastnictví
+              města prověříme možnosti rekolaudace, přístaveb a využití půdních prostor
+              pro účely bydlení a ve vhodných objektech tuto výstavbu zrealizujeme. Část
+              městských bytů přednostně nabídneme profesím důležitým pro chod města a
+              křehkým skupinám obyvatel. Provedeme transformaci Pražské developerské
+              společnosti pro zrychlení a zjednodušení přípravy i výstavby městských bytů
+              a další infrastruktury.
+            souvisi: [uzemni-rozvoj-priority-01]
+          - id: majetek-03
+            zneni: >-
+              Připravíme strategii přístupu hl. města Prahy k jím vlastněným městským
+              firmám a příspěvkovým organizacím s cílem zefektivnění jejich řízení,
+              podpoření vzájemné kooperace a odstranění zbytečných překryvů při zajištění
+              souladu jejich činností s prioritami města. Součástí strategie bude
+              zveřejněná vlastnická politika s měřitelnými KPI pro každou společnost,
+              odborné a transparentní obsazování vrcholového vedení a orgánů společností a
+              odměňování navázané na dosažené výsledky.
+          - id: majetek-04
+            zneni: >-
+              Dokončíme kompletní pasportizaci nemovitého majetku hl. města Prahy, revizi
+              smluvních vztahů a nabídneme pomocnou ruku městským částem při správě jejich
+              nemovitostí. Stanovíme jasná pravidla a limity pro využívání majetku tak,
+              aby byly městské budovy a pozemky využívány efektivně a v souladu s
+              potřebami města i městských částí. Pasport převedeme do jednotné digitální
+              evidence majetku a infrastruktury města, městských společností a
+              příspěvkových organizací propojené s digitálním modelem města a technickými
+              mapami. U každého objektu a pozemku budeme sledovat technický stav, způsob
+              využití, náklady na správu, výnosy a potřebu investic, abychom mohli
+              hodnotit ekonomickou výkonnost majetku (výnosnost, obsazenost, náklady na
+              m², zanedbanou údržbu) a na tomto základě rozhodovat o jeho dalším využití,
+              investicích, pronájmu či zcizení. Při rozhodování o využití nevyužitého
+              majetku budou mít přednost veřejné služby, školství a bydlení, dále věda,
+              inovace a kultura. Souhrnné výsledky budeme pravidelně zveřejňovat.
+          - id: majetek-05
+            zneni: >-
+              Provedeme komplexní prověření stavu, fungování a správy významných městských
+              areálů a objektů (např. Výstaviště Praha, Holešovická tržnice, Kasárny
+              Karlín, Nákladové nádraží Žižkov, Strahovský stadion či Orionka). Tam, kde
+              to bude potřebné, zrealizujeme klíčové rozvojové investice a rekonstrukce a
+              zavedeme nový model řízení, to vše s cílem zvýšit efektivitu jejich provozu,
+              zmodernizovat jejich infrastrukturu a plně otevřít tyto prostory pro
+              inovace, školství, sport a kulturu.
+          - id: majetek-06
+            zneni: >-
+              Budeme usilovat o dokončení majetkové směny a majetkoprávního vypořádání se
+              státem tak, aby Praha získala klíčové pozemky a budovy pro výstavbu
+              městského nájemního bydlení, dopravy, školství a další potřebné městské
+              infrastruktury. Současně budeme se státem jednat o převodu dalších
+              strategických ploch, např. v Letňanech. Budeme pokračovat ve scelování
+              klíčových lokalit a majetků, ať už formou směn anebo pro město výhodných
+              výkupů pozemků.
+          - id: majetek-07
+            zneni: >-
+              Zamezíme nevýhodnému zbavování se městského majetku vhodného pro potřeby
+              města. Nebudeme tyto budovy a pozemky zbytečně prodávat ani pronajímat a k
+              tomuto odpovědnému a dlouhodobě udržitelnému přístupu budeme aktivně
+              motivovat i jednotlivé městské části.

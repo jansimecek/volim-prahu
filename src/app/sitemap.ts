@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { programy, stranky, strany } from '#content'
+import { programy, rada, smlouva, stranky, strany } from '#content'
 import { jeSPruzkumem, publikovane } from '@/lib/aktuality'
 import { kandidatka, vsechnyKandidatky } from '@/lib/kandidatky'
 import { JAZYKY, PODSTRANKY } from '@/lib/jazyky'
@@ -30,6 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticke: Polozka[] = [
     { url: absolutni('/'), ...zmeneno, changeFrequency: 'daily', priority: 1 },
     { url: absolutni('/koalice'), ...zmeneno, changeFrequency: 'daily', priority: 1 },
+    { url: absolutni('/rada'), lastModified: new Date(rada.overeno), changeFrequency: 'weekly', priority: 0.9 },
+    { url: absolutni('/koalicni-smlouva'), lastModified: new Date(smlouva.overeno), changeFrequency: 'weekly', priority: 0.9 },
     { url: absolutni('/vysledky'), lastModified: new Date('2026-10-11'), changeFrequency: 'monthly', priority: 0.9 },
     { url: absolutni('/aktualne'), changeFrequency: 'daily', priority: 0.8 },
     { url: absolutni('/mestska-cast'), changeFrequency: 'weekly', priority: 0.8 },
@@ -58,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ])
 
   const referencni: Polozka[] = stranky
-    .filter((s) => !['kde-volim', 'koalice'].includes(s.slug))
+    .filter((s) => !['kde-volim', 'koalice', 'rada', 'koalicni-smlouva'].includes(s.slug))
     .map((s) => ({
       url: absolutni(`/${s.slug}`),
       lastModified: new Date(s.aktualizovano),

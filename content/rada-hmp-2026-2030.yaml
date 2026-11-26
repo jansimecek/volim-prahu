@@ -1,0 +1,135 @@
+# Rada hlavního města Prahy 2026–2030 — podklad pro sledování jednotlivých radních.
+#
+# Funkce, subjekt a gesce se tu NEPÍŠOU: jediný zdroj je `vedeni`
+# v content/vyjednavani/magistrat.yaml (tam se mění i při rekonstrukci rady).
+# Tady je jen to, co k člověku patří navíc:
+#   - `kandidat` — slug z kandidátky ČSÚ (data/kandidatky/magistrat.json),
+#     odtud věk a povolání uvedené při kandidatuře,
+#   - `pusobeni` — doložené dřívější funkce, každá se zdrojem,
+#   - `analyza` — rozbor práce radního; doplňuje se, až je z čeho.
+# Shodu jmen s `vedeni` a existenci slugů hlídá `pnpm validate`.
+#
+# Do `pusobeni` jen funkce a fakta, žádné hodnocení. Kde se zdroje liší
+# (věk, letopočty), se nepíše nic, dokud to nejde ověřit jinde.
+
+overeno: 2026-11-26
+
+zdroje:
+  - id: pd-kdo-je-kdo-18-11
+    medium: "Pražský deník"
+    nazev: "Kdo nově vládne Praze? Nejmladšímu je 29 let, další byl ministrem"
+    datum: 2026-11-18
+    url: "https://prazsky.denik.cz/komunalni-volby/kdo-povede-prahu-nova-rada-slozeni/"
+  - id: pd-hlavacek-19-11
+    medium: "Pražský deník"
+    nazev: "Architekt v čele Prahy: Kdo je Petr Hlaváček"
+    datum: 2026-11-19
+    url: "https://prazsky.denik.cz/komunalni-volby/architekt-v-cele-prahy-kdo-je-petr-hlavacek/"
+  - id: pd-bouz-19-11
+    medium: "Pražský deník"
+    nazev: "Od petice ke správě miliardového majetku. Kdo je nejmladší radní David Bouz"
+    datum: 2026-11-19
+    url: "https://prazsky.denik.cz/komunalni-volby/do-je-david-bouz-nejmladsi-prazsky-radni/"
+  - id: pd-dobes-23-11
+    medium: "Pražský deník"
+    nazev: "Padl kvůli registru vozidel, teď se vrací. Exministr Dobeš je ve vedení Prahy"
+    datum: 2026-11-23
+    url: "https://prazsky.denik.cz/komunalni-volby/pavel-dobes-exministr-novy-radni-prahy/"
+  - id: pd-novotna-26-11
+    medium: "Pražský deník"
+    nazev: "Přes Czechinvest a byznys do vedení Prahy. Kdo je Hana Novotná"
+    datum: 2026-11-26
+    url: "https://prazsky.denik.cz/komunalni-volby/hana-novotna-stan-namestkyne-primatora-prahy/"
+  - id: pd-rada-18-11
+    medium: "Pražský deník"
+    nazev: "Nové vedení Prahy je jasné. Tady jsou jména Hlaváčkova týmu"
+    datum: 2026-11-18
+    url: "https://prazsky.denik.cz/komunalni-volby/nova-prazska-rada-slozeni/"
+  - id: ct24-smlouva-18-11
+    medium: "ČT24"
+    nazev: "STAN, SPOLU a Praha sobě podepsaly koaliční smlouvu v Praze"
+    datum: 2026-11-18
+    url: "https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/stan-spolu-a-praha-sobe-podepsaly-koalicni-smlouvu-v-praze-379711"
+  - id: pd-praha8-volba-11-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 8 se stal Tomáš Hřebík (STAN), vede menšinovou koalici"
+    datum: 2026-11-11
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-8-se-stal-tomas-hrebik-stan-vede-mensinovou-koalici/"
+  - id: pd-biskup-11-10
+    medium: "Pražský deník (ČTK)"
+    nazev: "Předsedou klubu STAN v Praze je Biskup, týmy začnou o koalici jednat v pondělí"
+    datum: 2026-10-11
+    url: "https://prazsky.denik.cz/komunalni-volby/predsedou-klubu-stan-v-praze-je-biskup-tymy-zacnou-o-koalici-jednat-v-pondeli/"
+
+clenove:
+  - jmeno: Petr Hlaváček
+    kandidat: hlavacek-petr
+    pusobeni:
+      - text: V letech 2015–2016 ředitel Institutu plánování a rozvoje (IPR), rada primátorky Krnáčové ho odvolala.
+        zdroj: pd-hlavacek-19-11
+      - text: Od roku 2018 náměstek primátora pro územní rozvoj, i v radě 2022–2026.
+        zdroj: pd-kdo-je-kdo-18-11
+
+  - jmeno: Tomáš Portlík
+    kandidat: portlik-tomas
+    pusobeni:
+      - text: Od roku 2021 starosta Prahy 9, předtím tam místostarosta pro finance. V radě hlavního města poprvé.
+        zdroj: pd-kdo-je-kdo-18-11
+
+  - jmeno: Michal Hroza
+    kandidat: hroza-michal
+    pusobeni:
+      - text: Infrastrukturu měl na starosti už v radě 2022–2026.
+        zdroj: pd-kdo-je-kdo-18-11
+
+  - jmeno: Hana Novotná
+    kandidat: novotna-hana
+    pusobeni:
+      - text: Od roku 2018 zastupitelka Prahy 8, předsedkyně komise pro výstavbu ZŠ Rohan. V radě hlavního města poprvé.
+        zdroj: pd-novotna-26-11
+
+  - jmeno: Antonín Klecanda
+    kandidat: klecanda-antonin
+    pusobeni:
+      - text: Radní pro školství, sport a volný čas už v radě 2022–2026.
+        zdroj: ct24-smlouva-18-11
+      - text: Kritici mu vyčítají, že v minulém období udělal málo pro kapacity středních škol; výrazně ho kritizovala i tehdy opoziční Praha sobě.
+        zdroj: pd-rada-18-11
+
+  - jmeno: Adam Scheinherr
+    kandidat: scheinherr-adam
+    pusobeni:
+      - text: V letech 2018–2022 náměstek primátora pro dopravu.
+        zdroj: pd-kdo-je-kdo-18-11
+
+  - jmeno: Alexandra Udženija
+    kandidat: udzenija-alexandra
+    pusobeni:
+      - text: Sociální věci a zdravotnictví řídila už v radě 2022–2026.
+        zdroj: ct24-smlouva-18-11
+
+  - jmeno: Tomáš Slabihoudek
+    kandidat: slabihoudek-tomas
+    pusobeni:
+      - text: Radní hlavního města v období 2022–2026 (podle kandidátní listiny). V listopadu 2026 zvolen místostarostou Prahy 8; řekl, že místo opustí, stane-li se radním na magistrátu.
+        zdroj: pd-praha8-volba-11-11
+
+  - jmeno: Pavel Dobeš
+    kandidat: dobes-pavel
+    pusobeni:
+      - text: V letech 2011–2012 ministr dopravy (Věci veřejné, později LIDEM); rezignoval po kolapsu centrálního registru vozidel.
+        zdroj: pd-dobes-23-11
+      - text: Od roku 2018 v radě Prahy 3, od roku 2021 místostarosta pro územní rozvoj včetně Nákladového nádraží Žižkov.
+        zdroj: pd-dobes-23-11
+
+  - jmeno: Michal Biskup
+    kandidat: biskup-michal
+    pusobeni:
+      - text: Starosta Prahy-Vinoře a zastupitel hlavního města (podle kandidátní listiny); po volbách 2026 předseda klubu STAN.
+        zdroj: pd-biskup-11-10
+
+  - jmeno: David Bouz
+    kandidat: bouz-david
+    pusobeni:
+      - text: Lídr Prahy 10 sobě a zastupitel Prahy 10; v roce 2025 iniciátor petice za Drážní promenádu. V radě i v zastupitelstvu hlavního města poprvé.
+        zdroj: pd-bouz-19-11

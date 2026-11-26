@@ -12,7 +12,8 @@ export function PruhRezimu() {
   const popis = POPIS_REZIMU[rezim]
   if (!popis) return null
 
-  const poVolbach = rezim === 'vyjednavani'
+  const poVolbach = rezim === 'vyjednavani' || rezim === 'obdobi'
+  const obdobi = rezim === 'obdobi'
   const dnes = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Prague' })
   const senatJeste = poVolbach && dnes <= DRUHE_KOLO_SENATU.do
 
@@ -20,11 +21,21 @@ export function PruhRezimu() {
     <div className={`border-b ${poVolbach ? 'border-praha bg-papir-tmavsi' : 'border-linka'}`}>
       <div className="mx-auto flex max-w-5xl flex-wrap items-baseline gap-x-4 gap-y-1 px-4 py-2 text-sm">
         <span className={`popisek-uredni ${poVolbach ? 'text-praha' : ''}`}>
-          {poVolbach ? 'Po volbách' : 'Volby probíhají'}
+          {obdobi ? 'Volební období 2026–2030' : poVolbach ? 'Po volbách' : 'Volby probíhají'}
         </span>
         <span className="max-w-prose">{popis}</span>
         {rezim !== 'pred-volbami' && (
-          <span className="flex gap-4">
+          <span className="flex flex-wrap gap-x-4">
+            {obdobi && (
+              <>
+                <Link href="/rada" className="odkaz-akcent">
+                  Rada
+                </Link>
+                <Link href="/koalicni-smlouva" className="odkaz-akcent">
+                  Koaliční smlouva
+                </Link>
+              </>
+            )}
             <Link href="/vysledky" className="odkaz-akcent">
               Výsledky
             </Link>

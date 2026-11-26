@@ -13,72 +13,9 @@
 # datum = nejbližší možný den; platiDo = do kdy to má nastat (podle toho se
 # řadí a pak položka zmizí). U přesného dne stačí datum.
 
-overeno: 2026-11-11
+overeno: 2026-11-26
 
 polozky:
-  - id: senat-prvni-schuze
-    zastupitelstvo: senat
-    datum: 2026-11-19
-    nadpis: První schůze nového Senátu
-    text: >-
-      Schůze je svolaná od 10 hodin; senátoři složí slib a volí předsedu
-      a místopředsedy. Klub ODS a TOP 09 nominuje Miloše Vystrčila.
-    zdroj:
-      text: "Program schůze, senat.cz"
-      url: https://www.senat.cz/xqw/xervlet/pssenat/prubeh?cid=pssenat_prubeh.pTabNavrhu.pageListFiltr&forEach.action=prubeh&forEach.value=7991
-
-  - id: praha-1-ustavujici
-    zastupitelstvo: praha-1
-    datum: 2026-11-01
-    platiDo: 2026-11-30
-    kdy: v listopadu
-    nadpis: Ustavující zasedání
-    text: >-
-      Starostkou má zůstat Terezie Radoměřská (TOP 09).
-    udalost: smlouva-pet-uskupeni
-
-  - id: soud-praha-19
-    zastupitelstvo: praha-19
-    druh: soud
-    datum: 2026-11-06
-    platiDo: 2026-11-12
-    kdy: nejpozději 12. listopadu
-    nadpis: Soud rozhodne o návrhu, zasedání do té doby nebude
-    text: >-
-      Soud posuzuje návrh sp. zn. 10 A 66/2026 jako návrh na neplatnost
-      hlasování, proto ustavující zasedání svolané na 9. listopadu se nekoná;
-      nový termín bude oznámen po rozhodnutí soudu.
-    zdroj:
-      text: "Městská část Praha 19, 4. listopadu 2026"
-      url: https://www.praha19.cz/informace-k-ustavujicimu-zasedani-zastupitelstva-mestske-casti-praha-19/
-
-  - id: magistrat-rada-a-smlouva
-    zastupitelstvo: magistrat
-    datum: 2026-11-18
-    nadpis: Koalice představí radu a má podepsat koaliční smlouvu
-    text: >-
-      STAN, SPOLU a Praha sobě oznámí personální složení jedenáctičlenné
-      rady; koaliční smlouvu chtějí mít podepsanou před volbou.
-    udalost: dohoda-stan-spolu-praha-sobe
-
-  - id: magistrat-volba-vedeni
-    zastupitelstvo: magistrat
-    datum: 2026-11-19
-    nadpis: Pokračování ustavujícího zasedání, volba primátora a rady
-    text: >-
-      Koalice STAN, SPOLU a Prahy sobě (47 z 65) má zvolit primátorem Petra
-      Hlaváčka a radu v poměru 5 : 4 : 2.
-    udalost: dohoda-stan-spolu-praha-sobe
-
-  - id: praha-5-pokracovani
-    zastupitelstvo: praha-5
-    datum: 2026-11-24
-    nadpis: Pokračování ustavujícího zasedání, volba rady
-    text: >-
-      Zastupitelé 9. listopadu složili slib a zasedání přerušili, dokud
-      neskončí řízení o žalobě na neplatnost volby kandidáta.
-    udalost: slib-a-preruseni-do-24-11
-
   - id: praha-9-volba-rady
     zastupitelstvo: praha-9
     datum: 2026-12-15
@@ -87,6 +24,7 @@ polozky:
       Zastupitelé 9. listopadu složili slib a zasedání přerušili; koalice
       zatím nevznikla.
     udalost: slib-a-preruseni-do-15-12
+
 
   - id: praha-11-volba-vedeni
     zastupitelstvo: praha-11
@@ -98,3 +36,36 @@ polozky:
       Volbu vedení zastupitelé 9. listopadu vyřadili z programu, koalice
       zatím nevznikla.
     udalost: volba-vyrazena-z-programu
+
+  - id: magistrat-rozpocet-2027
+    zastupitelstvo: magistrat
+    datum: 2026-12-01
+    platiDo: 2026-12-31
+    kdy: v prosinci
+    nadpis: Zastupitelstvo má schválit rozpočet na rok 2027
+    text: >-
+      Nová koalice chce schválit rozpočet v podobě, kterou připravilo
+      předchozí vedení; případné úpravy až na jaře.
+    udalost: rozpocet-2027-beze-zmen
+
+  - id: magistrat-programove-prohlaseni
+    zastupitelstvo: magistrat
+    datum: 2026-12-01
+    platiDo: 2027-03-31
+    kdy: do 100 dnů od volby rady, nejpozději v prvním čtvrtletí 2027
+    nadpis: Rada zveřejní podrobné programové prohlášení
+    text: >-
+      Má rozvést priority z koaliční smlouvy STAN, SPOLU a Prahy sobě,
+      které město zveřejnilo 19. listopadu.
+    udalost: volba-hlavacek-a-rada
+
+  - id: magistrat-jizdne-a-parkovne
+    zastupitelstvo: magistrat
+    datum: 2027-01-01
+    platiDo: 2027-06-30
+    kdy: v první polovině roku 2027
+    nadpis: Návrh na zdražení ročního kuponu MHD a parkovného
+    text: >-
+      Podle Portlíka se koalice shodla na kuponu za 4750 Kč; parkovné
+      v zónách se má zdražit a upravit, konkrétní návrh zatím není.
+    udalost: zdrazeni-mhd-a-parkovani

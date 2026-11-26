@@ -89,8 +89,23 @@ volit nesmí. Falešná naděje by byla horší než jasné ne.
 - **[Kolik má Praha peněz](https://www.volimprahu.cz/rozpoctovy-ramec)** —
   řádová čísla rozpočtu města i městských částí ze schválených rozpočtových
   dokumentů.
-- **[Plnění slibů](https://www.volimprahu.cz/minule-obdobi)** — co slíbila
-  současná rada v programovém prohlášení a kolik z toho jde vůbec ověřit.
+- **[Plnění slibů rady 2022–2026](https://www.volimprahu.cz/minule-obdobi)** —
+  co slíbila předchozí rada v programovém prohlášení a kolik z toho jde vůbec
+  ověřit.
+
+### Vedení města 2026–2030
+
+- **[Rada hlavního města](https://www.volimprahu.cz/rada)** — primátor,
+  náměstci a radní zvolení 19. listopadu 2026: jejich gesce, údaje
+  z kandidátní listiny, doložené dřívější funkce a oddíly koaliční smlouvy,
+  za které podle gesce odpovídají.
+- **[Koaliční smlouva](https://www.volimprahu.cz/koalicni-smlouva)** — všech
+  137 závazků z programových priorit smlouvy STAN, SPOLU a Prahy sobě doslova,
+  po kapitolách a radních. Strojově počítáme, kolik závazků má číslo nebo
+  termín a kolik jen slibuje něco prověřit. Rozbor proveditelnosti (stejný
+  rámec jako u volebních programů), původu ve volebních programech a plnění
+  přibývá průběžně, vždy se zdrojem. Data jsou i
+  [jako JSON](https://www.volimprahu.cz/data/koalicni-smlouva.json).
 
 ### Po volbách
 

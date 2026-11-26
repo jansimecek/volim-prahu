@@ -4,7 +4,41 @@ zastupitelstvo: praha-12
 ustavujiciZasedani:
   datum: 2026-11-18
   zdroj: web-praha12-pozvanka
-overeno: 2026-11-11
+overeno: 2026-11-26
+
+vedeni:
+  - funkce: starosta (ODS)
+    jmeno: Vojtěch Kos
+    subjekt: obcanska-demokraticka-strana
+    zdroj: pd-praha12-volba-18-11
+  - funkce: místostarosta (ODS)
+    jmeno: Vojtěch Mikoláš
+    subjekt: obcanska-demokraticka-strana
+    zdroj: pd-praha12-volba-18-11
+    gesce: [životní prostředí]
+    zdrojGesci: pd-praha12-volba-18-11
+  - funkce: místostarostka (ANO)
+    jmeno: Lenka Vedralová
+    subjekt: ano-2011
+    zdroj: pd-praha12-volba-18-11
+    gesce: [školství, zdravotnictví, sociální věci]
+    zdrojGesci: pd-praha12-volba-18-11
+  - funkce: místostarosta (ANO)
+    jmeno: Jaroslav Zvonař
+    subjekt: ano-2011
+    zdroj: pd-praha12-volba-18-11
+    gesce: [majetek]
+    zdrojGesci: pd-praha12-volba-18-11
+  - funkce: místostarostka (Praha 12 sobě)
+    jmeno: Verona Ballay
+    subjekt: praha-12-sobe
+    zdroj: pd-praha12-volba-18-11
+    gesce: [územní rozvoj]
+    zdrojGesci: pd-praha12-volba-18-11
+  - funkce: radní (Praha 12 sobě)
+    jmeno: Jakub Macek
+    subjekt: praha-12-sobe
+    zdroj: pd-praha12-volba-18-11
 
 zdroje:
   - id: pd-prehled-15-10
@@ -17,6 +51,16 @@ zdroje:
     nazev: "Pozvánka na ustavující ZMČ 2026"
     datum: 2026-11-11
     url: "https://www.praha12.cz/pozvanka-ustavujici-zmc-2026/d-121725"
+  - id: pd-praha12-volba-18-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Starostou Prahy 12 bude dál Kos (ODS), koalici tvoří ODS, ANO a Praha 12 sobě"
+    datum: 2026-11-19
+    url: "https://prazsky.denik.cz/komunalni-volby/starostou-prahy-12-bude-dal-kos-ods-koalici-tvori-ods-ano-a-praha-12-sobe/"
+  - id: pd-praha12-vylouceni-24-11
+    medium: "Pražský deník (ČTK)"
+    nazev: "Praha sobě vyloučila dva zastupitele z Prahy 12, kteří jsou v koalici s ANO"
+    datum: 2026-11-24
+    url: "https://prazsky.denik.cz/komunalni-volby/praha-sobe-vyloucila-dva-zastupitele-z-prahy-12-kteri-jsou-v-koalici-s-ano/"
 
 udalosti:
   - id: ods-jedna-se-vsemi
@@ -33,3 +77,42 @@ udalosti:
       Kos chce ve funkci starosty pokračovat. V minulém období vládla ODS
       s TOP 09 a ANO; jestli spolupráce pokračuje, zatím není jasné.
     zdroje: [pd-prehled-15-10]
+
+  - id: smlouva-ods-ano-ps12
+    datum: 2026-11-18
+    typ: koalicni-smlouva
+    subjekty: [obcanska-demokraticka-strana, ano-2011, praha-12-sobe]
+    sestava: [obcanska-demokraticka-strana, ano-2011, praha-12-sobe]
+    kdo: Vojtěch Kos (ODS), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Koaliční smlouvu ODS, ANO a Prahy 12 sobě strany podle Kose podepsaly ve
+      středu, asi půl hodiny před zasedáním. Proti dosavadní koalici nahradila
+      TOP 09 Praha 12 sobě; koalice má 20 z 35.
+    zdroje: [pd-praha12-volba-18-11]
+
+  - id: volba-kos
+    datum: 2026-11-18
+    typ: volba
+    subjekty: [obcanska-demokraticka-strana, ano-2011, praha-12-sobe]
+    kdo: Vojtěch Kos (ODS), starosta
+    doklad: parafraze
+    shrnuti: >-
+      Starostou znovu zvolen Kos. Rada má devět členů: starostu, čtyři
+      místostarosty a čtyři radní; radní Černou, Moravce a Michálka zdroj
+      uvádí jen příjmením, proto je v seznamu nevypisujeme. Koalici s ANO
+      kritizovali Piráti, TOP 09, Zelení i Změna pro Prahu 12.
+    zdroje: [pd-praha12-volba-18-11]
+
+  - id: praha-sobe-vylucuje-ballay-macka
+    datum: 2026-11-24
+    typ: vyjadreni
+    subjekty: [praha-12-sobe]
+    kdo: Adam Scheinherr, předseda Prahy sobě
+    doklad: parafraze
+    shrnuti: >-
+      Celopražská Praha sobě vyloučila zastupitele Veronu Ballay a Jakuba
+      Macka, protože uzavřeli koalici s ANO proti vůli vedení strany. Oba
+      tvrdí, že vyloučení ještě není konečné a koalice byla nejlepší reálnou
+      variantou.
+    zdroje: [pd-praha12-vylouceni-24-11]
